@@ -108,6 +108,12 @@ apps/
 data/               Future investor and founder data
 ```
 
+## Service Boundary
+
+Next.js owns product experience and product data. FastAPI owns AI/matching logic and should not become the general product backend.
+
+Use Next.js for users, auth, sessions, founder profiles, dashboards, and normal business APIs. Use FastAPI for AI calls, investor matching, scoring, validation, and read-focused database access needed by matching workflows.
+
 ## Development Workflow
 
 Use `main` as the stable branch and `develop` as the active integration branch.
