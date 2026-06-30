@@ -37,7 +37,7 @@ Install backend dependencies:
 ```powershell
 python -m venv apps/api/.venv
 apps/api/.venv/Scripts/Activate.ps1
-python -m pip install -r apps/api/requirements.txt
+python -m pip install -r apps/api/requirements-dev.txt
 ```
 
 Start PostgreSQL:
@@ -87,9 +87,10 @@ pnpm typecheck:web
 pnpm build:web
 ```
 
-Run backend tests:
+Run backend checks:
 
 ```powershell
+pnpm lint:api
 pnpm test:api
 ```
 
