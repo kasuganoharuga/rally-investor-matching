@@ -108,6 +108,14 @@ apps/
 data/               Future investor and founder data
 ```
 
+## Frontend Conventions
+
+- `apps/web` uses shadcn/ui and Tailwind for shared UI foundations.
+- Add UI components from `apps/web` with `pnpm dlx shadcn@latest add <component>`.
+- Brand assets live in `apps/web/public/brand`.
+- Theme tokens live in `apps/web/src/app/globals.css` and currently use the Rally deep green and lime brand colors.
+- Next.js owns frontend and product backend concerns. FastAPI owns AI and matching service concerns.
+
 ## Service Boundary
 
 Next.js owns product experience and product data. FastAPI owns AI/matching logic and should not become the general product backend.
