@@ -8,6 +8,7 @@ This repository is a development-ready foundation for the MVP described in `loca
 
 - Frontend: Next.js, TypeScript, pnpm
 - Backend: FastAPI, Python
+- AI matching/RAG: `vc_match_intelligence` Python package under `src/`
 - Database: PostgreSQL via Docker Compose
 - CI: GitHub Actions
 
@@ -38,6 +39,7 @@ Install backend dependencies:
 python -m venv apps/api/.venv
 apps/api/.venv/Scripts/Activate.ps1
 python -m pip install -r apps/api/requirements-dev.txt
+python -m pip install -e .
 ```
 
 Start PostgreSQL:
@@ -77,6 +79,28 @@ pnpm dev:web
 
 The web app is available at `http://localhost:3000`.
 
+## VC Matching/RAG Commands
+
+The local VC matching package is installed from the repository root with `python -m pip install -e .`.
+
+Run an LLM smoke test:
+
+```powershell
+python -m vc_match_intelligence.llm --json
+```
+
+Extract a founder profile from text:
+
+```powershell
+python -m vc_match_intelligence.founder_parser 'We are an AU-based B2B AI healthtech company raising A$2.5m seed and looking for a lead investor.'
+```
+
+Run the interactive extraction helper:
+
+```powershell
+python scripts/test_extract_company.py
+```
+
 ## Verification
 
 Run frontend checks:
@@ -108,12 +132,21 @@ Validate Docker Compose:
 docker compose config
 ```
 
+Run a lightweight Python syntax check:
+
+```powershell
+python -m compileall -q apps/api/app src scripts
+```
+
 ## Project Structure
 
 ```text
 apps/
   web/              Next.js frontend and product backend
   api/              FastAPI AI/matching service and Dockerfile
+src/                VC matching/RAG Python package
+schemas/            Database schema for VC matching data
+outputs/            Generated investor records and MVP bundle artifacts
 data/               Future investor and founder data
 ```
 

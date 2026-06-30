@@ -1,0 +1,111 @@
+{
+  "investor_id": "airtree",
+  "investor_name": "AirTree",
+  "local_au_anz_fund": true,
+  "au_anz_relevance": "high",
+  "au_anz_relevance_confidence": "high",
+  "supported_stages": [
+    "Pre-Seed",
+    "Seed",
+    "Series A",
+    "Series B+",
+    "Growth"
+  ],
+  "first_cheque_stages": [
+    "Growth",
+    "Pre-Seed",
+    "Seed",
+    "Series A",
+    "Series B+"
+  ],
+  "supported_sectors": [
+    "AI",
+    "B2B SaaS",
+    "fintech",
+    "healthtech",
+    "deeptech",
+    "legaltech",
+    "supply-chain"
+  ],
+  "supported_business_models": [
+    "B2B",
+    "B2C",
+    "B2D",
+    "B2G"
+  ],
+  "business_model_distribution": {
+    "B2B": 4,
+    "B2C": 3,
+    "B2B2C": 0,
+    "B2G": 1,
+    "B2D": 1,
+    "Marketplace": 0,
+    "Mixed": 0,
+    "Gap": 0
+  },
+  "cheque_size": {
+    "min": {
+      "value": 100,
+      "currency": "AUD",
+      "unit": "thousand"
+    },
+    "max": {
+      "value": 5,
+      "currency": "AUD",
+      "unit": "million"
+    },
+    "basis": "fund-stated seed range from AirTree Seed: A$100k-A$250k small seed cheques and A$1m-A$5m lead seed rounds; current growth cheque maximum is not publicly bounded",
+    "hard_filter_safe": false,
+    "confidence": "medium_high"
+  },
+  "lead_behavior": "sometimes",
+  "recent_activity": {
+    "value": {
+      "in_window_rows_count": 9,
+      "verified_named_round_count": 9,
+      "official_portfolio_supported_count": 0,
+      "provisional_named_round_count": 0,
+      "non_verified_followon_event_count": 0,
+      "new_investment_for_investor_count": 8,
+      "follow_on_for_investor_count": 1,
+      "anz_deal_count": 8,
+      "external_db_count": null,
+      "external_db_source": null,
+      "source_basis": "public AirTree portfolio pages plus company announcements, independent media and startup media located through free web search",
+      "coverage_note": "This is a strong public-evidence sample, not a paid-database full census."
+    },
+    "confidence": "medium_high"
+  },
+  "contact_path": {
+    "primary": "FAQ directs founders to email their deck to seedteam@airtree.vc",
+    "warm_intro_route": "portfolio founders, AirTree team, and co-investors may help, but warm intro is not stated as mandatory",
+    "no_intro_required": true,
+    "public_email": "seedteam@airtree.vc"
+  },
+  "warm_intro_required": false,
+  "review_needed_fields": [
+    "announced_date_vs_partnered_year",
+    "cheque_size.growth_max",
+    "co_investors",
+    "deals_last_24mo.census",
+    "follow_on_reserve",
+    "investor_mandate_fit",
+    "partner_routing_hypotheses",
+    "round_stage"
+  ],
+  "field_confidences": {
+    "anz_relevance": "high",
+    "fund_economics": "high",
+    "cheque_size": "medium_high",
+    "deals_last_24mo": "medium_high",
+    "follow_on_reserve": "gap",
+    "contact_path": "high",
+    "local_au_anz_fund": "high",
+    "australia_deal_share": "medium_high",
+    "australia_company_share": "medium_high",
+    "anz_deal_share": "medium_high",
+    "mandate_fit_share": "medium_high",
+    "business_model_tendency": "medium_high",
+    "co_investors": "medium"
+  }
+}

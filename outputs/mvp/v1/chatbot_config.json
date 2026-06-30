@@ -1,0 +1,27 @@
+{
+  "version": "mvp-v1",
+  "app_name": "VC Match Intelligence",
+  "candidate_count": {
+    "default": 5,
+    "minimum": 3,
+    "maximum": 5
+  },
+  "matching_weights": {
+    "au_anz_mandate": 25,
+    "stage_cheque_fit": 25,
+    "sector_business_model_fit": 25,
+    "lead_contact_fit": 15,
+    "evidence_quality": 10
+  },
+  "hard_filter_policy": {
+    "only_hard_filter_when_confidence_high": true,
+    "only_hard_filter_when_field_is_hard_filter_safe": true,
+    "otherwise_use_soft_score": true
+  },
+  "detail_route_template": "/investors/{investor_id}",
+  "data_files": {
+    "investor_index": "investors/index.json",
+    "chatbot_prompt": "prompts/chatbot_system_prompt.md",
+    "api_contract": "api/chatbot_api_contract.json"
+  }
+}
