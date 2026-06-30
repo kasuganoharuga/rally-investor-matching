@@ -1,4 +1,28 @@
 services:
+  api:
+    build:
+      context: ./apps/api
+    container_name: rally-investor-matching-api
+    restart: unless-stopped
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-rally}:${POSTGRES_PASSWORD:-rally_dev_password}@db:5432/${POSTGRES_DB:-rally_investor_matching}
+    ports:
+      - "${API_PORT:-8000}:8000"
+    volumes:
+      - ./apps/api:/app
+    depends_on:
+      db:
+        condition: service_healthy
+    command: python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health').read()"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
   db:
     image: postgres:17-alpine
     container_name: rally-investor-matching-db

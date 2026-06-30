@@ -46,13 +46,28 @@ Start PostgreSQL:
 docker compose up -d db
 ```
 
-Start the backend API:
+Start PostgreSQL and the backend API with Docker:
+
+```powershell
+docker compose up -d db api
+```
+
+The API health check is available at `http://localhost:8000/health`.
+
+Useful Docker commands:
+
+```powershell
+docker compose ps
+docker compose logs -f api
+docker compose logs -f db
+docker compose down
+```
+
+Alternatively, start the backend API locally for Python debugging:
 
 ```powershell
 pnpm dev:api
 ```
-
-The API health check is available at `http://localhost:8000/health`.
 
 Start the frontend:
 
@@ -88,13 +103,48 @@ docker compose config
 
 ```text
 apps/
-  web/              Next.js frontend
-  api/              FastAPI backend
+  web/              Next.js frontend and product backend
+  api/              FastAPI AI/matching service and Dockerfile
 data/               Future investor and founder data
-scripts/
-  validation/       Investor validation scripts
-  scoring/          Rule-based matching scripts
-  export/           CSV/JSON export scripts
+```
+
+## Development Workflow
+
+Use `main` as the stable branch and `develop` as the active integration branch.
+
+```text
+feature/* -> PR -> develop -> PR -> main
+```
+
+Branch roles:
+
+- `main`: stable branch for reviewed, CI-passing code
+- `develop`: active integration branch for upcoming work
+- `feature/*`: individual task branches created from `develop`
+
+Start new work from `develop`:
+
+```powershell
+git checkout develop
+git pull --ff-only origin develop
+git checkout -b feature/your-change-name
+```
+
+When the feature is ready:
+
+```powershell
+git push -u origin feature/your-change-name
+```
+
+Then open a pull request into `develop`. After a batch of work is stable on `develop`, open a pull request from `develop` into `main`.
+
+Before opening a pull request, run the relevant checks:
+
+```powershell
+pnpm lint:web
+pnpm typecheck:web
+pnpm test:api
+docker compose config
 ```
 
 ## Commit Message Format

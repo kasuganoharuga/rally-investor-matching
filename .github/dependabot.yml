@@ -2,15 +2,40 @@ version: 2
 updates:
   - package-ecosystem: "npm"
     directory: "/"
+    target-branch: "develop"
     schedule:
       interval: "weekly"
+    open-pull-requests-limit: 5
+    groups:
+      frontend-runtime:
+        dependency-type: "production"
+        patterns:
+          - "next"
+          - "react"
+          - "react-dom"
+      frontend-tooling:
+        dependency-type: "development"
+        patterns:
+          - "@types/*"
+          - "eslint*"
+          - "typescript"
 
   - package-ecosystem: "pip"
     directory: "/apps/api"
+    target-branch: "develop"
     schedule:
       interval: "weekly"
+    groups:
+      api-python:
+        patterns:
+          - "*"
 
   - package-ecosystem: "github-actions"
     directory: "/"
+    target-branch: "develop"
     schedule:
       interval: "weekly"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
