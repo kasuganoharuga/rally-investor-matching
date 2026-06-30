@@ -1,0 +1,22 @@
+{
+  "name": "rally-investor-matching",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@10.18.0",
+  "scripts": {
+    "dev:web": "pnpm --filter @rally-investor-matching/web dev",
+    "dev:api": "python -m uvicorn app.main:app --reload --app-dir apps/api",
+    "build:web": "pnpm --filter @rally-investor-matching/web build",
+    "lint:web": "pnpm --filter @rally-investor-matching/web lint",
+    "typecheck:web": "pnpm --filter @rally-investor-matching/web typecheck",
+    "test:api": "cd apps/api && python -m pytest",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm test:api"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=10.0.0"
+  }
+}

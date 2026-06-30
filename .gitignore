@@ -70,6 +70,31 @@ web_modules/
 .env.*
 !.env.example
 
+# Local-only project files
+local/
+.cursor/
+.vscode/
+AGENTS.md
+CLAUDE.md
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Local database and Docker runtime files
+postgres-data/
+*.sqlite
+*.db
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 .parcel-cache
