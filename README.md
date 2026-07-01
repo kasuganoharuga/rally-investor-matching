@@ -83,6 +83,7 @@ Run frontend checks:
 
 ```powershell
 pnpm lint:web
+pnpm format:check:web
 pnpm typecheck:web
 pnpm build:web
 ```
@@ -91,7 +92,14 @@ Run backend checks:
 
 ```powershell
 pnpm lint:api
+pnpm format:check:api
 pnpm test:api
+```
+
+Format locally (before commit):
+
+```powershell
+pnpm format
 ```
 
 Validate Docker Compose:
@@ -157,7 +165,10 @@ Before opening a pull request, run the relevant checks:
 
 ```powershell
 pnpm lint:web
+pnpm format:check:web
 pnpm typecheck:web
+pnpm lint:api
+pnpm format:check:api
 pnpm test:api
 docker compose config
 ```

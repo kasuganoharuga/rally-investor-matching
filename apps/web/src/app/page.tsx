@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
+import { InvestorListPanel } from "@/features/investors";
 
 export default function Home() {
   return (
@@ -27,7 +28,7 @@ export default function Home() {
           </Button>
         </header>
 
-        <div className="flex flex-1 items-center py-14">
+        <div className="flex flex-1 flex-col justify-center gap-16 py-14">
           <div className="max-w-4xl text-white">
             <p className="mb-5 inline-flex rounded-full bg-secondary px-4 py-1.5 text-xs font-bold uppercase tracking-[0.24em] text-secondary-foreground">
               Rally Investor Matching
@@ -36,10 +37,12 @@ export default function Home() {
               Match founders with investors that actually fit.
             </h1>
             <p className="mt-8 max-w-2xl text-pretty text-lg leading-8 text-white/78 sm:text-xl">
-              A focused foundation for founder intake, investor validation,
-              AI-assisted matching, and a CRM-style shortlist.
+              A focused foundation for founder intake, investor validation, AI-assisted
+              matching, and a CRM-style shortlist.
             </p>
           </div>
+
+          <InvestorListPanel />
         </div>
       </section>
     </main>
