@@ -33,6 +33,9 @@ jobs:
       - name: Lint frontend
         run: pnpm lint:web
 
+      - name: Check frontend formatting
+        run: pnpm format:check:web
+
       - name: Typecheck frontend
         run: pnpm typecheck:web
 
@@ -63,6 +66,10 @@ jobs:
       - name: Lint backend
         working-directory: apps/api
         run: python -m ruff check .
+
+      - name: Check backend formatting
+        working-directory: apps/api
+        run: python -m ruff format --check .
 
       - name: Run backend tests
         working-directory: apps/api
