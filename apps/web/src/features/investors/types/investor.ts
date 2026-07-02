@@ -7,7 +7,7 @@ export const SCREENING_STATUS = {
 } as const;
 
 export const investorSummarySchema = z.object({
-  id: z.string().uuid(),
+  id: z.string().min(1),
   name: z.string(),
   slug: z.string().nullable(),
   investorType: z.string().nullable(),

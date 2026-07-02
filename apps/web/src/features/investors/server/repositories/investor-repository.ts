@@ -1,32 +1,23 @@
 import "server-only";
 
-import type { InvestorSummary } from "@/features/investors/types/investor";
+import {
+  investorListDataSchema,
+  type InvestorListData,
+  type InvestorSummary,
+} from "@/features/investors/types/investor";
+import { apiFetch } from "@/lib/api/client";
 
-const SEED_INVESTORS: InvestorSummary[] = [
-  {
-    id: "11111111-1111-4111-8111-111111111111",
-    name: "Example Seed VC",
-    slug: "example-seed-vc",
-    investorType: "vc",
-    hqCountry: "AU",
-    stageFocus: ["pre-seed", "seed"],
-    screeningStatus: "screened",
-  },
-  {
-    id: "22222222-2222-4222-8222-222222222222",
-    name: "Example Angel Syndicate",
-    slug: "example-angel-syndicate",
-    investorType: "angel",
-    hqCountry: "NZ",
-    stageFocus: ["seed"],
-    screeningStatus: "unscreened",
-  },
-];
+const INVESTOR_API_BASE_URL =
+  process.env.NEXT_PUBLIC_MATCHING_API_BASE_URL ?? "http://localhost:8000";
 
 export class InvestorRepository {
   async listSummaries(): Promise<InvestorSummary[]> {
-    // TODO: replace seed data with PostgreSQL queries via lib/server/db.ts
-    return SEED_INVESTORS;
+    const data = await apiFetch<InvestorListData>("/api/v1/investors", {
+      baseUrl: INVESTOR_API_BASE_URL,
+      cache: "no-store",
+    });
+
+    return investorListDataSchema.parse(data).items;
   }
 }
 

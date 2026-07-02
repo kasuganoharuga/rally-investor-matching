@@ -12,16 +12,10 @@ export function InvestorListPanel() {
   const { items, isLoading, error, reload } = useInvestorList();
 
   return (
-    <section className="space-y-4">
+    <aside className="space-y-4 rounded-lg border border-border bg-card p-4 shadow-sm">
       <div>
-        <p className="text-xs font-bold uppercase tracking-[0.24em] text-secondary">
-          Reference Feature
-        </p>
-        <h2 className="mt-2 text-2xl font-semibold text-white">Investor directory</h2>
-        <p className="mt-2 max-w-2xl text-sm text-white/70">
-          Client hook, feature API module, route handler, server service, and repository
-          scaffold.
-        </p>
+        <p className="text-xs font-bold uppercase text-muted-foreground">Investors</p>
+        <h2 className="mt-2 text-lg font-semibold text-foreground">Database</h2>
       </div>
 
       {isLoading ? <InvestorListLoading /> : null}
@@ -36,6 +30,6 @@ export function InvestorListPanel() {
           ))}
         </div>
       ) : null}
-    </section>
+    </aside>
   );
 }

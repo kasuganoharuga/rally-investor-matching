@@ -2,5 +2,7 @@ fastapi
 uvicorn[standard]
 pydantic-settings
 psycopg[binary]
+python-multipart
+pypdf
 pytest
 httpx

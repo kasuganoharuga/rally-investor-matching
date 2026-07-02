@@ -7,9 +7,9 @@ type InvestorListErrorProps = {
 
 export function InvestorListError({ message, onRetry }: InvestorListErrorProps) {
   return (
-    <div className="rounded-2xl border border-red-400/30 bg-red-950/40 p-6 text-white">
-      <p className="text-sm font-medium text-red-100">Unable to load investors</p>
-      <p className="mt-2 text-sm text-white/70">{message}</p>
+    <div className="rounded-lg border border-destructive/30 bg-destructive/10 p-4">
+      <p className="text-sm font-medium text-destructive">Unable to load investors</p>
+      <p className="mt-2 text-sm text-muted-foreground">{message}</p>
       <Button
         type="button"
         variant="secondary"
@@ -29,7 +29,7 @@ export function InvestorListLoading() {
       {Array.from({ length: 2 }).map((_, index) => (
         <div
           key={index}
-          className="h-24 animate-pulse rounded-2xl border border-white/10 bg-white/5"
+          className="h-24 animate-pulse rounded-lg border border-border bg-background"
         />
       ))}
     </div>
@@ -38,7 +38,7 @@ export function InvestorListLoading() {
 
 export function InvestorListEmpty() {
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-white/70">
+    <div className="rounded-lg border border-border bg-background p-4 text-sm text-muted-foreground">
       No investors found yet.
     </div>
   );

@@ -9,11 +9,16 @@ from typing import Any
 
 
 DEFAULT_WEIGHTS = {
-    "au_anz_mandate": 25,
-    "stage_cheque_fit": 25,
-    "sector_business_model_fit": 25,
-    "lead_contact_fit": 15,
-    "evidence_quality": 10,
+    "geography_anz_mandate": 15,
+    "stage_first_cheque_fit": 15,
+    "sector_use_case_fit": 15,
+    "recent_deal_similarity": 15,
+    "business_model_icp_fit": 10,
+    "cheque_round_size_fit": 8,
+    "lead_behavior_fit": 8,
+    "investor_activity_recency": 6,
+    "ai_thesis_appetite": 4,
+    "founder_traction_fit": 4,
 }
 
 
@@ -24,12 +29,18 @@ def read_json(path: Path) -> dict[str, Any]:
 def read_jsonl(path: Path) -> list[dict[str, Any]]:
     if not path.exists():
         return []
-    return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
+    return [
+        json.loads(line)
+        for line in path.read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    ]
 
 
 def write_json(path: Path, value: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    path.write_text(
+        json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+    )
 
 
 def money_label(value: dict[str, Any] | None) -> str:
@@ -92,7 +103,9 @@ def summarize_deal(deal: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def build_detail(record: dict[str, Any], profile: dict[str, Any], chunks: list[dict[str, Any]]) -> dict[str, Any]:
+def build_detail(
+    record: dict[str, Any], profile: dict[str, Any], chunks: list[dict[str, Any]]
+) -> dict[str, Any]:
     investor = record.get("investor", {})
     investor_id = investor.get("investor_id")
     selected_chunks = [
@@ -251,7 +264,9 @@ Return 3-5 investors unless fewer candidates pass the matching policy.
     write_json(out_dir / "chatbot_config.json", config)
     write_json(out_dir / "api" / "chatbot_api_contract.json", api_contract)
     (out_dir / "prompts").mkdir(parents=True, exist_ok=True)
-    (out_dir / "prompts" / "chatbot_system_prompt.md").write_text(prompt, encoding="utf-8")
+    (out_dir / "prompts" / "chatbot_system_prompt.md").write_text(
+        prompt, encoding="utf-8"
+    )
 
     return {
         "out_dir": str(out_dir),
