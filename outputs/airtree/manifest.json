@@ -1,0 +1,14 @@
+{
+  "investor_id": "airtree",
+  "investor_name": "AirTree",
+  "source_record_path": "C:\\Users\\49765\\Documents\\New project 2\\airtree-vc-investor-research\\airtree-record.json",
+  "source_sha256": "07129c1ee793470ca65694675e8068a3d248c10463990bd39a3d959335f16f8c",
+  "output_dir": "outputs\\airtree",
+  "files": {
+    "matching_profile": "matching_profile.json",
+    "rag_chunks": "rag_chunks.jsonl",
+    "sources": "sources.jsonl",
+    "review_tasks": "review_tasks.jsonl",
+    "raw_record_copy": "record.json"
+  }
+}

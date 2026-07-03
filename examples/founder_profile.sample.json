@@ -1,0 +1,13 @@
+{
+  "company_name": "Example AI Health",
+  "company_hq_country": "AU",
+  "primary_market": "AU",
+  "stage": "Seed",
+  "sector": "AI",
+  "business_model": "B2B",
+  "target_raise_value": 2.5,
+  "target_raise_currency": "AUD",
+  "target_raise_unit": "million",
+  "lead_needed": true,
+  "warm_intro_available": false
+}

@@ -1,0 +1,157 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >
+  VC Match Intelligence MVP core resources. This stack intentionally avoids
+  creating a database by default so the MVP can start with low ongoing cost.
+
+Parameters:
+  ProjectSlug:
+    Type: String
+    Default: vcmi
+    AllowedPattern: "^[a-z0-9-]+$"
+    Description: Lowercase project slug used in resource names.
+  Environment:
+    Type: String
+    Default: dev
+    AllowedPattern: "^[a-z0-9-]+$"
+    Description: Environment name.
+
+Resources:
+  RawRecordsBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "${ProjectSlug}-${Environment}-raw-${AWS::AccountId}-${AWS::Region}"
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      LifecycleConfiguration:
+        Rules:
+          - Id: AbortIncompleteMultipartUploads
+            Status: Enabled
+            AbortIncompleteMultipartUpload:
+              DaysAfterInitiation: 7
+      Tags:
+        - Key: Project
+          Value: VCMatchIntelligence
+        - Key: Environment
+          Value: !Ref Environment
+
+  ArtifactsBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "${ProjectSlug}-${Environment}-artifacts-${AWS::AccountId}-${AWS::Region}"
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      LifecycleConfiguration:
+        Rules:
+          - Id: AbortIncompleteMultipartUploads
+            Status: Enabled
+            AbortIncompleteMultipartUpload:
+              DaysAfterInitiation: 7
+      Tags:
+        - Key: Project
+          Value: VCMatchIntelligence
+        - Key: Environment
+          Value: !Ref Environment
+
+  DatabaseUrlParameter:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: !Sub "/${ProjectSlug}/${Environment}/database_url"
+      Type: String
+      Value: "postgresql://replace-me"
+      Description: Placeholder DATABASE_URL. Replace after RDS or Aurora is created.
+      Tags:
+        Project: VCMatchIntelligence
+        Environment: !Ref Environment
+
+  AnthropicApiKeyParameter:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: !Sub "/${ProjectSlug}/${Environment}/anthropic_api_key"
+      Type: String
+      Value: "replace-me"
+      Description: Placeholder Anthropic API key. Replace manually with a secure value.
+      Tags:
+        Project: VCMatchIntelligence
+        Environment: !Ref Environment
+
+  AppExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub "${ProjectSlug}-${Environment}-app-role"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - lambda.amazonaws.com
+                - ecs-tasks.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: !Sub "${ProjectSlug}-${Environment}-app-policy"
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Sid: WriteLogs
+                Effect: Allow
+                Action:
+                  - logs:CreateLogGroup
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                Resource: "*"
+              - Sid: ReadWriteProjectBuckets
+                Effect: Allow
+                Action:
+                  - s3:GetObject
+                  - s3:PutObject
+                  - s3:DeleteObject
+                  - s3:ListBucket
+                Resource:
+                  - !GetAtt RawRecordsBucket.Arn
+                  - !Sub "${RawRecordsBucket.Arn}/*"
+                  - !GetAtt ArtifactsBucket.Arn
+                  - !Sub "${ArtifactsBucket.Arn}/*"
+              - Sid: ReadProjectParameters
+                Effect: Allow
+                Action:
+                  - ssm:GetParameter
+                  - ssm:GetParameters
+                Resource:
+                  - !Sub "arn:${AWS::Partition}:ssm:${AWS::Region}:${AWS::AccountId}:parameter/${ProjectSlug}/${Environment}/*"
+              - Sid: InvokeBedrockEmbeddingModel
+                Effect: Allow
+                Action:
+                  - bedrock:InvokeModel
+                Resource:
+                  - !Sub "arn:${AWS::Partition}:bedrock:${AWS::Region}::foundation-model/amazon.titan-embed-text-v2:0"
+
+Outputs:
+  RawRecordsBucketName:
+    Description: Bucket for raw VC record JSON, review Markdown, and source snapshots.
+    Value: !Ref RawRecordsBucket
+  ArtifactsBucketName:
+    Description: Bucket for generated artifacts, chunks, and exports.
+    Value: !Ref ArtifactsBucket
+  DatabaseUrlParameterName:
+    Description: SSM parameter to update after database creation.
+    Value: !Ref DatabaseUrlParameter
+  AnthropicApiKeyParameterName:
+    Description: SSM parameter placeholder for Anthropic API key.
+    Value: !Ref AnthropicApiKeyParameter
+  AppExecutionRoleArn:
+    Description: Role for future Lambda/ECS ingestion and matching workers.
+    Value: !GetAtt AppExecutionRole.Arn

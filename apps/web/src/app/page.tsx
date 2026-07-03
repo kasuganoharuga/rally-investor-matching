@@ -1,50 +1,50 @@
 import Image from "next/image";
+import Link from "next/link";
 
-import { Button } from "@/components/ui/button";
 import { InvestorListPanel } from "@/features/investors";
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-hidden bg-primary text-primary-foreground">
-      <section
-        className="relative isolate mx-auto flex min-h-screen w-full max-w-7xl flex-col py-8"
-        style={{
-          paddingLeft: "clamp(2rem, 5vw, 3.5rem)",
-          paddingRight: "clamp(2rem, 5vw, 3.5rem)",
-        }}
-      >
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_18%,rgba(234,255,91,0.32),transparent_24rem),radial-gradient(circle_at_82%_34%,rgba(255,255,255,0.16),transparent_26rem),linear-gradient(135deg,#073127_0%,#031d17_100%)]" />
-        <header className="flex items-center justify-between">
-          <Image
-            src="/brand/rally-icon.png"
-            alt="Rally"
-            width={96}
-            height={96}
-            priority
-            className="size-12 rounded-2xl object-cover ring-1 ring-white/12 sm:size-14"
-          />
-          <Button variant="secondary" size="lg" className="shadow-sm">
-            MVP Foundation
-          </Button>
-        </header>
-
-        <div className="flex flex-1 flex-col justify-center gap-16 py-14">
-          <div className="max-w-4xl text-white">
-            <p className="mb-5 inline-flex rounded-full bg-secondary px-4 py-1.5 text-xs font-bold uppercase tracking-[0.24em] text-secondary-foreground">
-              Rally Investor Matching
-            </p>
-            <h1 className="text-balance text-5xl font-semibold leading-[0.92] tracking-[-0.07em] sm:text-7xl lg:text-8xl xl:text-9xl">
-              Match founders with investors that actually fit.
-            </h1>
-            <p className="mt-8 max-w-2xl text-pretty text-lg leading-8 text-white/78 sm:text-xl">
-              A focused foundation for founder intake, investor validation, AI-assisted
-              matching, and a CRM-style shortlist.
-            </p>
+    <main className="min-h-screen bg-background text-foreground">
+      <header className="border-b border-border bg-card">
+        <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-6 py-4">
+          <nav className="flex items-center gap-8">
+            <Link href="/" className="flex items-center gap-2">
+              <Image
+                src="/brand/rally-icon.png"
+                alt="Rally"
+                width={34}
+                height={34}
+                priority
+                className="size-8 rounded-md object-cover"
+              />
+              <span className="text-sm font-bold tracking-wide text-foreground">
+                RALLY
+              </span>
+            </Link>
+            <Link
+              href="/match"
+              className="text-sm font-medium text-muted-foreground transition hover:text-foreground"
+            >
+              Workspace
+            </Link>
+            <span
+              aria-current="page"
+              className="border-b-2 border-primary py-5 text-sm font-semibold text-foreground"
+            >
+              Investors
+            </span>
+            <span className="text-sm font-medium text-muted-foreground">Account</span>
+          </nav>
+          <div className="flex size-9 items-center justify-center rounded-full bg-muted text-xs font-semibold text-foreground">
+            JD
           </div>
-
-          <InvestorListPanel />
         </div>
-      </section>
+      </header>
+
+      <div className="mx-auto w-full max-w-[1440px] px-6 py-7">
+        <InvestorListPanel />
+      </div>
     </main>
   );
 }

@@ -1,0 +1,64 @@
+{
+  "version": "mvp-v1",
+  "description": "Frontend/API read model for the VC Match Intelligence chatbot MVP.",
+  "investor_count": 1,
+  "investors": [
+    {
+      "investor_id": "airtree",
+      "investor_name": "AirTree",
+      "detail_path": "investors/airtree/detail.json",
+      "au_anz_relevance": "high",
+      "au_anz_relevance_confidence": "high",
+      "local_au_anz_fund": true,
+      "supported_stages": [
+        "Pre-Seed",
+        "Seed",
+        "Series A",
+        "Series B+",
+        "Growth"
+      ],
+      "first_cheque_stages": [
+        "Growth",
+        "Pre-Seed",
+        "Seed",
+        "Series A",
+        "Series B+"
+      ],
+      "supported_sectors": [
+        "AI",
+        "B2B SaaS",
+        "fintech",
+        "healthtech",
+        "deeptech",
+        "legaltech",
+        "supply-chain"
+      ],
+      "supported_business_models": [
+        "B2B",
+        "B2C",
+        "B2D",
+        "B2G"
+      ],
+      "cheque_label": "AUD 100 thousand - AUD 5 million",
+      "cheque_confidence": "medium_high",
+      "lead_behavior": "sometimes",
+      "warm_intro_required": false,
+      "contact_path": {
+        "primary": "FAQ directs founders to email their deck to seedteam@airtree.vc",
+        "warm_intro_route": "portfolio founders, AirTree team, and co-investors may help, but warm intro is not stated as mandatory",
+        "no_intro_required": true,
+        "public_email": "seedteam@airtree.vc"
+      },
+      "review_needed_fields": [
+        "announced_date_vs_partnered_year",
+        "cheque_size.growth_max",
+        "co_investors",
+        "deals_last_24mo.census",
+        "follow_on_reserve",
+        "investor_mandate_fit",
+        "partner_routing_hypotheses",
+        "round_stage"
+      ]
+    }
+  ]
+}

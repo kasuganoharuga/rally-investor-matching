@@ -1,0 +1,1248 @@
+{
+  "_comment": "Canonical investor record for AirTree. JSON is the source of truth; airtree-review.md is rendered from these researched values. Researched 2026-06-29.",
+  "investor": {
+    "investor_id": "airtree",
+    "investor_name": "AirTree",
+    "aliases": [
+      "AirTree Ventures",
+      "Airtree"
+    ],
+    "fund_type": "VC",
+    "founded": 2014,
+    "hq_location": "Sydney",
+    "offices": [
+      "Sydney",
+      "Melbourne",
+      "Auckland"
+    ],
+    "geography_focus": [
+      "AU",
+      "NZ"
+    ],
+    "themes_claimed": [
+      "Aussie and Kiwi founders from the earliest stages",
+      "pre-seed and seed through a dedicated seed fund",
+      "growth through a dedicated growth fund",
+      "global companies expanding into Australia where AirTree can be helpful"
+    ],
+    "sectors_actual": [
+      "AI",
+      "B2B SaaS",
+      "fintech",
+      "healthtech",
+      "deeptech",
+      "legaltech",
+      "supply-chain"
+    ],
+    "stages_actual": [
+      "Pre-Seed",
+      "Seed",
+      "Series A",
+      "Series B+",
+      "Growth"
+    ],
+    "leads_rounds": "sometimes",
+    "archetype": {
+      "region": "single-region",
+      "claim": "declared-themes",
+      "disclosure": "high-profile"
+    },
+    "note_profile": {
+      "note_pages_dated": true,
+      "note_titles_structured": false,
+      "round_details_often_in_body": false,
+      "official_deal_notes_sparse": true,
+      "portfolio_pages_show_stage_and_year": true
+    },
+    "anz_mandate": {
+      "basis": "hq_or_market",
+      "note": "AirTree describes backing Aussie and Kiwi founders from the earliest stages; the FAQ also references global companies expanding into the Australian market."
+    },
+    "confidence_overall": "medium-high",
+    "confidence_reviewed": false,
+    "last_updated": "2026-06-29",
+    "review_status": "draft"
+  },
+  "investor_fields": [
+    {
+      "field": "anz_relevance",
+      "value": "high",
+      "confidence": "high",
+      "note": "AU/NZ is explicit in the fund claim and most reviewed recent deal rows are AU or NZ companies."
+    },
+    {
+      "field": "fund_economics",
+      "value": {
+        "committed_capital_estimate": {
+          "value": 650,
+          "currency": "AUD",
+          "unit": "million",
+          "as_of": "2025-08-06",
+          "confidence": "high"
+        },
+        "portfolio_fair_value": {
+          "value": null,
+          "currency": null,
+          "unit": null,
+          "as_of": null,
+          "confidence": "Gap"
+        },
+        "latest_fund": {
+          "name": "AirTree Fund V",
+          "size_value": 650,
+          "currency": "AUD",
+          "unit": "million",
+          "as_of": "2025-08-06",
+          "components": [
+            {
+              "name": "Seed fund",
+              "size_value": 250,
+              "currency": "AUD",
+              "unit": "million"
+            },
+            {
+              "name": "Growth fund",
+              "size_value": 400,
+              "currency": "AUD",
+              "unit": "million"
+            }
+          ]
+        },
+        "next_fund_status": "Gap",
+        "conflict": false,
+        "conflict_note": "No conflict found across public official sources; total firm-wide FUM remains Gap."
+      },
+      "note": "Latest public fund size is A$650m Fund V, split into A$250m seed and A$400m growth. Treat this separately from total FUM and portfolio fair value.",
+      "confidence": "high"
+    },
+    {
+      "field": "cheque_size",
+      "value": {
+        "min": {
+          "value": 100,
+          "currency": "AUD",
+          "unit": "thousand"
+        },
+        "max": {
+          "value": 5,
+          "currency": "AUD",
+          "unit": "million"
+        },
+        "basis": "fund-stated seed range from AirTree Seed: A$100k-A$250k small seed cheques and A$1m-A$5m lead seed rounds; current growth cheque maximum is not publicly bounded",
+        "hard_filter_safe": false
+      },
+      "confidence": "medium-high",
+      "note": "Safe for seed-fit scoring, not a hard all-stage filter because growth cheques are larger and the current upper bound is not disclosed."
+    },
+    {
+      "field": "deals_last_24mo",
+      "value": {
+        "in_window_rows_count": 9,
+        "verified_named_round_count": 9,
+        "official_portfolio_supported_count": 0,
+        "provisional_named_round_count": 0,
+        "non_verified_followon_event_count": 0,
+        "new_investment_for_investor_count": 8,
+        "follow_on_for_investor_count": 1,
+        "anz_deal_count": 8,
+        "external_db_count": null,
+        "external_db_source": null,
+        "source_basis": "public AirTree portfolio pages plus company announcements, independent media and startup media located through free web search",
+        "coverage_note": "This is a strong public-evidence sample, not a paid-database full census."
+      },
+      "confidence": "medium-high"
+    },
+    {
+      "field": "follow_on_reserve",
+      "value": {
+        "value": null,
+        "unit": "percent",
+        "basis": "Gap"
+      },
+      "confidence": "Gap",
+      "note": "AirTree publicly separates seed and growth pools but does not publish a reserve ratio."
+    },
+    {
+      "field": "contact_path",
+      "value": {
+        "primary": "FAQ directs founders to email their deck to seedteam@airtree.vc",
+        "warm_intro_route": "portfolio founders, AirTree team, and co-investors may help, but warm intro is not stated as mandatory",
+        "no_intro_required": true,
+        "public_email": "seedteam@airtree.vc"
+      },
+      "confidence": "high"
+    },
+    {
+      "field": "local_au_anz_fund",
+      "value": true,
+      "confidence": "high",
+      "note": "AirTree is an AU/NZ-rooted VC with explicit Aussie/Kiwi founder language."
+    },
+    {
+      "field": "australia_deal_share",
+      "value": {
+        "numerator": 8,
+        "denominator": 9,
+        "percentage": 89,
+        "definition": "Australia-related or ANZ-related company-level deals / reviewed in-window recent deals, using this project's retained is_australia_related_deal field."
+      },
+      "confidence": "medium-high"
+    },
+    {
+      "field": "australia_company_share",
+      "value": {
+        "numerator": 7,
+        "denominator": 9,
+        "percentage": 78,
+        "definition": "AU-HQ companies / reviewed in-window recent deals."
+      },
+      "confidence": "medium-high"
+    },
+    {
+      "field": "anz_deal_share",
+      "value": {
+        "numerator": 8,
+        "denominator": 9,
+        "percentage": 89,
+        "definition": "Company-level ANZ HQ or primary-market deals / reviewed in-window recent deals. Excludes investor mandate fit."
+      },
+      "confidence": "medium-high"
+    },
+    {
+      "field": "mandate_fit_share",
+      "value": {
+        "numerator": 8,
+        "denominator": 9,
+        "percentage": 89,
+        "definition": "Investor mandate-fit deals / reviewed in-window recent deals. Separate from company-level Australia/ANZ relevance."
+      },
+      "confidence": "medium-high"
+    },
+    {
+      "field": "business_model_tendency",
+      "value": {
+        "dominant": [
+          "B2B"
+        ],
+        "secondary": [
+          "B2C"
+        ],
+        "weak_or_less_observed": [
+          "B2D",
+          "B2G",
+          "B2B2C",
+          "Marketplace",
+          "Mixed"
+        ],
+        "distribution": {
+          "B2B": 4,
+          "B2C": 3,
+          "B2B2C": 0,
+          "B2G": 1,
+          "B2D": 1,
+          "Marketplace": 0,
+          "Mixed": 0,
+          "Gap": 0
+        },
+        "observed_basis": "In-window public-evidence sample: Partly, ProcurePro, Legora and Cuttable are B2B; Everlab, Extraordinary Money and Atrium are consumer or personal-use products; Advanced Navigation is public/strategic infrastructure; Alloy is robotics data infrastructure."
+      },
+      "confidence": "medium-high"
+    },
+    {
+      "field": "co_investors",
+      "value": [
+        "DST Global",
+        "King River Capital",
+        "Ten13",
+        "Blackbird",
+        "Coatue",
+        "General Catalyst",
+        "Atlassian Ventures",
+        "Khosla Ventures",
+        "ECP Growth",
+        "Sageview Capital"
+      ],
+      "confidence": "medium",
+      "note": "Derived from evidence-backed co_investment_edges only; context for future warm intros, not final intro logic."
+    }
+  ],
+  "deals": [
+    {
+      "deal_id": "airtree_everlab_series_a_2026",
+      "company": "Everlab",
+      "round_stage": "Series A",
+      "round_amount": {
+        "value": 15,
+        "currency": "AUD",
+        "unit": "million",
+        "confidence": "high"
+      },
+      "investor_cheque_amount": {
+        "value": null,
+        "currency": null,
+        "confidence": "Gap",
+        "note": "AirTree led the round but its individual cheque amount was not disclosed."
+      },
+      "announced_date": "2026-06-17",
+      "announced_date_precision": "day",
+      "deal_date": "2026-06-17",
+      "role": "lead",
+      "is_lead": true,
+      "is_new_investment_for_investor": true,
+      "is_follow_on_for_investor": false,
+      "is_company_follow_on_round": true,
+      "company_hq_country": "AU",
+      "primary_market": "AU",
+      "is_australia_company": true,
+      "is_anz_company": true,
+      "is_australia_related_deal": true,
+      "company_level_australia_relevance_basis": "company_hq_au",
+      "investor_mandate_fit": true,
+      "investor_mandate_fit_basis": "company_hq_au",
+      "hq_or_primary_market_anz": true,
+      "company_anz_relevance": true,
+      "anz_connection_basis": "hq",
+      "business_model_orientation": "B2C",
+      "business_model_detail": "Preventive healthcare and longevity membership platform for consumers/patients",
+      "business_model_confidence": "medium-high",
+      "business_model_basis": "Funding coverage describes Everlab as a preventive health and longevity platform serving individual members.",
+      "verification_status": "verified_named_round",
+      "deal_confidence": "high",
+      "deal_sources": [
+        {
+          "url": "https://insider.fitt.co/press-release/everlab-raises-15m-series-a-led-by-airtree-to-build-australias-leading-preventive-health-platform/",
+          "source_type": "portfolio_company_announcement",
+          "source_role": "primary",
+          "publisher": "Fitt Insider / Everlab press release",
+          "source_strength": "strong"
+        },
+        {
+          "url": "https://www.smartcompany.com.au/startupsmart/news/everlab-series-a-ai-healthtech-airtree/",
+          "source_type": "independent_media",
+          "source_role": "verification",
+          "publisher": "SmartCompany",
+          "source_strength": "strong"
+        }
+      ],
+      "missing_sources": [],
+      "in_window": true,
+      "notes": "Company announcement and independent media both identify AirTree as lead investor."
+    },
+    {
+      "deal_id": "airtree_partly_series_b_2026",
+      "company": "Partly",
+      "round_stage": "Series B+",
+      "round_amount": {
+        "value": 50,
+        "currency": "USD",
+        "unit": "million",
+        "confidence": "high"
+      },
+      "investor_cheque_amount": {
+        "value": null,
+        "currency": null,
+        "confidence": "Gap",
+        "note": "AirTree cheque amount undisclosed."
+      },
+      "announced_date": "2026-06-24",
+      "announced_date_precision": "day",
+      "deal_date": "2026-06-24",
+      "role": "participant",
+      "is_lead": false,
+      "is_new_investment_for_investor": true,
+      "is_follow_on_for_investor": false,
+      "is_company_follow_on_round": true,
+      "company_hq_country": "NZ",
+      "primary_market": "Global",
+      "is_australia_company": false,
+      "is_anz_company": true,
+      "is_australia_related_deal": true,
+      "company_level_australia_relevance_basis": "company_hq_nz",
+      "investor_mandate_fit": true,
+      "investor_mandate_fit_basis": "company_hq_nz",
+      "hq_or_primary_market_anz": true,
+      "company_anz_relevance": true,
+      "anz_connection_basis": "hq",
+      "business_model_orientation": "B2B",
+      "business_model_detail": "Automotive replacement-parts data and supply-chain infrastructure for businesses",
+      "business_model_confidence": "medium-high",
+      "business_model_basis": "Coverage describes Partly as an auto-parts data infrastructure and supply-chain platform.",
+      "verification_status": "verified_named_round",
+      "deal_confidence": "medium-high",
+      "deal_sources": [
+        {
+          "url": "https://www.airtree.vc/companies/partly",
+          "source_type": "official_portfolio_page",
+          "source_role": "primary",
+          "publisher": "AirTree",
+          "source_strength": "medium"
+        },
+        {
+          "url": "https://www.thesaasnews.com/news/partly-raises-50-million-in-series-b",
+          "source_type": "independent_media",
+          "source_role": "verification",
+          "publisher": "The SaaS News",
+          "source_strength": "strong"
+        }
+      ],
+      "missing_sources": [],
+      "in_window": true,
+      "notes": "DST Global is reported as lead; AirTree portfolio page supports AirTree's relationship at Series B 2026."
+    },
+    {
+      "deal_id": "airtree_extraordinary_money_pre_seed_2026",
+      "company": "Extraordinary Money",
+      "round_stage": "Pre-Seed",
+      "round_amount": {
+        "value": 4,
+        "currency": "AUD",
+        "unit": "million",
+        "confidence": "high"
+      },
+      "investor_cheque_amount": {
+        "value": null,
+        "currency": null,
+        "confidence": "Gap",
+        "note": "AirTree cheque amount undisclosed."
+      },
+      "announced_date": "2026-05-14",
+      "announced_date_precision": "day",
+      "deal_date": "2026-05-14",
+      "role": "co-lead",
+      "is_lead": true,
+      "is_new_investment_for_investor": true,
+      "is_follow_on_for_investor": false,
+      "is_company_follow_on_round": false,
+      "company_hq_country": "AU",
+      "primary_market": "AU",
+      "is_australia_company": true,
+      "is_anz_company": true,
+      "is_australia_related_deal": true,
+      "company_level_australia_relevance_basis": "company_hq_au",
+      "investor_mandate_fit": true,
+      "investor_mandate_fit_basis": "company_hq_au",
+      "hq_or_primary_market_anz": true,
+      "company_anz_relevance": true,
+      "anz_connection_basis": "hq",
+      "business_model_orientation": "B2C",
+      "business_model_detail": "Consumer financial services for the disability and care economy",
+      "business_model_confidence": "medium-high",
+      "business_model_basis": "Funding coverage describes a money app targeting NDIS recipients, carers and service providers.",
+      "verification_status": "verified_named_round",
+      "deal_confidence": "medium-high",
+      "deal_sources": [
+        {
+          "url": "https://www.airtree.vc/companies/extraordinary-money",
+          "source_type": "official_portfolio_page",
+          "source_role": "primary",
+          "publisher": "AirTree",
+          "source_strength": "medium"
+        },
+        {
+          "url": "https://www.startupdaily.net/topic/funding/fintech-extraordinary-money-raises-4-million-pre-seed-funding/",
+          "source_type": "independent_media",
+          "source_role": "verification",
+          "publisher": "Startup Daily",
+          "source_strength": "strong"
+        }
+      ],
+      "missing_sources": [],
+      "in_window": true,
+      "notes": "AirTree portfolio page says partnered at Pre-seed in 2025; media announcement is May 2026. Treat as public announcement date vs partnered year conflict."
+    },
+    {
+      "deal_id": "airtree_procurepro_series_b_2026",
+      "company": "ProcurePro",
+      "round_stage": "Series B+",
+      "round_amount": {
+        "value": 11,
+        "currency": "USD",
+        "unit": "million",
+        "confidence": "medium-high"
+      },
+      "investor_cheque_amount": {
+        "value": null,
+        "currency": null,
+        "confidence": "Gap",
+        "note": "AirTree follow-on cheque amount undisclosed."
+      },
+      "announced_date": "2026-05-01",
+      "announced_date_precision": "month",
+      "deal_date": "2026-05-01",
+      "role": "participant",
+      "is_lead": false,
+      "is_new_investment_for_investor": false,
+      "is_follow_on_for_investor": true,
+      "is_company_follow_on_round": true,
+      "company_hq_country": "AU",
+      "primary_market": "AU/Global",
+      "is_australia_company": true,
+      "is_anz_company": true,
+      "is_australia_related_deal": true,
+      "company_level_australia_relevance_basis": "company_hq_au",
+      "investor_mandate_fit": true,
+      "investor_mandate_fit_basis": "company_hq_au",
+      "hq_or_primary_market_anz": true,
+      "company_anz_relevance": true,
+      "anz_connection_basis": "hq",
+      "business_model_orientation": "B2B",
+      "business_model_detail": "Construction procurement workflow SaaS",
+      "business_model_confidence": "high",
+      "business_model_basis": "Company announcement and coverage describe ProcurePro as procurement software for builders and contractors.",
+      "verification_status": "verified_named_round",
+      "deal_confidence": "medium-high",
+      "deal_sources": [
+        {
+          "url": "https://www.airtree.vc/companies/procurepro",
+          "source_type": "official_portfolio_page",
+          "source_role": "primary",
+          "publisher": "AirTree",
+          "source_strength": "medium"
+        },
+        {
+          "url": "https://www.procurepro.co/blog/procurepro-raises-us-11m-series-b-to-accelerate-international-expansion",
+          "source_type": "portfolio_company_announcement",
+          "source_role": "verification",
+          "publisher": "ProcurePro",
+          "source_strength": "strong"
+        }
+      ],
+      "missing_sources": [],
+      "in_window": true,
+      "notes": "AirTree portfolio page shows original Series A 2023 partnership; 2026 company announcement describes continued backing by existing investors."
+    },
+    {
+      "deal_id": "airtree_legora_series_d_2026",
+      "company": "Legora",
+      "round_stage": "Growth",
+      "round_amount": {
+        "value": 50,
+        "currency": "USD",
+        "unit": "million",
+        "confidence": "medium-high"
+      },
+      "investor_cheque_amount": {
+        "value": null,
+        "currency": null,
+        "confidence": "Gap",
+        "note": "AirTree cheque amount undisclosed."
+      },
+      "announced_date": "2026-04-30",
+      "announced_date_precision": "day",
+      "deal_date": "2026-04-30",
+      "role": "participant",
+      "is_lead": false,
+      "is_new_investment_for_investor": true,
+      "is_follow_on_for_investor": false,
+      "is_company_follow_on_round": true,
+      "company_hq_country": "SE",
+      "primary_market": "Global",
+      "is_australia_company": false,
+      "is_anz_company": false,
+      "is_australia_related_deal": false,
+      "company_level_australia_relevance_basis": "not_australia_related",
+      "investor_mandate_fit": false,
+      "investor_mandate_fit_basis": "mandate_not_met",
+      "hq_or_primary_market_anz": false,
+      "company_anz_relevance": false,
+      "anz_connection_basis": "none",
+      "business_model_orientation": "B2B",
+      "business_model_detail": "Legal AI software for law firms and legal teams",
+      "business_model_confidence": "high",
+      "business_model_basis": "Legora's announcement describes a collaborative AI platform for legal professionals.",
+      "verification_status": "verified_named_round",
+      "deal_confidence": "medium-high",
+      "deal_sources": [
+        {
+          "url": "https://www.airtree.vc/companies/legora",
+          "source_type": "official_portfolio_page",
+          "source_role": "primary",
+          "publisher": "AirTree",
+          "source_strength": "medium"
+        },
+        {
+          "url": "https://legora.com/newsroom/legora-raises-50m-series-d-extension",
+          "source_type": "portfolio_company_announcement",
+          "source_role": "verification",
+          "publisher": "Legora",
+          "source_strength": "strong"
+        }
+      ],
+      "missing_sources": [],
+      "in_window": true,
+      "notes": "Global out-of-region growth investment. Do not treat as company-level ANZ evidence unless reviewer confirms an AU-market expansion basis."
+    },
+    {
+      "deal_id": "airtree_advanced_navigation_series_c_2026",
+      "company": "Advanced Navigation",
+      "round_stage": "Series B+",
+      "round_amount": {
+        "value": 110,
+        "currency": "USD",
+        "unit": "million",
+        "confidence": "high"
+      },
+      "investor_cheque_amount": {
+        "value": null,
+        "currency": null,
+        "confidence": "Gap",
+        "note": "AirTree led the round but its individual cheque amount was not disclosed."
+      },
+      "announced_date": "2026-03-18",
+      "announced_date_precision": "day",
+      "deal_date": "2026-03-18",
+      "role": "lead",
+      "is_lead": true,
+      "is_new_investment_for_investor": true,
+      "is_follow_on_for_investor": false,
+      "is_company_follow_on_round": true,
+      "company_hq_country": "AU",
+      "primary_market": "Global",
+      "is_australia_company": true,
+      "is_anz_company": true,
+      "is_australia_related_deal": true,
+      "company_level_australia_relevance_basis": "company_hq_au",
+      "investor_mandate_fit": true,
+      "investor_mandate_fit_basis": "company_hq_au",
+      "hq_or_primary_market_anz": true,
+      "company_anz_relevance": true,
+      "anz_connection_basis": "hq",
+      "business_model_orientation": "B2G",
+      "business_model_detail": "Autonomous navigation and positioning infrastructure for defence, aerospace, maritime and industrial uses",
+      "business_model_confidence": "medium-high",
+      "business_model_basis": "Company announcement and coverage emphasize autonomy, navigation, aerospace and defence-adjacent infrastructure use cases.",
+      "verification_status": "verified_named_round",
+      "deal_confidence": "high",
+      "deal_sources": [
+        {
+          "url": "https://www.airtree.vc/companies/advanced-navigation",
+          "source_type": "official_portfolio_page",
+          "source_role": "primary",
+          "publisher": "AirTree",
+          "source_strength": "medium"
+        },
+        {
+          "url": "https://www.advancednavigation.com/news/advanced-navigation-raises-110-million-usd-to-lead-the-autonomy-revolution/",
+          "source_type": "portfolio_company_announcement",
+          "source_role": "verification",
+          "publisher": "Advanced Navigation",
+          "source_strength": "strong"
+        }
+      ],
+      "missing_sources": [],
+      "in_window": true,
+      "notes": "Company announcement identifies AirTree as lead investor."
+    },
+    {
+      "deal_id": "airtree_cuttable_seed_2026",
+      "company": "Cuttable",
+      "round_stage": "Seed",
+      "round_amount": {
+        "value": 5.7,
+        "currency": "AUD",
+        "unit": "million",
+        "confidence": "medium-high"
+      },
+      "investor_cheque_amount": {
+        "value": null,
+        "currency": null,
+        "confidence": "Gap",
+        "note": "AirTree cheque amount undisclosed."
+      },
+      "announced_date": "2026-03-23",
+      "announced_date_precision": "day",
+      "deal_date": "2026-03-23",
+      "role": "participant",
+      "is_lead": false,
+      "is_new_investment_for_investor": true,
+      "is_follow_on_for_investor": false,
+      "is_company_follow_on_round": true,
+      "company_hq_country": "AU",
+      "primary_market": "AU/Global",
+      "is_australia_company": true,
+      "is_anz_company": true,
+      "is_australia_related_deal": true,
+      "company_level_australia_relevance_basis": "company_hq_au",
+      "investor_mandate_fit": true,
+      "investor_mandate_fit_basis": "company_hq_au",
+      "hq_or_primary_market_anz": true,
+      "company_anz_relevance": true,
+      "anz_connection_basis": "hq",
+      "business_model_orientation": "B2B",
+      "business_model_detail": "Creative production automation and workflow software for marketing teams",
+      "business_model_confidence": "medium-high",
+      "business_model_basis": "AirTree portfolio page and funding coverage position Cuttable as an AI-powered production platform for marketers and creative teams.",
+      "verification_status": "verified_named_round",
+      "deal_confidence": "medium-high",
+      "deal_sources": [
+        {
+          "url": "https://www.airtree.vc/companies/cuttable",
+          "source_type": "official_portfolio_page",
+          "source_role": "primary",
+          "publisher": "AirTree",
+          "source_strength": "medium"
+        },
+        {
+          "url": "https://www.startupdaily.net/topic/funding/ai-startup-cuttable-raises-5-7-million-to-help-marketing-teams-create-great-ads/",
+          "source_type": "independent_media",
+          "source_role": "verification",
+          "publisher": "Startup Daily",
+          "source_strength": "strong"
+        }
+      ],
+      "missing_sources": [],
+      "in_window": true,
+      "notes": "Public sources describe a 2026 financing while some database snippets also reference an earlier 2024 seed; keep as in-window official portfolio-supported seed row."
+    },
+    {
+      "deal_id": "airtree_alloy_pre_seed_2025",
+      "company": "Alloy",
+      "round_stage": "Pre-Seed",
+      "round_amount": {
+        "value": 4.5,
+        "currency": "AUD",
+        "unit": "million",
+        "confidence": "high"
+      },
+      "investor_cheque_amount": {
+        "value": null,
+        "currency": null,
+        "confidence": "Gap",
+        "note": "AirTree cheque amount undisclosed."
+      },
+      "announced_date": "2025-09-24",
+      "announced_date_precision": "day",
+      "deal_date": "2025-09-24",
+      "role": "participant",
+      "is_lead": false,
+      "is_new_investment_for_investor": true,
+      "is_follow_on_for_investor": false,
+      "is_company_follow_on_round": false,
+      "company_hq_country": "AU",
+      "primary_market": "Global",
+      "is_australia_company": true,
+      "is_anz_company": true,
+      "is_australia_related_deal": true,
+      "company_level_australia_relevance_basis": "company_hq_au",
+      "investor_mandate_fit": true,
+      "investor_mandate_fit_basis": "company_hq_au",
+      "hq_or_primary_market_anz": true,
+      "company_anz_relevance": true,
+      "anz_connection_basis": "hq",
+      "business_model_orientation": "B2D",
+      "business_model_detail": "Robotics data infrastructure and simulation tooling for robot builders",
+      "business_model_confidence": "medium-high",
+      "business_model_basis": "Funding coverage describes infrastructure for robotics data, simulation and robot AI workflows.",
+      "verification_status": "verified_named_round",
+      "deal_confidence": "high",
+      "deal_sources": [
+        {
+          "url": "https://www.airtree.vc/companies/alloy",
+          "source_type": "official_portfolio_page",
+          "source_role": "primary",
+          "publisher": "AirTree",
+          "source_strength": "medium"
+        },
+        {
+          "url": "https://www.forbes.com.au/news/innovation/robots-with-smarts-alloy-scores-4-5m-for-intelligent-machines/",
+          "source_type": "independent_media",
+          "source_role": "verification",
+          "publisher": "Forbes Australia",
+          "source_strength": "strong"
+        }
+      ],
+      "missing_sources": [],
+      "in_window": true,
+      "notes": "Forbes reports Blackbird led and AirTree participated."
+    },
+    {
+      "deal_id": "airtree_atrium_pre_seed_2025",
+      "company": "Atrium",
+      "round_stage": "Pre-Seed",
+      "round_amount": {
+        "value": 1.3,
+        "currency": "AUD",
+        "unit": "million",
+        "confidence": "medium-high"
+      },
+      "investor_cheque_amount": {
+        "value": null,
+        "currency": null,
+        "confidence": "Gap",
+        "note": "AirTree cheque amount undisclosed."
+      },
+      "announced_date": "2025-12-15",
+      "announced_date_precision": "day",
+      "deal_date": "2025-12-15",
+      "role": "co-lead",
+      "is_lead": true,
+      "is_new_investment_for_investor": true,
+      "is_follow_on_for_investor": false,
+      "is_company_follow_on_round": false,
+      "company_hq_country": "AU",
+      "primary_market": "Global",
+      "is_australia_company": true,
+      "is_anz_company": true,
+      "is_australia_related_deal": true,
+      "company_level_australia_relevance_basis": "company_hq_au",
+      "investor_mandate_fit": true,
+      "investor_mandate_fit_basis": "company_hq_au",
+      "hq_or_primary_market_anz": true,
+      "company_anz_relevance": true,
+      "anz_connection_basis": "hq",
+      "business_model_orientation": "B2C",
+      "business_model_detail": "Personal relationship-management and personal CRM product",
+      "business_model_confidence": "medium",
+      "business_model_basis": "Funding coverage describes a relationship management tool initially focused on individuals rather than enterprises.",
+      "verification_status": "verified_named_round",
+      "deal_confidence": "medium-high",
+      "deal_sources": [
+        {
+          "url": "https://www.airtree.vc/companies/atrium",
+          "source_type": "official_portfolio_page",
+          "source_role": "primary",
+          "publisher": "AirTree",
+          "source_strength": "medium"
+        },
+        {
+          "url": "https://www.fundz.net/fundings/atrium-funding-round-seed-18c58f",
+          "source_type": "free_public_database",
+          "source_role": "verification",
+          "publisher": "Fundz",
+          "source_strength": "medium"
+        }
+      ],
+      "missing_sources": [],
+      "in_window": true,
+      "notes": "AirTree labels the round Pre-seed; one free database labels it Seed. Keep AirTree stage and create review task for stage reconciliation."
+    }
+  ],
+  "partners": [
+    {
+      "partner_id": "partner_airtree_craig_blair",
+      "name": "Craig Blair",
+      "role": "Co-founder and Partner",
+      "location": "Australia",
+      "official_profile": "https://www.airtree.vc/team/craig-blair",
+      "linkedin": {
+        "url": "https://www.linkedin.com/in/craigwblair",
+        "status": "confirmed",
+        "confidence": "high"
+      },
+      "is_anz": true,
+      "is_active": true
+    },
+    {
+      "partner_id": "partner_airtree_jackie_vullinghs",
+      "name": "Jackie Vullinghs",
+      "role": "Partner",
+      "location": "Australia",
+      "official_profile": "https://www.airtree.vc/team/jackie-vullinghs",
+      "linkedin": {
+        "url": "https://www.linkedin.com/in/jackievullinghs",
+        "status": "confirmed",
+        "confidence": "high"
+      },
+      "is_anz": true,
+      "is_active": true
+    },
+    {
+      "partner_id": "partner_airtree_james_cameron",
+      "name": "James Cameron",
+      "role": "Partner",
+      "location": "Australia",
+      "official_profile": "https://www.airtree.vc/team/james-cameron",
+      "linkedin": {
+        "url": "https://www.linkedin.com/in/james-cameron-90815b2",
+        "status": "confirmed",
+        "confidence": "high"
+      },
+      "is_anz": true,
+      "is_active": true
+    },
+    {
+      "partner_id": "partner_airtree_elicia_mcdonald",
+      "name": "Elicia McDonald",
+      "role": "Partner",
+      "location": "Australia",
+      "official_profile": "https://www.airtree.vc/team/elicia-mcdonald",
+      "linkedin": {
+        "url": "https://www.linkedin.com/in/eliciamcdonald",
+        "status": "confirmed",
+        "confidence": "high"
+      },
+      "is_anz": true,
+      "is_active": true
+    },
+    {
+      "partner_id": "partner_airtree_john_henderson",
+      "name": "John Henderson",
+      "role": "Partner",
+      "location": "Australia",
+      "official_profile": "https://www.airtree.vc/team/john-henderson",
+      "linkedin": {
+        "url": "https://www.linkedin.com/in/johnhendersonuk",
+        "status": "confirmed",
+        "confidence": "high"
+      },
+      "is_anz": true,
+      "is_active": true
+    },
+    {
+      "partner_id": "partner_airtree_kelland_reilly",
+      "name": "Kelland Reilly",
+      "role": "Partner",
+      "location": "Australia",
+      "official_profile": "https://www.airtree.vc/team/kell-reilly",
+      "linkedin": {
+        "url": "https://www.linkedin.com/in/kellreilly/",
+        "status": "confirmed",
+        "confidence": "high"
+      },
+      "is_anz": true,
+      "is_active": true
+    }
+  ],
+  "partner_routing_hypotheses": [
+    {
+      "sector": "Seed and pre-seed generalist routing",
+      "who": [
+        "Kelland Reilly",
+        "Elicia McDonald",
+        "James Cameron"
+      ],
+      "evidence_basis": "AirTree Seed is a dedicated seed vehicle; public profiles and portfolio pages show recent early-stage investments such as Atrium, Alloy and Extraordinary Money, but public authored-note routing is incomplete.",
+      "confidence": "medium",
+      "reviewer_needed": true
+    },
+    {
+      "sector": "AI, legaltech, developer infrastructure and B2B SaaS",
+      "who": [
+        "John Henderson",
+        "James Cameron",
+        "Elicia McDonald"
+      ],
+      "evidence_basis": "Recent public deals include Legora, Alloy, Cuttable, Partly and ProcurePro; partner-level ownership is only partially visible in public sources.",
+      "confidence": "medium",
+      "reviewer_needed": true
+    },
+    {
+      "sector": "Fintech and consumer financial products",
+      "who": [
+        "Craig Blair",
+        "Jackie Vullinghs"
+      ],
+      "evidence_basis": "AirTree portfolio includes Airwallex and recent Extraordinary Money; partner mapping is a routing hypothesis, not a confirmed assignment.",
+      "confidence": "low",
+      "reviewer_needed": true
+    },
+    {
+      "sector": "Healthtech and deeptech",
+      "who": [
+        "Jackie Vullinghs",
+        "John Henderson"
+      ],
+      "evidence_basis": "Recent public deals include Everlab and Advanced Navigation; public source coverage does not conclusively assign partner ownership.",
+      "confidence": "low",
+      "reviewer_needed": true
+    }
+  ],
+  "co_investment_edges": [
+    {
+      "co_investor": "King River Capital",
+      "related_company": "Everlab",
+      "related_deal_id": "airtree_everlab_series_a_2026",
+      "evidence_url": "https://www.smartcompany.com.au/startupsmart/news/everlab-series-a-ai-healthtech-airtree/",
+      "source_type": "independent_media",
+      "confidence": "medium",
+      "use": "context_only"
+    },
+    {
+      "co_investor": "DST Global",
+      "related_company": "Partly",
+      "related_deal_id": "airtree_partly_series_b_2026",
+      "evidence_url": "https://www.thesaasnews.com/news/partly-raises-50-million-in-series-b",
+      "source_type": "independent_media",
+      "confidence": "medium",
+      "use": "context_only"
+    },
+    {
+      "co_investor": "Triple Bubble",
+      "related_company": "Extraordinary Money",
+      "related_deal_id": "airtree_extraordinary_money_pre_seed_2026",
+      "evidence_url": "https://www.startupdaily.net/topic/funding/fintech-extraordinary-money-raises-4-million-pre-seed-funding/",
+      "source_type": "independent_media",
+      "confidence": "medium",
+      "use": "context_only"
+    },
+    {
+      "co_investor": "Sageview Capital",
+      "related_company": "ProcurePro",
+      "related_deal_id": "airtree_procurepro_series_b_2026",
+      "evidence_url": "https://www.procurepro.co/blog/procurepro-raises-us-11m-series-b-to-accelerate-international-expansion",
+      "source_type": "portfolio_company_announcement",
+      "confidence": "medium",
+      "use": "context_only"
+    },
+    {
+      "co_investor": "Atlassian Ventures",
+      "related_company": "Legora",
+      "related_deal_id": "airtree_legora_series_d_2026",
+      "evidence_url": "https://legora.com/newsroom/legora-raises-50m-series-d-extension",
+      "source_type": "portfolio_company_announcement",
+      "confidence": "medium",
+      "use": "context_only"
+    },
+    {
+      "co_investor": "Khosla Ventures",
+      "related_company": "Advanced Navigation",
+      "related_deal_id": "airtree_advanced_navigation_series_c_2026",
+      "evidence_url": "https://www.advancednavigation.com/news/advanced-navigation-raises-110-million-usd-to-lead-the-autonomy-revolution/",
+      "source_type": "portfolio_company_announcement",
+      "confidence": "medium",
+      "use": "context_only"
+    },
+    {
+      "co_investor": "Glitch Capital",
+      "related_company": "Cuttable",
+      "related_deal_id": "airtree_cuttable_seed_2026",
+      "evidence_url": "https://www.startupdaily.net/topic/funding/ai-startup-cuttable-raises-5-7-million-to-help-marketing-teams-create-great-ads/",
+      "source_type": "independent_media",
+      "confidence": "medium",
+      "use": "context_only"
+    },
+    {
+      "co_investor": "Blackbird",
+      "related_company": "Alloy",
+      "related_deal_id": "airtree_alloy_pre_seed_2025",
+      "evidence_url": "https://www.forbes.com.au/news/innovation/robots-with-smarts-alloy-scores-4-5m-for-intelligent-machines/",
+      "source_type": "independent_media",
+      "confidence": "medium",
+      "use": "context_only"
+    },
+    {
+      "co_investor": "Ten13",
+      "related_company": "Atrium",
+      "related_deal_id": "airtree_atrium_pre_seed_2025",
+      "evidence_url": "https://www.fundz.net/fundings/atrium-funding-round-seed-18c58f",
+      "source_type": "free_public_database",
+      "confidence": "medium",
+      "use": "context_only"
+    }
+  ],
+  "evidence_audit": {
+    "official_pages_reviewed": 18,
+    "official_claim_pages_reviewed": [
+      "home",
+      "FAQ",
+      "Fund V announcement",
+      "AirTree Seed announcement",
+      "companies index"
+    ],
+    "official_company_pages_reviewed": 8,
+    "official_investment_notes_reviewed": 0,
+    "partner_pages_reviewed": 6,
+    "independent_media_sources_reviewed": 14,
+    "portfolio_company_sources_reviewed": 4,
+    "new_investment_for_investor": 8,
+    "follow_on_for_investor": 1,
+    "milestone_pr": 0,
+    "excluded": 0,
+    "duplicates": 0,
+    "in_window_rows": 9,
+    "verified_named_rounds": 9,
+    "official_portfolio_supported": 0,
+    "provisional_named_rounds": 0,
+    "non_verified_followon_events": 0,
+    "out_of_window_historical_deals": 0,
+    "anz_in_window_deals": 8,
+    "coverage_estimate": "Good public coverage for prominent recent rounds and official portfolio-listed companies. Not a full financing census; paid databases may reveal additional smaller or undisclosed rounds."
+  },
+  "review_tasks": [
+    {
+      "entity_type": "field",
+      "entity_id": "fund_airtree",
+      "field": "deals_last_24mo.census",
+      "priority": "high",
+      "reason": "Public portfolio pages and news searches provide a strong sample but not a paid-database full census of every AirTree investment in the last 24 months.",
+      "suggested_action": "Check PitchBook, Dealroom, Tracxn or internal CRM before treating counts as exhaustive.",
+      "status": "open"
+    },
+    {
+      "entity_type": "field",
+      "entity_id": "fund_airtree",
+      "field": "cheque_size.growth_max",
+      "priority": "medium",
+      "reason": "AirTree discloses a seed cheque pattern but does not publish a current all-stage maximum cheque size.",
+      "suggested_action": "Confirm current first-cheque and follow-on/growth cheque ranges through founder references, AirTree, or paid databases.",
+      "status": "open"
+    },
+    {
+      "entity_type": "deal",
+      "entity_id": "airtree_extraordinary_money_pre_seed_2026",
+      "field": "announced_date_vs_partnered_year",
+      "priority": "medium",
+      "reason": "AirTree portfolio page shows partnered in 2025 while media coverage announces the round in 2026.",
+      "suggested_action": "Confirm whether 2025 is first-partnered year and 2026 is public announcement date.",
+      "status": "open"
+    },
+    {
+      "entity_type": "deal",
+      "entity_id": "airtree_atrium_pre_seed_2025",
+      "field": "round_stage",
+      "priority": "low",
+      "reason": "AirTree labels the round Pre-seed while a free public database labels it Seed.",
+      "suggested_action": "Prefer AirTree label unless a company announcement confirms a different round label.",
+      "status": "open"
+    },
+    {
+      "entity_type": "deal",
+      "entity_id": "airtree_legora_series_d_2026",
+      "field": "investor_mandate_fit",
+      "priority": "medium",
+      "reason": "Legora is Sweden-headquartered and global; no company-level ANZ basis was found despite AirTree participation.",
+      "suggested_action": "Confirm whether the investment was tied to Australia-market expansion or network fit before using it as ANZ matching evidence.",
+      "status": "open"
+    },
+    {
+      "entity_type": "routing",
+      "entity_id": "fund_airtree_partner_routing",
+      "field": "partner_routing_hypotheses",
+      "priority": "medium",
+      "reason": "Public pages confirm team roles and LinkedIn profiles, but partner ownership for several recent deals is not fully public.",
+      "suggested_action": "Validate routing hypotheses with internal relationship data or AirTree deal-note ownership.",
+      "status": "open"
+    }
+  ],
+  "rag_chunks": [
+    {
+      "section_key": "claimed_position",
+      "fact_or_inference": "fact",
+      "region_scope": "AU/NZ",
+      "confidence": "high",
+      "rag_allowed": true,
+      "body": "AirTree claims to back Aussie and Kiwi founders from the earliest stages through AirTree Seed, with a dedicated A$250m seed fund and A$400m growth fund in Fund V. The FAQ directs founders to email seedteam@airtree.vc."
+    },
+    {
+      "section_key": "deal_evidence",
+      "fact_or_inference": "fact",
+      "region_scope": "AU/NZ plus selected global",
+      "confidence": "medium-high",
+      "rag_allowed": true,
+      "body": "The reviewed in-window sample contains nine named financing events: Everlab, Partly, Extraordinary Money, ProcurePro, Legora, Advanced Navigation, Cuttable, Alloy and Atrium. Eight of nine are company-level ANZ relevant."
+    },
+    {
+      "section_key": "routing_hypothesis",
+      "fact_or_inference": "inference",
+      "region_scope": "AU/NZ",
+      "confidence": "medium",
+      "rag_allowed": true,
+      "body": "Public evidence supports only hypothesis-level partner routing. Use seed team and known partners for initial routing, then verify with internal relationship data."
+    }
+  ],
+  "sources_primary": [
+    "https://www.airtree.vc/",
+    "https://www.airtree.vc/faqs",
+    "https://www.airtree.vc/open-source-vc/introducing-airtree-seed-a-fund-dedicated-to-backing-founders-right-from-the-start",
+    "https://www.airtree.vc/open-source-vc/airtrees-fund-v-650m-to-back-the-next-generation-of-aussie-and-kiwi-founders",
+    "https://www.airtree.vc/companies",
+    "https://www.airtree.vc/team",
+    "https://www.airtree.vc/team/craig-blair",
+    "https://www.airtree.vc/team/jackie-vullinghs",
+    "https://www.airtree.vc/team/james-cameron",
+    "https://www.airtree.vc/team/elicia-mcdonald",
+    "https://www.airtree.vc/team/john-henderson",
+    "https://www.airtree.vc/team/kell-reilly",
+    "https://www.airtree.vc/companies/partly",
+    "https://www.airtree.vc/companies/extraordinary-money",
+    "https://www.airtree.vc/companies/procurepro",
+    "https://www.airtree.vc/companies/legora",
+    "https://www.airtree.vc/companies/advanced-navigation",
+    "https://www.airtree.vc/companies/cuttable",
+    "https://www.airtree.vc/companies/alloy",
+    "https://www.airtree.vc/companies/atrium"
+  ],
+  "validation_search_log": [
+    {
+      "entity_id": "airtree_everlab_series_a_2026",
+      "search_status": "verification_found",
+      "queries_used": [
+        "Everlab raises $15m Series A AirTree 2026",
+        "Everlab Series A AirTree SmartCompany"
+      ],
+      "result": "Company/press-release source and independent media both identify AirTree as lead investor."
+    },
+    {
+      "entity_id": "airtree_partly_series_b_2026",
+      "search_status": "verification_found",
+      "queries_used": [
+        "Partly raises 50 million Series B Airtree 2026 DST Global",
+        "Partly Series B The SaaS News AirTree"
+      ],
+      "result": "AirTree portfolio page supports Series B 2026 relationship; independent media confirms the Series B amount and lead investor."
+    },
+    {
+      "entity_id": "airtree_extraordinary_money_pre_seed_2026",
+      "search_status": "partially_found",
+      "queries_used": [
+        "Extraordinary Money raises $4 million pre-seed AirTree 2026",
+        "Extraordinary Money AirTree Triple Bubble pre-seed"
+      ],
+      "result": "Independent media confirms A$4m pre-seed with AirTree and Triple Bubble; AirTree page shows partnered year 2025, creating a date/partnered-year review task."
+    },
+    {
+      "entity_id": "airtree_procurepro_series_b_2026",
+      "search_status": "verification_found",
+      "queries_used": [
+        "ProcurePro raises US$11M Series B Airtree 2026",
+        "ProcurePro Series B existing investors AirTree"
+      ],
+      "result": "Company announcement verifies the Series B and describes support from existing investors; AirTree portfolio page supports prior relationship."
+    },
+    {
+      "entity_id": "airtree_legora_series_d_2026",
+      "search_status": "verification_found",
+      "queries_used": [
+        "Legora Series D extension Airtree 2026",
+        "Legora raises 50M Series D extension AirTree Atlassian"
+      ],
+      "result": "Legora announcement and AirTree portfolio page support the 2026 growth investment; ANZ mandate basis remains review-needed."
+    },
+    {
+      "entity_id": "airtree_advanced_navigation_series_c_2026",
+      "search_status": "verification_found",
+      "queries_used": [
+        "Advanced Navigation raises US$110 million Series C AirTree 2026",
+        "Advanced Navigation AirTree Series C Khosla"
+      ],
+      "result": "Company announcement verifies US$110m Series C led by AirTree."
+    },
+    {
+      "entity_id": "airtree_cuttable_seed_2026",
+      "search_status": "verification_found",
+      "queries_used": [
+        "Cuttable raises 5.7 million AirTree seed 2026 Startup Daily",
+        "Cuttable seed AirTree 2026"
+      ],
+      "result": "AirTree portfolio page and independent media support the Seed 2026 row; exact role remains participant because a non-AirTree lead is not clearly established from available snippets."
+    },
+    {
+      "entity_id": "airtree_alloy_pre_seed_2025",
+      "search_status": "verification_found",
+      "queries_used": [
+        "Alloy raises pre-seed 4.5 million robotics AirTree 2025",
+        "Alloy Forbes AirTree Blackbird pre-seed"
+      ],
+      "result": "AirTree portfolio page and Forbes Australia confirm A$4.5m pre-seed with AirTree participation."
+    },
+    {
+      "entity_id": "airtree_atrium_pre_seed_2025",
+      "search_status": "partially_found",
+      "queries_used": [
+        "Atrium raises 1.3 million pre-seed AirTree 2025",
+        "Atrium relationship management AI pre-seed Airtree Ten13"
+      ],
+      "result": "AirTree portfolio page supports Pre-seed 2025; free database confirms a financing but labels it Seed, creating a stage review task."
+    }
+  ]
+}

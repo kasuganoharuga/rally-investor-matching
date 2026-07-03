@@ -5,10 +5,16 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 
 WORKDIR /app
 
-COPY requirements.txt .
-RUN python -m pip install --no-cache-dir -r requirements.txt
+COPY apps/api/requirements.txt ./apps/api/requirements.txt
+RUN python -m pip install --no-cache-dir -r apps/api/requirements.txt
 
-COPY app ./app
+COPY pyproject.toml README.md ./
+COPY src ./src
+RUN python -m pip install --no-cache-dir -e .
+
+COPY apps/api/app ./apps/api/app
+
+WORKDIR /app/apps/api
 
 EXPOSE 8000
 

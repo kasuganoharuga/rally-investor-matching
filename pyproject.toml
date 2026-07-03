@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vc-match-intelligence"
+version = "0.1.0"
+description = "Structured VC matching engine with an evidence-grounded RAG layer"
+requires-python = ">=3.11"
+dependencies = [
+  "anthropic>=0.57.0",
+  "boto3>=1.34.0",
+  "psycopg[binary]>=3.2.0",
+  "pypdf>=6.0.0",
+  "python-dotenv>=1.0.1",
+  "python-multipart>=0.0.20",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+vcmi-build-artifacts = "vc_match_intelligence.artifacts:main"
+vcmi-load-postgres = "vc_match_intelligence.postgres_loader:main"
+vcmi-embed-bedrock = "vc_match_intelligence.bedrock_embed:main"
+vcmi-local-match = "vc_match_intelligence.local_match:main"
+vcmi-build-mvp-bundle = "vc_match_intelligence.mvp_bundle:main"
+vcmi-llm-smoke-test = "vc_match_intelligence.llm:main"
+vcmi-parse-founder = "vc_match_intelligence.founder_parser:main"
+vcmi-init-local-db = "vc_match_intelligence.unified_db:main"
+vcmi-import-investor = "vc_match_intelligence.investor_importer:main"
