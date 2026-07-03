@@ -13,9 +13,20 @@ class InvestorSummary(BaseModel):
     name: str
     slug: str | None = None
     investor_type: str | None = None
+    website_url: str | None = None
+    founded_year: int | None = None
     hq_country: str | None = None
+    hq_state: str | None = None
+    hq_city: str | None = None
     stage_focus: list[str] = Field(default_factory=list)
+    sector_focus: list[str] = Field(default_factory=list)
+    geography_focus: list[str] = Field(default_factory=list)
+    business_model_focus: list[str] = Field(default_factory=list)
+    cheque_ranges: list[dict[str, Any]] = Field(default_factory=list)
+    lead_behavior: str | None = None
     screening_status: str = "unscreened"
+    screening_priority: str | None = None
+    screening_notes: str | None = None
 
 
 class InvestorDetail(InvestorSummary):

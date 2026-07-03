@@ -56,11 +56,22 @@ export const matchInvestorProfileSchema = z.object({
   updated_at: z.string().optional().nullable(),
 });
 
+export const matchEligibilitySchema = z.object({
+  passed: z.boolean().default(true),
+  hard_filter_reasons: z.array(z.string()).default([]),
+  soft_warnings: z.array(z.string()).default([]),
+});
+
 export const matchResultSchema = z.object({
   investor_id: z.string(),
   investor_name: z.string(),
   score: z.number(),
   rank: z.number().optional().nullable(),
+  pool_rank: z.number().optional().nullable(),
+  match_tier: z.string().optional().nullable(),
+  routing_pool: z.string().default("direct_vc_pool"),
+  routing_pool_label: z.string().default("Best direct investors"),
+  eligibility: matchEligibilitySchema.optional(),
   breakdown: z.record(z.string(), z.number()).default({}),
   strengths: z.array(z.string()).default([]),
   risks: z.array(z.string()).default([]),
@@ -90,6 +101,7 @@ export const fileExtractionResponseSchema = z.object({
 export type MatchEvidence = z.infer<typeof matchEvidenceSchema>;
 export type MatchRecentDeal = z.infer<typeof matchRecentDealSchema>;
 export type MatchInvestorProfile = z.infer<typeof matchInvestorProfileSchema>;
+export type MatchEligibility = z.infer<typeof matchEligibilitySchema>;
 export type MatchResult = z.infer<typeof matchResultSchema>;
 export type IntakeResponse = z.infer<typeof intakeResponseSchema>;
 export type FileExtractionResponse = z.infer<typeof fileExtractionResponseSchema>;

@@ -18,16 +18,16 @@ type VcDetailPanelProps = {
 };
 
 const FACTOR_MAX_SCORES: Record<string, number> = {
-  geography_anz_mandate: 15,
-  stage_first_cheque_fit: 15,
-  sector_use_case_fit: 15,
-  recent_deal_similarity: 15,
-  business_model_icp_fit: 10,
+  geography_anz_mandate: 6,
+  stage_first_cheque_fit: 16,
+  sector_use_case_fit: 17,
+  recent_deal_similarity: 20,
+  business_model_icp_fit: 12,
   cheque_round_size_fit: 8,
   lead_behavior_fit: 8,
   investor_activity_recency: 6,
   ai_thesis_appetite: 4,
-  founder_traction_fit: 4,
+  founder_traction_fit: 3,
 };
 
 function formatList(values: string[] | undefined, fallback = "Not specified"): string {
@@ -184,6 +184,7 @@ export function VcDetailPanel({ match, onBack }: VcDetailPanelProps) {
   ].join(" - ");
   const deals = (profile?.recent_deals ?? []).slice(0, 3);
   const warmIntro = profile?.warm_intro_available;
+  const eligibility = match.eligibility;
 
   return (
     <section className="grid min-h-[720px] overflow-hidden rounded-lg border border-border bg-card shadow-sm lg:grid-cols-[360px_minmax(0,1fr)]">
@@ -195,7 +196,7 @@ export function VcDetailPanel({ match, onBack }: VcDetailPanelProps) {
 
         <div className="mt-8">
           <p className="text-xs font-semibold uppercase text-muted-foreground">
-            Investor detail
+            {match.routing_pool_label} #{match.pool_rank ?? match.rank ?? "-"}
           </p>
           <h2 className="mt-2 text-2xl font-semibold text-foreground">
             {match.investor_name}
@@ -279,6 +280,19 @@ export function VcDetailPanel({ match, onBack }: VcDetailPanelProps) {
             ))}
           </ul>
           <ScoreBreakdown match={match} />
+          {eligibility ? (
+            <div className="mt-4 rounded-lg bg-card px-3 py-2 text-sm text-muted-foreground">
+              <p>
+                Eligibility:{" "}
+                {eligibility.hard_filter_reasons[0] ?? "Passed available hard filters."}
+              </p>
+              {eligibility.soft_warnings.length > 0 ? (
+                <p className="mt-1">
+                  Soft review: {eligibility.soft_warnings.join(" ")}
+                </p>
+              ) : null}
+            </div>
+          ) : null}
         </div>
 
         <div className="flex flex-wrap items-center gap-3">

@@ -77,9 +77,20 @@ class InvestorRepository:
                   name,
                   slug,
                   investor_type,
+                  website_url,
+                  founded_year,
                   hq_country,
+                  hq_state,
+                  hq_city,
                   stage_focus,
-                  screening_status
+                  sector_focus,
+                  geography_focus,
+                  business_model_focus,
+                  cheque_ranges,
+                  lead_behavior,
+                  screening_status,
+                  screening_priority,
+                  screening_notes
                 FROM investors
                 ORDER BY name
                 """

@@ -185,19 +185,20 @@ def test_error_response_shape_includes_request_id() -> None:
     }
 
 
-def test_cors_allows_local_nextjs_origin() -> None:
+def test_cors_allows_local_nextjs_origins() -> None:
     client = TestClient(app)
 
-    response = client.options(
-        "/api/v1/health",
-        headers={
-            "Origin": "http://localhost:3000",
-            "Access-Control-Request-Method": "GET",
-        },
-    )
+    for origin in ("http://localhost:3000", "http://127.0.0.1:3000"):
+        response = client.options(
+            "/api/v1/health",
+            headers={
+                "Origin": origin,
+                "Access-Control-Request-Method": "GET",
+            },
+        )
 
-    assert response.status_code == 200
-    assert response.headers["access-control-allow-origin"] == "http://localhost:3000"
+        assert response.status_code == 200
+        assert response.headers["access-control-allow-origin"] == origin
 
 
 def test_list_investors_endpoint() -> None:
@@ -368,7 +369,7 @@ def test_match_intake_matches_after_follow_up(monkeypatch: object) -> None:
         app.dependency_overrides.clear()
 
 
-def test_match_intake_returns_top_five_matches(monkeypatch: object) -> None:
+def test_match_intake_returns_top_ten_matches(monkeypatch: object) -> None:
     def fake_parse(message: str) -> dict[str, object]:
         return {
             "company_name": "Example AI Health",
@@ -388,27 +389,12 @@ def test_match_intake_returns_top_five_matches(monkeypatch: object) -> None:
     monkeypatch.setattr(match_service_module, "parse_founder_message", fake_parse)
     app.dependency_overrides[get_connection] = lambda: FakeConnection(
         [
-            investor_row(),
             investor_row(
-                id_value="10000000-0000-0000-0000-000000000002",
-                name="Blackbird",
-                slug="blackbird",
-            ),
-            investor_row(
-                id_value="10000000-0000-0000-0000-000000000003",
-                name="Square Peg",
-                slug="square-peg",
-            ),
-            investor_row(
-                id_value="10000000-0000-0000-0000-000000000004",
-                name="EVP",
-                slug="evp",
-            ),
-            investor_row(
-                id_value="10000000-0000-0000-0000-000000000005",
-                name="Main Sequence",
-                slug="main-sequence",
-            ),
+                id_value=f"10000000-0000-0000-0000-{index:012d}",
+                name=f"Investor {index}",
+                slug=f"investor-{index}",
+            )
+            for index in range(1, 13)
         ]
     )
     try:
@@ -422,6 +408,6 @@ def test_match_intake_returns_top_five_matches(monkeypatch: object) -> None:
         body = response.json()["data"]
         assert response.status_code == 200
         assert body["status"] == "matched"
-        assert len(body["matches"]) == 5
+        assert len(body["matches"]) == 10
     finally:
         app.dependency_overrides.clear()

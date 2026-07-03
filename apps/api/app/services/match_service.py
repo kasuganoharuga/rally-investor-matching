@@ -7,6 +7,7 @@ from vc_match_intelligence.local_match import (
     database_row_to_profile,
     score_profile,
     select_evidence,
+    select_ranked_matches,
 )
 
 from app.repositories.investor_repository import investor_repository
@@ -39,7 +40,7 @@ FIELD_LABELS = {
     "lead_needed": "whether you need a lead investor",
 }
 
-MATCH_RESULT_LIMIT = 5
+MATCH_RESULT_LIMIT = 10
 
 
 def build_match_investor_profile(row: dict[str, Any]) -> dict[str, Any]:
@@ -167,6 +168,8 @@ class MatchService:
         for row in rows:
             profile = database_row_to_profile(row)
             result = score_profile(founder_profile, profile)
+            if not result.get("eligibility", {}).get("passed", True):
+                continue
             evidence = self._rag.retrieve_for_match(
                 connection,
                 investor_slug=str(profile.get("investor_id")),
@@ -178,10 +181,7 @@ class MatchService:
             result["investor_profile"] = build_match_investor_profile(row)
             results.append(result)
 
-        results.sort(key=lambda item: item["score"], reverse=True)
-        for index, item in enumerate(results, start=1):
-            item["rank"] = index
-        return results[:MATCH_RESULT_LIMIT]
+        return select_ranked_matches(results, limit=MATCH_RESULT_LIMIT)
 
 
 match_service = MatchService()
