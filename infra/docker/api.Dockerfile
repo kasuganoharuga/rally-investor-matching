@@ -9,10 +9,8 @@ COPY apps/api/requirements.txt ./apps/api/requirements.txt
 RUN python -m pip install --no-cache-dir -r apps/api/requirements.txt
 
 COPY pyproject.toml README.md ./
-COPY src ./src
-RUN python -m pip install --no-cache-dir -e .
-
 COPY apps/api/app ./apps/api/app
+RUN python -m pip install --no-cache-dir -e .
 
 WORKDIR /app/apps/api
 

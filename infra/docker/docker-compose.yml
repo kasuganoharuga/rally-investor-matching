@@ -1,29 +1,34 @@
+name: rally-investor-matching
+
 services:
   api:
     build:
-      context: .
-      dockerfile: apps/api/Dockerfile
+      context: ../..
+      dockerfile: infra/docker/api.Dockerfile
     container_name: rally-investor-matching-api
     restart: unless-stopped
     env_file:
-      - path: .env
+      - path: ../../.env
         required: false
     environment:
       DATABASE_URL: postgresql://${POSTGRES_USER:-rally}:${POSTGRES_PASSWORD:-rally_dev_password}@db:5432/${POSTGRES_DB:-rally_investor_matching}
     ports:
       - "${API_PORT:-8000}:8000"
     volumes:
-      - ./apps/api:/app/apps/api
-      - ./src:/app/src
-      - ./data:/app/data
-      - ./schemas:/app/schemas
-      - ./outputs:/app/outputs
+      - ../../apps/api:/app/apps/api
+      - ../../data:/app/data
     depends_on:
       db:
         condition: service_healthy
     command: python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
     healthcheck:
-      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health').read()"]
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health').read()",
+        ]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -40,10 +45,14 @@ services:
       - "${POSTGRES_PORT:-5432}:5432"
     volumes:
       - postgres-data:/var/lib/postgresql/data
-      - ./data/schemas/rally_investor_matching.schema.sql:/docker-entrypoint-initdb.d/001_schema.sql:ro
-      - ./data/seeds/local_investors.sql:/docker-entrypoint-initdb.d/002_seed_local_investors.sql:ro
+      - ../../data/schemas/rally_investor_matching.schema.sql:/docker-entrypoint-initdb.d/001_schema.sql:ro
+      - ../../data/seeds/local_investors.sql:/docker-entrypoint-initdb.d/002_seed_local_investors.sql:ro
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-rally} -d ${POSTGRES_DB:-rally_investor_matching}"]
+      test:
+        [
+          "CMD-SHELL",
+          "pg_isready -U ${POSTGRES_USER:-rally} -d ${POSTGRES_DB:-rally_investor_matching}",
+        ]
       interval: 10s
       timeout: 5s
       retries: 5
