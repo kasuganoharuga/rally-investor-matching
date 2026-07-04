@@ -8,7 +8,7 @@ This repository is a development-ready foundation for the MVP described in `loca
 
 - Frontend: Next.js, TypeScript, pnpm
 - Backend: FastAPI, Python
-- AI matching/RAG: `vc_match_intelligence` Python package under `src/`
+- AI matching/RAG: FastAPI services, providers, and tools under `apps/api/app/`
 - Database: PostgreSQL via Docker Compose
 - CI: GitHub Actions
 
@@ -45,13 +45,13 @@ python -m pip install -e .
 Start PostgreSQL:
 
 ```powershell
-docker compose up -d db
+docker compose -f infra/docker/docker-compose.yml up -d db
 ```
 
 Start PostgreSQL and the backend API with Docker:
 
 ```powershell
-docker compose up -d db api
+docker compose -f infra/docker/docker-compose.yml up -d db api
 ```
 
 The API health check is available at `http://localhost:8000/health`.
@@ -59,10 +59,10 @@ The API health check is available at `http://localhost:8000/health`.
 Useful Docker commands:
 
 ```powershell
-docker compose ps
-docker compose logs -f api
-docker compose logs -f db
-docker compose down
+docker compose -f infra/docker/docker-compose.yml ps
+docker compose -f infra/docker/docker-compose.yml logs -f api
+docker compose -f infra/docker/docker-compose.yml logs -f db
+docker compose -f infra/docker/docker-compose.yml down
 ```
 
 Alternatively, start the backend API locally for Python debugging:
@@ -83,7 +83,7 @@ The web app is available at `http://localhost:3000`.
 
 The local PostgreSQL database uses the unified product schema in `data/schemas/rally_investor_matching.schema.sql`.
 
-On a fresh Docker volume, `docker compose up -d db` automatically applies:
+On a fresh Docker volume, `docker compose -f infra/docker/docker-compose.yml up -d db` automatically applies:
 
 ```text
 data/schemas/rally_investor_matching.schema.sql
@@ -114,13 +114,13 @@ Investor cheque sizing is stored in `investors.cheque_ranges` as a JSONB array s
 If your local Docker volume already existed before these init files were added, re-apply the schema and seed manually:
 
 ```powershell
-python -m vc_match_intelligence.unified_db
+vcmi-init-local-db
 ```
 
 Or pass a database URL explicitly:
 
 ```powershell
-python -m vc_match_intelligence.unified_db --database-url postgresql://rally:rally_dev_password@localhost:5432/rally_investor_matching
+vcmi-init-local-db --database-url postgresql://rally:rally_dev_password@localhost:5432/rally_investor_matching
 ```
 
 Read the seeded investors through the API:
@@ -145,7 +145,7 @@ If required founder fields are missing, the endpoint returns `status: needs_foll
 Import colleague-provided investor JSON records:
 
 ```powershell
-python -m vc_match_intelligence.investor_importer `
+vcmi-import-investor `
   --database-url postgresql://rally:rally_dev_password@localhost:5432/rally_investor_matching `
   path/to/investor.investor.json
 ```
@@ -153,7 +153,7 @@ python -m vc_match_intelligence.investor_importer `
 Use `--slug-override source-slug=database-slug` when a new file should update an existing local investor slug instead of creating a duplicate. For example, the colleague Airtree file uses `airtree-ventures`, while the local demo keeps the API slug `airtree`:
 
 ```powershell
-python -m vc_match_intelligence.investor_importer `
+vcmi-import-investor `
   --database-url postgresql://rally:rally_dev_password@localhost:5432/rally_investor_matching `
   --slug-override airtree-ventures=airtree `
   C:\Users\49765\Desktop\Internship\week3\airtree-ventures\airtree-ventures.investor.json `
@@ -162,30 +162,30 @@ python -m vc_match_intelligence.investor_importer `
 
 ## VC Matching/RAG Commands
 
-The local VC matching package is installed from the repository root with `python -m pip install -e .`.
+The local VC matching tools are installed from the repository root with `python -m pip install -e .`.
 
 Run an LLM smoke test:
 
 ```powershell
-python -m vc_match_intelligence.llm --json
+vcmi-llm-smoke-test --json
 ```
 
 Extract a founder profile from text:
 
 ```powershell
-python -m vc_match_intelligence.founder_parser 'We are an AU-based B2B AI healthtech company raising A$2.5m seed and looking for a lead investor.'
+vcmi-parse-founder 'We are an AU-based B2B AI healthtech company raising A$2.5m seed and looking for a lead investor.'
 ```
 
 Run the interactive extraction helper:
 
 ```powershell
-python scripts/test_extract_company.py
+python apps/api/scripts/test_extract_company.py
 ```
 
 Run local matching against the unified database:
 
 ```powershell
-python -m vc_match_intelligence.local_match --founder examples/founder_profile.sample.json --database-url postgresql://rally:rally_dev_password@localhost:5432/rally_investor_matching
+vcmi-local-match --founder examples/founder_profile.sample.json --database-url postgresql://rally:rally_dev_password@localhost:5432/rally_investor_matching
 ```
 
 ## Verification
@@ -216,13 +216,13 @@ pnpm format
 Validate Docker Compose:
 
 ```powershell
-docker compose config
+docker compose -f infra/docker/docker-compose.yml config
 ```
 
 Run a lightweight Python syntax check:
 
 ```powershell
-python -m compileall -q apps/api/app src scripts
+python -m compileall -q apps/api/app apps/api/scripts
 ```
 
 ## Project Structure
@@ -230,11 +230,9 @@ python -m compileall -q apps/api/app src scripts
 ```text
 apps/
   web/              Next.js frontend and product backend
-  api/              FastAPI AI/matching service and Dockerfile
-src/                VC matching/RAG Python package
-data/               Product SQL schema and local seed data
-schemas/            Legacy VC matching/RAG schema artifacts
-outputs/            Generated investor records and MVP bundle artifacts
+  api/              FastAPI AI/matching service
+data/               Product SQL schemas, local seeds, and generated artifacts
+infra/docker/       Local Docker Compose and API image build files
 ```
 
 ## Frontend Conventions
@@ -290,7 +288,7 @@ pnpm typecheck:web
 pnpm lint:api
 pnpm format:check:api
 pnpm test:api
-docker compose config
+docker compose -f infra/docker/docker-compose.yml config
 ```
 
 ## Commit Message Format
