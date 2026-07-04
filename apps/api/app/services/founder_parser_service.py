@@ -5,8 +5,7 @@ from __future__ import annotations
 import argparse
 import json
 
-from vc_match_intelligence.llm import LLMClient
-
+from app.providers.llm import LLMClient
 
 SYSTEM_PROMPT = """You extract founder/company profiles for VC matching.
 
@@ -15,10 +14,12 @@ Return only valid JSON. Do not include Markdown.
 Use null when a field is not available from the user text.
 Do not invent facts.
 Preserve numeric amounts exactly. For example:
-- "A$2.5m" means target_raise_value 2.5, target_raise_currency "AUD", target_raise_unit "million".
+- "A$2.5m" means target_raise_value 2.5, target_raise_currency "AUD",
+  target_raise_unit "million".
 - "$750k" means target_raise_value 750, target_raise_unit "thousand".
 - Do not drop leading digits from decimal amounts.
-Primary market is geographic, such as "Australia", "New Zealand", "ANZ", "US", or "Global".
+Primary market is geographic, such as "Australia", "New Zealand", "ANZ",
+"US", or "Global".
 Do not put business model labels such as B2B or B2C in primary_market.
 
 Required JSON keys:
@@ -51,8 +52,12 @@ def parse_founder_message(message: str, client: LLMClient | None = None) -> dict
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Parse founder/company input with the configured LLM")
-    parser.add_argument("message", nargs="+", help="Founder/company free-text description")
+    parser = argparse.ArgumentParser(
+        description="Parse founder/company input with the configured LLM"
+    )
+    parser.add_argument(
+        "message", nargs="+", help="Founder/company free-text description"
+    )
     args = parser.parse_args()
 
     parsed = parse_founder_message(" ".join(args.message))

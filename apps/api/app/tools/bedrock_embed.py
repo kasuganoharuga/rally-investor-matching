@@ -10,7 +10,6 @@ from typing import Any
 import boto3
 from psycopg import connect
 
-
 DEFAULT_MODEL = "amazon.titan-embed-text-v2:0"
 DEFAULT_REGION = "ap-southeast-2"
 
@@ -93,10 +92,14 @@ def embed_pending_chunks(
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Embed pending rag_chunks with Amazon Bedrock")
+    parser = argparse.ArgumentParser(
+        description="Embed pending rag_chunks with Amazon Bedrock"
+    )
     parser.add_argument("--database-url", default=None, help="PostgreSQL DATABASE_URL")
     parser.add_argument("--region", default=os.getenv("AWS_REGION", DEFAULT_REGION))
-    parser.add_argument("--model-id", default=os.getenv("BEDROCK_EMBEDDING_MODEL", DEFAULT_MODEL))
+    parser.add_argument(
+        "--model-id", default=os.getenv("BEDROCK_EMBEDDING_MODEL", DEFAULT_MODEL)
+    )
     parser.add_argument("--dimensions", type=int, default=1024)
     parser.add_argument("--limit", type=int, default=100)
     args = parser.parse_args()

@@ -17,15 +17,15 @@ dependencies = [
 ]
 
 [tool.setuptools.packages.find]
-where = ["src"]
+where = ["apps/api"]
 
 [project.scripts]
-vcmi-build-artifacts = "vc_match_intelligence.artifacts:main"
-vcmi-load-postgres = "vc_match_intelligence.postgres_loader:main"
-vcmi-embed-bedrock = "vc_match_intelligence.bedrock_embed:main"
-vcmi-local-match = "vc_match_intelligence.local_match:main"
-vcmi-build-mvp-bundle = "vc_match_intelligence.mvp_bundle:main"
-vcmi-llm-smoke-test = "vc_match_intelligence.llm:main"
-vcmi-parse-founder = "vc_match_intelligence.founder_parser:main"
-vcmi-init-local-db = "vc_match_intelligence.unified_db:main"
-vcmi-import-investor = "vc_match_intelligence.investor_importer:main"
+vcmi-build-artifacts = "app.tools.artifacts:main"
+vcmi-load-postgres = "app.tools.postgres_loader:main"
+vcmi-embed-bedrock = "app.tools.bedrock_embed:main"
+vcmi-local-match = "app.services.matching_scoring:main"
+vcmi-build-mvp-bundle = "app.tools.mvp_bundle:main"
+vcmi-llm-smoke-test = "app.providers.llm:main"
+vcmi-parse-founder = "app.services.founder_parser_service:main"
+vcmi-init-local-db = "app.tools.unified_db:main"
+vcmi-import-investor = "app.tools.investor_importer:main"

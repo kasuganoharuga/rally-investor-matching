@@ -7,7 +7,6 @@ import json
 from pathlib import Path
 from typing import Any
 
-
 DEFAULT_WEIGHTS = {
     "geography_anz_mandate": 15,
     "stage_first_cheque_fit": 15,
@@ -69,7 +68,9 @@ def make_investor_card(profile: dict[str, Any], detail_path: str) -> dict[str, A
         "first_cheque_stages": profile.get("first_cheque_stages", []),
         "supported_sectors": profile.get("supported_sectors", []),
         "supported_business_models": profile.get("supported_business_models", []),
-        "cheque_label": f"{money_label(cheque.get('min'))} - {money_label(cheque.get('max'))}",
+        "cheque_label": (
+            f"{money_label(cheque.get('min'))} - {money_label(cheque.get('max'))}"
+        ),
         "cheque_confidence": cheque.get("confidence"),
         "lead_behavior": profile.get("lead_behavior"),
         "warm_intro_required": profile.get("warm_intro_required"),
@@ -175,7 +176,9 @@ def build_bundle(outputs_dir: Path, out_dir: Path) -> dict[str, Any]:
 
     index = {
         "version": "mvp-v1",
-        "description": "Frontend/API read model for the VC Match Intelligence chatbot MVP.",
+        "description": (
+            "Frontend/API read model for the VC Match Intelligence chatbot MVP."
+        ),
         "investor_count": len(investors),
         "investors": investors,
     }
@@ -208,13 +211,18 @@ def build_bundle(outputs_dir: Path, out_dir: Path) -> dict[str, Any]:
             {
                 "method": "POST",
                 "path": "/chat/match",
-                "description": "Parse founder/company input and return 3-5 matched investors with evidence.",
+                "description": (
+                    "Parse founder/company input and return 3-5 matched investors "
+                    "with evidence."
+                ),
                 "request": {
                     "message": "Free-text company/founder description",
                     "candidate_count": "Optional integer 3-5",
                 },
                 "response": {
-                    "parsed_company_profile": "Structured profile extracted from message",
+                    "parsed_company_profile": (
+                        "Structured profile extracted from message"
+                    ),
                     "matches": [
                         {
                             "investor_id": "airtree",
@@ -281,8 +289,10 @@ Return 3-5 investors unless fewer candidates pass the matching policy.
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Build S3-ready MVP read-model bundle")
-    parser.add_argument("--outputs", type=Path, default=Path("outputs"))
-    parser.add_argument("--out", type=Path, default=Path("outputs/mvp/v1"))
+    parser.add_argument("--outputs", type=Path, default=Path("data/outputs/generated"))
+    parser.add_argument(
+        "--out", type=Path, default=Path("data/outputs/generated/mvp/v1")
+    )
     args = parser.parse_args()
 
     result = build_bundle(args.outputs, args.out)

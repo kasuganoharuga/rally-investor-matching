@@ -19,7 +19,6 @@ import boto3
 from anthropic import Anthropic
 from dotenv import load_dotenv
 
-
 DEFAULT_ANTHROPIC_MODEL = "claude-sonnet-4-6"
 DEFAULT_MAX_TOKENS = 1200
 DEFAULT_TEMPERATURE = 0.0
@@ -111,7 +110,9 @@ class LLMClient:
     ) -> str:
         api_key = os.getenv("ANTHROPIC_API_KEY")
         if not api_key:
-            raise ValueError("ANTHROPIC_API_KEY is required when LLM_PROVIDER=anthropic")
+            raise ValueError(
+                "ANTHROPIC_API_KEY is required when LLM_PROVIDER=anthropic"
+            )
 
         client = Anthropic(api_key=api_key)
         message = client.messages.create(
@@ -127,7 +128,9 @@ class LLMClient:
             ],
         )
         return "".join(
-            block.text for block in message.content if getattr(block, "type", None) == "text"
+            block.text
+            for block in message.content
+            if getattr(block, "type", None) == "text"
         ).strip()
 
     def _generate_text_bedrock(
@@ -139,13 +142,17 @@ class LLMClient:
         temperature: float | None,
     ) -> str:
         if not self.config.bedrock_model_id:
-            raise ValueError("BEDROCK_LLM_MODEL_ID is required when LLM_PROVIDER=bedrock")
+            raise ValueError(
+                "BEDROCK_LLM_MODEL_ID is required when LLM_PROVIDER=bedrock"
+            )
 
         client = boto3.client("bedrock-runtime", region_name=self.config.aws_region)
         body = {
             "anthropic_version": "bedrock-2023-05-31",
             "max_tokens": max_tokens or self.config.max_tokens,
-            "temperature": self.config.temperature if temperature is None else temperature,
+            "temperature": self.config.temperature
+            if temperature is None
+            else temperature,
             "system": system,
             "messages": [
                 {
@@ -174,7 +181,9 @@ class LLMClient:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Smoke-test the configured LLM provider")
+    parser = argparse.ArgumentParser(
+        description="Smoke-test the configured LLM provider"
+    )
     parser.add_argument(
         "--json",
         action="store_true",
