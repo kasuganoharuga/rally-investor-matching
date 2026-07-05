@@ -1,18 +1,18 @@
 from typing import Any
 
 from psycopg import Connection
-from vc_match_intelligence.founder_parser import parse_founder_message
-from vc_match_intelligence.local_match import (
+
+from app.repositories.investor_repository import investor_repository
+from app.repositories.rag_repository import rag_repository
+from app.schemas.match import IntakeRequest, IntakeResponse
+from app.services.founder_parser_service import parse_founder_message
+from app.services.matching_scoring import (
     database_chunks,
     database_row_to_profile,
     score_profile,
     select_evidence,
     select_ranked_matches,
 )
-
-from app.repositories.investor_repository import investor_repository
-from app.repositories.rag_repository import rag_repository
-from app.schemas.match import IntakeRequest, IntakeResponse
 
 REQUIRED_FIELDS = [
     "company_name",

@@ -16,7 +16,6 @@ from typing import Any
 from psycopg import connect
 from psycopg.rows import dict_row
 
-
 MATCHING_WEIGHTS = {
     "geography_anz_mandate": 6,
     "stage_first_cheque_fit": 16,
@@ -144,35 +143,37 @@ def load_jsonl(path: Path) -> list[dict[str, Any]]:
 
 
 def load_database_profiles(database_url: str) -> list[dict[str, Any]]:
-    with connect(database_url, row_factory=dict_row) as connection:
-        with connection.cursor() as cursor:
-            cursor.execute(
-                """
-                SELECT
-                  id::text,
-                  name,
-                  slug,
-                  investor_type,
-                  website_url,
-                  stage_focus,
-                  sector_focus,
-                  geography_focus,
-                  business_model_focus,
-                  founder_fit,
-                  cheque_ranges,
-                  lead_behavior,
-                  ai_appetite,
-                  recent_deals,
-                  entry_channels,
-                  preferred_channel,
-                  screening_status,
-                  screening_priority,
-                  screening_notes
-                FROM investors
-                ORDER BY name
-                """
-            )
-            return [database_row_to_profile(dict(row)) for row in cursor.fetchall()]
+    with (
+        connect(database_url, row_factory=dict_row) as connection,
+        connection.cursor() as cursor,
+    ):
+        cursor.execute(
+            """
+            SELECT
+              id::text,
+              name,
+              slug,
+              investor_type,
+              website_url,
+              stage_focus,
+              sector_focus,
+              geography_focus,
+              business_model_focus,
+              founder_fit,
+              cheque_ranges,
+              lead_behavior,
+              ai_appetite,
+              recent_deals,
+              entry_channels,
+              preferred_channel,
+              screening_status,
+              screening_priority,
+              screening_notes
+            FROM investors
+            ORDER BY name
+            """
+        )
+        return [database_row_to_profile(dict(row)) for row in cursor.fetchall()]
 
 
 def database_row_to_profile(row: dict[str, Any]) -> dict[str, Any]:
@@ -199,8 +200,8 @@ def database_row_to_profile(row: dict[str, Any]) -> dict[str, Any]:
             "primary": row.get("preferred_channel"),
             "entry_channels": entry_channels,
         },
-        "warm_intro_required": (
-            True if entry_channels and "direct_email" not in entry_channels else False
+        "warm_intro_required": bool(
+            entry_channels and "direct_email" not in entry_channels
         ),
         "review_needed_fields": [],
         "screening_status": row.get("screening_status"),
@@ -224,7 +225,8 @@ def database_chunks(profile: dict[str, Any]) -> list[dict[str, Any]]:
                 "chunk_text": (
                     f"{profile.get('investor_name')} recent deal: "
                     f"{deal.get('company')} {deal.get('round')} "
-                    f"{deal.get('amount') or deal.get('amount_text')} as {deal.get('role')} "
+                    f"{deal.get('amount') or deal.get('amount_text')} "
+                    f"as {deal.get('role')} "
                     f"in {deal.get('region') or deal.get('company_geography')}."
                 ),
                 "source_urls": [],
@@ -892,7 +894,10 @@ def main() -> None:
         "--founder", required=True, type=Path, help="Founder profile JSON"
     )
     parser.add_argument(
-        "--artifacts", default=Path("outputs"), type=Path, help="Artifacts directory"
+        "--artifacts",
+        default=Path("data/outputs/generated"),
+        type=Path,
+        help="Artifacts directory",
     )
     parser.add_argument(
         "--database-url",

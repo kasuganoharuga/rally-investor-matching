@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import json
 
-from vc_match_intelligence.founder_parser import parse_founder_message
+from app.services.founder_parser_service import parse_founder_message
 
 
 def main() -> None:

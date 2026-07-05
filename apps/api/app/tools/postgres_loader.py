@@ -17,7 +17,7 @@ from typing import Any
 from psycopg import connect
 from psycopg.types.json import Jsonb
 
-from vc_match_intelligence.artifacts import (
+from app.tools.artifacts import (
     build_matching_profile,
     build_rag_chunks,
     build_sources,
@@ -25,7 +25,6 @@ from vc_match_intelligence.artifacts import (
     load_json,
     normalize_confidence,
 )
-
 
 SOURCE_TYPES = {
     "official_vc_note",
@@ -197,7 +196,9 @@ def insert_investor(cur: Any, record: dict[str, Any]) -> None:
             "anz_mandate": Jsonb(inv.get("anz_mandate", {})),
             "confidence_overall": confidence(inv.get("confidence_overall")),
             "confidence_reviewed": bool(inv.get("confidence_reviewed", False)),
-            "review_status": enum_value(inv.get("review_status"), REVIEW_STATUSES, "draft"),
+            "review_status": enum_value(
+                inv.get("review_status"), REVIEW_STATUSES, "draft"
+            ),
             "record_last_updated": inv.get("last_updated"),
         },
     )
@@ -210,7 +211,9 @@ def insert_investor_fields(cur: Any, record: dict[str, Any]) -> None:
         if not key:
             continue
         value = item.get("value")
-        hard_filter_safe = bool(value.get("hard_filter_safe")) if isinstance(value, dict) else False
+        hard_filter_safe = (
+            bool(value.get("hard_filter_safe")) if isinstance(value, dict) else False
+        )
         cur.execute(
             """
             INSERT INTO investor_fields (
@@ -225,14 +228,17 @@ def insert_investor_fields(cur: Any, record: dict[str, Any]) -> None:
                 Jsonb(value),
                 confidence(item.get("confidence")),
                 item.get("note"),
-                confidence(item.get("confidence")) in {"medium", "low", "gap", "unknown"},
+                confidence(item.get("confidence"))
+                in {"medium", "low", "gap", "unknown"},
                 hard_filter_safe,
                 Jsonb(item),
             ),
         )
 
 
-def insert_matching_profile(cur: Any, record: dict[str, Any], ingestion_file_id: str) -> None:
+def insert_matching_profile(
+    cur: Any, record: dict[str, Any], ingestion_file_id: str
+) -> None:
     profile = build_matching_profile(record)
     cheque = profile.get("cheque_size", {})
     min_cheque = cheque.get("min") or {}
@@ -274,17 +280,25 @@ def insert_matching_profile(cur: Any, record: dict[str, Any], ingestion_file_id:
             "first_cheque_stages": profile.get("first_cheque_stages", []),
             "supported_sectors": profile.get("supported_sectors", []),
             "supported_business_models": profile.get("supported_business_models", []),
-            "business_model_distribution": Jsonb(profile.get("business_model_distribution", {})),
+            "business_model_distribution": Jsonb(
+                profile.get("business_model_distribution", {})
+            ),
             "cheque_min_value": min_cheque.get("value"),
             "cheque_min_currency": min_cheque.get("currency"),
             "cheque_min_unit": min_cheque.get("unit"),
             "cheque_max_value": max_cheque.get("value"),
             "cheque_max_currency": max_cheque.get("currency"),
             "cheque_max_unit": max_cheque.get("unit"),
-            "cheque_confidence": profile.get("cheque_size", {}).get("confidence", "unknown"),
-            "cheque_hard_filter_safe": bool(profile.get("cheque_size", {}).get("hard_filter_safe")),
+            "cheque_confidence": profile.get("cheque_size", {}).get(
+                "confidence", "unknown"
+            ),
+            "cheque_hard_filter_safe": bool(
+                profile.get("cheque_size", {}).get("hard_filter_safe")
+            ),
             "lead_behavior": profile.get("lead_behavior"),
-            "recent_activity_level": str(recent.get("value", {}).get("in_window_rows_count"))
+            "recent_activity_level": str(
+                recent.get("value", {}).get("in_window_rows_count")
+            )
             if isinstance(recent.get("value"), dict)
             else None,
             "recent_activity_confidence": recent.get("confidence", "unknown"),
@@ -362,7 +376,9 @@ def insert_deals_and_missing_sources(cur: Any, record: dict[str, Any]) -> None:
                 "deal_date": deal.get("deal_date"),
                 "role": deal.get("role"),
                 "is_lead": deal.get("is_lead"),
-                "is_new_investment_for_investor": deal.get("is_new_investment_for_investor"),
+                "is_new_investment_for_investor": deal.get(
+                    "is_new_investment_for_investor"
+                ),
                 "is_follow_on_for_investor": deal.get("is_follow_on_for_investor"),
                 "is_company_follow_on_round": deal.get("is_company_follow_on_round"),
                 "company_hq_country": deal.get("company_hq_country"),
@@ -378,9 +394,13 @@ def insert_deals_and_missing_sources(cur: Any, record: dict[str, Any]) -> None:
                 "hq_or_primary_market_anz": deal.get("hq_or_primary_market_anz"),
                 "company_anz_relevance": deal.get("company_anz_relevance"),
                 "anz_connection_basis": deal.get("anz_connection_basis"),
-                "business_model_orientation": business_model(deal.get("business_model_orientation")),
+                "business_model_orientation": business_model(
+                    deal.get("business_model_orientation")
+                ),
                 "business_model_detail": deal.get("business_model_detail"),
-                "business_model_confidence": confidence(deal.get("business_model_confidence")),
+                "business_model_confidence": confidence(
+                    deal.get("business_model_confidence")
+                ),
                 "business_model_basis": deal.get("business_model_basis"),
                 "verification_status": enum_value(
                     deal.get("verification_status"), DEAL_STATUSES, "unknown"
@@ -403,8 +423,12 @@ def insert_deals_and_missing_sources(cur: Any, record: dict[str, Any]) -> None:
                 (
                     inv_id,
                     deal.get("deal_id"),
-                    enum_value(missing.get("source_role"), SOURCE_ROLES, "verification"),
-                    enum_value(missing.get("required_source_type"), SOURCE_TYPES, "other"),
+                    enum_value(
+                        missing.get("source_role"), SOURCE_ROLES, "verification"
+                    ),
+                    enum_value(
+                        missing.get("required_source_type"), SOURCE_TYPES, "other"
+                    ),
                     missing.get("reason", "Missing source"),
                 ),
             )
@@ -569,17 +593,28 @@ def insert_rag_chunks(cur: Any, record: dict[str, Any]) -> None:
                 item["entity_id"],
                 item["section_key"],
                 item["chunk_text"],
-                enum_value(item.get("fact_kind"), {"fact", "claim", "inference", "mixed"}, "mixed"),
+                enum_value(
+                    item.get("fact_kind"),
+                    {"fact", "claim", "inference", "mixed"},
+                    "mixed",
+                ),
                 item.get("metadata", {}).get("region_scope"),
                 confidence(item.get("confidence")),
                 bool(item.get("review_needed")),
                 bool(item.get("rag_allowed", True)),
-                Jsonb({**item.get("metadata", {}), "source_urls": item.get("source_urls", [])}),
+                Jsonb(
+                    {
+                        **item.get("metadata", {}),
+                        "source_urls": item.get("source_urls", []),
+                    }
+                ),
             ),
         )
 
 
-def load_record(database_url: str, record_path: Path, schema_path: Path | None = None) -> dict[str, Any]:
+def load_record(
+    database_url: str, record_path: Path, schema_path: Path | None = None
+) -> dict[str, Any]:
     record = load_json(record_path)
     inv_id = investor_id(record)
 
@@ -609,9 +644,16 @@ def load_record(database_url: str, record_path: Path, schema_path: Path | None =
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Load a VC record into PostgreSQL")
-    parser.add_argument("--record", required=True, type=Path, help="Path to <investor_id>-record.json")
+    parser.add_argument(
+        "--record", required=True, type=Path, help="Path to <investor_id>-record.json"
+    )
     parser.add_argument("--database-url", default=None, help="PostgreSQL DATABASE_URL")
-    parser.add_argument("--schema", type=Path, default=None, help="Optional schema SQL path to apply first")
+    parser.add_argument(
+        "--schema",
+        type=Path,
+        default=None,
+        help="Optional schema SQL path to apply first",
+    )
     args = parser.parse_args()
 
     database_url = env_database_url(args.database_url)

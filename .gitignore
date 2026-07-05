@@ -91,7 +91,7 @@ venv/
 postgres-data/
 *.sqlite
 *.db
-outputs/**/*.zip
+data/outputs/**/*.zip
 
 # OS/editor noise
 .DS_Store

@@ -13,7 +13,6 @@ import json
 from pathlib import Path
 from typing import Any
 
-
 CONFIDENCE_MAP = {
     "high": "high",
     "medium-high": "medium_high",
@@ -33,7 +32,9 @@ def load_json(path: Path) -> dict[str, Any]:
 
 def write_json(path: Path, data: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    path.write_text(
+        json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+    )
 
 
 def write_jsonl(path: Path, rows: list[dict[str, Any]]) -> None:
@@ -114,7 +115,9 @@ def chunk(
     metadata: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     return {
-        "local_chunk_id": stable_id(inv_id, entity_type, entity_id, section_key, text[:80]),
+        "local_chunk_id": stable_id(
+            inv_id, entity_type, entity_id, section_key, text[:80]
+        ),
         "investor_id": inv_id,
         "entity_type": entity_type,
         "entity_id": entity_id,
@@ -157,14 +160,16 @@ def build_matching_profile(record: dict[str, Any]) -> dict[str, Any]:
         {
             str(deal.get("business_model_orientation"))
             for deal in deals
-            if deal.get("business_model_orientation") and deal.get("business_model_orientation") != "Gap"
+            if deal.get("business_model_orientation")
+            and deal.get("business_model_orientation") != "Gap"
         }
     )
     review_needed_fields = sorted(
         {
             item.get("field")
             for item in record.get("investor_fields", [])
-            if normalize_confidence(item.get("confidence")) in {"medium", "low", "gap", "unknown"}
+            if normalize_confidence(item.get("confidence"))
+            in {"medium", "low", "gap", "unknown"}
         }
         | {
             task.get("field")
@@ -204,7 +209,8 @@ def build_matching_profile(record: dict[str, Any]) -> dict[str, Any]:
         ),
         "review_needed_fields": [field for field in review_needed_fields if field],
         "field_confidences": {
-            key: normalize_confidence(value.get("confidence")) for key, value in fields.items()
+            key: normalize_confidence(value.get("confidence"))
+            for key, value in fields.items()
         },
     }
 
@@ -227,7 +233,8 @@ def build_rag_chunks(record: dict[str, Any]) -> list[dict[str, Any]]:
                 text=str(body),
                 fact_kind=str(item.get("fact_or_inference") or "mixed"),
                 confidence=item.get("confidence"),
-                review_needed=normalize_confidence(item.get("confidence")) in {"medium", "low", "gap"},
+                review_needed=normalize_confidence(item.get("confidence"))
+                in {"medium", "low", "gap"},
                 metadata={
                     "region_scope": item.get("region_scope"),
                     "source": "record.rag_chunks",
@@ -288,12 +295,15 @@ def build_rag_chunks(record: dict[str, Any]) -> list[dict[str, Any]]:
                 text=text,
                 fact_kind="fact",
                 confidence=confidence,
-                review_needed=bool(deal.get("missing_sources")) or confidence in {"medium", "low", "gap"},
+                review_needed=bool(deal.get("missing_sources"))
+                or confidence in {"medium", "low", "gap"},
                 source_urls=collect_source_urls_from_deal(deal),
                 metadata={
                     "company": deal.get("company"),
                     "round_stage": deal.get("round_stage"),
-                    "business_model_orientation": deal.get("business_model_orientation"),
+                    "business_model_orientation": deal.get(
+                        "business_model_orientation"
+                    ),
                     "company_anz_relevance": deal.get("company_anz_relevance"),
                     "investor_mandate_fit": deal.get("investor_mandate_fit"),
                     "verification_status": deal.get("verification_status"),
@@ -305,11 +315,14 @@ def build_rag_chunks(record: dict[str, Any]) -> list[dict[str, Any]]:
     for route in record.get("partner_routing_hypotheses", []) or []:
         confidence = normalize_confidence(route.get("confidence"))
         sector = route.get("sector") or route.get("sector_or_use_case") or "routing"
-        who = ", ".join(route.get("who", []) or route.get("suggested_partner_names", []) or [])
+        who = ", ".join(
+            route.get("who", []) or route.get("suggested_partner_names", []) or []
+        )
         text = (
             f"{inv_name} partner routing hypothesis for {sector}: {who}. "
             f"Evidence basis: {route.get('evidence_basis')}. "
-            f"Confidence: {confidence}; reviewer needed: {route.get('reviewer_needed')}."
+            f"Confidence: {confidence}; reviewer needed: "
+            f"{route.get('reviewer_needed')}."
         )
         chunks.append(
             chunk(
@@ -321,7 +334,10 @@ def build_rag_chunks(record: dict[str, Any]) -> list[dict[str, Any]]:
                 fact_kind="inference",
                 confidence=confidence,
                 review_needed=bool(route.get("reviewer_needed", True)),
-                metadata={"sector": sector, "source": "record.partner_routing_hypotheses"},
+                metadata={
+                    "sector": sector,
+                    "source": "record.partner_routing_hypotheses",
+                },
             )
         )
 
@@ -389,7 +405,8 @@ def build_sources(record: dict[str, Any]) -> list[dict[str, Any]]:
                 {
                     "investor_id": inv_id,
                     "entity_type": "co_investment_edge",
-                    "entity_id": edge.get("related_deal_id") or edge.get("related_company"),
+                    "entity_id": edge.get("related_deal_id")
+                    or edge.get("related_company"),
                     "url": edge.get("evidence_url"),
                     "source_type": edge.get("source_type", "other"),
                     "source_role": "context",
@@ -416,7 +433,9 @@ def build_review_tasks(record: dict[str, Any]) -> list[dict[str, Any]]:
     return rows
 
 
-def build_manifest(record_path: Path, output_dir: Path, record: dict[str, Any]) -> dict[str, Any]:
+def build_manifest(
+    record_path: Path, output_dir: Path, record: dict[str, Any]
+) -> dict[str, Any]:
     raw = record_path.read_bytes()
     return {
         "investor_id": investor_id(record),
@@ -463,9 +482,18 @@ def build_artifacts(record_path: Path, out_dir: Path) -> dict[str, Any]:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Build VC RAG artifacts from a record JSON")
-    parser.add_argument("--record", required=True, type=Path, help="Path to <investor_id>-record.json")
-    parser.add_argument("--out", default=Path("outputs"), type=Path, help="Output directory")
+    parser = argparse.ArgumentParser(
+        description="Build VC RAG artifacts from a record JSON"
+    )
+    parser.add_argument(
+        "--record", required=True, type=Path, help="Path to <investor_id>-record.json"
+    )
+    parser.add_argument(
+        "--out",
+        default=Path("data/outputs/generated"),
+        type=Path,
+        help="Output directory",
+    )
     args = parser.parse_args()
 
     result = build_artifacts(args.record, args.out)

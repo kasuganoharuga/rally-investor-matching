@@ -9,7 +9,6 @@ from urllib.parse import urlsplit, urlunsplit
 
 from psycopg import connect
 
-
 DEFAULT_DATABASE_URL = (
     "postgresql://rally:rally_dev_password@localhost:5432/rally_investor_matching"
 )
@@ -73,7 +72,9 @@ def initialize_database(
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Apply the unified Rally Investor Matching schema and local seed data."
+        description=(
+            "Apply the unified Rally Investor Matching schema and local seed data."
+        )
     )
     parser.add_argument("--database-url", default=None, help="PostgreSQL DATABASE_URL")
     parser.add_argument("--schema", type=Path, default=DEFAULT_SCHEMA_PATH)

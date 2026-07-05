@@ -11,8 +11,7 @@ from psycopg import Connection, connect
 from psycopg.rows import dict_row
 from psycopg.types.json import Jsonb
 
-from vc_match_intelligence.unified_db import database_url
-
+from app.tools.unified_db import database_url
 
 ARRAY_FIELDS = {
     "stage_focus",
@@ -173,7 +172,8 @@ def profile_chunk_text(record: dict[str, Any]) -> str:
         f"Sector focus: {', '.join(record.get('sector_focus') or [])}. "
         f"Geography focus: {', '.join(record.get('geography_focus') or [])}. "
         f"Business model focus: {', '.join(record.get('business_model_focus') or [])}. "
-        f"Cheque ranges: {json.dumps(record.get('cheque_ranges') or [], ensure_ascii=False)}. "
+        "Cheque ranges: "
+        f"{json.dumps(record.get('cheque_ranges') or [], ensure_ascii=False)}. "
         f"Lead behavior: {record.get('lead_behavior')}. "
         f"AI appetite: {record.get('ai_appetite')}. "
         f"Notes: {record.get('screening_notes') or ''}"
