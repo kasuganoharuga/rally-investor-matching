@@ -1,0 +1,183 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >
+  Rally VC Matching PostgreSQL database for AWS RDS. Creates a small PostgreSQL
+  instance, a security group, and a generated admin secret. Run the schema and
+  seed SQL after this stack reaches CREATE_COMPLETE.
+
+Parameters:
+  ProjectSlug:
+    Type: String
+    Default: vcmi
+    AllowedPattern: "^[a-z0-9-]+$"
+    Description: Lowercase project slug used in resource names.
+  Environment:
+    Type: String
+    Default: dev
+    AllowedPattern: "^[a-z0-9-]+$"
+    Description: Environment name.
+  VpcId:
+    Type: AWS::EC2::VPC::Id
+    Description: VPC where the RDS security group will be created.
+  DBSubnetIds:
+    Type: List<AWS::EC2::Subnet::Id>
+    Description: At least two subnets in different AZs for the DB subnet group.
+  DatabaseName:
+    Type: String
+    Default: rally_investor_matching
+    AllowedPattern: "^[a-zA-Z][a-zA-Z0-9_]{0,62}$"
+    Description: Initial PostgreSQL database name.
+  DatabaseUsername:
+    Type: String
+    Default: rally_admin
+    AllowedPattern: "^[a-zA-Z][a-zA-Z0-9_]{0,62}$"
+    Description: RDS master username. Password is generated in Secrets Manager.
+  DBInstanceClass:
+    Type: String
+    Default: db.t4g.micro
+    AllowedValues:
+      - db.t4g.micro
+      - db.t4g.small
+      - db.t4g.medium
+      - db.t3.micro
+      - db.t3.small
+      - db.t3.medium
+    Description: Small test class by default. Increase for production load.
+  AllocatedStorageGb:
+    Type: Number
+    Default: 20
+    MinValue: 20
+    MaxValue: 1024
+    Description: Allocated storage in GiB.
+  PubliclyAccessible:
+    Type: String
+    Default: "false"
+    AllowedValues: ["true", "false"]
+    Description: Use true only for temporary local testing with a locked-down CIDR.
+  AllowedPostgresCidr:
+    Type: String
+    Default: 0.0.0.0/32
+    Description: CIDR allowed to connect to PostgreSQL. Use your public IP /32 for local testing.
+  BackupRetentionDays:
+    Type: Number
+    Default: 1
+    MinValue: 0
+    MaxValue: 35
+    Description: RDS automated backup retention. Free-tier accounts may require 1 day.
+  DeletionProtection:
+    Type: String
+    Default: "true"
+    AllowedValues: ["true", "false"]
+    Description: Keep true outside disposable test databases.
+
+Conditions:
+  EnableDeletionProtection: !Equals [!Ref DeletionProtection, "true"]
+  EnablePublicAccess: !Equals [!Ref PubliclyAccessible, "true"]
+
+Resources:
+  DatabaseSecret:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Name: !Sub "/${ProjectSlug}/${Environment}/rds/admin"
+      Description: !Sub "Admin credentials for ${ProjectSlug}-${Environment} PostgreSQL"
+      GenerateSecretString:
+        SecretStringTemplate: !Sub '{"username":"${DatabaseUsername}"}'
+        GenerateStringKey: password
+        PasswordLength: 32
+        ExcludeCharacters: "\"@/\\"
+      Tags:
+        - Key: Project
+          Value: VCMatchIntelligence
+        - Key: Environment
+          Value: !Ref Environment
+
+  DatabaseSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: !Sub "${ProjectSlug}-${Environment} PostgreSQL access"
+      VpcId: !Ref VpcId
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 5432
+          ToPort: 5432
+          CidrIp: !Ref AllowedPostgresCidr
+          Description: PostgreSQL access for app/local migration host
+      SecurityGroupEgress:
+        - IpProtocol: -1
+          CidrIp: 0.0.0.0/0
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectSlug}-${Environment}-postgres-sg"
+        - Key: Project
+          Value: VCMatchIntelligence
+        - Key: Environment
+          Value: !Ref Environment
+
+  DatabaseSubnetGroup:
+    Type: AWS::RDS::DBSubnetGroup
+    Properties:
+      DBSubnetGroupDescription: !Sub "${ProjectSlug}-${Environment} PostgreSQL subnets"
+      SubnetIds: !Ref DBSubnetIds
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectSlug}-${Environment}-postgres-subnets"
+        - Key: Project
+          Value: VCMatchIntelligence
+        - Key: Environment
+          Value: !Ref Environment
+
+  DatabaseInstance:
+    Type: AWS::RDS::DBInstance
+    DeletionPolicy: Snapshot
+    UpdateReplacePolicy: Snapshot
+    Properties:
+      DBInstanceIdentifier: !Sub "${ProjectSlug}-${Environment}-postgres"
+      DBName: !Ref DatabaseName
+      Engine: postgres
+      EngineVersion: "16.14"
+      DBInstanceClass: !Ref DBInstanceClass
+      AllocatedStorage: !Ref AllocatedStorageGb
+      StorageType: gp3
+      MasterUsername: !Sub "{{resolve:secretsmanager:${DatabaseSecret}:SecretString:username}}"
+      MasterUserPassword: !Sub "{{resolve:secretsmanager:${DatabaseSecret}:SecretString:password}}"
+      DBSubnetGroupName: !Ref DatabaseSubnetGroup
+      VPCSecurityGroups:
+        - !Ref DatabaseSecurityGroup
+      BackupRetentionPeriod: !Ref BackupRetentionDays
+      CopyTagsToSnapshot: true
+      DeletionProtection: !If [EnableDeletionProtection, true, false]
+      MultiAZ: false
+      PubliclyAccessible: !If [EnablePublicAccess, true, false]
+      AutoMinorVersionUpgrade: true
+      StorageEncrypted: true
+      Tags:
+        - Key: Project
+          Value: VCMatchIntelligence
+        - Key: Environment
+          Value: !Ref Environment
+
+  DatabaseSecretAttachment:
+    Type: AWS::SecretsManager::SecretTargetAttachment
+    Properties:
+      SecretId: !Ref DatabaseSecret
+      TargetId: !Ref DatabaseInstance
+      TargetType: AWS::RDS::DBInstance
+
+Outputs:
+  DatabaseEndpointAddress:
+    Description: RDS PostgreSQL endpoint hostname.
+    Value: !GetAtt DatabaseInstance.Endpoint.Address
+  DatabaseEndpointPort:
+    Description: RDS PostgreSQL endpoint port.
+    Value: !GetAtt DatabaseInstance.Endpoint.Port
+  DatabaseName:
+    Description: Initial PostgreSQL database name.
+    Value: !Ref DatabaseName
+  DatabaseSecretArn:
+    Description: Secrets Manager ARN containing username/password/host metadata.
+    Value: !Ref DatabaseSecret
+  DatabaseSecurityGroupId:
+    Description: Security group controlling PostgreSQL access.
+    Value: !Ref DatabaseSecurityGroup
+  MvpSearchPath:
+    Description: Search path required by the current MVP/test app.
+    Value: mvp_compat,public

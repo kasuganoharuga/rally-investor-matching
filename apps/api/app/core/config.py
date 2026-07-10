@@ -8,7 +8,10 @@ class Settings(BaseSettings):
     app_name: str = "Rally Investor Matching API"
     app_env: str = "local"
     log_level: str = "INFO"
-    cors_origins: list[str] = ["http://localhost:3000"]
+    cors_origins: list[str] = [
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+    ]
     database_url: str = (
         "postgresql://rally:rally_dev_password@localhost:5432/rally_investor_matching"
     )

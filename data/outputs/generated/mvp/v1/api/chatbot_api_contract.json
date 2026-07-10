@@ -1,0 +1,45 @@
+{
+  "version": "mvp-v1",
+  "endpoints": [
+    {
+      "method": "POST",
+      "path": "/chat/match",
+      "description": "Parse founder/company input and return 3-5 matched investors with evidence.",
+      "request": {
+        "message": "Free-text company/founder description",
+        "candidate_count": "Optional integer 3-5"
+      },
+      "response": {
+        "parsed_company_profile": "Structured profile extracted from message",
+        "matches": [
+          {
+            "investor_id": "airtree",
+            "rank": 1,
+            "score": 86,
+            "score_breakdown": {
+              "au_anz_mandate": 25,
+              "stage_cheque_fit": 25,
+              "sector_business_model_fit": 25,
+              "lead_contact_fit": 15,
+              "evidence_quality": 10
+            },
+            "short_reason": "Why this investor matched",
+            "risks_or_gaps": [
+              "Fields requiring review"
+            ],
+            "evidence": [
+              "Source-grounded chunks"
+            ],
+            "detail_url": "/investors/airtree"
+          }
+        ]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/investors/{investor_id}",
+      "description": "Return investor detail page data.",
+      "response_file_shape": "investors/{investor_id}/detail.json"
+    }
+  ]
+}

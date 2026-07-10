@@ -1,0 +1,240 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >
+  Rally Investor Matching MVP compute layer on one Amazon Linux EC2 instance.
+  Runs FastAPI on port 8000 and Next.js on port 3000 using systemd.
+
+Parameters:
+  ProjectSlug:
+    Type: String
+    Default: vcmi
+    AllowedPattern: "^[a-z0-9-]+$"
+  Environment:
+    Type: String
+    Default: dev
+    AllowedPattern: "^[a-z0-9-]+$"
+  VpcId:
+    Type: AWS::EC2::VPC::Id
+  SubnetId:
+    Type: AWS::EC2::Subnet::Id
+  InstanceType:
+    Type: String
+    Default: t3.small
+    AllowedValues: [t3.micro, t3.small, t3.medium]
+  AllowedWebCidr:
+    Type: String
+    Description: CIDR allowed to access the web/API ports.
+  SourceBucket:
+    Type: String
+  SourceKey:
+    Type: String
+    Default: releases/rally-rag-source.zip
+  AppSecretName:
+    Type: String
+    Default: /vcmi/dev/rds/app
+  AnthropicSecretName:
+    Type: String
+    Default: /vcmi/dev/anthropic_api_key
+  RdsSecurityGroupId:
+    Type: AWS::EC2::SecurityGroup::Id
+
+Resources:
+  InstanceRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub "${ProjectSlug}-${Environment}-ec2-role"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: ec2.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+      Policies:
+        - PolicyName: !Sub "${ProjectSlug}-${Environment}-ec2-app-policy"
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Sid: ReadDeploymentBundle
+                Effect: Allow
+                Action:
+                  - s3:GetObject
+                Resource: !Sub "arn:${AWS::Partition}:s3:::${SourceBucket}/${SourceKey}"
+              - Sid: ReadAppSecret
+                Effect: Allow
+                Action:
+                  - secretsmanager:GetSecretValue
+                Resource: !Sub "arn:${AWS::Partition}:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:${AppSecretName}*"
+              - Sid: ReadAnthropicSecret
+                Effect: Allow
+                Action:
+                  - secretsmanager:GetSecretValue
+                Resource: !Sub "arn:${AWS::Partition}:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:${AnthropicSecretName}*"
+              - Sid: WriteLogs
+                Effect: Allow
+                Action:
+                  - logs:CreateLogGroup
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                Resource: "*"
+
+  InstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      Roles:
+        - !Ref InstanceRole
+
+  AppSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: !Sub "${ProjectSlug}-${Environment} EC2 web/API access"
+      VpcId: !Ref VpcId
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 3000
+          ToPort: 3000
+          CidrIp: !Ref AllowedWebCidr
+          Description: Next.js web access
+        - IpProtocol: tcp
+          FromPort: 8000
+          ToPort: 8000
+          CidrIp: !Ref AllowedWebCidr
+          Description: FastAPI access
+      SecurityGroupEgress:
+        - IpProtocol: -1
+          CidrIp: 0.0.0.0/0
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectSlug}-${Environment}-compute-sg"
+
+  RdsIngressFromCompute:
+    Type: AWS::EC2::SecurityGroupIngress
+    Properties:
+      GroupId: !Ref RdsSecurityGroupId
+      IpProtocol: tcp
+      FromPort: 5432
+      ToPort: 5432
+      SourceSecurityGroupId: !Ref AppSecurityGroup
+      Description: PostgreSQL access from Rally compute instance
+
+  ComputeInstance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: !Sub "{{resolve:ssm:/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-default-x86_64}}"
+      InstanceType: !Ref InstanceType
+      IamInstanceProfile: !Ref InstanceProfile
+      SubnetId: !Ref SubnetId
+      SecurityGroupIds:
+        - !Ref AppSecurityGroup
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectSlug}-${Environment}-rally-rag"
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          set -euxo pipefail
+          exec > >(tee /var/log/rally-bootstrap.log | logger -t rally-bootstrap -s 2>/dev/console) 2>&1
+
+          dnf update -y
+          dnf install -y git unzip jq python3.11 python3.11-pip awscli
+          curl -fsSL https://rpm.nodesource.com/setup_22.x | bash -
+          dnf install -y nodejs
+          npm install -g pnpm@10.18.0
+
+          mkdir -p /opt/rally /etc/rally
+          aws s3 cp s3://${SourceBucket}/${SourceKey} /tmp/rally-source.zip --region ${AWS::Region}
+          unzip -q /tmp/rally-source.zip -d /opt/rally
+
+          cd /opt/rally
+          python3.11 -m venv .venv
+          .venv/bin/python -m pip install --upgrade pip
+          .venv/bin/python -m pip install -e .
+          .venv/bin/python -m pip install -r apps/api/requirements.txt
+          pnpm install --frozen-lockfile
+
+          TOKEN="$(curl -X PUT -H 'X-aws-ec2-metadata-token-ttl-seconds: 21600' http://169.254.169.254/latest/api/token)"
+          PUBLIC_IPV4="$(curl -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/public-ipv4)"
+          PUBLIC_HOSTNAME="$(curl -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/public-hostname)"
+
+          set +x
+          SECRET_JSON="$(aws secretsmanager get-secret-value --region ${AWS::Region} --secret-id '${AppSecretName}' --query SecretString --output text)"
+          DATABASE_URL="$(echo "$SECRET_JSON" | jq -r '.database_url')"
+          ANTHROPIC_API_KEY="$(aws secretsmanager get-secret-value --region ${AWS::Region} --secret-id '${AnthropicSecretName}' --query SecretString --output text)"
+          cat > /etc/rally/api.env <<EOF
+          APP_ENV=aws-dev
+          LOG_LEVEL=INFO
+          DATABASE_URL=$DATABASE_URL
+          LLM_PROVIDER=anthropic
+          ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY
+          CORS_ORIGINS=["http://$PUBLIC_IPV4:3000","http://$PUBLIC_HOSTNAME:3000"]
+          EOF
+          unset SECRET_JSON DATABASE_URL ANTHROPIC_API_KEY
+          set -x
+
+          NEXT_PUBLIC_MATCHING_API_BASE_URL="http://$PUBLIC_IPV4:8000" pnpm --filter @rally-investor-matching/web build
+
+          cat > /etc/systemd/system/rally-api.service <<'EOF'
+          [Unit]
+          Description=Rally FastAPI matching service
+          After=network-online.target
+          Wants=network-online.target
+
+          [Service]
+          Type=simple
+          WorkingDirectory=/opt/rally/apps/api
+          EnvironmentFile=/etc/rally/api.env
+          ExecStart=/opt/rally/.venv/bin/python -m uvicorn app.main:app --host 0.0.0.0 --port 8000
+          Restart=always
+          RestartSec=5
+
+          [Install]
+          WantedBy=multi-user.target
+          EOF
+
+          cat > /etc/systemd/system/rally-web.service <<'EOF'
+          [Unit]
+          Description=Rally Next.js web service
+          After=network-online.target rally-api.service
+          Wants=network-online.target
+
+          [Service]
+          Type=simple
+          WorkingDirectory=/opt/rally/apps/web
+          Environment=HOSTNAME=0.0.0.0
+          Environment=PORT=3000
+          Environment=MATCHING_API_BASE_URL=http://127.0.0.1:8000
+          ExecStart=/usr/bin/pnpm exec next start -H 0.0.0.0 -p 3000
+          Restart=always
+          RestartSec=5
+
+          [Install]
+          WantedBy=multi-user.target
+          EOF
+
+          systemctl daemon-reload
+          systemctl enable --now rally-api.service
+          systemctl enable --now rally-web.service
+
+          cat > /opt/rally/deploy-info.json <<EOF
+          {
+            "public_ipv4": "$PUBLIC_IPV4",
+            "public_hostname": "$PUBLIC_HOSTNAME",
+            "web_url": "http://$PUBLIC_IPV4:3000",
+            "api_url": "http://$PUBLIC_IPV4:8000"
+          }
+          EOF
+
+Outputs:
+  InstanceId:
+    Value: !Ref ComputeInstance
+  PublicIp:
+    Value: !GetAtt ComputeInstance.PublicIp
+  PublicDnsName:
+    Value: !GetAtt ComputeInstance.PublicDnsName
+  WebUrl:
+    Value: !Sub "http://${ComputeInstance.PublicIp}:3000"
+  ApiUrl:
+    Value: !Sub "http://${ComputeInstance.PublicIp}:8000"
+  AppSecurityGroupId:
+    Value: !Ref AppSecurityGroup
