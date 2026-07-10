@@ -80,7 +80,6 @@ CLAUDE.md
 # Python
 __pycache__/
 *.py[cod]
-*.egg-info/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
@@ -91,7 +90,6 @@ venv/
 postgres-data/
 *.sqlite
 *.db
-data/outputs/**/*.zip
 
 # OS/editor noise
 .DS_Store
