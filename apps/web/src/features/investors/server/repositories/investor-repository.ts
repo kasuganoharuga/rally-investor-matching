@@ -8,7 +8,7 @@ import {
 import { apiFetch } from "@/lib/api/client";
 
 const INVESTOR_API_BASE_URL =
-  process.env.NEXT_PUBLIC_MATCHING_API_BASE_URL ?? "http://localhost:8000";
+  process.env.MATCHING_API_BASE_URL ?? "http://127.0.0.1:8000";
 
 export class InvestorRepository {
   async listSummaries(): Promise<InvestorSummary[]> {

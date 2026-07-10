@@ -40,7 +40,7 @@ FIELD_LABELS = {
     "lead_needed": "whether you need a lead investor",
 }
 
-MATCH_RESULT_LIMIT = 10
+MATCH_RESULT_LIMIT = 14
 
 
 def build_match_investor_profile(row: dict[str, Any]) -> dict[str, Any]:

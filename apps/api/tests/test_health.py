@@ -369,7 +369,7 @@ def test_match_intake_matches_after_follow_up(monkeypatch: object) -> None:
         app.dependency_overrides.clear()
 
 
-def test_match_intake_returns_top_ten_matches(monkeypatch: object) -> None:
+def test_match_intake_returns_expanded_direct_vc_matches(monkeypatch: object) -> None:
     def fake_parse(message: str) -> dict[str, object]:
         return {
             "company_name": "Example AI Health",
@@ -408,6 +408,6 @@ def test_match_intake_returns_top_ten_matches(monkeypatch: object) -> None:
         body = response.json()["data"]
         assert response.status_code == 200
         assert body["status"] == "matched"
-        assert len(body["matches"]) == 10
+        assert len(body["matches"]) == 12
     finally:
         app.dependency_overrides.clear()

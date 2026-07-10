@@ -1,7 +1,9 @@
 "use client";
 
-import { Loader2 } from "lucide-react";
+import { ChevronDown, ChevronUp, Loader2 } from "lucide-react";
+import { useState } from "react";
 
+import { Button } from "@/components/ui/button";
 import { FounderProfileSummary } from "./founder-profile-summary";
 import { MatchHistoryPanel } from "./match-history-panel";
 import { MatchResultCard } from "./match-result-card";
@@ -36,6 +38,9 @@ const RESULT_GROUPS = [
     pools: ["watchlist_pool"],
   },
 ];
+
+const DIRECT_VC_INITIAL_LIMIT = 4;
+const DIRECT_VC_EXPANDED_LIMIT = 8;
 
 function groupedResults(matches: MatchResult[]) {
   return RESULT_GROUPS.map((group) => ({
@@ -79,6 +84,19 @@ export function MatchResultsPanel({
 }: MatchResultsPanelProps) {
   const matches = response?.matches ?? [];
   const groups = groupedResults(matches);
+  const [showMoreDirectVcs, setShowMoreDirectVcs] = useState(false);
+  const visibleMatchCount = groups.reduce((total, group) => {
+    if (group.title !== "Best direct investors") {
+      return total + group.matches.length;
+    }
+    return (
+      total +
+      Math.min(
+        group.matches.length,
+        showMoreDirectVcs ? DIRECT_VC_EXPANDED_LIMIT : DIRECT_VC_INITIAL_LIMIT,
+      )
+    );
+  }, 0);
   const selectedMatch =
     matches.find((match) => match.investor_id === selectedMatchId) ?? null;
 
@@ -104,7 +122,8 @@ export function MatchResultsPanel({
           </div>
           {matches.length > 0 ? (
             <span className="rounded-lg bg-muted px-2 py-1 text-xs font-medium text-muted-foreground">
-              {matches.length} shown
+              {visibleMatchCount}
+              {visibleMatchCount < matches.length ? ` of ${matches.length}` : ""} shown
             </span>
           ) : null}
         </div>
@@ -116,31 +135,96 @@ export function MatchResultsPanel({
         ) : null}
 
         {groups.map((group) => (
-          <section
+          <ResultGroup
             key={group.title}
-            className="rounded-lg border border-border bg-card p-4 shadow-sm"
-          >
-            <div className="flex items-center justify-between gap-3">
-              <h3 className="text-sm font-semibold text-foreground">{group.title}</h3>
-              <span className="rounded-lg bg-muted px-2 py-1 text-xs font-medium text-muted-foreground">
-                {group.matches.length}
-              </span>
-            </div>
-            <div className="mt-3 grid gap-3 xl:grid-cols-2">
-              {group.matches.map((match) => (
-                <MatchResultCard
-                  key={match.investor_id}
-                  match={match}
-                  selected={match.investor_id === selectedMatchId}
-                  onSelect={onSelectMatch}
-                />
-              ))}
-            </div>
-          </section>
+            title={group.title}
+            matches={group.matches}
+            selectedMatchId={selectedMatchId}
+            onSelectMatch={onSelectMatch}
+            showMoreDirectVcs={showMoreDirectVcs}
+            onToggleShowMoreDirectVcs={() =>
+              setShowMoreDirectVcs((current) => !current)
+            }
+          />
         ))}
       </section>
 
       <MatchHistoryPanel records={records} />
+    </section>
+  );
+}
+
+type ResultGroupProps = {
+  title: string;
+  matches: MatchResult[];
+  selectedMatchId: string | null;
+  onSelectMatch: (investorId: string) => void;
+  showMoreDirectVcs: boolean;
+  onToggleShowMoreDirectVcs: () => void;
+};
+
+function ResultGroup({
+  title,
+  matches,
+  selectedMatchId,
+  onSelectMatch,
+  showMoreDirectVcs,
+  onToggleShowMoreDirectVcs,
+}: ResultGroupProps) {
+  const isDirectVcGroup = title === "Best direct investors";
+  const visibleLimit =
+    isDirectVcGroup && !showMoreDirectVcs
+      ? DIRECT_VC_INITIAL_LIMIT
+      : DIRECT_VC_EXPANDED_LIMIT;
+  const visibleMatches = isDirectVcGroup ? matches.slice(0, visibleLimit) : matches;
+  const hiddenDirectCount = Math.max(
+    0,
+    Math.min(matches.length, DIRECT_VC_EXPANDED_LIMIT) - DIRECT_VC_INITIAL_LIMIT,
+  );
+  const canToggleDirectVcs = isDirectVcGroup && hiddenDirectCount > 0;
+
+  return (
+    <section className="rounded-lg border border-border bg-card p-4 shadow-sm">
+      <div className="flex items-center justify-between gap-3">
+        <h3 className="text-sm font-semibold text-foreground">{title}</h3>
+        <span className="rounded-lg bg-muted px-2 py-1 text-xs font-medium text-muted-foreground">
+          {visibleMatches.length}
+          {visibleMatches.length < matches.length ? ` of ${matches.length}` : ""}
+        </span>
+      </div>
+      <div className="mt-3 grid gap-3 xl:grid-cols-2">
+        {visibleMatches.map((match) => (
+          <MatchResultCard
+            key={match.investor_id}
+            match={match}
+            selected={match.investor_id === selectedMatchId}
+            onSelect={onSelectMatch}
+          />
+        ))}
+      </div>
+      {canToggleDirectVcs ? (
+        <div className="mt-3 flex justify-center border-t border-border pt-3">
+          <Button
+            type="button"
+            variant="outline"
+            size="sm"
+            onClick={onToggleShowMoreDirectVcs}
+            aria-expanded={showMoreDirectVcs}
+          >
+            {showMoreDirectVcs ? (
+              <>
+                Show less
+                <ChevronUp className="size-4" aria-hidden="true" />
+              </>
+            ) : (
+              <>
+                Show more
+                <ChevronDown className="size-4" aria-hidden="true" />
+              </>
+            )}
+          </Button>
+        </div>
+      ) : null}
     </section>
   );
 }
