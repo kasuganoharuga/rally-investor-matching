@@ -30,10 +30,18 @@ export function jsonError(
   );
 }
 
-export function jsonFromApiError(error: unknown): NextResponse<ApiErrorBody> {
+export function jsonFromApiError(
+  error: unknown,
+  requestId?: string,
+): NextResponse<ApiErrorBody> {
   if (error instanceof ApiError) {
-    return jsonError(error.code, error.message, error.status, error.requestId);
+    return jsonError(
+      error.code,
+      error.message,
+      error.status,
+      requestId ?? error.requestId,
+    );
   }
 
-  return jsonError("INTERNAL_SERVER_ERROR", "Internal server error", 500);
+  return jsonError("INTERNAL_SERVER_ERROR", "Internal server error", 500, requestId);
 }

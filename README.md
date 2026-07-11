@@ -33,6 +33,19 @@ Create a local environment file:
 Copy-Item .env.example .env
 ```
 
+Next.js only reads env files from `apps/web`, not the repo root, so also create a web-specific one for Better Auth (database connection, session secret, email provider):
+
+```powershell
+Copy-Item apps/web/.env.example apps/web/.env.local
+```
+
+Fill in `BETTER_AUTH_SECRET` with a random value, then bootstrap the first admin account (run from `apps/web`, after the database is up):
+
+```powershell
+cd apps/web
+pnpm run seed:admin
+```
+
 Install backend dependencies:
 
 ```powershell

@@ -1,5 +1,5 @@
-import { InvestorsPage } from "@/features/investors";
+import { LoginPage } from "@/features/auth/components/login-page";
 
 export default function Home() {
-  return <InvestorsPage />;
+  return <LoginPage />;
 }

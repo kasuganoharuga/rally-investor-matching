@@ -22,15 +22,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+/*
+ * These resets must live in @layer base. Tailwind v4's `@import
+ * "tailwindcss"` declares `@layer theme, base, components, utilities;`,
+ * and per the CSS cascade layers spec, ANY unlayered rule beats every
+ * named layer regardless of source order or specificity. An unlayered
+ * `* { padding: 0; margin: 0; }` here would therefore silently win over
+ * every Tailwind spacing utility (p-*, m-*, px-*, gap does not use
+ * margin/padding so it is unaffected) across the entire app.
+ */
+@layer base {
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
 
-a {
-  color: inherit;
-  text-decoration: none;
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
