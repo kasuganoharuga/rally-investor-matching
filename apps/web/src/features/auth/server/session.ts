@@ -77,3 +77,16 @@ export async function requireAdmin(): Promise<CurrentUser> {
   }
   return user;
 }
+
+/** Only founders own a company profile; reviewers/admins have none to manage. */
+export async function requireFounder(): Promise<CurrentUser> {
+  const user = await requireUser();
+  if (user.role !== "founder") {
+    throw new ApiError({
+      code: "FORBIDDEN",
+      message: "Founder access required.",
+      status: 403,
+    });
+  }
+  return user;
+}
