@@ -1,4 +1,5 @@
 import { Bookmark, ExternalLink } from "lucide-react";
+import Link from "next/link";
 
 import type { InvestorSummary } from "@/features/investors/types/investor";
 
@@ -180,7 +181,14 @@ export function InvestorListItem({ investor }: InvestorListItemProps) {
       </p>
 
       <div className="mt-4 grid grid-cols-[1fr_auto] gap-2">
-        {investor.websiteUrl ? (
+        {investor.slug ? (
+          <Link
+            href={`/investors/${investor.slug}`}
+            className="inline-flex h-10 items-center justify-center gap-2 rounded-lg bg-primary px-4 text-sm font-semibold text-white transition hover:bg-[#0b4739]"
+          >
+            View profile
+          </Link>
+        ) : investor.websiteUrl ? (
           <a
             href={investor.websiteUrl}
             target="_blank"
