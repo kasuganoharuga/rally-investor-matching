@@ -1,4 +1,5 @@
 import { Bookmark, ExternalLink } from "lucide-react";
+import Link from "next/link";
 
 import type { InvestorSummary } from "@/features/investors/types/investor";
 
@@ -179,25 +180,33 @@ export function InvestorListItem({ investor }: InvestorListItemProps) {
         {shortDescription(investor)}
       </p>
 
-      <div className="mt-4 grid grid-cols-[1fr_auto] gap-2">
+      <div className="mt-4 flex items-center gap-2">
+        {investor.slug ? (
+          <Link
+            href={`/investors/${investor.slug}`}
+            className="inline-flex h-10 flex-1 items-center justify-center gap-2 rounded-lg bg-primary px-4 text-sm font-semibold text-white transition hover:bg-[#0b4739]"
+          >
+            View profile
+          </Link>
+        ) : (
+          <span className="inline-flex h-10 flex-1 items-center justify-center rounded-lg bg-muted px-4 text-sm font-semibold text-muted-foreground">
+            Profile pending
+          </span>
+        )}
         {investor.websiteUrl ? (
           <a
             href={investor.websiteUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex h-10 items-center justify-center gap-2 rounded-lg bg-primary px-4 text-sm font-semibold text-white transition hover:bg-[#0b4739]"
+            className="flex size-10 shrink-0 items-center justify-center rounded-lg border border-border text-muted-foreground transition hover:border-primary/50 hover:text-primary"
+            aria-label={`Open ${investor.name} website`}
           >
-            View profile
             <ExternalLink className="size-4" aria-hidden="true" />
           </a>
-        ) : (
-          <span className="inline-flex h-10 items-center justify-center rounded-lg bg-muted px-4 text-sm font-semibold text-muted-foreground">
-            Profile pending
-          </span>
-        )}
+        ) : null}
         <button
           type="button"
-          className="flex size-10 items-center justify-center rounded-lg border border-border text-muted-foreground transition hover:border-primary/50 hover:text-primary"
+          className="flex size-10 shrink-0 items-center justify-center rounded-lg border border-border text-muted-foreground transition hover:border-primary/50 hover:text-primary"
           aria-label={`Save ${investor.name}`}
         >
           <Bookmark className="size-4" aria-hidden="true" />

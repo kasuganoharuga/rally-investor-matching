@@ -23,13 +23,6 @@ const NAV_LINKS: readonly NavLink[] = [
     label: "Invitations",
     roles: ["admin", "reviewer"],
   },
-  {
-    section: "company-profile",
-    href: "/company-profile",
-    label: "Company Profile",
-    roles: ["founder"],
-  },
-  { section: "settings", href: "/settings", label: "Settings" },
 ];
 
 type SiteHeaderProps = {
