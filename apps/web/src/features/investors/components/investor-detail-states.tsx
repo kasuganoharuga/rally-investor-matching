@@ -42,10 +42,7 @@ export function InvestorDetailNotFound() {
       <p className="mt-2 text-sm text-muted-foreground">
         This investor may have been removed or the link is out of date.
       </p>
-      <Link
-        href="/investors"
-        className={cn(buttonVariants({ size: "sm" }), "mt-4")}
-      >
+      <Link href="/investors" className={cn(buttonVariants({ size: "sm" }), "mt-4")}>
         Back to directory
       </Link>
     </div>

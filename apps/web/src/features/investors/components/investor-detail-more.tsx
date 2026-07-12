@@ -14,10 +14,7 @@ export function InvestorDetailMore({ investor }: InvestorDetailMoreProps) {
       </h2>
 
       <div className="mt-4 grid gap-5 sm:grid-cols-2">
-        <TagGroup
-          label="Business model focus"
-          values={investor.businessModelFocus}
-        />
+        <TagGroup label="Business model focus" values={investor.businessModelFocus} />
         <TagGroup label="Founder-fit hints" values={investor.founderFit} />
       </div>
 

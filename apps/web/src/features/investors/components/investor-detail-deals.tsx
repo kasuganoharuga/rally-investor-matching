@@ -25,9 +25,7 @@ function RolePill({ role }: { role: string | null | undefined }) {
     <span
       className={cn(
         "inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium",
-        isLead
-          ? "bg-secondary text-primary"
-          : "bg-muted text-muted-foreground",
+        isLead ? "bg-secondary text-primary" : "bg-muted text-muted-foreground",
       )}
     >
       {role ? titleCase(role) : "Role unknown"}
@@ -100,7 +98,10 @@ export function InvestorDetailDeals({ investor }: InvestorDetailDealsProps) {
             </thead>
             <tbody>
               {visible.map((deal, index) => (
-                <DealRow key={`${deal.company ?? "deal"}-${deal.date ?? index}`} deal={deal} />
+                <DealRow
+                  key={`${deal.company ?? "deal"}-${deal.date ?? index}`}
+                  deal={deal}
+                />
               ))}
             </tbody>
           </table>

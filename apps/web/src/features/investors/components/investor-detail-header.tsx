@@ -57,9 +57,7 @@ export function InvestorDetailHeader({ investor }: InvestorDetailHeaderProps) {
           </div>
           <div className="min-w-0">
             <div className="flex flex-wrap items-center gap-2">
-              <h1 className="text-xl font-semibold text-foreground">
-                {investor.name}
-              </h1>
+              <h1 className="text-xl font-semibold text-foreground">{investor.name}</h1>
               <span
                 className={cn(
                   "inline-flex items-center rounded-full border px-2 py-0.5 text-[11px] font-semibold",
@@ -117,10 +115,7 @@ export function InvestorDetailHeader({ investor }: InvestorDetailHeaderProps) {
         <div className="flex shrink-0 items-center gap-2 sm:flex-col sm:items-stretch">
           <button
             type="button"
-            className={cn(
-              buttonVariants({ variant: "outline", size: "lg" }),
-              "gap-2",
-            )}
+            className={cn(buttonVariants({ variant: "outline", size: "lg" }), "gap-2")}
             aria-label={`Save ${investor.name} to shortlist`}
           >
             <Bookmark className="size-4" aria-hidden="true" />

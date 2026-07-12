@@ -137,9 +137,7 @@ export function formatDealDate(deal: InvestorRecentDeal): string {
   return dealYear(deal);
 }
 
-export function sortDealsByDateDesc(
-  deals: InvestorRecentDeal[],
-): InvestorRecentDeal[] {
+export function sortDealsByDateDesc(deals: InvestorRecentDeal[]): InvestorRecentDeal[] {
   return [...deals].sort((a, b) => {
     const aTime = a.date ? new Date(`${a.date}T00:00:00Z`).getTime() : NaN;
     const bTime = b.date ? new Date(`${b.date}T00:00:00Z`).getTime() : NaN;
@@ -177,9 +175,10 @@ export function dealsTrackedSummary(
 
 export type StatusTone = "positive" | "neutral";
 
-export function statusBadgeLabel(
-  status: string | null | undefined,
-): { label: string; tone: StatusTone } {
+export function statusBadgeLabel(status: string | null | undefined): {
+  label: string;
+  tone: StatusTone;
+} {
   const normalized = (status ?? "").toLowerCase();
   if (normalized === "included") {
     return { label: "Included", tone: "positive" };
