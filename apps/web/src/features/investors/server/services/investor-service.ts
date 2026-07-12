@@ -1,8 +1,10 @@
 import "server-only";
 
+import { InvestorError } from "@/features/investors/server/errors";
 import { investorRepository } from "@/features/investors/server/repositories/investor-repository";
 import {
   investorListDataSchema,
+  type InvestorDetail,
   type InvestorListData,
 } from "@/features/investors/types/investor";
 
@@ -14,6 +16,15 @@ export class InvestorService {
     );
 
     return investorListDataSchema.parse({ items: sortedItems });
+  }
+
+  async getDetail(slug: string): Promise<InvestorDetail> {
+    const investor = await investorRepository.getDetail(slug);
+    if (!investor) {
+      throw new InvestorError("INVESTOR_NOT_FOUND");
+    }
+
+    return investor;
   }
 }
 

@@ -31,5 +31,35 @@ export const investorListDataSchema = z.object({
   items: z.array(investorSummarySchema),
 });
 
+export const investorRecentDealSchema = z
+  .object({
+    company: z.string().optional().nullable(),
+    round: z.string().optional().nullable(),
+    amount_text: z.string().optional().nullable(),
+    amount: z.string().optional().nullable(),
+    amount_currency: z.string().optional().nullable(),
+    amount_value: z.number().optional().nullable(),
+    role: z.string().optional().nullable(),
+    date: z.string().optional().nullable(),
+    direction: z.string().optional().nullable(),
+    business_model: z.string().optional().nullable(),
+    company_geography: z.string().optional().nullable(),
+    investor_evidence_url: z.string().optional().nullable(),
+  })
+  .passthrough();
+
+export const investorDetailSchema = investorSummarySchema.extend({
+  linkedinUrl: z.string().nullable().optional(),
+  founderFit: z.array(z.string()).default([]),
+  aiAppetite: z.string().nullable().optional(),
+  recentDeals: z.array(investorRecentDealSchema).default([]),
+  entryChannels: z.array(z.string()).default([]),
+  preferredChannel: z.string().nullable().optional(),
+  createdAt: z.string().nullable().optional(),
+  updatedAt: z.string().nullable().optional(),
+});
+
 export type InvestorSummary = z.infer<typeof investorSummarySchema>;
 export type InvestorListData = z.infer<typeof investorListDataSchema>;
+export type InvestorRecentDeal = z.infer<typeof investorRecentDealSchema>;
+export type InvestorDetail = z.infer<typeof investorDetailSchema>;
