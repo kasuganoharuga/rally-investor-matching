@@ -4,7 +4,8 @@ import Link from "next/link";
 import { AccountMenu } from "@/features/auth/components/account-menu";
 import type { UserRole } from "@/features/auth/types/auth";
 
-type SiteHeaderSection = "investors" | "match" | "invitations";
+type SiteHeaderSection =
+  "investors" | "match" | "invitations" | "company-profile" | "settings";
 
 type NavLink = {
   section: SiteHeaderSection;
@@ -22,6 +23,13 @@ const NAV_LINKS: readonly NavLink[] = [
     label: "Invitations",
     roles: ["admin", "reviewer"],
   },
+  {
+    section: "company-profile",
+    href: "/company-profile",
+    label: "Company Profile",
+    roles: ["founder"],
+  },
+  { section: "settings", href: "/settings", label: "Settings" },
 ];
 
 type SiteHeaderProps = {
@@ -76,7 +84,7 @@ export function SiteHeader({ active, user }: SiteHeaderProps) {
             ),
           )}
         </nav>
-        <AccountMenu email={user.email} />
+        <AccountMenu email={user.email} role={user.role} />
       </div>
     </header>
   );

@@ -360,7 +360,10 @@ CREATE TABLE company_profiles (
   deleted_at         timestamptz
 );
 
-CREATE INDEX idx_company_profiles_owner
+-- One founder = one active company profile: /company-profile is a
+-- singular resource, so the repository upserts by owner_user_id rather
+-- than picking "the most recent row" among several.
+CREATE UNIQUE INDEX idx_company_profiles_owner_unique
   ON company_profiles(owner_user_id) WHERE deleted_at IS NULL;
 
 -- ------------------------------------------------------------
