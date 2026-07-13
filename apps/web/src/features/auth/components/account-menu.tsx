@@ -5,11 +5,10 @@ import Link from "next/link";
 
 import {
   DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { NavDropdownContent, NavDropdownItem } from "@/components/nav-dropdown";
 import { useSignOut } from "@/features/auth/hooks/use-sign-out";
 import type { UserRole } from "@/features/auth/types/auth";
 
@@ -35,27 +34,36 @@ export function AccountMenu({ email, role }: AccountMenuProps) {
         </span>
       ) : null}
       <DropdownMenu>
-        <DropdownMenuTrigger className="flex items-center gap-1.5 rounded-lg px-2 py-1.5 text-sm font-medium text-muted-foreground transition hover:bg-muted hover:text-foreground">
-          <span className="hidden sm:inline">{email}</span>
-          <ChevronDownIcon className="size-3.5" />
+        <DropdownMenuTrigger
+          title={email}
+          className="flex items-center gap-1 rounded-full p-0.5 transition hover:bg-muted"
+        >
+          <span className="flex size-8 items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground">
+            {email.charAt(0).toUpperCase()}
+          </span>
+          <ChevronDownIcon className="size-3.5 text-muted-foreground" />
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end">
+        <NavDropdownContent align="end">
+          <NavDropdownItem render={<Link href="/settings" />}>
+            My Profile
+          </NavDropdownItem>
           {role === "founder" ? (
-            <DropdownMenuItem render={<Link href="/company-profile" />}>
+            <NavDropdownItem render={<Link href="/company-profile" />}>
               Company Profile
-            </DropdownMenuItem>
+            </NavDropdownItem>
           ) : null}
-          <DropdownMenuItem render={<Link href="/settings" />}>
-            Settings
-          </DropdownMenuItem>
-          <DropdownMenuItem render={<Link href="/change-password" />}>
+          <NavDropdownItem render={<Link href="/change-password" />}>
             Change password
-          </DropdownMenuItem>
+          </NavDropdownItem>
           <DropdownMenuSeparator />
-          <DropdownMenuItem disabled={isSigningOut} onClick={() => void signOut()}>
+          <NavDropdownItem
+            variant="destructive"
+            disabled={isSigningOut}
+            onClick={() => void signOut()}
+          >
             {isSigningOut ? "Signing out..." : "Sign out"}
-          </DropdownMenuItem>
-        </DropdownMenuContent>
+          </NavDropdownItem>
+        </NavDropdownContent>
       </DropdownMenu>
     </div>
   );

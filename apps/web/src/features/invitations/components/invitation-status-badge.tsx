@@ -3,7 +3,7 @@ import type { InvitationStatus } from "@/features/invitations/types/invitation";
 
 const STATUS_STYLES: Record<InvitationStatus, string> = {
   pending: "bg-primary/10 text-primary",
-  accepted: "bg-secondary/10 text-secondary",
+  accepted: "bg-secondary text-secondary-foreground",
   expired: "bg-muted text-muted-foreground",
   revoked: "bg-destructive/10 text-destructive",
 };

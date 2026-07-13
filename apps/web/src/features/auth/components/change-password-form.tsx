@@ -13,9 +13,17 @@ export function ChangePasswordForm() {
   const { changePassword, isSubmitting, error, isDone } = useChangePassword();
   const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
+  const [confirmNewPassword, setConfirmNewPassword] = useState("");
+  const [mismatchError, setMismatchError] = useState(false);
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+
+    if (newPassword !== confirmNewPassword) {
+      setMismatchError(true);
+      return;
+    }
+    setMismatchError(false);
 
     const { error: changeError } = await changePassword({
       currentPassword,
@@ -57,10 +65,32 @@ export function ChangePasswordForm() {
           required
           minLength={8}
           value={newPassword}
-          onChange={(event) => setNewPassword(event.target.value)}
+          onChange={(event) => {
+            setNewPassword(event.target.value);
+            setMismatchError(false);
+          }}
           disabled={isSubmitting}
         />
       </div>
+      <div className="space-y-2">
+        <Label htmlFor="confirm-new-password">Confirm new password</Label>
+        <Input
+          id="confirm-new-password"
+          type="password"
+          autoComplete="new-password"
+          required
+          minLength={8}
+          value={confirmNewPassword}
+          onChange={(event) => {
+            setConfirmNewPassword(event.target.value);
+            setMismatchError(false);
+          }}
+          disabled={isSubmitting}
+        />
+      </div>
+      {mismatchError ? (
+        <p className="text-sm text-destructive">Passwords do not match.</p>
+      ) : null}
       {error ? <p className="text-sm text-destructive">{error.message}</p> : null}
       <Button type="submit" className="w-full" disabled={isSubmitting}>
         {isSubmitting ? "Updating..." : "Change password"}

@@ -1,5 +1,4 @@
-import { redirect } from "next/navigation";
-
+import { SiteHeader } from "@/components/site-header";
 import {
   Card,
   CardContent,
@@ -8,30 +7,28 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { ChangePasswordForm } from "@/features/auth/components/change-password-form";
-import { getCurrentUser } from "@/features/auth/server/session";
+import { requirePageUser } from "@/features/auth/server/page-guards";
 
 export async function ChangePasswordPage() {
-  // A page redirect, not requireUser(): that throws an ApiError meant
-  // for API routes, which would surface here as an unhandled exception
-  // instead of sending the visitor to sign in.
-  const user = await getCurrentUser();
-  if (!user) {
-    redirect("/");
-  }
+  const user = await requirePageUser();
 
   return (
-    <main className="flex min-h-screen items-center justify-center px-4">
-      <Card className="w-full max-w-sm">
-        <CardHeader>
-          <CardTitle>Change password</CardTitle>
-          <CardDescription>
-            Replace the temporary password from your invitation email.
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <ChangePasswordForm />
-        </CardContent>
-      </Card>
+    <main className="min-h-screen bg-background text-foreground">
+      <SiteHeader active="change-password" user={user} />
+
+      <div className="flex justify-center px-4 py-12">
+        <Card className="w-full max-w-sm">
+          <CardHeader>
+            <CardTitle>Change password</CardTitle>
+            <CardDescription>
+              Replace the temporary password from your invitation email.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <ChangePasswordForm />
+          </CardContent>
+        </Card>
+      </div>
     </main>
   );
 }

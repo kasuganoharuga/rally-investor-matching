@@ -1,7 +1,5 @@
-import { redirect } from "next/navigation";
-
 import { SiteHeader } from "@/components/site-header";
-import { getCurrentUser } from "@/features/auth/server/session";
+import { requirePageUser } from "@/features/auth/server/page-guards";
 import { InvestorDetailPanel } from "@/features/investors/components/investor-detail-panel";
 
 type InvestorDetailPageProps = {
@@ -9,10 +7,7 @@ type InvestorDetailPageProps = {
 };
 
 export async function InvestorDetailPage({ slug }: InvestorDetailPageProps) {
-  const user = await getCurrentUser();
-  if (!user) {
-    redirect("/");
-  }
+  const user = await requirePageUser();
 
   return (
     <main className="min-h-screen bg-background text-foreground">

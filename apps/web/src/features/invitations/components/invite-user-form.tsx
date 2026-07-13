@@ -1,5 +1,6 @@
 "use client";
 
+import { ChevronDownIcon } from "lucide-react";
 import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -62,19 +63,22 @@ export function InviteUserForm({ viewerRole, onCreate }: InviteUserFormProps) {
       </div>
       <div className="space-y-2">
         <Label htmlFor="invite-role">Role</Label>
-        <select
-          id="invite-role"
-          value={role}
-          onChange={(event) => setRole(event.target.value as UserRole)}
-          disabled={isSubmitting}
-          className="h-9 rounded-lg border border-border bg-background px-3 text-sm text-foreground outline-none focus:border-primary disabled:opacity-50"
-        >
-          {roleOptions.map((option) => (
-            <option key={option} value={option}>
-              {option}
-            </option>
-          ))}
-        </select>
+        <div className="relative">
+          <select
+            id="invite-role"
+            value={role}
+            onChange={(event) => setRole(event.target.value as UserRole)}
+            disabled={isSubmitting}
+            className="h-8 w-full appearance-none rounded-lg border border-input bg-transparent px-2.5 py-1 pr-7 text-sm text-foreground capitalize outline-none transition-colors focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-input/50 disabled:opacity-50"
+          >
+            {roleOptions.map((option) => (
+              <option key={option} value={option} className="capitalize">
+                {option}
+              </option>
+            ))}
+          </select>
+          <ChevronDownIcon className="pointer-events-none absolute inset-y-0 right-2 my-auto size-3.5 text-muted-foreground" />
+        </div>
       </div>
       <Button type="submit" disabled={isSubmitting}>
         {isSubmitting ? "Sending..." : "Send invite"}
