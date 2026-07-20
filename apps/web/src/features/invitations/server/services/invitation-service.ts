@@ -1,38 +1,58 @@
 import "server-only";
 
-import { isProvisionUserError } from "@/features/auth/server/errors";
 import { provisionUser } from "@/features/auth/server/provision-user";
 import { ensureUserProfile } from "@/features/auth/server/repositories/user-profile-repository";
 import type { CurrentUser } from "@/features/auth/server/session";
 import type { UserRole } from "@/features/auth/types/auth";
-import { InvitationError } from "@/features/invitations/server/errors";
 import { canInviteRole } from "@/features/invitations/invite-role-policy";
-import { generateInternalInvitationRecordToken } from "@/features/invitations/server/invitation-token";
+import { InvitationError } from "@/features/invitations/server/errors";
+import { generateInvitationToken } from "@/features/invitations/server/invitation-token";
 import {
   findById,
+  findByToken,
   insertPending,
   listAll,
   listByInviter,
   markAccepted,
+  markExpired,
   markRevoked,
 } from "@/features/invitations/server/repositories/invitation-repository";
 import { safelyCleanupPendingProvisioning } from "@/features/invitations/server/services/safely-cleanup-pending-provisioning";
 import type {
+  AcceptedInvitation,
+  AcceptInvitationInput,
   CreateInvitationInput,
   InvitationSummary,
+  PublicInvitation,
 } from "@/features/invitations/types/invitation";
 import { getEmailProvider } from "@/lib/server/email/get-email-provider";
 import { logger } from "@/lib/server/logger";
 import { normalizeEmail } from "@/lib/server/normalize-email";
 
-const INVITATION_RECORD_TTL_MS = 24 * 60 * 60 * 1000;
+const INVITATION_RECORD_TTL_MS = 7 * 24 * 60 * 60 * 1000;
 
-/** Both codes mean "no evidence either way" — never markRevoked on these. */
-function isReconciliationCause(error: unknown): boolean {
-  return (
-    isProvisionUserError(error, "PROVISIONING_RESULT_UNCERTAIN") ||
-    isProvisionUserError(error, "PROVISIONING_CLEANUP_FAILED")
-  );
+function isExpired(invitation: InvitationSummary): boolean {
+  return new Date(invitation.expiresAt).getTime() <= Date.now();
+}
+
+function publicInvitation(invitation: InvitationSummary): PublicInvitation {
+  return {
+    email: invitation.email,
+    role: invitation.role,
+    expiresAt: invitation.expiresAt,
+  };
+}
+
+function getAppBaseUrl(): string {
+  const baseUrl = process.env.APP_BASE_URL ?? process.env.BETTER_AUTH_URL;
+  if (!baseUrl) {
+    throw new Error("APP_BASE_URL or BETTER_AUTH_URL is not configured");
+  }
+  return baseUrl;
+}
+
+function buildAcceptUrl(token: string): string {
+  return new URL(`/invite/${token}`, getAppBaseUrl()).toString();
 }
 
 export class InvitationService {
@@ -44,12 +64,9 @@ export class InvitationService {
   }
 
   /**
-   * Creates the invitation record and immediately provisions the
-   * account (this round has no separate "click a link to register"
-   * step — the invitee gets a temporary password by email instead).
-   * Every failure path below chooses between "safe to undo" and
-   * "must not touch anything, requires reconciliation" rather than
-   * guessing.
+   * Creates a pending invitation and emails an accept link. The user is
+   * not provisioned here; account creation happens only after the invitee
+   * opens the token link and sets their password.
    */
   async createInvitation(
     input: CreateInvitationInput,
@@ -61,30 +78,46 @@ export class InvitationService {
     }
 
     const email = normalizeEmail(input.email);
+    const token = generateInvitationToken();
     const invitation = await insertPending({
       email,
       role,
       invitedBy: inviter.id,
-      token: generateInternalInvitationRecordToken(),
+      token,
       expiresAt: new Date(Date.now() + INVITATION_RECORD_TTL_MS),
     });
 
-    const provisioned = await this.provisionOrRevoke(invitation, {
-      email,
-      role,
-      invitedBy: inviter.id,
-    });
-
-    await this.finishAcceptanceOrCleanup(invitation.id, provisioned);
-    await this.sendInvitationEmailBestEffort(invitation.id, {
-      to: provisioned.email,
-      role,
-      temporaryPassword: provisioned.temporaryPassword,
+    await this.sendInvitationEmailOrRevoke(invitation, {
+      acceptUrl: buildAcceptUrl(token),
       invitedByName: inviter.name,
     });
 
-    const finalInvitation = await findById(invitation.id);
-    return finalInvitation ?? invitation;
+    return invitation;
+  }
+
+  async getPublicInvitation(token: string): Promise<PublicInvitation> {
+    const invitation = await this.requirePendingInvitationByToken(token);
+    return publicInvitation(invitation);
+  }
+
+  async acceptInvitation(
+    input: AcceptInvitationInput,
+  ): Promise<AcceptedInvitation> {
+    const invitation = await this.requirePendingInvitationByToken(input.token);
+
+    const provisioned = await provisionUser({
+      email: invitation.email,
+      role: invitation.role,
+      invitedBy: invitation.invitedBy ?? undefined,
+      password: input.password,
+    });
+
+    await this.finishAcceptanceOrCleanup(invitation.id, provisioned);
+
+    return {
+      email: provisioned.email,
+      role: invitation.role,
+    };
   }
 
   async revokeInvitation(id: string, inviter: CurrentUser): Promise<"revoked"> {
@@ -104,8 +137,6 @@ export class InvitationService {
       return "revoked";
     }
 
-    // Status changed between the read above and this write — re-check
-    // rather than assume either outcome.
     const current = await findById(id);
     if (current?.status === "revoked") {
       return "revoked";
@@ -118,41 +149,48 @@ export class InvitationService {
     });
   }
 
-  /** Phase A: provisionUser() succeeds, or the invitation gets revoked. */
-  private async provisionOrRevoke(
-    invitation: InvitationSummary,
-    input: { email: string; role: UserRole; invitedBy: string },
-  ) {
-    try {
-      return await provisionUser(input);
-    } catch (error) {
-      if (isReconciliationCause(error)) {
-        throw new InvitationError("PROVISIONING_RECONCILIATION_REQUIRED", 500, {
-          cause: error,
-          safeLogContext: { invitationId: invitation.id },
-        });
-      }
+  private async requirePendingInvitationByToken(
+    token: string,
+  ): Promise<InvitationSummary> {
+    const invitation = await findByToken(token);
+    if (!invitation || invitation.status === "revoked") {
+      throw new InvitationError("INVITATION_NOT_FOUND");
+    }
+    if (invitation.status === "accepted") {
+      throw new InvitationError("ACCOUNT_ALREADY_PROVISIONED");
+    }
+    if (invitation.status === "expired") {
+      throw new InvitationError("INVITATION_EXPIRED");
+    }
+    if (isExpired(invitation)) {
+      await markExpired(invitation.id);
+      throw new InvitationError("INVITATION_EXPIRED");
+    }
+    return invitation;
+  }
 
-      // provisionUser confirmed nothing was left behind for this call —
-      // safe to revoke, but markRevoked's own result still needs confirming.
-      const revoked = await markRevoked(invitation.id);
-      if (!revoked) {
-        const current = await findById(invitation.id).catch(() => null);
-        if (current?.status !== "revoked") {
-          throw new InvitationError("PROVISIONING_RECONCILIATION_REQUIRED", 500, {
-            safeLogContext: { invitationId: invitation.id },
-          });
-        }
-        // Re-read confirmed a concurrent handler already revoked it.
-      }
-      throw error;
+  private async sendInvitationEmailOrRevoke(
+    invitation: InvitationSummary,
+    input: { acceptUrl: string; invitedByName: string },
+  ): Promise<void> {
+    try {
+      await getEmailProvider().sendInvitation({
+        to: invitation.email,
+        role: invitation.role,
+        invitedByName: input.invitedByName,
+        acceptUrl: input.acceptUrl,
+        expiresAt: new Date(invitation.expiresAt),
+      });
+    } catch (error) {
+      await markRevoked(invitation.id).catch(() => undefined);
+      logger.error("invitation_email_send_failed", { invitationId: invitation.id });
+      throw new InvitationError("INVITATION_EMAIL_FAILED", undefined, {
+        cause: error,
+        safeLogContext: { invitationId: invitation.id },
+      });
     }
   }
 
-  /**
-   * Phase B: profile + accept happy path, or the transactional,
-   * row-locked compensation in safelyCleanupPendingProvisioning().
-   */
   private async finishAcceptanceOrCleanup(
     invitationId: string,
     provisioned: { userId: string; email: string },
@@ -180,25 +218,6 @@ export class InvitationService {
           safeLogContext: { invitationId },
         });
       }
-      // outcome === "accepted": a concurrent request already finished
-      // this invitation successfully — fall through to send the email.
-    }
-  }
-
-  /** Phase C: delivery failure only needs a log, everything else already committed. */
-  private async sendInvitationEmailBestEffort(
-    invitationId: string,
-    input: {
-      to: string;
-      role: UserRole;
-      temporaryPassword: string;
-      invitedByName: string;
-    },
-  ): Promise<void> {
-    try {
-      await getEmailProvider().sendInvitation(input);
-    } catch {
-      logger.error("invitation_email_send_failed", { invitationId });
     }
   }
 }

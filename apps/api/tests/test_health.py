@@ -363,8 +363,12 @@ def test_match_intake_matches_after_follow_up(monkeypatch: object) -> None:
         assert response.status_code == 200
         assert body["status"] == "matched"
         assert body["matches"][0]["investor_id"] == "airtree"
-        assert body["matches"][0]["breakdown"]["cheque_round_size_fit"] == 8
-        assert len(body["matches"][0]["breakdown"]) == 10
+        breakdown = body["matches"][0]["breakdown"]
+        assert breakdown["stage_evidence_depth"] > 0
+        assert breakdown["geography_fit"] == 5
+        assert breakdown["sector_fit"] > 0
+        assert breakdown["theme_fit"] > 0
+        assert len(breakdown) == 9
     finally:
         app.dependency_overrides.clear()
 

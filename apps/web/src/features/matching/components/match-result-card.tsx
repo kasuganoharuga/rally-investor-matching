@@ -11,8 +11,6 @@ type MatchResultCardProps = {
 };
 
 export function MatchResultCard({ match, selected, onSelect }: MatchResultCardProps) {
-  const poolRank = match.pool_rank ?? match.rank ?? "-";
-
   return (
     <button
       type="button"
@@ -25,7 +23,7 @@ export function MatchResultCard({ match, selected, onSelect }: MatchResultCardPr
       <div className="flex items-start justify-between gap-4">
         <div className="min-w-0">
           <p className="text-xs font-semibold uppercase text-muted-foreground">
-            {match.routing_pool_label} #{poolRank}
+            {match.routing_pool_label}
           </p>
           <h3 className="mt-1 truncate text-base font-semibold text-foreground">
             {match.investor_name}

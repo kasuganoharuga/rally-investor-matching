@@ -6,12 +6,9 @@ import type {
 } from "@/lib/server/email/email-provider";
 
 /**
- * Local-development-only provider. Deliberately uses plain
- * console.log (not lib/server/logger, which is a PII-free whitelist
- * logger) because printing the temporary password is the entire point
- * here — this is an intentional, explicit exception to "logs never
- * carry PII", not an oversight. getEmailProvider() refuses to select
- * this provider in production.
+ * Local-development-only provider. Deliberately uses plain console.log
+ * because printing the invite link is the point here. The provider
+ * selector refuses to use this in production.
  */
 export class ConsoleEmailProvider implements EmailProvider {
   async sendInvitation(input: InvitationEmailInput): Promise<void> {
@@ -21,7 +18,8 @@ export class ConsoleEmailProvider implements EmailProvider {
         `to: ${input.to}`,
         `role: ${input.role}`,
         `invited by: ${input.invitedByName}`,
-        `temporary password: ${input.temporaryPassword}`,
+        `expires at: ${input.expiresAt.toISOString()}`,
+        `accept link: ${input.acceptUrl}`,
         "------------------------------------------------",
       ].join("\n"),
     );

@@ -2,6 +2,9 @@ import { apiFetch } from "@/lib/api/client";
 import {
   invitationListDataSchema,
   invitationSummarySchema,
+  acceptedInvitationSchema,
+  type AcceptedInvitation,
+  type AcceptInvitationInput,
   type CreateInvitationInput,
   type InvitationListData,
   type InvitationSummary,
@@ -21,6 +24,17 @@ export async function createInvitation(
     body: JSON.stringify(input),
   });
   return invitationSummarySchema.parse(data);
+}
+
+export async function acceptInvitation(
+  input: AcceptInvitationInput,
+): Promise<AcceptedInvitation> {
+  const data = await apiFetch<AcceptedInvitation>("/api/invitations/accept", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(input),
+  });
+  return acceptedInvitationSchema.parse(data);
 }
 
 export async function revokeInvitation(id: string): Promise<void> {

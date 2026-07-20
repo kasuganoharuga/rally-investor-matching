@@ -1,23 +1,19 @@
 import {
   fileExtractionResponseSchema,
-  intakeResponseSchema,
+  matchHistoryListDataSchema,
+  runMatchDataSchema,
   type FileExtractionResponse,
-  type IntakeResponse,
+  type IntakeRequest,
+  type MatchHistoryListData,
+  type RunMatchData,
 } from "@/features/matching/types/match";
 import { apiFetch } from "@/lib/api/client";
 
 const MATCHING_API_BASE_URL =
   process.env.NEXT_PUBLIC_MATCHING_API_BASE_URL ?? "http://localhost:8000";
 
-export type IntakeRequest = {
-  message: string;
-  follow_up_answer?: string;
-  follow_up_count?: number;
-};
-
-export async function runMatchIntake(request: IntakeRequest): Promise<IntakeResponse> {
-  const data = await apiFetch<unknown>("/api/v1/match/intake", {
-    baseUrl: MATCHING_API_BASE_URL,
+export async function runMatchIntake(request: IntakeRequest): Promise<RunMatchData> {
+  const data = await apiFetch<unknown>("/api/matching/intake", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -25,7 +21,12 @@ export async function runMatchIntake(request: IntakeRequest): Promise<IntakeResp
     body: JSON.stringify(request),
   });
 
-  return intakeResponseSchema.parse(data);
+  return runMatchDataSchema.parse(data);
+}
+
+export async function listMatchHistory(): Promise<MatchHistoryListData> {
+  const data = await apiFetch<unknown>("/api/matching/history");
+  return matchHistoryListDataSchema.parse(data);
 }
 
 export async function extractFileText(file: File): Promise<FileExtractionResponse> {

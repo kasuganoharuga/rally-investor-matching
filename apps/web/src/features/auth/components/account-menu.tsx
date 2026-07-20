@@ -47,6 +47,9 @@ export function AccountMenu({ email, role }: AccountMenuProps) {
           <NavDropdownItem render={<Link href="/settings" />}>
             My Profile
           </NavDropdownItem>
+          <NavDropdownItem render={<Link href="/shortlist" />}>
+            My shortlist
+          </NavDropdownItem>
           {role === "founder" ? (
             <NavDropdownItem render={<Link href="/company-profile" />}>
               Company Profile

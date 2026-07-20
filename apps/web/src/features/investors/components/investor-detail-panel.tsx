@@ -15,12 +15,19 @@ import { InvestorDetailMore } from "@/features/investors/components/investor-det
 import { InvestorDetailSidebar } from "@/features/investors/components/investor-detail-sidebar";
 import { useInvestorDetail } from "@/features/investors/hooks/use-investor-detail";
 import type { InvestorDetail } from "@/features/investors/types/investor";
+import { useShortlist } from "@/features/shortlist/hooks/use-shortlist";
 
 type InvestorDetailPanelProps = {
   slug: string;
 };
 
-function InvestorDetailContent({ investor }: { investor: InvestorDetail }) {
+function InvestorDetailContent({
+  investor,
+  shortlist,
+}: {
+  investor: InvestorDetail;
+  shortlist: ReturnType<typeof useShortlist>;
+}) {
   return (
     <div className="space-y-5">
       <Link
@@ -31,7 +38,18 @@ function InvestorDetailContent({ investor }: { investor: InvestorDetail }) {
         Back to directory
       </Link>
 
-      <InvestorDetailHeader investor={investor} />
+      {shortlist.error ? (
+        <p className="rounded-lg border border-destructive/30 bg-destructive/10 px-3 py-2 text-sm text-destructive">
+          {shortlist.error.message}
+        </p>
+      ) : null}
+
+      <InvestorDetailHeader
+        investor={investor}
+        isShortlisted={shortlist.isShortlisted(investor.id)}
+        isShortlistPending={shortlist.isPending(investor.id)}
+        onToggleShortlist={shortlist.toggle}
+      />
 
       <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_320px]">
         <div className="space-y-5">
@@ -48,6 +66,7 @@ function InvestorDetailContent({ investor }: { investor: InvestorDetail }) {
 
 export function InvestorDetailPanel({ slug }: InvestorDetailPanelProps) {
   const { investor, isLoading, error, notFound, reload } = useInvestorDetail(slug);
+  const shortlist = useShortlist();
 
   if (isLoading) {
     return <InvestorDetailLoading />;
@@ -65,5 +84,5 @@ export function InvestorDetailPanel({ slug }: InvestorDetailPanelProps) {
     return <InvestorDetailNotFound />;
   }
 
-  return <InvestorDetailContent investor={investor} />;
+  return <InvestorDetailContent investor={investor} shortlist={shortlist} />;
 }

@@ -34,6 +34,23 @@ Parameters:
   AnthropicSecretName:
     Type: String
     Default: /vcmi/dev/anthropic_api_key
+  EmailProvider:
+    Type: String
+    Default: console
+    AllowedValues: [console, ses]
+    Description: Use ses for AWS-hosted invitation email delivery.
+  SesFromEmail:
+    Type: String
+    Default: ""
+    Description: Verified Amazon SES sender email or domain mailbox.
+  SesReplyToEmail:
+    Type: String
+    Default: ""
+    Description: Optional reply-to address for invitation emails.
+  AppBaseUrl:
+    Type: String
+    Default: ""
+    Description: Optional public app URL used in invitation links. Defaults to the EC2 public IP URL.
   RdsSecurityGroupId:
     Type: AWS::EC2::SecurityGroup::Id
 
@@ -77,6 +94,12 @@ Resources:
                   - logs:CreateLogGroup
                   - logs:CreateLogStream
                   - logs:PutLogEvents
+                Resource: "*"
+              - Sid: SendSesEmail
+                Effect: Allow
+                Action:
+                  - ses:SendEmail
+                  - ses:SendRawEmail
                 Resource: "*"
 
   InstanceProfile:
@@ -156,23 +179,52 @@ Resources:
           TOKEN="$(curl -X PUT -H 'X-aws-ec2-metadata-token-ttl-seconds: 21600' http://169.254.169.254/latest/api/token)"
           PUBLIC_IPV4="$(curl -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/public-ipv4)"
           PUBLIC_HOSTNAME="$(curl -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/public-hostname)"
+          APP_BASE_URL_VALUE='${AppBaseUrl}'
+          if [ -z "$APP_BASE_URL_VALUE" ]; then
+            APP_BASE_URL_VALUE="http://$PUBLIC_IPV4:3000"
+          fi
 
           set +x
           SECRET_JSON="$(aws secretsmanager get-secret-value --region ${AWS::Region} --secret-id '${AppSecretName}' --query SecretString --output text)"
           DATABASE_URL="$(echo "$SECRET_JSON" | jq -r '.database_url')"
+          BETTER_AUTH_SECRET="$(echo "$SECRET_JSON" | jq -r '.better_auth_secret')"
           ANTHROPIC_API_KEY="$(aws secretsmanager get-secret-value --region ${AWS::Region} --secret-id '${AnthropicSecretName}' --query SecretString --output text)"
-          cat > /etc/rally/api.env <<EOF
-          APP_ENV=aws-dev
-          LOG_LEVEL=INFO
-          DATABASE_URL=$DATABASE_URL
-          LLM_PROVIDER=anthropic
-          ANTHROPIC_API_KEY=$ANTHROPIC_API_KEY
-          CORS_ORIGINS=["http://$PUBLIC_IPV4:3000","http://$PUBLIC_HOSTNAME:3000"]
-          EOF
-          unset SECRET_JSON DATABASE_URL ANTHROPIC_API_KEY
+          shell_quote() {
+            printf "'%s'" "$(printf '%s' "$1" | sed "s/'/'\\\\''/g")"
+          }
+          {
+            printf "APP_ENV=%s\n" "$(shell_quote aws-dev)"
+            printf "LOG_LEVEL=%s\n" "$(shell_quote INFO)"
+            printf "DATABASE_URL=%s\n" "$(shell_quote "$DATABASE_URL")"
+            printf "LLM_PROVIDER=%s\n" "$(shell_quote anthropic)"
+            printf "ANTHROPIC_API_KEY=%s\n" "$(shell_quote "$ANTHROPIC_API_KEY")"
+            printf "CORS_ORIGINS=%s\n" "$(shell_quote "[\"http://$PUBLIC_IPV4:3000\",\"http://$PUBLIC_HOSTNAME:3000\"]")"
+          } > /etc/rally/api.env
+          {
+            printf "NODE_ENV=%s\n" "$(shell_quote production)"
+            printf "DATABASE_URL=%s\n" "$(shell_quote "$DATABASE_URL")"
+            printf "BETTER_AUTH_SECRET=%s\n" "$(shell_quote "$BETTER_AUTH_SECRET")"
+            printf "BETTER_AUTH_URL=%s\n" "$(shell_quote "http://$PUBLIC_IPV4:3000")"
+            printf "APP_BASE_URL=%s\n" "$(shell_quote "$APP_BASE_URL_VALUE")"
+            printf "NEXT_PUBLIC_MATCHING_API_BASE_URL=%s\n" "$(shell_quote "http://$PUBLIC_IPV4:8000")"
+            printf "MATCHING_API_BASE_URL=%s\n" "$(shell_quote "http://127.0.0.1:8000")"
+            printf "EMAIL_PROVIDER=%s\n" "$(shell_quote "${EmailProvider}")"
+            printf "AWS_REGION=%s\n" "$(shell_quote "${AWS::Region}")"
+            printf "SES_FROM_EMAIL=%s\n" "$(shell_quote "${SesFromEmail}")"
+            printf "SES_REPLY_TO_EMAIL=%s\n" "$(shell_quote "${SesReplyToEmail}")"
+          } > /etc/rally/web.env
+          cp /etc/rally/web.env /opt/rally/apps/web/.env.local
+          unset SECRET_JSON DATABASE_URL BETTER_AUTH_SECRET ANTHROPIC_API_KEY
           set -x
 
-          NEXT_PUBLIC_MATCHING_API_BASE_URL="http://$PUBLIC_IPV4:8000" pnpm --filter @rally-investor-matching/web build
+          set -a
+          . /etc/rally/web.env
+          set +a
+          pnpm --filter @rally-investor-matching/web build
+
+          cd /opt/rally/apps/web
+          pnpm exec tsx --conditions=react-server scripts/seed-admin-password.ts | tee /etc/rally/admin-seed.log
+          cd /opt/rally
 
           cat > /etc/systemd/system/rally-api.service <<'EOF'
           [Unit]
@@ -201,9 +253,9 @@ Resources:
           [Service]
           Type=simple
           WorkingDirectory=/opt/rally/apps/web
+          EnvironmentFile=/etc/rally/web.env
           Environment=HOSTNAME=0.0.0.0
           Environment=PORT=3000
-          Environment=MATCHING_API_BASE_URL=http://127.0.0.1:8000
           ExecStart=/usr/bin/pnpm exec next start -H 0.0.0.0 -p 3000
           Restart=always
           RestartSec=5

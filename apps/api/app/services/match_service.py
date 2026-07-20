@@ -3,14 +3,11 @@ from typing import Any
 from psycopg import Connection
 
 from app.repositories.investor_repository import investor_repository
-from app.repositories.rag_repository import rag_repository
 from app.schemas.match import IntakeRequest, IntakeResponse
 from app.services.founder_parser_service import parse_founder_message
 from app.services.matching_scoring import (
-    database_chunks,
     database_row_to_profile,
     score_profile,
-    select_evidence,
     select_ranked_matches,
 )
 
@@ -40,7 +37,7 @@ FIELD_LABELS = {
     "lead_needed": "whether you need a lead investor",
 }
 
-MATCH_RESULT_LIMIT = 14
+MATCH_RESULT_LIMIT = 20
 
 
 def build_match_investor_profile(row: dict[str, Any]) -> dict[str, Any]:
@@ -118,9 +115,8 @@ def combined_message(request: IntakeRequest) -> str:
 
 
 class MatchService:
-    def __init__(self, repository=investor_repository, rag=rag_repository) -> None:
+    def __init__(self, repository=investor_repository) -> None:
         self._repository = repository
-        self._rag = rag
 
     def intake(
         self,
@@ -170,14 +166,6 @@ class MatchService:
             result = score_profile(founder_profile, profile)
             if not result.get("eligibility", {}).get("passed", True):
                 continue
-            evidence = self._rag.retrieve_for_match(
-                connection,
-                investor_slug=str(profile.get("investor_id")),
-                founder_profile=founder_profile,
-            )
-            if not evidence:
-                evidence = select_evidence(founder_profile, database_chunks(profile))
-            result["evidence"] = evidence
             result["investor_profile"] = build_match_investor_profile(row)
             results.append(result)
 

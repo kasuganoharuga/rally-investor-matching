@@ -1038,6 +1038,43 @@ CREATE UNIQUE INDEX idx_recs_run_rank
 CREATE INDEX idx_recommendations_investor
   ON matching_recommendations(investor_id) WHERE deleted_at IS NULL;
 
+-- ------------------------------------------------------------
+-- user_shortlisted_investors
+-- User-owned saved investors. This is product state, not matching
+-- evidence: a user can save an investor from the directory, a match
+-- detail page, or a full VC profile and later review one consolidated
+-- shortlist.
+-- ------------------------------------------------------------
+CREATE TABLE user_shortlisted_investors (
+  id          uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id     text NOT NULL REFERENCES "user"("id") ON DELETE CASCADE,
+  investor_id uuid NOT NULL REFERENCES investors(id) ON DELETE CASCADE,
+  source      text NOT NULL DEFAULT 'manual'
+    CONSTRAINT chk_shortlist_source
+    CHECK (
+      source IN (
+        'manual',
+        'investor_directory',
+        'investor_profile',
+        'match_detail',
+        'vc_profile'
+      )
+    ),
+  note        text,
+  created_at  timestamptz NOT NULL DEFAULT now(),
+  updated_at  timestamptz NOT NULL DEFAULT now(),
+  deleted_at  timestamptz,
+  CONSTRAINT user_shortlisted_investors_user_investor_unique
+    UNIQUE (user_id, investor_id)
+);
+
+CREATE INDEX idx_user_shortlisted_investors_user
+  ON user_shortlisted_investors(user_id, created_at DESC)
+  WHERE deleted_at IS NULL;
+CREATE INDEX idx_user_shortlisted_investors_investor
+  ON user_shortlisted_investors(investor_id)
+  WHERE deleted_at IS NULL;
+
 -- ============================================================
 -- LAYER 6 — REVIEW / AUDIT
 -- ============================================================

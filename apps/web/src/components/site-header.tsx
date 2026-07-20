@@ -15,7 +15,8 @@ type SiteHeaderSection =
   | "manage-companies"
   | "company-profile"
   | "settings"
-  | "change-password";
+  | "change-password"
+  | "shortlist";
 
 type NavLink = {
   section: SiteHeaderSection;
@@ -70,7 +71,7 @@ export function SiteHeader({ active, user }: SiteHeaderProps) {
     <header className="border-b border-border bg-card">
       <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-6 py-4">
         <nav className="flex items-center gap-8">
-          <Link href="/investors" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2">
             <Image
               src="/brand/rally-icon.png"
               alt="Rally"

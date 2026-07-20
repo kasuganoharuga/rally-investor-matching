@@ -2,6 +2,7 @@ import "server-only";
 
 import { ConsoleEmailProvider } from "@/lib/server/email/console-email-provider";
 import type { EmailProvider } from "@/lib/server/email/email-provider";
+import { SesEmailProvider } from "@/lib/server/email/ses-email-provider";
 
 let cachedProvider: EmailProvider | undefined;
 
@@ -17,6 +18,11 @@ export function getEmailProvider(): EmailProvider {
       throw new Error("EMAIL_PROVIDER=console is not allowed in production");
     }
     cachedProvider = new ConsoleEmailProvider();
+    return cachedProvider;
+  }
+
+  if (providerName === "ses") {
+    cachedProvider = new SesEmailProvider();
     return cachedProvider;
   }
 

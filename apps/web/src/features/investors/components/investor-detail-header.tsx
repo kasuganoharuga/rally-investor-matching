@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Bookmark, ExternalLink, Link2, MapPin } from "lucide-react";
+import { ExternalLink, Link2, MapPin } from "lucide-react";
 
 import { buttonVariants } from "@/components/ui/button";
 import {
@@ -13,10 +13,15 @@ import {
   websiteHost,
 } from "@/features/investors/components/investor-detail-format";
 import type { InvestorDetail } from "@/features/investors/types/investor";
+import { ShortlistToggleButton } from "@/features/shortlist/components/shortlist-toggle-button";
+import type { ShortlistSource } from "@/features/shortlist/types/shortlist";
 import { cn } from "@/lib/utils";
 
 type InvestorDetailHeaderProps = {
   investor: InvestorDetail;
+  isShortlisted: boolean;
+  isShortlistPending: boolean;
+  onToggleShortlist: (investorId: string, source: ShortlistSource) => void;
 };
 
 function FocusChips({ investor }: { investor: InvestorDetail }) {
@@ -45,7 +50,12 @@ function FocusChips({ investor }: { investor: InvestorDetail }) {
   );
 }
 
-export function InvestorDetailHeader({ investor }: InvestorDetailHeaderProps) {
+export function InvestorDetailHeader({
+  investor,
+  isShortlisted,
+  isShortlistPending,
+  onToggleShortlist,
+}: InvestorDetailHeaderProps) {
   const status = statusBadgeLabel(investor.screeningStatus);
 
   return (
@@ -113,14 +123,16 @@ export function InvestorDetailHeader({ investor }: InvestorDetailHeaderProps) {
         </div>
 
         <div className="flex shrink-0 items-center gap-2 sm:flex-col sm:items-stretch">
-          <button
-            type="button"
-            className={cn(buttonVariants({ variant: "outline", size: "lg" }), "gap-2")}
-            aria-label={`Save ${investor.name} to shortlist`}
-          >
-            <Bookmark className="size-4" aria-hidden="true" />
-            Save to shortlist
-          </button>
+          <ShortlistToggleButton
+            investorId={investor.id}
+            investorName={investor.name}
+            source="investor_profile"
+            isShortlisted={isShortlisted}
+            isPending={isShortlistPending}
+            onToggle={onToggleShortlist}
+            presentation="action"
+            className="sm:w-full"
+          />
           <Link
             href="/match"
             className={cn(

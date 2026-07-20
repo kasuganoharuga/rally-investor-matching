@@ -9,6 +9,7 @@ const PROTECTED_PATH_PREFIXES = [
   "/change-password",
   "/company-profile",
   "/settings",
+  "/shortlist",
 ];
 
 /**
@@ -47,5 +48,6 @@ export const config = {
     "/change-password",
     "/company-profile/:path*",
     "/settings/:path*",
+    "/shortlist/:path*",
   ],
 };

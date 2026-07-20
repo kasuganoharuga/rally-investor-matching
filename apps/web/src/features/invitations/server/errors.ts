@@ -4,6 +4,8 @@ export type InvitationErrorCode =
   | "ROLE_NOT_ALLOWED"
   | "INVITATION_ALREADY_PENDING"
   | "INVITATION_NOT_FOUND"
+  | "INVITATION_EXPIRED"
+  | "INVITATION_EMAIL_FAILED"
   | "PROVISIONING_RECONCILIATION_REQUIRED"
   | "PROVISIONING_FAILED"
   | "ACCOUNT_ALREADY_PROVISIONED";
@@ -12,6 +14,8 @@ const DEFAULT_STATUS: Record<InvitationErrorCode, number> = {
   ROLE_NOT_ALLOWED: 400,
   INVITATION_ALREADY_PENDING: 409,
   INVITATION_NOT_FOUND: 404,
+  INVITATION_EXPIRED: 410,
+  INVITATION_EMAIL_FAILED: 502,
   PROVISIONING_RECONCILIATION_REQUIRED: 500,
   PROVISIONING_FAILED: 500,
   ACCOUNT_ALREADY_PROVISIONED: 409,
@@ -21,6 +25,8 @@ const DEFAULT_MESSAGE: Record<InvitationErrorCode, string> = {
   ROLE_NOT_ALLOWED: "You are not allowed to invite this role.",
   INVITATION_ALREADY_PENDING: "There is already a pending invitation for this email.",
   INVITATION_NOT_FOUND: "Invitation not found.",
+  INVITATION_EXPIRED: "This invitation has expired.",
+  INVITATION_EMAIL_FAILED: "Could not send the invitation email.",
   PROVISIONING_RECONCILIATION_REQUIRED:
     "Could not confirm the result of provisioning this invitation. Manual reconciliation is required.",
   PROVISIONING_FAILED: "Could not provision an account for this invitation.",

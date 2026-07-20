@@ -14,29 +14,27 @@ export const PROFILE_FIELDS = [
 ];
 
 const MATCH_FACTOR_ORDER = [
-  "geography_anz_mandate",
-  "stage_first_cheque_fit",
-  "sector_use_case_fit",
+  "stage_evidence_depth",
+  "geography_fit",
+  "sector_fit",
+  "theme_fit",
   "recent_deal_similarity",
-  "business_model_icp_fit",
-  "cheque_round_size_fit",
+  "customer_icp_fit",
+  "cheque_size_fit",
   "lead_behavior_fit",
-  "investor_activity_recency",
-  "ai_thesis_appetite",
-  "founder_traction_fit",
+  "data_quality_recency",
 ];
 
 const MATCH_FACTOR_LABELS: Record<string, string> = {
-  geography_anz_mandate: "Geography",
-  stage_first_cheque_fit: "Stage",
-  sector_use_case_fit: "Sector",
-  recent_deal_similarity: "Deals",
-  business_model_icp_fit: "Model",
-  cheque_round_size_fit: "Cheque",
+  stage_evidence_depth: "Stage evidence",
+  geography_fit: "Geography",
+  sector_fit: "Sector",
+  theme_fit: "Theme",
+  recent_deal_similarity: "Deal evidence",
+  customer_icp_fit: "Customer",
+  cheque_size_fit: "Cheque",
   lead_behavior_fit: "Lead",
-  investor_activity_recency: "Activity",
-  ai_thesis_appetite: "AI thesis",
-  founder_traction_fit: "Founder",
+  data_quality_recency: "Recency",
 };
 
 export function displayValue(value: unknown): string {

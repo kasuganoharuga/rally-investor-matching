@@ -11,6 +11,7 @@ import {
   InvestorListLoading,
 } from "@/features/investors/components/investor-list-states";
 import { useInvestorList } from "@/features/investors/hooks/use-investor-list";
+import { useShortlist } from "@/features/shortlist/hooks/use-shortlist";
 import type { InvestorSummary } from "@/features/investors/types/investor";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -129,6 +130,7 @@ function FilterSelect({
 
 export function InvestorListPanel() {
   const { items, isLoading, error, reload } = useInvestorList();
+  const shortlist = useShortlist();
   const [query, setQuery] = useState("");
   const [filters, setFilters] = useState<Record<FilterKey, string>>({
     stage: "",
@@ -205,6 +207,11 @@ export function InvestorListPanel() {
       <p className="text-sm text-muted-foreground">
         {filteredItems.length} of {items.length} reviewed investors
       </p>
+      {shortlist.error ? (
+        <p className="rounded-lg border border-destructive/30 bg-destructive/10 px-3 py-2 text-sm text-destructive">
+          {shortlist.error.message}
+        </p>
+      ) : null}
 
       {isLoading ? <InvestorListLoading /> : null}
       {!isLoading && error ? (
@@ -216,7 +223,13 @@ export function InvestorListPanel() {
       {!isLoading && !error && filteredItems.length > 0 ? (
         <div className="grid gap-4 lg:grid-cols-2 2xl:grid-cols-3">
           {filteredItems.map((investor) => (
-            <InvestorListItem key={investor.id} investor={investor} />
+            <InvestorListItem
+              key={investor.id}
+              investor={investor}
+              isShortlisted={shortlist.isShortlisted(investor.id)}
+              isShortlistPending={shortlist.isPending(investor.id)}
+              onToggleShortlist={shortlist.toggle}
+            />
           ))}
         </div>
       ) : null}

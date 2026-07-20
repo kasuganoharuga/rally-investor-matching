@@ -130,6 +130,19 @@ export async function markRevoked(
   return result.rowCount === 1;
 }
 
+export async function markExpired(
+  id: string,
+  client: Queryable = getPool(),
+): Promise<boolean> {
+  const result = await client.query(
+    `UPDATE invitations
+     SET status = 'expired', updated_at = now()
+     WHERE id = $1 AND status = 'pending'`,
+    [id],
+  );
+  return result.rowCount === 1;
+}
+
 export async function findById(
   id: string,
   options: { onlyInvitedBy?: string } = {},
@@ -145,6 +158,18 @@ export async function findById(
   const result = await client.query(
     `SELECT ${SELECT_COLUMNS} FROM invitations WHERE ${conditions.join(" AND ")}`,
     params,
+  );
+  const row = result.rows[0] as InvitationRow | undefined;
+  return row ? mapRow(row) : null;
+}
+
+export async function findByToken(
+  token: string,
+  client: Queryable = getPool(),
+): Promise<InvitationSummary | null> {
+  const result = await client.query(
+    `SELECT ${SELECT_COLUMNS} FROM invitations WHERE token = $1 AND deleted_at IS NULL`,
+    [token],
   );
   const row = result.rows[0] as InvitationRow | undefined;
   return row ? mapRow(row) : null;

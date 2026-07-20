@@ -8,10 +8,7 @@ export async function MatchingPage() {
   return (
     <main className="min-h-screen bg-background text-foreground">
       <SiteHeader active="match" user={user} />
-
-      <div className="mx-auto w-full max-w-7xl px-5 py-5">
-        <MatchingWorkspace />
-      </div>
+      <MatchingWorkspace />
     </main>
   );
 }

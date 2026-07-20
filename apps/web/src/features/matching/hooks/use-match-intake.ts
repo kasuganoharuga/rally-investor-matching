@@ -1,10 +1,16 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
-import { extractFileText, runMatchIntake } from "@/features/matching/api/match-api";
-import type { IntakeResponse } from "@/features/matching/types/match";
+import {
+  extractFileText,
+  listMatchHistory,
+  runMatchIntake,
+} from "@/features/matching/api/match-api";
+import type { IntakeResponse, MatchRecord } from "@/features/matching/types/match";
 import { ApiError } from "@/lib/api/errors";
+
+export type { MatchRecord } from "@/features/matching/types/match";
 
 export type ChatMessage = {
   id: string;
@@ -21,12 +27,6 @@ export type UploadedFounderFile = {
   characterCount: number | null;
   truncated: boolean;
   errorMessage: string | null;
-};
-
-export type MatchRecord = {
-  id: string;
-  createdAt: string;
-  response: IntakeResponse;
 };
 
 type MatchIntakeState = {
@@ -146,19 +146,31 @@ function assistantSummary(response: IntakeResponse): string {
   return "I extracted the profile, but there are no investor matches yet.";
 }
 
-function recordFromResponse(response: IntakeResponse): MatchRecord | null {
-  if (response.matches.length === 0) {
-    return null;
-  }
-  return {
-    id: messageId("record"),
-    createdAt: new Date().toISOString(),
-    response,
-  };
-}
-
 export function useMatchIntake() {
   const [state, setState] = useState<MatchIntakeState>(() => initialState());
+
+  const refreshHistory = useCallback(async () => {
+    const history = await listMatchHistory();
+    setState((current) => ({ ...current, records: history.items }));
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    void listMatchHistory()
+      .then((history) => {
+        if (!cancelled) {
+          setState((current) => ({ ...current, records: history.items }));
+        }
+      })
+      .catch(() => {
+        // History is useful, but failure to load it should not block a new match.
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const updateMessage = useCallback((message: string) => {
     setState((current) => ({ ...current, message }));
@@ -219,8 +231,7 @@ export function useMatchIntake() {
     const requestMessage = buildRequestMessage(state.message, state.uploadedFiles);
     setState((current) => ({ ...current, isSubmitting: true, error: null }));
     try {
-      const response = await runMatchIntake({ message: requestMessage });
-      const record = recordFromResponse(response);
+      const { response, record } = await runMatchIntake({ message: requestMessage });
       setState((current) => ({
         ...current,
         baseMessage: requestMessage,
@@ -233,7 +244,9 @@ export function useMatchIntake() {
           chatMessage("user", userChatContent(state.message, state.uploadedFiles)),
           chatMessage("assistant", assistantSummary(response)),
         ],
-        records: record ? [record, ...current.records] : current.records,
+        records: record
+          ? [record, ...current.records.filter((item) => item.id !== record.id)]
+          : current.records,
         isSubmitting: false,
         error: null,
       }));
@@ -249,12 +262,11 @@ export function useMatchIntake() {
   const submitFollowUp = useCallback(async () => {
     setState((current) => ({ ...current, isSubmitting: true, error: null }));
     try {
-      const response = await runMatchIntake({
+      const { response, record } = await runMatchIntake({
         message: state.baseMessage,
         follow_up_answer: state.followUpAnswer,
         follow_up_count: state.response?.follow_up_count ?? 1,
       });
-      const record = recordFromResponse(response);
       setState((current) => ({
         ...current,
         response,
@@ -264,7 +276,9 @@ export function useMatchIntake() {
           chatMessage("user", state.followUpAnswer.trim()),
           chatMessage("assistant", assistantSummary(response)),
         ],
-        records: record ? [record, ...current.records] : current.records,
+        records: record
+          ? [record, ...current.records.filter((item) => item.id !== record.id)]
+          : current.records,
         isSubmitting: false,
         error: null,
       }));
@@ -278,7 +292,22 @@ export function useMatchIntake() {
   }, [state.baseMessage, state.followUpAnswer, state.response?.follow_up_count]);
 
   const reset = useCallback(() => {
-    setState(initialState());
+    setState((current) => ({
+      ...initialState(),
+      records: current.records,
+    }));
+  }, []);
+
+  const selectRecord = useCallback((record: MatchRecord) => {
+    setState((current) => ({
+      ...current,
+      response: record.response,
+      message: "",
+      baseMessage: "",
+      followUpAnswer: "",
+      uploadedFiles: [],
+      error: null,
+    }));
   }, []);
 
   return {
@@ -289,6 +318,8 @@ export function useMatchIntake() {
     removeFile,
     submitInitial,
     submitFollowUp,
+    selectRecord,
+    refreshHistory,
     reset,
   };
 }

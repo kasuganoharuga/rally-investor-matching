@@ -1,10 +1,15 @@
-import { Bookmark, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 
 import type { InvestorSummary } from "@/features/investors/types/investor";
+import { ShortlistToggleButton } from "@/features/shortlist/components/shortlist-toggle-button";
+import type { ShortlistSource } from "@/features/shortlist/types/shortlist";
 
 type InvestorListItemProps = {
   investor: InvestorSummary;
+  isShortlisted?: boolean;
+  isShortlistPending?: boolean;
+  onToggleShortlist?: (investorId: string, source: ShortlistSource) => void;
 };
 
 function titleCase(value: string | null | undefined): string {
@@ -124,7 +129,12 @@ function leadsRounds(investor: InvestorSummary): boolean {
   return value.includes("lead") || value.includes("co_lead");
 }
 
-export function InvestorListItem({ investor }: InvestorListItemProps) {
+export function InvestorListItem({
+  investor,
+  isShortlisted = false,
+  isShortlistPending = false,
+  onToggleShortlist,
+}: InvestorListItemProps) {
   const focusLine = compactList(investor.stageFocus, 2);
   const secondaryFocus = compactList(
     [...investor.sectorFocus, ...investor.businessModelFocus],
@@ -156,13 +166,17 @@ export function InvestorListItem({ investor }: InvestorListItemProps) {
           </div>
         </div>
 
-        <button
-          type="button"
-          className="flex size-8 shrink-0 items-center justify-center rounded-lg border border-border text-muted-foreground transition hover:border-primary/50 hover:text-primary"
-          aria-label={`Save ${investor.name}`}
-        >
-          <Bookmark className="size-4" aria-hidden="true" />
-        </button>
+        {onToggleShortlist ? (
+          <ShortlistToggleButton
+            investorId={investor.id}
+            investorName={investor.name}
+            source="investor_directory"
+            isShortlisted={isShortlisted}
+            isPending={isShortlistPending}
+            onToggle={onToggleShortlist}
+            className="size-8"
+          />
+        ) : null}
       </div>
 
       <div className="mt-4 grid grid-cols-[1fr_auto] gap-3 border-t border-border pt-4 text-sm">
@@ -204,13 +218,17 @@ export function InvestorListItem({ investor }: InvestorListItemProps) {
             <ExternalLink className="size-4" aria-hidden="true" />
           </a>
         ) : null}
-        <button
-          type="button"
-          className="flex size-10 shrink-0 items-center justify-center rounded-lg border border-border text-muted-foreground transition hover:border-primary/50 hover:text-primary"
-          aria-label={`Save ${investor.name}`}
-        >
-          <Bookmark className="size-4" aria-hidden="true" />
-        </button>
+        {onToggleShortlist ? (
+          <ShortlistToggleButton
+            investorId={investor.id}
+            investorName={investor.name}
+            source="investor_directory"
+            isShortlisted={isShortlisted}
+            isPending={isShortlistPending}
+            onToggle={onToggleShortlist}
+            className="size-10"
+          />
+        ) : null}
       </div>
     </article>
   );

@@ -1,35 +1,34 @@
-"""Simple local matcher for generated artifacts.
+"""Formal-data matcher for observed investor preferences.
 
-This is a deterministic smoke-test matcher. The production path should use the
-database tables, but this helps tune fields before AWS is fully wired up.
+The V1 matching path uses the formal tables:
+- public.investors
+- public.investor_actual_preferences
+- public.investor_actual_stage_preferences
+- public.funding_rounds / deal_investors / investee_company_profiles
+
+It deliberately scores stage-specific observed behaviour instead of one broad
+investor average.
 """
 
 from __future__ import annotations
 
-import argparse
-import json
-import os
 from datetime import date, datetime
-from pathlib import Path
+from decimal import Decimal
 from typing import Any
 
-from psycopg import connect
-from psycopg.rows import dict_row
-
 MATCHING_WEIGHTS = {
-    "geography_anz_mandate": 6,
-    "stage_first_cheque_fit": 16,
-    "sector_use_case_fit": 17,
+    "stage_evidence_depth": 10,
+    "geography_fit": 5,
+    "sector_fit": 15,
+    "theme_fit": 25,
     "recent_deal_similarity": 20,
-    "business_model_icp_fit": 12,
-    "cheque_round_size_fit": 8,
-    "lead_behavior_fit": 8,
-    "investor_activity_recency": 6,
-    "ai_thesis_appetite": 4,
-    "founder_traction_fit": 3,
+    "customer_icp_fit": 10,
+    "cheque_size_fit": 5,
+    "lead_behavior_fit": 5,
+    "data_quality_recency": 5,
 }
 
-DEFAULT_MATCH_RESULT_LIMIT = 14
+DEFAULT_MATCH_RESULT_LIMIT = 20
 
 DIRECT_VC_POOL = "direct_vc_pool"
 ANGEL_GROUP_POOL = "angel_group_pool"
@@ -61,29 +60,6 @@ POOL_SELECTION_QUOTAS = {
     WATCHLIST_POOL: 1,
 }
 
-POOL_SLUG_OVERRIDES = {
-    "ten13": DIRECT_VC_POOL,
-    "investible": DIRECT_VC_POOL,
-    "skalata": DIRECT_VC_POOL,
-    "skalata-ventures": DIRECT_VC_POOL,
-    "scale-venture-fund-i": DIRECT_VC_POOL,
-    "significant-ventures": DIRECT_VC_POOL,
-    "sydney-angels": ANGEL_GROUP_POOL,
-    "brisbane-angels": ANGEL_GROUP_POOL,
-    "perth-angels": ANGEL_GROUP_POOL,
-    "hunter-angels": ANGEL_GROUP_POOL,
-    "australian-medical-angels": ANGEL_GROUP_POOL,
-    "cmack-ventures": SYNDICATE_POOL,
-    "overnight-success-syndicate": SYNDICATE_POOL,
-    "euphemia-syndicate": SYNDICATE_POOL,
-    "aussie-angels": PLATFORM_ROUTING_POOL,
-    "capital-angels": WATCHLIST_POOL,
-    "gold-coast-angels": WATCHLIST_POOL,
-    "enterprize-elevate": PLATFORM_ROUTING_POOL,
-    "spacecubed-ventures-plus-eight": PLATFORM_ROUTING_POOL,
-    "startmate": PLATFORM_ROUTING_POOL,
-}
-
 ANZ_MARKETS = {
     "au",
     "australia",
@@ -94,145 +70,508 @@ ANZ_MARKETS = {
     "anz",
 }
 GLOBAL_MARKETS = {"global", "international", "worldwide", "apac", "asia pacific"}
-AI_TERMS = {"ai", "artificial intelligence", "machine learning", "ml", "llm", "genai"}
-SECTOR_AGNOSTIC_TERMS = {
-    "sector agnostic",
-    "generalist",
-    "technology",
-    "tech",
-    "software",
-    "b2b saas",
-    "enterprise",
-}
 ADJACENT_STAGES = {
     "pre_seed": {"seed"},
     "seed": {"pre_seed", "series_a"},
     "series_a": {"seed", "series_b", "growth"},
-    "series_b": {"series_a", "growth"},
-    "growth": {"series_a", "series_b"},
+    "series_b": {"series_a", "series_c_plus", "growth"},
+    "series_c_plus": {"series_b", "growth"},
+    "growth": {"series_a", "series_b", "series_c_plus"},
 }
-TRACTION_TERMS = {
-    "customer",
-    "customers",
-    "pilot",
-    "pilots",
-    "paid",
-    "revenue",
-    "arr",
-    "mrr",
-    "traction",
-    "clinic",
-    "clinics",
-    "enterprise",
-    "growth",
-}
+AI_TERMS = {"ai", "artificial intelligence", "machine learning", "ml", "llm", "genai"}
 
-
-def load_json(path: Path) -> dict[str, Any]:
-    return json.loads(path.read_text(encoding="utf-8"))
-
-
-def load_jsonl(path: Path) -> list[dict[str, Any]]:
-    if not path.exists():
-        return []
-    return [
-        json.loads(line)
-        for line in path.read_text(encoding="utf-8").splitlines()
-        if line.strip()
-    ]
-
-
-def load_database_profiles(database_url: str) -> list[dict[str, Any]]:
-    with (
-        connect(database_url, row_factory=dict_row) as connection,
-        connection.cursor() as cursor,
-    ):
-        cursor.execute(
-            """
-            SELECT
-              id::text,
-              name,
-              slug,
-              investor_type,
-              website_url,
-              stage_focus,
-              sector_focus,
-              geography_focus,
-              business_model_focus,
-              founder_fit,
-              cheque_ranges,
-              lead_behavior,
-              ai_appetite,
-              recent_deals,
-              entry_channels,
-              preferred_channel,
-              screening_status,
-              screening_priority,
-              screening_notes
-            FROM investors
-            ORDER BY name
-            """
-        )
-        return [database_row_to_profile(dict(row)) for row in cursor.fetchall()]
-
-
-def database_row_to_profile(row: dict[str, Any]) -> dict[str, Any]:
-    geography_focus = row.get("geography_focus") or []
-    entry_channels = row.get("entry_channels") or []
-    return {
-        "investor_id": row.get("slug") or row.get("id"),
-        "investor_name": row.get("name"),
-        "investor_type": row.get("investor_type"),
-        "local_au_anz_fund": any(
-            norm(value) in {"au", "australia", "nz", "new zealand"}
-            for value in geography_focus
+SECTOR_RULES: tuple[tuple[str, tuple[str, ...]], ...] = (
+    (
+        "healthcare_life_sciences",
+        (
+            "health",
+            "medical",
+            "clinic",
+            "hospital",
+            "patient",
+            "biotech",
+            "pharma",
+            "drug",
+            "care",
+            "detox",
+            "recovery",
+            "genomics",
+            "dna sequencing",
+            "accessibility",
+            "assistive",
+            "deaf",
+            "dementia",
+            "longevity",
+            "functional medicine",
+            "wellness",
+            "digital health infrastructure",
+            "orthopaedic",
+            "orthopedic",
+            "regenerative medicine",
         ),
-        "supported_stages": row.get("stage_focus") or [],
-        "first_cheque_stages": row.get("stage_focus") or [],
-        "supported_sectors": row.get("sector_focus") or [],
-        "supported_business_models": row.get("business_model_focus") or [],
-        "founder_fit": row.get("founder_fit") or [],
-        "cheque_ranges": row.get("cheque_ranges") or [],
-        "lead_behavior": row.get("lead_behavior"),
-        "ai_appetite": row.get("ai_appetite"),
-        "recent_deals": row.get("recent_deals") or [],
-        "contact_path": {
-            "primary": row.get("preferred_channel"),
-            "entry_channels": entry_channels,
-        },
-        "warm_intro_required": bool(
-            entry_channels and "direct_email" not in entry_channels
+    ),
+    (
+        "resources_mining_metals",
+        ("mining", "mineral", "metal", "lithium", "nickel", "copper", "gold", "ore"),
+    ),
+    (
+        "energy_climate",
+        (
+            "climate",
+            "energy",
+            "solar",
+            "battery",
+            "hydrogen",
+            "decarbon",
+            "emissions",
+            "recycling",
+            "waste",
+            "biodiversity",
+            "natural capital",
+            "nature investment",
+            "energy infrastructure",
+            "gas infrastructure",
+            "reusable cup",
+            "single use waste",
+            "biomaterials",
+            "microbial cellulose",
         ),
-        "review_needed_fields": [],
-        "screening_status": row.get("screening_status"),
-        "screening_priority": row.get("screening_priority"),
-        "screening_notes": row.get("screening_notes"),
-    }
+    ),
+    (
+        "aerospace_space_defence",
+        ("space", "satellite", "aerospace", "aviation", "defence", "defense"),
+    ),
+    (
+        "fintech_financial_services",
+        (
+            "fintech",
+            "finance",
+            "financial",
+            "payment",
+            "wealth",
+            "insurance",
+            "lending",
+            "bank",
+            "trading",
+            "bitcoin",
+            "capital markets",
+            "investing platform",
+            "public market investment",
+            "crowdfunding",
+            "equity funding",
+            "consumer lending",
+            "retail finance",
+            "harmful spending",
+            "due diligence",
+        ),
+    ),
+    (
+        "enterprise_software_data_security",
+        (
+            "software",
+            "saas",
+            "enterprise",
+            "workflow",
+            "data",
+            "security",
+            "cyber",
+            "compliance",
+            "copilot",
+            "automation",
+            "platform",
+            "customer research",
+            "user research",
+            "brand intelligence",
+            "sales intelligence",
+            "contact centre",
+            "contact center",
+            "customer support",
+            "legal technology",
+            "legaltech",
+            "tender",
+            "proposal",
+            "compliance checking",
+            "ai governance",
+            "agent governance",
+            "cloud finops",
+            "cloud cost",
+            "finops",
+            "field service",
+            "event planning",
+            "digital receipt",
+            "website experimentation",
+            "product onboarding",
+            "screen sharing",
+            "rental operations",
+            "knowledge security",
+            "agentic ai",
+            "analytics",
+            "measurement and prediction",
+        ),
+    ),
+    (
+        "education_workforce",
+        (
+            "education",
+            "learning",
+            "training",
+            "workforce",
+            "career",
+            "skill",
+            "teacher",
+            "school",
+            "curriculum",
+            "higher education",
+            "vocational education",
+            "youth entrepreneurship",
+            "future skills",
+        ),
+    ),
+    (
+        "industrial_robotics_automation",
+        (
+            "robot",
+            "robotics",
+            "automation",
+            "manufacturing",
+            "drone",
+            "autonomous",
+            "fleet maintenance",
+            "fleet management",
+            "equipment hire",
+        ),
+    ),
+    (
+        "food_agriculture",
+        (
+            "food",
+            "agriculture",
+            "agtech",
+            "farm",
+            "livestock",
+            "seafood",
+            "aquaculture",
+            "grocery",
+            "dog food",
+            "pet nutrition",
+            "beverage",
+            "cocktail foamer",
+        ),
+    ),
+    (
+        "transport_logistics_infrastructure",
+        (
+            "transport",
+            "logistics",
+            "freight",
+            "fleet",
+            "fleet management",
+            "fleet maintenance",
+            "infrastructure",
+            "mobility",
+        ),
+    ),
+    (
+        "property_construction",
+        (
+            "property",
+            "construction",
+            "real estate",
+            "building",
+            "contractor",
+            "site safety",
+            "built environment",
+            "property management",
+            "jobsite",
+            "construction safety",
+            "construction document",
+        ),
+    ),
+    (
+        "consumer_marketplace",
+        (
+            "consumer",
+            "marketplace",
+            "ecommerce",
+            "retail",
+            "restaurant",
+            "fitness",
+            "pet",
+            "dog food",
+            "brand launch",
+            "consumer brand",
+            "growth automation",
+        ),
+    ),
+)
 
-
-def database_chunks(profile: dict[str, Any]) -> list[dict[str, Any]]:
-    chunks = []
-    for deal in profile.get("recent_deals", []) or []:
-        if not isinstance(deal, dict):
-            continue
-        chunks.append(
-            {
-                "section_key": "recent_deal",
-                "entity_type": "investor",
-                "entity_id": profile.get("investor_id"),
-                "confidence": "medium",
-                "review_needed": False,
-                "chunk_text": (
-                    f"{profile.get('investor_name')} recent deal: "
-                    f"{deal.get('company')} {deal.get('round')} "
-                    f"{deal.get('amount') or deal.get('amount_text')} "
-                    f"as {deal.get('role')} "
-                    f"in {deal.get('region') or deal.get('company_geography')}."
-                ),
-                "source_urls": [],
-            }
-        )
-    return chunks
+THEME_RULES: tuple[tuple[str, tuple[str, ...]], ...] = (
+    ("clinical_decision_support", ("clinical", "hospital", "clinic")),
+    (
+        "digital_health_care_coordination",
+        (
+            "care coordination",
+            "home care",
+            "aged care",
+            "detox",
+            "recovery",
+            "digital health infrastructure",
+        ),
+    ),
+    (
+        "digital_health_infrastructure",
+        ("digital health infrastructure", "national digital health infrastructure"),
+    ),
+    (
+        "wellness_mental_health",
+        ("wellness", "emotional wellness", "aromatherapy", "scent intelligence"),
+    ),
+    (
+        "accessibility_assistive_technology",
+        ("accessibility", "assistive technology", "deaf", "hearing impaired"),
+    ),
+    ("medical_devices", ("medical device", "biofeedback", "device")),
+    ("diagnostics", ("diagnostic", "testing", "sensing", "sensing solution")),
+    (
+        "biotech_life_sciences",
+        (
+            "biotech",
+            "genomics",
+            "dna sequencing",
+            "peptide",
+            "regenerative medicine",
+            "orthopaedic",
+            "orthopedic",
+        ),
+    ),
+    ("mineral_exploration_drilling", ("exploration", "drilling")),
+    ("mineral_processing", ("processing", "purification")),
+    ("critical_minerals", ("critical mineral", "lithium", "rare earth")),
+    ("battery_storage", ("battery", "storage")),
+    (
+        "renewable_distributed_energy",
+        (
+            "renewable",
+            "solar",
+            "solar system",
+            "solar systems",
+            "distributed energy",
+            "printed solar",
+            "flexible photovoltaic",
+        ),
+    ),
+    (
+        "circular_waste_recycling",
+        (
+            "waste",
+            "recycling",
+            "circular",
+            "biomass energy",
+            "reusable cup",
+            "single use waste",
+        ),
+    ),
+    ("energy_infrastructure", ("energy infrastructure", "gas infrastructure")),
+    (
+        "biomaterials_sustainable_materials",
+        ("biomaterials", "biomaterial", "microbial cellulose"),
+    ),
+    (
+        "nature_biodiversity_finance",
+        ("nature investment", "biodiversity", "natural capital"),
+    ),
+    ("space_launch_transport", ("launch", "space transport")),
+    ("satellite_space_systems", ("satellite", "orbital")),
+    ("defence_dual_use", ("defence", "defense", "dual use")),
+    ("payments_settlement", ("payment", "settlement")),
+    (
+        "digital_assets_web3",
+        (
+            "crypto",
+            "web3",
+            "on chain",
+            "onchain",
+            "stablecoin",
+            "bitcoin",
+            "solana",
+            "perpetual futures",
+            "non custodial crypto swap",
+            "crypto fintech",
+        ),
+    ),
+    (
+        "capital_markets_trading_infrastructure",
+        ("capital markets", "trading infrastructure", "bitcoin investment"),
+    ),
+    (
+        "retail_investing_platforms",
+        ("investing platform", "investment platform", "public market investment"),
+    ),
+    (
+        "capital_formation_crowdfunding",
+        ("equity crowdfunding", "crowdfunding", "equity funding"),
+    ),
+    (
+        "consumer_finance_banking",
+        ("consumer lending", "consumer finance", "retail finance", "banking"),
+    ),
+    ("lending_credit_risk", ("lending", "credit", "loan", "non bank credit")),
+    ("wealth_asset_management", ("wealth", "asset management", "financial adviser")),
+    (
+        "financial_advice_workflows",
+        ("financial adviser", "financial advisor", "advice"),
+    ),
+    (
+        "fund_admin_private_markets",
+        ("fund administration", "private market", "investment due diligence"),
+    ),
+    (
+        "enterprise_data_platforms",
+        ("data platform", "analytics", "intelligence", "measurement and prediction"),
+    ),
+    (
+        "productivity_collaboration",
+        ("productivity", "collaboration", "workspace", "product onboarding"),
+    ),
+    ("content_design_tools", ("content", "design", "document generation")),
+    (
+        "data_privacy_security",
+        ("security", "cyber", "privacy", "code security", "logic level code"),
+    ),
+    ("cloud_data_infrastructure", ("cloud", "data centre", "data center")),
+    ("ai_compute_infrastructure", ("gpu", "ai infrastructure", "compute")),
+    (
+        "retail_operations_order_management",
+        ("order management", "inventory", "digital receipt", "receipt infrastructure"),
+    ),
+    ("digital_twin_infrastructure", ("digital twin", "critical infrastructure")),
+    (
+        "product_analytics_user_research",
+        (
+            "product analytics",
+            "user path",
+            "user research",
+            "customer research",
+            "website experimentation",
+            "a/b test",
+        ),
+    ),
+    (
+        "sales_marketing_intelligence",
+        (
+            "sales intelligence",
+            "buying signal",
+            "brand intelligence",
+            "sales coaching",
+            "brand launch",
+            "growth automation",
+        ),
+    ),
+    (
+        "vertical_business_operations",
+        (
+            "workforce management",
+            "operations system",
+            "field service",
+            "event planning",
+            "workflow intelligence",
+            "fitness business",
+            "member engagement",
+            "rental operations",
+            "business operating system",
+        ),
+    ),
+    (
+        "customer_support_contact_center",
+        (
+            "contact centre",
+            "contact center",
+            "contact centres",
+            "contact centers",
+            "customer support",
+        ),
+    ),
+    (
+        "legaltech_contract_workflows",
+        ("legal", "legaltech", "law firm", "contract", "drafting"),
+    ),
+    (
+        "developer_tools_app_platforms",
+        ("developer", "app development", "app platform", "software development"),
+    ),
+    (
+        "compliance_risk_workflows",
+        ("compliance checking", "compliance workflow", "regulatory workflow"),
+    ),
+    (
+        "ai_governance_security",
+        (
+            "ai governance",
+            "agent governance",
+            "ai security",
+            "model governance",
+            "agentic ai",
+            "knowledge security",
+        ),
+    ),
+    ("proposal_tender_workflows", ("tender", "proposal workflow", "proposal")),
+    ("cloud_finops", ("cloud finops", "finops", "cloud cost")),
+    ("industrial_robotics", ("robotics", "robot")),
+    ("autonomous_navigation_systems", ("autonomous", "navigation", "drone")),
+    (
+        "asset_maintenance_fleet_management",
+        (
+            "fleet maintenance",
+            "fleet management",
+            "maintenance management",
+            "equipment hire",
+        ),
+    ),
+    ("computer_vision_inspection", ("computer vision", "inspection")),
+    (
+        "education_training_platforms",
+        (
+            "education",
+            "learning",
+            "teacher",
+            "school",
+            "curriculum",
+            "teaching",
+            "assessment",
+            "higher education",
+            "vocational education",
+            "youth entrepreneurship",
+            "future skills",
+        ),
+    ),
+    ("agtech_farm_management", ("farm", "orchard", "irrigation", "nutrient")),
+    ("livestock_management", ("livestock", "stockmanship", "animal")),
+    ("aquaculture_seafood", ("seafood", "aquaculture", "saline water")),
+    (
+        "food_processing_manufacturing",
+        ("food manufacturing", "preserves", "beverage", "cocktail foamer"),
+    ),
+    ("logistics_supply_chain", ("logistics", "supply chain")),
+    ("road_freight_mobility", ("road", "freight", "motorway")),
+    ("construction_payments_finance", ("construction payment", "contractor finance")),
+    (
+        "real_estate_construction_workflows",
+        (
+            "construction",
+            "site safety",
+            "compliance records",
+            "built environment",
+            "property management",
+            "jobsite safety",
+            "construction safety",
+            "construction document",
+        ),
+    ),
+    ("property_transaction_workflows", ("property transaction", "estate")),
+    ("marketplace_commerce", ("marketplace", "restaurant", "promotion", "commerce")),
+    ("grocery_meal_planning", ("meal planning", "grocery")),
+    ("pet_care_nutrition", ("pet", "dog food")),
+)
 
 
 def norm(value: Any) -> str:
@@ -247,11 +586,48 @@ def compact_norm(value: Any) -> str:
     return norm_phrase(value).replace(" ", "")
 
 
-def text_contains(value: Any, target: Any) -> bool:
-    needle = norm_phrase(target)
-    if not needle:
-        return False
-    return needle in norm_phrase(value)
+def to_float(value: Any, default: float = 0) -> float:
+    if value is None:
+        return default
+    if isinstance(value, Decimal):
+        return float(value)
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return default
+
+
+def as_list(value: Any) -> list[Any]:
+    if value is None:
+        return []
+    if isinstance(value, list):
+        return value
+    if isinstance(value, tuple):
+        return list(value)
+    return [value]
+
+
+def contains_keyword(text: str, keyword: str) -> bool:
+    normalized_keyword = norm_phrase(keyword)
+    return f" {normalized_keyword} " in f" {text} " or normalized_keyword in text
+
+
+def normalize_stage(value: Any) -> str:
+    text = norm(value).replace("-", "_").replace(" ", "_")
+    aliases = {
+        "preseed": "pre_seed",
+        "pre_seed": "pre_seed",
+        "pre_series_a": "seed",
+        "seed_extension": "seed",
+        "series_a": "series_a",
+        "series_b": "series_b",
+        "series_c": "series_c_plus",
+        "series_d": "series_c_plus",
+        "series_e": "series_c_plus",
+        "series_f": "series_c_plus",
+        "growth": "growth",
+    }
+    return aliases.get(text, text)
 
 
 def is_anz_market(value: Any) -> bool:
@@ -268,10 +644,16 @@ def founder_markets(founder: dict[str, Any]) -> list[Any]:
     ]
 
 
+def founder_is_anz(founder: dict[str, Any]) -> bool:
+    return any(is_anz_market(value) for value in founder_markets(founder))
+
+
 def profile_has_anz_mandate(profile: dict[str, Any]) -> bool:
-    if bool(profile.get("local_au_anz_fund")):
-        return True
-    return any(is_anz_market(value) for value in profile.get("geography_focus", []))
+    values = [
+        profile.get("hq_country"),
+        *(profile.get("geography_focus") or []),
+    ]
+    return any(is_anz_market(value) for value in values)
 
 
 def profile_has_global_mandate(profile: dict[str, Any]) -> bool:
@@ -281,136 +663,364 @@ def profile_has_global_mandate(profile: dict[str, Any]) -> bool:
     )
 
 
-def contains_any(values: list[Any], target: Any) -> bool:
-    needle = norm_phrase(target)
-    compact_needle = compact_norm(target)
-    if not needle:
-        return False
+def infer_founder_taxonomy(founder: dict[str, Any]) -> dict[str, list[str]]:
+    explicit_sector = [
+        str(item) for item in as_list(founder.get("actual_sector")) if str(item).strip()
+    ]
+    explicit_themes = [
+        str(item) for item in as_list(founder.get("actual_themes")) if str(item).strip()
+    ]
+    if explicit_sector or explicit_themes:
+        return {"actual_sector": explicit_sector, "actual_themes": explicit_themes}
 
-    for value in values:
-        haystack = norm_phrase(value)
-        compact_haystack = compact_norm(value)
-        if not haystack:
-            continue
-        if needle in haystack or haystack in needle:
-            return True
-        if compact_needle in compact_haystack or compact_haystack in compact_needle:
-            return True
-    return False
+    text = " ".join(
+        norm_phrase(founder.get(field))
+        for field in (
+            "sector",
+            "business_model",
+            "one_sentence_summary",
+            "traction_summary",
+            "primary_market",
+        )
+        if founder.get(field)
+    )
+    sectors = [
+        sector
+        for sector, keywords in SECTOR_RULES
+        if any(contains_keyword(text, keyword) for keyword in keywords)
+    ]
+    themes = [
+        theme
+        for theme, keywords in THEME_RULES
+        if any(contains_keyword(text, keyword) for keyword in keywords)
+    ]
+    if not sectors and founder.get("sector"):
+        sectors.append(norm_phrase(founder.get("sector")).replace(" ", "_"))
+    if not themes and founder.get("business_model"):
+        themes.append(norm_phrase(founder.get("business_model")).replace(" ", "_"))
 
-
-def contains_any_stage(values: list[Any], target: Any) -> bool:
-    stage = normalize_stage(target)
-    if not stage:
-        return False
-    return any(normalize_stage(value) == stage for value in values if value)
-
-
-def normalize_stage(value: Any) -> str:
-    text = norm(value).replace("-", "_").replace(" ", "_")
-    aliases = {
-        "preseed": "pre_seed",
-        "pre_seed": "pre_seed",
-        "seed_extension": "seed",
-        "series_a": "series_a",
-        "series_b": "series_b",
-        "series_b+": "series_b",
-        "growth": "growth",
+    return {
+        "actual_sector": list(dict.fromkeys(sectors)),
+        "actual_themes": list(dict.fromkeys(themes)),
     }
-    return aliases.get(text, text)
 
 
-def stage_is_adjacent(values: list[Any], target: Any) -> bool:
-    stage = normalize_stage(target)
-    if not stage:
-        return False
-    adjacent = ADJACENT_STAGES.get(stage, set())
-    return any(normalize_stage(value) in adjacent for value in values if value)
+def founder_customer_type(founder: dict[str, Any]) -> str | None:
+    value = norm_phrase(founder.get("customer_type") or founder.get("target_customer"))
+    if value:
+        return value.replace(" ", "_")
+
+    text = " ".join(
+        norm_phrase(founder.get(field))
+        for field in ("business_model", "one_sentence_summary", "traction_summary")
+        if founder.get(field)
+    )
+    if any(term in text for term in ("hospital", "clinic", "healthcare provider")):
+        return "healthcare_provider"
+    if any(term in text for term in ("consumer", "b2c", "parents", "pet")):
+        return "consumer"
+    if any(term in text for term in ("smb", "small business", "restaurant")):
+        return "smb"
+    if any(term in text for term in ("enterprise", "b2b", "company", "companies")):
+        return "enterprise"
+    return None
 
 
-def stage_match_level(profile: dict[str, Any], stage: Any) -> str:
-    first_cheque_stages = profile.get("first_cheque_stages", [])
-    supported_stages = profile.get("supported_stages", [])
-    if contains_any_stage(first_cheque_stages, stage):
-        return "first_cheque"
-    if contains_any_stage(supported_stages, stage):
-        return "supported"
-    if stage_is_adjacent(supported_stages, stage):
-        return "adjacent"
+def founder_business_model(founder: dict[str, Any]) -> str | None:
+    value = norm_phrase(founder.get("business_model"))
+    if not value:
+        return None
+    if "saas" in value or "subscription" in value:
+        return "subscription_saas"
+    if "marketplace" in value:
+        return "marketplace_take_rate"
+    if "usage" in value:
+        return "usage_based"
+    if "hardware" in value:
+        return "hardware_sales"
+    if "licens" in value:
+        return "licensing"
+    if "service" in value:
+        return "services"
+    return value.replace(" ", "_")
+
+
+def founder_ai_relevance(founder: dict[str, Any]) -> str:
+    value = norm_phrase(founder.get("ai_relevance"))
+    if value:
+        return value.replace(" ", "_")
+    text = " ".join(
+        norm_phrase(founder.get(field))
+        for field in ("sector", "one_sentence_summary", "traction_summary")
+        if founder.get(field)
+    )
+    if any(
+        term in text for term in ("gpu", "ai infrastructure", "model infrastructure")
+    ):
+        return "ai_infrastructure"
+    if "ai native" in text:
+        return "ai_native"
+    if any(term in text for term in AI_TERMS):
+        return "ai_enabled"
     return "none"
 
 
-def sector_is_broad(profile: dict[str, Any]) -> bool:
-    return any(
-        norm_phrase(value) in SECTOR_AGNOSTIC_TERMS
-        for value in profile.get("supported_sectors", [])
-    )
+def stage_preferences(profile: dict[str, Any]) -> list[dict[str, Any]]:
+    return [
+        item
+        for item in as_list(profile.get("stage_preferences"))
+        if isinstance(item, dict)
+    ]
+
+
+def best_stage_preference(
+    profile: dict[str, Any],
+    stage: str,
+) -> tuple[dict[str, Any] | None, str]:
+    prefs = stage_preferences(profile)
+    if not prefs:
+        return None, "none"
+    if not stage:
+        prefs.sort(key=lambda item: int(item.get("deals_count") or 0), reverse=True)
+        return prefs[0], "unknown_founder_stage"
+
+    exact = [pref for pref in prefs if normalize_stage(pref.get("stage")) == stage]
+    if exact:
+        exact.sort(key=lambda item: int(item.get("deals_count") or 0), reverse=True)
+        return exact[0], "exact"
+
+    return None, "stage_mismatch"
+
+
+def weighted_distribution(pref: dict[str, Any], dimension: str) -> dict[str, float]:
+    distributions = pref.get("dimension_distributions") or {}
+    if not isinstance(distributions, dict):
+        return {}
+    dimension_data = distributions.get(dimension) or {}
+    if not isinstance(dimension_data, dict):
+        return {}
+    weighted = dimension_data.get("weighted") or {}
+    if not isinstance(weighted, dict):
+        return {}
+    return {str(key): to_float(value) for key, value in weighted.items()}
+
+
+def max_distribution_weight(
+    pref: dict[str, Any],
+    dimension: str,
+    values: list[str],
+) -> float:
+    distribution = weighted_distribution(pref, dimension)
+    best = 0.0
+    normalized_values = {norm_phrase(value) for value in values}
+    for key, weight in distribution.items():
+        normalized_key = norm_phrase(key)
+        if normalized_key in normalized_values:
+            best = max(best, weight)
+    return best
+
+
+def overlap(left: list[Any], right: list[Any]) -> list[str]:
+    normalized_right = {norm_phrase(value): str(value) for value in right if value}
+    matches = []
+    for item in left:
+        key = norm_phrase(item)
+        if key in normalized_right:
+            matches.append(normalized_right[key])
+    return matches
+
+
+def evidence_from_stage_preference(
+    pref: dict[str, Any] | None,
+    limit: int = 5,
+) -> list[dict[str, Any]]:
+    if not pref:
+        return []
+    evidence_refs = [
+        item for item in as_list(pref.get("evidence_refs")) if isinstance(item, dict)
+    ]
+    evidence_refs.sort(key=lambda item: str(item.get("date") or ""), reverse=True)
+    chunks = []
+    for item in evidence_refs[:limit]:
+        company = item.get("company") or "Unknown company"
+        stage = item.get("stage") or item.get("raw_stage") or "unknown stage"
+        role = item.get("role") or "unknown role"
+        amount = item.get("amount_usd")
+        amount_text = (
+            f"US${to_float(amount):,.0f}"
+            if amount is not None
+            else "amount undisclosed"
+        )
+        sectors = ", ".join(as_list(item.get("actual_sector"))[:3])
+        themes = ", ".join(as_list(item.get("actual_themes"))[:3])
+        chunks.append(
+            {
+                "section_key": "observed_deal_evidence",
+                "entity_type": "investor",
+                "entity_id": item.get("deal_key"),
+                "confidence": pref.get("data_quality") or "medium",
+                "review_needed": False,
+                "chunk_text": (
+                    f"{company} ({stage}, {amount_text}, {role}, "
+                    f"{item.get('date') or 'date unknown'}). "
+                    f"Observed sectors: {sectors or 'not classified'}; "
+                    f"themes: {themes or 'not classified'}."
+                ),
+                "source_urls": (
+                    [item.get("source_url")] if item.get("source_url") else []
+                ),
+                "metadata": {
+                    "stage": stage,
+                    "role": role,
+                    "company": company,
+                    "date": item.get("date"),
+                    "actual_sector": item.get("actual_sector") or [],
+                    "actual_themes": item.get("actual_themes") or [],
+                },
+            }
+        )
+    return chunks
+
+
+def fallback_stage_preferences(row: dict[str, Any]) -> list[dict[str, Any]]:
+    stages = [normalize_stage(stage) for stage in as_list(row.get("stage_focus"))]
+    sectors = [str(item) for item in as_list(row.get("sector_focus")) if item]
+    themes = [str(item) for item in as_list(row.get("business_model_focus")) if item]
+    if not stages:
+        return []
+
+    sector_weight = 1 / len(sectors) if sectors else 0
+    theme_weight = 1 / len(themes) if themes else 0
+    business_weight = 1 / len(themes) if themes else 0
+    return [
+        {
+            "stage": stage,
+            "deals_count": 1,
+            "lead_count": 1 if "lead" in norm(row.get("lead_behavior")) else 0,
+            "participant_count": 0,
+            "leads_at_this_stage": "lead" in norm(row.get("lead_behavior")),
+            "cheque_size_min_usd": None,
+            "cheque_size_max_usd": None,
+            "recent_activity_score": 0.5,
+            "actual_sector": sectors,
+            "actual_themes": themes,
+            "dimension_distributions": {
+                "geography": {
+                    "weighted": {
+                        str(value): 1
+                        for value in as_list(row.get("geography_focus"))
+                        if value
+                    }
+                },
+                "actual_sector": {
+                    "weighted": {value: sector_weight for value in sectors}
+                },
+                "actual_themes": {
+                    "weighted": {value: theme_weight for value in themes}
+                },
+                "customer_type": {"weighted": {"enterprise": 1}},
+                "business_model": {
+                    "weighted": {value: business_weight for value in themes}
+                },
+                "ai_relevance": {"weighted": {row.get("ai_appetite") or "none": 1}},
+            },
+            "data_quality": row.get("screening_priority") or "medium",
+            "matching_notes": row.get("screening_notes"),
+            "evidence_refs": [],
+        }
+        for stage in stages
+    ]
+
+
+def database_row_to_profile(row: dict[str, Any]) -> dict[str, Any]:
+    geography_focus = row.get("geography_focus") or []
+    preferences = row.get("stage_preferences") or fallback_stage_preferences(row)
+    return {
+        "investor_id": row.get("slug") or row.get("id"),
+        "investor_uuid": str(row.get("id")),
+        "investor_name": row.get("name"),
+        "investor_type": row.get("investor_type"),
+        "hq_country": row.get("hq_country"),
+        "hq_state": row.get("hq_state"),
+        "hq_city": row.get("hq_city"),
+        "local_au_anz_fund": any(is_anz_market(value) for value in geography_focus)
+        or is_anz_market(row.get("hq_country")),
+        "supported_stages": row.get("stage_focus") or [],
+        "first_cheque_stages": row.get("stage_focus") or [],
+        "supported_sectors": row.get("sector_focus") or [],
+        "supported_themes": row.get("business_model_focus") or [],
+        "supported_business_models": row.get("business_model_focus") or [],
+        "geography_focus": geography_focus,
+        "cheque_ranges": row.get("cheque_ranges") or [],
+        "lead_behavior": row.get("lead_behavior"),
+        "ai_appetite": row.get("ai_appetite"),
+        "recent_deals": row.get("recent_deals") or [],
+        "stage_preferences": preferences,
+        "total_deals_used": row.get("total_deals_used") or 0,
+        "lead_ratio": to_float(row.get("lead_ratio")),
+        "overall_confidence": to_float(row.get("overall_confidence")),
+        "data_quality": row.get("data_quality") or row.get("screening_priority"),
+        "activity_summary": row.get("activity_summary"),
+        "review_needed_fields": [],
+        "screening_status": row.get("screening_status"),
+        "screening_priority": row.get("screening_priority"),
+        "screening_notes": row.get("screening_notes"),
+    }
+
+
+def database_chunks(profile: dict[str, Any]) -> list[dict[str, Any]]:
+    pref, _ = best_stage_preference(profile, "")
+    return evidence_from_stage_preference(pref)
 
 
 def investor_routing_pool(profile: dict[str, Any]) -> str:
-    slug = norm(profile.get("investor_id"))
-    if slug in POOL_SLUG_OVERRIDES:
-        return POOL_SLUG_OVERRIDES[slug]
-
     investor_type = norm_phrase(profile.get("investor_type"))
     if "angel" in investor_type:
         return ANGEL_GROUP_POOL
     if "syndicate" in investor_type:
         return SYNDICATE_POOL
-    if (
-        "platform" in investor_type
-        or "ecosystem" in investor_type
-        or "accelerator" in investor_type
-        or "incubator" in investor_type
-        or "program" in investor_type
+    if any(
+        term in investor_type
+        for term in ("accelerator", "ecosystem", "government", "other")
     ):
         return PLATFORM_ROUTING_POOL
-    if "vc" in investor_type or "venture" in investor_type or "fund" in investor_type:
+    if "vc" in investor_type or "fund" in investor_type or "corporate" in investor_type:
         return DIRECT_VC_POOL
-    return PLATFORM_ROUTING_POOL
+    return WATCHLIST_POOL
 
 
 def eligibility_check(
-    founder: dict[str, Any], profile: dict[str, Any]
+    founder: dict[str, Any],
+    profile: dict[str, Any],
+    stage_match: str,
 ) -> dict[str, Any]:
     hard_filter_reasons: list[str] = []
     soft_warnings: list[str] = []
     passed = True
 
-    screening_status = norm_phrase(profile.get("screening_status"))
-    if screening_status in {"excluded", "not applicable", "no usable information"}:
-        passed = False
-        hard_filter_reasons.append("Screening status excludes this investor.")
-
-    founder_is_anz = any(is_anz_market(market) for market in founder_markets(founder))
-    if founder_is_anz:
+    if founder_is_anz(founder):
         if profile_has_anz_mandate(profile):
-            hard_filter_reasons.append("Geography eligible: AU/ANZ mandate.")
+            hard_filter_reasons.append(
+                "Geography eligible: observed AU/ANZ deal evidence."
+            )
         elif profile_has_global_mandate(profile):
             hard_filter_reasons.append("Geography eligible: global mandate.")
         else:
             passed = False
-            hard_filter_reasons.append(
-                "Geography blocked: no AU/ANZ or global mandate."
-            )
+            hard_filter_reasons.append("Geography blocked: no observed AU/ANZ fit.")
 
-    stage = founder.get("stage") or founder.get("round_type")
-    if stage:
-        stage_level = stage_match_level(profile, stage)
-        if stage_level == "none":
-            passed = False
-            hard_filter_reasons.append("Stage blocked: outside observed focus.")
-        else:
-            hard_filter_reasons.append(
-                f"Stage eligible: {stage_level.replace('_', ' ')}."
-            )
-
-    sector = founder.get("sector")
-    if sector and not contains_any(profile.get("supported_sectors", []), sector):
-        warning = "Sector is not an exact structured-field match."
-        if sector_is_broad(profile):
-            warning = "Sector relies on broad software/technology mandate."
-        soft_warnings.append(warning)
+    stage = normalize_stage(founder.get("stage") or founder.get("round_type"))
+    if stage and stage_match != "exact":
+        passed = False
+        hard_filter_reasons.append(
+            "Stage blocked: no observed same-stage investment evidence."
+        )
+    elif stage_match == "exact":
+        hard_filter_reasons.append("Stage eligible: observed same-stage deals.")
+    elif not stage:
+        soft_warnings.append(
+            "Stage is missing, so strict stage filtering was not applied."
+        )
 
     return {
         "passed": passed,
@@ -419,210 +1029,283 @@ def eligibility_check(
     }
 
 
-def deal_text(deal: dict[str, Any]) -> str:
-    fields = [
-        deal.get("company"),
-        deal.get("round"),
-        deal.get("direction"),
-        deal.get("business_model"),
-        deal.get("company_geography"),
-        deal.get("region"),
-        deal.get("role"),
-    ]
-    return " ".join(str(field) for field in fields if field)
+def score_stage_evidence_depth(pref: dict[str, Any] | None) -> int:
+    if not pref:
+        return 0
+
+    deals_count = int(pref.get("deals_count") or 0)
+    lead_count = int(pref.get("lead_count") or 0)
+    data_quality = norm(pref.get("data_quality"))
+
+    score = min(6, deals_count * 2)
+    score += min(2, lead_count or (2 if pref.get("leads_at_this_stage") else 0))
+    score += {"high": 2, "medium": 1, "low": 0}.get(data_quality, 1)
+    return min(score, 10)
 
 
-def deal_similarity_score(
-    founder: dict[str, Any],
-    deal: dict[str, Any],
-) -> int:
-    text = deal_text(deal)
-    score = 0
-    stage = founder.get("stage") or founder.get("round_type")
-    sector = founder.get("sector")
-    business_model = founder.get("business_model")
-
-    if contains_any([deal.get("round"), text], stage):
-        score += 4
-    if contains_any([deal.get("direction"), deal.get("business_model"), text], sector):
-        score += 7
-    if contains_any([deal.get("business_model"), text], business_model):
-        score += 4
-    if any(
-        contains_any([deal.get("company_geography"), deal.get("region"), text], market)
-        for market in founder_markets(founder)
-        if market
-    ):
-        score += 2
-    if founder_is_ai_related(founder) and any(
-        term in norm_phrase(text) for term in AI_TERMS
-    ):
-        score += 2
-    if score > 0 and any(
-        token in norm(deal.get("role")) for token in ["lead", "co-lead"]
-    ):
-        score += 1
-    return min(score, MATCHING_WEIGHTS["recent_deal_similarity"])
-
-
-def recent_deal_similarity(
-    founder: dict[str, Any],
-    profile: dict[str, Any],
-) -> tuple[int, str | None]:
-    best_score = 0
-    best_company = None
-    for deal in profile.get("recent_deals") or []:
-        if not isinstance(deal, dict):
-            continue
-        score = deal_similarity_score(founder, deal)
-        if score > best_score:
-            best_score = score
-            best_company = deal.get("company")
-    return best_score, str(best_company) if best_company else None
-
-
-def parse_deal_date(value: Any) -> date | None:
-    if not value:
-        return None
-    text = str(value).strip()
-    try:
-        return date.fromisoformat(text[:10])
-    except ValueError:
-        pass
-    try:
-        return datetime.strptime(text[:7], "%Y-%m").date()
-    except ValueError:
-        return None
-
-
-def activity_recency_score(profile: dict[str, Any]) -> int:
-    dates = [
-        parsed
-        for deal in profile.get("recent_deals") or []
-        if isinstance(deal, dict)
-        for parsed in [parse_deal_date(deal.get("date"))]
-        if parsed is not None
-    ]
-    if not dates:
-        return 2 if profile.get("recent_deals") else 0
-
-    age_days = (date.today() - max(dates)).days
-    if age_days <= 365:
-        return 6
-    if age_days <= 730:
-        return 4
+def score_geography(founder: dict[str, Any], profile: dict[str, Any]) -> int:
+    if founder_is_anz(founder):
+        if profile_has_anz_mandate(profile):
+            return 5
+        if profile_has_global_mandate(profile):
+            return 3
+        return 0
+    if profile_has_global_mandate(profile):
+        return 5
+    if profile_has_anz_mandate(profile):
+        return 3
     return 2
 
 
-def founder_is_ai_related(founder: dict[str, Any]) -> bool:
-    text = " ".join(
-        str(founder.get(field) or "")
-        for field in (
-            "sector",
-            "business_model",
-            "one_sentence_summary",
-            "traction_summary",
-        )
+def score_sector_fit(
+    founder_taxonomy: dict[str, list[str]],
+    pref: dict[str, Any] | None,
+    profile: dict[str, Any],
+) -> tuple[int, list[str]]:
+    founder_sectors = founder_taxonomy["actual_sector"]
+    if not founder_sectors:
+        return 0, []
+
+    stage_sectors = (
+        [str(item) for item in as_list(pref.get("actual_sector"))] if pref else []
     )
-    return any(term in norm_phrase(text) for term in AI_TERMS)
+    sector_matches = overlap(founder_sectors, stage_sectors)
+    if sector_matches:
+        weight = max_distribution_weight(pref or {}, "actual_sector", sector_matches)
+        score = 9 + round(weight * 6) + min(2, len(sector_matches) - 1)
+        return min(15, score), sector_matches
+
+    profile_matches = overlap(founder_sectors, profile.get("supported_sectors") or [])
+    if profile_matches:
+        return 8, profile_matches
+
+    if "enterprise_software_data_security" in stage_sectors and any(
+        sector in founder_sectors
+        for sector in ("enterprise_software_data_security", "property_construction")
+    ):
+        return 5, ["broad enterprise software adjacency"]
+
+    return 0, []
 
 
-def ai_thesis_score(founder: dict[str, Any], profile: dict[str, Any]) -> int:
-    if not founder_is_ai_related(founder):
-        return 0
-    appetite = norm(profile.get("ai_appetite"))
-    if appetite in {"high", "very_high"}:
-        return 4
-    if appetite in {"medium", "moderate"}:
-        return 2
-    if contains_any(profile.get("supported_sectors", []), "ai"):
-        return 3
-    if text_contains(profile.get("screening_notes"), "ai"):
-        return 2
-    return 0
+def score_theme_fit(
+    founder_taxonomy: dict[str, list[str]],
+    pref: dict[str, Any] | None,
+    profile: dict[str, Any],
+) -> tuple[int, list[str]]:
+    founder_themes = founder_taxonomy["actual_themes"]
+    if not founder_themes:
+        return 0, []
 
-
-def founder_traction_score(founder: dict[str, Any], profile: dict[str, Any]) -> int:
-    founder_text = " ".join(
-        str(founder.get(field) or "")
-        for field in (
-            "founder_au_anz_connection",
-            "traction_summary",
-            "traction_status",
-            "one_sentence_summary",
-        )
+    stage_themes = (
+        [str(item) for item in as_list(pref.get("actual_themes"))] if pref else []
     )
-    if not founder_text.strip():
-        return 0
+    theme_matches = overlap(founder_themes, stage_themes)
+    if theme_matches:
+        weight = max_distribution_weight(pref or {}, "actual_themes", theme_matches)
+        score = 15 + round(weight * 8) + min(3, len(theme_matches) - 1)
+        return min(25, score), theme_matches
 
-    profile_terms = profile.get("founder_fit") or []
-    if any(contains_any([founder_text], term) for term in profile_terms):
-        return 3
-    if any(term in norm_phrase(founder_text) for term in TRACTION_TERMS):
-        return 2
-    return 0
+    profile_matches = overlap(founder_themes, profile.get("supported_themes") or [])
+    if profile_matches:
+        return 12, profile_matches
+
+    return 0, []
 
 
-def raise_amount_aud(founder: dict[str, Any]) -> float | None:
-    value = founder.get("target_raise_value")
-    if value is None:
-        return None
+def parsed_year(value: Any) -> int | None:
+    if isinstance(value, (datetime, date)):
+        return value.year
+    text = str(value or "").strip()
+    if len(text) >= 4 and text[:4].isdigit():
+        return int(text[:4])
     try:
-        amount = float(value)
-    except (TypeError, ValueError):
+        return datetime.fromisoformat(text).year
+    except ValueError:
         return None
 
-    unit = norm(founder.get("target_raise_unit"))
-    if unit in {"m", "mn", "million", "millions"}:
-        amount *= 1_000_000
+
+def recency_points(value: Any) -> int:
+    year = parsed_year(value)
+    if year is None:
+        return 0
+    current_year = date.today().year
+    if year >= current_year:
+        return 3
+    if year >= current_year - 1:
+        return 2
+    if year >= current_year - 2:
+        return 1
+    return 0
+
+
+def score_recent_deal_similarity(
+    founder_taxonomy: dict[str, list[str]],
+    pref: dict[str, Any] | None,
+    sector_matches: list[str],
+    theme_matches: list[str],
+) -> tuple[int, list[str]]:
+    if not pref:
+        return 0, []
+
+    founder_sectors = founder_taxonomy["actual_sector"]
+    founder_themes = founder_taxonomy["actual_themes"]
+    comparable_deals: list[str] = []
+    best_deal_score = 0
+
+    for item in as_list(pref.get("evidence_refs")):
+        if not isinstance(item, dict):
+            continue
+        deal_theme_matches = overlap(founder_themes, as_list(item.get("actual_themes")))
+        deal_sector_matches = overlap(
+            founder_sectors, as_list(item.get("actual_sector"))
+        )
+        if not deal_theme_matches and not deal_sector_matches:
+            continue
+
+        deal_score = 2
+        if deal_theme_matches:
+            deal_score += 9 + min(3, len(deal_theme_matches) - 1)
+        if deal_sector_matches:
+            deal_score += 4
+        if "lead" in norm_phrase(item.get("role")):
+            deal_score += 2
+        elif item.get("role"):
+            deal_score += 1
+        deal_score += recency_points(item.get("date"))
+        best_deal_score = max(best_deal_score, min(deal_score, 20))
+        if item.get("company"):
+            comparable_deals.append(str(item["company"]))
+
+    if comparable_deals:
+        score = best_deal_score + min(3, len(comparable_deals) - 1)
+        return min(score, 20), comparable_deals[:3]
+
+    deals_count = int(pref.get("deals_count") or 0)
+    recency = to_float(pref.get("recent_activity_score"))
+    score = 0
+    if theme_matches:
+        score += 8
+    elif sector_matches:
+        score += 5
+    score += min(4, deals_count)
+    score += min(3, round(recency * 3))
+    return min(score, 20), []
+
+
+def score_customer_icp(founder: dict[str, Any], pref: dict[str, Any] | None) -> int:
+    if not pref:
+        return 0
+    customer_type = founder_customer_type(founder)
+    business_model = founder_business_model(founder)
+    score = 0
+    if customer_type:
+        customer_weight = max_distribution_weight(
+            pref, "customer_type", [customer_type]
+        )
+        if customer_weight:
+            score += 5 + round(customer_weight * 2)
+    if business_model:
+        model_weight = max_distribution_weight(pref, "business_model", [business_model])
+        if model_weight:
+            score += 3 + round(model_weight)
+    return min(score, 10)
+
+
+def founder_raise_usd_estimate(founder: dict[str, Any]) -> float | None:
+    value = to_float(founder.get("target_raise_value"))
+    if value <= 0:
+        return None
+
+    unit = norm_phrase(founder.get("target_raise_unit"))
+    multiplier = 1.0
+    if unit in {"m", "mn", "mm", "million", "millions", "mio"}:
+        multiplier = 1_000_000
     elif unit in {"k", "thousand", "thousands"}:
-        amount *= 1_000
+        multiplier = 1_000
+    elif not unit and value < 1000:
+        multiplier = 1_000_000
 
-    currency = norm(founder.get("target_raise_currency") or "AUD")
-    if currency and currency not in {"aud", "a$"}:
-        return None
-    return amount
+    currency = norm_phrase(founder.get("target_raise_currency"))
+    fx_to_usd = {
+        "usd": 1.0,
+        "us$": 1.0,
+        "aud": 0.66,
+        "a$": 0.66,
+        "nzd": 0.60,
+        "nz$": 0.60,
+    }
+    return value * multiplier * fx_to_usd.get(currency, 1.0)
 
 
-def cheque_filter_safe(item: dict[str, Any]) -> bool:
-    if item.get("hard_filter_safe") is False:
-        return False
-    basis = norm(item.get("basis"))
-    return "round_size" not in basis and "not_cheque" not in basis
+def score_cheque_size_fit(founder: dict[str, Any], pref: dict[str, Any] | None) -> int:
+    amount_usd = founder_raise_usd_estimate(founder)
+    if amount_usd is None:
+        return 2
+    if not pref:
+        return 0
+
+    min_usd = to_float(pref.get("cheque_size_min_usd"), default=0)
+    max_usd = to_float(pref.get("cheque_size_max_usd"), default=0)
+    if min_usd <= 0 and max_usd <= 0:
+        return 2
+
+    lower_bound = min_usd if min_usd > 0 else 0
+    upper_bound = max_usd if max_usd > 0 else float("inf")
+    if lower_bound <= amount_usd <= upper_bound:
+        return 5
+
+    soft_lower = lower_bound * 0.6 if lower_bound > 0 else 0
+    soft_upper = upper_bound * 1.4 if upper_bound != float("inf") else float("inf")
+    if soft_lower <= amount_usd <= soft_upper:
+        return 3
+    return 1
 
 
-def cheque_range_match(founder: dict[str, Any], profile: dict[str, Any]) -> bool | None:
-    amount = raise_amount_aud(founder)
-    stage = normalize_stage(founder.get("stage") or founder.get("round_type"))
-    ranges = profile.get("cheque_ranges") or []
-    if amount is None or not stage or not ranges:
-        return None
+def score_lead_behavior_fit(
+    founder: dict[str, Any], pref: dict[str, Any] | None
+) -> int:
+    if not pref:
+        return 2
 
-    stage_ranges = [
-        item
-        for item in ranges
-        if isinstance(item, dict)
-        and norm(item.get("currency") or "AUD") == "aud"
-        and normalize_stage(item.get("stage")) == stage
-    ]
-    if not stage_ranges:
-        return None
+    lead_needed = founder.get("lead_needed")
+    lead_count = int(pref.get("lead_count") or 0)
+    participant_count = int(pref.get("participant_count") or 0)
+    leads_at_stage = bool(pref.get("leads_at_this_stage")) or lead_count > 0
 
-    for item in stage_ranges:
-        min_value = item.get("amount_min")
-        max_value = item.get("amount_max")
-        if min_value is not None and amount < float(min_value):
-            continue
-        if max_value is not None and amount > float(max_value):
-            continue
-        return True
-    return False
+    if lead_needed is True:
+        if leads_at_stage:
+            return 5
+        if participant_count > 0:
+            return 1
+        return 0
+    if lead_needed is False:
+        if participant_count > 0:
+            return 5
+        if leads_at_stage:
+            return 4
+        return 2
+    return 2
+
+
+def score_data_quality_recency(
+    pref: dict[str, Any] | None,
+    profile: dict[str, Any],
+) -> int:
+    if not pref:
+        return min(5, round(to_float(profile.get("overall_confidence")) * 5))
+
+    data_quality = norm(pref.get("data_quality") or profile.get("data_quality"))
+    recency = to_float(pref.get("recent_activity_score"))
+    score = {"high": 2, "medium": 1, "low": 0}.get(data_quality, 1)
+    score += min(3, round(recency * 3))
+    return min(score, 5)
 
 
 def score_tier(score: int) -> str:
-    if score >= 75:
+    if score >= 80:
         return "strong"
-    if score >= 60:
+    if score >= 65:
         return "good"
     if score >= 45:
         return "possible"
@@ -630,106 +1313,97 @@ def score_tier(score: int) -> str:
 
 
 def score_profile(founder: dict[str, Any], profile: dict[str, Any]) -> dict[str, Any]:
-    breakdown: dict[str, Any] = {key: 0 for key in MATCHING_WEIGHTS}
+    stage = normalize_stage(founder.get("stage") or founder.get("round_type"))
+    pref, stage_match = best_stage_preference(profile, stage)
+    founder_taxonomy = infer_founder_taxonomy(founder)
+    routing_pool = investor_routing_pool(profile)
+    breakdown = {key: 0 for key in MATCHING_WEIGHTS}
     strengths: list[str] = []
     risks: list[str] = []
-    eligibility = eligibility_check(founder, profile)
-    routing_pool = investor_routing_pool(profile)
 
-    founder_is_anz = any(is_anz_market(market) for market in founder_markets(founder))
-    local_au_anz = profile_has_anz_mandate(profile)
-    if founder_is_anz and local_au_anz:
-        breakdown["geography_anz_mandate"] = 6
-        strengths.append("AU/ANZ mandate appears aligned.")
-    elif founder_is_anz and profile_has_global_mandate(profile):
-        breakdown["geography_anz_mandate"] = 4
-        strengths.append("Global mandate can cover AU/ANZ founders.")
-    elif founder_is_anz:
-        breakdown["geography_anz_mandate"] = 1
-        risks.append("AU/ANZ founder fit is not clearly local-fund level.")
+    breakdown["stage_evidence_depth"] = score_stage_evidence_depth(pref)
+    breakdown["geography_fit"] = score_geography(founder, profile)
+    sector_score, sector_matches = score_sector_fit(founder_taxonomy, pref, profile)
+    theme_score, theme_matches = score_theme_fit(founder_taxonomy, pref, profile)
+    breakdown["sector_fit"] = sector_score
+    breakdown["theme_fit"] = theme_score
+    recent_score, comparable_deals = score_recent_deal_similarity(
+        founder_taxonomy,
+        pref,
+        sector_matches,
+        theme_matches,
+    )
+    breakdown["recent_deal_similarity"] = recent_score
+    breakdown["customer_icp_fit"] = score_customer_icp(founder, pref)
+    breakdown["cheque_size_fit"] = score_cheque_size_fit(founder, pref)
+    breakdown["lead_behavior_fit"] = score_lead_behavior_fit(founder, pref)
+    breakdown["data_quality_recency"] = score_data_quality_recency(pref, profile)
 
-    stage = founder.get("stage") or founder.get("round_type")
-    stage_level = stage_match_level(profile, stage)
-    if stage_level == "first_cheque":
-        breakdown["stage_first_cheque_fit"] = 16
-        strengths.append("Stage matches observed first-cheque stages.")
-    elif stage_level == "supported":
-        breakdown["stage_first_cheque_fit"] = 12
-        strengths.append("Stage is inside the investor's broader observed range.")
-    elif stage_level == "adjacent":
-        breakdown["stage_first_cheque_fit"] = 6
-        risks.append("Stage is adjacent, not a clean first-cheque fit.")
+    if stage_match == "exact":
+        strengths.append(f"Observed same-stage activity at {stage.replace('_', ' ')}.")
+    elif stage_match == "unknown_founder_stage":
+        risks.append("Founder stage is missing, so same-stage evidence is unconfirmed.")
     else:
-        risks.append("Stage fit is not obvious from structured data.")
+        risks.append("No observed same-stage investment activity.")
 
-    sector = founder.get("sector")
-    if contains_any(profile.get("supported_sectors", []), sector):
-        breakdown["sector_use_case_fit"] = 17
-        strengths.append("Sector appears in observed investor activity.")
-    elif sector_is_broad(profile):
-        breakdown["sector_use_case_fit"] = 8
-        risks.append("Sector fit relies on a broad technology mandate.")
-    else:
-        risks.append("Sector match needs manual review.")
+    if profile_has_anz_mandate(profile):
+        strengths.append("Observed AU/ANZ geography fit.")
+    elif founder_is_anz(founder):
+        risks.append("No clear AU/ANZ geography evidence.")
 
-    deal_similarity, deal_company = recent_deal_similarity(founder, profile)
-    breakdown["recent_deal_similarity"] = deal_similarity
-    if deal_company and deal_similarity >= 14:
-        strengths.append(f"Recent deal evidence is similar: {deal_company}.")
-    elif deal_company and deal_similarity >= 8:
-        strengths.append(f"Some recent deal evidence is relevant: {deal_company}.")
-    elif deal_similarity == 0:
-        risks.append("No clearly similar recent deal was found in structured data.")
-
-    business_model = founder.get("business_model")
-    if contains_any(profile.get("supported_business_models", []), business_model):
-        breakdown["business_model_icp_fit"] = 12
-        strengths.append("Business model appears in recent deal evidence.")
-    elif contains_any(profile.get("supported_sectors", []), business_model):
-        breakdown["business_model_icp_fit"] = 6
-        risks.append("Business model is only indirectly supported by sector data.")
-    else:
-        risks.append("Business model match is not directly supported.")
-
-    cheque_fit = cheque_range_match(founder, profile)
-    if cheque_fit is True:
-        breakdown["cheque_round_size_fit"] = 8
+    if theme_matches:
         strengths.append(
-            "Raise amount fits observed stage-specific round-size evidence."
+            "Specific theme overlap: " + ", ".join(theme_matches[:3]) + "."
         )
-    elif cheque_fit is False:
-        risks.append(
-            "Raise amount is outside observed stage-specific round-size evidence."
+    elif founder_taxonomy["actual_themes"]:
+        risks.append("No specific second-level theme overlap in observed deals.")
+
+    if sector_matches:
+        strengths.append("Sector overlap: " + ", ".join(sector_matches[:3]) + ".")
+    else:
+        risks.append("No close first-level sector overlap.")
+
+    if comparable_deals:
+        strengths.append(
+            "Comparable recent deals include " + ", ".join(comparable_deals[:3]) + "."
+        )
+    elif breakdown["recent_deal_similarity"] < 8:
+        risks.append("Recent comparable deal evidence is thin.")
+
+    if breakdown["customer_icp_fit"] >= 7:
+        strengths.append("Customer type or business model matches observed deals.")
+    elif breakdown["customer_icp_fit"] == 0:
+        risks.append("Customer/ICP fit is thin in observed data.")
+
+    if breakdown["cheque_size_fit"] >= 4:
+        strengths.append("Raise size appears within observed cheque range.")
+    elif breakdown["cheque_size_fit"] <= 1:
+        risks.append("Raise size appears outside observed cheque range.")
+
+    if founder.get("lead_needed") is True and breakdown["lead_behavior_fit"] >= 4:
+        strengths.append("Observed lead behaviour fits a founder seeking a lead.")
+    elif founder.get("lead_needed") is True and breakdown["lead_behavior_fit"] <= 1:
+        risks.append("Lead evidence is weak for this stage.")
+
+    if pref and int(pref.get("deals_count") or 0) > 0:
+        strengths.append(
+            f"{pref.get('deals_count')} observed {pref.get('stage')} deal(s) "
+            "support this score."
         )
 
-    lead_needed = founder.get("lead_needed")
-    lead_behavior = norm(profile.get("lead_behavior"))
-    if lead_needed is True and any(
-        token in lead_behavior for token in ["lead", "sometimes", "both"]
-    ):
-        breakdown["lead_behavior_fit"] = 8
-        strengths.append("Lead behaviour may fit the round need.")
-    elif lead_needed is False:
-        breakdown["lead_behavior_fit"] = 8
-    elif lead_needed is True:
-        risks.append("Lead behaviour is not clearly aligned with the founder's need.")
-
-    activity_score = activity_recency_score(profile)
-    breakdown["investor_activity_recency"] = activity_score
-    if activity_score >= 4:
-        strengths.append("Investor has recent activity in the database.")
-
-    ai_score = ai_thesis_score(founder, profile)
-    breakdown["ai_thesis_appetite"] = ai_score
-    if ai_score >= 3:
-        strengths.append("AI thesis appetite supports the match.")
-
-    traction_score = founder_traction_score(founder, profile)
-    breakdown["founder_traction_fit"] = traction_score
-    if traction_score > 0:
-        strengths.append("Founder or traction signals have some investor-fit support.")
+    founder_ai = founder_ai_relevance(founder)
+    if founder_ai != "none":
+        ai_weight = max_distribution_weight(pref or {}, "ai_relevance", [founder_ai])
+        if ai_weight:
+            strengths.append(f"AI relevance aligns as {founder_ai}.")
+        else:
+            risks.append(
+                "AI is treated as a modifier; observed AI evidence is not strong."
+            )
 
     score = min(sum(int(value) for value in breakdown.values()), 100)
+    eligibility = eligibility_check(founder, profile, stage_match)
+    evidence = evidence_from_stage_preference(pref)
 
     return {
         "investor_id": profile.get("investor_id"),
@@ -744,20 +1418,8 @@ def score_profile(founder: dict[str, Any], profile: dict[str, Any]) -> dict[str,
         "strengths": strengths,
         "risks": risks,
         "review_needed_fields": profile.get("review_needed_fields", []),
+        "evidence": evidence,
     }
-
-
-def pool_sort_key(item: dict[str, Any]) -> tuple[int, int, str]:
-    pool = str(item.get("routing_pool") or WATCHLIST_POOL)
-    try:
-        pool_index = POOL_DISPLAY_ORDER.index(pool)
-    except ValueError:
-        pool_index = len(POOL_DISPLAY_ORDER)
-    return (
-        pool_index,
-        int(item.get("pool_rank") or 999),
-        str(item.get("investor_name") or ""),
-    )
 
 
 def select_ranked_matches(
@@ -770,150 +1432,50 @@ def select_ranked_matches(
         for result in results
         if result.get("eligibility", {}).get("passed", True)
     ]
-    grouped: dict[str, list[dict[str, Any]]] = {pool: [] for pool in POOL_DISPLAY_ORDER}
-    grouped[WATCHLIST_POOL] = grouped.get(WATCHLIST_POOL, [])
-
-    for result in eligible:
-        pool = str(result.get("routing_pool") or WATCHLIST_POOL)
-        grouped.setdefault(pool, []).append(result)
-
-    for pool_results in grouped.values():
-        pool_results.sort(
-            key=lambda item: (
-                -int(item.get("score") or 0),
-                str(item.get("investor_name") or ""),
-            )
-        )
-        for index, item in enumerate(pool_results, start=1):
-            item["pool_rank"] = index
-
-    selected: list[dict[str, Any]] = []
-    selected_ids: set[str] = set()
-    for pool in POOL_DISPLAY_ORDER:
-        quota = POOL_SELECTION_QUOTAS.get(pool, 0)
-        for item in grouped.get(pool, [])[:quota]:
-            if len(selected) >= limit:
-                break
-            investor_id = str(item.get("investor_id"))
-            selected.append(item)
-            selected_ids.add(investor_id)
-
-    if len(selected) < limit:
-        leftovers = [
-            item
-            for pool_results in grouped.values()
-            for item in pool_results
-            if str(item.get("investor_id")) not in selected_ids
-        ]
-        leftovers.sort(
-            key=lambda item: (
-                -int(item.get("score") or 0),
-                str(item.get("investor_name") or ""),
-            )
-        )
-        for item in leftovers:
-            if len(selected) >= limit:
-                break
-            selected.append(item)
-
-    selected.sort(key=pool_sort_key)
+    selected = sorted(
+        eligible,
+        key=lambda item: (
+            -int(item.get("score") or 0),
+            str(item.get("investor_name") or ""),
+        ),
+    )[:limit]
     for index, item in enumerate(selected, start=1):
         item["rank"] = index
+        item["pool_rank"] = None
     return selected[:limit]
 
 
 def select_evidence(
-    founder: dict[str, Any], chunks: list[dict[str, Any]], limit: int = 5
+    founder: dict[str, Any],
+    chunks: list[dict[str, Any]],
+    limit: int = 5,
 ) -> list[dict[str, Any]]:
     keywords = [
+        *infer_founder_taxonomy(founder)["actual_sector"],
+        *infer_founder_taxonomy(founder)["actual_themes"],
         founder.get("stage"),
-        founder.get("sector"),
-        founder.get("business_model"),
-        founder.get("company_hq_country"),
     ]
     scored = []
     for item in chunks:
-        text = norm(item.get("chunk_text"))
-        score = sum(1 for keyword in keywords if keyword and norm(keyword) in text)
-        if item.get("section_key") in {"deal_evidence", "partner_routing"}:
-            score += 1
+        text = norm_phrase(item.get("chunk_text"))
+        score = sum(
+            1 for keyword in keywords if keyword and norm_phrase(keyword) in text
+        )
         if score > 0:
             scored.append((score, item))
     scored.sort(key=lambda pair: pair[0], reverse=True)
-    return [
-        {
-            "section_key": item.get("section_key"),
-            "entity_type": item.get("entity_type"),
-            "entity_id": item.get("entity_id"),
-            "confidence": item.get("confidence"),
-            "review_needed": item.get("review_needed"),
-            "chunk_text": item.get("chunk_text"),
-            "source_urls": item.get("source_urls", []),
-        }
-        for _, item in scored[:limit]
-    ]
+    return [item for _, item in scored[:limit]]
 
 
-def run_match(
-    founder_path: Path,
-    artifacts_dir: Path,
-    database_url: str | None = None,
-) -> dict[str, Any]:
-    founder = load_json(founder_path)
-    results = []
-
-    if database_url:
-        profile_rows = [
-            (profile, database_chunks(profile))
-            for profile in load_database_profiles(database_url)
-        ]
-    else:
-        profile_rows = [
-            (
-                load_json(profile_path),
-                load_jsonl(profile_path.parent / "rag_chunks.jsonl"),
-            )
-            for profile_path in artifacts_dir.glob("*/matching_profile.json")
-        ]
-
-    for profile, chunks in profile_rows:
-        result = score_profile(founder, profile)
-        result["evidence"] = select_evidence(founder, chunks)
-        results.append(result)
-    return {
-        "founder_profile": founder,
-        "results": select_ranked_matches(results),
-    }
-
-
-def main() -> None:
-    parser = argparse.ArgumentParser(
-        description="Run a local VC match over generated artifacts"
-    )
-    parser.add_argument(
-        "--founder", required=True, type=Path, help="Founder profile JSON"
-    )
-    parser.add_argument(
-        "--artifacts",
-        default=Path("data/outputs/generated"),
-        type=Path,
-        help="Artifacts directory",
-    )
-    parser.add_argument(
-        "--database-url",
-        default=os.getenv("DATABASE_URL"),
-        help="Read investors from the unified PostgreSQL database instead of artifacts",
-    )
-    args = parser.parse_args()
-
-    print(
-        json.dumps(
-            run_match(args.founder, args.artifacts, args.database_url),
-            ensure_ascii=False,
-            indent=2,
-        )
-    )
-
-
-if __name__ == "__main__":
-    main()
+def parse_deal_date(value: Any) -> date | None:
+    if not value:
+        return None
+    text = str(value).strip()
+    try:
+        return date.fromisoformat(text[:10])
+    except ValueError:
+        pass
+    try:
+        return datetime.strptime(text[:7], "%Y-%m").date()
+    except ValueError:
+        return None

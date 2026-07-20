@@ -3,9 +3,13 @@ import type { MatchRecord } from "@/features/matching/hooks/use-match-intake";
 
 type MatchHistoryPanelProps = {
   records: MatchRecord[];
+  onSelectRecord?: (record: MatchRecord) => void;
 };
 
-export function MatchHistoryPanel({ records }: MatchHistoryPanelProps) {
+export function MatchHistoryPanel({
+  records,
+  onSelectRecord,
+}: MatchHistoryPanelProps) {
   return (
     <section className="rounded-lg border border-border bg-card p-4 shadow-sm">
       <p className="text-xs font-semibold uppercase text-muted-foreground">
@@ -17,10 +21,12 @@ export function MatchHistoryPanel({ records }: MatchHistoryPanelProps) {
         </div>
       ) : (
         <div className="mt-3 space-y-2">
-          {records.slice(0, 4).map((record) => (
-            <div
+          {records.slice(0, 10).map((record) => (
+            <button
               key={record.id}
-              className="flex items-center justify-between gap-3 rounded-lg bg-background px-3 py-2"
+              type="button"
+              onClick={() => onSelectRecord?.(record)}
+              className="flex w-full items-center justify-between gap-3 rounded-lg bg-background px-3 py-2 text-left transition-colors hover:bg-muted"
             >
               <div className="min-w-0">
                 <p className="truncate text-sm font-medium text-foreground">
@@ -35,7 +41,7 @@ export function MatchHistoryPanel({ records }: MatchHistoryPanelProps) {
               <span className="shrink-0 rounded-lg bg-muted px-2 py-1 text-xs font-medium text-muted-foreground">
                 {record.response.matches.length} matches
               </span>
-            </div>
+            </button>
           ))}
         </div>
       )}

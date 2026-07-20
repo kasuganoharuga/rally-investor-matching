@@ -16,10 +16,15 @@ export const createInvitationInputSchema = z.object({
 });
 export type CreateInvitationInput = z.infer<typeof createInvitationInputSchema>;
 
+export const acceptInvitationInputSchema = z.object({
+  token: z.string().min(32),
+  password: z.string().min(8),
+});
+export type AcceptInvitationInput = z.infer<typeof acceptInvitationInputSchema>;
+
 /**
  * Deliberately excludes `token` (internal audit value, never leaves the
- * server) and `temporaryPassword` (only ever goes out through the email
- * provider, never through this API).
+ * server).
  */
 export const invitationSummarySchema = z.object({
   id: z.string(),
@@ -39,3 +44,16 @@ export const invitationListDataSchema = z.object({
   items: z.array(invitationSummarySchema),
 });
 export type InvitationListData = z.infer<typeof invitationListDataSchema>;
+
+export const publicInvitationSchema = z.object({
+  email: z.string(),
+  role: userRoleSchema,
+  expiresAt: z.string(),
+});
+export type PublicInvitation = z.infer<typeof publicInvitationSchema>;
+
+export const acceptedInvitationSchema = z.object({
+  email: z.string(),
+  role: userRoleSchema,
+});
+export type AcceptedInvitation = z.infer<typeof acceptedInvitationSchema>;

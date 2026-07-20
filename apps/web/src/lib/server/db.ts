@@ -29,13 +29,37 @@ export function getDatabaseUrl(): string {
 
 let pool: Pool | undefined;
 
+function shouldUseUnverifiedSsl(databaseUrl: string): boolean {
+  return (
+    databaseUrl.includes("sslmode=require") ||
+    databaseUrl.includes("sslmode=no-verify") ||
+    databaseUrl.includes(".rds.amazonaws.com")
+  );
+}
+
+function getPoolConfig(databaseUrl: string): ConstructorParameters<typeof Pool>[0] {
+  if (!shouldUseUnverifiedSsl(databaseUrl)) {
+    return { connectionString: databaseUrl };
+  }
+
+  const parsedUrl = new URL(databaseUrl);
+  parsedUrl.searchParams.delete("sslmode");
+  parsedUrl.searchParams.delete("uselibpqcompat");
+
+  return {
+    connectionString: parsedUrl.toString(),
+    ssl: { rejectUnauthorized: false },
+  };
+}
+
 /**
  * Singleton pool, lazily created on first use so importing this module
  * never opens a connection by itself (e.g. during build or tests).
  */
 export function getPool(): Pool {
   if (!pool) {
-    pool = new Pool({ connectionString: getDatabaseUrl() });
+    const databaseUrl = getDatabaseUrl();
+    pool = new Pool(getPoolConfig(databaseUrl));
   }
   return pool;
 }

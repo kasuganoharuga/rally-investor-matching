@@ -1,0 +1,2842 @@
+{
+  "pipeline_version": "formal-sample-2026-07-18-v6",
+  "taxonomy": {
+    "layer_1": [
+      {
+        "display_name": "Healthcare / Life Sciences",
+        "code": "healthcare_life_sciences"
+      },
+      {
+        "display_name": "Mining / Resources / Metals",
+        "code": "resources_mining_metals"
+      },
+      {
+        "display_name": "Energy / Climate",
+        "code": "energy_climate"
+      },
+      {
+        "display_name": "Aerospace / Space / Defence",
+        "code": "aerospace_space_defence"
+      },
+      {
+        "display_name": "Fintech / Financial Services",
+        "code": "fintech_financial_services"
+      },
+      {
+        "display_name": "Enterprise Software / Data / Security",
+        "code": "enterprise_software_data_security"
+      },
+      {
+        "display_name": "Education / Workforce",
+        "code": "education_workforce"
+      },
+      {
+        "display_name": "Industrial Robotics / Automation",
+        "code": "industrial_robotics_automation"
+      },
+      {
+        "display_name": "Food / Agriculture",
+        "code": "food_agriculture"
+      },
+      {
+        "display_name": "Transport / Logistics / Infrastructure",
+        "code": "transport_logistics_infrastructure"
+      },
+      {
+        "display_name": "Property / Construction",
+        "code": "property_construction"
+      },
+      {
+        "display_name": "Consumer / Marketplace",
+        "code": "consumer_marketplace"
+      }
+    ],
+    "layer_2_by_layer_1": {
+      "healthcare_life_sciences": [
+        "preventive_chronic_care",
+        "womens_maternal_health",
+        "remote_patient_monitoring",
+        "medical_devices",
+        "diagnostics",
+        "biotech_life_sciences",
+        "biomanufacturing_fermentation",
+        "drug_delivery",
+        "neurotechnology",
+        "accessibility_assistive_technology",
+        "digital_health_infrastructure",
+        "wellness_mental_health",
+        "clinical_decision_support",
+        "digital_health_care_coordination"
+      ],
+      "resources_mining_metals": [
+        "critical_minerals",
+        "rare_earths",
+        "base_precious_metals",
+        "bulk_commodities",
+        "mineral_exploration_drilling",
+        "mine_development_production",
+        "mineral_processing",
+        "gas_resources",
+        "mining_workflow_software"
+      ],
+      "energy_climate": [
+        "battery_storage",
+        "renewable_distributed_energy",
+        "solar_building_energy",
+        "electrification_ev_fleet",
+        "sustainable_fuels_hydrogen",
+        "industrial_decarbonisation",
+        "clean_chemicals_fertiliser",
+        "circular_waste_recycling",
+        "environmental_services",
+        "nature_biodiversity_finance",
+        "energy_infrastructure",
+        "biomaterials_sustainable_materials"
+      ],
+      "aerospace_space_defence": [
+        "space_launch_transport",
+        "satellite_space_systems",
+        "in_orbit_servicing",
+        "hypersonics_defence",
+        "defence_dual_use",
+        "aerospace_materials",
+        "mission_infrastructure",
+        "navigation_pnt_systems",
+        "electric_aviation",
+        "aviation_compliance_operations"
+      ],
+      "fintech_financial_services": [
+        "payments_settlement",
+        "digital_assets_web3",
+        "lending_credit_risk",
+        "working_capital_finance",
+        "insurance",
+        "embedded_finance",
+        "home_loans_mortgages",
+        "wealth_asset_management",
+        "financial_advice_workflows",
+        "fund_admin_private_markets",
+        "personal_finance_tools",
+        "capital_markets_trading_infrastructure",
+        "retail_investing_platforms",
+        "capital_formation_crowdfunding",
+        "consumer_finance_banking"
+      ],
+      "enterprise_software_data_security": [
+        "data_privacy_security",
+        "enterprise_data_platforms",
+        "productivity_collaboration",
+        "content_design_tools",
+        "product_analytics_user_research",
+        "sales_marketing_intelligence",
+        "vertical_business_operations",
+        "customer_support_contact_center",
+        "legaltech_contract_workflows",
+        "developer_tools_app_platforms",
+        "compliance_risk_workflows",
+        "ai_governance_security",
+        "proposal_tender_workflows",
+        "cloud_finops",
+        "geospatial_mapping_mlops",
+        "cloud_data_infrastructure",
+        "ai_compute_infrastructure",
+        "quantum_timing_infrastructure",
+        "automotive_data_intelligence",
+        "retail_operations_order_management",
+        "digital_twin_infrastructure",
+        "semiconductor_packaging"
+      ],
+      "education_workforce": [
+        "education_training_platforms",
+        "career_skills_verification"
+      ],
+      "industrial_robotics_automation": [
+        "autonomous_mapping",
+        "autonomous_navigation_systems",
+        "industrial_robotics",
+        "computer_vision_inspection",
+        "industrial_automation_procurement",
+        "manufacturing_equipment",
+        "asset_maintenance_fleet_management",
+        "automotive_parts_intelligence",
+        "hazardous_environment_operations",
+        "waste_sorting_automation"
+      ],
+      "food_agriculture": [
+        "alternative_protein_ingredients",
+        "industrial_biotechnology",
+        "dairy_nutrition",
+        "wine_beverage",
+        "agtech_farm_management",
+        "sustainable_agriculture",
+        "livestock_management",
+        "agriculture_supply_chain_traceability",
+        "food_processing_manufacturing",
+        "aquaculture_seafood"
+      ],
+      "transport_logistics_infrastructure": [
+        "airport_operations",
+        "road_freight_mobility",
+        "logistics_supply_chain",
+        "maritime_transport",
+        "transport_energy_fuel",
+        "infrastructure_operations_connectivity"
+      ],
+      "property_construction": [
+        "property_transaction_workflows",
+        "construction_payments_finance",
+        "building_materials",
+        "prefabricated_sustainable_buildings",
+        "real_estate_construction_workflows"
+      ],
+      "consumer_marketplace": [
+        "digital_advertising_marketing",
+        "consumer_rewards_loyalty",
+        "creator_content_tools",
+        "marketplace_commerce",
+        "grocery_meal_planning",
+        "consumer_identity_trust",
+        "consumer_products",
+        "pet_care_nutrition",
+        "immersive_ar_experiences",
+        "hospitality_entertainment"
+      ]
+    },
+    "layer_2_codes": [
+      "accessibility_assistive_technology",
+      "aerospace_materials",
+      "agriculture_supply_chain_traceability",
+      "agtech_farm_management",
+      "ai_compute_infrastructure",
+      "ai_governance_security",
+      "airport_operations",
+      "alternative_protein_ingredients",
+      "aquaculture_seafood",
+      "asset_maintenance_fleet_management",
+      "automotive_data_intelligence",
+      "automotive_parts_intelligence",
+      "autonomous_mapping",
+      "autonomous_navigation_systems",
+      "aviation_compliance_operations",
+      "base_precious_metals",
+      "battery_storage",
+      "biomanufacturing_fermentation",
+      "biomaterials_sustainable_materials",
+      "biotech_life_sciences",
+      "building_materials",
+      "bulk_commodities",
+      "capital_formation_crowdfunding",
+      "capital_markets_trading_infrastructure",
+      "career_skills_verification",
+      "circular_waste_recycling",
+      "clean_chemicals_fertiliser",
+      "clinical_decision_support",
+      "cloud_data_infrastructure",
+      "cloud_finops",
+      "compliance_risk_workflows",
+      "computer_vision_inspection",
+      "construction_payments_finance",
+      "consumer_finance_banking",
+      "consumer_identity_trust",
+      "consumer_products",
+      "consumer_rewards_loyalty",
+      "content_design_tools",
+      "creator_content_tools",
+      "critical_minerals",
+      "customer_support_contact_center",
+      "dairy_nutrition",
+      "data_privacy_security",
+      "defence_dual_use",
+      "developer_tools_app_platforms",
+      "diagnostics",
+      "digital_advertising_marketing",
+      "digital_assets_web3",
+      "digital_health_care_coordination",
+      "digital_health_infrastructure",
+      "digital_twin_infrastructure",
+      "drug_delivery",
+      "education_training_platforms",
+      "electric_aviation",
+      "electrification_ev_fleet",
+      "embedded_finance",
+      "energy_infrastructure",
+      "enterprise_data_platforms",
+      "environmental_services",
+      "financial_advice_workflows",
+      "food_processing_manufacturing",
+      "fund_admin_private_markets",
+      "gas_resources",
+      "geospatial_mapping_mlops",
+      "grocery_meal_planning",
+      "hazardous_environment_operations",
+      "home_loans_mortgages",
+      "hospitality_entertainment",
+      "hypersonics_defence",
+      "immersive_ar_experiences",
+      "in_orbit_servicing",
+      "industrial_automation_procurement",
+      "industrial_biotechnology",
+      "industrial_decarbonisation",
+      "industrial_robotics",
+      "infrastructure_operations_connectivity",
+      "insurance",
+      "legaltech_contract_workflows",
+      "lending_credit_risk",
+      "livestock_management",
+      "logistics_supply_chain",
+      "manufacturing_equipment",
+      "maritime_transport",
+      "marketplace_commerce",
+      "medical_devices",
+      "mine_development_production",
+      "mineral_exploration_drilling",
+      "mineral_processing",
+      "mining_workflow_software",
+      "mission_infrastructure",
+      "nature_biodiversity_finance",
+      "navigation_pnt_systems",
+      "neurotechnology",
+      "payments_settlement",
+      "personal_finance_tools",
+      "pet_care_nutrition",
+      "prefabricated_sustainable_buildings",
+      "preventive_chronic_care",
+      "product_analytics_user_research",
+      "productivity_collaboration",
+      "property_transaction_workflows",
+      "proposal_tender_workflows",
+      "quantum_timing_infrastructure",
+      "rare_earths",
+      "real_estate_construction_workflows",
+      "remote_patient_monitoring",
+      "renewable_distributed_energy",
+      "retail_investing_platforms",
+      "retail_operations_order_management",
+      "road_freight_mobility",
+      "sales_marketing_intelligence",
+      "satellite_space_systems",
+      "semiconductor_packaging",
+      "solar_building_energy",
+      "space_launch_transport",
+      "sustainable_agriculture",
+      "sustainable_fuels_hydrogen",
+      "transport_energy_fuel",
+      "vertical_business_operations",
+      "waste_sorting_automation",
+      "wealth_asset_management",
+      "wellness_mental_health",
+      "wine_beverage",
+      "womens_maternal_health",
+      "working_capital_finance"
+    ],
+    "raw_layer_2_rule_count": 206
+  },
+  "counts": {
+    "investors": 481,
+    "investor_external_ids": 80,
+    "investor_web_profiles": 481,
+    "investor_team_members": 144,
+    "investee_company_profiles": 423,
+    "investee_external_ids": 423,
+    "funding_rounds": 464,
+    "deal_investors": 704,
+    "investor_actual_preferences": 481,
+    "investor_actual_stage_preferences": 345,
+    "classification_manual_review_items": 2
+  },
+  "round_stage_mapping": [
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Grant",
+      "count": 54
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Post-IPO Equity",
+      "count": 53
+    },
+    {
+      "round_stage": "seed",
+      "round_type_raw": "Seed",
+      "count": 46
+    },
+    {
+      "round_stage": "series_a",
+      "round_type_raw": "Series A",
+      "count": 28
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Post-IPO Debt",
+      "count": 26
+    },
+    {
+      "round_stage": "pre_seed",
+      "round_type_raw": "Pre-Seed",
+      "count": 25
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Non-equity Assistance",
+      "count": 16
+    },
+    {
+      "round_stage": "seed",
+      "round_type_raw": "Accelerator Seed",
+      "count": 15
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Venture - Series Unknown",
+      "count": 15
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Debt Financing",
+      "count": 13
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Equity Crowdfunding",
+      "count": 12
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Placement",
+      "count": 12
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Private Equity",
+      "count": 12
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Institutional Placement",
+      "count": 11
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Corporate Round",
+      "count": 8
+    },
+    {
+      "round_stage": "series_b",
+      "round_type_raw": "Series B",
+      "count": 7
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Funding Round",
+      "count": 7
+    },
+    {
+      "round_stage": "bridge",
+      "round_type_raw": "Convertible Note",
+      "count": 6
+    },
+    {
+      "round_stage": "pre_seed",
+      "round_type_raw": "Accelerator Pre-Seed",
+      "count": 5
+    },
+    {
+      "round_stage": "bridge",
+      "round_type_raw": "Convertible Notes",
+      "count": 5
+    },
+    {
+      "round_stage": "series_c_plus",
+      "round_type_raw": "Series E",
+      "count": 3
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Public Offering",
+      "count": 3
+    },
+    {
+      "round_stage": "series_c_plus",
+      "round_type_raw": "Series C",
+      "count": 2
+    },
+    {
+      "round_stage": "series_c_plus",
+      "round_type_raw": "Series D",
+      "count": 2
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Crowd-Sourced Funding",
+      "count": 2
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Private Placement",
+      "count": 2
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Secondary Market",
+      "count": 2
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Share Placement",
+      "count": 2
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Strategic Investment",
+      "count": 2
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Strategic Placement",
+      "count": 2
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Unsecured Loan Facility",
+      "count": 2
+    },
+    {
+      "round_stage": "pre_seed",
+      "round_type_raw": "Open Pre-Seed Raise",
+      "count": 1
+    },
+    {
+      "round_stage": "seed",
+      "round_type_raw": "Open Seed Fundraising Process",
+      "count": 1
+    },
+    {
+      "round_stage": "series_a",
+      "round_type_raw": "SPV Series A Preferred Units",
+      "count": 1
+    },
+    {
+      "round_stage": "series_a",
+      "round_type_raw": "Series A Extension",
+      "count": 1
+    },
+    {
+      "round_stage": "bridge",
+      "round_type_raw": "Convertible Debt Facility",
+      "count": 1
+    },
+    {
+      "round_stage": "bridge",
+      "round_type_raw": "Secured Convertible Note",
+      "count": 1
+    },
+    {
+      "round_stage": "bridge",
+      "round_type_raw": "Secured Convertible Notes",
+      "count": 1
+    },
+    {
+      "round_stage": "bridge",
+      "round_type_raw": "Senior Convertible Notes",
+      "count": 1
+    },
+    {
+      "round_stage": "bridge",
+      "round_type_raw": "Series D Convertible Note Private Placement",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Asset-Backed Securitisation",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Conditional Funding Support",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Conditional Placement",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Conditional Strategic Funding Proposal",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Corporate Banking Facility Upsize",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Debt Facility",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Debt Term Sheet",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Debt-to-Equity Conversion",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Debt-to-Equity Conversion and Shareholder Loan",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Delayed Draw Hybrid Securities Commitment",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Development Cost Recovery Agreement",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Equity Offering",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Government Budget Allocation",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Government Commercialisation Grant",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Government Project Grant",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Green Loan",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Hybrid Securities and Senior Notes",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Institutional Entitlement Offer",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Institutional Equity Subscription Facility",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Listed Capital Notes",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Loan",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Non-Brokered Private Placement",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Non-binding Conditional Letter of Support",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Non-binding Debt Funding EOI",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Option Exercise Proceeds",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Option Exercises and Shortfall Placement",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Option Underwriting",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Placement and Entitlement Offer",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Post-IPO Secondary",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Pre-Paid Warrant Financing",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Product Crowdfunding",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Project Debt Commitments",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Proposed Strategic Investment",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Receivables-Based Working Capital Facility",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Registered Direct Offering with Warrants",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Revolving Loan Facility",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Rights Offering",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Secured R&D Debt Facility",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Secured Term Loan",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Senior Secured Notes",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Senior Unsecured Notes",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Short-Term Loan with Project Interest Option",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Strategic Asset Transaction",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Strategic Corporate Investment",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Strategic Equity Investment",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Strategic Private Placement",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Subordinated Hybrid Securities",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Subordinated Securities",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Term Loan and Revolving Credit Facility Refinancing",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Two-Tranche Placement",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Underwritten Entitlement Offer",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Unsecured Term and Revolving Loan Facilities",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Unsecured Working Capital Facility",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Venture Fund Capital Raise",
+      "count": 1
+    },
+    {
+      "round_stage": "unknown",
+      "round_type_raw": "Venture Round",
+      "count": 1
+    }
+  ],
+  "top_stage_preferences": [
+    {
+      "canonical_name": "Startmate",
+      "stage": "seed",
+      "deals_count": 17,
+      "lead_count": 16,
+      "actual_sector": [
+        "enterprise_software_data_security",
+        "industrial_robotics_automation",
+        "healthcare_life_sciences",
+        "fintech_financial_services",
+        "property_construction"
+      ],
+      "actual_themes": [
+        "vertical_business_operations",
+        "product_analytics_user_research",
+        "clinical_decision_support",
+        "productivity_collaboration",
+        "real_estate_construction_workflows",
+        "satellite_space_systems",
+        "compliance_risk_workflows",
+        "sales_marketing_intelligence"
+      ],
+      "matching_notes": "17 seed evidence deal(s); 16 lead/co-lead. Promoted sectors: enterprise_software_data_security, industrial_robotics_automation, healthcare_life_sciences. Promoted themes: vertical_business_operations, product_analytics_user_research, clinical_decision_support, productivity_collaboration."
+    },
+    {
+      "canonical_name": "Ventures ilab Accelerator",
+      "stage": "pre_seed",
+      "deals_count": 5,
+      "lead_count": 5,
+      "actual_sector": [
+        "enterprise_software_data_security",
+        "healthcare_life_sciences",
+        "education_workforce",
+        "industrial_robotics_automation",
+        "fintech_financial_services"
+      ],
+      "actual_themes": [
+        "proposal_tender_workflows",
+        "biotech_life_sciences",
+        "quantum_timing_infrastructure",
+        "education_training_platforms",
+        "personal_finance_tools"
+      ],
+      "matching_notes": "5 pre_seed evidence deal(s); 5 lead/co-lead. Promoted sectors: enterprise_software_data_security, healthcare_life_sciences, education_workforce. Promoted themes: proposal_tender_workflows, biotech_life_sciences, quantum_timing_infrastructure, education_training_platforms."
+    },
+    {
+      "canonical_name": "Icehouse Ventures",
+      "stage": "series_a",
+      "deals_count": 5,
+      "lead_count": 3,
+      "actual_sector": [
+        "enterprise_software_data_security",
+        "transport_logistics_infrastructure",
+        "fintech_financial_services",
+        "food_agriculture",
+        "healthcare_life_sciences"
+      ],
+      "actual_themes": [
+        "data_privacy_security",
+        "enterprise_data_platforms",
+        "fund_admin_private_markets",
+        "food_processing_manufacturing",
+        "grocery_meal_planning",
+        "product_analytics_user_research",
+        "diagnostics",
+        "biotech_life_sciences"
+      ],
+      "matching_notes": "5 series_a evidence deal(s); 3 lead/co-lead. Promoted sectors: enterprise_software_data_security, transport_logistics_infrastructure, fintech_financial_services. Promoted themes: data_privacy_security, enterprise_data_platforms, fund_admin_private_markets, food_processing_manufacturing."
+    },
+    {
+      "canonical_name": "Blackbird Ventures",
+      "stage": "seed",
+      "deals_count": 5,
+      "lead_count": 2,
+      "actual_sector": [
+        "enterprise_software_data_security",
+        "industrial_robotics_automation",
+        "fintech_financial_services",
+        "education_workforce",
+        "property_construction"
+      ],
+      "actual_themes": [
+        "financial_advice_workflows",
+        "education_training_platforms",
+        "career_skills_verification",
+        "content_design_tools",
+        "product_analytics_user_research",
+        "developer_tools_app_platforms",
+        "building_materials",
+        "quantum_timing_infrastructure"
+      ],
+      "matching_notes": "5 seed evidence deal(s); 2 lead/co-lead. Promoted sectors: enterprise_software_data_security, industrial_robotics_automation, fintech_financial_services. Promoted themes: financial_advice_workflows, education_training_platforms, career_skills_verification, content_design_tools."
+    },
+    {
+      "canonical_name": "Antler",
+      "stage": "pre_seed",
+      "deals_count": 5,
+      "lead_count": 0,
+      "actual_sector": [
+        "energy_climate",
+        "consumer_marketplace",
+        "enterprise_software_data_security",
+        "industrial_robotics_automation",
+        "resources_mining_metals"
+      ],
+      "actual_themes": [
+        "digital_advertising_marketing",
+        "ai_governance_security",
+        "critical_minerals",
+        "battery_storage",
+        "enterprise_data_platforms",
+        "autonomous_navigation_systems"
+      ],
+      "matching_notes": "5 pre_seed evidence deal(s); 0 lead/co-lead. Promoted sectors: energy_climate, consumer_marketplace, enterprise_software_data_security. Promoted themes: digital_advertising_marketing, ai_governance_security, critical_minerals, battery_storage."
+    },
+    {
+      "canonical_name": "Giant Leap Fund",
+      "stage": "seed",
+      "deals_count": 4,
+      "lead_count": 1,
+      "actual_sector": [
+        "healthcare_life_sciences",
+        "enterprise_software_data_security",
+        "industrial_robotics_automation",
+        "education_workforce"
+      ],
+      "actual_themes": [
+        "preventive_chronic_care",
+        "womens_maternal_health",
+        "content_design_tools",
+        "building_materials",
+        "digital_health_care_coordination",
+        "education_training_platforms"
+      ],
+      "matching_notes": "4 seed evidence deal(s); 1 lead/co-lead. Promoted sectors: healthcare_life_sciences, enterprise_software_data_security, industrial_robotics_automation. Promoted themes: preventive_chronic_care, womens_maternal_health, content_design_tools, building_materials."
+    },
+    {
+      "canonical_name": "Investible",
+      "stage": "series_a",
+      "deals_count": 4,
+      "lead_count": 1,
+      "actual_sector": [
+        "enterprise_software_data_security",
+        "energy_climate",
+        "industrial_robotics_automation",
+        "resources_mining_metals",
+        "transport_logistics_infrastructure"
+      ],
+      "actual_themes": [
+        "clean_chemicals_fertiliser",
+        "critical_minerals",
+        "battery_storage",
+        "semiconductor_packaging",
+        "logistics_supply_chain"
+      ],
+      "matching_notes": "4 series_a evidence deal(s); 1 lead/co-lead. Promoted sectors: enterprise_software_data_security, energy_climate, industrial_robotics_automation. Promoted themes: clean_chemicals_fertiliser, critical_minerals, battery_storage, semiconductor_packaging."
+    },
+    {
+      "canonical_name": "Icehouse Ventures",
+      "stage": "seed",
+      "deals_count": 4,
+      "lead_count": 0,
+      "actual_sector": [
+        "enterprise_software_data_security",
+        "fintech_financial_services",
+        "education_workforce",
+        "healthcare_life_sciences",
+        "industrial_robotics_automation"
+      ],
+      "actual_themes": [
+        "content_design_tools",
+        "financial_advice_workflows",
+        "education_training_platforms",
+        "career_skills_verification",
+        "medical_devices",
+        "diagnostics"
+      ],
+      "matching_notes": "4 seed evidence deal(s); 0 lead/co-lead. Promoted sectors: enterprise_software_data_security, fintech_financial_services, education_workforce. Promoted themes: content_design_tools, financial_advice_workflows, education_training_platforms, career_skills_verification."
+    },
+    {
+      "canonical_name": "Y Combinator",
+      "stage": "pre_seed",
+      "deals_count": 3,
+      "lead_count": 3,
+      "actual_sector": [
+        "enterprise_software_data_security",
+        "healthcare_life_sciences",
+        "energy_climate"
+      ],
+      "actual_themes": [
+        "digital_health_care_coordination",
+        "content_design_tools",
+        "ai_governance_security",
+        "autonomous_navigation_systems",
+        "agtech_farm_management"
+      ],
+      "matching_notes": "3 pre_seed evidence deal(s); 3 lead/co-lead. Promoted sectors: enterprise_software_data_security, healthcare_life_sciences, energy_climate. Promoted themes: digital_health_care_coordination, content_design_tools, ai_governance_security, autonomous_navigation_systems."
+    },
+    {
+      "canonical_name": "National Reconstruction Fund Corporation",
+      "stage": "series_a",
+      "deals_count": 3,
+      "lead_count": 2,
+      "actual_sector": [
+        "industrial_robotics_automation",
+        "healthcare_life_sciences",
+        "enterprise_software_data_security"
+      ],
+      "actual_themes": [
+        "semiconductor_packaging",
+        "space_launch_transport",
+        "hypersonics_defence",
+        "cloud_data_infrastructure"
+      ],
+      "matching_notes": "3 series_a evidence deal(s); 2 lead/co-lead. Promoted sectors: industrial_robotics_automation, healthcare_life_sciences, enterprise_software_data_security. Promoted themes: semiconductor_packaging, space_launch_transport, hypersonics_defence, cloud_data_infrastructure."
+    },
+    {
+      "canonical_name": "National Reconstruction Fund Corporation",
+      "stage": "series_c_plus",
+      "deals_count": 3,
+      "lead_count": 2,
+      "actual_sector": [
+        "aerospace_space_defence",
+        "healthcare_life_sciences",
+        "industrial_robotics_automation",
+        "enterprise_software_data_security"
+      ],
+      "actual_themes": [
+        "navigation_pnt_systems",
+        "autonomous_navigation_systems",
+        "satellite_space_systems",
+        "medical_devices",
+        "neurotechnology"
+      ],
+      "matching_notes": "3 series_c_plus evidence deal(s); 2 lead/co-lead. Promoted sectors: aerospace_space_defence, healthcare_life_sciences, industrial_robotics_automation. Promoted themes: navigation_pnt_systems, autonomous_navigation_systems, satellite_space_systems, medical_devices."
+    },
+    {
+      "canonical_name": "Antler",
+      "stage": "seed",
+      "deals_count": 3,
+      "lead_count": 0,
+      "actual_sector": [
+        "healthcare_life_sciences"
+      ],
+      "actual_themes": [
+        "preventive_chronic_care",
+        "womens_maternal_health",
+        "cloud_data_infrastructure",
+        "digital_health_care_coordination"
+      ],
+      "matching_notes": "3 seed evidence deal(s); 0 lead/co-lead. Promoted sectors: healthcare_life_sciences. Promoted themes: preventive_chronic_care, womens_maternal_health, cloud_data_infrastructure, digital_health_care_coordination."
+    },
+    {
+      "canonical_name": "Airtree Ventures",
+      "stage": "series_a",
+      "deals_count": 2,
+      "lead_count": 2,
+      "actual_sector": [
+        "healthcare_life_sciences",
+        "industrial_robotics_automation",
+        "enterprise_software_data_security"
+      ],
+      "actual_themes": [
+        "preventive_chronic_care",
+        "medical_devices",
+        "sales_marketing_intelligence",
+        "diagnostics"
+      ],
+      "matching_notes": "2 series_a evidence deal(s); 2 lead/co-lead. Promoted sectors: healthcare_life_sciences, industrial_robotics_automation, enterprise_software_data_security. Promoted themes: preventive_chronic_care, medical_devices, sales_marketing_intelligence, diagnostics."
+    },
+    {
+      "canonical_name": "Sprout Agritech",
+      "stage": "pre_seed",
+      "deals_count": 2,
+      "lead_count": 2,
+      "actual_sector": [
+        "healthcare_life_sciences",
+        "energy_climate",
+        "food_agriculture"
+      ],
+      "actual_themes": [
+        "agtech_farm_management",
+        "biotech_life_sciences",
+        "livestock_management"
+      ],
+      "matching_notes": "2 pre_seed evidence deal(s); 2 lead/co-lead. Promoted sectors: healthcare_life_sciences, energy_climate, food_agriculture. Promoted themes: agtech_farm_management, biotech_life_sciences, livestock_management."
+    },
+    {
+      "canonical_name": "Ventures ilab Accelerator",
+      "stage": "seed",
+      "deals_count": 2,
+      "lead_count": 2,
+      "actual_sector": [
+        "industrial_robotics_automation",
+        "healthcare_life_sciences",
+        "enterprise_software_data_security"
+      ],
+      "actual_themes": [
+        "vertical_business_operations",
+        "preventive_chronic_care"
+      ],
+      "matching_notes": "2 seed evidence deal(s); 2 lead/co-lead. Promoted sectors: industrial_robotics_automation, healthcare_life_sciences, enterprise_software_data_security. Promoted themes: vertical_business_operations, preventive_chronic_care."
+    },
+    {
+      "canonical_name": "Airtree Ventures",
+      "stage": "seed",
+      "deals_count": 2,
+      "lead_count": 1,
+      "actual_sector": [
+        "property_construction",
+        "enterprise_software_data_security"
+      ],
+      "actual_themes": [
+        "industrial_automation_procurement",
+        "developer_tools_app_platforms",
+        "building_materials"
+      ],
+      "matching_notes": "2 seed evidence deal(s); 1 lead/co-lead. Promoted sectors: property_construction, enterprise_software_data_security. Promoted themes: industrial_automation_procurement, developer_tools_app_platforms, building_materials."
+    },
+    {
+      "canonical_name": "Altered Capital",
+      "stage": "series_a",
+      "deals_count": 2,
+      "lead_count": 1,
+      "actual_sector": [
+        "enterprise_software_data_security",
+        "aerospace_space_defence"
+      ],
+      "actual_themes": [
+        "aviation_compliance_operations",
+        "product_analytics_user_research"
+      ],
+      "matching_notes": "2 series_a evidence deal(s); 1 lead/co-lead. Promoted sectors: enterprise_software_data_security, aerospace_space_defence. Promoted themes: aviation_compliance_operations, product_analytics_user_research."
+    },
+    {
+      "canonical_name": "Black Nova Venture Capital",
+      "stage": "pre_seed",
+      "deals_count": 2,
+      "lead_count": 1,
+      "actual_sector": [
+        "enterprise_software_data_security",
+        "energy_climate",
+        "consumer_marketplace"
+      ],
+      "actual_themes": [
+        "battery_storage",
+        "renewable_distributed_energy",
+        "ai_governance_security"
+      ],
+      "matching_notes": "2 pre_seed evidence deal(s); 1 lead/co-lead. Promoted sectors: enterprise_software_data_security, energy_climate, consumer_marketplace. Promoted themes: battery_storage, renewable_distributed_energy, ai_governance_security."
+    },
+    {
+      "canonical_name": "Black Nova Venture Capital",
+      "stage": "seed",
+      "deals_count": 2,
+      "lead_count": 1,
+      "actual_sector": [
+        "industrial_robotics_automation",
+        "healthcare_life_sciences"
+      ],
+      "actual_themes": [
+        "content_design_tools",
+        "building_materials",
+        "cloud_data_infrastructure"
+      ],
+      "matching_notes": "2 seed evidence deal(s); 1 lead/co-lead. Promoted sectors: industrial_robotics_automation, healthcare_life_sciences. Promoted themes: content_design_tools, building_materials, cloud_data_infrastructure."
+    },
+    {
+      "canonical_name": "CoAct Capital",
+      "stage": "series_a",
+      "deals_count": 2,
+      "lead_count": 1,
+      "actual_sector": [
+        "aerospace_space_defence",
+        "transport_logistics_infrastructure",
+        "enterprise_software_data_security",
+        "property_construction"
+      ],
+      "actual_themes": [
+        "aviation_compliance_operations",
+        "logistics_supply_chain"
+      ],
+      "matching_notes": "2 series_a evidence deal(s); 1 lead/co-lead. Promoted sectors: aerospace_space_defence, transport_logistics_infrastructure, enterprise_software_data_security. Promoted themes: aviation_compliance_operations, logistics_supply_chain."
+    },
+    {
+      "canonical_name": "Icehouse Ventures",
+      "stage": "pre_seed",
+      "deals_count": 2,
+      "lead_count": 1,
+      "actual_sector": [
+        "aerospace_space_defence",
+        "consumer_marketplace",
+        "enterprise_software_data_security",
+        "energy_climate"
+      ],
+      "actual_themes": [
+        "enterprise_data_platforms",
+        "satellite_space_systems",
+        "digital_advertising_marketing",
+        "geospatial_mapping_mlops",
+        "autonomous_navigation_systems"
+      ],
+      "matching_notes": "2 pre_seed evidence deal(s); 1 lead/co-lead. Promoted sectors: aerospace_space_defence, consumer_marketplace, enterprise_software_data_security. Promoted themes: enterprise_data_platforms, satellite_space_systems, digital_advertising_marketing, geospatial_mapping_mlops."
+    },
+    {
+      "canonical_name": "Main Sequence Ventures",
+      "stage": "seed",
+      "deals_count": 2,
+      "lead_count": 1,
+      "actual_sector": [
+        "aerospace_space_defence",
+        "healthcare_life_sciences",
+        "enterprise_software_data_security",
+        "resources_mining_metals",
+        "industrial_robotics_automation"
+      ],
+      "actual_themes": [
+        "satellite_space_systems",
+        "diagnostics",
+        "navigation_pnt_systems",
+        "quantum_timing_infrastructure"
+      ],
+      "matching_notes": "2 seed evidence deal(s); 1 lead/co-lead. Promoted sectors: aerospace_space_defence, healthcare_life_sciences, enterprise_software_data_security. Promoted themes: satellite_space_systems, diagnostics, navigation_pnt_systems, quantum_timing_infrastructure."
+    },
+    {
+      "canonical_name": "Main Sequence Ventures",
+      "stage": "series_a",
+      "deals_count": 2,
+      "lead_count": 1,
+      "actual_sector": [
+        "aerospace_space_defence",
+        "healthcare_life_sciences",
+        "industrial_robotics_automation"
+      ],
+      "actual_themes": [
+        "defence_dual_use",
+        "biotech_life_sciences",
+        "biomanufacturing_fermentation",
+        "industrial_biotechnology"
+      ],
+      "matching_notes": "2 series_a evidence deal(s); 1 lead/co-lead. Promoted sectors: aerospace_space_defence, healthcare_life_sciences, industrial_robotics_automation. Promoted themes: defence_dual_use, biotech_life_sciences, biomanufacturing_fermentation, industrial_biotechnology."
+    },
+    {
+      "canonical_name": "OIF Ventures",
+      "stage": "series_c_plus",
+      "deals_count": 2,
+      "lead_count": 1,
+      "actual_sector": [
+        "aerospace_space_defence",
+        "healthcare_life_sciences",
+        "industrial_robotics_automation",
+        "enterprise_software_data_security"
+      ],
+      "actual_themes": [
+        "navigation_pnt_systems",
+        "autonomous_navigation_systems",
+        "medical_devices",
+        "neurotechnology",
+        "industrial_robotics",
+        "enterprise_data_platforms"
+      ],
+      "matching_notes": "2 series_c_plus evidence deal(s); 1 lead/co-lead. Promoted sectors: aerospace_space_defence, healthcare_life_sciences, industrial_robotics_automation. Promoted themes: navigation_pnt_systems, autonomous_navigation_systems, medical_devices, neurotechnology."
+    },
+    {
+      "canonical_name": "OIF Ventures",
+      "stage": "seed",
+      "deals_count": 2,
+      "lead_count": 1,
+      "actual_sector": [
+        "fintech_financial_services",
+        "healthcare_life_sciences",
+        "property_construction"
+      ],
+      "actual_themes": [
+        "real_estate_construction_workflows",
+        "property_transaction_workflows",
+        "legaltech_contract_workflows",
+        "marketplace_commerce"
+      ],
+      "matching_notes": "2 seed evidence deal(s); 1 lead/co-lead. Promoted sectors: fintech_financial_services, healthcare_life_sciences, property_construction. Promoted themes: real_estate_construction_workflows, property_transaction_workflows, legaltech_contract_workflows, marketplace_commerce."
+    }
+  ],
+  "top_investor_preferences": [
+    {
+      "canonical_name": "Startmate",
+      "total_deals_found": 17,
+      "total_deals_used": 17,
+      "lead_ratio": "0.9412",
+      "data_quality": "high",
+      "overall_confidence": "0.9500",
+      "stage_coverage": {
+        "seed": {
+          "lead_count": 16,
+          "deals_count": 17,
+          "actual_sector": [
+            "enterprise_software_data_security",
+            "industrial_robotics_automation",
+            "healthcare_life_sciences",
+            "fintech_financial_services",
+            "property_construction"
+          ],
+          "actual_themes": [
+            "vertical_business_operations",
+            "product_analytics_user_research",
+            "clinical_decision_support",
+            "productivity_collaboration",
+            "real_estate_construction_workflows"
+          ]
+        }
+      },
+      "activity_summary": "17 core-stage deal(s) used for preferences: seed (17)."
+    },
+    {
+      "canonical_name": "Icehouse Ventures",
+      "total_deals_found": 14,
+      "total_deals_used": 14,
+      "lead_ratio": "0.2857",
+      "data_quality": "high",
+      "overall_confidence": "0.9500",
+      "stage_coverage": {
+        "seed": {
+          "lead_count": 0,
+          "deals_count": 4,
+          "actual_sector": [
+            "enterprise_software_data_security",
+            "fintech_financial_services",
+            "education_workforce",
+            "healthcare_life_sciences",
+            "industrial_robotics_automation"
+          ],
+          "actual_themes": [
+            "content_design_tools",
+            "financial_advice_workflows",
+            "education_training_platforms",
+            "career_skills_verification",
+            "medical_devices"
+          ]
+        },
+        "pre_seed": {
+          "lead_count": 1,
+          "deals_count": 2,
+          "actual_sector": [
+            "aerospace_space_defence",
+            "consumer_marketplace",
+            "enterprise_software_data_security",
+            "energy_climate"
+          ],
+          "actual_themes": [
+            "enterprise_data_platforms",
+            "satellite_space_systems",
+            "digital_advertising_marketing",
+            "geospatial_mapping_mlops",
+            "autonomous_navigation_systems"
+          ]
+        },
+        "series_a": {
+          "lead_count": 3,
+          "deals_count": 5,
+          "actual_sector": [
+            "enterprise_software_data_security",
+            "transport_logistics_infrastructure",
+            "fintech_financial_services",
+            "food_agriculture",
+            "healthcare_life_sciences"
+          ],
+          "actual_themes": [
+            "data_privacy_security",
+            "enterprise_data_platforms",
+            "fund_admin_private_markets",
+            "food_processing_manufacturing",
+            "grocery_meal_planning"
+          ]
+        },
+        "series_b": {
+          "lead_count": 0,
+          "deals_count": 2,
+          "actual_sector": [
+            "industrial_robotics_automation",
+            "aerospace_space_defence",
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "space_launch_transport",
+            "satellite_space_systems",
+            "retail_operations_order_management",
+            "automotive_parts_intelligence"
+          ]
+        },
+        "series_c_plus": {
+          "lead_count": 0,
+          "deals_count": 1,
+          "actual_sector": [
+            "healthcare_life_sciences",
+            "energy_climate",
+            "industrial_robotics_automation"
+          ],
+          "actual_themes": [
+            "productivity_collaboration",
+            "livestock_management",
+            "agtech_farm_management"
+          ]
+        }
+      },
+      "activity_summary": "14 core-stage deal(s) used for preferences: series_a (5), seed (4), pre_seed (2), series_b (2), series_c_plus (1)."
+    },
+    {
+      "canonical_name": "Antler",
+      "total_deals_found": 9,
+      "total_deals_used": 8,
+      "lead_ratio": "0.1111",
+      "data_quality": "high",
+      "overall_confidence": "0.9500",
+      "stage_coverage": {
+        "seed": {
+          "lead_count": 0,
+          "deals_count": 3,
+          "actual_sector": [
+            "healthcare_life_sciences"
+          ],
+          "actual_themes": [
+            "preventive_chronic_care",
+            "womens_maternal_health",
+            "cloud_data_infrastructure",
+            "digital_health_care_coordination"
+          ]
+        },
+        "pre_seed": {
+          "lead_count": 0,
+          "deals_count": 5,
+          "actual_sector": [
+            "energy_climate",
+            "consumer_marketplace",
+            "enterprise_software_data_security",
+            "industrial_robotics_automation",
+            "resources_mining_metals"
+          ],
+          "actual_themes": [
+            "digital_advertising_marketing",
+            "ai_governance_security",
+            "critical_minerals",
+            "battery_storage",
+            "enterprise_data_platforms"
+          ]
+        }
+      },
+      "activity_summary": "8 core-stage deal(s) used for preferences: pre_seed (5), seed (3)."
+    },
+    {
+      "canonical_name": "Blackbird Ventures",
+      "total_deals_found": 8,
+      "total_deals_used": 8,
+      "lead_ratio": "0.2500",
+      "data_quality": "high",
+      "overall_confidence": "0.9500",
+      "stage_coverage": {
+        "seed": {
+          "lead_count": 2,
+          "deals_count": 5,
+          "actual_sector": [
+            "enterprise_software_data_security",
+            "industrial_robotics_automation",
+            "fintech_financial_services",
+            "education_workforce",
+            "property_construction"
+          ],
+          "actual_themes": [
+            "financial_advice_workflows",
+            "education_training_platforms",
+            "career_skills_verification",
+            "content_design_tools",
+            "product_analytics_user_research"
+          ]
+        },
+        "series_b": {
+          "lead_count": 0,
+          "deals_count": 1,
+          "actual_sector": [
+            "industrial_robotics_automation",
+            "transport_logistics_infrastructure",
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "retail_operations_order_management",
+            "automotive_parts_intelligence",
+            "industrial_automation_procurement"
+          ]
+        },
+        "series_c_plus": {
+          "lead_count": 0,
+          "deals_count": 2,
+          "actual_sector": [
+            "healthcare_life_sciences",
+            "aerospace_space_defence",
+            "industrial_robotics_automation"
+          ],
+          "actual_themes": [
+            "productivity_collaboration",
+            "livestock_management",
+            "satellite_space_systems",
+            "agtech_farm_management"
+          ]
+        }
+      },
+      "activity_summary": "8 core-stage deal(s) used for preferences: seed (5), series_c_plus (2), series_b (1)."
+    },
+    {
+      "canonical_name": "National Reconstruction Fund Corporation",
+      "total_deals_found": 9,
+      "total_deals_used": 7,
+      "lead_ratio": "0.7778",
+      "data_quality": "high",
+      "overall_confidence": "0.9100",
+      "stage_coverage": {
+        "series_a": {
+          "lead_count": 2,
+          "deals_count": 3,
+          "actual_sector": [
+            "industrial_robotics_automation",
+            "healthcare_life_sciences",
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "semiconductor_packaging",
+            "space_launch_transport",
+            "hypersonics_defence",
+            "cloud_data_infrastructure"
+          ]
+        },
+        "series_b": {
+          "lead_count": 1,
+          "deals_count": 1,
+          "actual_sector": [
+            "industrial_robotics_automation",
+            "transport_logistics_infrastructure",
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "autonomous_navigation_systems",
+            "industrial_robotics"
+          ]
+        },
+        "series_c_plus": {
+          "lead_count": 2,
+          "deals_count": 3,
+          "actual_sector": [
+            "aerospace_space_defence",
+            "healthcare_life_sciences",
+            "industrial_robotics_automation",
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "navigation_pnt_systems",
+            "autonomous_navigation_systems",
+            "satellite_space_systems",
+            "medical_devices",
+            "neurotechnology"
+          ]
+        }
+      },
+      "activity_summary": "7 core-stage deal(s) used for preferences: series_a (3), series_c_plus (3), series_b (1)."
+    },
+    {
+      "canonical_name": "Airtree Ventures",
+      "total_deals_found": 8,
+      "total_deals_used": 7,
+      "lead_ratio": "0.6250",
+      "data_quality": "high",
+      "overall_confidence": "0.9100",
+      "stage_coverage": {
+        "seed": {
+          "lead_count": 1,
+          "deals_count": 2,
+          "actual_sector": [
+            "property_construction",
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "industrial_automation_procurement",
+            "developer_tools_app_platforms",
+            "building_materials"
+          ]
+        },
+        "pre_seed": {
+          "lead_count": 1,
+          "deals_count": 1,
+          "actual_sector": [
+            "fintech_financial_services",
+            "consumer_marketplace"
+          ],
+          "actual_themes": [
+            "personal_finance_tools",
+            "consumer_finance_banking"
+          ]
+        },
+        "series_a": {
+          "lead_count": 2,
+          "deals_count": 2,
+          "actual_sector": [
+            "healthcare_life_sciences",
+            "industrial_robotics_automation",
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "preventive_chronic_care",
+            "medical_devices",
+            "sales_marketing_intelligence",
+            "diagnostics"
+          ]
+        },
+        "series_b": {
+          "lead_count": 0,
+          "deals_count": 1,
+          "actual_sector": [
+            "industrial_robotics_automation",
+            "transport_logistics_infrastructure",
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "retail_operations_order_management",
+            "automotive_parts_intelligence",
+            "industrial_automation_procurement"
+          ]
+        },
+        "series_c_plus": {
+          "lead_count": 1,
+          "deals_count": 1,
+          "actual_sector": [
+            "aerospace_space_defence",
+            "industrial_robotics_automation"
+          ],
+          "actual_themes": [
+            "navigation_pnt_systems",
+            "autonomous_navigation_systems",
+            "industrial_robotics"
+          ]
+        }
+      },
+      "activity_summary": "7 core-stage deal(s) used for preferences: seed (2), series_a (2), pre_seed (1), series_b (1), series_c_plus (1)."
+    },
+    {
+      "canonical_name": "Main Sequence Ventures",
+      "total_deals_found": 8,
+      "total_deals_used": 7,
+      "lead_ratio": "0.2500",
+      "data_quality": "high",
+      "overall_confidence": "0.9100",
+      "stage_coverage": {
+        "seed": {
+          "lead_count": 1,
+          "deals_count": 2,
+          "actual_sector": [
+            "aerospace_space_defence",
+            "healthcare_life_sciences",
+            "enterprise_software_data_security",
+            "resources_mining_metals",
+            "industrial_robotics_automation"
+          ],
+          "actual_themes": [
+            "satellite_space_systems",
+            "diagnostics",
+            "navigation_pnt_systems",
+            "quantum_timing_infrastructure"
+          ]
+        },
+        "bridge": {
+          "lead_count": 0,
+          "deals_count": 1,
+          "actual_sector": [
+            "resources_mining_metals",
+            "aerospace_space_defence",
+            "industrial_robotics_automation"
+          ],
+          "actual_themes": [
+            "mineral_processing",
+            "defence_dual_use",
+            "autonomous_mapping",
+            "industrial_robotics",
+            "hazardous_environment_operations"
+          ]
+        },
+        "series_a": {
+          "lead_count": 1,
+          "deals_count": 2,
+          "actual_sector": [
+            "aerospace_space_defence",
+            "healthcare_life_sciences",
+            "industrial_robotics_automation"
+          ],
+          "actual_themes": [
+            "defence_dual_use",
+            "biotech_life_sciences",
+            "biomanufacturing_fermentation",
+            "industrial_biotechnology"
+          ]
+        },
+        "series_c_plus": {
+          "lead_count": 0,
+          "deals_count": 2,
+          "actual_sector": [
+            "aerospace_space_defence",
+            "industrial_robotics_automation",
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "navigation_pnt_systems",
+            "autonomous_navigation_systems",
+            "satellite_space_systems",
+            "industrial_robotics"
+          ]
+        }
+      },
+      "activity_summary": "7 core-stage deal(s) used for preferences: seed (2), series_a (2), series_c_plus (2), bridge (1)."
+    },
+    {
+      "canonical_name": "Ventures ilab Accelerator",
+      "total_deals_found": 7,
+      "total_deals_used": 7,
+      "lead_ratio": "1.0000",
+      "data_quality": "high",
+      "overall_confidence": "0.9100",
+      "stage_coverage": {
+        "seed": {
+          "lead_count": 2,
+          "deals_count": 2,
+          "actual_sector": [
+            "industrial_robotics_automation",
+            "healthcare_life_sciences",
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "vertical_business_operations",
+            "preventive_chronic_care"
+          ]
+        },
+        "pre_seed": {
+          "lead_count": 5,
+          "deals_count": 5,
+          "actual_sector": [
+            "enterprise_software_data_security",
+            "healthcare_life_sciences",
+            "education_workforce",
+            "industrial_robotics_automation",
+            "fintech_financial_services"
+          ],
+          "actual_themes": [
+            "proposal_tender_workflows",
+            "biotech_life_sciences",
+            "quantum_timing_infrastructure",
+            "education_training_platforms",
+            "personal_finance_tools"
+          ]
+        }
+      },
+      "activity_summary": "7 core-stage deal(s) used for preferences: pre_seed (5), seed (2)."
+    },
+    {
+      "canonical_name": "OIF Ventures",
+      "total_deals_found": 7,
+      "total_deals_used": 6,
+      "lead_ratio": "0.2857",
+      "data_quality": "high",
+      "overall_confidence": "0.8700",
+      "stage_coverage": {
+        "seed": {
+          "lead_count": 1,
+          "deals_count": 2,
+          "actual_sector": [
+            "fintech_financial_services",
+            "healthcare_life_sciences",
+            "property_construction"
+          ],
+          "actual_themes": [
+            "real_estate_construction_workflows",
+            "property_transaction_workflows",
+            "legaltech_contract_workflows",
+            "marketplace_commerce"
+          ]
+        },
+        "series_a": {
+          "lead_count": 0,
+          "deals_count": 2,
+          "actual_sector": [
+            "transport_logistics_infrastructure",
+            "food_agriculture",
+            "enterprise_software_data_security",
+            "consumer_marketplace"
+          ],
+          "actual_themes": [
+            "data_privacy_security",
+            "enterprise_data_platforms",
+            "food_processing_manufacturing",
+            "grocery_meal_planning",
+            "developer_tools_app_platforms"
+          ]
+        },
+        "series_c_plus": {
+          "lead_count": 1,
+          "deals_count": 2,
+          "actual_sector": [
+            "aerospace_space_defence",
+            "healthcare_life_sciences",
+            "industrial_robotics_automation",
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "navigation_pnt_systems",
+            "autonomous_navigation_systems",
+            "medical_devices",
+            "neurotechnology",
+            "industrial_robotics"
+          ]
+        }
+      },
+      "activity_summary": "6 core-stage deal(s) used for preferences: seed (2), series_a (2), series_c_plus (2)."
+    },
+    {
+      "canonical_name": "Black Nova Venture Capital",
+      "total_deals_found": 6,
+      "total_deals_used": 6,
+      "lead_ratio": "0.5000",
+      "data_quality": "high",
+      "overall_confidence": "0.8700",
+      "stage_coverage": {
+        "seed": {
+          "lead_count": 1,
+          "deals_count": 2,
+          "actual_sector": [
+            "industrial_robotics_automation",
+            "healthcare_life_sciences"
+          ],
+          "actual_themes": [
+            "content_design_tools",
+            "building_materials",
+            "cloud_data_infrastructure"
+          ]
+        },
+        "bridge": {
+          "lead_count": 1,
+          "deals_count": 1,
+          "actual_sector": [
+            "property_construction",
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "real_estate_construction_workflows"
+          ]
+        },
+        "pre_seed": {
+          "lead_count": 1,
+          "deals_count": 2,
+          "actual_sector": [
+            "enterprise_software_data_security",
+            "energy_climate",
+            "consumer_marketplace"
+          ],
+          "actual_themes": [
+            "battery_storage",
+            "renewable_distributed_energy",
+            "ai_governance_security"
+          ]
+        },
+        "series_a": {
+          "lead_count": 0,
+          "deals_count": 1,
+          "actual_sector": [
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "customer_support_contact_center"
+          ]
+        }
+      },
+      "activity_summary": "6 core-stage deal(s) used for preferences: pre_seed (2), seed (2), bridge (1), series_a (1)."
+    },
+    {
+      "canonical_name": "Investible",
+      "total_deals_found": 5,
+      "total_deals_used": 5,
+      "lead_ratio": "0.4000",
+      "data_quality": "high",
+      "overall_confidence": "0.8300",
+      "stage_coverage": {
+        "seed": {
+          "lead_count": 1,
+          "deals_count": 1,
+          "actual_sector": [
+            "industrial_robotics_automation",
+            "property_construction",
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "content_design_tools",
+            "building_materials"
+          ]
+        },
+        "series_a": {
+          "lead_count": 1,
+          "deals_count": 4,
+          "actual_sector": [
+            "enterprise_software_data_security",
+            "energy_climate",
+            "industrial_robotics_automation",
+            "resources_mining_metals",
+            "transport_logistics_infrastructure"
+          ],
+          "actual_themes": [
+            "clean_chemicals_fertiliser",
+            "critical_minerals",
+            "battery_storage",
+            "semiconductor_packaging",
+            "logistics_supply_chain"
+          ]
+        }
+      },
+      "activity_summary": "5 core-stage deal(s) used for preferences: series_a (4), seed (1)."
+    },
+    {
+      "canonical_name": "Giant Leap Fund",
+      "total_deals_found": 5,
+      "total_deals_used": 4,
+      "lead_ratio": "0.2000",
+      "data_quality": "high",
+      "overall_confidence": "0.7900",
+      "stage_coverage": {
+        "seed": {
+          "lead_count": 1,
+          "deals_count": 4,
+          "actual_sector": [
+            "healthcare_life_sciences",
+            "enterprise_software_data_security",
+            "industrial_robotics_automation",
+            "education_workforce"
+          ],
+          "actual_themes": [
+            "preventive_chronic_care",
+            "womens_maternal_health",
+            "content_design_tools",
+            "building_materials",
+            "digital_health_care_coordination"
+          ]
+        }
+      },
+      "activity_summary": "4 core-stage deal(s) used for preferences: seed (4)."
+    },
+    {
+      "canonical_name": "Skip Capital",
+      "total_deals_found": 4,
+      "total_deals_used": 4,
+      "lead_ratio": "0.0000",
+      "data_quality": "high",
+      "overall_confidence": "0.7900",
+      "stage_coverage": {
+        "seed": {
+          "lead_count": 0,
+          "deals_count": 2,
+          "actual_sector": [
+            "industrial_robotics_automation",
+            "property_construction",
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "content_design_tools",
+            "product_analytics_user_research",
+            "developer_tools_app_platforms",
+            "building_materials",
+            "autonomous_mapping"
+          ]
+        },
+        "series_a": {
+          "lead_count": 0,
+          "deals_count": 1,
+          "actual_sector": [
+            "aerospace_space_defence",
+            "energy_climate"
+          ],
+          "actual_themes": [
+            "industrial_decarbonisation",
+            "aerospace_materials"
+          ]
+        },
+        "series_c_plus": {
+          "lead_count": 0,
+          "deals_count": 1,
+          "actual_sector": [
+            "industrial_robotics_automation",
+            "transport_logistics_infrastructure",
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "enterprise_data_platforms",
+            "digital_twin_infrastructure",
+            "geospatial_mapping_mlops",
+            "autonomous_mapping"
+          ]
+        }
+      },
+      "activity_summary": "4 core-stage deal(s) used for preferences: seed (2), series_a (1), series_c_plus (1)."
+    },
+    {
+      "canonical_name": "EVP",
+      "total_deals_found": 4,
+      "total_deals_used": 3,
+      "lead_ratio": "0.2500",
+      "data_quality": "high",
+      "overall_confidence": "0.7500",
+      "stage_coverage": {
+        "series_a": {
+          "lead_count": 0,
+          "deals_count": 1,
+          "actual_sector": [
+            "healthcare_life_sciences",
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "digital_health_care_coordination"
+          ]
+        },
+        "series_b": {
+          "lead_count": 0,
+          "deals_count": 2,
+          "actual_sector": [
+            "enterprise_software_data_security",
+            "food_agriculture",
+            "consumer_marketplace"
+          ],
+          "actual_themes": [
+            "enterprise_data_platforms",
+            "automotive_data_intelligence",
+            "marketplace_commerce",
+            "food_processing_manufacturing",
+            "hospitality_entertainment"
+          ]
+        }
+      },
+      "activity_summary": "3 core-stage deal(s) used for preferences: series_b (2), series_a (1)."
+    },
+    {
+      "canonical_name": "Altered Capital",
+      "total_deals_found": 3,
+      "total_deals_used": 3,
+      "lead_ratio": "0.6667",
+      "data_quality": "high",
+      "overall_confidence": "0.7500",
+      "stage_coverage": {
+        "seed": {
+          "lead_count": 1,
+          "deals_count": 1,
+          "actual_sector": [
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "content_design_tools"
+          ]
+        },
+        "series_a": {
+          "lead_count": 1,
+          "deals_count": 2,
+          "actual_sector": [
+            "enterprise_software_data_security",
+            "aerospace_space_defence"
+          ],
+          "actual_themes": [
+            "aviation_compliance_operations",
+            "product_analytics_user_research"
+          ]
+        }
+      },
+      "activity_summary": "3 core-stage deal(s) used for preferences: series_a (2), seed (1)."
+    },
+    {
+      "canonical_name": "CoAct Capital",
+      "total_deals_found": 3,
+      "total_deals_used": 3,
+      "lead_ratio": "0.3333",
+      "data_quality": "high",
+      "overall_confidence": "0.7500",
+      "stage_coverage": {
+        "series_a": {
+          "lead_count": 1,
+          "deals_count": 2,
+          "actual_sector": [
+            "aerospace_space_defence",
+            "transport_logistics_infrastructure",
+            "enterprise_software_data_security",
+            "property_construction"
+          ],
+          "actual_themes": [
+            "aviation_compliance_operations",
+            "logistics_supply_chain"
+          ]
+        },
+        "series_b": {
+          "lead_count": 0,
+          "deals_count": 1,
+          "actual_sector": [
+            "food_agriculture",
+            "consumer_marketplace",
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "marketplace_commerce",
+            "food_processing_manufacturing",
+            "hospitality_entertainment"
+          ]
+        }
+      },
+      "activity_summary": "3 core-stage deal(s) used for preferences: series_a (2), series_b (1)."
+    },
+    {
+      "canonical_name": "GD1 (Global From Day One)",
+      "total_deals_found": 3,
+      "total_deals_used": 3,
+      "lead_ratio": "0.3333",
+      "data_quality": "high",
+      "overall_confidence": "0.7500",
+      "stage_coverage": {
+        "seed": {
+          "lead_count": 0,
+          "deals_count": 1,
+          "actual_sector": [
+            "education_workforce",
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "education_training_platforms",
+            "career_skills_verification"
+          ]
+        },
+        "series_a": {
+          "lead_count": 1,
+          "deals_count": 1,
+          "actual_sector": [
+            "fintech_financial_services",
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "fund_admin_private_markets"
+          ]
+        },
+        "series_b": {
+          "lead_count": 0,
+          "deals_count": 1,
+          "actual_sector": [
+            "aerospace_space_defence",
+            "industrial_robotics_automation",
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "space_launch_transport",
+            "satellite_space_systems",
+            "in_orbit_servicing",
+            "hypersonics_defence",
+            "defence_dual_use"
+          ]
+        }
+      },
+      "activity_summary": "3 core-stage deal(s) used for preferences: seed (1), series_a (1), series_b (1)."
+    },
+    {
+      "canonical_name": "Hostplus",
+      "total_deals_found": 3,
+      "total_deals_used": 3,
+      "lead_ratio": "0.3333",
+      "data_quality": "high",
+      "overall_confidence": "0.7500",
+      "stage_coverage": {
+        "bridge": {
+          "lead_count": 0,
+          "deals_count": 1,
+          "actual_sector": [
+            "resources_mining_metals",
+            "aerospace_space_defence",
+            "industrial_robotics_automation"
+          ],
+          "actual_themes": [
+            "mineral_processing",
+            "defence_dual_use",
+            "autonomous_mapping",
+            "industrial_robotics",
+            "hazardous_environment_operations"
+          ]
+        },
+        "series_a": {
+          "lead_count": 0,
+          "deals_count": 1,
+          "actual_sector": [
+            "industrial_robotics_automation",
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "semiconductor_packaging",
+            "cloud_data_infrastructure",
+            "quantum_timing_infrastructure"
+          ]
+        },
+        "series_c_plus": {
+          "lead_count": 1,
+          "deals_count": 1,
+          "actual_sector": [
+            "aerospace_space_defence",
+            "industrial_robotics_automation",
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "satellite_space_systems"
+          ]
+        }
+      },
+      "activity_summary": "3 core-stage deal(s) used for preferences: bridge (1), series_a (1), series_c_plus (1)."
+    },
+    {
+      "canonical_name": "K1W1",
+      "total_deals_found": 3,
+      "total_deals_used": 3,
+      "lead_ratio": "0.0000",
+      "data_quality": "high",
+      "overall_confidence": "0.7500",
+      "stage_coverage": {
+        "seed": {
+          "lead_count": 0,
+          "deals_count": 1,
+          "actual_sector": [
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "content_design_tools"
+          ]
+        },
+        "pre_seed": {
+          "lead_count": 0,
+          "deals_count": 1,
+          "actual_sector": [
+            "aerospace_space_defence",
+            "energy_climate",
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "satellite_space_systems",
+            "enterprise_data_platforms",
+            "geospatial_mapping_mlops",
+            "autonomous_navigation_systems"
+          ]
+        },
+        "series_a": {
+          "lead_count": 0,
+          "deals_count": 1,
+          "actual_sector": [
+            "food_agriculture",
+            "consumer_marketplace",
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "food_processing_manufacturing",
+            "grocery_meal_planning"
+          ]
+        }
+      },
+      "activity_summary": "3 core-stage deal(s) used for preferences: pre_seed (1), seed (1), series_a (1)."
+    },
+    {
+      "canonical_name": "NGS Super",
+      "total_deals_found": 3,
+      "total_deals_used": 3,
+      "lead_ratio": "0.0000",
+      "data_quality": "high",
+      "overall_confidence": "0.7500",
+      "stage_coverage": {
+        "bridge": {
+          "lead_count": 0,
+          "deals_count": 1,
+          "actual_sector": [
+            "resources_mining_metals",
+            "aerospace_space_defence",
+            "industrial_robotics_automation"
+          ],
+          "actual_themes": [
+            "mineral_processing",
+            "defence_dual_use",
+            "autonomous_mapping",
+            "industrial_robotics",
+            "hazardous_environment_operations"
+          ]
+        },
+        "series_a": {
+          "lead_count": 0,
+          "deals_count": 1,
+          "actual_sector": [
+            "healthcare_life_sciences",
+            "industrial_robotics_automation",
+            "food_agriculture"
+          ],
+          "actual_themes": [
+            "biotech_life_sciences",
+            "biomanufacturing_fermentation",
+            "industrial_biotechnology"
+          ]
+        },
+        "series_c_plus": {
+          "lead_count": 0,
+          "deals_count": 1,
+          "actual_sector": [
+            "aerospace_space_defence",
+            "industrial_robotics_automation",
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "satellite_space_systems"
+          ]
+        }
+      },
+      "activity_summary": "3 core-stage deal(s) used for preferences: bridge (1), series_a (1), series_c_plus (1)."
+    },
+    {
+      "canonical_name": "New Zealand Growth Capital Partners",
+      "total_deals_found": 3,
+      "total_deals_used": 3,
+      "lead_ratio": "0.0000",
+      "data_quality": "high",
+      "overall_confidence": "0.7500",
+      "stage_coverage": {
+        "seed": {
+          "lead_count": 0,
+          "deals_count": 2,
+          "actual_sector": [
+            "enterprise_software_data_security",
+            "healthcare_life_sciences",
+            "industrial_robotics_automation"
+          ],
+          "actual_themes": [
+            "content_design_tools",
+            "medical_devices",
+            "diagnostics"
+          ]
+        },
+        "series_a": {
+          "lead_count": 0,
+          "deals_count": 1,
+          "actual_sector": [
+            "healthcare_life_sciences",
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "diagnostics",
+            "biotech_life_sciences"
+          ]
+        }
+      },
+      "activity_summary": "3 core-stage deal(s) used for preferences: seed (2), series_a (1)."
+    },
+    {
+      "canonical_name": "Pacific Channel",
+      "total_deals_found": 3,
+      "total_deals_used": 3,
+      "lead_ratio": "0.3333",
+      "data_quality": "high",
+      "overall_confidence": "0.7500",
+      "stage_coverage": {
+        "seed": {
+          "lead_count": 0,
+          "deals_count": 2,
+          "actual_sector": [
+            "healthcare_life_sciences",
+            "industrial_robotics_automation",
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "medical_devices",
+            "biotech_life_sciences",
+            "diagnostics",
+            "neurotechnology",
+            "accessibility_assistive_technology"
+          ]
+        },
+        "series_a": {
+          "lead_count": 1,
+          "deals_count": 1,
+          "actual_sector": [
+            "healthcare_life_sciences"
+          ],
+          "actual_themes": [
+            "medical_devices",
+            "diagnostics",
+            "biotech_life_sciences",
+            "drug_delivery"
+          ]
+        }
+      },
+      "activity_summary": "3 core-stage deal(s) used for preferences: seed (2), series_a (1)."
+    },
+    {
+      "canonical_name": "QIC",
+      "total_deals_found": 3,
+      "total_deals_used": 3,
+      "lead_ratio": "0.3333",
+      "data_quality": "high",
+      "overall_confidence": "0.7500",
+      "stage_coverage": {
+        "seed": {
+          "lead_count": 0,
+          "deals_count": 1,
+          "actual_sector": [
+            "fintech_financial_services",
+            "industrial_robotics_automation",
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "enterprise_data_platforms",
+            "industrial_robotics",
+            "asset_maintenance_fleet_management"
+          ]
+        },
+        "series_c_plus": {
+          "lead_count": 1,
+          "deals_count": 2,
+          "actual_sector": [
+            "aerospace_space_defence",
+            "industrial_robotics_automation",
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "satellite_space_systems"
+          ]
+        }
+      },
+      "activity_summary": "3 core-stage deal(s) used for preferences: series_c_plus (2), seed (1)."
+    },
+    {
+      "canonical_name": "QIC Ventures",
+      "total_deals_found": 3,
+      "total_deals_used": 3,
+      "lead_ratio": "0.6667",
+      "data_quality": "high",
+      "overall_confidence": "0.7500",
+      "stage_coverage": {
+        "seed": {
+          "lead_count": 1,
+          "deals_count": 1,
+          "actual_sector": [
+            "property_construction",
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "industrial_automation_procurement"
+          ]
+        },
+        "bridge": {
+          "lead_count": 0,
+          "deals_count": 1,
+          "actual_sector": [
+            "resources_mining_metals",
+            "aerospace_space_defence",
+            "industrial_robotics_automation"
+          ],
+          "actual_themes": [
+            "mineral_processing",
+            "defence_dual_use",
+            "autonomous_mapping",
+            "industrial_robotics",
+            "hazardous_environment_operations"
+          ]
+        },
+        "series_a": {
+          "lead_count": 1,
+          "deals_count": 1,
+          "actual_sector": [
+            "aerospace_space_defence",
+            "industrial_robotics_automation",
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "defence_dual_use"
+          ]
+        }
+      },
+      "activity_summary": "3 core-stage deal(s) used for preferences: bridge (1), seed (1), series_a (1)."
+    },
+    {
+      "canonical_name": "Shearwater Capital",
+      "total_deals_found": 3,
+      "total_deals_used": 3,
+      "lead_ratio": "0.6667",
+      "data_quality": "high",
+      "overall_confidence": "0.7500",
+      "stage_coverage": {
+        "seed": {
+          "lead_count": 1,
+          "deals_count": 2,
+          "actual_sector": [
+            "enterprise_software_data_security",
+            "consumer_marketplace"
+          ],
+          "actual_themes": [
+            "digital_advertising_marketing",
+            "content_design_tools"
+          ]
+        },
+        "series_a": {
+          "lead_count": 1,
+          "deals_count": 1,
+          "actual_sector": [
+            "enterprise_software_data_security"
+          ],
+          "actual_themes": [
+            "product_analytics_user_research"
+          ]
+        }
+      },
+      "activity_summary": "3 core-stage deal(s) used for preferences: seed (2), series_a (1)."
+    }
+  ],
+  "actual_sector_frequency": [
+    {
+      "actual_sector": "enterprise_software_data_security",
+      "rows": 235
+    },
+    {
+      "actual_sector": "industrial_robotics_automation",
+      "rows": 168
+    },
+    {
+      "actual_sector": "healthcare_life_sciences",
+      "rows": 103
+    },
+    {
+      "actual_sector": "aerospace_space_defence",
+      "rows": 71
+    },
+    {
+      "actual_sector": "energy_climate",
+      "rows": 57
+    },
+    {
+      "actual_sector": "consumer_marketplace",
+      "rows": 51
+    },
+    {
+      "actual_sector": "fintech_financial_services",
+      "rows": 41
+    },
+    {
+      "actual_sector": "transport_logistics_infrastructure",
+      "rows": 36
+    },
+    {
+      "actual_sector": "property_construction",
+      "rows": 32
+    },
+    {
+      "actual_sector": "resources_mining_metals",
+      "rows": 26
+    },
+    {
+      "actual_sector": "food_agriculture",
+      "rows": 23
+    },
+    {
+      "actual_sector": "education_workforce",
+      "rows": 10
+    }
+  ],
+  "actual_theme_frequency": [
+    {
+      "actual_theme": "enterprise_data_platforms",
+      "rows": 37
+    },
+    {
+      "actual_theme": "satellite_space_systems",
+      "rows": 35
+    },
+    {
+      "actual_theme": "defence_dual_use",
+      "rows": 32
+    },
+    {
+      "actual_theme": "medical_devices",
+      "rows": 31
+    },
+    {
+      "actual_theme": "diagnostics",
+      "rows": 30
+    },
+    {
+      "actual_theme": "biotech_life_sciences",
+      "rows": 29
+    },
+    {
+      "actual_theme": "content_design_tools",
+      "rows": 28
+    },
+    {
+      "actual_theme": "industrial_robotics",
+      "rows": 27
+    },
+    {
+      "actual_theme": "autonomous_navigation_systems",
+      "rows": 22
+    },
+    {
+      "actual_theme": "agtech_farm_management",
+      "rows": 21
+    },
+    {
+      "actual_theme": "digital_advertising_marketing",
+      "rows": 21
+    },
+    {
+      "actual_theme": "space_launch_transport",
+      "rows": 21
+    },
+    {
+      "actual_theme": "autonomous_mapping",
+      "rows": 20
+    },
+    {
+      "actual_theme": "hypersonics_defence",
+      "rows": 20
+    },
+    {
+      "actual_theme": "preventive_chronic_care",
+      "rows": 18
+    },
+    {
+      "actual_theme": "manufacturing_equipment",
+      "rows": 16
+    },
+    {
+      "actual_theme": "navigation_pnt_systems",
+      "rows": 16
+    },
+    {
+      "actual_theme": "productivity_collaboration",
+      "rows": 16
+    },
+    {
+      "actual_theme": "building_materials",
+      "rows": 15
+    },
+    {
+      "actual_theme": "in_orbit_servicing",
+      "rows": 15
+    },
+    {
+      "actual_theme": "industrial_automation_procurement",
+      "rows": 15
+    },
+    {
+      "actual_theme": "womens_maternal_health",
+      "rows": 15
+    },
+    {
+      "actual_theme": "industrial_decarbonisation",
+      "rows": 13
+    },
+    {
+      "actual_theme": "quantum_timing_infrastructure",
+      "rows": 13
+    },
+    {
+      "actual_theme": "critical_minerals",
+      "rows": 12
+    },
+    {
+      "actual_theme": "data_privacy_security",
+      "rows": 12
+    },
+    {
+      "actual_theme": "food_processing_manufacturing",
+      "rows": 12
+    },
+    {
+      "actual_theme": "livestock_management",
+      "rows": 12
+    },
+    {
+      "actual_theme": "marketplace_commerce",
+      "rows": 12
+    },
+    {
+      "actual_theme": "battery_storage",
+      "rows": 11
+    },
+    {
+      "actual_theme": "payments_settlement",
+      "rows": 11
+    },
+    {
+      "actual_theme": "real_estate_construction_workflows",
+      "rows": 11
+    },
+    {
+      "actual_theme": "clean_chemicals_fertiliser",
+      "rows": 10
+    },
+    {
+      "actual_theme": "education_training_platforms",
+      "rows": 10
+    },
+    {
+      "actual_theme": "product_analytics_user_research",
+      "rows": 10
+    },
+    {
+      "actual_theme": "clinical_decision_support",
+      "rows": 9
+    },
+    {
+      "actual_theme": "consumer_products",
+      "rows": 9
+    },
+    {
+      "actual_theme": "developer_tools_app_platforms",
+      "rows": 9
+    },
+    {
+      "actual_theme": "digital_assets_web3",
+      "rows": 9
+    },
+    {
+      "actual_theme": "digital_health_care_coordination",
+      "rows": 9
+    },
+    {
+      "actual_theme": "geospatial_mapping_mlops",
+      "rows": 9
+    },
+    {
+      "actual_theme": "legaltech_contract_workflows",
+      "rows": 9
+    },
+    {
+      "actual_theme": "logistics_supply_chain",
+      "rows": 9
+    },
+    {
+      "actual_theme": "neurotechnology",
+      "rows": 9
+    },
+    {
+      "actual_theme": "retail_operations_order_management",
+      "rows": 9
+    },
+    {
+      "actual_theme": "ai_governance_security",
+      "rows": 8
+    },
+    {
+      "actual_theme": "automotive_parts_intelligence",
+      "rows": 8
+    },
+    {
+      "actual_theme": "circular_waste_recycling",
+      "rows": 8
+    },
+    {
+      "actual_theme": "immersive_ar_experiences",
+      "rows": 8
+    },
+    {
+      "actual_theme": "semiconductor_packaging",
+      "rows": 8
+    }
+  ],
+  "manual_review_frequency": [
+    {
+      "issue_type": "partial_taxonomy_assignment",
+      "missing_dimensions": [
+        "actual_themes"
+      ],
+      "rows": 2
+    }
+  ],
+  "manual_review_items": [
+    {
+      "company_name": "KGL Resources Ltd.",
+      "issue_type": "partial_taxonomy_assignment",
+      "missing_dimensions": [
+        "actual_themes"
+      ],
+      "source_payload": {
+        "round_stage": "post_ipo_equity",
+        "round_type_raw": "Private Placement",
+        "sector_primary": "investment_holding",
+        "company_summary": "TSX-V-listed capital-pool company seeking international acquisition opportunities.",
+        "sector_secondary": null,
+        "use_case_primary": "strategic_acquisitions",
+        "org_industries_raw": "Mineral, Mining, Project Management",
+        "use_case_secondary": []
+      }
+    },
+    {
+      "company_name": "Rava",
+      "issue_type": "partial_taxonomy_assignment",
+      "missing_dimensions": [
+        "actual_themes"
+      ],
+      "source_payload": {
+        "round_stage": "pre_seed",
+        "round_type_raw": "Accelerator Pre-Seed",
+        "sector_primary": "other",
+        "company_summary": "Rava restores authentic connections remotely.",
+        "sector_secondary": null,
+        "use_case_primary": "imported_company_use_case",
+        "org_industries_raw": "Computer, Electronics, Manufacturing",
+        "use_case_secondary": []
+      }
+    }
+  ],
+  "skipped": {
+    "investors_duplicate_record_key_replaced": 108,
+    "investors_duplicate_linkedin_cleared": 11,
+    "investors_duplicate_website_cleared": 9,
+    "investor_web_profiles_duplicate_record_key_replaced": 108,
+    "investor_team_members_duplicate_record_key_replaced": 56,
+    "investee_company_profiles_duplicate_record_key_replaced": 30,
+    "investor_external_ids_duplicate_record_key_replaced": 22,
+    "investee_external_ids_duplicate_record_key_replaced": 30
+  }
+}

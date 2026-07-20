@@ -25,10 +25,10 @@ export function LoginForm() {
     }
 
     // proxy.ts sends signed-out visitors here with ?from=<original path>
-    // so they land back where they meant to go instead of always /investors.
+    // so they land back where they meant to go instead of always the app home.
     const redirectTarget = getSafeRedirectTarget(
       searchParams.get("from"),
-      "/investors",
+      "/",
     );
     router.push(redirectTarget);
     router.refresh();

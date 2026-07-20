@@ -23,6 +23,7 @@ export type ProvisionUserInput = {
   email: string;
   role?: UserRole;
   invitedBy?: string;
+  password?: string;
 };
 
 export type ProvisionedUser = {
@@ -49,7 +50,7 @@ export async function provisionUser(
 ): Promise<ProvisionedUser> {
   const email = normalizeEmail(input.email);
   const role = userRoleSchema.parse(input.role ?? "founder");
-  const password = generateTemporaryPassword();
+  const password = input.password ?? generateTemporaryPassword();
 
   const existingUser = await findUserByEmail(email);
   if (existingUser) {

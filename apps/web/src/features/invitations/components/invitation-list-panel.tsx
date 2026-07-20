@@ -19,8 +19,8 @@ export function InvitationListPanel({ viewerRole }: { viewerRole: UserRole }) {
       <div>
         <h1 className="text-2xl font-semibold text-foreground">User Management</h1>
         <p className="mt-1 text-sm text-muted-foreground">
-          Invite founders, reviewers, or admins. They sign in with a temporary password
-          sent by email and are asked to change it right away.
+          Invite founders, reviewers, or admins. They receive a secure email link
+          and create their own password before signing in.
         </p>
       </div>
 

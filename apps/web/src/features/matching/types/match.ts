@@ -1,5 +1,12 @@
 import { z } from "zod";
 
+export const intakeRequestSchema = z.object({
+  message: z.string().min(1),
+  follow_up_answer: z.string().optional(),
+  follow_up_count: z.number().int().min(0).max(1).optional(),
+});
+export type IntakeRequest = z.infer<typeof intakeRequestSchema>;
+
 export const matchEvidenceSchema = z.object({
   chunk_id: z.string().optional().nullable(),
   section_key: z.string().optional().nullable(),
@@ -98,6 +105,21 @@ export const fileExtractionResponseSchema = z.object({
   truncated: z.boolean(),
 });
 
+export const matchRecordSchema = z.object({
+  id: z.string(),
+  createdAt: z.string(),
+  response: intakeResponseSchema,
+});
+
+export const runMatchDataSchema = z.object({
+  response: intakeResponseSchema,
+  record: matchRecordSchema.nullable(),
+});
+
+export const matchHistoryListDataSchema = z.object({
+  items: z.array(matchRecordSchema),
+});
+
 export type MatchEvidence = z.infer<typeof matchEvidenceSchema>;
 export type MatchRecentDeal = z.infer<typeof matchRecentDealSchema>;
 export type MatchInvestorProfile = z.infer<typeof matchInvestorProfileSchema>;
@@ -105,3 +127,6 @@ export type MatchEligibility = z.infer<typeof matchEligibilitySchema>;
 export type MatchResult = z.infer<typeof matchResultSchema>;
 export type IntakeResponse = z.infer<typeof intakeResponseSchema>;
 export type FileExtractionResponse = z.infer<typeof fileExtractionResponseSchema>;
+export type MatchRecord = z.infer<typeof matchRecordSchema>;
+export type RunMatchData = z.infer<typeof runMatchDataSchema>;
+export type MatchHistoryListData = z.infer<typeof matchHistoryListDataSchema>;

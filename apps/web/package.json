@@ -13,6 +13,7 @@
     "seed:admin": "tsx --conditions=react-server scripts/seed-admin-password.ts"
   },
   "dependencies": {
+    "@aws-sdk/client-sesv2": "^3.1086.0",
     "@base-ui/react": "^1.6.0",
     "@hookform/resolvers": "^5.4.0",
     "better-auth": "^1.6.23",
