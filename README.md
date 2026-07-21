@@ -94,49 +94,29 @@ The web app is available at `http://localhost:3000`.
 
 ## Local Database
 
-The local PostgreSQL database uses the unified product schema in `data/schemas/rally_investor_matching.schema.sql`.
+The local PostgreSQL database uses the same formal public schema and investor-intelligence dataset as the AWS development environment.
 
 On a fresh Docker volume, `docker compose -f infra/docker/docker-compose.yml up -d db` automatically applies:
 
 ```text
-data/schemas/rally_investor_matching.schema.sql
-data/seeds/local_investors.sql
+data/schemas/vc_matching_schema_aws_with_mvp_compat.sql
+data/patches/202607_formal_sample_import_extensions.sql
+data/seeds/formal_investor_data.sql
+data/seeds/public_admin_test.sql
 ```
 
-The local seed currently includes AirTree, Blackbird, Square Peg, and one demo founder company/match for API development.
+The investor snapshot was generated from AWS on 22 July 2026 and contains 481 investors, 423 investee profiles, 464 funding rounds, 704 investor/deal relationships, and the derived investor preference tables used by matching. It deliberately excludes authentication records, user profiles, founder companies, match history, and shortlists. User-linked reviewer IDs are removed from the shared snapshot.
 
-Investor cheque sizing is stored in `investors.cheque_ranges` as a JSONB array so each stage can have its own range:
-
-```json
-[
-  {
-    "stage": "pre_seed",
-    "amount_min": 149000,
-    "amount_max": null,
-    "currency": "AUD"
-  },
-  {
-    "stage": "series_f",
-    "amount_min": null,
-    "amount_max": 60000000,
-    "currency": "AUD"
-  }
-]
-```
-
-If your local Docker volume already existed before these init files were added, re-apply the schema and seed manually:
+PostgreSQL only runs `/docker-entrypoint-initdb.d` files when it creates a new volume. To replace an existing local database with the committed snapshot, remove the local development volume and start the services again:
 
 ```powershell
-vcmi-init-local-db
+docker compose -f infra/docker/docker-compose.yml down -v
+docker compose -f infra/docker/docker-compose.yml up -d db api
 ```
 
-Or pass a database URL explicitly:
+This removes only the local Docker database volume. Any locally created accounts, company profiles, match history, and shortlists in that volume will be deleted.
 
-```powershell
-vcmi-init-local-db --database-url postgresql://rally:rally_dev_password@localhost:5432/rally_investor_matching
-```
-
-Read the seeded investors through the API:
+Read the synced investors through the API:
 
 ```powershell
 Invoke-RestMethod http://localhost:8000/api/v1/investors

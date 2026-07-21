@@ -46,8 +46,8 @@ services:
     volumes:
       - postgres-data:/var/lib/postgresql/data
       - ../../data/schemas/vc_matching_schema_aws_with_mvp_compat.sql:/docker-entrypoint-initdb.d/001_schema.sql:ro
-      - ../../data/schemas/mvp_compat_search_path.sql:/docker-entrypoint-initdb.d/002_search_path.sql:ro
-      - ../../data/seeds/local_investors.sql:/docker-entrypoint-initdb.d/003_seed_local_investors.sql:ro
+      - ../../data/patches/202607_formal_sample_import_extensions.sql:/docker-entrypoint-initdb.d/002_formal_import_extensions.sql:ro
+      - ../../data/seeds/formal_investor_data.sql:/docker-entrypoint-initdb.d/003_formal_investor_data.sql:ro
       - ../../data/seeds/public_admin_test.sql:/docker-entrypoint-initdb.d/004_seed_public_admin_test.sql:ro
     healthcheck:
       test:
