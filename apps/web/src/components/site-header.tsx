@@ -5,7 +5,7 @@ import { AccountMenu } from "@/features/auth/components/account-menu";
 import type { UserRole } from "@/features/auth/types/auth";
 import { DropdownMenu, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { NavDropdownContent, NavDropdownItem } from "@/components/nav-dropdown";
-import { ChevronDownIcon } from "lucide-react";
+import { ChevronDownIcon, MenuIcon } from "lucide-react";
 
 type SiteHeaderSection =
   | "investors"
@@ -70,7 +70,7 @@ export function SiteHeader({ active, user }: SiteHeaderProps) {
   return (
     <header className="border-b border-border bg-card">
       <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-6 py-4">
-        <nav className="flex items-center gap-8">
+        <nav className="flex min-w-0 items-center gap-4 md:gap-8">
           <Link href="/" className="flex items-center gap-2">
             <Image
               src="/brand/rally-icon.png"
@@ -84,39 +84,63 @@ export function SiteHeader({ active, user }: SiteHeaderProps) {
               RALLY
             </span>
           </Link>
-          {NAV_LINKS.map((link) =>
-            link.section === active ? (
-              <span
-                key={link.section}
-                aria-current="page"
-                className="border-b-2 border-primary py-5 text-sm font-semibold text-foreground"
-              >
-                {link.label}
-              </span>
-            ) : (
-              <Link
-                key={link.section}
-                href={link.href}
-                className="text-sm font-medium text-muted-foreground transition hover:text-foreground"
-              >
-                {link.label}
-              </Link>
-            ),
-          )}
-          {showManagement ? (
+          <div className="hidden items-center gap-8 md:flex">
+            {NAV_LINKS.map((link) =>
+              link.section === active ? (
+                <span
+                  key={link.section}
+                  aria-current="page"
+                  className="border-b-2 border-primary py-5 text-sm font-semibold text-foreground"
+                >
+                  {link.label}
+                </span>
+              ) : (
+                <Link
+                  key={link.section}
+                  href={link.href}
+                  className="text-sm font-medium text-muted-foreground transition hover:text-foreground"
+                >
+                  {link.label}
+                </Link>
+              ),
+            )}
+            {showManagement ? (
+              <DropdownMenu>
+                <DropdownMenuTrigger
+                  className={
+                    isManagementActive
+                      ? "flex items-center gap-1 border-b-2 border-primary py-5 text-sm font-semibold text-foreground"
+                      : "flex items-center gap-1 text-sm font-medium text-muted-foreground transition hover:text-foreground"
+                  }
+                >
+                  Management
+                  <ChevronDownIcon className="size-3.5" />
+                </DropdownMenuTrigger>
+                <NavDropdownContent align="start">
+                  {MANAGEMENT_LINKS.map((link) => (
+                    <NavDropdownItem
+                      key={link.section}
+                      render={<Link href={link.href} />}
+                      data-active={link.section === active || undefined}
+                      className="data-active:font-semibold data-active:text-foreground"
+                    >
+                      {link.label}
+                    </NavDropdownItem>
+                  ))}
+                </NavDropdownContent>
+              </DropdownMenu>
+            ) : null}
+          </div>
+          <div className="md:hidden">
             <DropdownMenu>
               <DropdownMenuTrigger
-                className={
-                  isManagementActive
-                    ? "flex items-center gap-1 border-b-2 border-primary py-5 text-sm font-semibold text-foreground"
-                    : "flex items-center gap-1 text-sm font-medium text-muted-foreground transition hover:text-foreground"
-                }
+                aria-label="Open navigation"
+                className="flex size-9 items-center justify-center rounded-md border border-border text-foreground transition hover:bg-muted"
               >
-                Management
-                <ChevronDownIcon className="size-3.5" />
+                <MenuIcon className="size-5" />
               </DropdownMenuTrigger>
               <NavDropdownContent align="start">
-                {MANAGEMENT_LINKS.map((link) => (
+                {NAV_LINKS.map((link) => (
                   <NavDropdownItem
                     key={link.section}
                     render={<Link href={link.href} />}
@@ -126,9 +150,21 @@ export function SiteHeader({ active, user }: SiteHeaderProps) {
                     {link.label}
                   </NavDropdownItem>
                 ))}
+                {MANAGEMENT_LINKS.map((link) =>
+                  showManagement ? (
+                    <NavDropdownItem
+                      key={link.section}
+                      render={<Link href={link.href} />}
+                      data-active={link.section === active || undefined}
+                      className="data-active:font-semibold data-active:text-foreground"
+                    >
+                      {link.label}
+                    </NavDropdownItem>
+                  ) : null,
+                )}
               </NavDropdownContent>
             </DropdownMenu>
-          ) : null}
+          </div>
         </nav>
         <AccountMenu email={user.email} role={user.role} />
       </div>
