@@ -8,13 +8,13 @@ import {
   InvestorDetailLoading,
   InvestorDetailNotFound,
 } from "@/features/investors/components/investor-detail-states";
-import { InvestorDetailDeals } from "@/features/investors/components/investor-detail-deals";
-import { InvestorDetailFocus } from "@/features/investors/components/investor-detail-focus";
 import { InvestorDetailHeader } from "@/features/investors/components/investor-detail-header";
-import { InvestorDetailMore } from "@/features/investors/components/investor-detail-more";
 import { InvestorDetailSidebar } from "@/features/investors/components/investor-detail-sidebar";
 import { useInvestorDetail } from "@/features/investors/hooks/use-investor-detail";
 import type { InvestorDetail } from "@/features/investors/types/investor";
+import { VcInvestmentThesis } from "@/features/matching/components/vc-investment-thesis";
+import { VcRecentDeals } from "@/features/matching/components/vc-recent-deals";
+import { VcStagePreferences } from "@/features/matching/components/vc-stage-preferences";
 import { useShortlist } from "@/features/shortlist/hooks/use-shortlist";
 
 type InvestorDetailPanelProps = {
@@ -51,11 +51,17 @@ function InvestorDetailContent({
         onToggleShortlist={shortlist.toggle}
       />
 
-      <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_320px]">
-        <div className="space-y-5">
-          <InvestorDetailFocus investor={investor} />
-          <InvestorDetailDeals investor={investor} />
-          <InvestorDetailMore investor={investor} />
+      <div className="grid items-start gap-5 lg:grid-cols-[minmax(0,1fr)_320px]">
+        <div className="min-w-0 space-y-5">
+          <VcInvestmentThesis
+            activitySummary={investor.activitySummary}
+            screeningNotes={investor.screeningNotes}
+            sectorFocus={investor.sectorFocus}
+            themeFocus={investor.businessModelFocus}
+            preferences={investor.stagePreferences}
+          />
+          <VcStagePreferences preferences={investor.stagePreferences} />
+          <VcRecentDeals deals={investor.recentDeals} />
         </div>
 
         <InvestorDetailSidebar investor={investor} />

@@ -1,4 +1,4 @@
-import { ExternalLink, Link2, MapPin, ShieldCheck } from "lucide-react";
+import { ExternalLink, Link2, MapPin, Radar, ShieldCheck } from "lucide-react";
 
 import {
   investorTypeLabel,
@@ -10,29 +10,27 @@ import {
 import type { InvestorDetail } from "@/features/investors/types/investor";
 import { cn } from "@/lib/utils";
 
-type InvestorDetailSidebarProps = {
-  investor: InvestorDetail;
-};
-
-function formatReviewedDate(value: string | null | undefined): string | null {
-  if (!value) {
-    return null;
-  }
+function formatReviewedDate(value: string | null | undefined): string {
+  if (!value) return "Not specified";
   const parsed = new Date(value);
-  if (Number.isNaN(parsed.getTime())) {
-    return null;
-  }
-  return new Intl.DateTimeFormat("en-AU", {
-    dateStyle: "medium",
-  }).format(parsed);
+  if (Number.isNaN(parsed.getTime())) return "Not specified";
+  return new Intl.DateTimeFormat("en-AU", { dateStyle: "medium" }).format(parsed);
+}
+
+function DetailRow({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="flex items-start justify-between gap-3 text-sm">
+      <dt className="text-muted-foreground">{label}</dt>
+      <dd className="text-right font-semibold text-foreground">{value}</dd>
+    </div>
+  );
 }
 
 function ContactCard({ investor }: { investor: InvestorDetail }) {
   return (
     <section className="rounded-lg border border-border bg-card p-5 shadow-sm">
-      <h2 className="text-sm font-semibold text-foreground">Contact &amp; location</h2>
-
-      <div className="mt-3 space-y-2 text-sm text-muted-foreground">
+      <h2 className="text-base font-semibold text-foreground">Contact and location</h2>
+      <div className="mt-4 space-y-3 text-sm text-muted-foreground">
         <p className="flex items-center gap-2">
           <MapPin className="size-4 shrink-0" aria-hidden="true" />
           {locationLabel(investor)}
@@ -44,7 +42,7 @@ function ContactCard({ investor }: { investor: InvestorDetail }) {
               href={investor.websiteUrl}
               target="_blank"
               rel="noreferrer"
-              className="font-medium text-foreground underline-offset-4 hover:underline"
+              className="font-medium text-foreground hover:underline"
             >
               {websiteHost(investor.websiteUrl)}
             </a>
@@ -59,41 +57,42 @@ function ContactCard({ investor }: { investor: InvestorDetail }) {
               href={investor.linkedinUrl}
               target="_blank"
               rel="noreferrer"
-              className="font-medium text-foreground underline-offset-4 hover:underline"
+              className="font-medium text-foreground hover:underline"
             >
               LinkedIn
             </a>
           </p>
         ) : null}
-        <p>
-          {investorTypeLabel(investor.investorType)}
-          {investor.foundedYear ? ` \u00b7 est. ${investor.foundedYear}` : ""}
-        </p>
+        <p>{investorTypeLabel(investor.investorType)}</p>
       </div>
     </section>
   );
 }
 
-function ProfileStatusCard({ investor }: { investor: InvestorDetail }) {
+function ProfileEvidenceCard({ investor }: { investor: InvestorDetail }) {
   const status = statusBadgeLabel(investor.screeningStatus);
-  const reviewedDate = formatReviewedDate(investor.updatedAt);
+  const confidence = investor.overallConfidence;
+  const evidenceLinks = new Set(
+    investor.recentDeals
+      .flatMap((deal) => [deal.investor_evidence_url, ...deal.source_urls])
+      .filter(Boolean),
+  ).size;
 
   return (
     <section className="rounded-lg border border-border bg-card p-5 shadow-sm">
-      <h2 className="flex items-center gap-2 text-sm font-semibold text-foreground">
+      <h2 className="flex items-center gap-2 text-base font-semibold text-foreground">
         <ShieldCheck className="size-4" aria-hidden="true" />
-        Profile status
+        Profile evidence
       </h2>
-
-      <dl className="mt-3 space-y-3 text-sm">
-        <div className="flex items-center justify-between gap-2">
-          <dt className="text-muted-foreground">Status</dt>
+      <dl className="mt-4 space-y-3">
+        <div className="flex items-center justify-between gap-3 text-sm">
+          <dt className="text-muted-foreground">Review status</dt>
           <dd>
             <span
               className={cn(
-                "inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-semibold",
+                "inline-flex rounded-full border px-2 py-0.5 text-xs font-semibold",
                 status.tone === "positive"
-                  ? "border-[#9fb600] bg-secondary text-primary"
+                  ? "border-secondary bg-secondary/35 text-primary"
                   : "border-border bg-muted text-muted-foreground",
               )}
             >
@@ -101,34 +100,68 @@ function ProfileStatusCard({ investor }: { investor: InvestorDetail }) {
             </span>
           </dd>
         </div>
-        <div className="flex items-center justify-between gap-2">
-          <dt className="text-muted-foreground">Priority</dt>
-          <dd className="font-medium text-foreground">
-            {titleCase(investor.screeningPriority)}
-          </dd>
-        </div>
-        <div className="flex items-center justify-between gap-2">
-          <dt className="text-muted-foreground">Last reviewed</dt>
-          <dd className="font-medium text-foreground">
-            {reviewedDate ?? "Not specified"}
-          </dd>
-        </div>
+        <DetailRow label="Data quality" value={titleCase(investor.dataQuality)} />
+        <DetailRow
+          label="Confidence"
+          value={
+            typeof confidence === "number"
+              ? `${Math.round(confidence * 100)}%`
+              : "Not specified"
+          }
+        />
+        <DetailRow label="Deals used" value={String(investor.totalDealsUsed ?? 0)} />
+        <DetailRow label="Evidence links" value={String(evidenceLinks)} />
+        <DetailRow
+          label="Last updated"
+          value={formatReviewedDate(investor.updatedAt)}
+        />
       </dl>
+    </section>
+  );
+}
 
-      {investor.screeningNotes ? (
-        <p className="mt-3 border-t border-dashed border-border pt-3 text-sm leading-6 text-muted-foreground">
-          {investor.screeningNotes}
-        </p>
+function InvestmentApproachCard({ investor }: { investor: InvestorDetail }) {
+  return (
+    <section className="rounded-lg border border-border bg-card p-5 shadow-sm">
+      <h2 className="flex items-center gap-2 text-base font-semibold text-foreground">
+        <Radar className="size-4" aria-hidden="true" />
+        Investment approach
+      </h2>
+      <dl className="mt-4 space-y-3">
+        <DetailRow label="Lead behaviour" value={titleCase(investor.leadBehavior)} />
+        <DetailRow label="AI appetite" value={titleCase(investor.aiAppetite)} />
+        <DetailRow
+          label="Preferred channel"
+          value={investor.preferredChannel ?? "Not specified"}
+        />
+      </dl>
+      {investor.entryChannels.length > 0 ? (
+        <div className="mt-4 border-t border-border pt-4">
+          <p className="text-xs font-semibold uppercase text-muted-foreground">
+            Entry channels
+          </p>
+          <div className="mt-2 flex flex-wrap gap-2">
+            {investor.entryChannels.map((channel) => (
+              <span
+                key={channel}
+                className="rounded-full border border-border bg-background px-2.5 py-1 text-xs text-muted-foreground"
+              >
+                {titleCase(channel)}
+              </span>
+            ))}
+          </div>
+        </div>
       ) : null}
     </section>
   );
 }
 
-export function InvestorDetailSidebar({ investor }: InvestorDetailSidebarProps) {
+export function InvestorDetailSidebar({ investor }: { investor: InvestorDetail }) {
   return (
-    <div className="space-y-5">
+    <aside className="space-y-4 lg:sticky lg:top-24">
       <ContactCard investor={investor} />
-      <ProfileStatusCard investor={investor} />
-    </div>
+      <ProfileEvidenceCard investor={investor} />
+      <InvestmentApproachCard investor={investor} />
+    </aside>
   );
 }

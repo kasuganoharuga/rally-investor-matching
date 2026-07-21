@@ -47,6 +47,13 @@ class InvestorDetail(InvestorSummary):
     preferred_channel: str | None = None
     screening_priority: str | None = None
     screening_notes: str | None = None
+    stage_preferences: list[dict[str, Any]] = Field(default_factory=list)
+    total_deals_used: int = 0
+    stage_coverage: dict[str, Any] = Field(default_factory=dict)
+    lead_ratio: float | None = None
+    overall_confidence: float | None = None
+    activity_summary: str | None = None
+    data_quality: str | None = None
     created_at: datetime | None = None
     updated_at: datetime | None = None
 

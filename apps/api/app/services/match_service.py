@@ -67,6 +67,13 @@ def build_match_investor_profile(row: dict[str, Any]) -> dict[str, Any]:
         "screening_status": row.get("screening_status"),
         "screening_priority": row.get("screening_priority"),
         "screening_notes": row.get("screening_notes"),
+        "stage_preferences": row.get("stage_preferences") or [],
+        "total_deals_used": row.get("total_deals_used") or 0,
+        "stage_coverage": row.get("stage_coverage") or {},
+        "lead_ratio": row.get("lead_ratio"),
+        "overall_confidence": row.get("overall_confidence"),
+        "activity_summary": row.get("activity_summary"),
+        "data_quality": row.get("data_quality"),
         "updated_at": (
             updated_at.isoformat() if hasattr(updated_at, "isoformat") else updated_at
         ),

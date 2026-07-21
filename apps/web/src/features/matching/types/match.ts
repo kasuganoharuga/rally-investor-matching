@@ -1,5 +1,19 @@
 import { z } from "zod";
 
+const nullableNumberSchema = z.preprocess((value) => {
+  if (typeof value === "string" && value.trim() !== "") {
+    const parsed = Number(value);
+    return Number.isNaN(parsed) ? value : parsed;
+  }
+  return value;
+}, z.number().optional().nullable());
+
+const stringArraySchema = z.preprocess(
+  (value) =>
+    Array.isArray(value) ? value.filter((item) => typeof item === "string") : [],
+  z.array(z.string()),
+);
+
 export const intakeRequestSchema = z.object({
   message: z.string().min(1),
   follow_up_answer: z.string().optional(),
@@ -28,13 +42,50 @@ export const matchRecentDealSchema = z
     amount_text: z.string().optional().nullable(),
     amount: z.string().optional().nullable(),
     amount_currency: z.string().optional().nullable(),
-    amount_value: z.number().optional().nullable(),
+    amount_value: nullableNumberSchema,
     role: z.string().optional().nullable(),
     date: z.string().optional().nullable(),
     direction: z.string().optional().nullable(),
+    actual_sector: z.string().optional().nullable(),
+    sector_secondary: z.string().optional().nullable(),
+    use_case_primary: z.string().optional().nullable(),
+    use_case_secondary: z.array(z.unknown()).optional().nullable(),
+    customer_type: z.string().optional().nullable(),
     business_model: z.string().optional().nullable(),
+    sales_motion: z.string().optional().nullable(),
+    technology_depth: z.string().optional().nullable(),
+    ai_relevance: z.string().optional().nullable(),
+    ai_usage_type: z.string().optional().nullable(),
+    company_summary: z.string().optional().nullable(),
+    confidence: z.string().optional().nullable(),
     company_geography: z.string().optional().nullable(),
+    source_urls: stringArraySchema,
     investor_evidence_url: z.string().optional().nullable(),
+  })
+  .passthrough();
+
+export const matchStagePreferenceSchema = z
+  .object({
+    stage: z.string().optional().nullable(),
+    deals_count: nullableNumberSchema,
+    deals_window_start: z.string().optional().nullable(),
+    deals_window_end: z.string().optional().nullable(),
+    lead_count: nullableNumberSchema,
+    participant_count: nullableNumberSchema,
+    leads_at_this_stage: z.boolean().optional().nullable(),
+    cheque_size_min_usd: nullableNumberSchema,
+    cheque_size_max_usd: nullableNumberSchema,
+    cheque_size_confidence: z.string().optional().nullable(),
+    recent_activity_score: nullableNumberSchema,
+    actual_sector: z.array(z.string()).default([]),
+    actual_themes: z.array(z.string()).default([]),
+    dimension_distributions: z.record(z.string(), z.unknown()).optional().default({}),
+    actual_archetypes: z.array(z.unknown()).optional().default([]),
+    matching_notes: z.string().optional().nullable(),
+    evidence_refs: z.array(z.record(z.string(), z.unknown())).default([]),
+    data_quality: z.string().optional().nullable(),
+    pipeline_version: z.string().optional().nullable(),
+    generated_at: z.string().optional().nullable(),
   })
   .passthrough();
 
@@ -60,6 +111,13 @@ export const matchInvestorProfileSchema = z.object({
   screening_status: z.string().optional().nullable(),
   screening_priority: z.string().optional().nullable(),
   screening_notes: z.string().optional().nullable(),
+  stage_preferences: z.array(matchStagePreferenceSchema).default([]),
+  total_deals_used: nullableNumberSchema,
+  stage_coverage: z.record(z.string(), z.unknown()).optional().default({}),
+  lead_ratio: nullableNumberSchema,
+  overall_confidence: nullableNumberSchema,
+  activity_summary: z.string().optional().nullable(),
+  data_quality: z.string().optional().nullable(),
   updated_at: z.string().optional().nullable(),
 });
 
@@ -122,6 +180,7 @@ export const matchHistoryListDataSchema = z.object({
 
 export type MatchEvidence = z.infer<typeof matchEvidenceSchema>;
 export type MatchRecentDeal = z.infer<typeof matchRecentDealSchema>;
+export type MatchStagePreference = z.infer<typeof matchStagePreferenceSchema>;
 export type MatchInvestorProfile = z.infer<typeof matchInvestorProfileSchema>;
 export type MatchEligibility = z.infer<typeof matchEligibilitySchema>;
 export type MatchResult = z.infer<typeof matchResultSchema>;

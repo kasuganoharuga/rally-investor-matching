@@ -33,6 +33,7 @@ export function initials(name: string): string {
 
 const INVESTOR_TYPE_LABELS: Record<string, string> = {
   vc: "VC fund",
+  vc_fund: "VC fund",
   angel_group: "Angel group",
   syndicate: "Syndicate",
   syndicate_platform: "Syndicate platform",
