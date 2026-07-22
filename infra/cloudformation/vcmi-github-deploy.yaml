@@ -1,0 +1,85 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: GitHub Actions OIDC role for Rally formal EC2 deployments.
+
+Parameters:
+  ProjectSlug:
+    Type: String
+    Default: vcmi
+    AllowedPattern: "^[a-z0-9-]+$"
+  Environment:
+    Type: String
+    Default: formal
+    AllowedPattern: "^[a-z0-9-]+$"
+  GitHubOrganization:
+    Type: String
+    Default: Torus-Group
+  GitHubRepository:
+    Type: String
+    Default: rally-investor-matching
+  GitHubBranch:
+    Type: String
+    Default: develop_new
+  GitHubOidcProviderArn:
+    Type: String
+    Description: Existing IAM OIDC provider ARN for token.actions.githubusercontent.com.
+  SourceBucket:
+    Type: String
+  SourceKey:
+    Type: String
+    Default: releases/formal/rally-formal-source.zip
+  InstanceId:
+    Type: AWS::EC2::Instance::Id
+
+Resources:
+  GitHubDeployRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub "${ProjectSlug}-${Environment}-github-actions-deploy"
+      Description: !Sub "GitHub Actions deployment role for ${GitHubOrganization}/${GitHubRepository}:${GitHubBranch}"
+      MaxSessionDuration: 3600
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Federated: !Ref GitHubOidcProviderArn
+            Action: sts:AssumeRoleWithWebIdentity
+            Condition:
+              StringEquals:
+                token.actions.githubusercontent.com:aud: sts.amazonaws.com
+                token.actions.githubusercontent.com:sub: !Sub "repo:${GitHubOrganization}/${GitHubRepository}:ref:refs/heads/${GitHubBranch}"
+      Policies:
+        - PolicyName: !Sub "${ProjectSlug}-${Environment}-github-actions-deploy"
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Sid: UploadDeploymentBundle
+                Effect: Allow
+                Action: s3:PutObject
+                Resource: !Sub "arn:${AWS::Partition}:s3:::${SourceBucket}/${SourceKey}"
+              - Sid: RunDeploymentOnFormalInstance
+                Effect: Allow
+                Action: ssm:SendCommand
+                Resource:
+                  - !Sub "arn:${AWS::Partition}:ssm:${AWS::Region}::document/AWS-RunShellScript"
+                  - !Sub "arn:${AWS::Partition}:ec2:${AWS::Region}:${AWS::AccountId}:instance/${InstanceId}"
+              - Sid: ReadDeploymentCommandStatus
+                Effect: Allow
+                Action:
+                  - ssm:GetCommandInvocation
+                  - ssm:ListCommandInvocations
+                Resource: "*"
+              - Sid: DescribeFormalInstance
+                Effect: Allow
+                Action: ec2:DescribeInstances
+                Resource: "*"
+              - Sid: TagFormalRelease
+                Effect: Allow
+                Action: ec2:CreateTags
+                Resource: !Sub "arn:${AWS::Partition}:ec2:${AWS::Region}:${AWS::AccountId}:instance/${InstanceId}"
+
+Outputs:
+  GitHubDeployRoleArn:
+    Value: !GetAtt GitHubDeployRole.Arn
+  GitHubSubject:
+    Value: !Sub "repo:${GitHubOrganization}/${GitHubRepository}:ref:refs/heads/${GitHubBranch}"

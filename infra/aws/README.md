@@ -148,3 +148,44 @@ Whichever compute option is used, store secrets outside Git:
 - auth/session secrets
 
 Never commit `.env` or copied RDS credentials.
+
+## Automatic Formal Deployment
+
+Pushes to `develop_new` are deployed to the formal EC2 environment by
+`.github/workflows/deploy-formal-aws.yml`.
+
+The workflow:
+
+1. Runs the web and API checks plus Docker Compose validation.
+2. Exchanges GitHub's OIDC token for a short-lived AWS role session.
+3. Archives the exact Git commit and uploads it to the formal deployment key.
+4. Uses AWS Systems Manager Run Command to build a versioned release on EC2.
+5. Switches `/opt/rally-current` only after the release builds successfully.
+6. Verifies the local and public web/API endpoints and rolls back on failure.
+
+No long-lived AWS keys or GitHub tokens are stored on EC2. The deployment
+command contains only release identifiers and S3 locations; application secrets
+remain in `/etc/rally/*.env` and AWS Secrets Manager.
+
+The least-privilege GitHub deployment role is defined in:
+
+- `infra/cloudformation/vcmi-github-deploy.yaml`
+
+Deploy or update that role with:
+
+```powershell
+aws cloudformation deploy `
+  --stack-name vcmi-formal-github-deploy `
+  --region ap-southeast-2 `
+  --template-file infra/cloudformation/vcmi-github-deploy.yaml `
+  --capabilities CAPABILITY_NAMED_IAM `
+  --parameter-overrides `
+    GitHubOidcProviderArn=arn:aws:iam::765332581489:oidc-provider/token.actions.githubusercontent.com `
+    SourceBucket=vcmi-dev-deploy-765332581489-ap-southeast-2 `
+    SourceKey=releases/formal/rally-formal-source.zip `
+    InstanceId=i-0cd72e60d642457ae
+```
+
+The workflow also supports a manual run from the GitHub Actions page. Deployments
+are serialized, so a second push waits for the active release instead of
+overwriting its bundle mid-deployment.

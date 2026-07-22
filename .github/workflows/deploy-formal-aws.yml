@@ -1,0 +1,189 @@
+name: Deploy formal AWS
+
+on:
+  push:
+    branches:
+      - develop_new
+  workflow_dispatch:
+
+concurrency:
+  group: rally-formal-aws-deploy
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+env:
+  AWS_REGION: ap-southeast-2
+  AWS_ROLE_ARN: arn:aws:iam::765332581489:role/vcmi-formal-github-actions-deploy
+  DEPLOY_BUCKET: vcmi-dev-deploy-765332581489-ap-southeast-2
+  DEPLOY_KEY: releases/formal/rally-formal-source.zip
+  EC2_INSTANCE_ID: i-0cd72e60d642457ae
+
+jobs:
+  verify:
+    name: Verify application
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          cache: pnpm
+
+      - name: Install web dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: apps/api/requirements-dev.txt
+
+      - name: Install API dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e .
+          python -m pip install -r apps/api/requirements-dev.txt
+
+      - name: Check web
+        run: |
+          pnpm lint:web
+          pnpm format:check:web
+          pnpm typecheck:web
+
+      - name: Check API
+        run: |
+          pnpm lint:api
+          pnpm format:check:api
+          pnpm test:api
+
+      - name: Check Docker configuration
+        run: docker compose -f infra/docker/docker-compose.yml config --quiet
+
+  deploy:
+    name: Deploy to formal EC2
+    needs: verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Configure AWS credentials through OIDC
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: ${{ env.AWS_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+          role-session-name: rally-formal-${{ github.run_id }}
+
+      - name: Build source bundle
+        shell: bash
+        run: |
+          set -euo pipefail
+          bundle_dir="$RUNNER_TEMP/rally-bundle"
+          archive_path="$RUNNER_TEMP/rally-formal-source.zip"
+          mkdir -p "$bundle_dir"
+          git archive "${GITHUB_SHA}" | tar -x -C "$bundle_dir"
+          printf '%s\n' "${GITHUB_SHA}" > "$bundle_dir/.rally-release-sha"
+          (
+            cd "$bundle_dir"
+            zip -qr "$archive_path" .
+          )
+          sha256sum "$archive_path"
+          aws s3 cp "$archive_path" "s3://${DEPLOY_BUCKET}/${DEPLOY_KEY}" \
+            --metadata "commit=${GITHUB_SHA},branch=develop_new"
+
+      - name: Deploy with Systems Manager
+        id: deploy
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          remote_script=$(cat <<EOF
+          set -euo pipefail
+          export RALLY_RELEASE_SHA='${GITHUB_SHA}'
+          export RALLY_RELEASE_BRANCH='develop_new'
+          export RALLY_SOURCE_BUCKET='${DEPLOY_BUCKET}'
+          export RALLY_SOURCE_KEY='${DEPLOY_KEY}'
+          [[ '${GITHUB_SHA}' =~ ^[0-9a-f]{40}$ ]] || exit 1
+          archive="/tmp/rally-formal-${GITHUB_SHA}.zip"
+          release="/opt/rally-releases/${GITHUB_SHA}"
+          aws s3 cp "s3://${DEPLOY_BUCKET}/${DEPLOY_KEY}" "\$archive" --region '${AWS_REGION}' --only-show-errors
+          rm -rf "\$release"
+          mkdir -p "\$release"
+          unzip -q "\$archive" -d "\$release"
+          exec bash "\$release/scripts/aws/deploy-formal-ec2.sh"
+          EOF
+          )
+
+          encoded_script=$(printf '%s' "$remote_script" | base64 -w 0)
+          parameters=$(jq -n --arg command "echo '$encoded_script' | base64 -d | bash" '{commands: [$command]}')
+          command_id=$(aws ssm send-command \
+            --instance-ids "$EC2_INSTANCE_ID" \
+            --document-name AWS-RunShellScript \
+            --comment "Deploy Rally formal ${GITHUB_SHA}" \
+            --timeout-seconds 1500 \
+            --parameters "$parameters" \
+            --query 'Command.CommandId' \
+            --output text)
+
+          echo "command_id=$command_id" >> "$GITHUB_OUTPUT"
+
+          status="Pending"
+          for _ in $(seq 1 150); do
+            invocation=$(aws ssm get-command-invocation \
+              --command-id "$command_id" \
+              --instance-id "$EC2_INSTANCE_ID" \
+              --output json 2>/dev/null || true)
+            status=$(jq -r '.Status // "Pending"' <<<"$invocation")
+            case "$status" in
+              Success)
+                printf '%s\n' "$invocation" | jq -r '.StandardOutputContent'
+                break
+                ;;
+              Failed|TimedOut|Cancelled|Cancelling)
+                printf '%s\n' "$invocation" | jq -r '.StandardOutputContent, .StandardErrorContent'
+                exit 1
+                ;;
+              *)
+                sleep 10
+                ;;
+            esac
+          done
+
+          if [[ "$status" != "Success" ]]; then
+            echo "Deployment did not finish within 25 minutes. Last status: $status" >&2
+            exit 1
+          fi
+
+      - name: Verify public endpoints and tag release
+        shell: bash
+        run: |
+          set -euo pipefail
+          public_ip=$(aws ec2 describe-instances \
+            --instance-ids "$EC2_INSTANCE_ID" \
+            --query 'Reservations[0].Instances[0].PublicIpAddress' \
+            --output text)
+          curl --fail --silent --show-error --retry 8 --retry-delay 5 \
+            "http://${public_ip}:8000/health"
+          curl --fail --silent --show-error --retry 8 --retry-delay 5 \
+            --output /dev/null "http://${public_ip}:3000"
+          aws ec2 create-tags \
+            --resources "$EC2_INSTANCE_ID" \
+            --tags \
+              "Key=RallyCommit,Value=${GITHUB_SHA}" \
+              "Key=RallyBranch,Value=develop_new" \
+              "Key=RallyWebUrl,Value=http://${public_ip}:3000"
+          echo "Rally formal deployed to http://${public_ip}:3000"
