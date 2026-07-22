@@ -1,10 +1,4 @@
-import {
-  AlertTriangle,
-  ArrowLeft,
-  ArrowRight,
-  Lightbulb,
-  X,
-} from "lucide-react";
+import { AlertTriangle, ArrowLeft, ArrowRight, Lightbulb, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import type {

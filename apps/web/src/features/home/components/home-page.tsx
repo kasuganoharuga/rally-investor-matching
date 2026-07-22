@@ -109,8 +109,8 @@ export function HomePage({ user }: HomePageProps) {
             RALLY
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/85">
-            Match early-stage founders with evidence-backed investors, then inspect
-            the database behind every recommendation.
+            Match early-stage founders with evidence-backed investors, then inspect the
+            database behind every recommendation.
           </p>
         </div>
 

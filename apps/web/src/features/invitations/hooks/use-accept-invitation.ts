@@ -20,7 +20,9 @@ export function useAcceptInvitation() {
   const [error, setError] = useState<AuthActionError | null>(null);
 
   const accept = useCallback(
-    async (input: AcceptInvitationInput): Promise<{ error: AuthActionError | null }> => {
+    async (
+      input: AcceptInvitationInput,
+    ): Promise<{ error: AuthActionError | null }> => {
       setIsSubmitting(true);
       setError(null);
 

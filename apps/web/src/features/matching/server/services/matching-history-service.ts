@@ -23,10 +23,7 @@ function isDataEnvelope(value: unknown): value is { data: unknown } {
 }
 
 export class MatchingHistoryService {
-  async runIntake(
-    request: IntakeRequest,
-    user: CurrentUser,
-  ): Promise<RunMatchData> {
+  async runIntake(request: IntakeRequest, user: CurrentUser): Promise<RunMatchData> {
     const response = await fetch(`${MATCHING_API_BASE_URL}/api/v1/match/intake`, {
       method: "POST",
       headers: {

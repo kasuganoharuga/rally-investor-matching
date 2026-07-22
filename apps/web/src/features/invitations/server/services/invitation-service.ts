@@ -100,9 +100,7 @@ export class InvitationService {
     return publicInvitation(invitation);
   }
 
-  async acceptInvitation(
-    input: AcceptInvitationInput,
-  ): Promise<AcceptedInvitation> {
+  async acceptInvitation(input: AcceptInvitationInput): Promise<AcceptedInvitation> {
     const invitation = await this.requirePendingInvitationByToken(input.token);
 
     const provisioned = await provisionUser({

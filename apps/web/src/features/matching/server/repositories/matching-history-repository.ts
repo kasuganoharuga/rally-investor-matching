@@ -30,11 +30,19 @@ function normalizeFundingStage(value: unknown): string | null {
   if (typeof value !== "string") {
     return null;
   }
-  const normalized = value.trim().toLowerCase().replaceAll("-", "_").replaceAll(" ", "_");
+  const normalized = value
+    .trim()
+    .toLowerCase()
+    .replaceAll("-", "_")
+    .replaceAll(" ", "_");
   if (normalized === "preseed") {
     return "pre_seed";
   }
-  if (normalized === "series_c" || normalized === "series_d" || normalized === "series_e") {
+  if (
+    normalized === "series_c" ||
+    normalized === "series_d" ||
+    normalized === "series_e"
+  ) {
     return "series_c_plus";
   }
   return KNOWN_FUNDING_STAGES.has(normalized) ? normalized : "unknown";

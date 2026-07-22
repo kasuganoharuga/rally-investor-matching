@@ -6,10 +6,7 @@ type MatchHistoryPanelProps = {
   onSelectRecord?: (record: MatchRecord) => void;
 };
 
-export function MatchHistoryPanel({
-  records,
-  onSelectRecord,
-}: MatchHistoryPanelProps) {
+export function MatchHistoryPanel({ records, onSelectRecord }: MatchHistoryPanelProps) {
   return (
     <section className="rounded-lg border border-border bg-card p-4 shadow-sm">
       <p className="text-xs font-semibold uppercase text-muted-foreground">

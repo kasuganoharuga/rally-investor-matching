@@ -14,7 +14,10 @@ export function ShortlistPanel() {
   if (shortlist.isLoading) {
     return (
       <section className="rounded-lg border border-border bg-card p-8 text-center shadow-sm">
-        <Loader2 className="mx-auto size-6 animate-spin text-primary" aria-hidden="true" />
+        <Loader2
+          className="mx-auto size-6 animate-spin text-primary"
+          aria-hidden="true"
+        />
         <p className="mt-3 text-sm font-medium text-muted-foreground">
           Loading your shortlist...
         </p>
@@ -48,8 +51,8 @@ export function ShortlistPanel() {
           No saved investors yet
         </h2>
         <p className="mx-auto mt-2 max-w-md text-sm leading-6 text-muted-foreground">
-          Save investors from the directory or from match results, then review them
-          here as one working shortlist.
+          Save investors from the directory or from match results, then review them here
+          as one working shortlist.
         </p>
         <div className="mt-5 flex flex-wrap justify-center gap-3">
           <Link href="/investors" className={cn(buttonVariants({ size: "lg" }))}>

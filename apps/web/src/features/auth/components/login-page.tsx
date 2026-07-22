@@ -13,7 +13,9 @@ export function LoginPage() {
       <Card className="w-full max-w-sm">
         <CardHeader>
           <CardTitle>Sign in</CardTitle>
-          <CardDescription>Use the email and password for your Rally account.</CardDescription>
+          <CardDescription>
+            Use the email and password for your Rally account.
+          </CardDescription>
         </CardHeader>
         <CardContent>
           <LoginForm />

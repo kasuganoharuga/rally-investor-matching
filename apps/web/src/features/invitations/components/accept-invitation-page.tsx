@@ -17,9 +17,9 @@ function formatRole(role: string): string {
 }
 
 export async function AcceptInvitationPage({ token }: AcceptInvitationPageProps) {
-  let invitation:
-    | Awaited<ReturnType<typeof invitationService.getPublicInvitation>>
-    | null = null;
+  let invitation: Awaited<
+    ReturnType<typeof invitationService.getPublicInvitation>
+  > | null = null;
 
   try {
     invitation = await invitationService.getPublicInvitation(token);

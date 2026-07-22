@@ -36,9 +36,7 @@ export class SesEmailProvider implements EmailProvider {
   constructor() {
     this.client = new SESv2Client({
       region:
-        process.env.AWS_REGION ??
-        process.env.AWS_DEFAULT_REGION ??
-        "ap-southeast-2",
+        process.env.AWS_REGION ?? process.env.AWS_DEFAULT_REGION ?? "ap-southeast-2",
     });
     this.fromEmail = requiredEnv("SES_FROM_EMAIL");
     this.replyToEmail = process.env.SES_REPLY_TO_EMAIL;

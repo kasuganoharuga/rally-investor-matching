@@ -50,10 +50,7 @@ export class ShortlistService {
     return shortlistListDataSchema.parse({ items });
   }
 
-  async add(
-    input: AddShortlistInput,
-    user: CurrentUser,
-  ): Promise<ShortlistItemData> {
+  async add(input: AddShortlistInput, user: CurrentUser): Promise<ShortlistItemData> {
     const row = await shortlistRepository.upsertForUser({
       userId: user.id,
       investorIdOrSlug: input.investorId,
@@ -82,10 +79,7 @@ export class ShortlistService {
     });
   }
 
-  async remove(
-    investorId: string,
-    user: CurrentUser,
-  ): Promise<RemoveShortlistData> {
+  async remove(investorId: string, user: CurrentUser): Promise<RemoveShortlistData> {
     const removedInvestorId = await shortlistRepository.softDeleteForUser({
       userId: user.id,
       investorIdOrSlug: investorId,

@@ -27,7 +27,9 @@ export function ShortlistToggleButton({
   presentation = "icon",
   className,
 }: ShortlistToggleButtonProps) {
-  const label = isShortlisted ? `Remove ${investorName} from shortlist` : `Save ${investorName}`;
+  const label = isShortlisted
+    ? `Remove ${investorName} from shortlist`
+    : `Save ${investorName}`;
   const icon = isPending ? (
     <Loader2 className="size-4 animate-spin" aria-hidden="true" />
   ) : (
