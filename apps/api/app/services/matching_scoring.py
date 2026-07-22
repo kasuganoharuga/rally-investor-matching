@@ -16,13 +16,20 @@ from datetime import date, datetime
 from decimal import Decimal
 from typing import Any
 
+from app.services.matching_taxonomy import (
+    SPARSE_THEME_PREF_THRESHOLD,
+    THEME_TO_SECTOR,
+    best_related_theme_match,
+    normalize_customer_type_code,
+)
+
 MATCHING_WEIGHTS = {
     "stage_evidence_depth": 10,
     "geography_fit": 5,
-    "sector_fit": 15,
-    "theme_fit": 25,
-    "recent_deal_similarity": 20,
-    "customer_icp_fit": 10,
+    "sector_fit": 20,
+    "theme_fit": 20,
+    "recent_deal_similarity": 25,
+    "customer_icp_fit": 5,
     "cheque_size_fit": 5,
     "lead_behavior_fit": 5,
     "data_quality_recency": 5,
@@ -667,11 +674,27 @@ def infer_founder_taxonomy(founder: dict[str, Any]) -> dict[str, list[str]]:
     explicit_sector = [
         str(item) for item in as_list(founder.get("actual_sector")) if str(item).strip()
     ]
+    primary_themes = [
+        str(item)
+        for item in as_list(founder.get("primary_themes"))
+        if str(item).strip()
+    ]
+    secondary_themes = [
+        str(item)
+        for item in as_list(founder.get("secondary_themes"))
+        if str(item).strip() and str(item) not in primary_themes
+    ]
     explicit_themes = [
         str(item) for item in as_list(founder.get("actual_themes")) if str(item).strip()
     ]
-    if explicit_sector or explicit_themes:
-        return {"actual_sector": explicit_sector, "actual_themes": explicit_themes}
+    themes = list(dict.fromkeys(primary_themes + secondary_themes + explicit_themes))
+    if explicit_sector or themes:
+        return {
+            "actual_sector": explicit_sector,
+            "actual_themes": themes,
+            "primary_themes": primary_themes,
+            "secondary_themes": secondary_themes,
+        }
 
     text = " ".join(
         norm_phrase(founder.get(field))
@@ -699,16 +722,19 @@ def infer_founder_taxonomy(founder: dict[str, Any]) -> dict[str, list[str]]:
     if not themes and founder.get("business_model"):
         themes.append(norm_phrase(founder.get("business_model")).replace(" ", "_"))
 
+    inferred = list(dict.fromkeys(themes))
     return {
         "actual_sector": list(dict.fromkeys(sectors)),
-        "actual_themes": list(dict.fromkeys(themes)),
+        "actual_themes": inferred,
+        "primary_themes": inferred[:1],
+        "secondary_themes": inferred[1:3],
     }
 
 
 def founder_customer_type(founder: dict[str, Any]) -> str | None:
-    value = norm_phrase(founder.get("customer_type") or founder.get("target_customer"))
+    value = founder.get("customer_type") or founder.get("target_customer")
     if value:
-        return value.replace(" ", "_")
+        return normalize_customer_type_code(str(value))
 
     text = " ".join(
         norm_phrase(founder.get(field))
@@ -1072,18 +1098,18 @@ def score_sector_fit(
     sector_matches = overlap(founder_sectors, stage_sectors)
     if sector_matches:
         weight = max_distribution_weight(pref or {}, "actual_sector", sector_matches)
-        score = 9 + round(weight * 6) + min(2, len(sector_matches) - 1)
-        return min(15, score), sector_matches
+        score = 12 + round(weight * 7) + min(2, len(sector_matches) - 1)
+        return min(20, score), sector_matches
 
     profile_matches = overlap(founder_sectors, profile.get("supported_sectors") or [])
     if profile_matches:
-        return 8, profile_matches
+        return 11, profile_matches
 
     if "enterprise_software_data_security" in stage_sectors and any(
         sector in founder_sectors
         for sector in ("enterprise_software_data_security", "property_construction")
     ):
-        return 5, ["broad enterprise software adjacency"]
+        return 6, ["broad enterprise software adjacency"]
 
     return 0, []
 
@@ -1092,10 +1118,42 @@ def score_theme_fit(
     founder_taxonomy: dict[str, list[str]],
     pref: dict[str, Any] | None,
     profile: dict[str, Any],
-) -> tuple[int, list[str]]:
-    founder_themes = founder_taxonomy["actual_themes"]
+    *,
+    theme_prevalence: dict[str, int] | None = None,
+) -> tuple[int, list[str], dict[str, Any]]:
+    primary_themes = [
+        str(item)
+        for item in as_list(founder_taxonomy.get("primary_themes"))
+        if str(item).strip()
+    ]
+    secondary_themes = [
+        str(item)
+        for item in as_list(founder_taxonomy.get("secondary_themes"))
+        if str(item).strip()
+    ]
+    founder_themes = list(
+        dict.fromkeys(
+            primary_themes
+            + secondary_themes
+            + [str(item) for item in founder_taxonomy.get("actual_themes", [])]
+        )
+    )
+    meta: dict[str, Any] = {
+        "evidence_status": "no_founder_themes",
+        "match_type": None,
+        "related_strength": 0.0,
+        "sparse_founder_themes": False,
+    }
     if not founder_themes:
-        return 0, []
+        return 0, [], meta
+
+    prevalence = theme_prevalence or {}
+    # Sparse check is driven by primary theme when present.
+    sparse_basis = primary_themes or founder_themes
+    sparse_founder_themes = all(
+        prevalence.get(theme, 0) < SPARSE_THEME_PREF_THRESHOLD for theme in sparse_basis
+    )
+    meta["sparse_founder_themes"] = sparse_founder_themes
 
     stage_themes = (
         [str(item) for item in as_list(pref.get("actual_themes"))] if pref else []
@@ -1103,14 +1161,68 @@ def score_theme_fit(
     theme_matches = overlap(founder_themes, stage_themes)
     if theme_matches:
         weight = max_distribution_weight(pref or {}, "actual_themes", theme_matches)
-        score = 15 + round(weight * 8) + min(3, len(theme_matches) - 1)
-        return min(25, score), theme_matches
+        score = 12 + round(weight * 6) + min(2, len(theme_matches) - 1)
+        if overlap(primary_themes, theme_matches):
+            score += 2
+        meta["evidence_status"] = "exact_match"
+        meta["match_type"] = "exact"
+        return min(20, score), theme_matches, meta
 
     profile_matches = overlap(founder_themes, profile.get("supported_themes") or [])
     if profile_matches:
-        return 12, profile_matches
+        meta["evidence_status"] = "exact_match"
+        meta["match_type"] = "profile_supported"
+        return 10, profile_matches, meta
 
-    return 0, []
+    supported_themes = [str(item) for item in as_list(profile.get("supported_themes"))]
+    # Prefer matching primary themes first for relatedness.
+    related_basis = primary_themes + [
+        theme for theme in founder_themes if theme not in primary_themes
+    ]
+    related_strength, founder_theme, investor_theme = best_related_theme_match(
+        related_basis,
+        stage_themes or supported_themes,
+    )
+    if related_strength >= 0.55 and founder_theme and investor_theme:
+        score = max(7, round(20 * related_strength * 0.7))
+        if founder_theme in primary_themes:
+            score += 1
+        meta["evidence_status"] = "related_match"
+        meta["match_type"] = "related"
+        meta["related_strength"] = related_strength
+        return min(15, score), [f"{founder_theme}->{investor_theme}"], meta
+
+    if related_strength >= 0.35 and founder_theme and investor_theme:
+        score = max(4, round(20 * related_strength * 0.55))
+        meta["evidence_status"] = "related_match"
+        meta["match_type"] = "weak_related"
+        meta["related_strength"] = related_strength
+        return min(10, score), [f"{founder_theme}->{investor_theme}"], meta
+
+    # Tiny same-sector fallback; avoid double-counting sector_fit.
+    founder_sectors = {
+        THEME_TO_SECTOR.get(theme)
+        for theme in founder_themes
+        if THEME_TO_SECTOR.get(theme)
+    }
+    investor_sectors = {
+        THEME_TO_SECTOR.get(str(theme))
+        for theme in stage_themes
+        if THEME_TO_SECTOR.get(str(theme))
+    }
+    if founder_sectors and founder_sectors & investor_sectors:
+        meta["evidence_status"] = "sector_only_support"
+        meta["match_type"] = "sector_only"
+        return 3, ["sector_only_support"], meta
+
+    if sparse_founder_themes:
+        # Sparse legal themes without hits are unknown evidence, not strong mismatch.
+        meta["evidence_status"] = "sparse_evidence"
+        meta["match_type"] = None
+        return 0, [], meta
+
+    meta["evidence_status"] = "mismatch"
+    return 0, [], meta
 
 
 def parsed_year(value: Any) -> int | None:
@@ -1163,34 +1275,34 @@ def score_recent_deal_similarity(
         if not deal_theme_matches and not deal_sector_matches:
             continue
 
-        deal_score = 2
+        deal_score = 3
         if deal_theme_matches:
-            deal_score += 9 + min(3, len(deal_theme_matches) - 1)
+            deal_score += 11 + min(3, len(deal_theme_matches) - 1)
         if deal_sector_matches:
-            deal_score += 4
+            deal_score += 5
         if "lead" in norm_phrase(item.get("role")):
             deal_score += 2
         elif item.get("role"):
             deal_score += 1
         deal_score += recency_points(item.get("date"))
-        best_deal_score = max(best_deal_score, min(deal_score, 20))
+        best_deal_score = max(best_deal_score, min(deal_score, 25))
         if item.get("company"):
             comparable_deals.append(str(item["company"]))
 
     if comparable_deals:
         score = best_deal_score + min(3, len(comparable_deals) - 1)
-        return min(score, 20), comparable_deals[:3]
+        return min(score, 25), comparable_deals[:3]
 
     deals_count = int(pref.get("deals_count") or 0)
     recency = to_float(pref.get("recent_activity_score"))
     score = 0
     if theme_matches:
-        score += 8
+        score += 10
     elif sector_matches:
-        score += 5
-    score += min(4, deals_count)
-    score += min(3, round(recency * 3))
-    return min(score, 20), []
+        score += 6
+    score += min(5, deals_count)
+    score += min(4, round(recency * 4))
+    return min(score, 25), []
 
 
 def score_customer_icp(founder: dict[str, Any], pref: dict[str, Any] | None) -> int:
@@ -1204,12 +1316,12 @@ def score_customer_icp(founder: dict[str, Any], pref: dict[str, Any] | None) -> 
             pref, "customer_type", [customer_type]
         )
         if customer_weight:
-            score += 5 + round(customer_weight * 2)
+            score += 3 + round(customer_weight)
     if business_model:
         model_weight = max_distribution_weight(pref, "business_model", [business_model])
         if model_weight:
-            score += 3 + round(model_weight)
-    return min(score, 10)
+            score += 1 + round(model_weight)
+    return min(score, 5)
 
 
 def founder_raise_usd_estimate(founder: dict[str, Any]) -> float | None:
@@ -1303,16 +1415,32 @@ def score_data_quality_recency(
 
 
 def score_tier(score: int) -> str:
-    if score >= 80:
+    # Slightly lower absolute thresholds for evidence-sparse formal matching.
+    if score >= 75:
         return "strong"
-    if score >= 65:
+    if score >= 60:
         return "good"
-    if score >= 45:
+    if score >= 42:
         return "possible"
     return "manual_review"
 
 
-def score_profile(founder: dict[str, Any], profile: dict[str, Any]) -> dict[str, Any]:
+def build_theme_prevalence(profiles: list[dict[str, Any]]) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    for profile in profiles:
+        for pref in stage_preferences(profile):
+            for theme in as_list(pref.get("actual_themes")):
+                key = str(theme)
+                counts[key] = counts.get(key, 0) + 1
+    return counts
+
+
+def score_profile(
+    founder: dict[str, Any],
+    profile: dict[str, Any],
+    *,
+    theme_prevalence: dict[str, int] | None = None,
+) -> dict[str, Any]:
     stage = normalize_stage(founder.get("stage") or founder.get("round_type"))
     pref, stage_match = best_stage_preference(profile, stage)
     founder_taxonomy = infer_founder_taxonomy(founder)
@@ -1320,18 +1448,28 @@ def score_profile(founder: dict[str, Any], profile: dict[str, Any]) -> dict[str,
     breakdown = {key: 0 for key in MATCHING_WEIGHTS}
     strengths: list[str] = []
     risks: list[str] = []
+    missing_evidence: list[str] = []
 
     breakdown["stage_evidence_depth"] = score_stage_evidence_depth(pref)
     breakdown["geography_fit"] = score_geography(founder, profile)
     sector_score, sector_matches = score_sector_fit(founder_taxonomy, pref, profile)
-    theme_score, theme_matches = score_theme_fit(founder_taxonomy, pref, profile)
+    theme_score, theme_matches, theme_meta = score_theme_fit(
+        founder_taxonomy,
+        pref,
+        profile,
+        theme_prevalence=theme_prevalence,
+    )
     breakdown["sector_fit"] = sector_score
     breakdown["theme_fit"] = theme_score
     recent_score, comparable_deals = score_recent_deal_similarity(
         founder_taxonomy,
         pref,
         sector_matches,
-        theme_matches,
+        [
+            item.split("->", 1)[0] if "->" in item else item
+            for item in theme_matches
+            if item != "sector_only_support"
+        ],
     )
     breakdown["recent_deal_similarity"] = recent_score
     breakdown["customer_icp_fit"] = score_customer_icp(founder, pref)
@@ -1351,10 +1489,22 @@ def score_profile(founder: dict[str, Any], profile: dict[str, Any]) -> dict[str,
     elif founder_is_anz(founder):
         risks.append("No clear AU/ANZ geography evidence.")
 
-    if theme_matches:
+    theme_status = theme_meta.get("evidence_status")
+    if theme_meta.get("match_type") == "exact":
         strengths.append(
             "Specific theme overlap: " + ", ".join(theme_matches[:3]) + "."
         )
+    elif theme_meta.get("match_type") in {"related", "weak_related"}:
+        strengths.append("Related theme support: " + ", ".join(theme_matches[:3]) + ".")
+    elif theme_status == "sector_only_support":
+        risks.append("Only same-sector theme support; no specific theme overlap.")
+        missing_evidence.append("theme_specific")
+    elif theme_status == "sparse_evidence":
+        risks.append(
+            "Founder theme evidence is sparse in the investor database; "
+            "theme non-match is treated as unknown rather than hard mismatch."
+        )
+        missing_evidence.append("theme_coverage")
     elif founder_taxonomy["actual_themes"]:
         risks.append("No specific second-level theme overlap in observed deals.")
 
@@ -1367,13 +1517,14 @@ def score_profile(founder: dict[str, Any], profile: dict[str, Any]) -> dict[str,
         strengths.append(
             "Comparable recent deals include " + ", ".join(comparable_deals[:3]) + "."
         )
-    elif breakdown["recent_deal_similarity"] < 8:
+    elif breakdown["recent_deal_similarity"] < 10:
         risks.append("Recent comparable deal evidence is thin.")
 
-    if breakdown["customer_icp_fit"] >= 7:
+    if breakdown["customer_icp_fit"] >= 4:
         strengths.append("Customer type or business model matches observed deals.")
     elif breakdown["customer_icp_fit"] == 0:
         risks.append("Customer/ICP fit is thin in observed data.")
+        missing_evidence.append("customer_icp")
 
     if breakdown["cheque_size_fit"] >= 4:
         strengths.append("Raise size appears within observed cheque range.")
@@ -1384,6 +1535,7 @@ def score_profile(founder: dict[str, Any], profile: dict[str, Any]) -> dict[str,
         strengths.append("Observed lead behaviour fits a founder seeking a lead.")
     elif founder.get("lead_needed") is True and breakdown["lead_behavior_fit"] <= 1:
         risks.append("Lead evidence is weak for this stage.")
+        missing_evidence.append("lead_behaviour")
 
     if pref and int(pref.get("deals_count") or 0) > 0:
         strengths.append(
@@ -1401,7 +1553,41 @@ def score_profile(founder: dict[str, Any], profile: dict[str, Any]) -> dict[str,
                 "AI is treated as a modifier; observed AI evidence is not strong."
             )
 
-    score = min(sum(int(value) for value in breakdown.values()), 100)
+    # Sparse theme non-matches should not consume the full 25-point denominator.
+    assessable_weights = dict(MATCHING_WEIGHTS)
+    if theme_status == "sparse_evidence":
+        assessable_weights["theme_fit"] = 0
+
+    raw_score = min(sum(int(value) for value in breakdown.values()), 100)
+    assessable_points = sum(assessable_weights.values())
+    earned_assessable = sum(
+        int(breakdown[key]) for key, weight in assessable_weights.items() if weight > 0
+    )
+    if assessable_points > 0:
+        normalized_score = min(100, round(earned_assessable / assessable_points * 100))
+    else:
+        normalized_score = raw_score
+
+    # Prefer normalized score for ranking when sparse evidence would otherwise
+    # systematically depress otherwise-strong matches.
+    score = normalized_score if theme_status == "sparse_evidence" else raw_score
+
+    core_missing = 0
+    if breakdown["sector_fit"] == 0:
+        core_missing += 1
+    if breakdown["stage_evidence_depth"] == 0:
+        core_missing += 1
+    if breakdown["geography_fit"] == 0:
+        core_missing += 1
+    if theme_status == "sparse_evidence" or len(missing_evidence) >= 2:
+        confidence = "low" if core_missing >= 1 else "medium"
+    elif core_missing >= 2:
+        confidence = "low"
+    elif core_missing == 1 or missing_evidence:
+        confidence = "medium"
+    else:
+        confidence = "high"
+
     eligibility = eligibility_check(founder, profile, stage_match)
     evidence = evidence_from_stage_preference(pref)
 
@@ -1409,6 +1595,12 @@ def score_profile(founder: dict[str, Any], profile: dict[str, Any]) -> dict[str,
         "investor_id": profile.get("investor_id"),
         "investor_name": profile.get("investor_name"),
         "score": score,
+        "raw_score": raw_score,
+        "normalized_score": normalized_score,
+        "assessable_points": assessable_points,
+        "confidence": confidence,
+        "missing_evidence": missing_evidence,
+        "theme_evidence": theme_meta,
         "match_tier": score_tier(score),
         "routing_pool": routing_pool,
         "routing_pool_label": ROUTING_POOL_LABELS[routing_pool],

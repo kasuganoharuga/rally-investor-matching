@@ -4,24 +4,13 @@ import { buttonVariants } from "@/components/ui/button";
 import type { MatchResult } from "@/features/matching/types/match";
 import { cn } from "@/lib/utils";
 
+import { MATCH_FACTOR_DETAIL_LABELS, MATCH_FACTOR_MAX } from "./match-display";
 import { formatDate, labelFromCode } from "./vc-detail-utils";
 import { DataRow } from "./vc-profile-primitives";
 
-const FACTORS: Record<string, { label: string; max: number }> = {
-  stage_evidence_depth: { label: "Stage evidence", max: 10 },
-  geography_fit: { label: "Geography", max: 5 },
-  sector_fit: { label: "Sector", max: 15 },
-  theme_fit: { label: "Specific direction", max: 25 },
-  recent_deal_similarity: { label: "Recent deal similarity", max: 20 },
-  customer_icp_fit: { label: "Customer / ICP", max: 10 },
-  cheque_size_fit: { label: "Cheque size", max: 5 },
-  lead_behavior_fit: { label: "Lead behaviour", max: 5 },
-  data_quality_recency: { label: "Data quality", max: 5 },
-};
-
 function MatchIntelligence({ match }: { match: MatchResult }) {
   const factorRows = Object.entries(match.breakdown)
-    .filter(([key, value]) => FACTORS[key] && value > 0)
+    .filter(([key, value]) => key in MATCH_FACTOR_MAX && value > 0)
     .sort((a, b) => b[1] - a[1]);
 
   return (
@@ -49,19 +38,20 @@ function MatchIntelligence({ match }: { match: MatchResult }) {
       {factorRows.length > 0 ? (
         <div className="mt-5 space-y-3">
           {factorRows.map(([key, value]) => {
-            const factor = FACTORS[key];
+            const max = MATCH_FACTOR_MAX[key] ?? 1;
+            const label = MATCH_FACTOR_DETAIL_LABELS[key] ?? key;
             return (
               <div key={key}>
                 <div className="flex items-center justify-between gap-3 text-xs">
-                  <span className="font-medium text-foreground">{factor.label}</span>
+                  <span className="font-medium text-foreground">{label}</span>
                   <span className="text-muted-foreground">
-                    {value}/{factor.max}
+                    {value}/{max}
                   </span>
                 </div>
                 <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-muted">
                   <div
                     className="h-full rounded-full bg-primary"
-                    style={{ width: `${Math.min((value / factor.max) * 100, 100)}%` }}
+                    style={{ width: `${Math.min((value / max) * 100, 100)}%` }}
                   />
                 </div>
               </div>

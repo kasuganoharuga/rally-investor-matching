@@ -10,6 +10,8 @@ import { ShortlistToggleButton } from "@/features/shortlist/components/shortlist
 import { useShortlist } from "@/features/shortlist/hooks/use-shortlist";
 import { cn } from "@/lib/utils";
 
+import { MATCH_FACTOR_DETAIL_LABELS, MATCH_FACTOR_MAX } from "./match-display";
+
 type MatchDetailPanelProps = {
   match: MatchResult;
   companyName: string;
@@ -17,17 +19,23 @@ type MatchDetailPanelProps = {
   onViewFullProfile: () => void;
 };
 
-const FACTORS = [
-  { key: "stage_evidence_depth", label: "Stage evidence depth", max: 10 },
-  { key: "geography_fit", label: "Geography fit", max: 5 },
-  { key: "sector_fit", label: "Sector fit", max: 15 },
-  { key: "theme_fit", label: "Specific theme fit", max: 25 },
-  { key: "recent_deal_similarity", label: "Recent deal similarity", max: 20 },
-  { key: "customer_icp_fit", label: "Customer / ICP fit", max: 10 },
-  { key: "cheque_size_fit", label: "Cheque size fit", max: 5 },
-  { key: "lead_behavior_fit", label: "Lead behaviour fit", max: 5 },
-  { key: "data_quality_recency", label: "Data quality / recency", max: 5 },
-] as const;
+const FACTORS = (
+  [
+    "stage_evidence_depth",
+    "geography_fit",
+    "sector_fit",
+    "theme_fit",
+    "recent_deal_similarity",
+    "customer_icp_fit",
+    "cheque_size_fit",
+    "lead_behavior_fit",
+    "data_quality_recency",
+  ] as const
+).map((key) => ({
+  key,
+  label: MATCH_FACTOR_DETAIL_LABELS[key] ?? key,
+  max: MATCH_FACTOR_MAX[key] ?? 1,
+}));
 
 function titleCase(value: string | null | undefined): string {
   if (!value) {

@@ -14,6 +14,7 @@ import { useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { MatchDetailPanel } from "@/features/matching/components/match-detail-panel";
+import { MATCH_FACTOR_MAX } from "@/features/matching/components/match-display";
 import { MatchHistoryPanel } from "@/features/matching/components/match-history-panel";
 import { VcDetailPanel } from "@/features/matching/components/vc-detail-panel";
 import { useMatchIntake } from "@/features/matching/hooks/use-match-intake";
@@ -412,17 +413,7 @@ function tierLabel(match: MatchResult): string {
 function signalPills(
   match: MatchResult,
 ): { label: string; tone: "good" | "warn" | "bad" }[] {
-  const factorMax: Record<string, number> = {
-    stage_evidence_depth: 10,
-    geography_fit: 5,
-    sector_fit: 15,
-    theme_fit: 25,
-    recent_deal_similarity: 20,
-    customer_icp_fit: 10,
-    cheque_size_fit: 5,
-    lead_behavior_fit: 5,
-    data_quality_recency: 5,
-  };
+  const factorMax = MATCH_FACTOR_MAX;
   const factorOrder = [
     "stage_evidence_depth",
     "sector_fit",

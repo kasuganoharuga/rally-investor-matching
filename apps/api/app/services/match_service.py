@@ -6,6 +6,7 @@ from app.repositories.investor_repository import investor_repository
 from app.schemas.match import IntakeRequest, IntakeResponse
 from app.services.founder_parser_service import parse_founder_message
 from app.services.matching_scoring import (
+    build_theme_prevalence,
     database_row_to_profile,
     score_profile,
     select_ranked_matches,
@@ -168,9 +169,14 @@ class MatchService:
     ) -> list[dict[str, Any]]:
         results = []
         rows = self._repository.list_match_profiles(connection)
-        for row in rows:
-            profile = database_row_to_profile(row)
-            result = score_profile(founder_profile, profile)
+        profiles = [database_row_to_profile(row) for row in rows]
+        theme_prevalence = build_theme_prevalence(profiles)
+        for row, profile in zip(rows, profiles, strict=True):
+            result = score_profile(
+                founder_profile,
+                profile,
+                theme_prevalence=theme_prevalence,
+            )
             if not result.get("eligibility", {}).get("passed", True):
                 continue
             result["investor_profile"] = build_match_investor_profile(row)

@@ -25,6 +25,19 @@ const MATCH_FACTOR_ORDER = [
   "data_quality_recency",
 ];
 
+/** Keep in sync with apps/api MATCHING_WEIGHTS. */
+export const MATCH_FACTOR_MAX: Record<string, number> = {
+  stage_evidence_depth: 10,
+  geography_fit: 5,
+  sector_fit: 20,
+  theme_fit: 20,
+  recent_deal_similarity: 25,
+  customer_icp_fit: 5,
+  cheque_size_fit: 5,
+  lead_behavior_fit: 5,
+  data_quality_recency: 5,
+};
+
 const MATCH_FACTOR_LABELS: Record<string, string> = {
   stage_evidence_depth: "Stage evidence",
   geography_fit: "Geography",
@@ -35,6 +48,18 @@ const MATCH_FACTOR_LABELS: Record<string, string> = {
   cheque_size_fit: "Cheque",
   lead_behavior_fit: "Lead",
   data_quality_recency: "Recency",
+};
+
+export const MATCH_FACTOR_DETAIL_LABELS: Record<string, string> = {
+  stage_evidence_depth: "Stage evidence",
+  geography_fit: "Geography",
+  sector_fit: "Sector",
+  theme_fit: "Specific direction",
+  recent_deal_similarity: "Recent deal similarity",
+  customer_icp_fit: "Customer / ICP",
+  cheque_size_fit: "Cheque size",
+  lead_behavior_fit: "Lead behaviour",
+  data_quality_recency: "Data quality",
 };
 
 export function displayValue(value: unknown): string {
