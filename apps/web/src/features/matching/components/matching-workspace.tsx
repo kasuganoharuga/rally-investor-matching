@@ -16,6 +16,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { MatchDetailPanel } from "@/features/matching/components/match-detail-panel";
 import { MATCH_FACTOR_MAX } from "@/features/matching/components/match-display";
 import { MatchHistoryPanel } from "@/features/matching/components/match-history-panel";
+import { StructuredIntakeScreen } from "@/features/matching/components/structured-intake-screen";
 import { VcDetailPanel } from "@/features/matching/components/vc-detail-panel";
 import { useMatchIntake } from "@/features/matching/hooks/use-match-intake";
 import type {
@@ -27,6 +28,7 @@ import { cn } from "@/lib/utils";
 
 type WorkspaceView = "new-match" | "history";
 type SelectedMatchView = "match-detail" | "vc-profile";
+export type MatchIntakeVariant = "structured" | "free-text";
 
 const PROMPT_CHIPS = [
   '"We\'re pre-seed, building..."',
@@ -680,7 +682,11 @@ function HistoryScreen({
   );
 }
 
-export function MatchingWorkspace() {
+export function MatchingWorkspace({
+  intakeVariant = "structured",
+}: {
+  intakeVariant?: MatchIntakeVariant;
+}) {
   const intake = useMatchIntake();
   const [selectedMatchId, setSelectedMatchId] = useState<string | null>(null);
   const [selectedMatchView, setSelectedMatchView] =
@@ -691,10 +697,10 @@ export function MatchingWorkspace() {
     (match) => match.investor_id === selectedMatchId,
   );
 
-  function submitInitial() {
+  function submitInitial(messageOverride?: string) {
     setSelectedMatchId(null);
     setSelectedMatchView("match-detail");
-    void intake.submitInitial();
+    void intake.submitInitial(messageOverride);
   }
 
   function submitFollowUp() {
@@ -796,14 +802,28 @@ export function MatchingWorkspace() {
       );
     }
 
+    if (intakeVariant === "free-text") {
+      return (
+        <IntakeScreen
+          message={intake.message}
+          uploadedFiles={intake.uploadedFiles}
+          isSubmitting={intake.isSubmitting}
+          isReadingFiles={intake.isReadingFiles}
+          errorMessage={errorMessage}
+          onMessageChange={intake.updateMessage}
+          onFilesSelected={intake.addFiles}
+          onRemoveFile={intake.removeFile}
+          onSubmit={() => submitInitial()}
+        />
+      );
+    }
+
     return (
-      <IntakeScreen
-        message={intake.message}
+      <StructuredIntakeScreen
         uploadedFiles={intake.uploadedFiles}
         isSubmitting={intake.isSubmitting}
         isReadingFiles={intake.isReadingFiles}
         errorMessage={errorMessage}
-        onMessageChange={intake.updateMessage}
         onFilesSelected={intake.addFiles}
         onRemoveFile={intake.removeFile}
         onSubmit={submitInitial}

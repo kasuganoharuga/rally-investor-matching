@@ -227,37 +227,41 @@ export function useMatchIntake() {
     }));
   }, []);
 
-  const submitInitial = useCallback(async () => {
-    const requestMessage = buildRequestMessage(state.message, state.uploadedFiles);
-    setState((current) => ({ ...current, isSubmitting: true, error: null }));
-    try {
-      const { response, record } = await runMatchIntake({ message: requestMessage });
-      setState((current) => ({
-        ...current,
-        baseMessage: requestMessage,
-        message: "",
-        response,
-        followUpAnswer: "",
-        uploadedFiles: [],
-        messages: [
-          ...current.messages,
-          chatMessage("user", userChatContent(state.message, state.uploadedFiles)),
-          chatMessage("assistant", assistantSummary(response)),
-        ],
-        records: record
-          ? [record, ...current.records.filter((item) => item.id !== record.id)]
-          : current.records,
-        isSubmitting: false,
-        error: null,
-      }));
-    } catch (error) {
-      setState((current) => ({
-        ...current,
-        isSubmitting: false,
-        error: toApiError(error),
-      }));
-    }
-  }, [state.message, state.uploadedFiles]);
+  const submitInitial = useCallback(
+    async (messageOverride?: string) => {
+      const sourceMessage = messageOverride ?? state.message;
+      const requestMessage = buildRequestMessage(sourceMessage, state.uploadedFiles);
+      setState((current) => ({ ...current, isSubmitting: true, error: null }));
+      try {
+        const { response, record } = await runMatchIntake({ message: requestMessage });
+        setState((current) => ({
+          ...current,
+          baseMessage: requestMessage,
+          message: "",
+          response,
+          followUpAnswer: "",
+          uploadedFiles: [],
+          messages: [
+            ...current.messages,
+            chatMessage("user", userChatContent(sourceMessage, state.uploadedFiles)),
+            chatMessage("assistant", assistantSummary(response)),
+          ],
+          records: record
+            ? [record, ...current.records.filter((item) => item.id !== record.id)]
+            : current.records,
+          isSubmitting: false,
+          error: null,
+        }));
+      } catch (error) {
+        setState((current) => ({
+          ...current,
+          isSubmitting: false,
+          error: toApiError(error),
+        }));
+      }
+    },
+    [state.message, state.uploadedFiles],
+  );
 
   const submitFollowUp = useCallback(async () => {
     setState((current) => ({ ...current, isSubmitting: true, error: null }));
