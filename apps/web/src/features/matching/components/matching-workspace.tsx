@@ -820,12 +820,8 @@ export function MatchingWorkspace({
 
     return (
       <StructuredIntakeScreen
-        uploadedFiles={intake.uploadedFiles}
         isSubmitting={intake.isSubmitting}
-        isReadingFiles={intake.isReadingFiles}
         errorMessage={errorMessage}
-        onFilesSelected={intake.addFiles}
-        onRemoveFile={intake.removeFile}
         onSubmit={submitInitial}
       />
     );

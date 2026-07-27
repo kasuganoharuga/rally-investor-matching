@@ -7,7 +7,6 @@ import { SelectField } from "@/features/matching/components/structured-intake-co
 import {
   CURRENCY_OPTIONS,
   LEAD_NEED_OPTIONS,
-  RAISE_UNIT_OPTIONS,
   STAGE_OPTIONS,
   type StructuredIntakeValues,
 } from "@/features/matching/types/structured-intake";
@@ -20,15 +19,12 @@ export function FundraiseFields({
   values: StructuredIntakeValues;
   disabled: boolean;
   onChange: (
-    field: "stage" | "raiseAmount" | "raiseCurrency" | "raiseUnit" | "leadNeeded",
+    field: "stage" | "raiseAmount" | "raiseCurrency" | "leadNeeded",
     value: string,
   ) => void;
 }) {
   return (
-    <fieldset
-      className="grid gap-5 border-b border-border p-5 md:p-7"
-      disabled={disabled}
-    >
+    <fieldset className="grid gap-5 p-5 md:p-7" disabled={disabled}>
       <legend className="sr-only">Fundraise</legend>
       <div className="flex items-start gap-3">
         <span className="flex size-9 shrink-0 items-center justify-center rounded-md bg-secondary text-secondary-foreground">
@@ -42,7 +38,7 @@ export function FundraiseFields({
         </div>
       </div>
 
-      <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+      <div className="grid gap-5 md:grid-cols-3">
         <SelectField
           id="fundraise-stage"
           label="Stage"
@@ -57,7 +53,7 @@ export function FundraiseFields({
             htmlFor="raise-amount"
             className="text-sm font-semibold text-foreground"
           >
-            Target raise
+            Target raise amount
             <span className="ml-1 text-destructive" aria-hidden="true">
               *
             </span>
@@ -66,12 +62,15 @@ export function FundraiseFields({
             id="raise-amount"
             type="number"
             min="0"
-            step="0.01"
-            inputMode="decimal"
+            step="1"
+            inputMode="numeric"
             value={values.raiseAmount}
             onChange={(event) => onChange("raiseAmount", event.target.value)}
-            placeholder="1.5"
+            placeholder="1500000"
           />
+          <p className="text-xs text-muted-foreground">
+            Enter the full number without commas.
+          </p>
         </div>
 
         <SelectField
@@ -81,15 +80,6 @@ export function FundraiseFields({
           options={CURRENCY_OPTIONS}
           required
           onChange={(value) => onChange("raiseCurrency", value)}
-        />
-
-        <SelectField
-          id="raise-unit"
-          label="Unit"
-          value={values.raiseUnit}
-          options={RAISE_UNIT_OPTIONS}
-          required
-          onChange={(value) => onChange("raiseUnit", value)}
         />
       </div>
 

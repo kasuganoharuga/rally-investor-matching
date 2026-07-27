@@ -41,10 +41,7 @@ export function MatchingSignalFields({
   const directionOptions = getDirectionOptions(values.sectors);
 
   return (
-    <fieldset
-      className="grid gap-5 border-b border-border p-5 md:p-7"
-      disabled={disabled}
-    >
+    <fieldset className="grid gap-5 p-5 md:p-7" disabled={disabled}>
       <legend className="sr-only">Matching signals</legend>
       <div className="flex items-start gap-3">
         <span className="flex size-9 shrink-0 items-center justify-center rounded-md bg-primary text-primary-foreground">
@@ -53,29 +50,29 @@ export function MatchingSignalFields({
         <div>
           <h2 className="text-lg font-semibold text-foreground">Matching signals</h2>
           <p className="mt-1 text-sm text-muted-foreground">
-            Select the closest fit from the database taxonomy.
+            Choose the plain-language options that best describe the company.
           </p>
         </div>
       </div>
 
       <div className="grid gap-5 lg:grid-cols-2">
         <MultiSelectField
-          label="Investment sectors"
+          label="Industry sectors"
           placeholder="Select sectors"
           options={SECTOR_OPTIONS}
           selected={values.sectors}
-          maxSelected={3}
+          maxSelected={2}
           required
           disabled={disabled}
           onChange={onSectorsChange}
         />
 
         <MultiSelectField
-          label="Specific directions"
-          placeholder="Select specific directions"
+          label="Specific focus areas"
+          placeholder="Select focus areas"
           options={directionOptions}
           selected={values.directions}
-          maxSelected={5}
+          maxSelected={3}
           disabled={disabled || values.sectors.length === 0}
           emptyMessage="Select a sector first"
           onChange={onDirectionsChange}
@@ -101,7 +98,7 @@ export function MatchingSignalFields({
         />
         <SelectField
           id="sales-motion"
-          label="Sales motion"
+          label="How customers buy"
           value={values.salesMotion}
           options={SALES_MOTION_OPTIONS}
           placeholder="Optional"
@@ -109,7 +106,7 @@ export function MatchingSignalFields({
         />
         <SelectField
           id="technology-depth"
-          label="Technology profile"
+          label="Technology type"
           value={values.technologyDepth}
           options={TECHNOLOGY_DEPTH_OPTIONS}
           placeholder="Optional"
@@ -117,7 +114,7 @@ export function MatchingSignalFields({
         />
         <SelectField
           id="ai-relevance"
-          label="AI relevance"
+          label="Role of AI"
           value={values.aiRelevance}
           options={AI_RELEVANCE_OPTIONS}
           placeholder="Optional"

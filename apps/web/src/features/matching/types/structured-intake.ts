@@ -37,11 +37,6 @@ export const CURRENCY_OPTIONS: IntakeOption[] = [
   { value: "USD", label: "USD" },
 ];
 
-export const RAISE_UNIT_OPTIONS: IntakeOption[] = [
-  { value: "thousand", label: "Thousand" },
-  { value: "million", label: "Million" },
-];
-
 export const LEAD_NEED_OPTIONS: IntakeOption[] = [
   { value: "true", label: "Yes, we need a lead" },
   { value: "false", label: "No, the lead is covered" },
@@ -60,43 +55,61 @@ export const CUSTOMER_TYPE_OPTIONS: IntakeOption[] = [
 ];
 
 export const BUSINESS_MODEL_OPTIONS: IntakeOption[] = [
-  { value: "subscription_saas", label: "Subscription SaaS" },
-  { value: "usage_based", label: "Usage-based" },
-  { value: "transaction_fee", label: "Transaction fees" },
-  { value: "marketplace_take_rate", label: "Marketplace take rate" },
-  { value: "licensing", label: "Licensing" },
-  { value: "hardware_sales", label: "Hardware sales" },
-  { value: "services", label: "Services" },
-  { value: "advertising", label: "Advertising" },
-  { value: "freemium", label: "Freemium" },
-  { value: "commerce", label: "Commerce" },
+  { value: "subscription_saas", label: "Subscription software (SaaS)" },
+  { value: "usage_based", label: "Pay based on usage" },
+  { value: "transaction_fee", label: "Fee per transaction" },
+  { value: "marketplace_take_rate", label: "Marketplace commission" },
+  { value: "licensing", label: "Software or IP licensing" },
+  { value: "hardware_sales", label: "Hardware or product sales" },
+  { value: "services", label: "Professional or managed services" },
+  { value: "advertising", label: "Advertising revenue" },
+  { value: "freemium", label: "Free tier with paid upgrades" },
+  { value: "commerce", label: "Direct commerce" },
   { value: "other", label: "Other" },
 ];
 
 export const SALES_MOTION_OPTIONS: IntakeOption[] = [
-  { value: "plg", label: "Product-led growth" },
-  { value: "sales_led", label: "Sales-led" },
-  { value: "channel_partner", label: "Channel partners" },
+  { value: "plg", label: "Product-led - users can start on their own" },
+  { value: "sales_led", label: "Sales-led - a sales team drives adoption" },
+  { value: "channel_partner", label: "Partner or channel-led" },
   { value: "community_led", label: "Community-led" },
-  { value: "enterprise_top_down", label: "Enterprise top-down" },
-  { value: "self_serve", label: "Self-serve" },
+  { value: "enterprise_top_down", label: "Enterprise top-down sales" },
+  { value: "self_serve", label: "Self-serve purchase" },
   { value: "other", label: "Other" },
 ];
 
 export const TECHNOLOGY_DEPTH_OPTIONS: IntakeOption[] = [
-  { value: "conventional_software", label: "Conventional software" },
-  { value: "applied_ai", label: "Applied AI" },
-  { value: "ai_infrastructure", label: "AI infrastructure" },
-  { value: "deep_tech_research", label: "Deep tech / research" },
-  { value: "hardware_engineering", label: "Hardware engineering" },
+  {
+    value: "conventional_software",
+    label: "Standard software - no core AI or hard-tech dependency",
+  },
+  {
+    value: "applied_ai",
+    label: "AI-powered application - AI is applied to a customer problem",
+  },
+  {
+    value: "ai_infrastructure",
+    label: "AI infrastructure - tools or infrastructure for AI systems",
+  },
+  {
+    value: "deep_tech_research",
+    label: "Deep tech - research or defensible scientific IP",
+  },
+  {
+    value: "hardware_engineering",
+    label: "Hardware or engineering-led product",
+  },
   { value: "other", label: "Other" },
 ];
 
 export const AI_RELEVANCE_OPTIONS: IntakeOption[] = [
-  { value: "none", label: "Not AI-dependent" },
-  { value: "ai_enabled", label: "AI-enabled" },
-  { value: "ai_native", label: "AI-native" },
-  { value: "ai_infrastructure", label: "AI infrastructure" },
+  { value: "none", label: "No meaningful AI component" },
+  { value: "ai_enabled", label: "AI-enabled - AI improves selected features" },
+  { value: "ai_native", label: "AI-native - the product depends on AI" },
+  {
+    value: "ai_infrastructure",
+    label: "AI infrastructure - the product enables other AI systems",
+  },
 ];
 
 export const SECTOR_OPTIONS: IntakeOption[] = [
@@ -123,12 +136,29 @@ export const SECTOR_OPTIONS: IntakeOption[] = [
   { value: "consumer_marketplace", label: "Consumer / Marketplace" },
 ];
 
+const DIRECTION_TOKEN_LABELS: Record<string, string> = {
+  ai: "AI",
+  ar: "AR",
+  ev: "EV",
+  finops: "FinOps",
+  mlops: "MLOps",
+  pnt: "PNT",
+  web3: "Web3",
+  womens: "Women's",
+};
+
 function directionOptions(values: string[]): IntakeOption[] {
   return values.map((value) => ({
     value,
     label: value
       .split("_")
-      .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+      .map((part, index) => {
+        const fixedLabel = DIRECTION_TOKEN_LABELS[part];
+        if (fixedLabel) {
+          return fixedLabel;
+        }
+        return index === 0 ? part.charAt(0).toUpperCase() + part.slice(1) : part;
+      })
       .join(" "),
   }));
 }
@@ -295,7 +325,6 @@ export type StructuredIntakeValues = {
   stage: string;
   raiseAmount: string;
   raiseCurrency: string;
-  raiseUnit: string;
   leadNeeded: string;
   sectors: string[];
   directions: string[];
@@ -304,8 +333,6 @@ export type StructuredIntakeValues = {
   salesMotion: string;
   technologyDepth: string;
   aiRelevance: string;
-  tractionSummary: string;
-  additionalContext: string;
 };
 
 export const EMPTY_STRUCTURED_INTAKE: StructuredIntakeValues = {
@@ -318,7 +345,6 @@ export const EMPTY_STRUCTURED_INTAKE: StructuredIntakeValues = {
   stage: "",
   raiseAmount: "",
   raiseCurrency: "AUD",
-  raiseUnit: "million",
   leadNeeded: "",
   sectors: [],
   directions: [],
@@ -327,16 +353,14 @@ export const EMPTY_STRUCTURED_INTAKE: StructuredIntakeValues = {
   salesMotion: "",
   technologyDepth: "",
   aiRelevance: "",
-  tractionSummary: "",
-  additionalContext: "",
 };
 
-function optionLabel(options: IntakeOption[], value: string): string {
+export function getIntakeOptionLabel(options: IntakeOption[], value: string): string {
   return options.find((option) => option.value === value)?.label ?? value;
 }
 
 function selectedLabels(options: IntakeOption[], values: string[]): string {
-  return values.map((value) => optionLabel(options, value)).join(", ");
+  return values.map((value) => getIntakeOptionLabel(options, value)).join(", ");
 }
 
 export function getDirectionOptions(sectors: string[]): IntakeOption[] {
@@ -344,6 +368,10 @@ export function getDirectionOptions(sectors: string[]): IntakeOption[] {
 }
 
 export function isStructuredIntakeComplete(values: StructuredIntakeValues): boolean {
+  return isCompanyAndRaiseComplete(values) && isMatchingSignalsComplete(values);
+}
+
+export function isCompanyAndRaiseComplete(values: StructuredIntakeValues): boolean {
   return Boolean(
     values.companyName.trim() &&
     values.companySummary.trim() &&
@@ -352,13 +380,15 @@ export function isStructuredIntakeComplete(values: StructuredIntakeValues): bool
     values.primaryMarket &&
     (values.primaryMarket !== "other" || values.otherPrimaryMarket.trim()) &&
     values.stage &&
-    values.raiseAmount &&
+    Number(values.raiseAmount) > 0 &&
     values.raiseCurrency &&
-    values.raiseUnit &&
-    values.leadNeeded &&
-    values.sectors.length > 0 &&
-    values.customerType &&
-    values.businessModel,
+    values.leadNeeded,
+  );
+}
+
+export function isMatchingSignalsComplete(values: StructuredIntakeValues): boolean {
+  return Boolean(
+    values.sectors.length > 0 && values.customerType && values.businessModel,
   );
 }
 
@@ -366,11 +396,11 @@ export function buildStructuredIntakeMessage(values: StructuredIntakeValues): st
   const hqCountry =
     values.hqCountry === "other"
       ? values.otherHqCountry.trim()
-      : optionLabel(HQ_COUNTRY_OPTIONS, values.hqCountry);
+      : getIntakeOptionLabel(HQ_COUNTRY_OPTIONS, values.hqCountry);
   const primaryMarket =
     values.primaryMarket === "other"
       ? values.otherPrimaryMarket.trim()
-      : optionLabel(PRIMARY_MARKET_OPTIONS, values.primaryMarket);
+      : getIntakeOptionLabel(PRIMARY_MARKET_OPTIONS, values.primaryMarket);
   const directionOptions = getDirectionOptions(values.sectors);
   const leadNeeded = values.leadNeeded === "true" ? "Yes" : "No";
 
@@ -378,8 +408,10 @@ export function buildStructuredIntakeMessage(values: StructuredIntakeValues): st
     `Company name: ${values.companyName.trim()}`,
     `Company HQ country: ${hqCountry}`,
     `Primary market: ${primaryMarket}`,
-    `Fundraising stage: ${optionLabel(STAGE_OPTIONS, values.stage)} (${values.stage})`,
-    `Target raise: ${values.raiseCurrency} ${values.raiseAmount} ${values.raiseUnit}`,
+    `Fundraising stage: ${getIntakeOptionLabel(STAGE_OPTIONS, values.stage)} (${values.stage})`,
+    `Target raise: ${values.raiseCurrency} ${values.raiseAmount} in whole currency units`,
+    `Target raise value: ${values.raiseAmount}`,
+    `Target raise unit: absolute`,
     `Lead investor needed: ${leadNeeded}`,
     `Sector: ${selectedLabels(SECTOR_OPTIONS, values.sectors)}`,
     `Actual sector codes: ${values.sectors.join(", ")}`,
@@ -395,12 +427,6 @@ export function buildStructuredIntakeMessage(values: StructuredIntakeValues): st
     values.technologyDepth ? `Technology depth: ${values.technologyDepth}` : "",
     values.aiRelevance ? `AI relevance: ${values.aiRelevance}` : "",
     `One sentence summary: ${values.companySummary.trim()}`,
-    values.tractionSummary.trim()
-      ? `Traction summary: ${values.tractionSummary.trim()}`
-      : "",
-    values.additionalContext.trim()
-      ? `Ideal investor or additional context: ${values.additionalContext.trim()}`
-      : "",
   ];
 
   return lines.filter(Boolean).join("\n");
