@@ -35,6 +35,11 @@ MATCHING_WEIGHTS = {
     "data_quality_recency": 5,
 }
 
+DEFAULT_HARD_FILTERS = {
+    "stage": True,
+    "geography": True,
+}
+
 DEFAULT_MATCH_RESULT_LIMIT = 20
 
 DIRECT_VC_POOL = "direct_vc_pool"
@@ -1019,7 +1024,10 @@ def eligibility_check(
     founder: dict[str, Any],
     profile: dict[str, Any],
     stage_match: str,
+    *,
+    hard_filters: dict[str, bool] | None = None,
 ) -> dict[str, Any]:
+    applied_filters = {**DEFAULT_HARD_FILTERS, **(hard_filters or {})}
     hard_filter_reasons: list[str] = []
     soft_warnings: list[str] = []
     passed = True
@@ -1031,15 +1039,23 @@ def eligibility_check(
             )
         elif profile_has_global_mandate(profile):
             hard_filter_reasons.append("Geography eligible: global mandate.")
-        else:
+        elif applied_filters["geography"]:
             passed = False
             hard_filter_reasons.append("Geography blocked: no observed AU/ANZ fit.")
+        else:
+            soft_warnings.append(
+                "Geography mismatch retained because geographic filtering is off."
+            )
 
     stage = normalize_stage(founder.get("stage") or founder.get("round_type"))
-    if stage and stage_match != "exact":
+    if stage and stage_match != "exact" and applied_filters["stage"]:
         passed = False
         hard_filter_reasons.append(
             "Stage blocked: no observed same-stage investment evidence."
+        )
+    elif stage and stage_match != "exact":
+        soft_warnings.append(
+            "Stage mismatch retained because same-stage filtering is off."
         )
     elif stage_match == "exact":
         hard_filter_reasons.append("Stage eligible: observed same-stage deals.")
@@ -1053,6 +1069,35 @@ def eligibility_check(
         "hard_filter_reasons": hard_filter_reasons,
         "soft_warnings": soft_warnings,
     }
+
+
+def resolve_matching_weights(
+    matching_weights: dict[str, int] | None,
+) -> dict[str, int]:
+    if matching_weights is None:
+        return dict(MATCHING_WEIGHTS)
+    resolved = {
+        key: max(0, int(matching_weights.get(key, default)))
+        for key, default in MATCHING_WEIGHTS.items()
+    }
+    if sum(resolved.values()) != 100:
+        raise ValueError("Matching weights must total 100.")
+    return resolved
+
+
+def apply_matching_weights(
+    breakdown: dict[str, int],
+    matching_weights: dict[str, int],
+) -> dict[str, int]:
+    weighted: dict[str, int] = {}
+    for key, default_max in MATCHING_WEIGHTS.items():
+        configured_max = matching_weights[key]
+        base_score = min(default_max, max(0, int(breakdown.get(key, 0))))
+        weighted[key] = min(
+            configured_max,
+            round(base_score / default_max * configured_max),
+        )
+    return weighted
 
 
 def score_stage_evidence_depth(pref: dict[str, Any] | None) -> int:
@@ -1440,7 +1485,10 @@ def score_profile(
     profile: dict[str, Any],
     *,
     theme_prevalence: dict[str, int] | None = None,
+    matching_weights: dict[str, int] | None = None,
+    hard_filters: dict[str, bool] | None = None,
 ) -> dict[str, Any]:
+    applied_weights = resolve_matching_weights(matching_weights)
     stage = normalize_stage(founder.get("stage") or founder.get("round_type"))
     pref, stage_match = best_stage_preference(profile, stage)
     founder_taxonomy = infer_founder_taxonomy(founder)
@@ -1554,14 +1602,17 @@ def score_profile(
             )
 
     # Sparse theme non-matches should not consume the full 25-point denominator.
-    assessable_weights = dict(MATCHING_WEIGHTS)
+    weighted_breakdown = apply_matching_weights(breakdown, applied_weights)
+    assessable_weights = dict(applied_weights)
     if theme_status == "sparse_evidence":
         assessable_weights["theme_fit"] = 0
 
-    raw_score = min(sum(int(value) for value in breakdown.values()), 100)
+    raw_score = min(sum(int(value) for value in weighted_breakdown.values()), 100)
     assessable_points = sum(assessable_weights.values())
     earned_assessable = sum(
-        int(breakdown[key]) for key, weight in assessable_weights.items() if weight > 0
+        int(weighted_breakdown[key])
+        for key, weight in assessable_weights.items()
+        if weight > 0
     )
     if assessable_points > 0:
         normalized_score = min(100, round(earned_assessable / assessable_points * 100))
@@ -1588,7 +1639,12 @@ def score_profile(
     else:
         confidence = "high"
 
-    eligibility = eligibility_check(founder, profile, stage_match)
+    eligibility = eligibility_check(
+        founder,
+        profile,
+        stage_match,
+        hard_filters=hard_filters,
+    )
     evidence = evidence_from_stage_preference(pref)
 
     return {
@@ -1606,7 +1662,10 @@ def score_profile(
         "routing_pool_label": ROUTING_POOL_LABELS[routing_pool],
         "pool_rank": None,
         "eligibility": eligibility,
-        "breakdown": breakdown,
+        "breakdown": weighted_breakdown,
+        "base_breakdown": breakdown,
+        "scoring_weights": applied_weights,
+        "hard_filters": {**DEFAULT_HARD_FILTERS, **(hard_filters or {})},
         "strengths": strengths,
         "risks": risks,
         "review_needed_fields": profile.get("review_needed_fields", []),

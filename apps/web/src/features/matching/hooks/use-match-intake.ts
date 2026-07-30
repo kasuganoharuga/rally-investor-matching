@@ -7,7 +7,11 @@ import {
   listMatchHistory,
   runMatchIntake,
 } from "@/features/matching/api/match-api";
-import type { IntakeResponse, MatchRecord } from "@/features/matching/types/match";
+import type {
+  IntakeResponse,
+  MatchingConfiguration,
+  MatchRecord,
+} from "@/features/matching/types/match";
 import { ApiError } from "@/lib/api/errors";
 
 export type { MatchRecord } from "@/features/matching/types/match";
@@ -34,6 +38,7 @@ type MatchIntakeState = {
   baseMessage: string;
   followUpAnswer: string;
   response: IntakeResponse | null;
+  matchingConfiguration: MatchingConfiguration | null;
   messages: ChatMessage[];
   uploadedFiles: UploadedFounderFile[];
   records: MatchRecord[];
@@ -48,6 +53,7 @@ function initialState(): MatchIntakeState {
     baseMessage: "",
     followUpAnswer: "",
     response: null,
+    matchingConfiguration: null,
     messages: [
       {
         id: "assistant-initial",
@@ -228,17 +234,21 @@ export function useMatchIntake() {
   }, []);
 
   const submitInitial = useCallback(
-    async (messageOverride?: string) => {
+    async (messageOverride?: string, matchingConfiguration?: MatchingConfiguration) => {
       const sourceMessage = messageOverride ?? state.message;
       const requestMessage = buildRequestMessage(sourceMessage, state.uploadedFiles);
       setState((current) => ({ ...current, isSubmitting: true, error: null }));
       try {
-        const { response, record } = await runMatchIntake({ message: requestMessage });
+        const { response, record } = await runMatchIntake({
+          message: requestMessage,
+          matching_configuration: matchingConfiguration,
+        });
         setState((current) => ({
           ...current,
           baseMessage: requestMessage,
           message: "",
           response,
+          matchingConfiguration: matchingConfiguration ?? null,
           followUpAnswer: "",
           uploadedFiles: [],
           messages: [
@@ -270,6 +280,7 @@ export function useMatchIntake() {
         message: state.baseMessage,
         follow_up_answer: state.followUpAnswer,
         follow_up_count: state.response?.follow_up_count ?? 1,
+        matching_configuration: state.matchingConfiguration ?? undefined,
       });
       setState((current) => ({
         ...current,
@@ -293,7 +304,12 @@ export function useMatchIntake() {
         error: toApiError(error),
       }));
     }
-  }, [state.baseMessage, state.followUpAnswer, state.response?.follow_up_count]);
+  }, [
+    state.baseMessage,
+    state.followUpAnswer,
+    state.matchingConfiguration,
+    state.response?.follow_up_count,
+  ]);
 
   const reset = useCallback(() => {
     setState((current) => ({
@@ -306,6 +322,7 @@ export function useMatchIntake() {
     setState((current) => ({
       ...current,
       response: record.response,
+      matchingConfiguration: null,
       message: "",
       baseMessage: "",
       followUpAnswer: "",

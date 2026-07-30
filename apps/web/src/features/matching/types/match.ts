@@ -14,12 +14,61 @@ const stringArraySchema = z.preprocess(
   z.array(z.string()),
 );
 
+export const matchingWeightsSchema = z.object({
+  stage_evidence_depth: z.number().int().min(0).max(100),
+  geography_fit: z.number().int().min(0).max(100),
+  sector_fit: z.number().int().min(0).max(100),
+  theme_fit: z.number().int().min(0).max(100),
+  recent_deal_similarity: z.number().int().min(0).max(100),
+  customer_icp_fit: z.number().int().min(0).max(100),
+  cheque_size_fit: z.number().int().min(0).max(100),
+  lead_behavior_fit: z.number().int().min(0).max(100),
+  data_quality_recency: z.number().int().min(0).max(100),
+});
+
+export const hardFilterSettingsSchema = z.object({
+  stage: z.boolean(),
+  geography: z.boolean(),
+});
+
+export const matchingConfigurationSchema = z.object({
+  weights: matchingWeightsSchema.refine(
+    (weights) =>
+      Object.values(weights).reduce((total, value) => total + value, 0) === 100,
+    "Matching weights must total 100.",
+  ),
+  hard_filters: hardFilterSettingsSchema,
+});
+
 export const intakeRequestSchema = z.object({
   message: z.string().min(1),
   follow_up_answer: z.string().optional(),
   follow_up_count: z.number().int().min(0).max(1).optional(),
+  matching_configuration: matchingConfigurationSchema.optional(),
 });
 export type IntakeRequest = z.infer<typeof intakeRequestSchema>;
+export type MatchingWeights = z.infer<typeof matchingWeightsSchema>;
+export type MatchingWeightKey = keyof MatchingWeights;
+export type HardFilterSettings = z.infer<typeof hardFilterSettingsSchema>;
+export type MatchingConfiguration = z.infer<typeof matchingConfigurationSchema>;
+
+export const DEFAULT_MATCHING_CONFIGURATION: MatchingConfiguration = {
+  weights: {
+    stage_evidence_depth: 10,
+    geography_fit: 5,
+    sector_fit: 20,
+    theme_fit: 20,
+    recent_deal_similarity: 25,
+    customer_icp_fit: 5,
+    cheque_size_fit: 5,
+    lead_behavior_fit: 5,
+    data_quality_recency: 5,
+  },
+  hard_filters: {
+    stage: true,
+    geography: true,
+  },
+};
 
 export const matchEvidenceSchema = z.object({
   chunk_id: z.string().optional().nullable(),
@@ -144,6 +193,9 @@ export const matchResultSchema = z.object({
   routing_pool_label: z.string().default("Best direct investors"),
   eligibility: matchEligibilitySchema.optional(),
   breakdown: z.record(z.string(), z.number()).default({}),
+  base_breakdown: z.record(z.string(), z.number()).optional(),
+  scoring_weights: z.record(z.string(), z.number()).optional(),
+  hard_filters: hardFilterSettingsSchema.optional(),
   strengths: z.array(z.string()).default([]),
   risks: z.array(z.string()).default([]),
   review_needed_fields: z.array(z.string()).default([]),

@@ -14,7 +14,7 @@ import { useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { MatchDetailPanel } from "@/features/matching/components/match-detail-panel";
-import { MATCH_FACTOR_MAX } from "@/features/matching/components/match-display";
+import { matchFactorMaximum } from "@/features/matching/components/match-display";
 import { MatchHistoryPanel } from "@/features/matching/components/match-history-panel";
 import { StructuredIntakeScreen } from "@/features/matching/components/structured-intake-screen";
 import { VcDetailPanel } from "@/features/matching/components/vc-detail-panel";
@@ -23,7 +23,11 @@ import type {
   MatchRecord,
   UploadedFounderFile,
 } from "@/features/matching/hooks/use-match-intake";
-import type { IntakeResponse, MatchResult } from "@/features/matching/types/match";
+import type {
+  IntakeResponse,
+  MatchingConfiguration,
+  MatchResult,
+} from "@/features/matching/types/match";
 import { cn } from "@/lib/utils";
 
 type WorkspaceView = "new-match" | "history";
@@ -415,7 +419,6 @@ function tierLabel(match: MatchResult): string {
 function signalPills(
   match: MatchResult,
 ): { label: string; tone: "good" | "warn" | "bad" }[] {
-  const factorMax = MATCH_FACTOR_MAX;
   const factorOrder = [
     "stage_evidence_depth",
     "sector_fit",
@@ -425,7 +428,7 @@ function signalPills(
     "cheque_size_fit",
   ];
   const entries = factorOrder
-    .filter((key) => key in match.breakdown)
+    .filter((key) => key in match.breakdown && matchFactorMaximum(match, key) > 0)
     .map((key) => [key, match.breakdown[key]] as const);
   const pills = entries.slice(0, 4).map(([key, value]) => {
     const labels: Record<string, string> = {
@@ -440,7 +443,8 @@ function signalPills(
       data_quality_recency: "Recency",
     };
     const short = labels[key] ?? key.replaceAll("_", " ");
-    const ratio = factorMax[key] ? value / factorMax[key] : 0;
+    const factorMax = matchFactorMaximum(match, key);
+    const ratio = factorMax > 0 ? value / factorMax : 0;
     const isGood = ratio >= 0.65;
     return {
       label: isGood ? `${short} match` : `${short} partial`,
@@ -697,10 +701,13 @@ export function MatchingWorkspace({
     (match) => match.investor_id === selectedMatchId,
   );
 
-  function submitInitial(messageOverride?: string) {
+  function submitInitial(
+    messageOverride?: string,
+    matchingConfiguration?: MatchingConfiguration,
+  ) {
     setSelectedMatchId(null);
     setSelectedMatchView("match-detail");
-    void intake.submitInitial(messageOverride);
+    void intake.submitInitial(messageOverride, matchingConfiguration);
   }
 
   function submitFollowUp() {

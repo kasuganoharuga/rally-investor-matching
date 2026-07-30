@@ -3,7 +3,6 @@
 import { Building2 } from "lucide-react";
 
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { SelectField } from "@/features/matching/components/structured-intake-controls";
 import {
   HQ_COUNTRY_OPTIONS,
@@ -21,7 +20,6 @@ export function CompanyProfileFields({
   onChange: (
     field:
       | "companyName"
-      | "companySummary"
       | "hqCountry"
       | "otherHqCountry"
       | "primaryMarket"
@@ -42,7 +40,7 @@ export function CompanyProfileFields({
         <div>
           <h2 className="text-lg font-semibold text-foreground">Company profile</h2>
           <p className="mt-1 text-sm text-muted-foreground">
-            Core identity, location, and product summary.
+            Core identity and location.
           </p>
         </div>
       </div>
@@ -124,25 +122,6 @@ export function CompanyProfileFields({
             />
           </div>
         ) : null}
-      </div>
-
-      <div className="grid gap-2">
-        <label
-          htmlFor="company-summary"
-          className="text-sm font-semibold text-foreground"
-        >
-          Product summary
-          <span className="ml-1 text-destructive" aria-hidden="true">
-            *
-          </span>
-        </label>
-        <Textarea
-          id="company-summary"
-          value={values.companySummary}
-          onChange={(event) => onChange("companySummary", event.target.value)}
-          placeholder="What does the company build, and who is it for?"
-          className="min-h-24 resize-y"
-        />
       </div>
     </fieldset>
   );

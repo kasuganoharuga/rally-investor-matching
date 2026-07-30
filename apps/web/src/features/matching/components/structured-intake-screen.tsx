@@ -1,13 +1,19 @@
 "use client";
 
-import { ArrowLeft, ArrowRight, Check, Loader2 } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, Loader2, MessageSquareText } from "lucide-react";
 import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
 import { CompanyProfileFields } from "@/features/matching/components/company-profile-fields";
 import { FundraiseFields } from "@/features/matching/components/fundraise-fields";
 import { MatchingSignalFields } from "@/features/matching/components/matching-signal-fields";
 import { StructuredIntakeReview } from "@/features/matching/components/structured-intake-review";
+import { StructuredIntakeScoring } from "@/features/matching/components/structured-intake-scoring";
+import {
+  DEFAULT_MATCHING_CONFIGURATION,
+  type MatchingConfiguration,
+} from "@/features/matching/types/match";
 import {
   buildStructuredIntakeMessage,
   EMPTY_STRUCTURED_INTAKE,
@@ -28,20 +34,34 @@ const INTAKE_STEPS = [
   },
   {
     title: "Matching signals",
-    shortDescription: "Sector and operating model",
+    shortDescription: "Sector, operating model, and context",
     heading: "Define your investor fit",
     description:
-      "Choose the sectors, customer, and operating model investors should match.",
+      "Choose the sectors, customer, and operating model investors should match, then add any optional context.",
   },
   {
-    title: "Review & match",
+    title: "Review",
     shortDescription: "Check your selected details",
     heading: "Review your matching profile",
-    description: "Check the structured information below before ranking investors.",
+    description: "Check the selected details before testing the ranking setup.",
+  },
+  {
+    title: "Test scoring",
+    shortDescription: "Adjust ranking priorities",
+    heading: "Test the ranking setup",
+    description:
+      "Adjust score priorities and choose which eligibility rules apply to this test.",
   },
 ];
 
-type IntakeStep = 0 | 1 | 2;
+type IntakeStep = 0 | 1 | 2 | 3;
+
+function defaultMatchingConfiguration(): MatchingConfiguration {
+  return {
+    weights: { ...DEFAULT_MATCHING_CONFIGURATION.weights },
+    hard_filters: { ...DEFAULT_MATCHING_CONFIGURATION.hard_filters },
+  };
+}
 
 export function StructuredIntakeScreen({
   isSubmitting,
@@ -50,20 +70,22 @@ export function StructuredIntakeScreen({
 }: {
   isSubmitting: boolean;
   errorMessage: string | null;
-  onSubmit: (message: string) => void;
+  onSubmit: (message: string, configuration: MatchingConfiguration) => void;
 }) {
   const [values, setValues] = useState<StructuredIntakeValues>(EMPTY_STRUCTURED_INTAKE);
+  const [matchingConfiguration, setMatchingConfiguration] =
+    useState<MatchingConfiguration>(defaultMatchingConfiguration);
   const [activeStep, setActiveStep] = useState<IntakeStep>(0);
   const isBusy = isSubmitting;
   const companyAndRaiseComplete = isCompanyAndRaiseComplete(values);
   const matchingSignalsComplete = isMatchingSignalsComplete(values);
-  const canSubmit = isStructuredIntakeComplete(values) && !isBusy;
-  const canContinue =
-    activeStep === 0
-      ? companyAndRaiseComplete && !isBusy
-      : activeStep === 1
-        ? matchingSignalsComplete && !isBusy
-        : canSubmit;
+  const totalWeight = Object.values(matchingConfiguration.weights).reduce(
+    (total, value) => total + value,
+    0,
+  );
+  const canSubmit =
+    isStructuredIntakeComplete(values) && totalWeight === 100 && !isBusy;
+  const canContinue = activeStep < 3 ? !isBusy : canSubmit;
   const currentStep = INTAKE_STEPS[activeStep];
 
   function updateTextField(field: keyof StructuredIntakeValues, value: string) {
@@ -85,25 +107,26 @@ export function StructuredIntakeScreen({
 
   function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (activeStep < 2) {
-      if (canContinue) {
-        setActiveStep((activeStep + 1) as IntakeStep);
-      }
+    if (activeStep < 3) {
+      setActiveStep((activeStep + 1) as IntakeStep);
       return;
     }
     if (canSubmit) {
-      onSubmit(buildStructuredIntakeMessage(values));
+      onSubmit(buildStructuredIntakeMessage(values), matchingConfiguration);
     }
   }
 
-  function canOpenStep(step: IntakeStep): boolean {
-    if (step <= activeStep) {
-      return true;
-    }
-    if (step === 1) {
+  function isStepComplete(step: IntakeStep): boolean {
+    if (step === 0) {
       return companyAndRaiseComplete;
     }
-    return companyAndRaiseComplete && matchingSignalsComplete;
+    if (step === 1) {
+      return matchingSignalsComplete;
+    }
+    if (step === 2) {
+      return companyAndRaiseComplete && matchingSignalsComplete;
+    }
+    return false;
   }
 
   return (
@@ -120,28 +143,24 @@ export function StructuredIntakeScreen({
           {currentStep.description}
         </p>
 
-        <ol className="mt-6 grid gap-2 sm:grid-cols-3">
+        <ol className="mt-6 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
           {INTAKE_STEPS.map((step, index) => {
             const stepIndex = index as IntakeStep;
             const isActive = stepIndex === activeStep;
-            const isComplete = stepIndex < activeStep;
-            const isAvailable = canOpenStep(stepIndex);
+            const isComplete = isStepComplete(stepIndex);
             return (
               <li key={step.title}>
                 <button
                   type="button"
                   onClick={() => setActiveStep(stepIndex)}
-                  disabled={!isAvailable || isBusy}
+                  disabled={isBusy}
                   aria-current={isActive ? "step" : undefined}
                   className={cn(
                     "flex min-h-14 w-full items-center gap-3 rounded-md border px-3 py-2 text-left transition",
                     isActive
                       ? "border-primary bg-primary/5 text-foreground"
                       : "border-border bg-card text-muted-foreground",
-                    isAvailable &&
-                      !isActive &&
-                      "hover:border-primary/40 hover:text-foreground",
-                    !isAvailable && "cursor-not-allowed opacity-50",
+                    !isActive && "hover:border-primary/40 hover:text-foreground",
                   )}
                 >
                   <span
@@ -191,18 +210,70 @@ export function StructuredIntakeScreen({
         ) : null}
 
         {activeStep === 1 ? (
-          <MatchingSignalFields
+          <>
+            <MatchingSignalFields
+              values={values}
+              disabled={isBusy}
+              onTextChange={updateTextField}
+              onSectorsChange={updateSectors}
+              onDirectionsChange={(directions) =>
+                setValues((current) => ({ ...current, directions }))
+              }
+            />
+            <section className="border-t border-border p-5 md:p-7">
+              <div className="flex items-start gap-3">
+                <span className="flex size-9 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
+                  <MessageSquareText className="size-4" aria-hidden="true" />
+                </span>
+                <div>
+                  <h2 className="text-base font-semibold text-foreground">
+                    Additional company context
+                  </h2>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    Optional details not covered by the selected fields.
+                  </p>
+                </div>
+              </div>
+              <div className="mt-5 grid gap-2">
+                <label
+                  htmlFor="company-summary"
+                  className="text-sm font-semibold text-foreground"
+                >
+                  Company summary
+                  <span className="ml-1 font-normal text-muted-foreground">
+                    (optional)
+                  </span>
+                </label>
+                <Textarea
+                  id="company-summary"
+                  value={values.companySummary}
+                  onChange={(event) =>
+                    updateTextField("companySummary", event.target.value)
+                  }
+                  disabled={isBusy}
+                  placeholder="Add product, traction, or fundraising context that may improve the match."
+                  className="min-h-28 resize-y"
+                />
+              </div>
+            </section>
+          </>
+        ) : null}
+
+        {activeStep === 2 ? (
+          <StructuredIntakeReview
             values={values}
-            disabled={isBusy}
-            onTextChange={updateTextField}
-            onSectorsChange={updateSectors}
-            onDirectionsChange={(directions) =>
-              setValues((current) => ({ ...current, directions }))
-            }
+            onEditCompany={() => setActiveStep(0)}
+            onEditSignals={() => setActiveStep(1)}
           />
         ) : null}
 
-        {activeStep === 2 ? <StructuredIntakeReview values={values} /> : null}
+        {activeStep === 3 ? (
+          <StructuredIntakeScoring
+            configuration={matchingConfiguration}
+            disabled={isBusy}
+            onChange={setMatchingConfiguration}
+          />
+        ) : null}
 
         <div className="flex flex-col gap-3 border-t border-border bg-muted/35 px-5 py-4 sm:flex-row sm:items-center sm:justify-between md:px-7">
           <div>
@@ -221,6 +292,16 @@ export function StructuredIntakeScreen({
                 Required fields are marked with an asterisk.
               </p>
             )}
+            {activeStep === 3 && !isStructuredIntakeComplete(values) ? (
+              <p className="text-xs font-medium text-amber-800">
+                Complete the required company and investor-fit fields to run a match.
+              </p>
+            ) : null}
+            {activeStep === 3 && totalWeight !== 100 ? (
+              <p className="text-xs font-medium text-amber-800">
+                Score weights must total 100.
+              </p>
+            ) : null}
           </div>
           <Button
             type="submit"
@@ -233,8 +314,8 @@ export function StructuredIntakeScreen({
             ) : null}
             {isSubmitting
               ? "Starting match"
-              : activeStep === 2
-                ? "Start matching"
+              : activeStep === 3
+                ? "Run test match"
                 : "Continue"}
             {!isSubmitting ? (
               <ArrowRight className="size-4" aria-hidden="true" />

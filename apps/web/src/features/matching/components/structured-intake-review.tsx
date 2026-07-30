@@ -1,5 +1,6 @@
-import { Building2, Target } from "lucide-react";
+import { Building2, Pencil, Target } from "lucide-react";
 
+import { Button } from "@/components/ui/button";
 import {
   AI_RELEVANCE_OPTIONS,
   BUSINESS_MODEL_OPTIONS,
@@ -40,7 +41,15 @@ function ReviewItem({
   );
 }
 
-export function StructuredIntakeReview({ values }: { values: StructuredIntakeValues }) {
+export function StructuredIntakeReview({
+  values,
+  onEditCompany,
+  onEditSignals,
+}: {
+  values: StructuredIntakeValues;
+  onEditCompany: () => void;
+  onEditSignals: () => void;
+}) {
   const hqCountry =
     values.hqCountry === "other"
       ? values.otherHqCountry
@@ -58,18 +67,30 @@ export function StructuredIntakeReview({ values }: { values: StructuredIntakeVal
   return (
     <div className="divide-y divide-border">
       <section className="p-5 md:p-7">
-        <div className="flex items-start gap-3">
-          <span className="flex size-9 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
-            <Building2 className="size-4" aria-hidden="true" />
-          </span>
-          <div>
-            <h2 className="text-base font-semibold text-foreground">
-              Company and round
-            </h2>
-            <p className="mt-1 text-sm text-muted-foreground">
-              The company details investors will be matched against.
-            </p>
+        <div className="flex flex-wrap items-start justify-between gap-3">
+          <div className="flex items-start gap-3">
+            <span className="flex size-9 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
+              <Building2 className="size-4" aria-hidden="true" />
+            </span>
+            <div>
+              <h2 className="text-base font-semibold text-foreground">
+                Company and round
+              </h2>
+              <p className="mt-1 text-sm text-muted-foreground">
+                The company details investors will be matched against.
+              </p>
+            </div>
           </div>
+          <Button
+            type="button"
+            variant="outline"
+            size="sm"
+            aria-label="Edit company and round"
+            onClick={onEditCompany}
+          >
+            <Pencil className="size-3.5" aria-hidden="true" />
+            Edit
+          </Button>
         </div>
         <dl className="mt-6 grid gap-x-8 gap-y-5 sm:grid-cols-2 lg:grid-cols-3">
           <ReviewItem label="Company" value={values.companyName} />
@@ -87,21 +108,39 @@ export function StructuredIntakeReview({ values }: { values: StructuredIntakeVal
             label="Lead requirement"
             value={getIntakeOptionLabel(LEAD_NEED_OPTIONS, values.leadNeeded)}
           />
-          <ReviewItem label="Product summary" value={values.companySummary} wide />
+          {values.companySummary.trim() ? (
+            <ReviewItem
+              label="Additional company context"
+              value={values.companySummary}
+              wide
+            />
+          ) : null}
         </dl>
       </section>
 
       <section className="p-5 md:p-7">
-        <div className="flex items-start gap-3">
-          <span className="flex size-9 shrink-0 items-center justify-center rounded-md bg-secondary/25 text-primary">
-            <Target className="size-4" aria-hidden="true" />
-          </span>
-          <div>
-            <h2 className="text-base font-semibold text-foreground">Investor fit</h2>
-            <p className="mt-1 text-sm text-muted-foreground">
-              The selected signals used to rank eligible investors.
-            </p>
+        <div className="flex flex-wrap items-start justify-between gap-3">
+          <div className="flex items-start gap-3">
+            <span className="flex size-9 shrink-0 items-center justify-center rounded-md bg-secondary/25 text-primary">
+              <Target className="size-4" aria-hidden="true" />
+            </span>
+            <div>
+              <h2 className="text-base font-semibold text-foreground">Investor fit</h2>
+              <p className="mt-1 text-sm text-muted-foreground">
+                The selected signals used to rank eligible investors.
+              </p>
+            </div>
           </div>
+          <Button
+            type="button"
+            variant="outline"
+            size="sm"
+            aria-label="Edit investor fit"
+            onClick={onEditSignals}
+          >
+            <Pencil className="size-3.5" aria-hidden="true" />
+            Edit
+          </Button>
         </div>
         <dl className="mt-6 grid gap-x-8 gap-y-5 sm:grid-cols-2 lg:grid-cols-3">
           <ReviewItem

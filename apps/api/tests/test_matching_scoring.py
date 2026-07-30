@@ -1,3 +1,7 @@
+import pytest
+from pydantic import ValidationError
+
+from app.schemas.match import MatchingWeights
 from app.services.founder_parser_service import normalize_parsed_founder_profile
 from app.services.matching_scoring import (
     MATCHING_WEIGHTS,
@@ -165,3 +169,101 @@ def test_sparse_theme_non_match_is_unknown_not_hard_zero_denominator() -> None:
     assert result["normalized_score"] > result["raw_score"]
     assert result["score"] == result["normalized_score"]
     assert "theme_coverage" in result["missing_evidence"]
+
+
+def test_custom_weights_change_factor_contributions() -> None:
+    founder = {
+        "stage": "seed",
+        "company_hq_country": "Australia",
+        "primary_market": "Australia",
+        "actual_sector": ["enterprise_software_data_security"],
+        "customer_type": "enterprise",
+        "business_model": "subscription_saas",
+        "lead_needed": False,
+    }
+    profile = {
+        "investor_id": "inv-weights",
+        "investor_name": "Weighted Ventures",
+        "investor_type": "vc",
+        "hq_country": "Australia",
+        "geography_focus": ["Australia"],
+        "supported_sectors": ["enterprise_software_data_security"],
+        "stage_preferences": [
+            {
+                "stage": "seed",
+                "deals_count": 3,
+                "lead_count": 1,
+                "participant_count": 2,
+                "data_quality": "high",
+                "actual_sector": ["enterprise_software_data_security"],
+                "actual_themes": [],
+                "dimension_distributions": {},
+                "evidence_refs": [],
+            }
+        ],
+    }
+    weights = {
+        "stage_evidence_depth": 0,
+        "geography_fit": 0,
+        "sector_fit": 100,
+        "theme_fit": 0,
+        "recent_deal_similarity": 0,
+        "customer_icp_fit": 0,
+        "cheque_size_fit": 0,
+        "lead_behavior_fit": 0,
+        "data_quality_recency": 0,
+    }
+
+    result = score_profile(founder, profile, matching_weights=weights)
+
+    assert result["scoring_weights"] == weights
+    assert result["breakdown"]["sector_fit"] > 0
+    assert all(
+        value == 0 for key, value in result["breakdown"].items() if key != "sector_fit"
+    )
+
+
+def test_hard_filters_can_be_disabled_for_testing() -> None:
+    founder = {
+        "stage": "seed",
+        "company_hq_country": "Australia",
+        "primary_market": "Australia",
+        "actual_sector": ["fintech_financial_services"],
+    }
+    profile = {
+        "investor_id": "inv-filter",
+        "investor_name": "Off Mandate Capital",
+        "investor_type": "vc",
+        "hq_country": "United States",
+        "geography_focus": ["United States"],
+        "supported_sectors": ["fintech_financial_services"],
+        "stage_preferences": [
+            {
+                "stage": "series_a",
+                "deals_count": 2,
+                "actual_sector": ["fintech_financial_services"],
+                "actual_themes": [],
+                "dimension_distributions": {},
+                "evidence_refs": [],
+            }
+        ],
+    }
+
+    filtered = score_profile(founder, profile)
+    retained = score_profile(
+        founder,
+        profile,
+        hard_filters={"stage": False, "geography": False},
+    )
+
+    assert filtered["eligibility"]["passed"] is False
+    assert retained["eligibility"]["passed"] is True
+    assert any(
+        "filtering is off" in warning
+        for warning in retained["eligibility"]["soft_warnings"]
+    )
+
+
+def test_matching_weights_must_total_100() -> None:
+    with pytest.raises(ValidationError):
+        MatchingWeights(sector_fit=21)

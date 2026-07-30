@@ -4,7 +4,11 @@ import { buttonVariants } from "@/components/ui/button";
 import type { MatchResult } from "@/features/matching/types/match";
 import { cn } from "@/lib/utils";
 
-import { MATCH_FACTOR_DETAIL_LABELS, MATCH_FACTOR_MAX } from "./match-display";
+import {
+  MATCH_FACTOR_DETAIL_LABELS,
+  MATCH_FACTOR_MAX,
+  matchFactorMaximum,
+} from "./match-display";
 import { formatDate, labelFromCode } from "./vc-detail-utils";
 import { DataRow } from "./vc-profile-primitives";
 
@@ -38,7 +42,7 @@ function MatchIntelligence({ match }: { match: MatchResult }) {
       {factorRows.length > 0 ? (
         <div className="mt-5 space-y-3">
           {factorRows.map(([key, value]) => {
-            const max = MATCH_FACTOR_MAX[key] ?? 1;
+            const max = matchFactorMaximum(match, key);
             const label = MATCH_FACTOR_DETAIL_LABELS[key] ?? key;
             return (
               <div key={key}>
@@ -51,7 +55,9 @@ function MatchIntelligence({ match }: { match: MatchResult }) {
                 <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-muted">
                   <div
                     className="h-full rounded-full bg-primary"
-                    style={{ width: `${Math.min((value / max) * 100, 100)}%` }}
+                    style={{
+                      width: `${Math.min(max > 0 ? (value / max) * 100 : 0, 100)}%`,
+                    }}
                   />
                 </div>
               </div>

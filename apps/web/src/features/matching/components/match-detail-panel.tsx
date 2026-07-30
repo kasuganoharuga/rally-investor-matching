@@ -10,7 +10,7 @@ import { ShortlistToggleButton } from "@/features/shortlist/components/shortlist
 import { useShortlist } from "@/features/shortlist/hooks/use-shortlist";
 import { cn } from "@/lib/utils";
 
-import { MATCH_FACTOR_DETAIL_LABELS, MATCH_FACTOR_MAX } from "./match-display";
+import { MATCH_FACTOR_DETAIL_LABELS, matchFactorMaximum } from "./match-display";
 
 type MatchDetailPanelProps = {
   match: MatchResult;
@@ -34,7 +34,6 @@ const FACTORS = (
 ).map((key) => ({
   key,
   label: MATCH_FACTOR_DETAIL_LABELS[key] ?? key,
-  max: MATCH_FACTOR_MAX[key] ?? 1,
 }));
 
 function titleCase(value: string | null | undefined): string {
@@ -347,11 +346,16 @@ export function MatchDetailPanel({
           <div className="mt-5 space-y-4 border-t border-border pt-4">
             {FACTORS.map((factor) => {
               const rawValue = match.breakdown[factor.key] ?? 0;
+              const factorMax = matchFactorMaximum(match, factor.key);
+              const isWeighted = factorMax > 0;
               const percent = Math.max(
                 0,
-                Math.min(100, Math.round((rawValue / factor.max) * 100)),
+                Math.min(
+                  100,
+                  Math.round(isWeighted ? (rawValue / factorMax) * 100 : 0),
+                ),
               );
-              const tone = factorTone(rawValue, factor.max);
+              const tone = factorTone(rawValue, factorMax);
               return (
                 <div
                   key={factor.key}
@@ -362,18 +366,20 @@ export function MatchDetailPanel({
                       {factor.label}
                     </p>
                     <p className="text-xs text-muted-foreground">
-                      {rawValue}/{factor.max} pts
+                      {rawValue}/{factorMax} pts
                     </p>
                   </div>
                   <div className="h-2 self-center rounded-full bg-muted">
                     <div
                       className={cn(
                         "h-2 rounded-full",
-                        tone === "strong"
-                          ? "bg-emerald-600"
-                          : tone === "partial"
-                            ? "bg-amber-500"
-                            : "bg-muted-foreground",
+                        !isWeighted
+                          ? "bg-muted"
+                          : tone === "strong"
+                            ? "bg-emerald-600"
+                            : tone === "partial"
+                              ? "bg-amber-500"
+                              : "bg-muted-foreground",
                       )}
                       style={{ width: `${percent}%` }}
                     />
@@ -388,7 +394,7 @@ export function MatchDetailPanel({
                           : "text-muted-foreground",
                     )}
                   >
-                    {factorLabel(tone)}
+                    {isWeighted ? factorLabel(tone) : "Not weighted"}
                   </span>
                 </div>
               );

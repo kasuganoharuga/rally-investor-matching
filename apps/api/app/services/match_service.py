@@ -158,6 +158,16 @@ class MatchService:
             matches=self._run_database_match(
                 founder_profile=founder_profile,
                 connection=connection,
+                matching_weights=(
+                    request.matching_configuration.weights.model_dump()
+                    if request.matching_configuration
+                    else None
+                ),
+                hard_filters=(
+                    request.matching_configuration.hard_filters.model_dump()
+                    if request.matching_configuration
+                    else None
+                ),
             ),
         )
 
@@ -166,6 +176,8 @@ class MatchService:
         *,
         founder_profile: dict[str, Any],
         connection: Connection,
+        matching_weights: dict[str, int] | None = None,
+        hard_filters: dict[str, bool] | None = None,
     ) -> list[dict[str, Any]]:
         results = []
         rows = self._repository.list_match_profiles(connection)
@@ -176,6 +188,8 @@ class MatchService:
                 founder_profile,
                 profile,
                 theme_prevalence=theme_prevalence,
+                matching_weights=matching_weights,
+                hard_filters=hard_filters,
             )
             if not result.get("eligibility", {}).get("passed", True):
                 continue

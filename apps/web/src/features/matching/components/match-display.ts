@@ -62,6 +62,10 @@ export const MATCH_FACTOR_DETAIL_LABELS: Record<string, string> = {
   data_quality_recency: "Data quality",
 };
 
+export function matchFactorMaximum(match: MatchResult, key: string): number {
+  return match.scoring_weights?.[key] ?? MATCH_FACTOR_MAX[key] ?? 1;
+}
+
 export function displayValue(value: unknown): string {
   if (value === null || value === undefined || value === "") {
     return "Missing";

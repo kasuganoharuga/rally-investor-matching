@@ -374,7 +374,6 @@ export function isStructuredIntakeComplete(values: StructuredIntakeValues): bool
 export function isCompanyAndRaiseComplete(values: StructuredIntakeValues): boolean {
   return Boolean(
     values.companyName.trim() &&
-    values.companySummary.trim() &&
     values.hqCountry &&
     (values.hqCountry !== "other" || values.otherHqCountry.trim()) &&
     values.primaryMarket &&
@@ -426,7 +425,9 @@ export function buildStructuredIntakeMessage(values: StructuredIntakeValues): st
     values.salesMotion ? `Sales motion: ${values.salesMotion}` : "",
     values.technologyDepth ? `Technology depth: ${values.technologyDepth}` : "",
     values.aiRelevance ? `AI relevance: ${values.aiRelevance}` : "",
-    `One sentence summary: ${values.companySummary.trim()}`,
+    values.companySummary.trim()
+      ? `Additional company context: ${values.companySummary.trim()}`
+      : "",
   ];
 
   return lines.filter(Boolean).join("\n");

@@ -77,6 +77,7 @@ function snapshotFromResponse(
     request_summary: {
       follow_up_count: request.follow_up_count ?? 0,
       has_follow_up_answer: Boolean(request.follow_up_answer?.trim()),
+      matching_configuration: request.matching_configuration ?? null,
     },
     response,
   };
@@ -163,6 +164,7 @@ export async function insertMatchingRun(
       JSON.stringify({
         source: "web_match_proxy",
         stored_recommendations: "response_snapshot",
+        matching_configuration: input.request.matching_configuration ?? null,
       }),
       input.response.matches.length,
     ],
