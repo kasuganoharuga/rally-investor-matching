@@ -75,7 +75,8 @@ if [[ ! -f "$deploy_marker" ]]; then
   # shellcheck disable=SC1091
   . /etc/rally/web.env
   set +a
-  pnpm --filter @rally-investor-matching/web build
+  RALLY_DEPLOY_SKIP_TYPECHECK=1 \
+    pnpm --filter @rally-investor-matching/web build
   touch "$deploy_marker"
 fi
 

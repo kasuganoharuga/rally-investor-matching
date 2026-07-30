@@ -129,12 +129,14 @@ jobs:
           )
 
           encoded_script=$(printf '%s' "$remote_script" | base64 -w 0)
-          parameters=$(jq -n --arg command "echo '$encoded_script' | base64 -d | bash" '{commands: [$command]}')
+          parameters=$(jq -n \
+            --arg command "echo '$encoded_script' | base64 -d | bash" \
+            '{commands: [$command], executionTimeout: ["1500"]}')
           command_id=$(aws ssm send-command \
             --instance-ids "$EC2_INSTANCE_ID" \
             --document-name AWS-RunShellScript \
             --comment "Deploy Rally formal ${GITHUB_SHA}" \
-            --timeout-seconds 1500 \
+            --timeout-seconds 60 \
             --parameters "$parameters" \
             --query 'Command.CommandId' \
             --output text)
@@ -164,6 +166,12 @@ jobs:
           done
 
           if [[ "$status" != "Success" ]]; then
+            printf '%s\n' "$invocation" \
+              | jq -r '.StandardOutputContent // "", .StandardErrorContent // ""'
+            aws ssm cancel-command \
+              --command-id "$command_id" \
+              --instance-ids "$EC2_INSTANCE_ID" \
+              >/dev/null 2>&1 || true
             echo "Deployment did not finish within 25 minutes. Last status: $status" >&2
             exit 1
           fi
