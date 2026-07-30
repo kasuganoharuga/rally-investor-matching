@@ -49,6 +49,8 @@ services:
       - ../../data/patches/202607_formal_sample_import_extensions.sql:/docker-entrypoint-initdb.d/002_formal_import_extensions.sql:ro
       - ../../data/seeds/formal_investor_data.sql:/docker-entrypoint-initdb.d/003_formal_investor_data.sql:ro
       - ../../data/seeds/public_admin_test.sql:/docker-entrypoint-initdb.d/004_seed_public_admin_test.sql:ro
+      - ../../data/patches/202607_clean_mojibake.sql:/docker-entrypoint-initdb.d/005_clean_mojibake.sql:ro
+      - ../../data/patches/202607_refresh_investor_links.sql:/docker-entrypoint-initdb.d/006_refresh_investor_links.sql:ro
     healthcheck:
       test:
         [
