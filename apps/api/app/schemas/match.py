@@ -31,6 +31,7 @@ class HardFilterSettings(BaseModel):
 class MatchingConfiguration(BaseModel):
     weights: MatchingWeights = Field(default_factory=MatchingWeights)
     hard_filters: HardFilterSettings = Field(default_factory=HardFilterSettings)
+    result_limit: int = Field(default=20, ge=10, le=30)
 
 
 class IntakeRequest(BaseModel):

@@ -1,11 +1,13 @@
 "use client";
 
-import { RotateCcw, ShieldCheck, SlidersHorizontal } from "lucide-react";
+import { ListOrdered, RotateCcw, ShieldCheck, SlidersHorizontal } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
   DEFAULT_MATCHING_CONFIGURATION,
+  MAX_MATCH_RESULT_LIMIT,
+  MIN_MATCH_RESULT_LIMIT,
   type HardFilterSettings,
   type MatchingConfiguration,
   type MatchingWeightKey,
@@ -87,6 +89,7 @@ function cloneDefaultConfiguration(): MatchingConfiguration {
   return {
     weights: { ...DEFAULT_MATCHING_CONFIGURATION.weights },
     hard_filters: { ...DEFAULT_MATCHING_CONFIGURATION.hard_filters },
+    result_limit: DEFAULT_MATCHING_CONFIGURATION.result_limit,
   };
 }
 
@@ -104,10 +107,13 @@ export function StructuredIntakeScoring({
     0,
   );
   const hasValidTotal = totalWeight === 100;
+  const resultLimit =
+    configuration.result_limit ?? DEFAULT_MATCHING_CONFIGURATION.result_limit;
 
   function updateWeight(key: MatchingWeightKey, value: number) {
     onChange({
       ...configuration,
+      result_limit: resultLimit,
       weights: {
         ...configuration.weights,
         [key]: Math.min(100, Math.max(0, Math.round(value))),
@@ -118,10 +124,21 @@ export function StructuredIntakeScoring({
   function updateHardFilter(key: keyof HardFilterSettings, value: boolean) {
     onChange({
       ...configuration,
+      result_limit: resultLimit,
       hard_filters: {
         ...configuration.hard_filters,
         [key]: value,
       },
+    });
+  }
+
+  function updateResultLimit(value: number) {
+    onChange({
+      ...configuration,
+      result_limit: Math.min(
+        MAX_MATCH_RESULT_LIMIT,
+        Math.max(MIN_MATCH_RESULT_LIMIT, Math.round(value)),
+      ),
     });
   }
 
@@ -287,6 +304,62 @@ export function StructuredIntakeScoring({
               </div>
             );
           })}
+        </div>
+      </section>
+
+      <section className="p-5 md:p-7">
+        <div className="flex items-start gap-3">
+          <span className="flex size-10 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
+            <ListOrdered className="size-4.5" aria-hidden="true" />
+          </span>
+          <div>
+            <h2 className="text-lg font-semibold text-foreground">Result count</h2>
+            <p className="mt-1 text-sm text-muted-foreground">
+              Choose how many ranked investors this test should return.
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-6 grid gap-3 rounded-md border border-border bg-background p-4 md:grid-cols-[minmax(220px,1fr)_96px] md:items-center">
+          <div>
+            <label
+              htmlFor="match-result-limit"
+              className="text-sm font-semibold text-foreground"
+            >
+              Ranked investors
+            </label>
+            <input
+              type="range"
+              min={MIN_MATCH_RESULT_LIMIT}
+              max={MAX_MATCH_RESULT_LIMIT}
+              step={1}
+              value={resultLimit}
+              disabled={disabled}
+              aria-label="Result count slider"
+              onChange={(event) => updateResultLimit(Number(event.target.value))}
+              className="mt-3 h-2 w-full cursor-pointer accent-primary disabled:cursor-not-allowed disabled:opacity-50"
+            />
+            <div className="mt-2 flex justify-between text-xs text-muted-foreground">
+              <span>{MIN_MATCH_RESULT_LIMIT}</span>
+              <span>{MAX_MATCH_RESULT_LIMIT}</span>
+            </div>
+          </div>
+          <div className="relative">
+            <Input
+              id="match-result-limit"
+              type="number"
+              min={MIN_MATCH_RESULT_LIMIT}
+              max={MAX_MATCH_RESULT_LIMIT}
+              step={1}
+              value={resultLimit}
+              disabled={disabled}
+              onChange={(event) => updateResultLimit(Number(event.target.value))}
+              className="h-11 pr-14 text-right"
+            />
+            <span className="pointer-events-none absolute top-1/2 right-3 -translate-y-1/2 text-xs text-muted-foreground">
+              results
+            </span>
+          </div>
         </div>
       </section>
     </div>

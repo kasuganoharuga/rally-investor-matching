@@ -415,3 +415,49 @@ def test_match_intake_returns_expanded_direct_vc_matches(monkeypatch: object) ->
         assert len(body["matches"]) == 12
     finally:
         app.dependency_overrides.clear()
+
+
+def test_match_intake_honours_requested_result_limit(monkeypatch: object) -> None:
+    def fake_parse(message: str) -> dict[str, object]:
+        return {
+            "company_name": "Example AI Health",
+            "company_hq_country": "australia",
+            "primary_market": "australia",
+            "stage": "seed",
+            "round_type": "seed",
+            "sector": "ai",
+            "business_model": "b2b",
+            "target_raise_value": 2.5,
+            "target_raise_currency": "AUD",
+            "target_raise_unit": "million",
+            "lead_needed": True,
+            "missing_information": [],
+        }
+
+    monkeypatch.setattr(match_service_module, "parse_founder_message", fake_parse)
+    app.dependency_overrides[get_connection] = lambda: FakeConnection(
+        [
+            investor_row(
+                id_value=f"20000000-0000-0000-0000-{index:012d}",
+                name=f"Investor {index}",
+                slug=f"limited-investor-{index}",
+            )
+            for index in range(1, 31)
+        ]
+    )
+    try:
+        client = TestClient(app)
+
+        response = client.post(
+            "/api/v1/match/intake",
+            json={
+                "message": "We are an AU AI health company.",
+                "matching_configuration": {"result_limit": 10},
+            },
+        )
+
+        body = response.json()["data"]
+        assert response.status_code == 200
+        assert len(body["matches"]) == 10
+    finally:
+        app.dependency_overrides.clear()

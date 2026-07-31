@@ -60,6 +60,7 @@ function defaultMatchingConfiguration(): MatchingConfiguration {
   return {
     weights: { ...DEFAULT_MATCHING_CONFIGURATION.weights },
     hard_filters: { ...DEFAULT_MATCHING_CONFIGURATION.hard_filters },
+    result_limit: DEFAULT_MATCHING_CONFIGURATION.result_limit,
   };
 }
 
@@ -112,7 +113,12 @@ export function StructuredIntakeScreen({
       return;
     }
     if (canSubmit) {
-      onSubmit(buildStructuredIntakeMessage(values), matchingConfiguration);
+      onSubmit(buildStructuredIntakeMessage(values), {
+        ...matchingConfiguration,
+        result_limit:
+          matchingConfiguration.result_limit ??
+          DEFAULT_MATCHING_CONFIGURATION.result_limit,
+      });
     }
   }
 

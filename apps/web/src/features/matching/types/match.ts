@@ -31,6 +31,10 @@ export const hardFilterSettingsSchema = z.object({
   geography: z.boolean(),
 });
 
+export const MIN_MATCH_RESULT_LIMIT = 10;
+export const MAX_MATCH_RESULT_LIMIT = 30;
+export const DEFAULT_MATCH_RESULT_LIMIT = 20;
+
 export const matchingConfigurationSchema = z.object({
   weights: matchingWeightsSchema.refine(
     (weights) =>
@@ -38,6 +42,12 @@ export const matchingConfigurationSchema = z.object({
     "Matching weights must total 100.",
   ),
   hard_filters: hardFilterSettingsSchema,
+  result_limit: z
+    .number()
+    .int()
+    .min(MIN_MATCH_RESULT_LIMIT)
+    .max(MAX_MATCH_RESULT_LIMIT)
+    .default(DEFAULT_MATCH_RESULT_LIMIT),
 });
 
 export const intakeRequestSchema = z.object({
@@ -68,6 +78,7 @@ export const DEFAULT_MATCHING_CONFIGURATION: MatchingConfiguration = {
     stage: true,
     geography: true,
   },
+  result_limit: DEFAULT_MATCH_RESULT_LIMIT,
 };
 
 export const matchEvidenceSchema = z.object({

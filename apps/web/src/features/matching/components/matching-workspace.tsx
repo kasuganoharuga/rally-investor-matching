@@ -4,6 +4,7 @@ import {
   ArrowLeft,
   ArrowRight,
   Check,
+  Download,
   FileText,
   Loader2,
   Paperclip,
@@ -16,6 +17,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { MatchDetailPanel } from "@/features/matching/components/match-detail-panel";
 import { matchFactorMaximum } from "@/features/matching/components/match-display";
 import { MatchHistoryPanel } from "@/features/matching/components/match-history-panel";
+import { downloadMatchResultsCsv } from "@/features/matching/components/match-results-csv";
 import { StructuredIntakeScreen } from "@/features/matching/components/structured-intake-screen";
 import { VcDetailPanel } from "@/features/matching/components/vc-detail-panel";
 import { useMatchIntake } from "@/features/matching/hooks/use-match-intake";
@@ -545,9 +547,20 @@ function ResultsScreen({
               </span>
             </div>
           </div>
-          <div className="text-right text-sm text-muted-foreground">
-            <p>{companyName}</p>
-            <p>Matched {new Intl.DateTimeFormat("en-AU").format(new Date())}</p>
+          <div className="flex flex-col items-end gap-3">
+            <Button
+              type="button"
+              variant="outline"
+              size="lg"
+              onClick={() => downloadMatchResultsCsv(matches, companyName)}
+            >
+              <Download className="size-4" aria-hidden="true" />
+              Download CSV
+            </Button>
+            <div className="text-right text-sm text-muted-foreground">
+              <p>{companyName}</p>
+              <p>Matched {new Intl.DateTimeFormat("en-AU").format(new Date())}</p>
+            </div>
           </div>
         </div>
       </div>

@@ -168,6 +168,11 @@ class MatchService:
                     if request.matching_configuration
                     else None
                 ),
+                result_limit=(
+                    request.matching_configuration.result_limit
+                    if request.matching_configuration
+                    else MATCH_RESULT_LIMIT
+                ),
             ),
         )
 
@@ -178,6 +183,7 @@ class MatchService:
         connection: Connection,
         matching_weights: dict[str, int] | None = None,
         hard_filters: dict[str, bool] | None = None,
+        result_limit: int = MATCH_RESULT_LIMIT,
     ) -> list[dict[str, Any]]:
         results = []
         rows = self._repository.list_match_profiles(connection)
@@ -196,7 +202,7 @@ class MatchService:
             result["investor_profile"] = build_match_investor_profile(row)
             results.append(result)
 
-        return select_ranked_matches(results, limit=MATCH_RESULT_LIMIT)
+        return select_ranked_matches(results, limit=result_limit)
 
 
 match_service = MatchService()

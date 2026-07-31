@@ -1,7 +1,7 @@
 import pytest
 from pydantic import ValidationError
 
-from app.schemas.match import MatchingWeights
+from app.schemas.match import MatchingConfiguration, MatchingWeights
 from app.services.founder_parser_service import normalize_parsed_founder_profile
 from app.services.matching_scoring import (
     MATCHING_WEIGHTS,
@@ -267,3 +267,9 @@ def test_hard_filters_can_be_disabled_for_testing() -> None:
 def test_matching_weights_must_total_100() -> None:
     with pytest.raises(ValidationError):
         MatchingWeights(sector_fit=21)
+
+
+@pytest.mark.parametrize("result_limit", [9, 31])
+def test_match_result_limit_must_be_between_10_and_30(result_limit: int) -> None:
+    with pytest.raises(ValidationError):
+        MatchingConfiguration(result_limit=result_limit)

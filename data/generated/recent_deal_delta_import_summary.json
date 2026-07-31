@@ -1,0 +1,119 @@
+{
+  "pipeline_version": "formal-incremental-2026-07-31-v1",
+  "generated_at": "2026-07-31T10:24:40.253400+10:00",
+  "input_root": "database_import",
+  "packages": [
+    {
+      "path": "recent-deal2026-7-30_deals-001-060_delta_identity-audited-v3_team-audited",
+      "batch_id": "recent-deal2026-7-30_deals-001-060_delta_identity-audited-v3_team-audited",
+      "pipeline_version": "1.9.0-investor-identity-gap-supplement",
+      "validation_status": "passed",
+      "source_rows": {
+        "first": 2,
+        "last": 61,
+        "count": 60
+      }
+    },
+    {
+      "path": "recent-deal2026-7-30_deals-061-120_delta_identity-audited-v3_team-audited",
+      "batch_id": "recent-deal2026-7-30_deals-061-120_delta_identity-audited-v3_team-audited",
+      "pipeline_version": "1.9.0-investor-identity-gap-supplement",
+      "validation_status": "passed",
+      "source_rows": {
+        "first": 62,
+        "last": 121,
+        "count": 60
+      }
+    },
+    {
+      "path": "recent-deal2026-7-30_deals-121-180_delta_identity-audited-v3_team-audited",
+      "batch_id": "recent-deal2026-7-30_deals-121-180_delta_identity-audited-v3_team-audited",
+      "pipeline_version": "1.9.0-investor-identity-gap-supplement",
+      "validation_status": "passed",
+      "source_rows": {
+        "first": 122,
+        "last": 181,
+        "count": 60
+      }
+    },
+    {
+      "path": "recent-deal2026-7-30_deals-181-230_delta_identity-audited-v3_team-audited",
+      "batch_id": "recent-deal2026-7-30_deals-181-230_delta_identity-audited-v3_team-audited",
+      "pipeline_version": "1.9.0-investor-identity-gap-supplement",
+      "validation_status": "passed",
+      "source_rows": {
+        "first": 182,
+        "last": 231,
+        "count": 50
+      }
+    }
+  ],
+  "plan": {
+    "dependency_investor_keys": 130,
+    "existing_master_matches": 3,
+    "planned_new_investor_masters": 305,
+    "workbook_dependency_supplements": 14,
+    "record_counts": {
+      "deal_investors": 583,
+      "funding_rounds": 230,
+      "investee_company_profiles": 224,
+      "investee_external_ids": 224,
+      "investor_programs": 1,
+      "investor_team_members": 59,
+      "investor_web_profiles": 308,
+      "investors": 308
+    },
+    "duplicate_record_keys_replaced": {
+      "investee_company_profiles": 6,
+      "investee_external_ids": 6
+    },
+    "unsupported_records": {},
+    "cleaning": {}
+  },
+  "cleaning": {},
+  "imported": {
+    "investors_inserted": 305,
+    "investors_updated_or_merged": 3,
+    "investor_web_profiles_inserted": 305,
+    "investor_web_profiles_updated": 3,
+    "investor_programs_merged": 1,
+    "investor_team_members_inserted": 59,
+    "investee_company_profiles_inserted": 209,
+    "investee_company_profiles_updated": 15,
+    "investee_external_ids_upserted": 224,
+    "funding_rounds_inserted": 230,
+    "deal_investors_inserted": 583
+  },
+  "derived": {
+    "evidence_rows": 1287,
+    "investors_with_stage_preferences": 592,
+    "manual_review_items": 23
+  },
+  "before": {
+    "investors": 481,
+    "investor_external_ids": 80,
+    "investor_web_profiles": 481,
+    "investor_team_members": 144,
+    "investee_company_profiles": 423,
+    "investee_external_ids": 423,
+    "funding_rounds": 464,
+    "deal_investors": 704,
+    "investor_actual_preferences": 481,
+    "investor_actual_stage_preferences": 345,
+    "classification_manual_review_items": 2
+  },
+  "after": {
+    "investors": 786,
+    "investor_external_ids": 388,
+    "investor_web_profiles": 786,
+    "investor_team_members": 203,
+    "investee_company_profiles": 632,
+    "investee_external_ids": 851,
+    "funding_rounds": 694,
+    "deal_investors": 1287,
+    "investor_actual_preferences": 786,
+    "investor_actual_stage_preferences": 737,
+    "classification_manual_review_items": 23
+  },
+  "suspicious_text_after_import": []
+}
