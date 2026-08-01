@@ -27,7 +27,7 @@ export function FundraiseFields({
     <fieldset className="grid gap-5 p-5 md:p-7" disabled={disabled}>
       <legend className="sr-only">Fundraise</legend>
       <div className="flex items-start gap-3">
-        <span className="flex size-9 shrink-0 items-center justify-center rounded-md bg-secondary text-secondary-foreground">
+        <span className="flex size-9 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
           <Banknote className="size-4.5" aria-hidden="true" />
         </span>
         <div>
@@ -67,10 +67,8 @@ export function FundraiseFields({
             value={values.raiseAmount}
             onChange={(event) => onChange("raiseAmount", event.target.value)}
             placeholder="1500000"
+            className="h-11"
           />
-          <p className="text-xs text-muted-foreground">
-            Enter the full number without commas.
-          </p>
         </div>
 
         <SelectField

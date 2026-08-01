@@ -13,7 +13,7 @@ export async function MatchingPage({
   const user = await requirePageUser();
 
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <main className="flex min-h-screen flex-col bg-background text-foreground">
       <SiteHeader active="match" user={user} />
       <MatchingWorkspace intakeVariant={intakeVariant} />
     </main>

@@ -1509,15 +1509,20 @@ def score_profile(
     )
     breakdown["sector_fit"] = sector_score
     breakdown["theme_fit"] = theme_score
+    # score_theme_fit() overloads this list with a "sector_only_support"
+    # sentinel and "founderTheme->investorTheme" pairs for related matches —
+    # neither is a real theme name, so strip them before using the list for
+    # anything besides internal scoring.
+    clean_theme_matches = [
+        item.split("->", 1)[0] if "->" in item else item
+        for item in theme_matches
+        if item != "sector_only_support"
+    ]
     recent_score, comparable_deals = score_recent_deal_similarity(
         founder_taxonomy,
         pref,
         sector_matches,
-        [
-            item.split("->", 1)[0] if "->" in item else item
-            for item in theme_matches
-            if item != "sector_only_support"
-        ],
+        clean_theme_matches,
     )
     breakdown["recent_deal_similarity"] = recent_score
     breakdown["customer_icp_fit"] = score_customer_icp(founder, pref)
@@ -1670,6 +1675,13 @@ def score_profile(
         "risks": risks,
         "review_needed_fields": profile.get("review_needed_fields", []),
         "evidence": evidence,
+        "match_context": {
+            "matched_stage": pref.get("stage") if pref else None,
+            "stage_match_reason": stage_match,
+            "sector_matches": sector_matches,
+            "theme_matches": clean_theme_matches,
+            "comparable_deals": comparable_deals,
+        },
     }
 
 

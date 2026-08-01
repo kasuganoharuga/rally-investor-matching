@@ -187,6 +187,16 @@ export const matchEligibilitySchema = z.object({
   soft_warnings: z.array(z.string()).default([]),
 });
 
+// Optional: /api/matching/history persists whole IntakeResponse payloads, so
+// records saved before this field existed won't have it.
+export const matchContextSchema = z.object({
+  matched_stage: z.string().optional().nullable(),
+  stage_match_reason: z.string().optional().nullable(),
+  sector_matches: z.array(z.string()).default([]),
+  theme_matches: z.array(z.string()).default([]),
+  comparable_deals: z.array(z.string()).default([]),
+});
+
 export const matchResultSchema = z.object({
   investor_id: z.string(),
   investor_name: z.string(),
@@ -212,6 +222,7 @@ export const matchResultSchema = z.object({
   review_needed_fields: z.array(z.string()).default([]),
   evidence: z.array(matchEvidenceSchema).default([]),
   investor_profile: matchInvestorProfileSchema.optional(),
+  match_context: matchContextSchema.optional(),
 });
 
 export const intakeResponseSchema = z.object({
@@ -252,6 +263,7 @@ export type MatchRecentDeal = z.infer<typeof matchRecentDealSchema>;
 export type MatchStagePreference = z.infer<typeof matchStagePreferenceSchema>;
 export type MatchInvestorProfile = z.infer<typeof matchInvestorProfileSchema>;
 export type MatchEligibility = z.infer<typeof matchEligibilitySchema>;
+export type MatchContext = z.infer<typeof matchContextSchema>;
 export type MatchResult = z.infer<typeof matchResultSchema>;
 export type IntakeResponse = z.infer<typeof intakeResponseSchema>;
 export type FileExtractionResponse = z.infer<typeof fileExtractionResponseSchema>;

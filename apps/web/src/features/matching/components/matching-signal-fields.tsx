@@ -44,7 +44,7 @@ export function MatchingSignalFields({
     <fieldset className="grid gap-5 p-5 md:p-7" disabled={disabled}>
       <legend className="sr-only">Matching signals</legend>
       <div className="flex items-start gap-3">
-        <span className="flex size-9 shrink-0 items-center justify-center rounded-md bg-primary text-primary-foreground">
+        <span className="flex size-9 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
           <Target className="size-4.5" aria-hidden="true" />
         </span>
         <div>

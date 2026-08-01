@@ -1,8 +1,8 @@
 import { CalendarRange, CircleDollarSign, Flag, Layers3 } from "lucide-react";
 
+import { Badge } from "@/components/ui/badge";
 import type { MatchStagePreference } from "@/features/matching/types/match";
 import { SectorTag } from "@/features/investors/components/sector-tag";
-import { cn } from "@/lib/utils";
 
 import {
   formatChequeRange,
@@ -15,27 +15,6 @@ import {
 type VcStagePreferencesProps = {
   preferences: MatchStagePreference[];
 };
-
-function SignalChip({
-  children,
-  accent = false,
-}: {
-  children: string;
-  accent?: boolean;
-}) {
-  return (
-    <span
-      className={cn(
-        "max-w-full rounded-full border px-2.5 py-1 text-xs font-medium whitespace-normal break-words leading-5",
-        accent
-          ? "border-secondary bg-secondary/30 text-primary"
-          : "border-border bg-background text-muted-foreground",
-      )}
-    >
-      {children}
-    </span>
-  );
-}
 
 export function VcStagePreferences({ preferences }: VcStagePreferencesProps) {
   const sorted = [...preferences].sort(
@@ -77,9 +56,9 @@ export function VcStagePreferences({ preferences }: VcStagePreferencesProps) {
                       {dealsCount} observed {dealsCount === 1 ? "deal" : "deals"}
                     </span>
                   </div>
-                  <span className="rounded-full border border-border bg-muted px-2.5 py-1 text-xs font-semibold text-muted-foreground">
+                  <Badge variant="outline">
                     {labelFromCode(preference.data_quality)} evidence
-                  </span>
+                  </Badge>
                 </div>
 
                 <div className="mt-4 grid gap-x-5 gap-y-3 sm:grid-cols-2 xl:grid-cols-4">
@@ -152,9 +131,9 @@ export function VcStagePreferences({ preferences }: VcStagePreferencesProps) {
                     <div className="flex flex-wrap gap-2">
                       {preference.actual_themes.length > 0 ? (
                         preference.actual_themes.slice(0, 8).map((theme) => (
-                          <SignalChip key={theme} accent>
+                          <Badge key={theme} variant="secondary">
                             {labelFromCode(theme)}
-                          </SignalChip>
+                          </Badge>
                         ))
                       ) : (
                         <span className="text-sm text-muted-foreground">

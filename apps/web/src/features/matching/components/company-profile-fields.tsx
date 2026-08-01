@@ -34,7 +34,7 @@ export function CompanyProfileFields({
     >
       <legend className="sr-only">Company profile</legend>
       <div className="flex items-start gap-3">
-        <span className="flex size-9 shrink-0 items-center justify-center rounded-md bg-primary text-primary-foreground">
+        <span className="flex size-9 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
           <Building2 className="size-4.5" aria-hidden="true" />
         </span>
         <div>
@@ -62,6 +62,7 @@ export function CompanyProfileFields({
             onChange={(event) => onChange("companyName", event.target.value)}
             placeholder="e.g. Acme AI"
             autoComplete="organization"
+            className="h-11"
           />
         </div>
 
@@ -90,6 +91,7 @@ export function CompanyProfileFields({
               value={values.otherHqCountry}
               onChange={(event) => onChange("otherHqCountry", event.target.value)}
               placeholder="Enter country"
+              className="h-11"
             />
           </div>
         ) : null}
@@ -119,6 +121,7 @@ export function CompanyProfileFields({
               value={values.otherPrimaryMarket}
               onChange={(event) => onChange("otherPrimaryMarket", event.target.value)}
               placeholder="Enter market or region"
+              className="h-11"
             />
           </div>
         ) : null}

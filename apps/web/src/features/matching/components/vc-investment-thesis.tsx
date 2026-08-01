@@ -1,5 +1,7 @@
 import { Target } from "lucide-react";
 
+import { Badge } from "@/components/ui/badge";
+import { Progress } from "@/components/ui/progress";
 import type { MatchStagePreference } from "@/features/matching/types/match";
 import { SectorTag } from "@/features/investors/components/sector-tag";
 
@@ -10,7 +12,6 @@ import {
   weightedSignals,
   type WeightedSignal,
 } from "./vc-detail-utils";
-import { ProfileTag } from "./vc-profile-primitives";
 
 function SignalDistribution({
   title,
@@ -35,12 +36,11 @@ function SignalDistribution({
                 {Math.round(signal.value * 100)}%
               </span>
             </div>
-            <div className="h-1.5 overflow-hidden rounded-full bg-muted">
-              <div
-                className="h-full rounded-full bg-primary"
-                style={{ width: `${Math.max(signal.value * 100, 4)}%` }}
-              />
-            </div>
+            <Progress
+              value={signal.value * 100}
+              className="gap-0"
+              trackClassName="h-1.5"
+            />
           </div>
         ))}
       </div>
@@ -130,9 +130,9 @@ export function VcInvestmentThesis({
           <div className="mt-3 flex flex-wrap gap-2">
             {themes.length > 0 ? (
               themes.slice(0, 16).map((theme) => (
-                <ProfileTag key={theme} accent>
+                <Badge key={theme} variant="secondary">
                   {labelFromCode(theme)}
-                </ProfileTag>
+                </Badge>
               ))
             ) : (
               <span className="text-sm text-muted-foreground">
