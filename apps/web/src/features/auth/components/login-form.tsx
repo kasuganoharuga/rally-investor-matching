@@ -32,9 +32,14 @@ export function LoginForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <div className="space-y-2">
-        <Label htmlFor="email">Email</Label>
+    <form onSubmit={handleSubmit} className="space-y-5">
+      <div className="space-y-1.5">
+        <Label
+          htmlFor="email"
+          className="text-xs font-semibold tracking-[0.15em] text-muted-foreground uppercase"
+        >
+          Email
+        </Label>
         <Input
           id="email"
           type="email"
@@ -43,10 +48,16 @@ export function LoginForm() {
           value={email}
           onChange={(event) => setEmail(event.target.value)}
           disabled={isSubmitting}
+          className="h-11 rounded-lg px-4 text-base"
         />
       </div>
-      <div className="space-y-2">
-        <Label htmlFor="password">Password</Label>
+      <div className="space-y-1.5">
+        <Label
+          htmlFor="password"
+          className="text-xs font-semibold tracking-[0.15em] text-muted-foreground uppercase"
+        >
+          Password
+        </Label>
         <Input
           id="password"
           type="password"
@@ -55,11 +66,18 @@ export function LoginForm() {
           value={password}
           onChange={(event) => setPassword(event.target.value)}
           disabled={isSubmitting}
+          className="h-11 rounded-lg px-4 text-base"
         />
       </div>
       {error ? <p className="text-sm text-destructive">{error.message}</p> : null}
-      <Button type="submit" className="w-full" disabled={isSubmitting}>
-        {isSubmitting ? "Signing in..." : "Sign in"}
+      <Button
+        type="submit"
+        variant="secondary"
+        size="lg"
+        className="h-11 w-full rounded-lg text-sm font-semibold"
+        disabled={isSubmitting}
+      >
+        {isSubmitting ? "Signing in..." : "Continue to workspace"}
       </Button>
     </form>
   );
