@@ -1,10 +1,12 @@
 import {
   fileExtractionResponseSchema,
   matchHistoryListDataSchema,
+  matchRecordSchema,
   runMatchDataSchema,
   type FileExtractionResponse,
   type IntakeRequest,
   type MatchHistoryListData,
+  type MatchRecord,
   type RunMatchData,
 } from "@/features/matching/types/match";
 import { apiFetch } from "@/lib/api/client";
@@ -27,6 +29,13 @@ export async function runMatchIntake(request: IntakeRequest): Promise<RunMatchDa
 export async function listMatchHistory(): Promise<MatchHistoryListData> {
   const data = await apiFetch<unknown>("/api/matching/history");
   return matchHistoryListDataSchema.parse(data);
+}
+
+export async function getMatchingRun(runId: string): Promise<MatchRecord> {
+  const data = await apiFetch<unknown>(
+    `/api/matching/runs/${encodeURIComponent(runId)}`,
+  );
+  return matchRecordSchema.parse(data);
 }
 
 export async function extractFileText(file: File): Promise<FileExtractionResponse> {

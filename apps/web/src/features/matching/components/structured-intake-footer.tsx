@@ -7,7 +7,6 @@ export function StructuredIntakeFooter({
   isBusy,
   isSubmitting,
   canContinue,
-  showIncompleteWarning,
   showWeightWarning,
   onBack,
 }: {
@@ -15,7 +14,6 @@ export function StructuredIntakeFooter({
   isBusy: boolean;
   isSubmitting: boolean;
   canContinue: boolean;
-  showIncompleteWarning: boolean;
   showWeightWarning: boolean;
   onBack: () => void;
 }) {
@@ -32,11 +30,6 @@ export function StructuredIntakeFooter({
             Required fields are marked with an asterisk.
           </p>
         )}
-        {showIncompleteWarning ? (
-          <p className="text-xs font-medium text-warning">
-            Complete the required company and investor-fit fields to run a match.
-          </p>
-        ) : null}
         {showWeightWarning ? (
           <p className="text-xs font-medium text-warning">
             Score weights must total 100.

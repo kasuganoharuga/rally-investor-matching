@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { toast } from "sonner";
 
 import { StructuredIntakeFooter } from "@/features/matching/components/structured-intake-footer";
 import { StructuredIntakeStepBody } from "@/features/matching/components/structured-intake-step-body";
@@ -52,7 +53,9 @@ export function StructuredIntakeScreen({
   );
   const canSubmit =
     isStructuredIntakeComplete(values) && totalWeight === 100 && !isBusy;
-  const canContinue = activeStep < 3 ? !isBusy : canSubmit;
+  // The button stays clickable even when incomplete, so a click can surface
+  // a toast explaining why — a disabled button would just silently eat it.
+  const canContinue = !isBusy;
 
   function updateTextField(field: keyof StructuredIntakeValues, value: string) {
     setValues((current) => ({ ...current, [field]: value }));
@@ -75,6 +78,16 @@ export function StructuredIntakeScreen({
     event.preventDefault();
     if (activeStep < 3) {
       setActiveStep((activeStep + 1) as IntakeStep);
+      return;
+    }
+    if (!isStructuredIntakeComplete(values)) {
+      toast.error(
+        "Complete the required company and investor-fit fields to run a match.",
+      );
+      return;
+    }
+    if (totalWeight !== 100) {
+      toast.error("Score weights must total 100.");
       return;
     }
     if (canSubmit) {
@@ -134,9 +147,6 @@ export function StructuredIntakeScreen({
           isBusy={isBusy}
           isSubmitting={isSubmitting}
           canContinue={canContinue}
-          showIncompleteWarning={
-            activeStep === 3 && !isStructuredIntakeComplete(values)
-          }
           showWeightWarning={activeStep === 3 && totalWeight !== 100}
           onBack={() => setActiveStep((activeStep - 1) as IntakeStep)}
         />

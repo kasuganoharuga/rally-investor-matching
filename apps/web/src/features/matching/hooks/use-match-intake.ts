@@ -262,12 +262,14 @@ export function useMatchIntake() {
           isSubmitting: false,
           error: null,
         }));
+        return { response, record };
       } catch (error) {
         setState((current) => ({
           ...current,
           isSubmitting: false,
           error: toApiError(error),
         }));
+        return null;
       }
     },
     [state.message, state.uploadedFiles],
@@ -297,12 +299,14 @@ export function useMatchIntake() {
         isSubmitting: false,
         error: null,
       }));
+      return { response, record };
     } catch (error) {
       setState((current) => ({
         ...current,
         isSubmitting: false,
         error: toApiError(error),
       }));
+      return null;
     }
   }, [
     state.baseMessage,

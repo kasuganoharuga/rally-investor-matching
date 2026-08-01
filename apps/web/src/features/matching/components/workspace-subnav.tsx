@@ -1,43 +1,40 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 import { cn } from "@/lib/utils";
 
-export type WorkspaceView = "new-match" | "history";
+export function WorkspaceSubnav({ recordCount }: { recordCount?: number }) {
+  const pathname = usePathname();
+  const isHistory = pathname?.startsWith("/match/history") ?? false;
 
-export function WorkspaceSubnav({
-  view,
-  onViewChange,
-  recordCount,
-}: {
-  view: WorkspaceView;
-  onViewChange: (view: WorkspaceView) => void;
-  recordCount: number;
-}) {
+  const tabs = [
+    { href: "/match", label: "New match", active: !isHistory },
+    { href: "/match/history", label: "Match history", active: isHistory },
+  ] as const;
+
   return (
     <div className="border-b border-border bg-card">
       <div className="mx-auto flex w-full max-w-[1440px] items-center gap-7 px-6">
-        {(
-          [
-            ["new-match", "New match"],
-            ["history", "Match history"],
-          ] as const
-        ).map(([id, label]) => (
-          <button
-            key={id}
-            type="button"
-            onClick={() => onViewChange(id)}
+        {tabs.map((tab) => (
+          <Link
+            key={tab.href}
+            href={tab.href}
             className={cn(
               "py-4 text-sm font-semibold transition",
-              view === id
+              tab.active
                 ? "border-b-2 border-primary text-foreground"
                 : "text-muted-foreground hover:text-foreground",
             )}
           >
-            {label}
-            {id === "history" && recordCount > 0 ? (
+            {tab.label}
+            {tab.label === "Match history" && recordCount ? (
               <span className="ml-1 text-xs text-muted-foreground">
                 ({recordCount})
               </span>
             ) : null}
-          </button>
+          </Link>
         ))}
       </div>
     </div>

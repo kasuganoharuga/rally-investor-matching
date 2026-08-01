@@ -5,13 +5,17 @@ import {
   intakeResponseSchema,
   type IntakeRequest,
   type MatchHistoryListData,
+  type MatchRecord,
   type RunMatchData,
 } from "@/features/matching/types/match";
 import {
+  getMatchingRunForUser,
   insertMatchingRun,
   listMatchingRunsForUser,
 } from "@/features/matching/server/repositories/matching-history-repository";
 import { ApiError } from "@/lib/api/errors";
+
+const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
 const MATCHING_API_BASE_URL =
   process.env.MATCHING_API_BASE_URL ??
@@ -63,6 +67,27 @@ export class MatchingHistoryService {
     return {
       items: await listMatchingRunsForUser(user.id),
     };
+  }
+
+  async getRun(runId: string, user: CurrentUser): Promise<MatchRecord> {
+    if (!UUID_PATTERN.test(runId)) {
+      throw new ApiError({
+        code: "MATCHING_RUN_NOT_FOUND",
+        status: 404,
+        message: "This match could not be found.",
+      });
+    }
+
+    const record = await getMatchingRunForUser(user.id, runId);
+    if (!record) {
+      throw new ApiError({
+        code: "MATCHING_RUN_NOT_FOUND",
+        status: 404,
+        message: "This match could not be found.",
+      });
+    }
+
+    return record;
   }
 }
 

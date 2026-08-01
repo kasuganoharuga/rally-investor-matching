@@ -1,16 +1,10 @@
+import Link from "next/link";
+
 import { Button } from "@/components/ui/button";
 import { MatchHistoryPanel } from "@/features/matching/components/match-history-panel";
 import type { MatchRecord } from "@/features/matching/hooks/use-match-intake";
 
-export function MatchHistoryScreen({
-  records,
-  onBackToNewMatch,
-  onSelectRecord,
-}: {
-  records: MatchRecord[];
-  onBackToNewMatch: () => void;
-  onSelectRecord: (record: MatchRecord) => void;
-}) {
+export function MatchHistoryScreen({ records }: { records: MatchRecord[] }) {
   return (
     <section className="mx-auto w-full max-w-5xl px-6 py-6">
       <div className="mb-4 flex items-center justify-between gap-3">
@@ -20,11 +14,9 @@ export function MatchHistoryScreen({
             Recent matches saved to your account.
           </p>
         </div>
-        <Button type="button" onClick={onBackToNewMatch}>
-          New match
-        </Button>
+        <Button render={<Link href="/match" />}>New match</Button>
       </div>
-      <MatchHistoryPanel records={records} onSelectRecord={onSelectRecord} />
+      <MatchHistoryPanel records={records} />
     </section>
   );
 }

@@ -173,6 +173,25 @@ export async function insertMatchingRun(
   return mapRow(result.rows[0] as MatchingRunRow);
 }
 
+export async function getMatchingRunForUser(
+  userId: string,
+  runId: string,
+  client: Queryable = getPool(),
+): Promise<MatchRecord | null> {
+  const result = await client.query(
+    `SELECT id, created_at, founder_profile_snapshot
+     FROM matching_runs
+     WHERE id = $1
+       AND user_id = $2
+       AND deleted_at IS NULL
+       AND status = 'completed'`,
+    [runId, userId],
+  );
+
+  const row = result.rows[0] as MatchingRunRow | undefined;
+  return row ? mapRow(row) : null;
+}
+
 export async function listMatchingRunsForUser(
   userId: string,
   client: Queryable = getPool(),

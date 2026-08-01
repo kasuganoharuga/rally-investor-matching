@@ -1,22 +1,35 @@
 "use client";
 
-import { useState } from "react";
+import { useRouter } from "next/navigation";
 
+import { Button } from "@/components/ui/button";
 import { ClarifyFollowUpScreen } from "@/features/matching/components/clarify-follow-up-screen";
 import { FreeTextIntakeScreen } from "@/features/matching/components/free-text-intake-screen";
-import { MatchDetailPanel } from "@/features/matching/components/match-detail-panel";
-import { MatchHistoryScreen } from "@/features/matching/components/match-history-screen";
 import { MatchingProgressScreen } from "@/features/matching/components/matching-progress-screen";
-import { MatchResultsScreen } from "@/features/matching/components/match-results-screen";
 import { StructuredIntakeScreen } from "@/features/matching/components/structured-intake-screen";
-import {
-  WorkspaceSubnav,
-  type WorkspaceView,
-} from "@/features/matching/components/workspace-subnav";
+import { WorkspaceSubnav } from "@/features/matching/components/workspace-subnav";
 import { useMatchIntake } from "@/features/matching/hooks/use-match-intake";
 import type { MatchingConfiguration } from "@/features/matching/types/match";
 
 export type MatchIntakeVariant = "structured" | "free-text";
+
+function NoMatchesScreen({ onStartOver }: { onStartOver: () => void }) {
+  return (
+    <section className="mx-auto flex w-full max-w-xl flex-1 flex-col items-center justify-center px-5 py-10 text-center">
+      <h1 className="text-2xl font-semibold text-foreground">
+        No investor matches yet
+      </h1>
+      <p className="mt-3 max-w-md text-sm leading-6 text-muted-foreground">
+        We extracted your profile, but nothing in the investor database cleared the
+        eligibility bar yet. Try adding more detail about your stage, sector, and
+        geography.
+      </p>
+      <Button type="button" size="lg" className="mt-6" onClick={onStartOver}>
+        Start over
+      </Button>
+    </section>
+  );
+}
 
 export function MatchingWorkspace({
   intakeVariant = "structured",
@@ -24,78 +37,40 @@ export function MatchingWorkspace({
   intakeVariant?: MatchIntakeVariant;
 }) {
   const intake = useMatchIntake();
-  const [selectedMatchId, setSelectedMatchId] = useState<string | null>(null);
-  const [workspaceView, setWorkspaceView] = useState<WorkspaceView>("new-match");
-  const matches = intake.response?.matches ?? [];
-  const selectedMatchIsValid = matches.some(
-    (match) => match.investor_id === selectedMatchId,
-  );
+  const router = useRouter();
+  const needsFollowUp = intake.response?.status === "needs_follow_up";
+  const hasZeroMatches =
+    Boolean(intake.response) && !needsFollowUp && intake.response!.matches.length === 0;
+  const errorMessage = intake.error?.message ?? null;
 
-  function submitInitial(
+  async function submitInitial(
     messageOverride?: string,
     matchingConfiguration?: MatchingConfiguration,
   ) {
-    setSelectedMatchId(null);
-    void intake.submitInitial(messageOverride, matchingConfiguration);
+    const result = await intake.submitInitial(messageOverride, matchingConfiguration);
+    if (result?.record) {
+      router.push(`/match/${result.record.id}`);
+    }
   }
 
-  function submitFollowUp() {
-    setSelectedMatchId(null);
-    void intake.submitFollowUp();
+  async function submitFollowUp() {
+    const result = await intake.submitFollowUp();
+    if (result?.record) {
+      router.push(`/match/${result.record.id}`);
+    }
   }
 
   function resetWorkspace() {
-    setSelectedMatchId(null);
-    setWorkspaceView("new-match");
     intake.reset();
   }
 
-  const selectedMatch =
-    matches.find((match) => match.investor_id === selectedMatchId) ?? null;
-  const needsFollowUp = intake.response?.status === "needs_follow_up";
-  const errorMessage = intake.error?.message ?? null;
-
   function renderContent() {
-    if (workspaceView === "history") {
-      return (
-        <MatchHistoryScreen
-          records={intake.records}
-          onBackToNewMatch={() => setWorkspaceView("new-match")}
-          onSelectRecord={(record) => {
-            intake.selectRecord(record);
-            setSelectedMatchId(null);
-            setWorkspaceView("new-match");
-          }}
-        />
-      );
-    }
-
-    if (selectedMatch && selectedMatchIsValid) {
-      const companyName =
-        typeof intake.response?.parsed_company_profile.company_name === "string"
-          ? intake.response.parsed_company_profile.company_name
-          : "this company";
-      return (
-        <MatchDetailPanel
-          match={selectedMatch}
-          companyName={companyName}
-          onBack={() => setSelectedMatchId(null)}
-        />
-      );
-    }
-
     if (intake.isSubmitting) {
       return <MatchingProgressScreen />;
     }
 
-    if (matches.length > 0 && intake.response) {
-      return (
-        <MatchResultsScreen
-          response={intake.response}
-          onSelectMatch={(investorId) => setSelectedMatchId(investorId)}
-          onStartOver={resetWorkspace}
-        />
-      );
+    if (hasZeroMatches) {
+      return <NoMatchesScreen onStartOver={resetWorkspace} />;
     }
 
     if (needsFollowUp) {
@@ -126,7 +101,7 @@ export function MatchingWorkspace({
           onMessageChange={intake.updateMessage}
           onFilesSelected={intake.addFiles}
           onRemoveFile={intake.removeFile}
-          onSubmit={() => submitInitial()}
+          onSubmit={() => void submitInitial()}
         />
       );
     }
@@ -142,17 +117,7 @@ export function MatchingWorkspace({
 
   return (
     <div className="flex min-h-0 flex-1 flex-col">
-      <WorkspaceSubnav
-        view={workspaceView}
-        onViewChange={(view) => {
-          if (view === "history") {
-            void intake.refreshHistory();
-          }
-          setWorkspaceView(view);
-          setSelectedMatchId(null);
-        }}
-        recordCount={intake.records.length}
-      />
+      <WorkspaceSubnav recordCount={intake.records.length} />
       {renderContent()}
     </div>
   );
