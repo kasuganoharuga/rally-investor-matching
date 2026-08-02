@@ -1,144 +1,138 @@
-import { ExternalLink } from "lucide-react";
+"use client";
+
+import { useState } from "react";
+import { X } from "lucide-react";
 
 import type { MatchRecentDeal } from "@/features/matching/types/match";
-import { SectorTag } from "@/features/investors/components/sector-tag";
-import { cn } from "@/lib/utils";
 
-import {
-  dealAmount,
-  dealSecondaryUseCases,
-  formatDate,
-  labelFromCode,
-} from "./vc-detail-utils";
+import { labelFromCode, normalizeStageCode } from "./vc-detail-utils";
+import { VcDealRow } from "./vc-deal-row";
 
 type VcRecentDealsProps = {
   deals: MatchRecentDeal[];
+  /** Stage selected upstream; null shows every deal. */
+  activeStage?: string | null;
+  onClearStage?: () => void;
 };
 
-function evidenceUrl(deal: MatchRecentDeal): string | null {
-  return deal.investor_evidence_url ?? deal.source_urls[0] ?? null;
+const INITIAL_ROWS = 12;
+
+function dealKey(deal: MatchRecentDeal, index: number): string {
+  return `${deal.company ?? "deal"}-${deal.date ?? index}`;
 }
 
-export function VcRecentDeals({ deals }: VcRecentDealsProps) {
+/**
+ * Compact by default. Every row previously carried a full company paragraph
+ * plus a tag cloud, which made eight deals scroll like eighty.
+ */
+export function VcRecentDeals({
+  deals,
+  activeStage = null,
+  onClearStage,
+}: VcRecentDealsProps) {
+  const [showAll, setShowAll] = useState(false);
+  const [openDeal, setOpenDeal] = useState<string | null>(null);
+
+  const normalizedStage = normalizeStageCode(activeStage);
+  const filtered = normalizedStage
+    ? deals.filter((deal) => normalizeStageCode(deal.round) === normalizedStage)
+    : deals;
+  const visible = showAll ? filtered : filtered.slice(0, INITIAL_ROWS);
+  const hidden = filtered.length - visible.length;
+
   return (
     <section className="overflow-hidden rounded-lg border border-border bg-card shadow-sm">
-      <div className="flex flex-wrap items-end justify-between gap-2 border-b border-border px-6 py-5">
-        <div>
-          <h2 className="text-lg font-semibold text-foreground">
-            Recent deal evidence
-          </h2>
-          <p className="mt-1 text-sm text-muted-foreground">
-            Company-level evidence behind the observed sectors, themes, cheque range,
-            and lead behaviour.
-          </p>
+      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-border px-5 py-3">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="text-sm font-semibold text-foreground">
+            {filtered.length} {filtered.length === 1 ? "deal" : "deals"}
+          </span>
+          {activeStage ? (
+            <button
+              type="button"
+              onClick={onClearStage}
+              className="inline-flex items-center gap-1.5 rounded-full border border-primary bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground transition hover:bg-primary/90"
+            >
+              {labelFromCode(activeStage)} only
+              <X className="size-3" aria-hidden="true" />
+            </button>
+          ) : null}
         </div>
-        <span className="text-sm font-medium text-muted-foreground">
-          {deals.length} tracked {deals.length === 1 ? "deal" : "deals"}
-        </span>
+        {activeStage ? (
+          <span className="text-sm text-muted-foreground">
+            {deals.length} across all stages
+          </span>
+        ) : null}
       </div>
 
-      {deals.length > 0 ? (
-        <div className="overflow-x-auto">
-          <table className="w-full min-w-[980px] text-left text-sm">
-            <thead className="bg-muted/55 text-xs uppercase text-muted-foreground">
-              <tr>
-                <th className="px-6 py-3 font-semibold">Company</th>
-                <th className="px-4 py-3 font-semibold">Round evidence</th>
-                <th className="px-4 py-3 font-semibold">Sector and direction</th>
-                <th className="px-4 py-3 font-semibold">Operating profile</th>
-                <th className="px-6 py-3 text-right font-semibold">Deal</th>
-              </tr>
-            </thead>
-            <tbody>
-              {deals.slice(0, 12).map((deal, index) => {
-                const source = evidenceUrl(deal);
-                const secondaryUseCases = dealSecondaryUseCases(deal);
-                return (
-                  <tr
-                    key={`${deal.company ?? "deal"}-${deal.date ?? index}`}
-                    className="border-t border-border align-top"
-                  >
-                    <td className="max-w-[260px] px-6 py-4">
-                      <div className="flex items-center gap-2">
-                        <p className="font-semibold text-foreground">
-                          {deal.company ?? "Company unknown"}
-                        </p>
-                        {source ? (
-                          <a
-                            href={source}
-                            target="_blank"
-                            rel="noreferrer"
-                            aria-label={`Open evidence for ${deal.company ?? "deal"}`}
-                            className="text-muted-foreground transition hover:text-primary"
-                          >
-                            <ExternalLink className="size-3.5" aria-hidden="true" />
-                          </a>
-                        ) : null}
-                      </div>
-                      {deal.company_summary ? (
-                        <p className="mt-1 line-clamp-2 text-xs leading-5 text-muted-foreground">
-                          {deal.company_summary}
-                        </p>
-                      ) : null}
-                    </td>
-                    <td className="px-4 py-4">
-                      <p className="font-semibold text-foreground">
-                        {labelFromCode(deal.round)}
-                      </p>
-                      <p className="mt-1 text-xs text-muted-foreground">
-                        {formatDate(deal.date)}
-                      </p>
-                    </td>
-                    <td className="max-w-[260px] px-4 py-4">
-                      {deal.actual_sector ? (
-                        <SectorTag sector={deal.actual_sector} />
-                      ) : (
-                        <p className="font-medium text-muted-foreground">
-                          Sector not classified
-                        </p>
-                      )}
-                      <p className="mt-1 text-xs text-muted-foreground">
-                        {[deal.use_case_primary, ...secondaryUseCases]
-                          .filter(Boolean)
-                          .slice(0, 2)
-                          .map((value) => labelFromCode(String(value)))
-                          .join(" / ") || "Direction not classified"}
-                      </p>
-                    </td>
-                    <td className="px-4 py-4">
-                      <p className="font-medium text-foreground">
-                        {labelFromCode(deal.customer_type)}
-                      </p>
-                      <p className="mt-1 text-xs text-muted-foreground">
-                        {labelFromCode(deal.business_model)} ·{" "}
-                        {labelFromCode(deal.ai_relevance)}
-                      </p>
-                    </td>
-                    <td className="px-6 py-4 text-right">
-                      <p className="font-semibold text-foreground">
-                        {dealAmount(deal)}
-                      </p>
-                      <span
-                        className={cn(
-                          "mt-2 inline-flex rounded-full border px-2 py-0.5 text-xs font-semibold",
-                          deal.role?.toLowerCase().includes("lead")
-                            ? "border-secondary bg-secondary/35 text-primary"
-                            : "border-border bg-background text-muted-foreground",
-                        )}
-                      >
-                        {labelFromCode(deal.role)}
-                      </span>
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
+      {filtered.length > 0 ? (
+        <>
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-[640px] text-left text-sm">
+              <thead className="bg-muted/55 text-xs uppercase text-muted-foreground">
+                <tr>
+                  <th scope="col" className="px-5 py-3 font-semibold">
+                    Company
+                  </th>
+                  <th scope="col" className="px-4 py-3 font-semibold">
+                    Round
+                  </th>
+                  <th scope="col" className="px-4 py-3 font-semibold">
+                    Date
+                  </th>
+                  <th scope="col" className="px-4 py-3 font-semibold">
+                    Round size
+                  </th>
+                  <th scope="col" className="px-5 py-3 text-right font-semibold">
+                    Role
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {visible.map((deal, index) => {
+                  const key = dealKey(deal, index);
+                  return (
+                    <VcDealRow
+                      key={key}
+                      deal={deal}
+                      isOpen={openDeal === key}
+                      onToggle={() => setOpenDeal(openDeal === key ? null : key)}
+                    />
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+
+          {hidden > 0 ? (
+            <div className="border-t border-border px-5 py-3">
+              <button
+                type="button"
+                onClick={() => setShowAll(true)}
+                className="text-sm font-semibold text-primary transition hover:underline"
+              >
+                Show {hidden} more {hidden === 1 ? "deal" : "deals"}
+              </button>
+            </div>
+          ) : null}
+        </>
       ) : (
-        <p className="px-6 py-8 text-sm text-muted-foreground">
-          No company-level deal evidence is linked to this investor yet.
-        </p>
+        <div className="px-5 py-8">
+          <p className="text-sm text-muted-foreground">
+            {activeStage
+              ? `No deal rows are tagged ${labelFromCode(activeStage)}.`
+              : "No company-level deal evidence is linked to this investor yet."}
+          </p>
+          {activeStage ? (
+            <button
+              type="button"
+              onClick={onClearStage}
+              className="mt-3 text-sm font-semibold text-primary transition hover:underline"
+            >
+              Show all stages
+            </button>
+          ) : null}
+        </div>
       )}
     </section>
   );

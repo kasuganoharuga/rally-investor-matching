@@ -42,6 +42,14 @@ export function toNumber(value: unknown): number | null {
   return null;
 }
 
+/** Stage codes arrive as "pre_seed", "Pre-Seed", "pre seed" depending on source. */
+export function normalizeStageCode(value: string | null | undefined): string {
+  return (value ?? "")
+    .trim()
+    .toLowerCase()
+    .replace(/[\s-]+/g, "_");
+}
+
 export function labelFromCode(value: string | null | undefined): string {
   if (!value) {
     return "Not listed";
@@ -55,6 +63,21 @@ export function labelFromCode(value: string | null | undefined): string {
         ACRONYMS[item.toLowerCase()] ??
         `${item.charAt(0).toUpperCase()}${item.slice(1)}`,
     )
+    .join(" ");
+}
+
+/**
+ * Lowercase form for embedding a code inside a sentence, with acronyms kept
+ * upright — "ai_enabled_saas" reads as "AI enabled saas", not "Ai Enabled Saas".
+ */
+export function proseFromCode(value: string | null | undefined): string {
+  if (!value) {
+    return "";
+  }
+  return value
+    .split(/[_\s-]+/)
+    .filter(Boolean)
+    .map((item) => ACRONYMS[item.toLowerCase()] ?? item.toLowerCase())
     .join(" ");
 }
 
@@ -148,24 +171,35 @@ export function formatMoney(
   if (value === null || value === undefined || !Number.isFinite(value)) {
     return "Not disclosed";
   }
+  // Strip a trailing ".0" so 45,958,969 reads "46m" rather than "46.0m".
+  const compact = (scaled: number, suffix: string) =>
+    `${scaled.toFixed(1).replace(/\.0$/, "")}${suffix}`;
   const amount =
     value >= 1_000_000
-      ? `${(value / 1_000_000).toFixed(value % 1_000_000 === 0 ? 0 : 1)}m`
+      ? compact(value / 1_000_000, "m")
       : value >= 1_000
-        ? `${(value / 1_000).toFixed(value % 1_000 === 0 ? 0 : 1)}k`
+        ? compact(value / 1_000, "k")
         : value.toLocaleString("en-AU");
   return `${currencyPrefix(currency)}${amount}`;
 }
 
-export function formatChequeRange(preference: MatchStagePreference): string {
-  const min = toNumber(preference.cheque_size_min_usd);
-  const max = toNumber(preference.cheque_size_max_usd);
+/** "US$7m–11m", not "US$7m–US$11m" — the prefix only belongs on the lower bound. */
+export function formatMoneyRange(
+  min: number | null,
+  max: number | null,
+  currency: string | null | undefined = "USD",
+): string | null {
+  if (min === null && max === null) return null;
   if (min !== null && max !== null) {
-    return min === max ? formatMoney(min) : `${formatMoney(min)} - ${formatMoney(max)}`;
+    if (min === max) return formatMoney(min, currency);
+    const prefix = currencyPrefix(currency);
+    const upper = formatMoney(max, currency);
+    return `${formatMoney(min, currency)}–${
+      upper.startsWith(prefix) ? upper.slice(prefix.length) : upper
+    }`;
   }
-  if (min !== null) return `${formatMoney(min)}+`;
-  if (max !== null) return `Up to ${formatMoney(max)}`;
-  return "No observed range";
+  if (min !== null) return `${formatMoney(min, currency)}+`;
+  return `Up to ${formatMoney(max, currency)}`;
 }
 
 export function dealAmount(deal: MatchRecentDeal): string {

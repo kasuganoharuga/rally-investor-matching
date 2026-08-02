@@ -45,7 +45,7 @@ const MATCH_FACTOR_LABELS: Record<string, string> = {
   theme_fit: "Theme",
   recent_deal_similarity: "Deal evidence",
   customer_icp_fit: "Customer",
-  cheque_size_fit: "Cheque",
+  cheque_size_fit: "Round size",
   lead_behavior_fit: "Lead",
   data_quality_recency: "Recency",
 };
@@ -57,7 +57,7 @@ export const MATCH_FACTOR_DETAIL_LABELS: Record<string, string> = {
   theme_fit: "Specific direction",
   recent_deal_similarity: "Recent deal similarity",
   customer_icp_fit: "Customer / ICP",
-  cheque_size_fit: "Cheque size",
+  cheque_size_fit: "Round size",
   lead_behavior_fit: "Lead behaviour",
   data_quality_recency: "Data quality",
 };

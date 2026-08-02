@@ -48,7 +48,7 @@ export function signalPills(
       theme_fit: "Theme",
       recent_deal_similarity: "Deal evidence",
       customer_icp_fit: "ICP",
-      cheque_size_fit: "Cheque",
+      cheque_size_fit: "Round size",
       lead_behavior_fit: "Lead",
       data_quality_recency: "Recency",
     };
