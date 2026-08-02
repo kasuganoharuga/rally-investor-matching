@@ -14,6 +14,7 @@ import { useInvestorList } from "@/features/investors/hooks/use-investor-list";
 import { useShortlist } from "@/features/shortlist/hooks/use-shortlist";
 import type { InvestorSummary } from "@/features/investors/types/investor";
 import { buttonVariants } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 
 type FilterKey = "stage" | "sector" | "geography";
@@ -23,6 +24,29 @@ const FILTER_LABELS: Record<FilterKey, string> = {
   sector: "Sector",
   geography: "Geography",
 };
+
+type SortKey = "activity" | "alphabetical";
+
+const SORT_OPTIONS: { value: SortKey; label: string }[] = [
+  { value: "activity", label: "Most active" },
+  { value: "alphabetical", label: "A–Z" },
+];
+
+function sortItems(items: InvestorSummary[], sort: SortKey): InvestorSummary[] {
+  const sorted = [...items];
+  if (sort === "alphabetical") {
+    sorted.sort((a, b) => a.name.localeCompare(b.name));
+    return sorted;
+  }
+  // "Activity" = deals on file (totalDealsUsed), the same figure the VC
+  // detail page calls "Reviewed deals" — ties fall back to name so the order
+  // stays stable instead of shuffling on every re-fetch.
+  sorted.sort((a, b) => {
+    const diff = (b.totalDealsUsed ?? 0) - (a.totalDealsUsed ?? 0);
+    return diff !== 0 ? diff : a.name.localeCompare(b.name);
+  });
+  return sorted;
+}
 
 function titleCase(value: string): string {
   return value
@@ -94,6 +118,35 @@ function filterItems(
   });
 }
 
+function SortSelect({
+  value,
+  onChange,
+}: {
+  value: SortKey;
+  onChange: (value: SortKey) => void;
+}) {
+  return (
+    <label className="relative">
+      <span className="sr-only">Sort by</span>
+      <select
+        value={value}
+        onChange={(event) => onChange(event.target.value as SortKey)}
+        className="h-10 min-w-32 appearance-none rounded-full border border-border bg-card px-4 pr-8 text-sm font-medium text-foreground shadow-sm outline-none transition hover:border-primary/40 focus:border-primary"
+      >
+        {SORT_OPTIONS.map((option) => (
+          <option key={option.value} value={option.value}>
+            Sort: {option.label}
+          </option>
+        ))}
+      </select>
+      <ChevronDown
+        className="pointer-events-none absolute right-3 top-1/2 size-3 -translate-y-1/2 text-muted-foreground"
+        aria-hidden="true"
+      />
+    </label>
+  );
+}
+
 function FilterSelect({
   label,
   value,
@@ -137,6 +190,7 @@ export function InvestorListPanel() {
     sector: "",
     geography: "",
   });
+  const [sort, setSort] = useState<SortKey>("activity");
 
   const filterOptions = useMemo(
     () => ({
@@ -148,8 +202,8 @@ export function InvestorListPanel() {
   );
 
   const filteredItems = useMemo(
-    () => filterItems(items, query, filters),
-    [filters, items, query],
+    () => sortItems(filterItems(items, query, filters), sort),
+    [filters, items, query, sort],
   );
 
   function updateFilter(key: FilterKey, value: string) {
@@ -184,11 +238,11 @@ export function InvestorListPanel() {
             className="absolute left-4 top-1/2 size-4 -translate-y-1/2 text-muted-foreground"
             aria-hidden="true"
           />
-          <input
+          <Input
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             placeholder="Search investor name..."
-            className="h-10 w-full rounded-lg border border-border bg-card pl-11 pr-4 text-sm text-foreground shadow-sm outline-none transition placeholder:text-muted-foreground focus:border-primary"
+            className="h-10 rounded-lg bg-card pl-11 pr-4 shadow-sm"
           />
         </label>
         <div className="flex flex-wrap gap-2">
@@ -201,6 +255,7 @@ export function InvestorListPanel() {
               onChange={(value) => updateFilter(key, value)}
             />
           ))}
+          <SortSelect value={sort} onChange={setSort} />
         </div>
       </div>
 

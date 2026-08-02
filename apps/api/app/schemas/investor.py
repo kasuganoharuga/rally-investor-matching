@@ -27,6 +27,7 @@ class InvestorSummary(BaseModel):
     screening_status: str = "unscreened"
     screening_priority: str | None = None
     screening_notes: str | None = None
+    total_deals_used: int = 0
 
 
 class InvestorDetail(InvestorSummary):
@@ -48,7 +49,6 @@ class InvestorDetail(InvestorSummary):
     screening_priority: str | None = None
     screening_notes: str | None = None
     stage_preferences: list[dict[str, Any]] = Field(default_factory=list)
-    total_deals_used: int = 0
     stage_coverage: dict[str, Any] = Field(default_factory=dict)
     lead_ratio: float | None = None
     overall_confidence: float | None = None

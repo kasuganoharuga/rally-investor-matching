@@ -39,6 +39,7 @@ export const investorSummarySchema = z.object({
   screeningStatus: z.string(),
   screeningPriority: z.string().nullable().optional(),
   screeningNotes: z.string().nullable().optional(),
+  totalDealsUsed: nullableNumberSchema,
 });
 
 export const investorListDataSchema = z.object({
@@ -107,7 +108,6 @@ export const investorDetailSchema = investorSummarySchema.extend({
   entryChannels: z.array(z.string()).default([]),
   preferredChannel: z.string().nullable().optional(),
   stagePreferences: z.array(investorStagePreferenceSchema).default([]),
-  totalDealsUsed: nullableNumberSchema,
   stageCoverage: z.record(z.string(), z.unknown()).optional().default({}),
   leadRatio: nullableNumberSchema,
   overallConfidence: nullableNumberSchema,

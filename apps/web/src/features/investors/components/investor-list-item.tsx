@@ -1,9 +1,13 @@
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 
+import { Badge } from "@/components/ui/badge";
+import { buttonVariants } from "@/components/ui/button";
+import { SectorTag } from "@/features/investors/components/sector-tag";
 import type { InvestorSummary } from "@/features/investors/types/investor";
 import { ShortlistToggleButton } from "@/features/shortlist/components/shortlist-toggle-button";
 import type { ShortlistSource } from "@/features/shortlist/types/shortlist";
+import { cn } from "@/lib/utils";
 
 type InvestorListItemProps = {
   investor: InvestorSummary;
@@ -51,16 +55,6 @@ function investorTypeLabel(value: string | null | undefined): string {
   return labels[value ?? ""] ?? titleCase(value) ?? "Investor";
 }
 
-function compactList(values: string[], limit = 2): string {
-  const filtered = values.filter(Boolean).map(titleCase);
-  if (filtered.length === 0) {
-    return "Focus pending";
-  }
-  const visible = filtered.slice(0, limit).join("/");
-  const extra = filtered.length > limit ? ` +${filtered.length - limit}` : "";
-  return `${visible}${extra}`;
-}
-
 function locationLabel(investor: InvestorSummary): string {
   const parts = [investor.hqCity, investor.hqState, investor.hqCountry]
     .filter(Boolean)
@@ -83,13 +77,13 @@ function compactAmount(value: unknown, currency: string): string {
   return `${prefix}${value.toLocaleString("en-AU")}`;
 }
 
-function chequeLabel(investor: InvestorSummary): string {
+function roundSizeLabel(investor: InvestorSummary): string {
   const range = investor.chequeRanges.find((item) => {
     const currency = String(item.currency ?? "AUD").toUpperCase();
     return currency === "AUD" || currency === "USD";
   });
   if (!range) {
-    return "Cheque pending";
+    return "Round size pending";
   }
 
   const currency = String(range.currency ?? "AUD").toUpperCase();
@@ -107,21 +101,26 @@ function chequeLabel(investor: InvestorSummary): string {
   if (max !== null) {
     return `≤${compactAmount(max, currency)}`;
   }
-  return "Cheque pending";
+  return "Round size pending";
 }
 
 function shortDescription(investor: InvestorSummary): string {
   const notes = investor.screeningNotes?.trim();
   if (notes) {
-    const firstSentence = notes.split(/(?<=[.!?])\s+/)[0];
-    return firstSentence.length > 155
-      ? `${firstSentence.slice(0, 152).trim()}...`
-      : firstSentence;
+    return notes.split(/(?<=[.!?])\s+/)[0];
   }
-  return `Focuses on ${compactList([
-    ...investor.sectorFocus,
-    ...investor.businessModelFocus,
-  ])} across ${compactList(investor.geographyFocus)}.`;
+  const focus = [...investor.sectorFocus, ...investor.businessModelFocus]
+    .filter(Boolean)
+    .map(titleCase);
+  const geography = investor.geographyFocus.filter(Boolean).map(titleCase);
+  if (focus.length === 0 && geography.length === 0) {
+    return "No screening notes on file yet.";
+  }
+  const focusText =
+    focus.length > 0 ? focus.slice(0, 2).join(" and ") : "a range of sectors";
+  const geographyText =
+    geography.length > 0 ? geography.slice(0, 2).join(" and ") : "the region";
+  return `Focuses on ${focusText} across ${geographyText}.`;
 }
 
 function leadsRounds(investor: InvestorSummary): boolean {
@@ -129,81 +128,98 @@ function leadsRounds(investor: InvestorSummary): boolean {
   return value.includes("lead") || value.includes("co_lead");
 }
 
+const MAX_STAGE_TAGS = 2;
+const MAX_SECTOR_TAGS = 1;
+
 export function InvestorListItem({
   investor,
   isShortlisted = false,
   isShortlistPending = false,
   onToggleShortlist,
 }: InvestorListItemProps) {
-  const focusLine = compactList(investor.stageFocus, 2);
-  const secondaryFocus = compactList(
-    [...investor.sectorFocus, ...investor.businessModelFocus],
-    2,
-  );
+  const stages = investor.stageFocus.filter(Boolean);
+  const sectors = investor.sectorFocus.filter(Boolean);
 
   return (
-    <article className="rounded-lg border border-border bg-card p-5 shadow-sm transition hover:border-primary/40 hover:shadow-md">
-      <div className="flex items-start justify-between gap-3">
-        <div className="flex min-w-0 items-start gap-3">
-          <div className="flex size-11 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground">
-            {initials(investor.name)}
-          </div>
-          <div className="min-w-0">
-            <div className="flex flex-wrap items-center gap-2">
-              <h3 className="truncate text-base font-semibold text-foreground">
-                {investor.name}
-              </h3>
-              {leadsRounds(investor) ? (
-                <span className="rounded-full border border-[#9fb600] bg-secondary px-2 py-0.5 text-[11px] font-semibold text-primary">
-                  Leads
-                </span>
-              ) : null}
-            </div>
-            <p className="mt-1 text-xs text-muted-foreground">
-              {investorTypeLabel(investor.investorType)}
-              {investor.foundedYear ? ` · est. ${investor.foundedYear}` : ""}
-            </p>
-          </div>
+    <article className="flex h-full flex-col rounded-lg border border-border bg-card p-5 shadow-sm transition hover:border-primary/40 hover:shadow-md">
+      <div className="flex items-start gap-3">
+        <div className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-primary text-sm font-semibold text-primary-foreground">
+          {initials(investor.name)}
         </div>
-
-        {onToggleShortlist ? (
-          <ShortlistToggleButton
-            investorId={investor.id}
-            investorName={investor.name}
-            source="investor_directory"
-            isShortlisted={isShortlisted}
-            isPending={isShortlistPending}
-            onToggle={onToggleShortlist}
-            className="size-8"
-          />
-        ) : null}
+        <div className="min-w-0">
+          <div className="flex flex-wrap items-center gap-2">
+            <h3 className="truncate text-base font-semibold text-foreground">
+              {investor.name}
+            </h3>
+            {leadsRounds(investor) ? (
+              <Badge variant="secondary">Leads rounds</Badge>
+            ) : null}
+          </div>
+          <p className="mt-1 text-xs text-muted-foreground">
+            {investorTypeLabel(investor.investorType)}
+            {investor.foundedYear ? ` · est. ${investor.foundedYear}` : ""}
+          </p>
+        </div>
       </div>
 
       <div className="mt-4 grid grid-cols-[1fr_auto] gap-3 border-t border-border pt-4 text-sm">
         <div>
           <p className="text-muted-foreground">{locationLabel(investor)}</p>
-          <p className="mt-1 font-semibold text-foreground">{chequeLabel(investor)}</p>
+          <p className="mt-1 font-semibold text-foreground">
+            {roundSizeLabel(investor)}
+          </p>
         </div>
-        <div className="text-right">
-          <p className="text-muted-foreground">{focusLine}</p>
-          <p className="mt-1 text-muted-foreground">{secondaryFocus}</p>
+        <div className="flex flex-col items-end gap-1.5">
+          <div className="flex flex-wrap justify-end gap-1.5">
+            {stages.length > 0 ? (
+              stages.slice(0, MAX_STAGE_TAGS).map((stage) => (
+                <Badge key={stage} variant="outline">
+                  {titleCase(stage)}
+                </Badge>
+              ))
+            ) : (
+              <span className="text-xs text-muted-foreground">Stage pending</span>
+            )}
+            {stages.length > MAX_STAGE_TAGS ? (
+              <Badge variant="ghost" className="text-muted-foreground">
+                +{stages.length - MAX_STAGE_TAGS}
+              </Badge>
+            ) : null}
+          </div>
+          {sectors.length > 0 ? (
+            <div className="flex flex-wrap justify-end gap-1.5">
+              {sectors.slice(0, MAX_SECTOR_TAGS).map((sector) => (
+                <SectorTag key={sector} sector={sector} className="px-2 py-0.5" />
+              ))}
+              {sectors.length > MAX_SECTOR_TAGS ? (
+                <Badge variant="ghost" className="text-muted-foreground">
+                  +{sectors.length - MAX_SECTOR_TAGS}
+                </Badge>
+              ) : null}
+            </div>
+          ) : null}
         </div>
       </div>
 
-      <p className="mt-4 min-h-12 text-sm leading-6 text-muted-foreground">
+      <p className="mt-4 line-clamp-2 min-h-10 text-sm leading-5 text-muted-foreground">
         {shortDescription(investor)}
       </p>
 
-      <div className="mt-4 flex items-center gap-2">
+      <div className="mt-auto flex items-center gap-2 pt-4">
         {investor.slug ? (
           <Link
             href={`/investors/${investor.slug}`}
-            className="inline-flex h-10 flex-1 items-center justify-center gap-2 rounded-lg bg-primary px-4 text-sm font-semibold text-white transition hover:bg-[#0b4739]"
+            className={cn(buttonVariants({ size: "lg" }), "flex-1")}
           >
             View profile
           </Link>
         ) : (
-          <span className="inline-flex h-10 flex-1 items-center justify-center rounded-lg bg-muted px-4 text-sm font-semibold text-muted-foreground">
+          <span
+            className={cn(
+              buttonVariants({ variant: "outline", size: "lg" }),
+              "flex-1 cursor-default text-muted-foreground",
+            )}
+          >
             Profile pending
           </span>
         )}
@@ -212,8 +228,8 @@ export function InvestorListItem({
             href={investor.websiteUrl}
             target="_blank"
             rel="noreferrer"
-            className="flex size-10 shrink-0 items-center justify-center rounded-lg border border-border text-muted-foreground transition hover:border-primary/50 hover:text-primary"
             aria-label={`Open ${investor.name} website`}
+            className={cn(buttonVariants({ variant: "outline", size: "icon-lg" }))}
           >
             <ExternalLink className="size-4" aria-hidden="true" />
           </a>
@@ -226,7 +242,7 @@ export function InvestorListItem({
             isShortlisted={isShortlisted}
             isPending={isShortlistPending}
             onToggle={onToggleShortlist}
-            className="size-10"
+            className="size-9"
           />
         ) : null}
       </div>
