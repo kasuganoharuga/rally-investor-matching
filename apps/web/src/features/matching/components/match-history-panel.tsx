@@ -1,47 +1,59 @@
+import { History } from "lucide-react";
 import Link from "next/link";
 
-import { formatRecordDate } from "./match-display";
-import type { MatchRecord } from "@/features/matching/hooks/use-match-intake";
+import { buttonVariants } from "@/components/ui/button";
+import { MatchHistoryRecordCard } from "@/features/matching/components/match-history-record-card";
+import type { MatchRecord } from "@/features/matching/types/match";
+import { cn } from "@/lib/utils";
 
 type MatchHistoryPanelProps = {
   records: MatchRecord[];
 };
 
-export function MatchHistoryPanel({ records }: MatchHistoryPanelProps) {
+function MatchHistoryEmptyState() {
   return (
-    <section className="rounded-lg border border-border bg-card p-4 shadow-sm">
-      <p className="text-xs font-semibold uppercase text-muted-foreground">
-        Matching records
+    <div className="rounded-lg border border-dashed border-border bg-card px-6 py-14 text-center">
+      <div className="mx-auto flex size-12 items-center justify-center rounded-full bg-muted">
+        <History className="size-5 text-muted-foreground" aria-hidden="true" />
+      </div>
+      <p className="mt-4 text-base font-semibold text-foreground">
+        No matching records yet
       </p>
-      {records.length === 0 ? (
-        <div className="mt-3 rounded-lg border border-dashed border-border bg-background p-4 text-sm text-muted-foreground">
-          No matching records yet.
-        </div>
-      ) : (
-        <div className="mt-3 space-y-2">
-          {records.slice(0, 10).map((record) => (
-            <Link
-              key={record.id}
-              href={`/match/${record.id}`}
-              className="flex w-full items-center justify-between gap-3 rounded-lg bg-background px-3 py-2 text-left transition-colors hover:bg-muted"
-            >
-              <div className="min-w-0">
-                <p className="truncate text-sm font-medium text-foreground">
-                  {record.response.parsed_company_profile.company_name
-                    ? String(record.response.parsed_company_profile.company_name)
-                    : "Founder match"}
-                </p>
-                <p className="text-xs text-muted-foreground">
-                  {formatRecordDate(record.createdAt)}
-                </p>
-              </div>
-              <span className="shrink-0 rounded-lg bg-muted px-2 py-1 text-xs font-medium text-muted-foreground">
-                {record.response.matches.length} matches
-              </span>
-            </Link>
-          ))}
-        </div>
-      )}
-    </section>
+      <p className="mx-auto mt-1.5 max-w-sm text-sm leading-6 text-muted-foreground">
+        Every match you run is saved here, so you can revisit the investor list and
+        evidence behind it later.
+      </p>
+      <Link href="/match" className={cn(buttonVariants({ size: "lg" }), "mt-5")}>
+        Run your first match
+      </Link>
+    </div>
+  );
+}
+
+export function MatchHistoryPanel({ records }: MatchHistoryPanelProps) {
+  if (records.length === 0) {
+    return <MatchHistoryEmptyState />;
+  }
+
+  return (
+    <div>
+      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-primary pb-3">
+        <p className="text-sm font-semibold text-foreground">
+          Matching records
+          <span className="ml-1 font-normal text-muted-foreground">
+            ({records.length})
+          </span>
+        </p>
+        <p className="text-sm text-muted-foreground">
+          Sorted by: <span className="font-semibold text-foreground">Most recent</span>
+        </p>
+      </div>
+
+      <div className="mt-3 space-y-2">
+        {records.map((record) => (
+          <MatchHistoryRecordCard key={record.id} record={record} />
+        ))}
+      </div>
+    </div>
   );
 }

@@ -5,26 +5,9 @@ import {
   signalPills,
   tierLabel,
 } from "@/features/matching/components/match-result-display";
+import { ScoreRing } from "@/features/matching/components/score-ring";
 import type { MatchResult } from "@/features/matching/types/match";
 import { cn } from "@/lib/utils";
-
-function ScoreRing({ score }: { score: number }) {
-  const tier = scoreTier(score);
-  return (
-    <div
-      className={cn(
-        "flex size-14 shrink-0 items-center justify-center rounded-full border-4 bg-card text-sm font-bold text-foreground",
-        tier === "strong"
-          ? "border-primary"
-          : tier === "possible"
-            ? "border-warning"
-            : "border-muted-foreground/40",
-      )}
-    >
-      {Math.round(score)}
-    </div>
-  );
-}
 
 export function MatchResultRow({
   match,

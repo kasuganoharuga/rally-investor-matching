@@ -8,15 +8,16 @@ import { cn } from "@/lib/utils";
 export function WorkspaceSubnav({ recordCount }: { recordCount?: number }) {
   const pathname = usePathname();
   const isHistory = pathname?.startsWith("/match/history") ?? false;
+  const isNewMatch = pathname === "/match";
 
   const tabs = [
-    { href: "/match", label: "New match", active: !isHistory },
+    { href: "/match", label: "New match", active: isNewMatch },
     { href: "/match/history", label: "Match history", active: isHistory },
   ] as const;
 
   return (
     <div className="border-b border-border bg-card">
-      <div className="mx-auto flex w-full max-w-[1440px] items-center gap-7 px-6">
+      <div className="mx-auto flex w-full max-w-6xl items-center gap-7 px-5 md:px-7">
         {tabs.map((tab) => (
           <Link
             key={tab.href}

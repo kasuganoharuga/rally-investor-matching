@@ -26,7 +26,7 @@ export function MatchDetailPanel({
   const isLegacyMatch = !matchContext;
 
   return (
-    <section className="mx-auto grid w-full max-w-[1440px] gap-0 lg:grid-cols-[360px_minmax(0,1fr)]">
+    <section className="mx-auto grid w-full max-w-6xl gap-0 lg:grid-cols-[360px_minmax(0,1fr)]">
       <MatchDetailSidebar match={match} onBack={onBack} />
       <div className="min-w-0 px-6 py-6">
         <MatchDetailBreakdown match={match} companyName={companyName} />

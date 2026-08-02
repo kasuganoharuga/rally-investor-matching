@@ -6,16 +6,15 @@ import { MatchResultRow } from "@/features/matching/components/match-result-row"
 import { scoreTier } from "@/features/matching/components/match-result-display";
 import { downloadMatchResultsCsv } from "@/features/matching/components/match-results-csv";
 import type { IntakeResponse } from "@/features/matching/types/match";
-import { cn } from "@/lib/utils";
 
 export function MatchResultsScreen({
   response,
   onSelectMatch,
-  onStartOver,
+  onBack,
 }: {
   response: IntakeResponse;
   onSelectMatch: (investorId: string) => void;
-  onStartOver: () => void;
+  onBack: () => void;
 }) {
   const matches = response.matches;
   const strongCount = matches.filter(
@@ -31,14 +30,14 @@ export function MatchResultsScreen({
       : "Current company";
 
   return (
-    <section className="mx-auto w-full max-w-[1440px] px-6 py-5">
+    <section className="mx-auto w-full max-w-6xl px-5 py-8 md:px-7 md:py-10">
       <button
         type="button"
-        onClick={onStartOver}
+        onClick={onBack}
         className="mb-3 inline-flex items-center gap-1 text-sm font-semibold text-muted-foreground hover:text-foreground"
       >
         <ArrowLeft className="size-4" aria-hidden="true" />
-        Back to Workspace
+        Back to history
       </button>
 
       <div className="rounded-lg border border-border bg-card px-5 py-4 shadow-sm">
@@ -76,31 +75,15 @@ export function MatchResultsScreen({
       </div>
 
       <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-b border-primary pb-3">
-        <div className="flex flex-wrap gap-2">
-          {[
-            "All",
-            "Strong fit",
-            "Lead potential",
-            "Has warm intro",
-            "Needs review",
-          ].map((item, index) => (
-            <span
-              key={item}
-              className={cn(
-                "rounded-full border px-4 py-1.5 text-sm font-semibold",
-                index === 0
-                  ? "border-primary bg-primary text-primary-foreground"
-                  : "border-border bg-card text-muted-foreground",
-              )}
-            >
-              {item}
-              {index === 0 ? ` (${matches.length})` : ""}
-            </span>
-          ))}
+        <span className="rounded-full border border-primary bg-primary px-4 py-1.5 text-sm font-semibold text-primary-foreground">
+          All ({matches.length})
+        </span>
+        <div className="flex items-center gap-2 text-sm text-muted-foreground">
+          Sort by
+          <span className="rounded-full border border-border bg-card px-4 py-1.5 font-semibold text-foreground">
+            Best fit
+          </span>
         </div>
-        <p className="text-sm text-muted-foreground">
-          Sort by: <span className="font-semibold text-foreground">Best fit</span>
-        </p>
       </div>
 
       <div className="mt-3 space-y-2">

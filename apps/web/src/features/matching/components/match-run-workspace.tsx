@@ -10,9 +10,11 @@ import { WorkspaceSubnav } from "@/features/matching/components/workspace-subnav
 import { useMatchingRun } from "@/features/matching/hooks/use-matching-run";
 import { cn } from "@/lib/utils";
 
+const MATCH_RUN_CONTAINER = "mx-auto w-full max-w-6xl px-5 py-8 md:px-7 md:py-10";
+
 function MatchRunLoading() {
   return (
-    <section className="mx-auto w-full max-w-[1440px] space-y-4 px-6 py-5">
+    <section className={cn(MATCH_RUN_CONTAINER, "space-y-4")}>
       <div className="h-24 animate-pulse rounded-lg border border-border bg-card" />
       <div className="h-64 animate-pulse rounded-lg border border-border bg-card" />
     </section>
@@ -21,7 +23,7 @@ function MatchRunLoading() {
 
 function MatchRunNotFound() {
   return (
-    <section className="mx-auto w-full max-w-[1440px] px-6 py-5">
+    <section className={MATCH_RUN_CONTAINER}>
       <div className="rounded-lg border border-border bg-card p-6 text-center">
         <p className="text-sm font-medium text-foreground">Match not found</p>
         <p className="mt-2 text-sm text-muted-foreground">
@@ -37,7 +39,7 @@ function MatchRunNotFound() {
 
 function MatchRunError({ message, onRetry }: { message: string; onRetry: () => void }) {
   return (
-    <section className="mx-auto w-full max-w-[1440px] px-6 py-5">
+    <section className={MATCH_RUN_CONTAINER}>
       <div className="rounded-lg border border-destructive/30 bg-destructive/10 p-4">
         <p className="text-sm font-medium text-destructive">
           Unable to load this match
@@ -102,7 +104,7 @@ export function MatchRunWorkspace({ runId }: { runId: string }) {
         onSelectMatch={(investorId) =>
           router.push(`/match/${runId}?investor=${encodeURIComponent(investorId)}`)
         }
-        onStartOver={() => router.push("/match")}
+        onBack={() => router.push("/match/history")}
       />
     );
   }

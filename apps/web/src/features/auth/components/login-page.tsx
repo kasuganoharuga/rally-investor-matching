@@ -101,6 +101,26 @@ export function LoginPage() {
           Invite only &middot; By cohort
         </p>
       </div>
+
+      <div className="border-t border-border bg-primary px-6 py-10 text-primary-foreground sm:px-10 lg:hidden">
+        <p className="text-xs font-semibold tracking-[0.2em] text-secondary uppercase">
+          Rally &middot; Investor Matching
+        </p>
+        <h2 className="mt-3 max-w-md font-serif text-2xl leading-tight">
+          Every founder thinks their raise is ready. This is how you find out who
+          agrees.
+        </h2>
+        <ul className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
+          {VALUE_PROPS.map((item) => (
+            <li
+              key={item.title}
+              className="rounded-lg border border-primary-foreground/15 bg-primary-foreground/5 px-3 py-3 text-xs leading-snug font-medium"
+            >
+              {item.title}
+            </li>
+          ))}
+        </ul>
+      </div>
     </main>
   );
 }
