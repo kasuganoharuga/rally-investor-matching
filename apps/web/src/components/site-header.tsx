@@ -5,9 +5,11 @@ import { AccountMenu } from "@/features/auth/components/account-menu";
 import type { UserRole } from "@/features/auth/types/auth";
 import { DropdownMenu, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { NavDropdownContent, NavDropdownItem } from "@/components/nav-dropdown";
+import { PAGE_GUTTER, PAGE_WIDTHS, type PageWidth } from "@/components/page-width";
+import { cn } from "@/lib/utils";
 import { ChevronDownIcon, MenuIcon } from "lucide-react";
 
-type SiteHeaderSection =
+export type SiteHeaderSection =
   | "investors"
   | "match"
   | "user-management"
@@ -56,6 +58,11 @@ const MANAGEMENT_ROLES: readonly UserRole[] = ["admin", "reviewer"];
 type SiteHeaderProps = {
   active: SiteHeaderSection;
   user: { email: string; role: UserRole };
+  /**
+   * Matches the page's content width so the nav's left edge lines up with
+   * the content below it instead of floating at a fixed 1440px.
+   */
+  width?: PageWidth;
 };
 
 /**
@@ -63,13 +70,19 @@ type SiteHeaderProps = {
  * workspace, admin management pages). Centralizing it here means the
  * "Management" dropdown and its role gate only need to be written once.
  */
-export function SiteHeader({ active, user }: SiteHeaderProps) {
+export function SiteHeader({ active, user, width = "wide" }: SiteHeaderProps) {
   const showManagement = MANAGEMENT_ROLES.includes(user.role);
   const isManagementActive = MANAGEMENT_LINKS.some((link) => link.section === active);
 
   return (
     <header className="border-b border-border bg-card">
-      <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-6 py-4">
+      <div
+        className={cn(
+          "mx-auto flex w-full items-center justify-between py-4",
+          PAGE_WIDTHS[width],
+          PAGE_GUTTER,
+        )}
+      >
         <nav className="flex min-w-0 items-center gap-4 md:gap-8">
           <Link href="/" className="flex items-center gap-2">
             <Image

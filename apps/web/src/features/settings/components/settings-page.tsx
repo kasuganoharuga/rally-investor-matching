@@ -1,4 +1,4 @@
-import { SiteHeader } from "@/components/site-header";
+import { PageShell } from "@/components/page-shell";
 import {
   Card,
   CardContent,
@@ -14,22 +14,18 @@ export async function SettingsPage() {
   const user = await requirePageUser();
 
   return (
-    <main className="min-h-screen bg-background text-foreground">
-      <SiteHeader active="settings" user={user} />
+    <PageShell width="form" active="settings" user={user} className="space-y-6">
+      <UserProfilePanel />
 
-      <div className="mx-auto w-full max-w-[720px] space-y-6 px-6 py-7">
-        <UserProfilePanel />
-
-        <Card>
-          <CardHeader>
-            <CardTitle>Security</CardTitle>
-            <CardDescription>Change the password used to sign in.</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <ChangePasswordForm />
-          </CardContent>
-        </Card>
-      </div>
-    </main>
+      <Card>
+        <CardHeader>
+          <CardTitle>Security</CardTitle>
+          <CardDescription>Change the password used to sign in.</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <ChangePasswordForm />
+        </CardContent>
+      </Card>
+    </PageShell>
   );
 }
