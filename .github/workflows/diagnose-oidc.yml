@@ -1,0 +1,43 @@
+name: Diagnose OIDC
+
+# Prints the GitHub Actions OIDC subject that AWS IAM will evaluate.
+# Does not call AWS — safe to run when Deploy formal AWS fails at AssumeRole.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  diagnose:
+    name: Print OIDC claims
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Decode GitHub OIDC token claims
+        shell: bash
+        run: |
+          set -euo pipefail
+          response=$(curl -sS -H "Authorization: bearer ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" \
+            "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=sts.amazonaws.com")
+          token=$(jq -r '.value' <<<"$response")
+          payload=$(cut -d. -f2 <<<"$token" | tr '_-' '/+' | awk '{ while (length($0) % 4) $0=$0"="; print }' | base64 -d)
+          echo "Expected classic trust subject:"
+          echo "  repo:Torus-Group/rally-investor-matching:ref:refs/heads/develop_new"
+          echo "Expected immutable trust subject:"
+          echo "  repo:Torus-Group@296493582/rally-investor-matching@1284664914:ref:refs/heads/develop_new"
+          echo
+          echo "Actual OIDC claims presented to STS audience sts.amazonaws.com:"
+          jq '{
+            sub,
+            aud,
+            iss,
+            ref,
+            repository,
+            repository_id,
+            repository_owner,
+            repository_owner_id,
+            workflow_ref
+          }' <<<"$payload"

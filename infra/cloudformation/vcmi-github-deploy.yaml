@@ -13,9 +13,17 @@ Parameters:
   GitHubOrganization:
     Type: String
     Default: Torus-Group
+  GitHubOrganizationId:
+    Type: String
+    Default: "296493582"
+    Description: Numeric GitHub organization ID (gh api /orgs/<org> --jq .id).
   GitHubRepository:
     Type: String
     Default: rally-investor-matching
+  GitHubRepositoryId:
+    Type: String
+    Default: "1284664914"
+    Description: Numeric GitHub repository ID (gh api /repos/<org>/<repo> --jq .id).
   GitHubBranch:
     Type: String
     Default: develop_new
@@ -47,7 +55,13 @@ Resources:
             Condition:
               StringEquals:
                 token.actions.githubusercontent.com:aud: sts.amazonaws.com
-                token.actions.githubusercontent.com:sub: !Sub "repo:${GitHubOrganization}/${GitHubRepository}:ref:refs/heads/${GitHubBranch}"
+              # Accept both classic slug subjects and GitHub's immutable-ID
+              # subjects (enforced for repos created/renamed after 2026-07-15).
+              # Wildcards only work under StringLike, not StringEquals.
+              StringLike:
+                token.actions.githubusercontent.com:sub:
+                  - !Sub "repo:${GitHubOrganization}/${GitHubRepository}:ref:refs/heads/${GitHubBranch}"
+                  - !Sub "repo:${GitHubOrganization}@${GitHubOrganizationId}/${GitHubRepository}@${GitHubRepositoryId}:ref:refs/heads/${GitHubBranch}"
       Policies:
         - PolicyName: !Sub "${ProjectSlug}-${Environment}-github-actions-deploy"
           PolicyDocument:
@@ -81,5 +95,7 @@ Resources:
 Outputs:
   GitHubDeployRoleArn:
     Value: !GetAtt GitHubDeployRole.Arn
-  GitHubSubject:
+  GitHubSubjectClassic:
     Value: !Sub "repo:${GitHubOrganization}/${GitHubRepository}:ref:refs/heads/${GitHubBranch}"
+  GitHubSubjectImmutable:
+    Value: !Sub "repo:${GitHubOrganization}@${GitHubOrganizationId}/${GitHubRepository}@${GitHubRepositoryId}:ref:refs/heads/${GitHubBranch}"

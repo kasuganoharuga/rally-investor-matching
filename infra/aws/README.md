@@ -183,8 +183,19 @@ aws cloudformation deploy `
     GitHubOidcProviderArn=arn:aws:iam::765332581489:oidc-provider/token.actions.githubusercontent.com `
     SourceBucket=vcmi-dev-deploy-765332581489-ap-southeast-2 `
     SourceKey=releases/formal/rally-formal-source.zip `
-    InstanceId=i-0cd72e60d642457ae
+    InstanceId=i-0cd72e60d642457ae `
+    GitHubOrganization=Torus-Group `
+    GitHubOrganizationId=296493582 `
+    GitHubRepository=rally-investor-matching `
+    GitHubRepositoryId=1284664914 `
+    GitHubBranch=develop_new
 ```
+
+If Deploy formal AWS fails at `Configure AWS credentials through OIDC` with
+`Not authorized to perform sts:AssumeRoleWithWebIdentity`, the IAM trust
+policy subject no longer matches the GitHub OIDC `sub` claim. Re-run the
+stack command above, then re-run the failed workflow. To inspect the live
+subject without calling AWS, run the **Diagnose OIDC** workflow.
 
 The workflow also supports a manual run from the GitHub Actions page. Deployments
 are serialized, so a second push waits for the active release instead of
