@@ -6,7 +6,7 @@ export async function InvestorsPage() {
   const user = await requirePageUser();
 
   return (
-    <PageShell width="wide" active="investors" user={user}>
+    <PageShell width="content" active="investors" user={user}>
       <InvestorListPanel />
     </PageShell>
   );

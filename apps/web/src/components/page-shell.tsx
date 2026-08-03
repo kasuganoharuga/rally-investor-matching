@@ -18,7 +18,7 @@ export function PageShell({
 }) {
   return (
     <main className="flex min-h-screen flex-col bg-background text-foreground">
-      <SiteHeader active={active} user={user} width={width} />
+      <SiteHeader active={active} user={user} />
       <div className={pageContainer(width, cn("py-7", className))}>{children}</div>
     </main>
   );
