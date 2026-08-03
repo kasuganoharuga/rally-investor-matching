@@ -1,0 +1,51 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investors",
+    "record_key":  "investor:1up-ventures",
+    "operation":  "upsert",
+    "data":  {
+                 "canonical_name":  "1Up Ventures",
+                 "aliases":  [
+
+                             ],
+                 "investor_type":  "vc_fund",
+                 "investor_subtype":  "venture_capital",
+                 "eligibility_mode":  "none",
+                 "classification_confidence":  "high",
+                 "classification_evidence_urls":  [
+                                                      "https://1up.vc/",
+                                                      "https://www.linkedin.com/company/1up-vc"
+                                                  ],
+                 "classified_at":  "2026-07-30",
+                 "website_url":  "https://1up.vc/",
+                 "linkedin_url":  "https://www.linkedin.com/company/1up-vc",
+                 "hq_country":  null,
+                 "hq_state":  null,
+                 "hq_city":  null,
+                 "offices":  [
+
+                             ],
+                 "status":  "active",
+                 "merged_into_id":  null,
+                 "review_status":  "needs_more_data",
+                 "last_reviewed_at":  "2026-07-30",
+                 "last_reviewed_by":  "codex-investor-identity-audit"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:scoped:recent-deal2026-7-30_deals-001-060",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Headquarters country was not disclosed by the verified sources or the identity remained ambiguous.",
+                                  "Headquarters state/region was not disclosed by the verified sources.",
+                                  "Headquarters city was not disclosed by the verified sources."
+                              ]
+               }
+}

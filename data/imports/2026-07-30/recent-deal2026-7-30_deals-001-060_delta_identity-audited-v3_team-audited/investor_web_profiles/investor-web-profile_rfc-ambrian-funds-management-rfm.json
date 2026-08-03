@@ -1,0 +1,57 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investor_web_profiles",
+    "record_key":  "investor_web_profile:rfc-ambrian-funds-management-rfm:2026-07-30",
+    "operation":  "upsert",
+    "data":  {
+                 "source_urls":  [
+                                     "https://www.rfcambrian.com/about/",
+                                     "https://www.linkedin.com/company/rfc-ambrian/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "website_status":  "ok",
+                 "raw_content_hash":  null,
+                 "raw_content_ref":  null,
+                 "extraction_model":  "fixed-ai-workflow",
+                 "extraction_version":  "analysis-window-1.0.0",
+                 "confidence":  "high",
+                 "claimed_thesis":  null,
+                 "claimed_stages":  [
+
+                                    ],
+                 "claimed_sectors":  [
+
+                                     ],
+                 "claimed_geographies":  [
+
+                                         ],
+                 "claimed_business_models":  [
+
+                                             ],
+                 "claimed_cheque_min":  null,
+                 "claimed_cheque_max":  null,
+                 "claimed_cheque_currency":  null,
+                 "contact_emails":  [
+
+                                    ],
+                 "application_url":  null,
+                 "contact_notes":  "RFC Ambrian\u0027s exact company page identifies its Sydney headquarters and links to the official website.",
+                 "is_current":  true,
+                 "superseded_at":  null
+             },
+    "refs":  {
+                 "investor_key":  "investor:rfc-ambrian-funds-management-rfm"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:scoped:recent-deal2026-7-30_deals-001-060",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

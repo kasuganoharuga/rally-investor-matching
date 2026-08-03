@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:factor-house-seed--bdce4adc",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "factor-house-seed--bdce4adc",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/factor-house-seed--bdce4adc",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Factor House",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/factor-house-seed--bdce4adc",
+                                        "Organization Location":  "Melbourne, Victoria, Australia, Oceania",
+                                        "Organization Name":  "Factor House",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/factor-house",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "5000000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "3158312",
+                                        "Announced Date":  "2025-02-13",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "20000000",
+                                        "Pre-Money Valuation Currency":  "AUD",
+                                        "Pre-Money Valuation (in USD)":  "12633249",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Factor House is a software development company that builds essential software tools Kpow for modern engineers.",
+                                        "Organization Industries":  "SaaS, Software, Software Engineering",
+                                        "Organization Website":  "https://factorhouse.io",
+                                        "Organization Revenue Range":  "$1M to $10M",
+                                        "Total Funding Amount":  "5000000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "3158312",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Blackbird Ventures",
+                                        "Investor Names":  "Blackbird Ventures, Flying Fox Ventures, LaunchVic, Michelle Holmes, OIF Ventures, Steven Holmes",
+                                        "Number of Investors":  "6",
+                                        "Number of Partner Investors":  "3"
+                                    },
+                 "investee_name_raw":  "Factor House",
+                 "org_location_raw":  "Melbourne, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://factorhouse.io",
+                 "org_industries_raw":  "SaaS, Software, Software Engineering",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-02-13",
+                 "money_raised_raw":  "5000000",
+                 "amount":  5000000,
+                 "currency":  "AUD",
+                 "amount_usd":  3158312,
+                 "pre_money_valuation_raw":  "20000000",
+                 "pre_money_valuation":  20000000,
+                 "valuation_currency":  "AUD",
+                 "valuation_usd":  12633249,
+                 "equity_only":  true,
+                 "total_funding_raw":  "5000000",
+                 "investor_names_raw":  "Blackbird Ventures, Flying Fox Ventures, LaunchVic, Michelle Holmes, OIF Ventures, Steven Holmes",
+                 "lead_investor_names_raw":  "Blackbird Ventures",
+                 "imported_at":  "2026-07-30T14:07:04.7031168+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "verified_primary",
+                 "verification_source_url":  "https://factorhouse.io/blog/articles/from-bootstrap-to-blackbird/",
+                 "verification_notes":  "Company announcement verifies A$5m seed and the imported investor syndicate on 13 Feb 2025.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:factor-house"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:factor-house-seed--bdce4adc"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

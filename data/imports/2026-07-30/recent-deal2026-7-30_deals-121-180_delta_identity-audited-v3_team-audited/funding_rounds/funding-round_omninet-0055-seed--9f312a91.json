@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:omninet-0055-seed--9f312a91",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "omninet-0055-seed--9f312a91",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/omninet-0055-seed--9f312a91",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - OmniNet",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/omninet-0055-seed--9f312a91",
+                                        "Organization Location":  "Gate Pa, Bay of Plenty, New Zealand, Oceania",
+                                        "Organization Name":  "OmniNet",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/omninet-0055",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "4000000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "4000000",
+                                        "Announced Date":  "2025-08-12",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "OmniNet offers web hosting, email hosting, cloud solutions, and telecommunications services.",
+                                        "Organization Industries":  "Information Technology, Telecommunications, Web Hosting",
+                                        "Organization Website":  "https://www.omninet.co.nz/",
+                                        "Organization Revenue Range":  "$1M to $10M",
+                                        "Total Funding Amount":  "4000000",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "4000000",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "Solo Crest Capital",
+                                        "Number of Investors":  "1",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "OmniNet",
+                 "org_location_raw":  "Gate Pa, Bay of Plenty, New Zealand, Oceania",
+                 "org_website_raw":  "https://www.omninet.co.nz/",
+                 "org_industries_raw":  "Information Technology, Telecommunications, Web Hosting",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-08-12",
+                 "money_raised_raw":  "4000000",
+                 "amount":  4000000,
+                 "currency":  "USD",
+                 "amount_usd":  4000000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "4000000",
+                 "investor_names_raw":  "Solo Crest Capital",
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:05.0381952+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "unverified_publicly",
+                 "verification_source_url":  "https://www.crunchbase.com/funding_round/omninet-0055-seed--9f312a91",
+                 "verification_notes":  "No exact independent public announcement was located in this pass. The imported transaction is retained for manual follow-up.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:omninet-0055"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:omninet-0055-seed--9f312a91"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact round amount/date/stage/investors not independently verified."
+                              ]
+               }
+}

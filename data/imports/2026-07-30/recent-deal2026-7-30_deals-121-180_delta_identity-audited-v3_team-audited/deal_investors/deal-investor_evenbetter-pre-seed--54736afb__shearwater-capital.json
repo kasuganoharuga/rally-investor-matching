@@ -1,0 +1,31 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "deal_investors",
+    "record_key":  "deal_investor:crunchbase:evenbetter-pre-seed--54736afb:shearwater-capital",
+    "operation":  "upsert",
+    "data":  {
+                 "raw_name":  "Shearwater Capital",
+                 "role":  "lead",
+                 "participation_status":  "unknown",
+                 "resolution":  "resolved",
+                 "resolution_confidence":  "high",
+                 "identity_resolution":  "existing_database_investor"
+             },
+    "refs":  {
+                 "deal_key":  "funding_round:crunchbase:evenbetter-pre-seed--54736afb",
+                 "investor_key":  "investor:shearwater-capital",
+                 "raw_investor_candidate_key":  "raw_investor_candidate:shearwater-capital"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:evenbetter-pre-seed--54736afb"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:all-model-seed--f0723a8a",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "all-model-seed--f0723a8a",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/all-model-seed--f0723a8a",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - All Model",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/all-model-seed--f0723a8a",
+                                        "Organization Location":  "Mulgrave, Victoria, Australia, Oceania",
+                                        "Organization Name":  "All Model",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/all-model",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "124000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "77871",
+                                        "Announced Date":  "2025-03-10",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "224000",
+                                        "Pre-Money Valuation Currency":  "AUD",
+                                        "Pre-Money Valuation (in USD)":  "140670",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "All Model is a hybrid fintech and pharmaceuticals manufacturing company.",
+                                        "Organization Industries":  "FinTech, Pharmaceutical",
+                                        "Organization Website":  "https://allmodel.company",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "124000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "77871",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "",
+                                        "Number of Investors":  "",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "All Model",
+                 "org_location_raw":  "Mulgrave, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://allmodel.company",
+                 "org_industries_raw":  "FinTech, Pharmaceutical",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-03-10",
+                 "money_raised_raw":  "124000",
+                 "amount":  124000,
+                 "currency":  "AUD",
+                 "amount_usd":  77871,
+                 "pre_money_valuation_raw":  "224000",
+                 "pre_money_valuation":  224000,
+                 "valuation_currency":  "AUD",
+                 "valuation_usd":  140670,
+                 "equity_only":  true,
+                 "total_funding_raw":  "124000",
+                 "investor_names_raw":  null,
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:05.4191620+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "unverified_publicly",
+                 "verification_source_url":  "https://www.crunchbase.com/funding_round/all-model-seed--f0723a8a",
+                 "verification_notes":  "No exact independent public announcement was located in this pass. The imported transaction is retained for manual follow-up.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:all-model"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:all-model-seed--f0723a8a"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact round amount/date/stage/investors not independently verified."
+                              ]
+               }
+}

@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:see-me-please-seed--5e46537a",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "see-me-please-seed--5e46537a",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/see-me-please-seed--5e46537a",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - See Me Please",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/see-me-please-seed--5e46537a",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "See Me Please",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/see-me-please",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "120000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "74324",
+                                        "Announced Date":  "2025-01-01",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "One-stop-shop for disabled and diverse user testing insights providing actionable and relatable accessibility feedback.",
+                                        "Organization Industries":  "Assistive Technology, Consumer Research, Software",
+                                        "Organization Website":  "http://www.seemeplease.com",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "1462000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "931285",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "Impact Investing Australia",
+                                        "Number of Investors":  "1",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "See Me Please",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "http://www.seemeplease.com",
+                 "org_industries_raw":  "Assistive Technology, Consumer Research, Software",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-01-01",
+                 "money_raised_raw":  "120000",
+                 "amount":  120000,
+                 "currency":  "AUD",
+                 "amount_usd":  74324,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "1462000",
+                 "investor_names_raw":  "Impact Investing Australia",
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:05.4931773+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "unverified_publicly",
+                 "verification_source_url":  "https://www.crunchbase.com/funding_round/see-me-please-seed--5e46537a",
+                 "verification_notes":  "No exact independent public announcement was located in this pass. The imported transaction is retained for manual follow-up.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:see-me-please"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:see-me-please-seed--5e46537a"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact round amount/date/stage/investors not independently verified."
+                              ]
+               }
+}

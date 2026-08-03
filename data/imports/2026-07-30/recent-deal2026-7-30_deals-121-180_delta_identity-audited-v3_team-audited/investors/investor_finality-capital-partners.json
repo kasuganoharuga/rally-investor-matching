@@ -1,0 +1,50 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investors",
+    "record_key":  "investor:finality-capital-partners",
+    "operation":  "upsert",
+    "data":  {
+                 "canonical_name":  "Finality Capital Partners",
+                 "aliases":  [
+
+                             ],
+                 "investor_type":  "vc_fund",
+                 "investor_subtype":  "venture_capital",
+                 "eligibility_mode":  "none",
+                 "classification_confidence":  "high",
+                 "classification_evidence_urls":  [
+                                                      "https://www.finality.capital/",
+                                                      "https://www.linkedin.com/company/finality-capital",
+                                                      "https://bizfileonline.sos.ca.gov/search/business"
+                                                  ],
+                 "classified_at":  "2026-07-30",
+                 "website_url":  "https://www.finality.capital/",
+                 "linkedin_url":  "https://www.linkedin.com/company/finality-capital",
+                 "hq_country":  "US",
+                 "hq_state":  "California",
+                 "hq_city":  "Beverly Hills",
+                 "offices":  [
+
+                             ],
+                 "status":  "active",
+                 "merged_into_id":  null,
+                 "review_status":  "reviewed",
+                 "last_reviewed_at":  "2026-07-30",
+                 "last_reviewed_by":  "codex-investor-identity-gap-supplement"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:scoped:recent-deal2026-7-30_deals-121-180",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

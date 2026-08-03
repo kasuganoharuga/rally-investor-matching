@@ -1,0 +1,49 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investors",
+    "record_key":  "investor:sparklabs-cultiv8",
+    "operation":  "upsert",
+    "data":  {
+                 "canonical_name":  "SparkLabs Cultiv8",
+                 "aliases":  [
+
+                             ],
+                 "investor_type":  "vc_fund",
+                 "investor_subtype":  "accelerator_operator",
+                 "eligibility_mode":  "conditional",
+                 "classification_confidence":  "high",
+                 "classification_evidence_urls":  [
+                                                      "https://www.sparklabscultiv8.com/",
+                                                      "https://www.linkedin.com/company/sparklabs-cultiv8"
+                                                  ],
+                 "classified_at":  "2026-07-30",
+                 "website_url":  "https://www.sparklabscultiv8.com/",
+                 "linkedin_url":  "https://www.linkedin.com/company/sparklabs-cultiv8",
+                 "hq_country":  "AU",
+                 "hq_state":  "New South Wales",
+                 "hq_city":  "Orange",
+                 "offices":  [
+
+                             ],
+                 "status":  "active",
+                 "merged_into_id":  null,
+                 "review_status":  "reviewed",
+                 "last_reviewed_at":  "2026-07-30",
+                 "last_reviewed_by":  "codex-investor-identity-audit"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:scoped:recent-deal2026-7-30_deals-001-060",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

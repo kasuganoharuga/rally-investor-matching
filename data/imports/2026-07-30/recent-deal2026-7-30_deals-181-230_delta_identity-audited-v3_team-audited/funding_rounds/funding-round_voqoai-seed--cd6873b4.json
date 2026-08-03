@@ -1,0 +1,83 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:voqoai-seed--cd6873b4",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "voqoai-seed--cd6873b4",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/voqoai-seed--cd6873b4",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - VoqoAI",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/voqoai-seed--cd6873b4",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "VoqoAI",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/voqoai",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "522000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "522000",
+                                        "Announced Date":  "2025-07-13",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Voqo AI is a startup specializing in AI-powered voice agents designed primarily for the real estate and property management sectors.",
+                                        "Organization Industries":  "",
+                                        "Organization Website":  "https://voqo.io",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "522000",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "522000",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Blackbird Ventures",
+                                        "Investor Names":  "Blackbird Ventures, Startmate, UNSW Founders, Yellow Brick Road",
+                                        "Number of Investors":  "4",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "VoqoAI",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://voqo.io",
+                 "org_industries_raw":  null,
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-07-13",
+                 "money_raised_raw":  "522000",
+                 "amount":  522000,
+                 "currency":  "USD",
+                 "amount_usd":  522000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "522000",
+                 "investor_names_raw":  "Blackbird Ventures, Startmate, UNSW Founders, Yellow Brick Road",
+                 "lead_investor_names_raw":  "Blackbird Ventures",
+                 "imported_at":  "2026-07-30T14:07:05.5292832+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "duplicate_round_variant",
+                 "verification_source_url":  "https://www.voqo.ai/blog/the-future-is-agentic-announcing-voqo-ai-s-pre-seed-round-led-by-blackbird-ventures",
+                 "verification_notes":  "This appears to be the same Voqo AI A$800k pre-seed already present earlier in the source, expressed here as approximately US$522k and classified as Seed.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:voqoai"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:voqoai-seed--cd6873b4"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Potential duplicate transaction across source rows 111 and 198.",
+                                  "Company name, currency and stage differ while date/investors match."
+                              ]
+               }
+}

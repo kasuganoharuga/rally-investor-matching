@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:super-it-pre-seed--2ce46303",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "super-it-pre-seed--2ce46303",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/super-it-pre-seed--2ce46303",
+                 "source_payload":  {
+                                        "Transaction Name":  "Pre Seed Round - Super IT",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/super-it-pre-seed--2ce46303",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "Super IT",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/super-it",
+                                        "Funding Type":  "Pre-Seed",
+                                        "Money Raised":  "260000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "165774",
+                                        "Announced Date":  "2025-04-22",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Super IT is an AI software that helps improve IT support for teams and managed service providers (MSPs).",
+                                        "Organization Industries":  "Cloud Infrastructure, Communications Infrastructure, Information Technology",
+                                        "Organization Website":  "https://www.superit.ai/",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "260000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "165774",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "Antler",
+                                        "Number of Investors":  "1",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "Super IT",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://www.superit.ai/",
+                 "org_industries_raw":  "Cloud Infrastructure, Communications Infrastructure, Information Technology",
+                 "round_type_raw":  "Pre-Seed",
+                 "round_stage":  "pre_seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-04-22",
+                 "money_raised_raw":  "260000",
+                 "amount":  260000,
+                 "currency":  "AUD",
+                 "amount_usd":  165774,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "260000",
+                 "investor_names_raw":  "Antler",
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:05.0331957+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "partially_verified",
+                 "verification_source_url":  "https://www.antler.co/location/australia",
+                 "verification_notes":  "Antler Australia program terms support a standard pre-seed investment.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:super-it"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:super-it-pre-seed--2ce46303"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "No Super IT-specific public announcement was located."
+                              ]
+               }
+}

@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:shiine-media-seed--7d58fa07",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "shiine-media-seed--7d58fa07",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/shiine-media-seed--7d58fa07",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Shiine Media",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/shiine-media-seed--7d58fa07",
+                                        "Organization Location":  "Perth, Western Australia, Australia, Oceania",
+                                        "Organization Name":  "Shiine Media",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/shiine-media",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "171000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "105866",
+                                        "Announced Date":  "2025-01-14",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "2000000",
+                                        "Pre-Money Valuation Currency":  "AUD",
+                                        "Pre-Money Valuation (in USD)":  "1238200",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Shiine Media is a Perth-based digital out-of-home advertising network placing LED screens atop rideshare vehicles.",
+                                        "Organization Industries":  "Advertising, Data Visualization, Generative AI, Outdoor Advertising, Predictive Analytics",
+                                        "Organization Website":  "https://www.shiinemedia.com",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "171000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "105866",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Plus Eight",
+                                        "Investor Names":  "Plus Eight",
+                                        "Number of Investors":  "1",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "Shiine Media",
+                 "org_location_raw":  "Perth, Western Australia, Australia, Oceania",
+                 "org_website_raw":  "https://www.shiinemedia.com",
+                 "org_industries_raw":  "Advertising, Data Visualization, Generative AI, Outdoor Advertising, Predictive Analytics",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-01-14",
+                 "money_raised_raw":  "171000",
+                 "amount":  171000,
+                 "currency":  "AUD",
+                 "amount_usd":  105866,
+                 "pre_money_valuation_raw":  "2000000",
+                 "pre_money_valuation":  2000000,
+                 "valuation_currency":  "AUD",
+                 "valuation_usd":  1238200,
+                 "equity_only":  true,
+                 "total_funding_raw":  "171000",
+                 "investor_names_raw":  "Plus Eight",
+                 "lead_investor_names_raw":  "Plus Eight",
+                 "imported_at":  "2026-07-30T14:07:04.4713131+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "partially_verified",
+                 "verification_source_url":  "https://www.businessnews.com.au/Company/Shiine-Media",
+                 "verification_notes":  "Business News profile supports Plus Eight backing; exact A$171k seed details are not fully visible in the cited profile.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:shiine-media"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:shiine-media-seed--7d58fa07"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact amount/date need primary confirmation."
+                              ]
+               }
+}

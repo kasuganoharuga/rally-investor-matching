@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:mygigsters-seed--d2ef14cc",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "mygigsters-seed--d2ef14cc",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/mygigsters-seed--d2ef14cc",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - MyGigsters",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/mygigsters-seed--d2ef14cc",
+                                        "Organization Location":  "Melbourne, Victoria, Australia, Oceania",
+                                        "Organization Name":  "MyGigsters",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/mygigsters",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "1100000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "1100000",
+                                        "Announced Date":  "2025-01-29",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "MyGigsters provides embedded financial services that enables platforms and marketplaces to onboard, pay, and support independent workers.",
+                                        "Organization Industries":  "Finance, Financial Services, FinTech, Freelance, Identity Management, Marketplace, Payments, SaaS",
+                                        "Organization Website":  "https://www.mygigsters.com.au/",
+                                        "Organization Revenue Range":  "$1M to $10M",
+                                        "Total Funding Amount":  "1417155",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "1417155",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "Antler, Antonio Separovic, Craig Martin, David Orth, Hugo Messer, LaunchVic, Startmate, Swaminathan Narayanan",
+                                        "Number of Investors":  "8",
+                                        "Number of Partner Investors":  "1"
+                                    },
+                 "investee_name_raw":  "MyGigsters",
+                 "org_location_raw":  "Melbourne, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://www.mygigsters.com.au/",
+                 "org_industries_raw":  "Finance, Financial Services, FinTech, Freelance, Identity Management, Marketplace, Payments, SaaS",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-01-29",
+                 "money_raised_raw":  "1100000",
+                 "amount":  1100000,
+                 "currency":  "USD",
+                 "amount_usd":  1100000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "1417155",
+                 "investor_names_raw":  "Antler, Antonio Separovic, Craig Martin, David Orth, Hugo Messer, LaunchVic, Startmate, Swaminathan Narayanan",
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:04.7298478+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "verified_primary",
+                 "verification_source_url":  "https://www.mygigsters.com.au/news-media/mygigsters-raises-1-1m-to-power-the-future-of-gig-work-with-embedded-financial-services",
+                 "verification_notes":  "Company announcement verifies a $1.1m seed and the imported backers.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:mygigsters"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:mygigsters-seed--d2ef14cc"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Imported 29 Jan date appears to reflect media publication rather than the company announcement date."
+                              ]
+               }
+}

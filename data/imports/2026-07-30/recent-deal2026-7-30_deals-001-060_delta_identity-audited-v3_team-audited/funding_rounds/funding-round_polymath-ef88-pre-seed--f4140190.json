@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:polymath-ef88-pre-seed--f4140190",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "polymath-ef88-pre-seed--f4140190",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/polymath-ef88-pre-seed--f4140190",
+                 "source_payload":  {
+                                        "Transaction Name":  "Pre Seed Round - Polymath",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/polymath-ef88-pre-seed--f4140190",
+                                        "Organization Location":  "Auckland, Auckland, New Zealand, Oceania",
+                                        "Organization Name":  "Polymath",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/polymath-ef88",
+                                        "Funding Type":  "Pre-Seed",
+                                        "Money Raised":  "1500000",
+                                        "Money Raised Currency":  "NZD",
+                                        "Money Raised (in USD)":  "859658",
+                                        "Announced Date":  "2025-02-17",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Polymath is an app designed specifically for children that makes screen time fun, productive, and healthy.",
+                                        "Organization Industries":  "Children, Software",
+                                        "Organization Website":  "https://polymath.how",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "1827000",
+                                        "Total Funding Amount Currency":  "NZD",
+                                        "Total Funding Amount (in USD)":  "1067456",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Blackbird Ventures, GD1 (Global From Day One)",
+                                        "Investor Names":  "Blackbird Ventures, GD1 (Global From Day One), Kate Dinon, Liam Don, Phase One Ventures, Sarah Green, Startmate",
+                                        "Number of Investors":  "7",
+                                        "Number of Partner Investors":  "3"
+                                    },
+                 "investee_name_raw":  "Polymath",
+                 "org_location_raw":  "Auckland, Auckland, New Zealand, Oceania",
+                 "org_website_raw":  "https://polymath.how",
+                 "org_industries_raw":  "Children, Software",
+                 "round_type_raw":  "Pre-Seed",
+                 "round_stage":  "pre_seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-02-17",
+                 "money_raised_raw":  "1500000",
+                 "amount":  1500000,
+                 "currency":  "NZD",
+                 "amount_usd":  859658,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "1827000",
+                 "investor_names_raw":  "Blackbird Ventures, GD1 (Global From Day One), Kate Dinon, Liam Don, Phase One Ventures, Sarah Green, Startmate",
+                 "lead_investor_names_raw":  "Blackbird Ventures, GD1 (Global From Day One)",
+                 "imported_at":  "2026-07-30T14:07:04.2573923+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "partial_date_mismatch",
+                 "verification_source_url":  "https://polymath.how/blog/2025-02-preseed-raise",
+                 "verification_notes":  "Company verifies NZ$1.5m pre-seed co-led by Blackbird and GD1 with the listed follow-on investors and angels; it describes the round as occurring in mid-2024.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:polymath-ef88"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:polymath-ef88-pre-seed--f4140190"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Imported announced date 17 Feb 2025 appears to be publication timing, not round close."
+                              ]
+               }
+}

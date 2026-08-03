@@ -1,0 +1,49 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investors",
+    "record_key":  "investor:iselect-fund",
+    "operation":  "upsert",
+    "data":  {
+                 "canonical_name":  "iSelect Fund",
+                 "aliases":  [
+
+                             ],
+                 "investor_type":  "vc_fund",
+                 "investor_subtype":  "venture_capital",
+                 "eligibility_mode":  "none",
+                 "classification_confidence":  "high",
+                 "classification_evidence_urls":  [
+                                                      "https://www.iselectfund.com/",
+                                                      "https://www.linkedin.com/company/iselect-fund"
+                                                  ],
+                 "classified_at":  "2026-07-30",
+                 "website_url":  "https://www.iselectfund.com/",
+                 "linkedin_url":  "https://www.linkedin.com/company/iselect-fund",
+                 "hq_country":  "US",
+                 "hq_state":  "Missouri",
+                 "hq_city":  "St. Louis",
+                 "offices":  [
+
+                             ],
+                 "status":  "active",
+                 "merged_into_id":  null,
+                 "review_status":  "reviewed",
+                 "last_reviewed_at":  "2026-07-30",
+                 "last_reviewed_by":  "codex-investor-identity-audit"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:scoped:recent-deal2026-7-30_deals-181-230",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

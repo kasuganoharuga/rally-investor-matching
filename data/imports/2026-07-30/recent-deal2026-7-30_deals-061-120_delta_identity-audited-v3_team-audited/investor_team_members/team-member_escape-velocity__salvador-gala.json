@@ -1,0 +1,39 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investor_team_members",
+    "record_key":  "investor_team_member:escape-velocity:salvador-gala",
+    "operation":  "upsert",
+    "data":  {
+                 "contact_id":  null,
+                 "first_name":  "Salvador",
+                 "last_name":  "Gala",
+                 "role_title":  "Co-Founder and Managing Partner",
+                 "seniority":  "managing_partner",
+                 "linkedin_url":  "https://www.linkedin.com/in/salvadorgala",
+                 "claimed_focus":  [
+                                       "crypto",
+                                       "digital infrastructure",
+                                       "DePIN"
+                                   ],
+                 "bio_summary":  "Co-founded EV3 and leads early-stage investing in digital infrastructure and crypto.",
+                 "source_url":  "https://www.ev3.xyz/",
+                 "retrieved_at":  "2026-07-30",
+                 "is_active":  true
+             },
+    "refs":  {
+                 "investor_key":  "investor:escape-velocity",
+                 "contact_key":  null
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:recent-deal2026-7-30:investor-team-audit",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

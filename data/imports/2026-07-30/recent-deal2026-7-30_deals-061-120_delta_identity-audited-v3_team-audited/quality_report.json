@@ -1,0 +1,60 @@
+{
+    "schema_version":  "1.0.0",
+    "generated_at":  "2026-07-30T17:49:45.8942355+09:30",
+    "status":  "passed_with_documented_gaps",
+    "investor_delta":  {
+                           "source_investor_names":  114,
+                           "existing_database_investors":  43,
+                           "new_investor_masters":  71,
+                           "existing_investor_masters_reimported":  0,
+                           "historical_alias_resolutions":  4,
+                           "within_batch_alias_collapses":  0,
+                           "duplicate_deal_relations_removed":  0
+                       },
+    "structural":  {
+                       "total_payload_records":  465,
+                       "duplicate_record_keys":  0,
+                       "duplicate_semantic_relations":  0,
+                       "broken_investor_refs":  0,
+                       "broken_company_refs":  0,
+                       "null_review_issues":  0
+                   },
+    "documented_gaps":  {
+                            "new_investor_profiles_needing_more_data":  10,
+                            "funding_rounds_needing_more_data":  53
+                        },
+    "identity_audit":  {
+                           "audited_investor_masters":  71,
+                           "reviewed":  61,
+                           "needs_more_data":  10,
+                           "field_level_null_reasons_recorded":  71
+                       },
+    "team_member_audit":  {
+                              "institutions_audited":  57,
+                              "new_institutions_with_verified_core_members":  8,
+                              "existing_investors_receiving_member_supplements":  0,
+                              "existing_dependency_investors_audited":  43,
+                              "existing_dependencies_with_historical_team":  15,
+                              "existing_dependencies_without_historical_team":  28,
+                              "team_member_records_imported":  11,
+                              "new_institutions_without_verified_core_members":  92
+                          },
+    "investee_business_enrichment":  {
+                                         "investees_enriched":  60,
+                                         "primary_sector_missing":  0,
+                                         "secondary_sector_missing":  0,
+                                         "primary_use_case_missing":  0,
+                                         "secondary_use_case_missing":  0,
+                                         "customer_type_unknown":  0,
+                                         "business_model_unknown":  0,
+                                         "sales_motion_unknown":  0,
+                                         "technology_depth_unknown":  0,
+                                         "ai_relevance_unknown":  0,
+                                         "current_schema_gap":  "investee_linkedin_url"
+                                     },
+    "identity_gap_supplement":  {
+                                    "records_updated_in_package":  6,
+                                    "official_identity_fields_only":  true,
+                                    "ambiguous_names_rejected":  true
+                                }
+}

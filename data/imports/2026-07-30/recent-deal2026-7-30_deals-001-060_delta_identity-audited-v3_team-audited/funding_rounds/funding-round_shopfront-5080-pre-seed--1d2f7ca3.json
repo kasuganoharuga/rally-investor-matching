@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:shopfront-5080-pre-seed--1d2f7ca3",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "shopfront-5080-pre-seed--1d2f7ca3",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/shopfront-5080-pre-seed--1d2f7ca3",
+                 "source_payload":  {
+                                        "Transaction Name":  "Pre Seed Round - Shopfront",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/shopfront-5080-pre-seed--1d2f7ca3",
+                                        "Organization Location":  "South Melbourne, Victoria, Australia, Oceania",
+                                        "Organization Name":  "Shopfront",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/shopfront-5080",
+                                        "Funding Type":  "Pre-Seed",
+                                        "Money Raised":  "800000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "800000",
+                                        "Announced Date":  "2025-02-10",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Shopfront provides tools for automated list generation, publishing, managing, and delisting of products across various marketplaces.",
+                                        "Organization Industries":  "B2B, Marketing Automation, Marketplace, Retail",
+                                        "Organization Website":  "https://shopfrontapp.co",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "945682",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "945682",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "5H Values Capital, Antler, Co Ventures, Jam Pad Investments",
+                                        "Investor Names":  "5H Values Capital, Antler, Aussie Angels, Brisbane Angels, Co Ventures, Inhouse Ventures, Jam Pad Investments, Perth Angels",
+                                        "Number of Investors":  "8",
+                                        "Number of Partner Investors":  "2"
+                                    },
+                 "investee_name_raw":  "Shopfront",
+                 "org_location_raw":  "South Melbourne, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://shopfrontapp.co",
+                 "org_industries_raw":  "B2B, Marketing Automation, Marketplace, Retail",
+                 "round_type_raw":  "Pre-Seed",
+                 "round_stage":  "pre_seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-02-10",
+                 "money_raised_raw":  "800000",
+                 "amount":  800000,
+                 "currency":  "USD",
+                 "amount_usd":  800000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "945682",
+                 "investor_names_raw":  "5H Values Capital, Antler, Aussie Angels, Brisbane Angels, Co Ventures, Inhouse Ventures, Jam Pad Investments, Perth Angels",
+                 "lead_investor_names_raw":  "5H Values Capital, Antler, Co Ventures, Jam Pad Investments",
+                 "imported_at":  "2026-07-30T14:07:04.3706074+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "unverified_publicly",
+                 "verification_source_url":  "https://www.crunchbase.com/funding_round/shopfront-5080-pre-seed--1d2f7ca3",
+                 "verification_notes":  "No exact public funding announcement was located in this pass. Imported transaction is retained as-is for manual follow-up.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:shopfront-5080"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:shopfront-5080-pre-seed--1d2f7ca3"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact round amount/date/investors not independently verified."
+                              ]
+               }
+}

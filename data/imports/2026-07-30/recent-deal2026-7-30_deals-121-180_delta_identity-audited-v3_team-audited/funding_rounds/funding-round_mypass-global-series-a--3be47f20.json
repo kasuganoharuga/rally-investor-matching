@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:mypass-global-series-a--3be47f20",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "mypass-global-series-a--3be47f20",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/mypass-global-series-a--3be47f20",
+                 "source_payload":  {
+                                        "Transaction Name":  "Series A - MyPass Global",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/mypass-global-series-a--3be47f20",
+                                        "Organization Location":  "Perth, Western Australia, Australia, Oceania",
+                                        "Organization Name":  "MyPass Global",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/mypass-global",
+                                        "Funding Type":  "Series A",
+                                        "Money Raised":  "7500000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "4766544",
+                                        "Announced Date":  "2025-02-17",
+                                        "Funding Stage":  "Early Stage Venture",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "MyPass Global is a digital workforce management system, designed to streamline safety and compliance in heavily-regulated industries.",
+                                        "Organization Industries":  "Compliance, Information Services, Software",
+                                        "Organization Website":  "https://mypassglobal.com/",
+                                        "Organization Revenue Range":  "$1M to $10M",
+                                        "Total Funding Amount":  "7500000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "4766544",
+                                        "Funding Status":  "Early Stage Venture",
+                                        "Lead Investors":  "OneVentures",
+                                        "Investor Names":  "OneVentures",
+                                        "Number of Investors":  "1",
+                                        "Number of Partner Investors":  "1"
+                                    },
+                 "investee_name_raw":  "MyPass Global",
+                 "org_location_raw":  "Perth, Western Australia, Australia, Oceania",
+                 "org_website_raw":  "https://mypassglobal.com/",
+                 "org_industries_raw":  "Compliance, Information Services, Software",
+                 "round_type_raw":  "Series A",
+                 "round_stage":  "series_a",
+                 "funding_stage_raw":  "Early Stage Venture",
+                 "announced_date":  "2025-02-17",
+                 "money_raised_raw":  "7500000",
+                 "amount":  7500000,
+                 "currency":  "AUD",
+                 "amount_usd":  4766544,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "7500000",
+                 "investor_names_raw":  "OneVentures",
+                 "lead_investor_names_raw":  "OneVentures",
+                 "imported_at":  "2026-07-30T14:07:05.0974688+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "unverified_publicly",
+                 "verification_source_url":  "https://www.crunchbase.com/funding_round/mypass-global-series-a--3be47f20",
+                 "verification_notes":  "No exact independent public announcement was located in this pass. The imported transaction is retained for manual follow-up.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:mypass-global"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:mypass-global-series-a--3be47f20"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact round amount/date/stage/investors not independently verified."
+                              ]
+               }
+}

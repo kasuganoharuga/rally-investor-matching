@@ -1,0 +1,57 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:biolumic",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "BioLumic",
+                 "website_url":  "http://www.biolumic.com",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "NZ",
+                 "hq_state":  "Wellington",
+                 "hq_city":  "Palmerston North",
+                 "is_anz":  true,
+                 "sector_primary":  "agricultural_biotechnology",
+                 "sector_secondary":  "seed_technology",
+                 "use_case_primary":  "light_signal_crop_programming",
+                 "use_case_secondary":  [
+                                            "seed_trait_enhancement",
+                                            "crop_yield_improvement"
+                                        ],
+                 "customer_type":  "agriculture_enterprise",
+                 "business_model":  "technology_licensing_and_seed_partnerships",
+                 "sales_motion":  "enterprise_partnerships",
+                 "technology_depth":  "deep_tech_biotechnology",
+                 "ai_relevance":  "ai_enabled",
+                 "ai_usage_type":  "analytics_and_prediction",
+                 "ai_core_or_enabler":  "feature_layer",
+                 "company_summary":  "BioLumic unlocks the natural genetic potential of seeds and seedlings with specialized light treatments, data science, and technology.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/biolumic-series-b--61c7e54e",
+                                     "https://www.crunchbase.com/organization/biolumic",
+                                     "http://www.biolumic.com",
+                                     "https://www.biolumic.com/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:biolumic-series-b--61c7e54e"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

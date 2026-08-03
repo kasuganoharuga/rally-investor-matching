@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:refresh-cfbe",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "ReFresh",
+                 "website_url":  "https://www.refresh.tech",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "New South Wales",
+                 "hq_city":  "Sydney",
+                 "is_anz":  true,
+                 "sector_primary":  "workplace_health",
+                 "sector_secondary":  "compliance_software",
+                 "use_case_primary":  "psychosocial_risk_management",
+                 "use_case_secondary":  [
+                                            "whs_compliance_evidence",
+                                            "workplace_wellbeing_operations"
+                                        ],
+                 "customer_type":  "enterprise",
+                 "business_model":  "subscription_saas",
+                 "sales_motion":  "enterprise_top_down",
+                 "technology_depth":  "conventional_software",
+                 "ai_relevance":  "none",
+                 "ai_usage_type":  "not_applicable",
+                 "ai_core_or_enabler":  "not_core",
+                 "company_summary":  "ReFresh is the psychosocial operating system that turns WHS compliance into visible, manageable, inspection-ready evidence.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/refresh-cfbe-pre-seed--6c7ff427",
+                                     "https://www.crunchbase.com/organization/refresh-cfbe",
+                                     "https://www.refresh.tech"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:refresh-cfbe-pre-seed--6c7ff427"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

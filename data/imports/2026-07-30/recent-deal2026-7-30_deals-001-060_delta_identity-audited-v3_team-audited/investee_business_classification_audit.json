@@ -1,0 +1,1527 @@
+{
+    "schema_version":  "1.0.0",
+    "generated_at":  "2026-07-30T17:09:11.2522234+09:30",
+    "audit_date":  "2026-07-30",
+    "package_id":  "recent-deal2026-7-30_deals-001-060_delta_identity-audited-v3_team-audited",
+    "scope":  "All 60 Investee profiles in the existing rows 001-060 database import package.",
+    "policy":  [
+                   "The existing import package was modified in place; no additional import package was created.",
+                   "Primary business is stored as sector_primary and use_case_primary.",
+                   "Secondary business is stored as sector_secondary and use_case_secondary.",
+                   "Taxonomy uses normalized snake_case values to support downstream merging and grouping.",
+                   "Classification evidence reuses the exact official website and imported deal/profile sources already attached to each record.",
+                   "Investee LinkedIn remains outside the current database import contract and is documented as a schema gap."
+               ],
+    "counts":  {
+                   "investees_enriched":  60,
+                   "primary_sector_filled":  60,
+                   "secondary_sector_filled":  60,
+                   "primary_use_case_filled":  60,
+                   "secondary_use_case_filled":  60,
+                   "business_model_filled":  60,
+                   "customer_type_filled":  60,
+                   "ai_classification_filled":  60
+               },
+    "records":  [
+                    {
+                        "record_key":  "company:crunchbase:acorn-lms",
+                        "name":  "Acorn",
+                        "website_url":  "https://acornlms.com/",
+                        "sector_primary":  "education_software",
+                        "sector_secondary":  "hr_technology",
+                        "use_case_primary":  "workforce_learning_and_performance_management",
+                        "use_case_secondary":  [
+                                                   "learning_management",
+                                                   "skills_development"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "subscription_saas",
+                        "sales_motion":  "enterprise_top_down",
+                        "technology_depth":  "conventional_software",
+                        "ai_relevance":  "none",
+                        "ai_usage_type":  "not_applicable",
+                        "ai_core_or_enabler":  "not_core",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/acorn-lms-series-a--faf449d2",
+                                              "https://www.crunchbase.com/organization/acorn-lms",
+                                              "https://acornlms.com/"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:aether-8d31",
+                        "name":  "Aether",
+                        "website_url":  "https://www.theaether.co/",
+                        "sector_primary":  "marketing_technology",
+                        "sector_secondary":  "presentation_software",
+                        "use_case_primary":  "ai_presentation_creation",
+                        "use_case_secondary":  [
+                                                   "marketing_content_generation",
+                                                   "brand_consistent_presentations"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "subscription_saas",
+                        "sales_motion":  "product_led",
+                        "technology_depth":  "applied_ai",
+                        "ai_relevance":  "ai_native",
+                        "ai_usage_type":  "content_generation",
+                        "ai_core_or_enabler":  "core_product",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/aether-8d31-seed--aee31f00",
+                                              "https://www.crunchbase.com/organization/aether-8d31",
+                                              "https://www.theaether.co/"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:alloyapp",
+                        "name":  "Alloy",
+                        "website_url":  "https://alloy.app",
+                        "sector_primary":  "product_management_software",
+                        "sector_secondary":  "ai_prototyping",
+                        "use_case_primary":  "product_prototyping",
+                        "use_case_secondary":  [
+                                                   "user_flow_design",
+                                                   "product_concept_validation"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "subscription_saas",
+                        "sales_motion":  "product_led",
+                        "technology_depth":  "applied_ai",
+                        "ai_relevance":  "ai_native",
+                        "ai_usage_type":  "content_generation",
+                        "ai_core_or_enabler":  "core_product",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/alloyapp-seed--5c624538",
+                                              "https://www.crunchbase.com/organization/alloyapp",
+                                              "https://alloy.app"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:arq-innovation",
+                        "name":  "ARQ Innovation",
+                        "website_url":  "https://www.arq-innovation.com",
+                        "sector_primary":  "education_technology",
+                        "sector_secondary":  "workforce_training",
+                        "use_case_primary":  "adaptive_workforce_learning",
+                        "use_case_secondary":  [
+                                                   "learning_analytics",
+                                                   "training_content_delivery"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "subscription_saas",
+                        "sales_motion":  "enterprise_top_down",
+                        "technology_depth":  "applied_ai",
+                        "ai_relevance":  "ai_enabled",
+                        "ai_usage_type":  "recommendations",
+                        "ai_core_or_enabler":  "feature_layer",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/arq-innovation-pre-seed--5904ae4b",
+                                              "https://www.crunchbase.com/organization/arq-innovation",
+                                              "https://www.arq-innovation.com"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:auggie",
+                        "name":  "Auggie",
+                        "website_url":  "https://auggieai.com.au/",
+                        "sector_primary":  "dental_technology",
+                        "sector_secondary":  "patient_engagement",
+                        "use_case_primary":  "dental_patient_recall_automation",
+                        "use_case_secondary":  [
+                                                   "appointment_scheduling",
+                                                   "patient_retention"
+                                               ],
+                        "customer_type":  "healthcare_provider",
+                        "business_model":  "subscription_saas",
+                        "sales_motion":  "enterprise_top_down",
+                        "technology_depth":  "applied_ai",
+                        "ai_relevance":  "ai_native",
+                        "ai_usage_type":  "workflow_automation",
+                        "ai_core_or_enabler":  "core_product",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/auggie-seed--668d60c2",
+                                              "https://www.crunchbase.com/organization/auggie",
+                                              "https://auggieai.com.au/"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:auric-essentials",
+                        "name":  "Auric Essentials",
+                        "website_url":  "https://www.auricnow.com",
+                        "sector_primary":  "digital_health",
+                        "sector_secondary":  "mental_wellness",
+                        "use_case_primary":  "biometric_scent_personalisation",
+                        "use_case_secondary":  [
+                                                   "stress_support",
+                                                   "mood_support"
+                                               ],
+                        "customer_type":  "consumer",
+                        "business_model":  "product_sales",
+                        "sales_motion":  "direct_to_consumer",
+                        "technology_depth":  "hardware_plus_software",
+                        "ai_relevance":  "ai_enabled",
+                        "ai_usage_type":  "personalisation",
+                        "ai_core_or_enabler":  "feature_layer",
+                        "confidence":  "medium",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/auric-essentials-seed--bf9ca547",
+                                              "https://www.crunchbase.com/organization/auric-essentials",
+                                              "https://www.auricnow.com"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:auzvolt",
+                        "name":  "Auzvolt Energy",
+                        "website_url":  "https://auzvolt.com/",
+                        "sector_primary":  "renewable_energy",
+                        "sector_secondary":  "energy_infrastructure",
+                        "use_case_primary":  "renewable_project_development",
+                        "use_case_secondary":  [
+                                                   "asset_ownership",
+                                                   "asset_operation"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "project_development_and_energy_sales",
+                        "sales_motion":  "project_based",
+                        "technology_depth":  "infrastructure_enabled",
+                        "ai_relevance":  "none",
+                        "ai_usage_type":  "not_applicable",
+                        "ai_core_or_enabler":  "not_core",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/auzvolt-seed--6a2c7057",
+                                              "https://www.crunchbase.com/organization/auzvolt",
+                                              "https://auzvolt.com/"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:avasa-7967",
+                        "name":  "Avasa",
+                        "website_url":  "https://www.avasa.io",
+                        "sector_primary":  "medical_devices",
+                        "sector_secondary":  "surgical_devices",
+                        "use_case_primary":  "implantable_surgical_devices",
+                        "use_case_secondary":  [
+                                                   "surgical_reconstruction",
+                                                   "tissue_connection"
+                                               ],
+                        "customer_type":  "healthcare_provider",
+                        "business_model":  "device_sales",
+                        "sales_motion":  "enterprise_top_down",
+                        "technology_depth":  "deep_tech",
+                        "ai_relevance":  "none",
+                        "ai_usage_type":  "not_applicable",
+                        "ai_core_or_enabler":  "not_core",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/avasa-7967-seed--0eaa97d2",
+                                              "https://www.crunchbase.com/organization/avasa-7967",
+                                              "https://www.avasa.io"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:bitwise-agronomy",
+                        "name":  "Bitwise Agronomy",
+                        "website_url":  "https://bitwiseag.com",
+                        "sector_primary":  "agricultural_technology",
+                        "sector_secondary":  "computer_vision",
+                        "use_case_primary":  "crop_monitoring_and_yield_forecasting",
+                        "use_case_secondary":  [
+                                                   "crop_health_analysis",
+                                                   "farm_decision_support"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "subscription_saas",
+                        "sales_motion":  "enterprise_top_down",
+                        "technology_depth":  "applied_ai",
+                        "ai_relevance":  "ai_native",
+                        "ai_usage_type":  "analytics_prediction",
+                        "ai_core_or_enabler":  "core_product",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/bitwise-agronomy-seed--1e3b4d21",
+                                              "https://www.crunchbase.com/organization/bitwise-agronomy",
+                                              "https://bitwiseag.com"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:bless-payments",
+                        "name":  "Bless Payments",
+                        "website_url":  "https://blesspayments.com.au",
+                        "sector_primary":  "fintech",
+                        "sector_secondary":  "remittances",
+                        "use_case_primary":  "cross_border_money_transfer",
+                        "use_case_secondary":  [
+                                                   "migrant_financial_services",
+                                                   "foreign_exchange"
+                                               ],
+                        "customer_type":  "consumer",
+                        "business_model":  "transaction_fee",
+                        "sales_motion":  "direct_to_consumer",
+                        "technology_depth":  "conventional_software",
+                        "ai_relevance":  "none",
+                        "ai_usage_type":  "not_applicable",
+                        "ai_core_or_enabler":  "not_core",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/bless-payments-seed--e2a21f78",
+                                              "https://www.crunchbase.com/organization/bless-payments",
+                                              "https://blesspayments.com.au"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:boompower",
+                        "name":  "BOOM! Power",
+                        "website_url":  "https://www.boompower.com.au",
+                        "sector_primary":  "climate_technology",
+                        "sector_secondary":  "home_electrification",
+                        "use_case_primary":  "residential_electrification_planning",
+                        "use_case_secondary":  [
+                                                   "clean_energy_product_selection",
+                                                   "installation_coordination"
+                                               ],
+                        "customer_type":  "consumer",
+                        "business_model":  "marketplace_and_services",
+                        "sales_motion":  "direct_to_consumer",
+                        "technology_depth":  "conventional_software",
+                        "ai_relevance":  "none",
+                        "ai_usage_type":  "not_applicable",
+                        "ai_core_or_enabler":  "not_core",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/boompower-seed--d73d5a29",
+                                              "https://www.crunchbase.com/organization/boompower",
+                                              "https://www.boompower.com.au"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:bovotica",
+                        "name":  "Bovotica",
+                        "website_url":  "https://bovotica.com",
+                        "sector_primary":  "agricultural_biotechnology",
+                        "sector_secondary":  "methane_reduction",
+                        "use_case_primary":  "livestock_methane_reduction",
+                        "use_case_secondary":  [
+                                                   "rumen_microbiome_intervention",
+                                                   "agricultural_emissions_reduction"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "technology_licensing",
+                        "sales_motion":  "enterprise_top_down",
+                        "technology_depth":  "deep_tech_biotechnology",
+                        "ai_relevance":  "none",
+                        "ai_usage_type":  "not_applicable",
+                        "ai_core_or_enabler":  "not_core",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/bovotica-seed--d182a1fe",
+                                              "https://www.crunchbase.com/organization/bovotica",
+                                              "https://bovotica.com"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:chirp-labs",
+                        "name":  "Chirp Labs",
+                        "website_url":  "https://trychirp.com",
+                        "sector_primary":  "sales_technology",
+                        "sector_secondary":  "conversational_ai",
+                        "use_case_primary":  "ai_voice_crm_agent",
+                        "use_case_secondary":  [
+                                                   "sales_follow_up",
+                                                   "crm_workflow_automation"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "subscription_saas",
+                        "sales_motion":  "product_led",
+                        "technology_depth":  "applied_ai",
+                        "ai_relevance":  "ai_native",
+                        "ai_usage_type":  "copilot_or_agent",
+                        "ai_core_or_enabler":  "core_product",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/chirp-labs-pre-seed--e96e83ce",
+                                              "https://www.crunchbase.com/organization/chirp-labs",
+                                              "https://trychirp.com"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:cohabit-2fbf",
+                        "name":  "Cohabit",
+                        "website_url":  "https://cohabit.com.au",
+                        "sector_primary":  "property_technology",
+                        "sector_secondary":  "building_data",
+                        "use_case_primary":  "property_data_access",
+                        "use_case_secondary":  [
+                                                   "building_due_diligence",
+                                                   "property_management_information"
+                                               ],
+                        "customer_type":  "consumer_and_enterprise",
+                        "business_model":  "subscription_and_transaction_fees",
+                        "sales_motion":  "product_led",
+                        "technology_depth":  "conventional_software",
+                        "ai_relevance":  "none",
+                        "ai_usage_type":  "not_applicable",
+                        "ai_core_or_enabler":  "not_core",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/cohabit-2fbf-seed--da3a83e6",
+                                              "https://www.crunchbase.com/organization/cohabit-2fbf",
+                                              "https://cohabit.com.au"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:convergence-medical-robotics",
+                        "name":  "Convergence Medical Robotics",
+                        "website_url":  "https://www.convergenceortho.com/",
+                        "sector_primary":  "medical_robotics",
+                        "sector_secondary":  "orthopaedics",
+                        "use_case_primary":  "robotic_arthroscopy",
+                        "use_case_secondary":  [
+                                                   "surgical_navigation",
+                                                   "surgical_automation"
+                                               ],
+                        "customer_type":  "healthcare_provider",
+                        "business_model":  "device_sales",
+                        "sales_motion":  "enterprise_top_down",
+                        "technology_depth":  "deep_tech_hardware",
+                        "ai_relevance":  "ai_enabled",
+                        "ai_usage_type":  "robotics_autonomy",
+                        "ai_core_or_enabler":  "feature_layer",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/convergence-medical-robotics-series-a--a20714ee",
+                                              "https://www.crunchbase.com/organization/convergence-medical-robotics",
+                                              "https://www.convergenceortho.com/"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:coursebox",
+                        "name":  "Coursebox",
+                        "website_url":  "https://www.coursebox.ai/",
+                        "sector_primary":  "education_technology",
+                        "sector_secondary":  "generative_ai",
+                        "use_case_primary":  "ai_course_creation",
+                        "use_case_secondary":  [
+                                                   "learning_management",
+                                                   "training_content_localisation"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "subscription_saas",
+                        "sales_motion":  "product_led",
+                        "technology_depth":  "applied_ai",
+                        "ai_relevance":  "ai_native",
+                        "ai_usage_type":  "content_generation",
+                        "ai_core_or_enabler":  "core_product",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/coursebox-seed--e20dccbb",
+                                              "https://www.crunchbase.com/organization/coursebox",
+                                              "https://www.coursebox.ai/"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:ekion",
+                        "name":  "Ekion",
+                        "website_url":  "https://www.ekion.com.au/",
+                        "sector_primary":  "mining_technology",
+                        "sector_secondary":  "energy_transition",
+                        "use_case_primary":  "mining_technology_commercialisation",
+                        "use_case_secondary":  [
+                                                   "resource_efficiency",
+                                                   "energy_transition_minerals"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "technology_licensing_and_services",
+                        "sales_motion":  "enterprise_top_down",
+                        "technology_depth":  "deep_tech",
+                        "ai_relevance":  "none",
+                        "ai_usage_type":  "not_applicable",
+                        "ai_core_or_enabler":  "not_core",
+                        "confidence":  "medium",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/ekion-pre-seed--08314c53",
+                                              "https://www.crunchbase.com/organization/ekion",
+                                              "https://www.ekion.com.au/"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:electralith",
+                        "name":  "ElectraLith",
+                        "website_url":  "https://www.electralith.com/",
+                        "sector_primary":  "critical_minerals",
+                        "sector_secondary":  "lithium_processing",
+                        "use_case_primary":  "direct_lithium_extraction",
+                        "use_case_secondary":  [
+                                                   "lithium_refining",
+                                                   "low_water_mineral_processing"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "technology_licensing",
+                        "sales_motion":  "enterprise_top_down",
+                        "technology_depth":  "deep_tech_industrial_process",
+                        "ai_relevance":  "none",
+                        "ai_usage_type":  "not_applicable",
+                        "ai_core_or_enabler":  "not_core",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/electralith-series-a--6e651c8d",
+                                              "https://www.crunchbase.com/organization/electralith",
+                                              "https://www.electralith.com/"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:enzide",
+                        "name":  "Enzide",
+                        "website_url":  "https://www.enzidetech.com/",
+                        "sector_primary":  "industrial_biotechnology",
+                        "sector_secondary":  "circular_economy",
+                        "use_case_primary":  "enzymatic_plastic_recycling",
+                        "use_case_secondary":  [
+                                                   "plastic_depolymerisation",
+                                                   "plastic_pollution_reduction"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "technology_licensing",
+                        "sales_motion":  "enterprise_top_down",
+                        "technology_depth":  "deep_tech_biotechnology",
+                        "ai_relevance":  "none",
+                        "ai_usage_type":  "not_applicable",
+                        "ai_core_or_enabler":  "not_core",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/enzide-seed--7670eabe",
+                                              "https://www.crunchbase.com/organization/enzide",
+                                              "https://www.enzidetech.com/"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:fair-supply",
+                        "name":  "Fair Supply",
+                        "website_url":  "https://www.fairsupply.com",
+                        "sector_primary":  "esg_software",
+                        "sector_secondary":  "supply_chain_risk",
+                        "use_case_primary":  "modern_slavery_and_esg_due_diligence",
+                        "use_case_secondary":  [
+                                                   "scope_3_emissions_analytics",
+                                                   "supply_chain_risk_mapping"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "subscription_saas",
+                        "sales_motion":  "enterprise_top_down",
+                        "technology_depth":  "applied_ai",
+                        "ai_relevance":  "ai_enabled",
+                        "ai_usage_type":  "risk_scoring",
+                        "ai_core_or_enabler":  "feature_layer",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/fair-supply-series-a--945bdbfe",
+                                              "https://www.crunchbase.com/organization/fair-supply",
+                                              "https://www.fairsupply.com"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:flagship-ff0c",
+                        "name":  "Flagship",
+                        "website_url":  "https://flagship.ai",
+                        "sector_primary":  "retail_technology",
+                        "sector_secondary":  "physical_retail",
+                        "use_case_primary":  "brick_and_mortar_retail_software",
+                        "use_case_secondary":  [
+                                                   "store_operations",
+                                                   "customer_experience_analytics"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "subscription_saas",
+                        "sales_motion":  "enterprise_top_down",
+                        "technology_depth":  "conventional_software",
+                        "ai_relevance":  "none",
+                        "ai_usage_type":  "not_applicable",
+                        "ai_core_or_enabler":  "not_core",
+                        "confidence":  "medium",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/flagship-ff0c-seed--461e934d",
+                                              "https://www.crunchbase.com/organization/flagship-ff0c",
+                                              "https://flagship.ai"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:flyweel",
+                        "name":  "Flyweel",
+                        "website_url":  "https://flyweel.co",
+                        "sector_primary":  "fintech",
+                        "sector_secondary":  "marketing_finance",
+                        "use_case_primary":  "advertising_spend_finance_operations",
+                        "use_case_secondary":  [
+                                                   "ad_spend_reconciliation",
+                                                   "cash_flow_automation"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "subscription_and_financial_services",
+                        "sales_motion":  "enterprise_top_down",
+                        "technology_depth":  "applied_ai",
+                        "ai_relevance":  "ai_native",
+                        "ai_usage_type":  "copilot_or_agent",
+                        "ai_core_or_enabler":  "core_product",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/flyweel-pre-seed--a6ac748f",
+                                              "https://www.crunchbase.com/organization/flyweel",
+                                              "https://flyweel.co"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:gaia-project-australia",
+                        "name":  "YieldX",
+                        "website_url":  "https://yield-x.com",
+                        "sector_primary":  "agricultural_technology",
+                        "sector_secondary":  "hydroponics",
+                        "use_case_primary":  "expandable_hydroponic_growing_systems",
+                        "use_case_secondary":  [
+                                                   "greenhouse_yield_optimisation",
+                                                   "controlled_environment_agriculture"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "hardware_sales",
+                        "sales_motion":  "enterprise_top_down",
+                        "technology_depth":  "hardware_engineering",
+                        "ai_relevance":  "none",
+                        "ai_usage_type":  "not_applicable",
+                        "ai_core_or_enabler":  "not_core",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/gaia-project-australia-seed--fdaaa5d7",
+                                              "https://www.crunchbase.com/organization/gaia-project-australia",
+                                              "https://yield-x.com"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:hall-6e50",
+                        "name":  "Hall",
+                        "website_url":  "https://usehall.com/",
+                        "sector_primary":  "marketing_technology",
+                        "sector_secondary":  "ai_search_analytics",
+                        "use_case_primary":  "generative_engine_optimisation",
+                        "use_case_secondary":  [
+                                                   "ai_visibility_monitoring",
+                                                   "ai_attribution_analytics"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "subscription_saas",
+                        "sales_motion":  "product_led",
+                        "technology_depth":  "applied_ai",
+                        "ai_relevance":  "ai_native",
+                        "ai_usage_type":  "analytics_prediction",
+                        "ai_core_or_enabler":  "core_product",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/hall-6e50-pre-seed--436bc5a3",
+                                              "https://www.crunchbase.com/organization/hall-6e50",
+                                              "https://usehall.com/"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:hivepix",
+                        "name":  "HivePix",
+                        "website_url":  "https://www.hivepix.com",
+                        "sector_primary":  "data_management",
+                        "sector_secondary":  "technology_consulting",
+                        "use_case_primary":  "product_data_automation",
+                        "use_case_secondary":  [
+                                                   "data_flow_integration",
+                                                   "ai_and_quantum_consulting"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "services_and_software",
+                        "sales_motion":  "enterprise_top_down",
+                        "technology_depth":  "applied_ai",
+                        "ai_relevance":  "ai_enabled",
+                        "ai_usage_type":  "automation",
+                        "ai_core_or_enabler":  "feature_layer",
+                        "confidence":  "medium",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/hivepix-pre-seed--9d757fc5",
+                                              "https://www.crunchbase.com/organization/hivepix",
+                                              "https://www.hivepix.com"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:i14",
+                        "name":  "i14",
+                        "website_url":  "https://i14.ai/",
+                        "sector_primary":  "artificial_intelligence",
+                        "sector_secondary":  "foundation_models",
+                        "use_case_primary":  "domain_specific_foundation_models",
+                        "use_case_secondary":  [
+                                                   "long_context_reasoning",
+                                                   "private_ai_deployment"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "licensing_and_hosted_infrastructure",
+                        "sales_motion":  "enterprise_top_down",
+                        "technology_depth":  "deep_tech_research",
+                        "ai_relevance":  "ai_native",
+                        "ai_usage_type":  "foundation_model",
+                        "ai_core_or_enabler":  "core_product",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/i14-pre-seed--621772ce",
+                                              "https://www.crunchbase.com/organization/i14",
+                                              "https://i14.ai/"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:iceberg-quantum",
+                        "name":  "Iceberg Quantum",
+                        "website_url":  "https://www.iceberg-quantum.com/",
+                        "sector_primary":  "quantum_computing",
+                        "sector_secondary":  "quantum_software",
+                        "use_case_primary":  "fault_tolerant_quantum_architecture",
+                        "use_case_secondary":  [
+                                                   "quantum_error_correction",
+                                                   "ldpc_code_architecture"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "research_partnerships_and_licensing",
+                        "sales_motion":  "enterprise_top_down",
+                        "technology_depth":  "deep_tech_research",
+                        "ai_relevance":  "none",
+                        "ai_usage_type":  "not_applicable",
+                        "ai_core_or_enabler":  "not_core",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/iceberg-quantum-pre-seed--e069a58e",
+                                              "https://www.crunchbase.com/organization/iceberg-quantum",
+                                              "https://www.iceberg-quantum.com/"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:imitation-machines",
+                        "name":  "Imitation Machines",
+                        "website_url":  "https://imitationmachines.com/",
+                        "sector_primary":  "robotics",
+                        "sector_secondary":  "artificial_intelligence",
+                        "use_case_primary":  "robot_learning_by_imitation",
+                        "use_case_secondary":  [
+                                                   "autonomous_skill_acquisition",
+                                                   "robot_behaviour_training"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "licensing_and_software",
+                        "sales_motion":  "enterprise_top_down",
+                        "technology_depth":  "deep_tech",
+                        "ai_relevance":  "ai_native",
+                        "ai_usage_type":  "robotics_autonomy",
+                        "ai_core_or_enabler":  "core_product",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/imitation-machines-seed--f9e6e800",
+                                              "https://www.crunchbase.com/organization/imitation-machines",
+                                              "https://imitationmachines.com/"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:kca-virtuality",
+                        "name":  "KCA Virtuality",
+                        "website_url":  "https://kcavirtuality.com/",
+                        "sector_primary":  "marketing_services",
+                        "sector_secondary":  "creative_services",
+                        "use_case_primary":  "public_relations_and_digital_marketing",
+                        "use_case_secondary":  [
+                                                   "print_services",
+                                                   "multidisciplinary_design"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "services",
+                        "sales_motion":  "sales_led",
+                        "technology_depth":  "other",
+                        "ai_relevance":  "none",
+                        "ai_usage_type":  "not_applicable",
+                        "ai_core_or_enabler":  "not_core",
+                        "confidence":  "medium",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/kca-virtuality-pre-seed--69342661",
+                                              "https://www.crunchbase.com/organization/kca-virtuality",
+                                              "https://kcavirtuality.com/"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:knowledge-orchestrator",
+                        "name":  "Kiraa",
+                        "website_url":  "http://kiraa.ai",
+                        "sector_primary":  "enterprise_software",
+                        "sector_secondary":  "ai_infrastructure",
+                        "use_case_primary":  "enterprise_knowledge_infrastructure",
+                        "use_case_secondary":  [
+                                                   "retrieval_and_context_orchestration",
+                                                   "enterprise_ai_grounding"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "subscription_saas",
+                        "sales_motion":  "enterprise_top_down",
+                        "technology_depth":  "applied_ai",
+                        "ai_relevance":  "ai_infrastructure",
+                        "ai_usage_type":  "model_infrastructure",
+                        "ai_core_or_enabler":  "enabling_infrastructure",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/knowledge-orchestrator-pre-seed--48586870",
+                                              "https://www.crunchbase.com/organization/knowledge-orchestrator",
+                                              "http://kiraa.ai"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:levur",
+                        "name":  "Levur",
+                        "website_url":  "https://levur.com.au/",
+                        "sector_primary":  "biotechnology",
+                        "sector_secondary":  "sustainable_ingredients",
+                        "use_case_primary":  "fermentation_derived_cosmetic_oils",
+                        "use_case_secondary":  [
+                                                   "palm_oil_substitution",
+                                                   "cosmetic_ingredient_manufacturing"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "ingredient_sales_and_licensing",
+                        "sales_motion":  "enterprise_top_down",
+                        "technology_depth":  "deep_tech_biotechnology",
+                        "ai_relevance":  "none",
+                        "ai_usage_type":  "not_applicable",
+                        "ai_core_or_enabler":  "not_core",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/levur-pre-seed--18678e06",
+                                              "https://www.crunchbase.com/organization/levur",
+                                              "https://levur.com.au/"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:lynai-mines",
+                        "name":  "LynAI Mines",
+                        "website_url":  "http://www.lynaimining.com",
+                        "sector_primary":  "mining_technology",
+                        "sector_secondary":  "artificial_intelligence",
+                        "use_case_primary":  "ai_mineral_exploration",
+                        "use_case_secondary":  [
+                                                   "mining_knowledge_graphs",
+                                                   "exploration_target_generation"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "software_and_exploration_services",
+                        "sales_motion":  "enterprise_top_down",
+                        "technology_depth":  "applied_ai",
+                        "ai_relevance":  "ai_native",
+                        "ai_usage_type":  "analytics_prediction",
+                        "ai_core_or_enabler":  "core_product",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/lynai-mines-seed--a659aae1",
+                                              "https://www.crunchbase.com/organization/lynai-mines",
+                                              "http://www.lynaimining.com"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:lyrebird-health",
+                        "name":  "Lyrebird Health",
+                        "website_url":  "https://www.lyrebirdhealth.com",
+                        "sector_primary":  "digital_health",
+                        "sector_secondary":  "clinical_workflow",
+                        "use_case_primary":  "ai_clinical_documentation",
+                        "use_case_secondary":  [
+                                                   "healthcare_admin_automation",
+                                                   "clinical_correspondence"
+                                               ],
+                        "customer_type":  "healthcare_provider",
+                        "business_model":  "subscription_saas",
+                        "sales_motion":  "enterprise_top_down",
+                        "technology_depth":  "applied_ai",
+                        "ai_relevance":  "ai_native",
+                        "ai_usage_type":  "clinical_workflow_support",
+                        "ai_core_or_enabler":  "core_product",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/lyrebird-health-series-a--6a26d155",
+                                              "https://www.crunchbase.com/organization/lyrebird-health",
+                                              "https://www.lyrebirdhealth.com"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:magnaterra",
+                        "name":  "MagnaTerra",
+                        "website_url":  "https://magnaterra.com.au",
+                        "sector_primary":  "environmental_services",
+                        "sector_secondary":  "ecological_restoration",
+                        "use_case_primary":  "land_management_and_ecological_restoration",
+                        "use_case_secondary":  [
+                                                   "habitat_assessment",
+                                                   "environmental_consulting"
+                                               ],
+                        "customer_type":  "enterprise_and_government",
+                        "business_model":  "services",
+                        "sales_motion":  "project_based",
+                        "technology_depth":  "other",
+                        "ai_relevance":  "none",
+                        "ai_usage_type":  "not_applicable",
+                        "ai_core_or_enabler":  "not_core",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/magnaterra-seed--ad5ae2ce",
+                                              "https://www.crunchbase.com/organization/magnaterra",
+                                              "https://magnaterra.com.au"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:minikai",
+                        "name":  "Minikai",
+                        "website_url":  "https://www.minikai.com/",
+                        "sector_primary":  "health_technology",
+                        "sector_secondary":  "care_support",
+                        "use_case_primary":  "ai_caregiver_assistance",
+                        "use_case_secondary":  [
+                                                   "care_coordination",
+                                                   "care_workflow_support"
+                                               ],
+                        "customer_type":  "healthcare_provider",
+                        "business_model":  "subscription_saas",
+                        "sales_motion":  "enterprise_top_down",
+                        "technology_depth":  "applied_ai",
+                        "ai_relevance":  "ai_enabled",
+                        "ai_usage_type":  "copilot_or_agent",
+                        "ai_core_or_enabler":  "feature_layer",
+                        "confidence":  "medium",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/minikai-seed--250cde86",
+                                              "https://www.crunchbase.com/organization/minikai",
+                                              "https://www.minikai.com/"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:natural-velocity-pty-ltd",
+                        "name":  "Natural Velocity",
+                        "website_url":  "https://naturalvelocity.ai",
+                        "sector_primary":  "ai_ecosystem",
+                        "sector_secondary":  "technology_services",
+                        "use_case_primary":  "ai_solution_marketplace_and_delivery",
+                        "use_case_secondary":  [
+                                                   "ai_training_and_acceleration",
+                                                   "compute_and_innovation_centre_access"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "membership_marketplace_and_services",
+                        "sales_motion":  "partnership_led",
+                        "technology_depth":  "infrastructure_enabled",
+                        "ai_relevance":  "ai_infrastructure",
+                        "ai_usage_type":  "model_infrastructure",
+                        "ai_core_or_enabler":  "enabling_infrastructure",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/natural-velocity-pty-ltd-pre-seed--c507ad47",
+                                              "https://www.crunchbase.com/organization/natural-velocity-pty-ltd",
+                                              "https://naturalvelocity.ai"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:neuphoria",
+                        "name":  "Neuphoria",
+                        "website_url":  "https://www.neuphoria.io",
+                        "sector_primary":  "digital_health",
+                        "sector_secondary":  "neurotechnology",
+                        "use_case_primary":  "brain_health_and_human_performance_platform",
+                        "use_case_secondary":  [
+                                                   "cognitive_performance_analytics",
+                                                   "biometric_wellness_insights"
+                                               ],
+                        "customer_type":  "consumer_and_enterprise",
+                        "business_model":  "platform_subscription",
+                        "sales_motion":  "product_led",
+                        "technology_depth":  "applied_ai",
+                        "ai_relevance":  "ai_enabled",
+                        "ai_usage_type":  "analytics_prediction",
+                        "ai_core_or_enabler":  "feature_layer",
+                        "confidence":  "medium",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/neuphoria-pre-seed--3933f677",
+                                              "https://www.crunchbase.com/organization/neuphoria",
+                                              "https://www.neuphoria.io"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:onemri",
+                        "name":  "OneMRI",
+                        "website_url":  "https://www.onemri.com.au",
+                        "sector_primary":  "medical_imaging",
+                        "sector_secondary":  "preventive_health",
+                        "use_case_primary":  "whole_body_mri_screening",
+                        "use_case_secondary":  [
+                                                   "radiologist_reviewed_diagnostics",
+                                                   "early_health_risk_detection"
+                                               ],
+                        "customer_type":  "consumer",
+                        "business_model":  "healthcare_services",
+                        "sales_motion":  "direct_to_consumer",
+                        "technology_depth":  "medical_imaging_technology",
+                        "ai_relevance":  "none",
+                        "ai_usage_type":  "not_applicable",
+                        "ai_core_or_enabler":  "not_core",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/onemri-seed--c715261e",
+                                              "https://www.crunchbase.com/organization/onemri",
+                                              "https://www.onemri.com.au"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:orbit-roadmaps",
+                        "name":  "Orbit Roadmaps",
+                        "website_url":  "https://www.orbitroadmaps.ai",
+                        "sector_primary":  "enterprise_software",
+                        "sector_secondary":  "strategy_execution",
+                        "use_case_primary":  "ai_enterprise_roadmapping",
+                        "use_case_secondary":  [
+                                                   "portfolio_alignment",
+                                                   "live_strategy_tracking"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "subscription_saas",
+                        "sales_motion":  "enterprise_top_down",
+                        "technology_depth":  "applied_ai",
+                        "ai_relevance":  "ai_native",
+                        "ai_usage_type":  "copilot_or_agent",
+                        "ai_core_or_enabler":  "core_product",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/orbit-roadmaps-seed--32ddf4db",
+                                              "https://www.crunchbase.com/organization/orbit-roadmaps",
+                                              "https://www.orbitroadmaps.ai"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:packapill",
+                        "name":  "Hola Health",
+                        "website_url":  "https://hola.health",
+                        "sector_primary":  "digital_health",
+                        "sector_secondary":  "telehealth",
+                        "use_case_primary":  "on_demand_telehealth_and_prescriptions",
+                        "use_case_secondary":  [
+                                                   "pharmacy_fulfilment",
+                                                   "medical_certificates_and_referrals"
+                                               ],
+                        "customer_type":  "consumer",
+                        "business_model":  "consultation_and_transaction_fees",
+                        "sales_motion":  "direct_to_consumer",
+                        "technology_depth":  "conventional_software",
+                        "ai_relevance":  "none",
+                        "ai_usage_type":  "not_applicable",
+                        "ai_core_or_enabler":  "not_core",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/packapill-series-a--f071a01c",
+                                              "https://www.crunchbase.com/organization/packapill",
+                                              "https://hola.health"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:parkbooker",
+                        "name":  "ParkBooker",
+                        "website_url":  "https://parkbooker.com/",
+                        "sector_primary":  "travel_technology",
+                        "sector_secondary":  "marketplace",
+                        "use_case_primary":  "holiday_park_booking",
+                        "use_case_secondary":  [
+                                                   "accommodation_comparison",
+                                                   "park_discovery"
+                                               ],
+                        "customer_type":  "consumer",
+                        "business_model":  "marketplace_take_rate",
+                        "sales_motion":  "product_led",
+                        "technology_depth":  "conventional_software",
+                        "ai_relevance":  "none",
+                        "ai_usage_type":  "not_applicable",
+                        "ai_core_or_enabler":  "not_core",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/parkbooker-pre-seed--c9a9c1cd",
+                                              "https://www.crunchbase.com/organization/parkbooker",
+                                              "https://parkbooker.com/"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:plancare",
+                        "name":  "PlanCare",
+                        "website_url":  "http://www.plancare.com.au",
+                        "sector_primary":  "disability_services",
+                        "sector_secondary":  "plan_management",
+                        "use_case_primary":  "ndis_plan_management",
+                        "use_case_secondary":  [
+                                                   "participant_budget_guidance",
+                                                   "provider_invoice_management"
+                                               ],
+                        "customer_type":  "consumer",
+                        "business_model":  "plan_management_fees",
+                        "sales_motion":  "direct_to_consumer",
+                        "technology_depth":  "conventional_software",
+                        "ai_relevance":  "none",
+                        "ai_usage_type":  "not_applicable",
+                        "ai_core_or_enabler":  "not_core",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/plancare-seed--bacd30fa",
+                                              "https://www.crunchbase.com/organization/plancare",
+                                              "http://www.plancare.com.au"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:polymath-ef88",
+                        "name":  "Polymath",
+                        "website_url":  "https://polymath.how",
+                        "sector_primary":  "education_technology",
+                        "sector_secondary":  "childrens_apps",
+                        "use_case_primary":  "educational_screen_time",
+                        "use_case_secondary":  [
+                                                   "child_learning",
+                                                   "child_wellbeing"
+                                               ],
+                        "customer_type":  "consumer",
+                        "business_model":  "subscription_saas",
+                        "sales_motion":  "product_led",
+                        "technology_depth":  "conventional_software",
+                        "ai_relevance":  "none",
+                        "ai_usage_type":  "not_applicable",
+                        "ai_core_or_enabler":  "not_core",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/polymath-ef88-pre-seed--f4140190",
+                                              "https://www.crunchbase.com/organization/polymath-ef88",
+                                              "https://polymath.how"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:propcred",
+                        "name":  "PropCred",
+                        "website_url":  "https://www.propcred.com",
+                        "sector_primary":  "property_technology",
+                        "sector_secondary":  "property_advisory",
+                        "use_case_primary":  "on_demand_property_advice",
+                        "use_case_secondary":  [
+                                                   "ai_property_analysis",
+                                                   "property_due_diligence"
+                                               ],
+                        "customer_type":  "consumer_and_professionals",
+                        "business_model":  "transaction_and_advisory_fees",
+                        "sales_motion":  "product_led",
+                        "technology_depth":  "applied_ai",
+                        "ai_relevance":  "ai_enabled",
+                        "ai_usage_type":  "analytics_prediction",
+                        "ai_core_or_enabler":  "feature_layer",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/propcred-pre-seed--04f495c7",
+                                              "https://www.crunchbase.com/organization/propcred",
+                                              "https://www.propcred.com"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:provenioai",
+                        "name":  "LOGIDOX",
+                        "website_url":  "https://logidox.ai/",
+                        "sector_primary":  "logistics_software",
+                        "sector_secondary":  "supply_chain",
+                        "use_case_primary":  "logistics_document_automation",
+                        "use_case_secondary":  [
+                                                   "supply_chain_workflow_management",
+                                                   "shipment_data_processing"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "subscription_saas",
+                        "sales_motion":  "enterprise_top_down",
+                        "technology_depth":  "applied_ai",
+                        "ai_relevance":  "ai_enabled",
+                        "ai_usage_type":  "document_processing",
+                        "ai_core_or_enabler":  "feature_layer",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/provenioai-seed--62a22e5b",
+                                              "https://www.crunchbase.com/organization/provenioai",
+                                              "https://logidox.ai/"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:qloud-games",
+                        "name":  "Qloud Games",
+                        "website_url":  "https://loftia.gg",
+                        "sector_primary":  "gaming",
+                        "sector_secondary":  "online_worlds",
+                        "use_case_primary":  "cozy_mmo_game_development",
+                        "use_case_secondary":  [
+                                                   "community_driven_virtual_world",
+                                                   "online_social_gameplay"
+                                               ],
+                        "customer_type":  "consumer",
+                        "business_model":  "game_sales_and_in_app_purchases",
+                        "sales_motion":  "community_led",
+                        "technology_depth":  "conventional_software",
+                        "ai_relevance":  "none",
+                        "ai_usage_type":  "not_applicable",
+                        "ai_core_or_enabler":  "not_core",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/qloud-games-seed--2ab319cb",
+                                              "https://www.crunchbase.com/organization/qloud-games",
+                                              "https://loftia.gg"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:raptortech-d88e",
+                        "name":  "RaptorTech",
+                        "website_url":  "https://raptortech.com.au",
+                        "sector_primary":  "mining_technology",
+                        "sector_secondary":  "heavy_equipment",
+                        "use_case_primary":  "equipment_technology_management",
+                        "use_case_secondary":  [
+                                                   "mining_fleet_optimisation",
+                                                   "construction_equipment_monitoring"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "hardware_software_and_services",
+                        "sales_motion":  "enterprise_top_down",
+                        "technology_depth":  "hardware_plus_software",
+                        "ai_relevance":  "none",
+                        "ai_usage_type":  "not_applicable",
+                        "ai_core_or_enabler":  "not_core",
+                        "confidence":  "medium",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/raptortech-d88e-series-a--65dc6e79",
+                                              "https://www.crunchbase.com/organization/raptortech-d88e",
+                                              "https://raptortech.com.au"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:realgo-ded6",
+                        "name":  "RealGo",
+                        "website_url":  "https://www.realgo.game",
+                        "sector_primary":  "web3",
+                        "sector_secondary":  "consumer_apps",
+                        "use_case_primary":  "blockchain_meme_application",
+                        "use_case_secondary":  [
+                                                   "tokenised_social_engagement",
+                                                   "on_chain_consumer_gaming"
+                                               ],
+                        "customer_type":  "consumer",
+                        "business_model":  "token_and_transaction_economy",
+                        "sales_motion":  "community_led",
+                        "technology_depth":  "blockchain",
+                        "ai_relevance":  "ai_enabled",
+                        "ai_usage_type":  "personalisation",
+                        "ai_core_or_enabler":  "feature_layer",
+                        "confidence":  "medium",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/realgo-ded6-seed--9b57671c",
+                                              "https://www.crunchbase.com/organization/realgo-ded6",
+                                              "https://www.realgo.game"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:reefstarter",
+                        "name":  "Reefstarter",
+                        "website_url":  "https://www.reefstarter.net/",
+                        "sector_primary":  "climate_adaptation",
+                        "sector_secondary":  "marine_technology",
+                        "use_case_primary":  "modular_coastal_protection",
+                        "use_case_secondary":  [
+                                                   "wave_reduction",
+                                                   "reef_habitat_restoration"
+                                               ],
+                        "customer_type":  "government_and_enterprise",
+                        "business_model":  "project_sales",
+                        "sales_motion":  "project_based",
+                        "technology_depth":  "deep_tech_hardware",
+                        "ai_relevance":  "none",
+                        "ai_usage_type":  "not_applicable",
+                        "ai_core_or_enabler":  "not_core",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/reefstarter-seed--a541351d",
+                                              "https://www.crunchbase.com/organization/reefstarter",
+                                              "https://www.reefstarter.net/"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:relevance-ai",
+                        "name":  "Relevance AI",
+                        "website_url":  "https://relevanceai.com",
+                        "sector_primary":  "artificial_intelligence",
+                        "sector_secondary":  "enterprise_software",
+                        "use_case_primary":  "ai_agent_platform",
+                        "use_case_secondary":  [
+                                                   "workflow_automation",
+                                                   "multi_agent_operations"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "subscription_and_usage_based",
+                        "sales_motion":  "product_led",
+                        "technology_depth":  "applied_ai",
+                        "ai_relevance":  "ai_native",
+                        "ai_usage_type":  "copilot_or_agent",
+                        "ai_core_or_enabler":  "core_product",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/relevance-ai-series-b--a8b66d10",
+                                              "https://www.crunchbase.com/organization/relevance-ai",
+                                              "https://relevanceai.com"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:sea-flux-vessel-management-software",
+                        "name":  "Sea-Flux Vessel Management Software",
+                        "website_url":  "https://sea-flux.com/",
+                        "sector_primary":  "maritime_software",
+                        "sector_secondary":  "fleet_management",
+                        "use_case_primary":  "vessel_operations_management",
+                        "use_case_secondary":  [
+                                                   "maintenance_digitisation",
+                                                   "maritime_compliance"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "subscription_saas",
+                        "sales_motion":  "enterprise_top_down",
+                        "technology_depth":  "conventional_software",
+                        "ai_relevance":  "none",
+                        "ai_usage_type":  "not_applicable",
+                        "ai_core_or_enabler":  "not_core",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/sea-flux-vessel-management-software-seed--2e9d68c2",
+                                              "https://www.crunchbase.com/organization/sea-flux-vessel-management-software",
+                                              "https://sea-flux.com/"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:securely-group",
+                        "name":  "Securely Group",
+                        "website_url":  "https://www.securely.group/about",
+                        "sector_primary":  "fintech",
+                        "sector_secondary":  "remittances",
+                        "use_case_primary":  "regulated_cross_border_remittance",
+                        "use_case_secondary":  [
+                                                   "foreign_exchange_services",
+                                                   "aml_compliant_payments"
+                                               ],
+                        "customer_type":  "consumer_and_enterprise",
+                        "business_model":  "transaction_fee",
+                        "sales_motion":  "sales_led",
+                        "technology_depth":  "conventional_software",
+                        "ai_relevance":  "none",
+                        "ai_usage_type":  "not_applicable",
+                        "ai_core_or_enabler":  "not_core",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/securely-group-series-a--76ef0d25",
+                                              "https://www.crunchbase.com/organization/securely-group",
+                                              "https://www.securely.group/about"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:seis-dedos-studio",
+                        "name":  "Seis Dedos Studio",
+                        "website_url":  "http://estudioseisdedos.com/index.php",
+                        "sector_primary":  "creative_services",
+                        "sector_secondary":  "design_studio",
+                        "use_case_primary":  "multidisciplinary_design",
+                        "use_case_secondary":  [
+                                                   "brand_design",
+                                                   "visual_content_production"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "services",
+                        "sales_motion":  "sales_led",
+                        "technology_depth":  "other",
+                        "ai_relevance":  "none",
+                        "ai_usage_type":  "not_applicable",
+                        "ai_core_or_enabler":  "not_core",
+                        "confidence":  "medium",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/seis-dedos-studio-seed--7ab5cc75",
+                                              "https://www.crunchbase.com/organization/seis-dedos-studio",
+                                              "http://estudioseisdedos.com/index.php"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:shiine-media",
+                        "name":  "Shiine Media",
+                        "website_url":  "https://www.shiinemedia.com",
+                        "sector_primary":  "advertising_technology",
+                        "sector_secondary":  "digital_out_of_home",
+                        "use_case_primary":  "rideshare_rooftop_advertising",
+                        "use_case_secondary":  [
+                                                   "location_based_media_network",
+                                                   "advertiser_campaign_delivery"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "advertising_revenue",
+                        "sales_motion":  "sales_led",
+                        "technology_depth":  "hardware_plus_software",
+                        "ai_relevance":  "none",
+                        "ai_usage_type":  "not_applicable",
+                        "ai_core_or_enabler":  "not_core",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/shiine-media-seed--7d58fa07",
+                                              "https://www.crunchbase.com/organization/shiine-media",
+                                              "https://www.shiinemedia.com"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:shopfront-5080",
+                        "name":  "Shopfront",
+                        "website_url":  "https://shopfrontapp.co",
+                        "sector_primary":  "ecommerce_software",
+                        "sector_secondary":  "marketplace_management",
+                        "use_case_primary":  "multichannel_listing_automation",
+                        "use_case_secondary":  [
+                                                   "inventory_management",
+                                                   "automated_delisting"
+                                               ],
+                        "customer_type":  "smb",
+                        "business_model":  "subscription_saas",
+                        "sales_motion":  "product_led",
+                        "technology_depth":  "conventional_software",
+                        "ai_relevance":  "none",
+                        "ai_usage_type":  "not_applicable",
+                        "ai_core_or_enabler":  "not_core",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/shopfront-5080-pre-seed--1d2f7ca3",
+                                              "https://www.crunchbase.com/organization/shopfront-5080",
+                                              "https://shopfrontapp.co"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:spoony",
+                        "name":  "Spoony",
+                        "website_url":  "https://spoony.app",
+                        "sector_primary":  "social_network",
+                        "sector_secondary":  "digital_health",
+                        "use_case_primary":  "community_for_disabled_and_neurodivergent_people",
+                        "use_case_secondary":  [
+                                                   "peer_support",
+                                                   "accessible_social_connection"
+                                               ],
+                        "customer_type":  "consumer",
+                        "business_model":  "subscription_and_partnerships",
+                        "sales_motion":  "community_led",
+                        "technology_depth":  "conventional_software",
+                        "ai_relevance":  "none",
+                        "ai_usage_type":  "not_applicable",
+                        "ai_core_or_enabler":  "not_core",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/spoony-pre-seed--0a813c79",
+                                              "https://www.crunchbase.com/organization/spoony",
+                                              "https://spoony.app"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:talk2view",
+                        "name":  "Talk2View",
+                        "website_url":  "https://www.talk2view.com",
+                        "sector_primary":  "ai_infrastructure",
+                        "sector_secondary":  "managed_services",
+                        "use_case_primary":  "managed_ai_infrastructure",
+                        "use_case_secondary":  [
+                                                   "ai_compute_operations",
+                                                   "model_deployment_support"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "managed_services",
+                        "sales_motion":  "enterprise_top_down",
+                        "technology_depth":  "infrastructure_enabled",
+                        "ai_relevance":  "ai_infrastructure",
+                        "ai_usage_type":  "model_infrastructure",
+                        "ai_core_or_enabler":  "enabling_infrastructure",
+                        "confidence":  "medium",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/talk2view-pre-seed--1818d838",
+                                              "https://www.crunchbase.com/organization/talk2view",
+                                              "https://www.talk2view.com"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:tokenise-eb63",
+                        "name":  "Tokenise",
+                        "website_url":  "https://tokenise.tech/",
+                        "sector_primary":  "blockchain_software",
+                        "sector_secondary":  "digital_assets",
+                        "use_case_primary":  "digital_asset_launch_and_management",
+                        "use_case_secondary":  [
+                                                   "tokenisation_infrastructure",
+                                                   "digital_asset_lifecycle_management"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "subscription_and_transaction_fees",
+                        "sales_motion":  "enterprise_top_down",
+                        "technology_depth":  "blockchain",
+                        "ai_relevance":  "none",
+                        "ai_usage_type":  "not_applicable",
+                        "ai_core_or_enabler":  "not_core",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/tokenise-eb63-pre-seed--e0be8ffd",
+                                              "https://www.crunchbase.com/organization/tokenise-eb63",
+                                              "https://tokenise.tech/"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:unleash-live",
+                        "name":  "Unleash live",
+                        "website_url":  "https://unleashlive.com",
+                        "sector_primary":  "computer_vision",
+                        "sector_secondary":  "enterprise_software",
+                        "use_case_primary":  "real_time_video_analytics",
+                        "use_case_secondary":  [
+                                                   "remote_operations_monitoring",
+                                                   "visual_decision_support"
+                                               ],
+                        "customer_type":  "enterprise",
+                        "business_model":  "subscription_saas",
+                        "sales_motion":  "enterprise_top_down",
+                        "technology_depth":  "applied_ai",
+                        "ai_relevance":  "ai_native",
+                        "ai_usage_type":  "analytics_prediction",
+                        "ai_core_or_enabler":  "core_product",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/unleash-live-series-b--cc3799d2",
+                                              "https://www.crunchbase.com/organization/unleash-live",
+                                              "https://unleashlive.com"
+                                          ]
+                    },
+                    {
+                        "record_key":  "company:crunchbase:vively",
+                        "name":  "Vively",
+                        "website_url":  "https://www.vively.com.au",
+                        "sector_primary":  "digital_health",
+                        "sector_secondary":  "chronic_care",
+                        "use_case_primary":  "lifestyle_medicine_programs",
+                        "use_case_secondary":  [
+                                                   "metabolic_health_monitoring",
+                                                   "chronic_condition_coaching"
+                                               ],
+                        "customer_type":  "consumer",
+                        "business_model":  "subscription_and_health_services",
+                        "sales_motion":  "direct_to_consumer",
+                        "technology_depth":  "conventional_software",
+                        "ai_relevance":  "ai_enabled",
+                        "ai_usage_type":  "recommendations",
+                        "ai_core_or_enabler":  "feature_layer",
+                        "confidence":  "high",
+                        "evidence_urls":  [
+                                              "https://www.crunchbase.com/funding_round/vively-seed--1366d1c4",
+                                              "https://www.crunchbase.com/organization/vively",
+                                              "https://www.vively.com.au"
+                                          ]
+                    }
+                ]
+}

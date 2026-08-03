@@ -1,0 +1,57 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investor_web_profiles",
+    "record_key":  "investor_web_profile:hephzibah-financial-pty-ltd:2026-07-30",
+    "operation":  "upsert",
+    "data":  {
+                 "source_urls":  [
+                                     "https://abr.business.gov.au/ABN/View/90612978275"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "website_status":  "not_verified",
+                 "raw_content_hash":  null,
+                 "raw_content_ref":  null,
+                 "extraction_model":  "fixed-ai-workflow",
+                 "extraction_version":  "analysis-window-1.0.0",
+                 "confidence":  "high",
+                 "claimed_thesis":  null,
+                 "claimed_stages":  [
+
+                                    ],
+                 "claimed_sectors":  [
+
+                                     ],
+                 "claimed_geographies":  [
+
+                                         ],
+                 "claimed_business_models":  [
+
+                                             ],
+                 "claimed_cheque_min":  null,
+                 "claimed_cheque_max":  null,
+                 "claimed_cheque_currency":  null,
+                 "contact_emails":  [
+
+                                    ],
+                 "application_url":  null,
+                 "contact_notes":  "Australian Business Register confirms active Hephzibah Financial Pty Ltd in NSW 2000; no unique official website or LinkedIn page was found.",
+                 "is_current":  true,
+                 "superseded_at":  null
+             },
+    "refs":  {
+                 "investor_key":  "investor:hephzibah-financial-pty-ltd"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:scoped:recent-deal2026-7-30_deals-121-180",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "No unique official website was confirmed after the supplemental exact-name and deal-context search.",
+                                  "No unique official LinkedIn company page was confirmed after the supplemental search."
+                              ]
+               }
+}

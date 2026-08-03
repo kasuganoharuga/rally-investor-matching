@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:phnxx-seed--1aa760a7",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "phnxx-seed--1aa760a7",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/phnxx-seed--1aa760a7",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - PHNXX",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/phnxx-seed--1aa760a7",
+                                        "Organization Location":  "Melbourne, Victoria, Australia, Oceania",
+                                        "Organization Name":  "PHNXX",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/phnxx",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "1500000",
+                                        "Money Raised Currency":  "SGD",
+                                        "Money Raised (in USD)":  "1125197",
+                                        "Announced Date":  "2025-03-10",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "PHNXX provides containerised clean and reliable energy solutions for business operations.",
+                                        "Organization Industries":  "Clean Energy, CleanTech, Power Grid",
+                                        "Organization Website":  "https://www.phnxx.io",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "1500000",
+                                        "Total Funding Amount Currency":  "SGD",
+                                        "Total Funding Amount (in USD)":  "1125197",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "Engie Factory, LaunchVic, Pacific Channel, Synertec Corporation",
+                                        "Number of Investors":  "4",
+                                        "Number of Partner Investors":  "1"
+                                    },
+                 "investee_name_raw":  "PHNXX",
+                 "org_location_raw":  "Melbourne, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://www.phnxx.io",
+                 "org_industries_raw":  "Clean Energy, CleanTech, Power Grid",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-03-10",
+                 "money_raised_raw":  "1500000",
+                 "amount":  1500000,
+                 "currency":  "SGD",
+                 "amount_usd":  1125197,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "1500000",
+                 "investor_names_raw":  "Engie Factory, LaunchVic, Pacific Channel, Synertec Corporation",
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:04.8375076+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "amount_currency_mismatch",
+                 "verification_source_url":  "https://www.phnxx.io/media/phnxx-secures-aud-1-8m-and-announces-strategic-partnership-with-synertec",
+                 "verification_notes":  "Company announcement verifies A$1.8m seed and the imported strategic backers.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:phnxx"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:phnxx-seed--1aa760a7"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Imported amount/currency is SGD1.5m rather than the primary-source A$1.8m."
+                              ]
+               }
+}

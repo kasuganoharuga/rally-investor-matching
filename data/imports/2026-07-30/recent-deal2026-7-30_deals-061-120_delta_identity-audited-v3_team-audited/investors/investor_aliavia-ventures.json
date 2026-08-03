@@ -1,0 +1,50 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investors",
+    "record_key":  "investor:aliavia-ventures",
+    "operation":  "upsert",
+    "data":  {
+                 "canonical_name":  "ALIAVIA Ventures",
+                 "aliases":  [
+
+                             ],
+                 "investor_type":  "vc_fund",
+                 "website_url":  "https://www.aliavia.vc/",
+                 "linkedin_url":  "https://www.linkedin.com/company/aliavia-vc",
+                 "hq_country":  "US",
+                 "hq_state":  "California",
+                 "hq_city":  null,
+                 "offices":  [
+
+                             ],
+                 "status":  "active",
+                 "merged_into_id":  null,
+                 "review_status":  "reviewed",
+                 "last_reviewed_at":  "2026-07-30",
+                 "last_reviewed_by":  "codex-investor-identity-audit",
+                 "investor_subtype":  "venture_capital",
+                 "classification_confidence":  "high",
+                 "classification_source":  "current research entity_type_raw mapping",
+                 "eligibility_mode":  "none",
+                 "classification_evidence_urls":  [
+                                                      "https://www.aliavia.vc/",
+                                                      "https://www.linkedin.com/company/aliavia-vc"
+                                                  ],
+                 "classified_at":  "2026-07-30"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:2026-07-24",
+                       "source_keys":  [
+                                           "research_source:aliavia-ventures:aliavia-ventures_src_deal_ound-crunchbase-human-5ed4-seed-b37471e3"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Headquarters city was not disclosed by the verified sources."
+                              ]
+               }
+}

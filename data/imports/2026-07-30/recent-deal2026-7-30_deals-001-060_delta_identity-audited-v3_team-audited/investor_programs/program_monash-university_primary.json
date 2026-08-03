@@ -1,0 +1,44 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investor_programs",
+    "record_key":  "program:monash-university:primary",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Monash University",
+                 "program_type":  "university_program",
+                 "status":  "unknown",
+                 "application_url":  null,
+                 "eligibility_mode":  "conditional",
+                 "eligibility_rules":  [
+                                           {
+
+                                           }
+                                       ],
+                 "eligibility_rules_status":  "unknown_after_existing_official_source_review",
+                 "source_url":  "https://www.monash.edu/",
+                 "evidence_source_urls":  [
+                                              "https://www.monash.edu/",
+                                              "https://www.linkedin.com/school/monash-university",
+                                              "https://www.monash.edu/news/articles/monash-spinout-rage-biotech-secures-%2429-million-to-advance-next-generation-rna-therapeutics"
+                                          ],
+                 "last_verified_at":  "2026-07-22",
+                 "review_notes":  "The entity has a conditional public mandate or selection process, but no sufficiently specific current hard criteria were captured in existing official-source evidence; matching must return eligibility_unknown rather than eligible."
+             },
+    "refs":  {
+                 "investor_key":  "investor:monash-university"
+             },
+    "provenance":  {
+                       "source":  "matching_enrichment",
+                       "source_keys":  [
+                                           "https://www.monash.edu/",
+                                           "https://www.linkedin.com/school/monash-university",
+                                           "https://www.monash.edu/news/articles/monash-spinout-rage-biotech-secures-%2429-million-to-advance-next-generation-rna-therapeutics"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Current explicit eligibility rules require manual verification."
+                              ]
+               }
+}

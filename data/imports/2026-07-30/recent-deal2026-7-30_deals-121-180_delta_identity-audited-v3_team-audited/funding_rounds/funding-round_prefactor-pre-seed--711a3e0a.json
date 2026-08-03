@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:prefactor-pre-seed--711a3e0a",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "prefactor-pre-seed--711a3e0a",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/prefactor-pre-seed--711a3e0a",
+                 "source_payload":  {
+                                        "Transaction Name":  "Pre Seed Round - Prefactor",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/prefactor-pre-seed--711a3e0a",
+                                        "Organization Location":  "Melbourne, Victoria, Australia, Oceania",
+                                        "Organization Name":  "Prefactor",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/prefactor",
+                                        "Funding Type":  "Pre-Seed",
+                                        "Money Raised":  "225000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "143678",
+                                        "Announced Date":  "2025-05-01",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "1650000",
+                                        "Pre-Money Valuation Currency":  "AUD",
+                                        "Pre-Money Valuation (in USD)":  "1053641",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Prefactor gives teams the visibility, evaluation, and controls needed to deploy, monitor, and manage AI systems with confidence.",
+                                        "Organization Industries":  "Agentic AI, Artificial Intelligence (AI), Quality Assurance, Risk Management, SaaS, Software",
+                                        "Organization Website":  "https://www.prefactor.ai",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "1590000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "1121557",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Antler",
+                                        "Investor Names":  "Antler",
+                                        "Number of Investors":  "1",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "Prefactor",
+                 "org_location_raw":  "Melbourne, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://www.prefactor.ai",
+                 "org_industries_raw":  "Agentic AI, Artificial Intelligence (AI), Quality Assurance, Risk Management, SaaS, Software",
+                 "round_type_raw":  "Pre-Seed",
+                 "round_stage":  "pre_seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-05-01",
+                 "money_raised_raw":  "225000",
+                 "amount":  225000,
+                 "currency":  "AUD",
+                 "amount_usd":  143678,
+                 "pre_money_valuation_raw":  "1650000",
+                 "pre_money_valuation":  1650000,
+                 "valuation_currency":  "AUD",
+                 "valuation_usd":  1053641,
+                 "equity_only":  true,
+                 "total_funding_raw":  "1590000",
+                 "investor_names_raw":  "Antler",
+                 "lead_investor_names_raw":  "Antler",
+                 "imported_at":  "2026-07-30T14:07:05.2367430+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "partially_verified",
+                 "verification_source_url":  "https://www.antler.co/location/australia",
+                 "verification_notes":  "Antler Australia public terms support a cohort investment.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:prefactor"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:prefactor-pre-seed--711a3e0a"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "No Prefactor-specific public announcement was located; imported A$225k needs cohort-specific confirmation."
+                              ]
+               }
+}

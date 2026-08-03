@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:hall-6e50",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Hall",
+                 "website_url":  "https://usehall.com/",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "New South Wales",
+                 "hq_city":  "Sydney",
+                 "is_anz":  true,
+                 "sector_primary":  "marketing_technology",
+                 "sector_secondary":  "ai_search_analytics",
+                 "use_case_primary":  "generative_engine_optimisation",
+                 "use_case_secondary":  [
+                                            "ai_visibility_monitoring",
+                                            "ai_attribution_analytics"
+                                        ],
+                 "customer_type":  "enterprise",
+                 "business_model":  "subscription_saas",
+                 "sales_motion":  "product_led",
+                 "technology_depth":  "applied_ai",
+                 "ai_relevance":  "ai_native",
+                 "ai_usage_type":  "analytics_prediction",
+                 "ai_core_or_enabler":  "core_product",
+                 "company_summary":  "Hall helps companies understand how they appear across AI platforms, and track how these conversations translate to business outcomes.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/hall-6e50-pre-seed--436bc5a3",
+                                     "https://www.crunchbase.com/organization/hall-6e50",
+                                     "https://usehall.com/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:hall-6e50-pre-seed--436bc5a3"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

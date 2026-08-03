@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:bizly-4a56",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Bizly",
+                 "website_url":  "https://bizly.com.au/",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "New South Wales",
+                 "hq_city":  "Surry Hills",
+                 "is_anz":  true,
+                 "sector_primary":  "business_intelligence",
+                 "sector_secondary":  "risk_and_trust",
+                 "use_case_primary":  "business_trust_scoring",
+                 "use_case_secondary":  [
+                                            "supplier_and_customer_checks",
+                                            "business_monitoring"
+                                        ],
+                 "customer_type":  "smb",
+                 "business_model":  "freemium_reports_and_subscription",
+                 "sales_motion":  "product_led",
+                 "technology_depth":  "applied_ai",
+                 "ai_relevance":  "ai_enabled",
+                 "ai_usage_type":  "risk_scoring",
+                 "ai_core_or_enabler":  "feature_layer",
+                 "company_summary":  "At Bizly, we make trust simple, visible, and useful for every Australian business.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/bizly-4a56-seed--70c8dbb0",
+                                     "https://www.crunchbase.com/organization/bizly-4a56",
+                                     "https://bizly.com.au/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:bizly-4a56-seed--70c8dbb0"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:knowledge-orchestrator",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Kiraa",
+                 "website_url":  "http://kiraa.ai",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "Victoria",
+                 "hq_city":  "Carlton",
+                 "is_anz":  true,
+                 "sector_primary":  "enterprise_software",
+                 "sector_secondary":  "ai_infrastructure",
+                 "use_case_primary":  "enterprise_knowledge_infrastructure",
+                 "use_case_secondary":  [
+                                            "retrieval_and_context_orchestration",
+                                            "enterprise_ai_grounding"
+                                        ],
+                 "customer_type":  "enterprise",
+                 "business_model":  "subscription_saas",
+                 "sales_motion":  "enterprise_top_down",
+                 "technology_depth":  "applied_ai",
+                 "ai_relevance":  "ai_infrastructure",
+                 "ai_usage_type":  "model_infrastructure",
+                 "ai_core_or_enabler":  "enabling_infrastructure",
+                 "company_summary":  "KIraa is Knowledge Infrastructure that Powers Enterprise AI",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/knowledge-orchestrator-pre-seed--48586870",
+                                     "https://www.crunchbase.com/organization/knowledge-orchestrator",
+                                     "http://kiraa.ai"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:knowledge-orchestrator-pre-seed--48586870"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

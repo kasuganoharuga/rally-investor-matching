@@ -1,0 +1,50 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investors",
+    "record_key":  "investor:perlone-capital",
+    "operation":  "upsert",
+    "data":  {
+                 "canonical_name":  "Perlone Capital",
+                 "aliases":  [
+
+                             ],
+                 "investor_type":  "vc_fund",
+                 "investor_subtype":  "venture_capital",
+                 "eligibility_mode":  "none",
+                 "classification_confidence":  "high",
+                 "classification_evidence_urls":  [
+                                                      "https://www.perlonecap.com/",
+                                                      "https://www.linkedin.com/company/perone"
+                                                  ],
+                 "classified_at":  "2026-07-30",
+                 "website_url":  "https://www.perlonecap.com/",
+                 "linkedin_url":  "https://www.linkedin.com/company/perone",
+                 "hq_country":  "US",
+                 "hq_state":  null,
+                 "hq_city":  null,
+                 "offices":  [
+
+                             ],
+                 "status":  "active",
+                 "merged_into_id":  null,
+                 "review_status":  "reviewed",
+                 "last_reviewed_at":  "2026-07-30",
+                 "last_reviewed_by":  "codex-investor-identity-gap-supplement"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:scoped:recent-deal2026-7-30_deals-121-180",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Headquarters state or region is not separately disclosed or is not applicable to the jurisdiction.",
+                                  "Headquarters city remains undisclosed by verified sources."
+                              ]
+               }
+}

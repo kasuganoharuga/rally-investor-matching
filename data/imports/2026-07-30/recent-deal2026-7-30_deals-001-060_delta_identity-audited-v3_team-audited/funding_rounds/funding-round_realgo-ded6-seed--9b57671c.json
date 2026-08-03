@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:realgo-ded6-seed--9b57671c",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "realgo-ded6-seed--9b57671c",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/realgo-ded6-seed--9b57671c",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - RealGo",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/realgo-ded6-seed--9b57671c",
+                                        "Organization Location":  "Glen Waverley, Victoria, Australia, Oceania",
+                                        "Organization Name":  "RealGo",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/realgo-ded6",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "3500000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "2292813",
+                                        "Announced Date":  "2025-08-13",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "RealGo is a I-powered Meme 3.0 consumer application on BNB Chain.",
+                                        "Organization Industries":  "",
+                                        "Organization Website":  "https://www.realgo.game",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "3500000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "2292813",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "Animoca Brands, Becker Ventures, Cogitent Ventures, Notch ventures, X21 Digital",
+                                        "Number of Investors":  "5",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "RealGo",
+                 "org_location_raw":  "Glen Waverley, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://www.realgo.game",
+                 "org_industries_raw":  null,
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-08-13",
+                 "money_raised_raw":  "3500000",
+                 "amount":  3500000,
+                 "currency":  "AUD",
+                 "amount_usd":  2292813,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "3500000",
+                 "investor_names_raw":  "Animoca Brands, Becker Ventures, Cogitent Ventures, Notch ventures, X21 Digital",
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:04.0072395+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "verified_secondary",
+                 "verification_source_url":  "https://app.dealroom.co/companies/realgo_game",
+                 "verification_notes":  "Dealroom reports an A$3.5m round and investor set consistent with the imported record.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:realgo-ded6"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:realgo-ded6-seed--9b57671c"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

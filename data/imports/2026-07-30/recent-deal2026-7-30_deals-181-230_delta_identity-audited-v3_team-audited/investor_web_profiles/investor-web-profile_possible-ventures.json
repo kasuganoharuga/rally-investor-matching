@@ -1,0 +1,57 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investor_web_profiles",
+    "record_key":  "investor_web_profile:possible-ventures:2026-07-24",
+    "operation":  "upsert",
+    "data":  {
+                 "source_urls":  [
+                                     "https://www.possible.ventures/",
+                                     "https://www.linkedin.com/company/possible-vc"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "website_status":  "ok",
+                 "raw_content_hash":  null,
+                 "raw_content_ref":  "data/03_research/investors/possible-ventures/investor_raw_collection.json",
+                 "extraction_model":  "fixed-ai-workflow",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high",
+                 "claimed_thesis":  "Possible Ventures; public investor description was limited in this scoped pass.",
+                 "claimed_stages":  {
+
+                                    },
+                 "claimed_sectors":  {
+
+                                     },
+                 "claimed_geographies":  {
+
+                                         },
+                 "claimed_business_models":  [
+
+                                             ],
+                 "claimed_cheque_min":  null,
+                 "claimed_cheque_max":  null,
+                 "claimed_cheque_currency":  null,
+                 "contact_emails":  [
+
+                                    ],
+                 "application_url":  null,
+                 "contact_notes":  "Identity fields were audited against official websites and LinkedIn company pages where a unique match was available. Remaining nulls are documented in investor_identity_audit.json.",
+                 "is_current":  true,
+                 "superseded_at":  null
+             },
+    "refs":  {
+                 "investor_key":  "investor:possible-ventures"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:2026-07-24",
+                       "source_keys":  [
+                                           "research_source:possible-ventures:possible-ventures_src_deal_round-crunchbase-oscer-series-b-a8ffc8af"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

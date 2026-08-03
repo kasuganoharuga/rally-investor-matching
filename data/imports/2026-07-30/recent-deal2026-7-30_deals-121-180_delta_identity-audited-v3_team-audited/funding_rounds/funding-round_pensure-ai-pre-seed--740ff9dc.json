@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:pensure-ai-pre-seed--740ff9dc",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "pensure-ai-pre-seed--740ff9dc",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/pensure-ai-pre-seed--740ff9dc",
+                 "source_payload":  {
+                                        "Transaction Name":  "Pre Seed Round - pensure.ai",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/pensure-ai-pre-seed--740ff9dc",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "pensure.ai",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/pensure-ai",
+                                        "Funding Type":  "Pre-Seed",
+                                        "Money Raised":  "",
+                                        "Money Raised Currency":  "",
+                                        "Money Raised (in USD)":  "",
+                                        "Announced Date":  "2025-07-01",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Cyber Security - Penetration Testing Product",
+                                        "Organization Industries":  "Cyber Security",
+                                        "Organization Website":  "https://pensure.ai/",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "",
+                                        "Total Funding Amount Currency":  "",
+                                        "Total Funding Amount (in USD)":  "",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "",
+                                        "Number of Investors":  "",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "pensure.ai",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://pensure.ai/",
+                 "org_industries_raw":  "Cyber Security",
+                 "round_type_raw":  "Pre-Seed",
+                 "round_stage":  "pre_seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-07-01",
+                 "money_raised_raw":  null,
+                 "amount":  null,
+                 "currency":  null,
+                 "amount_usd":  null,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  null,
+                 "investor_names_raw":  null,
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:05.1538389+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "unverified_publicly",
+                 "verification_source_url":  "https://www.crunchbase.com/funding_round/pensure-ai-pre-seed--740ff9dc",
+                 "verification_notes":  "No exact independent public announcement was located in this pass. The imported transaction is retained for manual follow-up.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:pensure-ai"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:pensure-ai-pre-seed--740ff9dc"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact round amount/date/stage/investors not independently verified."
+                              ]
+               }
+}

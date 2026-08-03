@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:evidentia",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Evidentia",
+                 "website_url":  "https://evidentia.bio/",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "Victoria",
+                 "hq_city":  "Melbourne",
+                 "is_anz":  true,
+                 "sector_primary":  "bioinformatics",
+                 "sector_secondary":  "precision_medicine",
+                 "use_case_primary":  "scientific_data_analysis",
+                 "use_case_secondary":  [
+                                            "clinical_research_analytics",
+                                            "biomarker_evidence_management"
+                                        ],
+                 "customer_type":  "healthcare_and_research",
+                 "business_model":  "subscription_and_services",
+                 "sales_motion":  "enterprise_top_down",
+                 "technology_depth":  "deep_tech_biotechnology",
+                 "ai_relevance":  "ai_enabled",
+                 "ai_usage_type":  "analytics_prediction",
+                 "ai_core_or_enabler":  "feature_layer",
+                 "company_summary":  "Evidentia provides scientific data analysis platform that helps with making precision medicine and clinical research.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/evidentia-pre-seed--f02aaec5",
+                                     "https://www.crunchbase.com/organization/evidentia",
+                                     "https://evidentia.bio/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:evidentia-pre-seed--f02aaec5"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

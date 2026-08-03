@@ -1,0 +1,31 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "deal_investors",
+    "record_key":  "deal_investor:crunchbase:polymath-ef88-pre-seed--f4140190:liam-don",
+    "operation":  "upsert",
+    "data":  {
+                 "raw_name":  "Liam Don",
+                 "role":  "participant",
+                 "participation_status":  "unknown",
+                 "resolution":  "resolved",
+                 "resolution_confidence":  "high",
+                 "identity_resolution":  "new_investor"
+             },
+    "refs":  {
+                 "deal_key":  "funding_round:crunchbase:polymath-ef88-pre-seed--f4140190",
+                 "investor_key":  "investor:liam-don",
+                 "raw_investor_candidate_key":  "raw_investor_candidate:liam-don"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:polymath-ef88-pre-seed--f4140190"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

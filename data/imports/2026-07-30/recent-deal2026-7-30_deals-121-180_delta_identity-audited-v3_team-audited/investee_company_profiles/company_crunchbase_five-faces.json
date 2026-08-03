@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:five-faces",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Five Faces",
+                 "website_url":  "http://www.fivefaces.com.au/",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "Queensland",
+                 "hq_city":  "Darra",
+                 "is_anz":  true,
+                 "sector_primary":  "experience_software",
+                 "sector_secondary":  "digital_signage",
+                 "use_case_primary":  "visual_and_interactive_device_management",
+                 "use_case_secondary":  [
+                                            "customer_wayfinding",
+                                            "digital_experience_orchestration"
+                                        ],
+                 "customer_type":  "enterprise",
+                 "business_model":  "subscription_saas",
+                 "sales_motion":  "enterprise_top_down",
+                 "technology_depth":  "conventional_software",
+                 "ai_relevance":  "none",
+                 "ai_usage_type":  "not_applicable",
+                 "ai_core_or_enabler":  "not_core",
+                 "company_summary":  "Five Faces is a secure cloud platform to control and manage all visual and interactive devices.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/five-faces-series-a--195f4ea9",
+                                     "https://www.crunchbase.com/organization/five-faces",
+                                     "http://www.fivefaces.com.au/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:five-faces-series-a--195f4ea9"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:merkaou",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Merkaou",
+                 "website_url":  "https://merkaou.com/",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "Victoria",
+                 "hq_city":  "Melbourne",
+                 "is_anz":  true,
+                 "sector_primary":  "consumer_products",
+                 "sector_secondary":  "hair_care",
+                 "use_case_primary":  "hair_care_and_cosmetics",
+                 "use_case_secondary":  [
+                                            "personal_care_products",
+                                            "beauty_products"
+                                        ],
+                 "customer_type":  "consumer",
+                 "business_model":  "product_sales",
+                 "sales_motion":  "direct_to_consumer",
+                 "technology_depth":  "consumer_product",
+                 "ai_relevance":  "none",
+                 "ai_usage_type":  "not_applicable",
+                 "ai_core_or_enabler":  "not_core",
+                 "company_summary":  "Hair Care \u0026 Cosmetics",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/merkaou-seed--5d86e9d8",
+                                     "https://www.crunchbase.com/organization/merkaou",
+                                     "https://merkaou.com/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "medium"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:merkaou-seed--5d86e9d8"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

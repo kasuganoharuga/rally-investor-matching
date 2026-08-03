@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:carbon-asset-solutions-series-a--47e7acbd",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "carbon-asset-solutions-series-a--47e7acbd",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/carbon-asset-solutions-series-a--47e7acbd",
+                 "source_payload":  {
+                                        "Transaction Name":  "Series A - Carbon Asset Solutions",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/carbon-asset-solutions-series-a--47e7acbd",
+                                        "Organization Location":  "Brisbane, Queensland, Australia, Oceania",
+                                        "Organization Name":  "Carbon Asset Solutions",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/carbon-asset-solutions",
+                                        "Funding Type":  "Series A",
+                                        "Money Raised":  "",
+                                        "Money Raised Currency":  "",
+                                        "Money Raised (in USD)":  "",
+                                        "Announced Date":  "2025-05-01",
+                                        "Funding Stage":  "Early Stage Venture",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Carbon Asset Solutions is a technology platform that operates in the Carbon Credit and sustainable investment sectors.",
+                                        "Organization Industries":  "Finance, Financial Services, Information Technology, Software",
+                                        "Organization Website":  "http://www.carbonassetsolutions.com",
+                                        "Organization Revenue Range":  "$1M to $10M",
+                                        "Total Funding Amount":  "8718184",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "8718184",
+                                        "Funding Status":  "Early Stage Venture",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "",
+                                        "Number of Investors":  "",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "Carbon Asset Solutions",
+                 "org_location_raw":  "Brisbane, Queensland, Australia, Oceania",
+                 "org_website_raw":  "http://www.carbonassetsolutions.com",
+                 "org_industries_raw":  "Finance, Financial Services, Information Technology, Software",
+                 "round_type_raw":  "Series A",
+                 "round_stage":  "series_a",
+                 "funding_stage_raw":  "Early Stage Venture",
+                 "announced_date":  "2025-05-01",
+                 "money_raised_raw":  null,
+                 "amount":  null,
+                 "currency":  null,
+                 "amount_usd":  null,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "8718184",
+                 "investor_names_raw":  null,
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:04.9278172+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "unverified_publicly",
+                 "verification_source_url":  "https://www.crunchbase.com/funding_round/carbon-asset-solutions-series-a--47e7acbd",
+                 "verification_notes":  "No exact independent public announcement was located in this pass. The imported transaction is retained for manual follow-up.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:carbon-asset-solutions"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:carbon-asset-solutions-series-a--47e7acbd"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact round amount/date/stage/investors not independently verified."
+                              ]
+               }
+}

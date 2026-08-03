@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:preve-seed--798164fa",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "preve-seed--798164fa",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/preve-seed--798164fa",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - PREVE",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/preve-seed--798164fa",
+                                        "Organization Location":  "Byron Bay, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "PREVE",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/preve",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "2200000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "2200000",
+                                        "Announced Date":  "2025-05-23",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "PREVE is an AI-powered physio membership platform that brings clarity, automation, and delight to every stage of the physio-patient contact.",
+                                        "Organization Industries":  "Artificial Intelligence (AI), Fitness, Industrial Automation",
+                                        "Organization Website":  "https://preve.co/",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "2278096",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "2278096",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Carthona Capital",
+                                        "Investor Names":  "Alexey Mitko, Archangel Ventures, Black Sheep Capital, Carthona Capital, Charlie Gearside, David Mastroianni, David Solsky, Exhort Ventures, Henry Innis, Justin Lipman, Matt Farrugia, Startmate, Tim Dettmann, Yaniv Bernstein",
+                                        "Number of Investors":  "14",
+                                        "Number of Partner Investors":  "7"
+                                    },
+                 "investee_name_raw":  "PREVE",
+                 "org_location_raw":  "Byron Bay, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://preve.co/",
+                 "org_industries_raw":  "Artificial Intelligence (AI), Fitness, Industrial Automation",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-05-23",
+                 "money_raised_raw":  "2200000",
+                 "amount":  2200000,
+                 "currency":  "USD",
+                 "amount_usd":  2200000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "2278096",
+                 "investor_names_raw":  "Alexey Mitko, Archangel Ventures, Black Sheep Capital, Carthona Capital, Charlie Gearside, David Mastroianni, David Solsky, Exhort Ventures, Henry Innis, Justin Lipman, Matt Farrugia, Startmate, Tim Dettmann, Yaniv Bernstein",
+                 "lead_investor_names_raw":  "Carthona Capital",
+                 "imported_at":  "2026-07-30T14:07:05.4751765+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "amount_mismatch",
+                 "verification_source_url":  "https://www.startupdaily.net/topic/funding/preve-raises-2m-to-mend-the-physiotherapy-industry-using-ai/",
+                 "verification_notes":  "Public coverage verifies an A$2m seed led by Carthona with Startmate, Archangel, Black Sheep and angels on 23 May 2025.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:preve"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:preve-seed--798164fa"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Imported amount/currency is US$2.2m and does not match the cited A$2m report."
+                              ]
+               }
+}

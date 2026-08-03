@@ -1,0 +1,83 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:factor-29b5-seed--d1f90eb9",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "factor-29b5-seed--d1f90eb9",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/factor-29b5-seed--d1f90eb9",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Factor",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/factor-29b5-seed--d1f90eb9",
+                                        "Organization Location":  "Wellington, Wellington, New Zealand, Oceania",
+                                        "Organization Name":  "Factor",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/factor-29b5",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "3000000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "3000000",
+                                        "Announced Date":  "2025-07-18",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Factor uses AI to help power companies create bespoke pricing for large customers with complex needs.",
+                                        "Organization Industries":  "Artificial Intelligence (AI), Business Process Automation (BPA), Enterprise Software, Predictive Analytics",
+                                        "Organization Website":  "https://usefactor.com",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "3000000",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "3000000",
+                                        "Funding Status":  "M\u0026A",
+                                        "Lead Investors":  "Icehouse Ventures",
+                                        "Investor Names":  "AngelHQ, Blackbird Ventures, Black Nova Venture Capital, Flying Fox Ventures, Func Ventures, Icehouse Ventures, K1W1, Metagrove Ventures, Motion Capital",
+                                        "Number of Investors":  "9",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "Factor",
+                 "org_location_raw":  "Wellington, Wellington, New Zealand, Oceania",
+                 "org_website_raw":  "https://usefactor.com",
+                 "org_industries_raw":  "Artificial Intelligence (AI), Business Process Automation (BPA), Enterprise Software, Predictive Analytics",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-07-18",
+                 "money_raised_raw":  "3000000",
+                 "amount":  3000000,
+                 "currency":  "USD",
+                 "amount_usd":  3000000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "3000000",
+                 "investor_names_raw":  "AngelHQ, Blackbird Ventures, Black Nova Venture Capital, Flying Fox Ventures, Func Ventures, Icehouse Ventures, K1W1, Metagrove Ventures, Motion Capital",
+                 "lead_investor_names_raw":  "Icehouse Ventures",
+                 "imported_at":  "2026-07-30T14:07:05.4021563+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "verified_investor",
+                 "verification_source_url":  "https://metagrove.vc/portfolio/factor",
+                 "verification_notes":  "Investor portfolio page confirms Factor鈥檚 2025 early-stage financing and the institutional co-investor group; public NZ deal reporting states a $3m raise.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:factor-29b5"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:factor-29b5-seed--d1f90eb9"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Investor page classifies the stage as pre-seed while import classifies it as Seed.",
+                                  "Imported USD currency is not explicitly confirmed by the cited page."
+                              ]
+               }
+}

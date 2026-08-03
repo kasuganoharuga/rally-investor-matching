@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:thanks-a09c",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Thanks",
+                 "website_url":  "https://www.thanks.co/",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "New South Wales",
+                 "hq_city":  "Sydney",
+                 "is_anz":  true,
+                 "sector_primary":  "marketing_technology",
+                 "sector_secondary":  "affiliate_commerce",
+                 "use_case_primary":  "post_purchase_page_monetisation",
+                 "use_case_secondary":  [
+                                            "targeted_offers",
+                                            "rewards_and_partner_revenue"
+                                        ],
+                 "customer_type":  "enterprise",
+                 "business_model":  "revenue_share_and_platform_fees",
+                 "sales_motion":  "partnership_led",
+                 "technology_depth":  "conventional_software",
+                 "ai_relevance":  "none",
+                 "ai_usage_type":  "not_applicable",
+                 "ai_core_or_enabler":  "not_core",
+                 "company_summary":  "Thanks enables businesses to generate new revenue streams by monetizing their \"thank you\" pages with targeted offers and rewards.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/thanks-a09c-seed--d9068c05",
+                                     "https://www.crunchbase.com/organization/thanks-a09c",
+                                     "https://www.thanks.co/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:thanks-a09c-seed--d9068c05"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

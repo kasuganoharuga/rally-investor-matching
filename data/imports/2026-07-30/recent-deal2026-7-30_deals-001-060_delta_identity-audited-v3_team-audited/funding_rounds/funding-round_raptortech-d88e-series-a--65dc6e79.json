@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:raptortech-d88e-series-a--65dc6e79",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "raptortech-d88e-series-a--65dc6e79",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/raptortech-d88e-series-a--65dc6e79",
+                 "source_payload":  {
+                                        "Transaction Name":  "Series A - RaptorTech",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/raptortech-d88e-series-a--65dc6e79",
+                                        "Organization Location":  "Belmont, Victoria, Australia, Oceania",
+                                        "Organization Name":  "RaptorTech",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/raptortech-d88e",
+                                        "Funding Type":  "Series A",
+                                        "Money Raised":  "8000000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "5140400",
+                                        "Announced Date":  "2025-08-21",
+                                        "Funding Stage":  "Early Stage Venture",
+                                        "Pre-Money Valuation":  "32000000",
+                                        "Pre-Money Valuation Currency":  "AUD",
+                                        "Pre-Money Valuation (in USD)":  "20561602",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "RaptorTech provides technology management services to mining and construction industries like excavators, loaders, and grazers.",
+                                        "Organization Industries":  "Civil Engineering, Construction, Mining",
+                                        "Organization Website":  "https://raptortech.com.au",
+                                        "Organization Revenue Range":  "$1M to $10M",
+                                        "Total Funding Amount":  "8000000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "5140400",
+                                        "Funding Status":  "Early Stage Venture",
+                                        "Lead Investors":  "Fifth Estate Asset Management",
+                                        "Investor Names":  "Fifth Estate Asset Management",
+                                        "Number of Investors":  "1",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "RaptorTech",
+                 "org_location_raw":  "Belmont, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://raptortech.com.au",
+                 "org_industries_raw":  "Civil Engineering, Construction, Mining",
+                 "round_type_raw":  "Series A",
+                 "round_stage":  "series_a",
+                 "funding_stage_raw":  "Early Stage Venture",
+                 "announced_date":  "2025-08-21",
+                 "money_raised_raw":  "8000000",
+                 "amount":  8000000,
+                 "currency":  "AUD",
+                 "amount_usd":  5140400,
+                 "pre_money_valuation_raw":  "32000000",
+                 "pre_money_valuation":  32000000,
+                 "valuation_currency":  "AUD",
+                 "valuation_usd":  20561602,
+                 "equity_only":  true,
+                 "total_funding_raw":  "8000000",
+                 "investor_names_raw":  "Fifth Estate Asset Management",
+                 "lead_investor_names_raw":  "Fifth Estate Asset Management",
+                 "imported_at":  "2026-07-30T14:07:04.4172496+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "unverified_publicly",
+                 "verification_source_url":  "https://www.crunchbase.com/funding_round/raptortech-d88e-series-a--65dc6e79",
+                 "verification_notes":  "No exact public funding announcement was located in this pass. Imported transaction is retained as-is for manual follow-up.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:raptortech-d88e"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:raptortech-d88e-series-a--65dc6e79"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact round amount/date/investors not independently verified."
+                              ]
+               }
+}

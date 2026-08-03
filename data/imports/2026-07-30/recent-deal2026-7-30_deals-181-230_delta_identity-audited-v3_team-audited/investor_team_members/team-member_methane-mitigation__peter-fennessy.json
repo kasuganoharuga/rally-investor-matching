@@ -1,0 +1,38 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investor_team_members",
+    "record_key":  "investor_team_member:methane-mitigation:peter-fennessy",
+    "operation":  "upsert",
+    "data":  {
+                 "contact_id":  null,
+                 "first_name":  "Peter",
+                 "last_name":  "Fennessy",
+                 "role_title":  "Science Advisor",
+                 "seniority":  "advisor",
+                 "linkedin_url":  null,
+                 "claimed_focus":  [
+                                       "agricultural science",
+                                       "biotechnology commercialisation"
+                                   ],
+                 "bio_summary":  "Science adviser bridging agricultural science, agribusiness and biotechnology commercialisation.",
+                 "source_url":  "https://www.methanemitigation.earth/",
+                 "retrieved_at":  "2026-07-30",
+                 "is_active":  true
+             },
+    "refs":  {
+                 "investor_key":  "investor:methane-mitigation",
+                 "contact_key":  null
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:recent-deal2026-7-30:investor-team-audit",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "person_linkedin_not_verified"
+                              ]
+               }
+}

@@ -1,0 +1,49 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investors",
+    "record_key":  "investor:uniservices",
+    "operation":  "upsert",
+    "data":  {
+                 "canonical_name":  "Auckland UniServices",
+                 "aliases":  [
+                                 "Uniservices"
+                             ],
+                 "investor_type":  "university_fund",
+                 "investor_subtype":  "university_fund",
+                 "eligibility_mode":  "conditional",
+                 "classification_confidence":  "high",
+                 "classification_evidence_urls":  [
+                                                      "https://www.uniservices.co.nz/",
+                                                      "https://www.linkedin.com/company/auckland-uniservices-limited"
+                                                  ],
+                 "classified_at":  "2026-07-30",
+                 "website_url":  "https://www.uniservices.co.nz/",
+                 "linkedin_url":  "https://www.linkedin.com/company/auckland-uniservices-limited",
+                 "hq_country":  "NZ",
+                 "hq_state":  "Auckland",
+                 "hq_city":  "Auckland",
+                 "offices":  [
+
+                             ],
+                 "status":  "active",
+                 "merged_into_id":  null,
+                 "review_status":  "reviewed",
+                 "last_reviewed_at":  "2026-07-30",
+                 "last_reviewed_by":  "codex-investor-identity-audit"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:scoped:recent-deal2026-7-30_deals-001-060",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

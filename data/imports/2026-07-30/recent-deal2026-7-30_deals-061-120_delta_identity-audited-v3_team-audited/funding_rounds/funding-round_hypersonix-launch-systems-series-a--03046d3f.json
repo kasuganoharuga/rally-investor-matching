@@ -1,0 +1,83 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:hypersonix-launch-systems-series-a--03046d3f",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "hypersonix-launch-systems-series-a--03046d3f",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/hypersonix-launch-systems-series-a--03046d3f",
+                 "source_payload":  {
+                                        "Transaction Name":  "Series A - Hypersonix Launch Systems",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/hypersonix-launch-systems-series-a--03046d3f",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "Hypersonix Launch Systems",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/hypersonix-launch-systems",
+                                        "Funding Type":  "Series A",
+                                        "Money Raised":  "46000000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "46000000",
+                                        "Announced Date":  "2025-07-01",
+                                        "Funding Stage":  "Early Stage Venture",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Hypersonix Launch Systems specializes in hypersonic technology and scramjet engines in the global market.",
+                                        "Organization Industries":  "Aerospace, Industrial Engineering, Product Design",
+                                        "Organization Website":  "https://www.hypersonix.com/",
+                                        "Organization Revenue Range":  "$1M to $10M",
+                                        "Total Funding Amount":  "46000000",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "46000000",
+                                        "Funding Status":  "Early Stage Venture",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "High Tor Capital, RKKVC, Saab",
+                                        "Number of Investors":  "3",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "Hypersonix Launch Systems",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://www.hypersonix.com/",
+                 "org_industries_raw":  "Aerospace, Industrial Engineering, Product Design",
+                 "round_type_raw":  "Series A",
+                 "round_stage":  "series_a",
+                 "funding_stage_raw":  "Early Stage Venture",
+                 "announced_date":  "2025-07-01",
+                 "money_raised_raw":  "46000000",
+                 "amount":  46000000,
+                 "currency":  "USD",
+                 "amount_usd":  46000000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "46000000",
+                 "investor_names_raw":  "High Tor Capital, RKKVC, Saab",
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:04.6315751+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "amount_currency_mismatch",
+                 "verification_source_url":  "https://www.hypersonix.com/about",
+                 "verification_notes":  "Hypersonix official materials state A$46m for the round.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:hypersonix-launch-systems"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:hypersonix-launch-systems-series-a--03046d3f"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Imported currency is USD; official company source states AUD.",
+                                  "Later official materials name additional investors beyond the imported list."
+                              ]
+               }
+}

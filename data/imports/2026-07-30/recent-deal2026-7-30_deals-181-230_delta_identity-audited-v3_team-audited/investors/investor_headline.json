@@ -1,0 +1,51 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investors",
+    "record_key":  "investor:headline",
+    "operation":  "upsert",
+    "data":  {
+                 "canonical_name":  "Headline",
+                 "aliases":  [
+
+                             ],
+                 "investor_type":  "vc_fund",
+                 "website_url":  "https://headline.com/",
+                 "linkedin_url":  "https://www.linkedin.com/company/headlinevc",
+                 "hq_country":  "US",
+                 "hq_state":  "California",
+                 "hq_city":  "San Francisco",
+                 "offices":  [
+
+                             ],
+                 "status":  "active",
+                 "merged_into_id":  null,
+                 "review_status":  "reviewed",
+                 "last_reviewed_at":  "2026-07-30",
+                 "last_reviewed_by":  "codex-investor-identity-audit",
+                 "investor_subtype":  "venture_capital",
+                 "classification_confidence":  "high",
+                 "classification_source":  "current research entity_type_raw mapping",
+                 "eligibility_mode":  "none",
+                 "classification_evidence_urls":  [
+                                                      "https://headline.com/",
+                                                      "https://www.linkedin.com/company/headlinevc"
+                                                  ],
+                 "classified_at":  "2026-07-30"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:2026-07-24",
+                       "source_keys":  [
+                                           "research_source:headline:headline_src_official",
+                                           "research_source:headline:headline_src_deal_round-crunchbase-oscer-series-b-a8ffc8af"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

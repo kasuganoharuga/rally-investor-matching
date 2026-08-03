@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:rise-chain-seed--c2035333",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "rise-chain-seed--c2035333",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/rise-chain-seed--c2035333",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - RISE Chain",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/rise-chain-seed--c2035333",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "RISE Chain",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/rise-chain",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "3200000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "3200000",
+                                        "Announced Date":  "2025-05-19",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "RISE is a fast, scalable Ethereum Layer 2 blockchain delivering instant transactions with full decentralization.",
+                                        "Organization Industries":  "Blockchain, Cryptocurrency, Ethereum",
+                                        "Organization Website":  "https://risechain.com",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "7200000",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "7200000",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Finality Capital Partners",
+                                        "Investor Names":  "DCF GOD, Digital Asset Capital Management, ether.fi, Finality Capital Partners, MH Ventures, Orange DAO, P² Ventures, Public Works, Sam Kazemian, Sandeep Nailwal, sassal. eth, Scott Moore, Stani Kulechov, Vitalik Buterin",
+                                        "Number of Investors":  "14",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "RISE Chain",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://risechain.com",
+                 "org_industries_raw":  "Blockchain, Cryptocurrency, Ethereum",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-05-19",
+                 "money_raised_raw":  "3200000",
+                 "amount":  3200000,
+                 "currency":  "USD",
+                 "amount_usd":  3200000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "7200000",
+                 "investor_names_raw":  "DCF GOD, Digital Asset Capital Management, ether.fi, Finality Capital Partners, MH Ventures, Orange DAO, P² Ventures, Public Works, Sam Kazemian, Sandeep Nailwal, sassal. eth, Scott Moore, Stani Kulechov, Vitalik Buterin",
+                 "lead_investor_names_raw":  "Finality Capital Partners",
+                 "imported_at":  "2026-07-30T14:07:05.7241734+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "related_round_variant",
+                 "verification_source_url":  "https://www.coindesk.com/tech/2025/06/06/rise-chain-secures-4m-from-galaxy-to-power-ultra-fast-layer-2",
+                 "verification_notes":  "Public coverage verifies a later US$4m Galaxy financing; this imported US$3.2m May round has overlapping investors and may be an earlier close.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:rise-chain"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:rise-chain-seed--c2035333"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Keep separate pending manual round-identity reconciliation with source row 179."
+                              ]
+               }
+}

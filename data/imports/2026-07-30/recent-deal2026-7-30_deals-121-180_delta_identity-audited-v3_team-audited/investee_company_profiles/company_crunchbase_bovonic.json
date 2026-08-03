@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:bovonic",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Bovonic",
+                 "website_url":  "https://bovonic.com/",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "NZ",
+                 "hq_state":  "Auckland",
+                 "hq_city":  "Omanawa",
+                 "is_anz":  true,
+                 "sector_primary":  "agricultural_technology",
+                 "sector_secondary":  "dairy_farming",
+                 "use_case_primary":  "dairy_herd_productivity_software",
+                 "use_case_secondary":  [
+                                            "animal_performance_monitoring",
+                                            "farm_profitability_analytics"
+                                        ],
+                 "customer_type":  "enterprise",
+                 "business_model":  "subscription_saas",
+                 "sales_motion":  "enterprise_top_down",
+                 "technology_depth":  "conventional_software",
+                 "ai_relevance":  "none",
+                 "ai_usage_type":  "not_applicable",
+                 "ai_core_or_enabler":  "not_core",
+                 "company_summary":  "Bovonic is an agriculture software developer that helps dairy farmers to enhance the productivity and profitability of their animals.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/bovonic-seed--c7554b56",
+                                     "https://www.crunchbase.com/organization/bovonic",
+                                     "https://bovonic.com/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "medium"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:bovonic-seed--c7554b56"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

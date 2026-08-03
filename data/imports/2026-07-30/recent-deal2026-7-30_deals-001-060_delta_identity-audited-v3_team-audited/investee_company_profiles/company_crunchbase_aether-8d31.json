@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:aether-8d31",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Aether",
+                 "website_url":  "https://www.theaether.co/",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "NZ",
+                 "hq_state":  "Auckland",
+                 "hq_city":  "Auckland",
+                 "is_anz":  true,
+                 "sector_primary":  "marketing_technology",
+                 "sector_secondary":  "presentation_software",
+                 "use_case_primary":  "ai_presentation_creation",
+                 "use_case_secondary":  [
+                                            "marketing_content_generation",
+                                            "brand_consistent_presentations"
+                                        ],
+                 "customer_type":  "enterprise",
+                 "business_model":  "subscription_saas",
+                 "sales_motion":  "product_led",
+                 "technology_depth":  "applied_ai",
+                 "ai_relevance":  "ai_native",
+                 "ai_usage_type":  "content_generation",
+                 "ai_core_or_enabler":  "core_product",
+                 "company_summary":  "Aether specializes on AI-powered tools that allow teams to swiftly and efficiently produce marketing presentations.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/aether-8d31-seed--aee31f00",
+                                     "https://www.crunchbase.com/organization/aether-8d31",
+                                     "https://www.theaether.co/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:aether-8d31-seed--aee31f00"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

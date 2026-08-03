@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:refresh-cfbe-pre-seed--6c7ff427",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "refresh-cfbe-pre-seed--6c7ff427",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/refresh-cfbe-pre-seed--6c7ff427",
+                 "source_payload":  {
+                                        "Transaction Name":  "Pre Seed Round - ReFresh",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/refresh-cfbe-pre-seed--6c7ff427",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "ReFresh",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/refresh-cfbe",
+                                        "Funding Type":  "Pre-Seed",
+                                        "Money Raised":  "260000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "169832",
+                                        "Announced Date":  "2025-06-28",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "ReFresh is the psychosocial operating system that turns WHS compliance into visible, manageable, inspection-ready evidence.",
+                                        "Organization Industries":  "Software",
+                                        "Organization Website":  "https://www.refresh.tech",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "260000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "169832",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "Antler",
+                                        "Number of Investors":  "1",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "ReFresh",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://www.refresh.tech",
+                 "org_industries_raw":  "Software",
+                 "round_type_raw":  "Pre-Seed",
+                 "round_stage":  "pre_seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-06-28",
+                 "money_raised_raw":  "260000",
+                 "amount":  260000,
+                 "currency":  "AUD",
+                 "amount_usd":  169832,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "260000",
+                 "investor_names_raw":  "Antler",
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:05.1428383+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "partially_verified",
+                 "verification_source_url":  "https://www.antler.co/location/australia",
+                 "verification_notes":  "Antler Australia public terms support a standard cohort pre-seed investment.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:refresh-cfbe"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:refresh-cfbe-pre-seed--6c7ff427"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "No ReFresh-specific public announcement was located."
+                              ]
+               }
+}

@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:gridsight-series-a--34913765",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "gridsight-series-a--34913765",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/gridsight-series-a--34913765",
+                 "source_payload":  {
+                                        "Transaction Name":  "Series A - Gridsight",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/gridsight-series-a--34913765",
+                                        "Organization Location":  "Wollongong, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "Gridsight",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/gridsight",
+                                        "Funding Type":  "Series A",
+                                        "Money Raised":  "7500000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "4466399",
+                                        "Announced Date":  "2025-04-08",
+                                        "Funding Stage":  "Early Stage Venture",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Gridsight is a cloud platform with a feature of degrading neutrals, customer-transformer mapping, integrations, and complaint resolution.",
+                                        "Organization Industries":  "Cloud Management, Consulting",
+                                        "Organization Website":  "https://www.gridsight.ai/",
+                                        "Organization Revenue Range":  "Less than $1M",
+                                        "Total Funding Amount":  "7520000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "4481131",
+                                        "Funding Status":  "Early Stage Venture",
+                                        "Lead Investors":  "Airtree Ventures",
+                                        "Investor Names":  "Aera VC, Airtree Ventures, Energy Transition Ventures, Pat Cummins",
+                                        "Number of Investors":  "4",
+                                        "Number of Partner Investors":  "1"
+                                    },
+                 "investee_name_raw":  "Gridsight",
+                 "org_location_raw":  "Wollongong, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://www.gridsight.ai/",
+                 "org_industries_raw":  "Cloud Management, Consulting",
+                 "round_type_raw":  "Series A",
+                 "round_stage":  "series_a",
+                 "funding_stage_raw":  "Early Stage Venture",
+                 "announced_date":  "2025-04-08",
+                 "money_raised_raw":  "7500000",
+                 "amount":  7500000,
+                 "currency":  "AUD",
+                 "amount_usd":  4466399,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "7520000",
+                 "investor_names_raw":  "Aera VC, Airtree Ventures, Energy Transition Ventures, Pat Cummins",
+                 "lead_investor_names_raw":  "Airtree Ventures",
+                 "imported_at":  "2026-07-30T14:07:04.9942858+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "verified_investor",
+                 "verification_source_url":  "https://energytransitionventures.com/airtree-leads-4-5m-series-a-in-sydney-ai-firm-gridsight/",
+                 "verification_notes":  "Investor announcement verifies A$7.5m Series A led by Airtree with Energy Transition Ventures, Aera VC and Pat Cummins.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:gridsight"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:gridsight-series-a--34913765"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

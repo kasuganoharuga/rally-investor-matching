@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:kite-magnetics-seed--b6b3b3fa",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "kite-magnetics-seed--b6b3b3fa",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/kite-magnetics-seed--b6b3b3fa",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Kite Magnetics",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/kite-magnetics-seed--b6b3b3fa",
+                                        "Organization Location":  "Notting Hill, Victoria, Australia, Oceania",
+                                        "Organization Name":  "Kite Magnetics",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/kite-magnetics",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "3600000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "2323551",
+                                        "Announced Date":  "2025-05-19",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Kite Magnetics is an electric aviation motor manufacturing company.",
+                                        "Organization Industries":  "Air Transportation, Electric Vehicle, Hardware",
+                                        "Organization Website":  "https://kitemagnetics.com",
+                                        "Organization Revenue Range":  "$1M to $10M",
+                                        "Total Funding Amount":  "7450000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "4907025",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "SQM Lithium Ventures",
+                                        "Investor Names":  "Boson Ventures, Breakthrough Victoria, Investible, Monash investment holdings, SQM Lithium Ventures",
+                                        "Number of Investors":  "5",
+                                        "Number of Partner Investors":  "1"
+                                    },
+                 "investee_name_raw":  "Kite Magnetics",
+                 "org_location_raw":  "Notting Hill, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://kitemagnetics.com",
+                 "org_industries_raw":  "Air Transportation, Electric Vehicle, Hardware",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-05-19",
+                 "money_raised_raw":  "3600000",
+                 "amount":  3600000,
+                 "currency":  "AUD",
+                 "amount_usd":  2323551,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "7450000",
+                 "investor_names_raw":  "Boson Ventures, Breakthrough Victoria, Investible, Monash investment holdings, SQM Lithium Ventures",
+                 "lead_investor_names_raw":  "SQM Lithium Ventures",
+                 "imported_at":  "2026-07-30T14:07:05.1257840+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "partially_verified",
+                 "verification_source_url":  "https://www.investible.com/company/kite-magnetics",
+                 "verification_notes":  "Investible confirms participation in the May 2025 Seed+ round led by SQM Lithium Ventures.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:kite-magnetics"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:kite-magnetics-seed--b6b3b3fa"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "The cited investor page does not state the imported A$3.6m amount."
+                              ]
+               }
+}

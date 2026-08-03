@@ -1,0 +1,57 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investor_web_profiles",
+    "record_key":  "investor_web_profile:michael-cindric:2026-07-30",
+    "operation":  "upsert",
+    "data":  {
+                 "source_urls":  [
+                                     "https://www.linkedin.com/in/michaelcindric"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "website_status":  "not_verified",
+                 "raw_content_hash":  null,
+                 "raw_content_ref":  null,
+                 "extraction_model":  "fixed-ai-workflow",
+                 "extraction_version":  "analysis-window-1.0.0",
+                 "confidence":  "high",
+                 "claimed_thesis":  null,
+                 "claimed_stages":  [
+
+                                    ],
+                 "claimed_sectors":  [
+
+                                     ],
+                 "claimed_geographies":  [
+
+                                         ],
+                 "claimed_business_models":  [
+
+                                             ],
+                 "claimed_cheque_min":  null,
+                 "claimed_cheque_max":  null,
+                 "claimed_cheque_currency":  null,
+                 "contact_emails":  [
+
+                                    ],
+                 "application_url":  null,
+                 "contact_notes":  "Identity fields were audited using exact-name plus observed-deal context. Missing personal website or headquarters values are documented expected nulls, not default placeholders.",
+                 "is_current":  true,
+                 "superseded_at":  null
+             },
+    "refs":  {
+                 "investor_key":  "investor:michael-cindric"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:scoped:recent-deal2026-7-30_deals-001-060",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "No uniquely attributable official personal website was found in the targeted name plus deal-context search.",
+                                  "Business headquarters fields are not applicable to an individual angel and personal residence was not inferred."
+                              ]
+               }
+}

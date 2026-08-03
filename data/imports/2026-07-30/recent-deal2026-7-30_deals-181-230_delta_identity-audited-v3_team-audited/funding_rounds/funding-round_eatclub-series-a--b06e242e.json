@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:eatclub-series-a--b06e242e",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "eatclub-series-a--b06e242e",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/eatclub-series-a--b06e242e",
+                 "source_payload":  {
+                                        "Transaction Name":  "Series A - EatClub",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/eatclub-series-a--b06e242e",
+                                        "Organization Location":  "Melbourne, Victoria, Australia, Oceania",
+                                        "Organization Name":  "EatClub",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/eatclub",
+                                        "Funding Type":  "Series A",
+                                        "Money Raised":  "18200000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "11678937",
+                                        "Announced Date":  "2025-05-16",
+                                        "Funding Stage":  "Early Stage Venture",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "EatClub operates a digital platform that connects consumers with restaurants offering time-based promotions.",
+                                        "Organization Industries":  "Food and Beverage, Hospitality, Software, Travel",
+                                        "Organization Website":  "https://eatclub.com.au",
+                                        "Organization Revenue Range":  "$1B to $10B",
+                                        "Total Funding Amount":  "82878937",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "82878937",
+                                        "Funding Status":  "Early Stage Venture",
+                                        "Lead Investors":  "CoAct Capital",
+                                        "Investor Names":  "CoAct Capital, Gandel Invest, Les Szekely, Marbruck, Platform Advisory Partners",
+                                        "Number of Investors":  "5",
+                                        "Number of Partner Investors":  "1"
+                                    },
+                 "investee_name_raw":  "EatClub",
+                 "org_location_raw":  "Melbourne, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://eatclub.com.au",
+                 "org_industries_raw":  "Food and Beverage, Hospitality, Software, Travel",
+                 "round_type_raw":  "Series A",
+                 "round_stage":  "series_a",
+                 "funding_stage_raw":  "Early Stage Venture",
+                 "announced_date":  "2025-05-16",
+                 "money_raised_raw":  "18200000",
+                 "amount":  18200000,
+                 "currency":  "AUD",
+                 "amount_usd":  11678937,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "82878937",
+                 "investor_names_raw":  "CoAct Capital, Gandel Invest, Les Szekely, Marbruck, Platform Advisory Partners",
+                 "lead_investor_names_raw":  "CoAct Capital",
+                 "imported_at":  "2026-07-30T14:07:05.4346733+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "verified_secondary",
+                 "verification_source_url":  "https://internetretailing.com.au/eatclub-wins-funding-for-uk-expansion/",
+                 "verification_notes":  "Public coverage verifies A$18.2m Series A led by Co:Act with Gandel, Marbruck, Les Szekely and Platform Advisory participation.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:eatclub"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:eatclub-series-a--b06e242e"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Coverage is dated 19 May 2025; import is dated 16 May 2025."
+                              ]
+               }
+}

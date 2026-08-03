@@ -1,0 +1,38 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investor_team_members",
+    "record_key":  "investor_team_member:azolla-ventures:johanna-wolfson",
+    "operation":  "upsert",
+    "data":  {
+                 "contact_id":  null,
+                 "first_name":  "Johanna",
+                 "last_name":  "Wolfson",
+                 "role_title":  "Co-Founder and General Partner",
+                 "seniority":  "general_partner",
+                 "linkedin_url":  null,
+                 "claimed_focus":  [
+                                       "climate technology",
+                                       "deep decarbonisation"
+                                   ],
+                 "bio_summary":  "Co-founder and general partner of Azolla Ventures.",
+                 "source_url":  "https://azollaventures.com/about-us/",
+                 "retrieved_at":  "2026-07-30",
+                 "is_active":  true
+             },
+    "refs":  {
+                 "investor_key":  "investor:azolla-ventures",
+                 "contact_key":  null
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:recent-deal2026-7-30:investor-team-audit",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "person_linkedin_not_verified"
+                              ]
+               }
+}

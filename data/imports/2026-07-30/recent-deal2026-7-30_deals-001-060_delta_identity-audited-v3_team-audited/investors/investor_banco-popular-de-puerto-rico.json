@@ -1,0 +1,49 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investors",
+    "record_key":  "investor:banco-popular-de-puerto-rico",
+    "operation":  "upsert",
+    "data":  {
+                 "canonical_name":  "Banco Popular de Puerto Rico",
+                 "aliases":  [
+
+                             ],
+                 "investor_type":  "bank_lender",
+                 "investor_subtype":  "bank_lender",
+                 "eligibility_mode":  "none",
+                 "classification_confidence":  "high",
+                 "classification_evidence_urls":  [
+                                                      "https://www.popular.com/",
+                                                      "https://www.linkedin.com/company/banco-popular-de-puerto-rico"
+                                                  ],
+                 "classified_at":  "2026-07-30",
+                 "website_url":  "https://www.popular.com/",
+                 "linkedin_url":  "https://www.linkedin.com/company/banco-popular-de-puerto-rico",
+                 "hq_country":  "US",
+                 "hq_state":  "Puerto Rico",
+                 "hq_city":  "San Juan",
+                 "offices":  [
+
+                             ],
+                 "status":  "active",
+                 "merged_into_id":  null,
+                 "review_status":  "reviewed",
+                 "last_reviewed_at":  "2026-07-30",
+                 "last_reviewed_by":  "codex-investor-identity-audit"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:scoped:recent-deal2026-7-30_deals-001-060",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

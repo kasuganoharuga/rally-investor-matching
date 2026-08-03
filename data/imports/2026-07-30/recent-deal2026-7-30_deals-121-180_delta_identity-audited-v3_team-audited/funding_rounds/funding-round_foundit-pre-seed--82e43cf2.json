@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:foundit-pre-seed--82e43cf2",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "foundit-pre-seed--82e43cf2",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/foundit-pre-seed--82e43cf2",
+                 "source_payload":  {
+                                        "Transaction Name":  "Pre Seed Round - FoundIt",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/foundit-pre-seed--82e43cf2",
+                                        "Organization Location":  "South Melbourne, Victoria, Australia, Oceania",
+                                        "Organization Name":  "FoundIt",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/foundit",
+                                        "Funding Type":  "Pre-Seed",
+                                        "Money Raised":  "2000000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "1299060",
+                                        "Announced Date":  "2025-06-24",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "FoundIt is a property technology platform designed to make buying property easier, faster, and smarter.",
+                                        "Organization Industries":  "Asset Management, PropTech, Real Estate Brokerage",
+                                        "Organization Website":  "https://foundit.property/",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "2000000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "1299060",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "Daniel Bignold, Frank Greeff, Jacques Greeff, Peter Matthews",
+                                        "Number of Investors":  "4",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "FoundIt",
+                 "org_location_raw":  "South Melbourne, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://foundit.property/",
+                 "org_industries_raw":  "Asset Management, PropTech, Real Estate Brokerage",
+                 "round_type_raw":  "Pre-Seed",
+                 "round_stage":  "pre_seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-06-24",
+                 "money_raised_raw":  "2000000",
+                 "amount":  2000000,
+                 "currency":  "AUD",
+                 "amount_usd":  1299060,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "2000000",
+                 "investor_names_raw":  "Daniel Bignold, Frank Greeff, Jacques Greeff, Peter Matthews",
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:05.2699748+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "verified_company_index",
+                 "verification_source_url":  "https://foundit.property/media",
+                 "verification_notes":  "Company media index links multiple reports confirming a A$2m pre-seed announced 24 Jun 2025.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:foundit"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:foundit-pre-seed--82e43cf2"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact angel list is not shown on the company media index."
+                              ]
+               }
+}

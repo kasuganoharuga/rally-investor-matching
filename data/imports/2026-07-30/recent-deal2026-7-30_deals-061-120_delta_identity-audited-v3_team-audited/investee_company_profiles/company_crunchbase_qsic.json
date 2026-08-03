@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:qsic",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Qsic",
+                 "website_url":  "https://www.getqsic.com",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "Victoria",
+                 "hq_city":  "Melbourne",
+                 "is_anz":  true,
+                 "sector_primary":  "retail_media",
+                 "sector_secondary":  "advertising_technology",
+                 "use_case_primary":  "in_store_experience_and_media_platform",
+                 "use_case_secondary":  [
+                                            "retail_audio",
+                                            "advertising_personalisation"
+                                        ],
+                 "customer_type":  "enterprise",
+                 "business_model":  "media_and_platform_fees",
+                 "sales_motion":  "enterprise_top_down",
+                 "technology_depth":  "applied_ai",
+                 "ai_relevance":  "ai_enabled",
+                 "ai_usage_type":  "personalisation",
+                 "ai_core_or_enabler":  "feature_layer",
+                 "company_summary":  "Qsic is an AI driven experience platform currently focused on the retail and QSR industries.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/qsic-series-b--7c909e26",
+                                     "https://www.crunchbase.com/organization/qsic",
+                                     "https://www.getqsic.com"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:qsic-series-b--7c909e26"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

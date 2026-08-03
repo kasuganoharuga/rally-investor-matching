@@ -1,0 +1,57 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investor_web_profiles",
+    "record_key":  "investor_web_profile:capital-49:2026-07-30",
+    "operation":  "upsert",
+    "data":  {
+                 "source_urls":  [
+                                     "https://www.capital49.com/",
+                                     "https://www.linkedin.com/company/capital-49"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "website_status":  "ok",
+                 "raw_content_hash":  null,
+                 "raw_content_ref":  null,
+                 "extraction_model":  "fixed-ai-workflow",
+                 "extraction_version":  "analysis-window-1.0.0",
+                 "confidence":  "high",
+                 "claimed_thesis":  null,
+                 "claimed_stages":  [
+
+                                    ],
+                 "claimed_sectors":  [
+
+                                     ],
+                 "claimed_geographies":  [
+
+                                         ],
+                 "claimed_business_models":  [
+
+                                             ],
+                 "claimed_cheque_min":  null,
+                 "claimed_cheque_max":  null,
+                 "claimed_cheque_currency":  null,
+                 "contact_emails":  [
+
+                                    ],
+                 "application_url":  null,
+                 "contact_notes":  "The exact Capital 49 company page links to the already verified official fund website.",
+                 "is_current":  true,
+                 "superseded_at":  null
+             },
+    "refs":  {
+                 "investor_key":  "investor:capital-49"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:scoped:recent-deal2026-7-30_deals-061-120",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Headquarters state or region is not separately disclosed or is not applicable to the jurisdiction."
+                              ]
+               }
+}

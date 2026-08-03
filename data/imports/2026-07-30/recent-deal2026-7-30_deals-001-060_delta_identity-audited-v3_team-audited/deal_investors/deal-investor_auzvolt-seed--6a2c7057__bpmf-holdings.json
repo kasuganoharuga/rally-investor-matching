@@ -1,0 +1,31 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "deal_investors",
+    "record_key":  "deal_investor:crunchbase:auzvolt-seed--6a2c7057:bpmf-holdings",
+    "operation":  "upsert",
+    "data":  {
+                 "raw_name":  "BPMF Holdings",
+                 "role":  "lead",
+                 "participation_status":  "unknown",
+                 "resolution":  "resolved",
+                 "resolution_confidence":  "high",
+                 "identity_resolution":  "new_investor"
+             },
+    "refs":  {
+                 "deal_key":  "funding_round:crunchbase:auzvolt-seed--6a2c7057",
+                 "investor_key":  "investor:bpmf-holdings",
+                 "raw_investor_candidate_key":  "raw_investor_candidate:bpmf-holdings"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:auzvolt-seed--6a2c7057"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

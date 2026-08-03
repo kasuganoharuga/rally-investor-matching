@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:elita-6ce9-pre-seed--81d15817",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "elita-6ce9-pre-seed--81d15817",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/elita-6ce9-pre-seed--81d15817",
+                 "source_payload":  {
+                                        "Transaction Name":  "Pre Seed Round - Elita",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/elita-6ce9-pre-seed--81d15817",
+                                        "Organization Location":  "Melbourne, Victoria, Australia, Oceania",
+                                        "Organization Name":  "Elita",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/elita-6ce9",
+                                        "Funding Type":  "Pre-Seed",
+                                        "Money Raised":  "1100000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "680901",
+                                        "Announced Date":  "2025-01-17",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Elita platform combines dog stem cells with health data to help predict, prevent, and treat disease before symptoms appear.",
+                                        "Organization Industries":  "Health Care, Veterinary",
+                                        "Organization Website":  "https://www.elita.pet",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "1100000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "680901",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "LaunchVic",
+                                        "Investor Names":  "Archangel Ventures, LaunchVic, M8 Ventures, Side Stage Ventures, Startmate, XA Network",
+                                        "Number of Investors":  "6",
+                                        "Number of Partner Investors":  "1"
+                                    },
+                 "investee_name_raw":  "Elita",
+                 "org_location_raw":  "Melbourne, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://www.elita.pet",
+                 "org_industries_raw":  "Health Care, Veterinary",
+                 "round_type_raw":  "Pre-Seed",
+                 "round_stage":  "pre_seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-01-17",
+                 "money_raised_raw":  "1100000",
+                 "amount":  1100000,
+                 "currency":  "AUD",
+                 "amount_usd":  680901,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "1100000",
+                 "investor_names_raw":  "Archangel Ventures, LaunchVic, M8 Ventures, Side Stage Ventures, Startmate, XA Network",
+                 "lead_investor_names_raw":  "LaunchVic",
+                 "imported_at":  "2026-07-30T14:07:05.4526727+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "unverified_publicly",
+                 "verification_source_url":  "https://www.crunchbase.com/funding_round/elita-6ce9-pre-seed--81d15817",
+                 "verification_notes":  "No exact independent public announcement was located in this pass. The imported transaction is retained for manual follow-up.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:elita-6ce9"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:elita-6ce9-pre-seed--81d15817"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact round amount/date/stage/investors not independently verified."
+                              ]
+               }
+}

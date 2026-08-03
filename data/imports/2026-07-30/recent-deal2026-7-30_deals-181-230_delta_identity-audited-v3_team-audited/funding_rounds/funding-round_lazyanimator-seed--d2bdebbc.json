@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:lazyanimator-seed--d2bdebbc",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "lazyanimator-seed--d2bdebbc",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/lazyanimator-seed--d2bdebbc",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - LazyAnimator",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/lazyanimator-seed--d2bdebbc",
+                                        "Organization Location":  "Gawler, South Australia, Australia, Oceania",
+                                        "Organization Name":  "LazyAnimator",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/lazyanimator",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "165000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "165000",
+                                        "Announced Date":  "2025-01-24",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "LazyAnimator is built to streamline that process, making high-quality animations accessible and easy to create.",
+                                        "Organization Industries":  "Animation, Video, Web Design",
+                                        "Organization Website":  "https://lazyanimator.space/",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "165000",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "165000",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "",
+                                        "Number of Investors":  "",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "LazyAnimator",
+                 "org_location_raw":  "Gawler, South Australia, Australia, Oceania",
+                 "org_website_raw":  "https://lazyanimator.space/",
+                 "org_industries_raw":  "Animation, Video, Web Design",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-01-24",
+                 "money_raised_raw":  "165000",
+                 "amount":  165000,
+                 "currency":  "USD",
+                 "amount_usd":  165000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "165000",
+                 "investor_names_raw":  null,
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:05.5221827+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "unverified_publicly",
+                 "verification_source_url":  "https://www.crunchbase.com/funding_round/lazyanimator-seed--d2bdebbc",
+                 "verification_notes":  "No exact independent public announcement was located in this pass. The imported transaction is retained for manual follow-up.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:lazyanimator"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:lazyanimator-seed--d2bdebbc"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact round amount/date/stage/investors not independently verified."
+                              ]
+               }
+}

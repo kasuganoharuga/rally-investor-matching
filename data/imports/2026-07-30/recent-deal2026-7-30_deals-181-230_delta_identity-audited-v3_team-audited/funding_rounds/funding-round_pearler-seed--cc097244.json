@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:pearler-seed--cc097244",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "pearler-seed--cc097244",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/pearler-seed--cc097244",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Pearler",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/pearler-seed--cc097244",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "Pearler",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/pearler",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "3000000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "1894987",
+                                        "Announced Date":  "2025-02-13",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Pearler is an Aussie startup that simplifies investing for financial independence.",
+                                        "Organization Industries":  "Finance, Financial Services, FinTech",
+                                        "Organization Website":  "https://www.pearler.com/",
+                                        "Organization Revenue Range":  "$1M to $10M",
+                                        "Total Funding Amount":  "9709375",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "9709375",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Portage Ventures",
+                                        "Investor Names":  "Archangel Ventures, Portage Ventures",
+                                        "Number of Investors":  "2",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "Pearler",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://www.pearler.com/",
+                 "org_industries_raw":  "Finance, Financial Services, FinTech",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-02-13",
+                 "money_raised_raw":  "3000000",
+                 "amount":  3000000,
+                 "currency":  "AUD",
+                 "amount_usd":  1894987,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "9709375",
+                 "investor_names_raw":  "Archangel Ventures, Portage Ventures",
+                 "lead_investor_names_raw":  "Portage Ventures",
+                 "imported_at":  "2026-07-30T14:07:05.7063622+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "round_identity_conflict",
+                 "verification_source_url":  "https://pearler.com/explore/learn/blog/seed-round",
+                 "verification_notes":  "Pearler鈥檚 company announcement verifies a A$7.8m Series Seed led by Portage with Archangel and TEN13 in July 2022.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:pearler"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:pearler-seed--cc097244"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "No exact A$3m February 2025 round was located; imported record may be a later tranche or database error."
+                              ]
+               }
+}

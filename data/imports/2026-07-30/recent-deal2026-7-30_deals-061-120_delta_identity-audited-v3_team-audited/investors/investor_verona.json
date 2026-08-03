@@ -1,0 +1,50 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investors",
+    "record_key":  "investor:verona",
+    "operation":  "upsert",
+    "data":  {
+                 "canonical_name":  "VERONA",
+                 "aliases":  [
+
+                             ],
+                 "investor_type":  "other",
+                 "investor_subtype":  "unclassified",
+                 "eligibility_mode":  "unknown",
+                 "classification_confidence":  "high",
+                 "classification_evidence_urls":  [
+                                                      "https://verona.dev/",
+                                                      "https://www.linkedin.com/company/verona-org",
+                                                      "https://www.globenewswire.com/news-release/2026/06/17/3313709/0/en/xion-rebrands-to-verona-as-flagship-app-earnos-announces-18-5-million-raise.html"
+                                                  ],
+                 "classified_at":  "2026-07-30",
+                 "website_url":  "https://verona.dev/",
+                 "linkedin_url":  "https://www.linkedin.com/company/verona-org",
+                 "hq_country":  "US",
+                 "hq_state":  "New York",
+                 "hq_city":  "New York",
+                 "offices":  [
+
+                             ],
+                 "status":  "active",
+                 "merged_into_id":  null,
+                 "review_status":  "reviewed",
+                 "last_reviewed_at":  "2026-07-30",
+                 "last_reviewed_by":  "codex-investor-identity-gap-supplement"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:scoped:recent-deal2026-7-30_deals-061-120",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

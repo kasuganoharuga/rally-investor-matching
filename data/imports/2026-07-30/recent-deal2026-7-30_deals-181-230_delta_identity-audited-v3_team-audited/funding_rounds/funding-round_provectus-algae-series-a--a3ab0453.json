@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:provectus-algae-series-a--a3ab0453",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "provectus-algae-series-a--a3ab0453",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/provectus-algae-series-a--a3ab0453",
+                 "source_payload":  {
+                                        "Transaction Name":  "Series A - Provectus Algae",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/provectus-algae-series-a--a3ab0453",
+                                        "Organization Location":  "Noosaville, Queensland, Australia, Oceania",
+                                        "Organization Name":  "Provectus Algae",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/provectus-algae",
+                                        "Funding Type":  "Series A",
+                                        "Money Raised":  "10100000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "10100000",
+                                        "Announced Date":  "2025-07-22",
+                                        "Funding Stage":  "Early Stage Venture",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Provectus Algae is a biotechnology company specializing in the optimization of algae to produce high-value chemicals and biologics.",
+                                        "Organization Industries":  "Animal Feed, Biotechnology, Cosmetics, Food and Beverage, GreenTech, Sustainability, Therapeutics",
+                                        "Organization Website":  "https://provectusalgae.com/",
+                                        "Organization Revenue Range":  "$10M to $50M",
+                                        "Total Funding Amount":  "29856112",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "29856112",
+                                        "Funding Status":  "Early Stage Venture",
+                                        "Lead Investors":  "At One Ventures",
+                                        "Investor Names":  "At One Ventures, Hitachi Ventures, Methane Mitigation, Mort \u0026 Co",
+                                        "Number of Investors":  "4",
+                                        "Number of Partner Investors":  "2"
+                                    },
+                 "investee_name_raw":  "Provectus Algae",
+                 "org_location_raw":  "Noosaville, Queensland, Australia, Oceania",
+                 "org_website_raw":  "https://provectusalgae.com/",
+                 "org_industries_raw":  "Animal Feed, Biotechnology, Cosmetics, Food and Beverage, GreenTech, Sustainability, Therapeutics",
+                 "round_type_raw":  "Series A",
+                 "round_stage":  "series_a",
+                 "funding_stage_raw":  "Early Stage Venture",
+                 "announced_date":  "2025-07-22",
+                 "money_raised_raw":  "10100000",
+                 "amount":  10100000,
+                 "currency":  "USD",
+                 "amount_usd":  10100000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "29856112",
+                 "investor_names_raw":  "At One Ventures, Hitachi Ventures, Methane Mitigation, Mort \u0026 Co",
+                 "lead_investor_names_raw":  "At One Ventures",
+                 "imported_at":  "2026-07-30T14:07:05.7571786+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "verified_primary",
+                 "verification_source_url":  "https://finance.yahoo.com/news/provectus-algae-raises-12-6m-140500093.html",
+                 "verification_notes":  "Company-issued Business Wire release verifies US$10.1m Series A plus US$2.5m Australian grant, led by At One with Methane Mitigation, Mort \u0026 Co and Hitachi.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:provectus-algae"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:provectus-algae-series-a--a3ab0453"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

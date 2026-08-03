@@ -1,0 +1,28 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_external_ids",
+    "record_key":  "investee_external_id:crunchbase:staples-vr",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "external_id":  "staples-vr",
+                 "external_url":  "https://www.crunchbase.com/organization/staples-vr",
+                 "first_seen_at":  "2026-07-30T14:07:05.2470443+09:30",
+                 "last_seen_at":  "2026-07-30T14:07:05.2470443+09:30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:staples-vr"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:staples-vr-seed--b7c7fdee"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

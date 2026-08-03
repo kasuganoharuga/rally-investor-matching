@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:carbon-asset-solutions",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Carbon Asset Solutions",
+                 "website_url":  "http://www.carbonassetsolutions.com",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "Queensland",
+                 "hq_city":  "Brisbane",
+                 "is_anz":  true,
+                 "sector_primary":  "climate_finance",
+                 "sector_secondary":  "carbon_markets",
+                 "use_case_primary":  "carbon_credit_asset_management",
+                 "use_case_secondary":  [
+                                            "carbon_project_development",
+                                            "sustainable_investment_access"
+                                        ],
+                 "customer_type":  "enterprise",
+                 "business_model":  "project_and_transaction_fees",
+                 "sales_motion":  "enterprise_top_down",
+                 "technology_depth":  "climate_data_platform",
+                 "ai_relevance":  "none",
+                 "ai_usage_type":  "not_applicable",
+                 "ai_core_or_enabler":  "not_core",
+                 "company_summary":  "Carbon Asset Solutions is a technology platform that operates in the Carbon Credit and sustainable investment sectors.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/carbon-asset-solutions-series-a--47e7acbd",
+                                     "https://www.crunchbase.com/organization/carbon-asset-solutions",
+                                     "http://www.carbonassetsolutions.com"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "medium"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:carbon-asset-solutions-series-a--47e7acbd"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:project-manda-pre-seed--e9ee403e",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "project-manda-pre-seed--e9ee403e",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/project-manda-pre-seed--e9ee403e",
+                 "source_payload":  {
+                                        "Transaction Name":  "Pre Seed Round - Project Manda",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/project-manda-pre-seed--e9ee403e",
+                                        "Organization Location":  "Melbourne, Victoria, Australia, Oceania",
+                                        "Organization Name":  "Project Manda",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/project-manda",
+                                        "Funding Type":  "Pre-Seed",
+                                        "Money Raised":  "2000000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "1260000",
+                                        "Announced Date":  "2025-03-27",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Project Manda is a data infrastructure and analytics that improves productivity across your whole business with game changing insights.",
+                                        "Organization Industries":  "Meeting Software, Productivity Tools",
+                                        "Organization Website":  "https://projectmanda.com",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "2000000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "1260000",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Black Sheep Capital, Tech Labs Capital",
+                                        "Investor Names":  "Black Sheep Capital, Paul Limbrey, Peter Yunghanns, Tech Labs Capital",
+                                        "Number of Investors":  "4",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "Project Manda",
+                 "org_location_raw":  "Melbourne, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://projectmanda.com",
+                 "org_industries_raw":  "Meeting Software, Productivity Tools",
+                 "round_type_raw":  "Pre-Seed",
+                 "round_stage":  "pre_seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-03-27",
+                 "money_raised_raw":  "2000000",
+                 "amount":  2000000,
+                 "currency":  "AUD",
+                 "amount_usd":  1260000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "2000000",
+                 "investor_names_raw":  "Black Sheep Capital, Paul Limbrey, Peter Yunghanns, Tech Labs Capital",
+                 "lead_investor_names_raw":  "Black Sheep Capital, Tech Labs Capital",
+                 "imported_at":  "2026-07-30T14:07:04.7698548+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "verified_secondary",
+                 "verification_source_url":  "https://www.smartcompany.com.au/startupsmart/project-manda-raises-2-million-cull-pointless-work-meetings/",
+                 "verification_notes":  "Public coverage verifies A$2m pre-seed and the imported investor group on 27 Mar 2025.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:project-manda"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:project-manda-pre-seed--e9ee403e"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

@@ -1,0 +1,49 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investors",
+    "record_key":  "investor:ten-coves-capital",
+    "operation":  "upsert",
+    "data":  {
+                 "canonical_name":  "Ten Coves Capital",
+                 "aliases":  [
+
+                             ],
+                 "investor_type":  "private_equity",
+                 "investor_subtype":  "private_equity",
+                 "eligibility_mode":  "none",
+                 "classification_confidence":  "high",
+                 "classification_evidence_urls":  [
+                                                      "https://www.tencoves.com/",
+                                                      "https://www.linkedin.com/company/ten-coves-capital"
+                                                  ],
+                 "classified_at":  "2026-07-30",
+                 "website_url":  "https://www.tencoves.com/",
+                 "linkedin_url":  "https://www.linkedin.com/company/ten-coves-capital",
+                 "hq_country":  "US",
+                 "hq_state":  "Connecticut",
+                 "hq_city":  "Darien",
+                 "offices":  [
+
+                             ],
+                 "status":  "active",
+                 "merged_into_id":  null,
+                 "review_status":  "reviewed",
+                 "last_reviewed_at":  "2026-07-30",
+                 "last_reviewed_by":  "codex-investor-identity-audit"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:scoped:recent-deal2026-7-30_deals-061-120",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

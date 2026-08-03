@@ -1,0 +1,28 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_external_ids",
+    "record_key":  "investee_external_id:crunchbase:calctree",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "external_id":  "calctree",
+                 "external_url":  "https://www.crunchbase.com/organization/calctree",
+                 "first_seen_at":  "2026-07-30T14:07:04.6941328+09:30",
+                 "last_seen_at":  "2026-07-30T14:07:04.6941328+09:30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:calctree"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:calctree-pre-seed--97b5b89b"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

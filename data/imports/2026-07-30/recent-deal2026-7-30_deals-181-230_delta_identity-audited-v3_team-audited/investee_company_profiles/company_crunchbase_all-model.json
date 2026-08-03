@@ -1,0 +1,58 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:all-model",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "All Model",
+                 "website_url":  "https://allmodel.company",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "Victoria",
+                 "hq_city":  "Mulgrave",
+                 "is_anz":  true,
+                 "sector_primary":  "biotechnology",
+                 "sector_secondary":  "computational_science_and_pharmaceuticals",
+                 "use_case_primary":  "inherited_retinal_disease_therapeutics",
+                 "use_case_secondary":  [
+                                            "opsin_protein_therapeutics",
+                                            "universal_mathematical_modelling"
+                                        ],
+                 "customer_type":  "healthcare_and_research",
+                 "business_model":  "drug_development_and_licensing",
+                 "sales_motion":  "partnerships_and_licensing",
+                 "technology_depth":  "deep_tech_research",
+                 "ai_relevance":  "not_ai",
+                 "ai_usage_type":  "none",
+                 "ai_core_or_enabler":  "none",
+                 "company_summary":  "All Model is a hybrid fintech and pharmaceuticals manufacturing company.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/all-model-seed--f0723a8a",
+                                     "https://www.crunchbase.com/organization/all-model",
+                                     "https://allmodel.company",
+                                     "https://allmodel.company/about/",
+                                     "https://allmodel.company/pharmaceutical/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:all-model-seed--f0723a8a"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

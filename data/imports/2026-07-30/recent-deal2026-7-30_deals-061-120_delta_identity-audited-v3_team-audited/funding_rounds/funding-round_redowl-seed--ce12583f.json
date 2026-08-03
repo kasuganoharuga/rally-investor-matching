@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:redowl-seed--ce12583f",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "redowl-seed--ce12583f",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/redowl-seed--ce12583f",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - RedOwl",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/redowl-seed--ce12583f",
+                                        "Organization Location":  "Richmond, Victoria, Australia, Oceania",
+                                        "Organization Name":  "RedOwl",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/redowl",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "1000000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "1000000",
+                                        "Announced Date":  "2025-06-01",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "RedOwl is a saas company that develops artificial intelligence systems for accounts payable workflows for enterprise finance departments.",
+                                        "Organization Industries":  "Agentic AI, Artificial Intelligence (AI), FinTech, SaaS",
+                                        "Organization Website":  "https://www.redowl.ai",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "1000000",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "1000000",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Saltwater Fund",
+                                        "Investor Names":  "Saltwater Fund",
+                                        "Number of Investors":  "1",
+                                        "Number of Partner Investors":  "2"
+                                    },
+                 "investee_name_raw":  "RedOwl",
+                 "org_location_raw":  "Richmond, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://www.redowl.ai",
+                 "org_industries_raw":  "Agentic AI, Artificial Intelligence (AI), FinTech, SaaS",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-06-01",
+                 "money_raised_raw":  "1000000",
+                 "amount":  1000000,
+                 "currency":  "USD",
+                 "amount_usd":  1000000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "1000000",
+                 "investor_names_raw":  "Saltwater Fund",
+                 "lead_investor_names_raw":  "Saltwater Fund",
+                 "imported_at":  "2026-07-30T14:07:04.7248414+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "round_identity_conflict",
+                 "verification_source_url":  "https://startupintros.com/news/2025-05-01-redowl-ai-seed",
+                 "verification_notes":  "A public record for a similarly named RedOwl reports US$1m on 1 May 2025 from Alchemist and CP Ventures.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:redowl"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:redowl-seed--ce12583f"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "This conflicts with the imported 1 Jun 2025 Saltwater-backed record and may be a namesake; manual identity review required."
+                              ]
+               }
+}

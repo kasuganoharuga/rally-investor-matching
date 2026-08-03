@@ -1,0 +1,50 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investors",
+    "record_key":  "investor:lord-pastoral",
+    "operation":  "upsert",
+    "data":  {
+                 "canonical_name":  "Lord Pastoral",
+                 "aliases":  [
+
+                             ],
+                 "investor_type":  "investment_firm",
+                 "investor_subtype":  "family_office",
+                 "eligibility_mode":  "none",
+                 "classification_confidence":  "high",
+                 "classification_evidence_urls":  [
+                                                      "http://lordandpenna.com/lp/index.html",
+                                                      "https://www.linkedin.com/company/lordpastoral"
+                                                  ],
+                 "classified_at":  "2026-07-30",
+                 "website_url":  "http://lordandpenna.com/lp/index.html",
+                 "linkedin_url":  "https://www.linkedin.com/company/lordpastoral",
+                 "hq_country":  "AU",
+                 "hq_state":  null,
+                 "hq_city":  null,
+                 "offices":  [
+
+                             ],
+                 "status":  "active",
+                 "merged_into_id":  null,
+                 "review_status":  "reviewed",
+                 "last_reviewed_at":  "2026-07-30",
+                 "last_reviewed_by":  "codex-investor-identity-audit"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:scoped:recent-deal2026-7-30_deals-001-060",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Headquarters state/region was not disclosed by the verified sources.",
+                                  "Headquarters city was not disclosed by the verified sources."
+                              ]
+               }
+}

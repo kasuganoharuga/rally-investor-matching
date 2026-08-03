@@ -1,0 +1,38 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investor_team_members",
+    "record_key":  "investor_team_member:stellar-ventures:david-anderman",
+    "operation":  "upsert",
+    "data":  {
+                 "contact_id":  null,
+                 "first_name":  "David",
+                 "last_name":  "Anderman",
+                 "role_title":  "Co-Founder and General Partner",
+                 "seniority":  "general_partner",
+                 "linkedin_url":  null,
+                 "claimed_focus":  [
+                                       "space technology",
+                                       "early stage"
+                                   ],
+                 "bio_summary":  "Co-founder and general partner of Stellar Ventures.",
+                 "source_url":  "https://svc.vc/",
+                 "retrieved_at":  "2026-07-30",
+                 "is_active":  true
+             },
+    "refs":  {
+                 "investor_key":  "investor:stellar-ventures",
+                 "contact_key":  null
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:recent-deal2026-7-30:investor-team-audit",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "person_linkedin_not_verified"
+                              ]
+               }
+}

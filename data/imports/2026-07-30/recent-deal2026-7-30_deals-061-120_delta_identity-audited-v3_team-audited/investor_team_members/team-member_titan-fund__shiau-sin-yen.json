@@ -1,0 +1,39 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investor_team_members",
+    "record_key":  "investor_team_member:titan-fund:shiau-sin-yen",
+    "operation":  "upsert",
+    "data":  {
+                 "contact_id":  null,
+                 "first_name":  "Shiau Sin",
+                 "last_name":  "Yen",
+                 "role_title":  "Co-Founder and Managing Partner",
+                 "seniority":  "managing_partner",
+                 "linkedin_url":  null,
+                 "claimed_focus":  [
+                                       "blockchain",
+                                       "Web3",
+                                       "early-stage venture capital"
+                                   ],
+                 "bio_summary":  "Co-founder and managing partner of CMCC Global\u0027s Titan Fund.",
+                 "source_url":  "https://www.titan.fund/",
+                 "retrieved_at":  "2026-07-30",
+                 "is_active":  true
+             },
+    "refs":  {
+                 "investor_key":  "investor:titan-fund",
+                 "contact_key":  null
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:recent-deal2026-7-30:investor-team-audit",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "person_linkedin_not_verified"
+                              ]
+               }
+}

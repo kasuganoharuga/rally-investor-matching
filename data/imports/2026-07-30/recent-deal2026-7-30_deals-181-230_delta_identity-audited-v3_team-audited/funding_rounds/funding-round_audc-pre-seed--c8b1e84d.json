@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:audc-pre-seed--c8b1e84d",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "audc-pre-seed--c8b1e84d",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/audc-pre-seed--c8b1e84d",
+                 "source_payload":  {
+                                        "Transaction Name":  "Pre Seed Round - AUDC",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/audc-pre-seed--c8b1e84d",
+                                        "Organization Location":  "Melbourne, Victoria, Australia, Oceania",
+                                        "Organization Name":  "AUDC",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/audc",
+                                        "Funding Type":  "Pre-Seed",
+                                        "Money Raised":  "250000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "155591",
+                                        "Announced Date":  "2025-04-10",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "7500000",
+                                        "Pre-Money Valuation Currency":  "AUD",
+                                        "Pre-Money Valuation (in USD)":  "4667738",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Payment: Australia\u0027s licensed AUD stablecoin.",
+                                        "Organization Industries":  "Blockchain, Cryptocurrency, Finance, Information Technology, Internet, Payments, Software",
+                                        "Organization Website":  "https://www.audd.digital/",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "10100000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "6757451",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "",
+                                        "Number of Investors":  "",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "AUDC",
+                 "org_location_raw":  "Melbourne, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://www.audd.digital/",
+                 "org_industries_raw":  "Blockchain, Cryptocurrency, Finance, Information Technology, Internet, Payments, Software",
+                 "round_type_raw":  "Pre-Seed",
+                 "round_stage":  "pre_seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-04-10",
+                 "money_raised_raw":  "250000",
+                 "amount":  250000,
+                 "currency":  "AUD",
+                 "amount_usd":  155591,
+                 "pre_money_valuation_raw":  "7500000",
+                 "pre_money_valuation":  7500000,
+                 "valuation_currency":  "AUD",
+                 "valuation_usd":  4667738,
+                 "equity_only":  true,
+                 "total_funding_raw":  "10100000",
+                 "investor_names_raw":  null,
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:05.6678669+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "unverified_publicly",
+                 "verification_source_url":  "https://www.crunchbase.com/funding_round/audc-pre-seed--c8b1e84d",
+                 "verification_notes":  "No exact independent public announcement was located in this pass. The imported transaction is retained for manual follow-up.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:audc"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:audc-pre-seed--c8b1e84d"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact round amount/date/stage/investors not independently verified."
+                              ]
+               }
+}

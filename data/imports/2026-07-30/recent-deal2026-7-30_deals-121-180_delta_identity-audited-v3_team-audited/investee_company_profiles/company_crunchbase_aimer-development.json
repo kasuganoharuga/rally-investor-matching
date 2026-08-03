@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:aimer-development",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Aimer Development",
+                 "website_url":  "https://www.aimer-farming.com",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "NZ",
+                 "hq_state":  "Waikato",
+                 "hq_city":  "Hamilton",
+                 "is_anz":  true,
+                 "sector_primary":  "agricultural_technology",
+                 "sector_secondary":  "pasture_management",
+                 "use_case_primary":  "ai_pasture_management",
+                 "use_case_secondary":  [
+                                            "grazing_optimisation",
+                                            "farm_decision_support"
+                                        ],
+                 "customer_type":  "enterprise",
+                 "business_model":  "subscription_saas",
+                 "sales_motion":  "enterprise_top_down",
+                 "technology_depth":  "applied_ai",
+                 "ai_relevance":  "ai_native",
+                 "ai_usage_type":  "analytics_prediction",
+                 "ai_core_or_enabler":  "core_product",
+                 "company_summary":  "Aimer Farming is an agritech company developing AI-powered tools to assist farmers in optimizing pasture management.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/aimer-development-seed--6e181ef9",
+                                     "https://www.crunchbase.com/organization/aimer-development",
+                                     "https://www.aimer-farming.com"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:aimer-development-seed--6e181ef9"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

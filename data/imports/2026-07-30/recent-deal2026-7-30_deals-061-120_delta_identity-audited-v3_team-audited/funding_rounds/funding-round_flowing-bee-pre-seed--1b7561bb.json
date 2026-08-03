@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:flowing-bee-pre-seed--1b7561bb",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "flowing-bee-pre-seed--1b7561bb",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/flowing-bee-pre-seed--1b7561bb",
+                 "source_payload":  {
+                                        "Transaction Name":  "Pre Seed Round - Flowing Bee",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/flowing-bee-pre-seed--1b7561bb",
+                                        "Organization Location":  "Melbourne, Victoria, Australia, Oceania",
+                                        "Organization Name":  "Flowing Bee",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/flowing-bee",
+                                        "Funding Type":  "Pre-Seed",
+                                        "Money Raised":  "1600000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "1005594",
+                                        "Announced Date":  "2025-02-05",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Your ultimate customer-led marketing engine",
+                                        "Organization Industries":  "Advertising, Brand Marketing, Business Intelligence, Marketing, SaaS, Software",
+                                        "Organization Website":  "https://flowingbee.com/",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "1620000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "1018844",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Archangel Ventures",
+                                        "Investor Names":  "Antler, Archangel Ventures, Genesis Pre-Seed Fund, LaunchVic, M8 Ventures",
+                                        "Number of Investors":  "5",
+                                        "Number of Partner Investors":  "5"
+                                    },
+                 "investee_name_raw":  "Flowing Bee",
+                 "org_location_raw":  "Melbourne, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://flowingbee.com/",
+                 "org_industries_raw":  "Advertising, Brand Marketing, Business Intelligence, Marketing, SaaS, Software",
+                 "round_type_raw":  "Pre-Seed",
+                 "round_stage":  "pre_seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-02-05",
+                 "money_raised_raw":  "1600000",
+                 "amount":  1600000,
+                 "currency":  "AUD",
+                 "amount_usd":  1005594,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "1620000",
+                 "investor_names_raw":  "Antler, Archangel Ventures, Genesis Pre-Seed Fund, LaunchVic, M8 Ventures",
+                 "lead_investor_names_raw":  "Archangel Ventures",
+                 "imported_at":  "2026-07-30T14:07:04.5440606+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "partially_verified",
+                 "verification_source_url":  "https://flowingbee.com/insights",
+                 "verification_notes":  "Company press index reports a March 2025 A$1.6m pre-seed covered by Startup Daily.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:flowing-bee"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:flowing-bee-pre-seed--1b7561bb"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Imported date 5 Feb 2025 was not confirmed by the cited page."
+                              ]
+               }
+}

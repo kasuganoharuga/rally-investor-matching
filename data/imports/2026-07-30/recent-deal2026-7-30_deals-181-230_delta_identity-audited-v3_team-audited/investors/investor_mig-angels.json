@@ -1,0 +1,48 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investors",
+    "record_key":  "investor:mig-angels",
+    "operation":  "upsert",
+    "data":  {
+                 "canonical_name":  "MIG Angels",
+                 "aliases":  [
+
+                             ],
+                 "investor_type":  "angel_group",
+                 "investor_subtype":  "angel_network",
+                 "eligibility_mode":  "none",
+                 "classification_confidence":  "medium",
+                 "classification_evidence_urls":  [
+                                                      "https://www.thefactorynz.co.nz/"
+                                                  ],
+                 "classified_at":  "2026-07-30",
+                 "website_url":  "https://www.thefactorynz.co.nz/",
+                 "linkedin_url":  null,
+                 "hq_country":  "NZ",
+                 "hq_state":  "Manawatu-Whanganui",
+                 "hq_city":  "Palmerston North",
+                 "offices":  [
+
+                             ],
+                 "status":  "active",
+                 "merged_into_id":  null,
+                 "review_status":  "needs_more_data",
+                 "last_reviewed_at":  "2026-07-30",
+                 "last_reviewed_by":  "codex-investor-identity-audit"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:scoped:recent-deal2026-7-30_deals-181-230",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "No unique official LinkedIn company profile could be confirmed; namesake results were rejected."
+                              ]
+               }
+}

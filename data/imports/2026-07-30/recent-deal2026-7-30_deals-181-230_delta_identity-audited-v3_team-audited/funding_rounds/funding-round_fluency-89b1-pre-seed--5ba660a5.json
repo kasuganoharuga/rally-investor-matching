@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:fluency-89b1-pre-seed--5ba660a5",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "fluency-89b1-pre-seed--5ba660a5",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/fluency-89b1-pre-seed--5ba660a5",
+                 "source_payload":  {
+                                        "Transaction Name":  "Pre Seed Round - Fluency",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/fluency-89b1-pre-seed--5ba660a5",
+                                        "Organization Location":  "Melbourne, Victoria, Australia, Oceania",
+                                        "Organization Name":  "Fluency",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/fluency-89b1",
+                                        "Funding Type":  "Pre-Seed",
+                                        "Money Raised":  "1500000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "958020",
+                                        "Announced Date":  "2025-04-29",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Developer of an AI-powered SaaS platform for automatically generated documentation, task intelligence, and executive insights.",
+                                        "Organization Industries":  "Artificial Intelligence (AI), SaaS",
+                                        "Organization Website":  "https://usefluency.com/",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "7155414",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "7155414",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Brad Tabone",
+                                        "Investor Names":  "1MX AI, Archangel Ventures, Brad Tabone, Exhort Ventures, NextGen Ventures, Orvel Ventures, Swinburne University of Technology",
+                                        "Number of Investors":  "7",
+                                        "Number of Partner Investors":  "1"
+                                    },
+                 "investee_name_raw":  "Fluency",
+                 "org_location_raw":  "Melbourne, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://usefluency.com/",
+                 "org_industries_raw":  "Artificial Intelligence (AI), SaaS",
+                 "round_type_raw":  "Pre-Seed",
+                 "round_stage":  "pre_seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-04-29",
+                 "money_raised_raw":  "1500000",
+                 "amount":  1500000,
+                 "currency":  "AUD",
+                 "amount_usd":  958020,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "7155414",
+                 "investor_names_raw":  "1MX AI, Archangel Ventures, Brad Tabone, Exhort Ventures, NextGen Ventures, Orvel Ventures, Swinburne University of Technology",
+                 "lead_investor_names_raw":  "Brad Tabone",
+                 "imported_at":  "2026-07-30T14:07:05.5444838+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "unverified_publicly",
+                 "verification_source_url":  "https://www.crunchbase.com/funding_round/fluency-89b1-pre-seed--5ba660a5",
+                 "verification_notes":  "No exact independent public announcement was located in this pass. The imported transaction is retained for manual follow-up.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:fluency-89b1"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:fluency-89b1-pre-seed--5ba660a5"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact round amount/date/stage/investors not independently verified."
+                              ]
+               }
+}

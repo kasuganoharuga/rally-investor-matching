@@ -1,0 +1,31 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "deal_investors",
+    "record_key":  "deal_investor:crunchbase:tracksuit-series-b--49d8c270:icehouse-ventures",
+    "operation":  "upsert",
+    "data":  {
+                 "raw_name":  "Icehouse Ventures",
+                 "role":  "participant",
+                 "participation_status":  "unknown",
+                 "resolution":  "resolved",
+                 "resolution_confidence":  "high",
+                 "identity_resolution":  "existing_database_investor"
+             },
+    "refs":  {
+                 "deal_key":  "funding_round:crunchbase:tracksuit-series-b--49d8c270",
+                 "investor_key":  "investor:icehouse-ventures",
+                 "raw_investor_candidate_key":  "raw_investor_candidate:icehouse-ventures"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:tracksuit-series-b--49d8c270"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

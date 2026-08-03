@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:voqo-ai-pre-seed--98a1cf07",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "voqo-ai-pre-seed--98a1cf07",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/voqo-ai-pre-seed--98a1cf07",
+                 "source_payload":  {
+                                        "Transaction Name":  "Pre Seed Round - Voqo AI",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/voqo-ai-pre-seed--98a1cf07",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "Voqo AI",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/voqo-ai",
+                                        "Funding Type":  "Pre-Seed",
+                                        "Money Raised":  "800000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "526027",
+                                        "Announced Date":  "2025-07-13",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Voqo AI is a startup specializing in AI-powered voice agents designed primarily for the real estate and property management sectors.",
+                                        "Organization Industries":  "Artificial Intelligence (AI), Property Management, Real Estate",
+                                        "Organization Website":  "https://www.voqo.ai/",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "800000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "526027",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Blackbird Ventures",
+                                        "Investor Names":  "Blackbird Ventures, Startmate, UNSW Founders, Yellow Brick Road",
+                                        "Number of Investors":  "4",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "Voqo AI",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://www.voqo.ai/",
+                 "org_industries_raw":  "Artificial Intelligence (AI), Property Management, Real Estate",
+                 "round_type_raw":  "Pre-Seed",
+                 "round_stage":  "pre_seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-07-13",
+                 "money_raised_raw":  "800000",
+                 "amount":  800000,
+                 "currency":  "AUD",
+                 "amount_usd":  526027,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "800000",
+                 "investor_names_raw":  "Blackbird Ventures, Startmate, UNSW Founders, Yellow Brick Road",
+                 "lead_investor_names_raw":  "Blackbird Ventures",
+                 "imported_at":  "2026-07-30T14:07:04.8860753+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "verified_primary",
+                 "verification_source_url":  "https://www.voqo.ai/blog/the-future-is-agentic-announcing-voqo-ai-s-pre-seed-round-led-by-blackbird-ventures",
+                 "verification_notes":  "Company announcement verifies pre-seed led by Blackbird with UNSW Founders, Startmate and Yellow Brick Road.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:voqo-ai"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:voqo-ai-pre-seed--98a1cf07"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "The company page does not state A$800k; founder and Startmate posts support that amount."
+                              ]
+               }
+}

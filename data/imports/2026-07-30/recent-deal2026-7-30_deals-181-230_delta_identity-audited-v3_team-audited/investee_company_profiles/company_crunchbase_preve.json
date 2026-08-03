@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:preve",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "PREVE",
+                 "website_url":  "https://preve.co/",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "New South Wales",
+                 "hq_city":  "Byron Bay",
+                 "is_anz":  true,
+                 "sector_primary":  "digital_health",
+                 "sector_secondary":  "physiotherapy",
+                 "use_case_primary":  "ai_physiotherapy_membership_platform",
+                 "use_case_secondary":  [
+                                            "patient_engagement",
+                                            "clinic_workflow"
+                                        ],
+                 "customer_type":  "consumer_and_healthcare_provider",
+                 "business_model":  "membership_and_subscription_saas",
+                 "sales_motion":  "direct_to_consumer_and_clinic",
+                 "technology_depth":  "applied_ai",
+                 "ai_relevance":  "ai_enabled",
+                 "ai_usage_type":  "care_workflow_and_personalisation",
+                 "ai_core_or_enabler":  "feature_layer",
+                 "company_summary":  "PREVE is an AI-powered physio membership platform that brings clarity, automation, and delight to every stage of the physio-patient contact.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/preve-seed--798164fa",
+                                     "https://www.crunchbase.com/organization/preve",
+                                     "https://preve.co/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:preve-seed--798164fa"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

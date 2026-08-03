@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:cohabit-2fbf",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Cohabit",
+                 "website_url":  "https://cohabit.com.au",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "New South Wales",
+                 "hq_city":  "Sydney",
+                 "is_anz":  true,
+                 "sector_primary":  "property_technology",
+                 "sector_secondary":  "building_data",
+                 "use_case_primary":  "property_data_access",
+                 "use_case_secondary":  [
+                                            "building_due_diligence",
+                                            "property_management_information"
+                                        ],
+                 "customer_type":  "consumer_and_enterprise",
+                 "business_model":  "subscription_and_transaction_fees",
+                 "sales_motion":  "product_led",
+                 "technology_depth":  "conventional_software",
+                 "ai_relevance":  "none",
+                 "ai_usage_type":  "not_applicable",
+                 "ai_core_or_enabler":  "not_core",
+                 "company_summary":  "Cohabit is a digital platform offering data access for building buyers, owners, and managers.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/cohabit-2fbf-seed--da3a83e6",
+                                     "https://www.crunchbase.com/organization/cohabit-2fbf",
+                                     "https://cohabit.com.au"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:cohabit-2fbf-seed--da3a83e6"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

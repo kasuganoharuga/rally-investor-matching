@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:trusst-ai-seed--d6d2c932",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "trusst-ai-seed--d6d2c932",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/trusst-ai-seed--d6d2c932",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Trusst AI",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/trusst-ai-seed--d6d2c932",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "Trusst AI",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/trusst-ai",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "4000000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "2507161",
+                                        "Announced Date":  "2025-03-04",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Trusst AI provides a self-optimising system that extracts insights from customer interactions and automates CX operations.",
+                                        "Organization Industries":  "Artificial Intelligence (AI), Customer Service, Enterprise Software",
+                                        "Organization Website":  "https://trusst.ai",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "4000000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "2507161",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "OIF Ventures",
+                                        "Investor Names":  "OIF Ventures",
+                                        "Number of Investors":  "1",
+                                        "Number of Partner Investors":  "1"
+                                    },
+                 "investee_name_raw":  "Trusst AI",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://trusst.ai",
+                 "org_industries_raw":  "Artificial Intelligence (AI), Customer Service, Enterprise Software",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-03-04",
+                 "money_raised_raw":  "4000000",
+                 "amount":  4000000,
+                 "currency":  "AUD",
+                 "amount_usd":  2507161,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "4000000",
+                 "investor_names_raw":  "OIF Ventures",
+                 "lead_investor_names_raw":  "OIF Ventures",
+                 "imported_at":  "2026-07-30T14:07:04.5651853+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "partially_verified",
+                 "verification_source_url":  "https://www.businesswire.com/news/home/20250304091586/en/Trusst-AI-The-Breakthrough-Innovators-in-CX-Backed-by-OIF-Ventures",
+                 "verification_notes":  "Company-issued release verifies OIF backing and a multimillion-dollar seed on 4 Mar 2025.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:trusst-ai"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:trusst-ai-seed--d6d2c932"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact A$4m amount is not stated on the cited page."
+                              ]
+               }
+}

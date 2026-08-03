@@ -1,0 +1,50 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investors",
+    "record_key":  "investor:faba",
+    "operation":  "upsert",
+    "data":  {
+                 "canonical_name":  "FaBA",
+                 "aliases":  [
+
+                             ],
+                 "investor_type":  "vc_fund",
+                 "website_url":  "https://faba.au/",
+                 "linkedin_url":  "https://www.linkedin.com/company/food-and-beverage-accelerator/",
+                 "hq_country":  "AU",
+                 "hq_state":  "Queensland",
+                 "hq_city":  "St Lucia",
+                 "offices":  [
+
+                             ],
+                 "status":  "active",
+                 "merged_into_id":  null,
+                 "review_status":  "reviewed",
+                 "last_reviewed_at":  "2026-07-30",
+                 "last_reviewed_by":  "codex-investor-identity-gap-supplement",
+                 "investor_subtype":  "venture_capital",
+                 "classification_confidence":  "high",
+                 "classification_source":  "current research entity_type_raw mapping",
+                 "eligibility_mode":  "none",
+                 "classification_evidence_urls":  [
+                                                      "https://faba.au/",
+                                                      "https://www.linkedin.com/company/food-and-beverage-accelerator"
+                                                  ],
+                 "classified_at":  "2026-07-30"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:2026-07-24",
+                       "source_keys":  [
+                                           "research_source:faba:faba_src_deal_d-crunchbase-seastock-63a4-seed-6143d202"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

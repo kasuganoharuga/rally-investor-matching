@@ -1,0 +1,57 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:azen-protocol",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "aZen Protocol",
+                 "website_url":  "https://azenprotocol.io",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "NZ",
+                 "hq_state":  "Auckland",
+                 "hq_city":  "Auckland",
+                 "is_anz":  true,
+                 "sector_primary":  "blockchain_infrastructure",
+                 "sector_secondary":  "depin",
+                 "use_case_primary":  "decentralised_compute_network",
+                 "use_case_secondary":  [
+                                            "edge_computing",
+                                            "ai_compute_resources"
+                                        ],
+                 "customer_type":  "enterprise_and_developer",
+                 "business_model":  "protocol_and_network_fees",
+                 "sales_motion":  "community_and_partnerships",
+                 "technology_depth":  "blockchain",
+                 "ai_relevance":  "ai_infrastructure",
+                 "ai_usage_type":  "model_infrastructure",
+                 "ai_core_or_enabler":  "enabling_infrastructure",
+                 "company_summary":  "Blockchain network, computing, DePIN, AI, Edge Computing",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/azen-protocol-seed--5fcce4a3",
+                                     "https://www.crunchbase.com/organization/azen-protocol",
+                                     "https://azenprotocol.io",
+                                     "https://azenprotocol.io/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:azen-protocol-seed--5fcce4a3"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

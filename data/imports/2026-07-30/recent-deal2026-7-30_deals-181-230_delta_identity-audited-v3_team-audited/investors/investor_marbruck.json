@@ -1,0 +1,53 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investors",
+    "record_key":  "investor:marbruck",
+    "operation":  "upsert",
+    "data":  {
+                 "canonical_name":  "Marbruck",
+                 "aliases":  [
+
+                             ],
+                 "investor_type":  "investment_firm",
+                 "website_url":  "https://www.marbruck.com.au/",
+                 "linkedin_url":  "https://www.linkedin.com/company/marbruck-investments",
+                 "hq_country":  "AU",
+                 "hq_state":  null,
+                 "hq_city":  null,
+                 "offices":  [
+
+                             ],
+                 "status":  "active",
+                 "merged_into_id":  null,
+                 "review_status":  "reviewed",
+                 "last_reviewed_at":  "2026-07-30",
+                 "last_reviewed_by":  "codex-investor-identity-audit",
+                 "investor_subtype":  "investment_firm",
+                 "classification_confidence":  "high",
+                 "classification_source":  "current research evidence with explicit classification repair",
+                 "eligibility_mode":  "none",
+                 "classification_evidence_urls":  [
+                                                      "https://www.marbruck.com.au/",
+                                                      "https://www.linkedin.com/company/marbruck-investments"
+                                                  ],
+                 "classified_at":  "2026-07-30"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:2026-07-24",
+                       "source_keys":  [
+                                           "research_source:marbruck:marbruck_src_001",
+                                           "research_source:marbruck:marbruck_src_002",
+                                           "research_source:marbruck:marbruck_src_profile_linkedin"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Headquarters state/region was not disclosed by the verified sources.",
+                                  "Headquarters city was not disclosed by the verified sources."
+                              ]
+               }
+}

@@ -1,0 +1,58 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investor_web_profiles",
+    "record_key":  "investor_web_profile:notch-ventures:2026-07-30",
+    "operation":  "upsert",
+    "data":  {
+                 "source_urls":  [
+                                     "https://www.notch.ventures/about",
+                                     "https://www.cbinsights.com/investor/notch-ventures"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "website_status":  "ok",
+                 "raw_content_hash":  null,
+                 "raw_content_ref":  null,
+                 "extraction_model":  "fixed-ai-workflow",
+                 "extraction_version":  "analysis-window-1.0.0",
+                 "confidence":  "high",
+                 "claimed_thesis":  null,
+                 "claimed_stages":  [
+
+                                    ],
+                 "claimed_sectors":  [
+
+                                     ],
+                 "claimed_geographies":  [
+
+                                         ],
+                 "claimed_business_models":  [
+
+                                             ],
+                 "claimed_cheque_min":  null,
+                 "claimed_cheque_max":  null,
+                 "claimed_cheque_currency":  null,
+                 "contact_emails":  [
+
+                                    ],
+                 "application_url":  null,
+                 "contact_notes":  "Official Web3 accelerator website and RealGo portfolio evidence confirm the Singapore-based investor.",
+                 "is_current":  true,
+                 "superseded_at":  null
+             },
+    "refs":  {
+                 "investor_key":  "investor:notch-ventures"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:scoped:recent-deal2026-7-30_deals-001-060",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "No unique official LinkedIn company page was confirmed after the supplemental search.",
+                                  "Headquarters state or region is not separately disclosed or is not applicable to the jurisdiction."
+                              ]
+               }
+}

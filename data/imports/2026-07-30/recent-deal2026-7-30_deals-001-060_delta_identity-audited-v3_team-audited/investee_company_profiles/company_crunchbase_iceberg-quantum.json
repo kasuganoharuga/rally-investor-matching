@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:iceberg-quantum",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Iceberg Quantum",
+                 "website_url":  "https://www.iceberg-quantum.com/",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "New South Wales",
+                 "hq_city":  "Sydney",
+                 "is_anz":  true,
+                 "sector_primary":  "quantum_computing",
+                 "sector_secondary":  "quantum_software",
+                 "use_case_primary":  "fault_tolerant_quantum_architecture",
+                 "use_case_secondary":  [
+                                            "quantum_error_correction",
+                                            "ldpc_code_architecture"
+                                        ],
+                 "customer_type":  "enterprise",
+                 "business_model":  "research_partnerships_and_licensing",
+                 "sales_motion":  "enterprise_top_down",
+                 "technology_depth":  "deep_tech_research",
+                 "ai_relevance":  "none",
+                 "ai_usage_type":  "not_applicable",
+                 "ai_core_or_enabler":  "not_core",
+                 "company_summary":  "Technology, Information and Internet",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/iceberg-quantum-pre-seed--e069a58e",
+                                     "https://www.crunchbase.com/organization/iceberg-quantum",
+                                     "https://www.iceberg-quantum.com/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:iceberg-quantum-pre-seed--e069a58e"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

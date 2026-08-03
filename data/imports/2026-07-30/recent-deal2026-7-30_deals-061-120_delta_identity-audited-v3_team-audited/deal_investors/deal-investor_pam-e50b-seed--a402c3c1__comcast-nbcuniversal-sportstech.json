@@ -1,0 +1,31 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "deal_investors",
+    "record_key":  "deal_investor:crunchbase:pam-e50b-seed--a402c3c1:comcast-nbcuniversal-sportstech",
+    "operation":  "upsert",
+    "data":  {
+                 "raw_name":  "Comcast NBCUniversal SportsTech",
+                 "role":  "lead",
+                 "participation_status":  "unknown",
+                 "resolution":  "resolved",
+                 "resolution_confidence":  "high",
+                 "identity_resolution":  "new_investor"
+             },
+    "refs":  {
+                 "deal_key":  "funding_round:crunchbase:pam-e50b-seed--a402c3c1",
+                 "investor_key":  "investor:comcast-nbcuniversal-sportstech",
+                 "raw_investor_candidate_key":  "raw_investor_candidate:comcast-nbcuniversal-sportstech"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:pam-e50b-seed--a402c3c1"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

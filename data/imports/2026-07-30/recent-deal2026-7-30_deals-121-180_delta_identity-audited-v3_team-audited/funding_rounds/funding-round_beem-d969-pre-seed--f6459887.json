@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:beem-d969-pre-seed--f6459887",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "beem-d969-pre-seed--f6459887",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/beem-d969-pre-seed--f6459887",
+                 "source_payload":  {
+                                        "Transaction Name":  "Pre Seed Round - Beem",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/beem-d969-pre-seed--f6459887",
+                                        "Organization Location":  "Norwood, South Australia, Australia, Oceania",
+                                        "Organization Name":  "Beem",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/beem-d969",
+                                        "Funding Type":  "Pre-Seed",
+                                        "Money Raised":  "",
+                                        "Money Raised Currency":  "",
+                                        "Money Raised (in USD)":  "",
+                                        "Announced Date":  "2025-02-26",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Beem is a financial technology company that offers a platform bridging traditional finance with cryptocurrency.",
+                                        "Organization Industries":  "Cryptocurrency, Financial Services, FinTech",
+                                        "Organization Website":  "https://paybeem.com/",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "",
+                                        "Total Funding Amount Currency":  "",
+                                        "Total Funding Amount (in USD)":  "",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "CN Ventures",
+                                        "Number of Investors":  "1",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "Beem",
+                 "org_location_raw":  "Norwood, South Australia, Australia, Oceania",
+                 "org_website_raw":  "https://paybeem.com/",
+                 "org_industries_raw":  "Cryptocurrency, Financial Services, FinTech",
+                 "round_type_raw":  "Pre-Seed",
+                 "round_stage":  "pre_seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-02-26",
+                 "money_raised_raw":  null,
+                 "amount":  null,
+                 "currency":  null,
+                 "amount_usd":  null,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  null,
+                 "investor_names_raw":  "CN Ventures",
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:05.0601639+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "unverified_publicly",
+                 "verification_source_url":  "https://www.crunchbase.com/funding_round/beem-d969-pre-seed--f6459887",
+                 "verification_notes":  "No exact independent public announcement was located in this pass. The imported transaction is retained for manual follow-up.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:beem-d969"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:beem-d969-pre-seed--f6459887"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact round amount/date/stage/investors not independently verified."
+                              ]
+               }
+}

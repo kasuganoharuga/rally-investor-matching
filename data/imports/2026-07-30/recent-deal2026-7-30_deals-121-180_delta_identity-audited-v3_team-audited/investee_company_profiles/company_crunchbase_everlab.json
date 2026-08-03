@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:everlab",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Everlab",
+                 "website_url":  "https://www.everlab.com.au",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "New South Wales",
+                 "hq_city":  "Sydney",
+                 "is_anz":  true,
+                 "sector_primary":  "health_technology",
+                 "sector_secondary":  "preventive_health",
+                 "use_case_primary":  "preventive_health_programs",
+                 "use_case_secondary":  [
+                                            "health_screening",
+                                            "personalised_health_management"
+                                        ],
+                 "customer_type":  "consumer",
+                 "business_model":  "membership_and_health_services",
+                 "sales_motion":  "direct_to_consumer",
+                 "technology_depth":  "health_software_and_services",
+                 "ai_relevance":  "none",
+                 "ai_usage_type":  "not_applicable",
+                 "ai_core_or_enabler":  "not_core",
+                 "company_summary":  "Everlab is a health-tech company building the ecosystem for preventive health",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/everlab-seed--ac1f9a05",
+                                     "https://www.crunchbase.com/organization/everlab",
+                                     "https://www.everlab.com.au"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:everlab-seed--ac1f9a05"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

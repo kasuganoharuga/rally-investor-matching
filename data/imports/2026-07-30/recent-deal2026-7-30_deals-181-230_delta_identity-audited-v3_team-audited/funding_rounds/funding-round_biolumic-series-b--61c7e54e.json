@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:biolumic-series-b--61c7e54e",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "biolumic-series-b--61c7e54e",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/biolumic-series-b--61c7e54e",
+                 "source_payload":  {
+                                        "Transaction Name":  "Series B - BioLumic",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/biolumic-series-b--61c7e54e",
+                                        "Organization Location":  "Palmerston North, Wellington, New Zealand, Oceania",
+                                        "Organization Name":  "BioLumic",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/biolumic",
+                                        "Funding Type":  "Series B",
+                                        "Money Raised":  "8300000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "8300000",
+                                        "Announced Date":  "2025-04-22",
+                                        "Funding Stage":  "Early Stage Venture",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "BioLumic unlocks the natural genetic potential of seeds and seedlings with specialized light treatments, data science, and technology.",
+                                        "Organization Industries":  "Agriculture, AgTech, Biotechnology, Cannabis, Sustainability",
+                                        "Organization Website":  "http://www.biolumic.com",
+                                        "Organization Revenue Range":  "$100M to $500M",
+                                        "Total Funding Amount":  "40846217",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "40846217",
+                                        "Funding Status":  "Early Stage Venture",
+                                        "Lead Investors":  "Ki Tua Fund",
+                                        "Investor Names":  "AgriZeroNZ, Azolla Ventures, DYDX, Icehouse Ventures, iSelect Fund, Ki Tua Fund, MIG Angels, OurCrowd, Rabo Ventures",
+                                        "Number of Investors":  "9",
+                                        "Number of Partner Investors":  "2"
+                                    },
+                 "investee_name_raw":  "BioLumic",
+                 "org_location_raw":  "Palmerston North, Wellington, New Zealand, Oceania",
+                 "org_website_raw":  "http://www.biolumic.com",
+                 "org_industries_raw":  "Agriculture, AgTech, Biotechnology, Cannabis, Sustainability",
+                 "round_type_raw":  "Series B",
+                 "round_stage":  "series_b",
+                 "funding_stage_raw":  "Early Stage Venture",
+                 "announced_date":  "2025-04-22",
+                 "money_raised_raw":  "8300000",
+                 "amount":  8300000,
+                 "currency":  "USD",
+                 "amount_usd":  8300000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "40846217",
+                 "investor_names_raw":  "AgriZeroNZ, Azolla Ventures, DYDX, Icehouse Ventures, iSelect Fund, Ki Tua Fund, MIG Angels, OurCrowd, Rabo Ventures",
+                 "lead_investor_names_raw":  "Ki Tua Fund",
+                 "imported_at":  "2026-07-30T14:07:05.6818668+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "verified_primary",
+                 "verification_source_url":  "https://www.biolumic.com/headlines/fundingpr",
+                 "verification_notes":  "Company announcement verifies US$8.3m Series B extension and the imported investor syndicate on 22 Apr 2025.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:biolumic"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:biolumic-series-b--61c7e54e"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

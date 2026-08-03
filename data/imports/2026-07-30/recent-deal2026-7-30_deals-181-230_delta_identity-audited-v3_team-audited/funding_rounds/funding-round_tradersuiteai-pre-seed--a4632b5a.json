@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:tradersuiteai-pre-seed--a4632b5a",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "tradersuiteai-pre-seed--a4632b5a",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/tradersuiteai-pre-seed--a4632b5a",
+                 "source_payload":  {
+                                        "Transaction Name":  "Pre Seed Round - TraderSuiteAI",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/tradersuiteai-pre-seed--a4632b5a",
+                                        "Organization Location":  "Tarragindi, Queensland, Australia, Oceania",
+                                        "Organization Name":  "TraderSuiteAI",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/tradersuiteai",
+                                        "Funding Type":  "Pre-Seed",
+                                        "Money Raised":  "260000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "166192",
+                                        "Announced Date":  "2025-05-08",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "TraderSuiteAI is an AI-powered trading platform that provides day traders with transparent and configurable automated trading strategies.",
+                                        "Organization Industries":  "Artificial Intelligence (AI), Financial Services, FinTech",
+                                        "Organization Website":  "https://www.tradersuiteai.com/",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "260000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "166192",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "Antler",
+                                        "Number of Investors":  "1",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "TraderSuiteAI",
+                 "org_location_raw":  "Tarragindi, Queensland, Australia, Oceania",
+                 "org_website_raw":  "https://www.tradersuiteai.com/",
+                 "org_industries_raw":  "Artificial Intelligence (AI), Financial Services, FinTech",
+                 "round_type_raw":  "Pre-Seed",
+                 "round_stage":  "pre_seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-05-08",
+                 "money_raised_raw":  "260000",
+                 "amount":  260000,
+                 "currency":  "AUD",
+                 "amount_usd":  166192,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "260000",
+                 "investor_names_raw":  "Antler",
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:05.4456734+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "partially_verified",
+                 "verification_source_url":  "https://www.antler.co/location/australia",
+                 "verification_notes":  "Antler public terms support the imported A$260k pre-seed structure.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:tradersuiteai"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:tradersuiteai-pre-seed--a4632b5a"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "No TraderSuiteAI-specific announcement was located."
+                              ]
+               }
+}

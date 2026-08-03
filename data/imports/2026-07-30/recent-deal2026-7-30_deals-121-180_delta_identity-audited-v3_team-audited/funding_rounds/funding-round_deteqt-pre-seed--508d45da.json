@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:deteqt-pre-seed--508d45da",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "deteqt-pre-seed--508d45da",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/deteqt-pre-seed--508d45da",
+                 "source_payload":  {
+                                        "Transaction Name":  "Pre Seed Round - DeteQt",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/deteqt-pre-seed--508d45da",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "DeteQt",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/deteqt",
+                                        "Funding Type":  "Pre-Seed",
+                                        "Money Raised":  "750000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "473010",
+                                        "Announced Date":  "2025-03-25",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Pioneers quantum magnetometry for navigation, mining, and medical imaging solutions",
+                                        "Organization Industries":  "Information Technology",
+                                        "Organization Website":  "https://www.deteqt.com.au/",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "5750000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "4016769",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "ATP Fund, Main Sequence Ventures",
+                                        "Number of Investors":  "2",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "DeteQt",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://www.deteqt.com.au/",
+                 "org_industries_raw":  "Information Technology",
+                 "round_type_raw":  "Pre-Seed",
+                 "round_stage":  "pre_seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-03-25",
+                 "money_raised_raw":  "750000",
+                 "amount":  750000,
+                 "currency":  "AUD",
+                 "amount_usd":  473010,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "5750000",
+                 "investor_names_raw":  "ATP Fund, Main Sequence Ventures",
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:05.0711652+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "unverified_publicly",
+                 "verification_source_url":  "https://www.crunchbase.com/funding_round/deteqt-pre-seed--508d45da",
+                 "verification_notes":  "No exact independent public announcement was located in this pass. The imported transaction is retained for manual follow-up.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:deteqt"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:deteqt-pre-seed--508d45da"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact round amount/date/stage/investors not independently verified."
+                              ]
+               }
+}

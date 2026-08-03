@@ -1,0 +1,31 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "deal_investors",
+    "record_key":  "deal_investor:crunchbase:block-earner-series-a--0c2c9b3f:titan-fund",
+    "operation":  "upsert",
+    "data":  {
+                 "raw_name":  "Titan Fund",
+                 "role":  "lead",
+                 "participation_status":  "unknown",
+                 "resolution":  "resolved",
+                 "resolution_confidence":  "high",
+                 "identity_resolution":  "new_investor"
+             },
+    "refs":  {
+                 "deal_key":  "funding_round:crunchbase:block-earner-series-a--0c2c9b3f",
+                 "investor_key":  "investor:titan-fund",
+                 "raw_investor_candidate_key":  "raw_investor_candidate:titan-fund"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:block-earner-series-a--0c2c9b3f"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

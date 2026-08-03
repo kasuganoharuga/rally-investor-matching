@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:support-fusion-pre-seed--126d0979",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "support-fusion-pre-seed--126d0979",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/support-fusion-pre-seed--126d0979",
+                 "source_payload":  {
+                                        "Transaction Name":  "Pre Seed Round - Support Fusion",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/support-fusion-pre-seed--126d0979",
+                                        "Organization Location":  "Melbourne, Victoria, Australia, Oceania",
+                                        "Organization Name":  "Support Fusion",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/support-fusion",
+                                        "Funding Type":  "Pre-Seed",
+                                        "Money Raised":  "260000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "159593",
+                                        "Announced Date":  "2025-04-09",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "1906667",
+                                        "Pre-Money Valuation Currency":  "AUD",
+                                        "Pre-Money Valuation (in USD)":  "1170350",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Support Fusion automates ticket sync and reporting for MSPs, turning manual work into growth using the tools they already use.",
+                                        "Organization Industries":  "Software",
+                                        "Organization Website":  "https://www.suppfusion.com",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "1282100",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "835784",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Antler",
+                                        "Investor Names":  "Antler",
+                                        "Number of Investors":  "1",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "Support Fusion",
+                 "org_location_raw":  "Melbourne, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://www.suppfusion.com",
+                 "org_industries_raw":  "Software",
+                 "round_type_raw":  "Pre-Seed",
+                 "round_stage":  "pre_seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-04-09",
+                 "money_raised_raw":  "260000",
+                 "amount":  260000,
+                 "currency":  "AUD",
+                 "amount_usd":  159593,
+                 "pre_money_valuation_raw":  "1906667",
+                 "pre_money_valuation":  1906667,
+                 "valuation_currency":  "AUD",
+                 "valuation_usd":  1170350,
+                 "equity_only":  true,
+                 "total_funding_raw":  "1282100",
+                 "investor_names_raw":  "Antler",
+                 "lead_investor_names_raw":  "Antler",
+                 "imported_at":  "2026-07-30T14:07:04.7636621+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "verified_secondary",
+                 "verification_source_url":  "https://app.dealroom.co/companies/support_fusion",
+                 "verification_notes":  "Funding database reports A$260k pre-seed from Antler in April 2025.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:support-fusion"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:support-fusion-pre-seed--126d0979"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "No primary announcement was located."
+                              ]
+               }
+}

@@ -1,0 +1,60 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investor_web_profiles",
+    "record_key":  "investor_web_profile:marbruck:2026-07-16",
+    "operation":  "upsert",
+    "data":  {
+                 "source_urls":  [
+                                     "https://www.marbruck.com.au/",
+                                     "https://www.linkedin.com/company/marbruck-investments"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "website_status":  "ok",
+                 "raw_content_hash":  null,
+                 "raw_content_ref":  "data/03_research/investors/marbruck/investor_raw_collection.json",
+                 "extraction_model":  "fixed-ai-workflow",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high",
+                 "claimed_thesis":  "Australian private investment firm backing growth companies.",
+                 "claimed_stages":  {
+
+                                    },
+                 "claimed_sectors":  {
+
+                                     },
+                 "claimed_geographies":  {
+
+                                         },
+                 "claimed_business_models":  [
+
+                                             ],
+                 "claimed_cheque_min":  null,
+                 "claimed_cheque_max":  null,
+                 "claimed_cheque_currency":  null,
+                 "contact_emails":  [
+
+                                    ],
+                 "application_url":  null,
+                 "contact_notes":  "Identity fields were audited against official websites and LinkedIn company pages where a unique match was available. Remaining nulls are documented in investor_identity_audit.json.",
+                 "is_current":  true,
+                 "superseded_at":  null
+             },
+    "refs":  {
+                 "investor_key":  "investor:marbruck"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:2026-07-24",
+                       "source_keys":  [
+                                           "research_source:marbruck:marbruck_src_001",
+                                           "research_source:marbruck:marbruck_src_002",
+                                           "research_source:marbruck:marbruck_src_profile_linkedin"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Headquarters state/region was not disclosed by the verified sources.",
+                                  "Headquarters city was not disclosed by the verified sources."
+                              ]
+               }
+}

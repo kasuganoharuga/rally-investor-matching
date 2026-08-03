@@ -1,0 +1,31 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "deal_investors",
+    "record_key":  "deal_investor:crunchbase:personr-seed--cf0fb468:fund-wa",
+    "operation":  "upsert",
+    "data":  {
+                 "raw_name":  "Fund WA",
+                 "role":  "lead",
+                 "participation_status":  "unknown",
+                 "resolution":  "resolved",
+                 "resolution_confidence":  "high",
+                 "identity_resolution":  "existing_database_investor"
+             },
+    "refs":  {
+                 "deal_key":  "funding_round:crunchbase:personr-seed--cf0fb468",
+                 "investor_key":  "investor:fund-wa",
+                 "raw_investor_candidate_key":  "raw_investor_candidate:fund-wa"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:personr-seed--cf0fb468"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

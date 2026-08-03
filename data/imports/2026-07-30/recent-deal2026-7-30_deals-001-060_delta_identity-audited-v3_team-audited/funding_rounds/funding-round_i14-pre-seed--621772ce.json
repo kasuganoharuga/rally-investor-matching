@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:i14-pre-seed--621772ce",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "i14-pre-seed--621772ce",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/i14-pre-seed--621772ce",
+                 "source_payload":  {
+                                        "Transaction Name":  "Pre Seed Round - i14",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/i14-pre-seed--621772ce",
+                                        "Organization Location":  "Melbourne, Victoria, Australia, Oceania",
+                                        "Organization Name":  "i14",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/i14",
+                                        "Funding Type":  "Pre-Seed",
+                                        "Money Raised":  "4000000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "2598400",
+                                        "Announced Date":  "2025-05-23",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Rethinking AI with Cognition as our Blueprint",
+                                        "Organization Industries":  "Artificial Intelligence (AI), Generative AI, Machine Learning",
+                                        "Organization Website":  "https://i14.ai/",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "4000000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "2598400",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "Genesis Pre-Seed Fund, IP Group, Tin Alley Ventures",
+                                        "Number of Investors":  "3",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "i14",
+                 "org_location_raw":  "Melbourne, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://i14.ai/",
+                 "org_industries_raw":  "Artificial Intelligence (AI), Generative AI, Machine Learning",
+                 "round_type_raw":  "Pre-Seed",
+                 "round_stage":  "pre_seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-05-23",
+                 "money_raised_raw":  "4000000",
+                 "amount":  4000000,
+                 "currency":  "AUD",
+                 "amount_usd":  2598400,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "4000000",
+                 "investor_names_raw":  "Genesis Pre-Seed Fund, IP Group, Tin Alley Ventures",
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:04.3238968+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "partial_stage_mismatch",
+                 "verification_source_url":  "https://www.tinalleyventures.com/portfolio/i14",
+                 "verification_notes":  "Tin Alley verifies the investment relationship; secondary database evidence reports A$4m seed with IP Group and Genesis.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:i14"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:i14-pre-seed--621772ce"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Imported Funding Type is Pre-Seed; public database describes Seed."
+                              ]
+               }
+}

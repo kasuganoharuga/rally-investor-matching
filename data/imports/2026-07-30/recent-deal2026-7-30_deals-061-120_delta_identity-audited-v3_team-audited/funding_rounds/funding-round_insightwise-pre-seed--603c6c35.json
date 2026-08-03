@@ -1,0 +1,83 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:insightwise-pre-seed--603c6c35",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "insightwise-pre-seed--603c6c35",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/insightwise-pre-seed--603c6c35",
+                 "source_payload":  {
+                                        "Transaction Name":  "Pre Seed Round - InsightWise",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/insightwise-pre-seed--603c6c35",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "InsightWise",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/insightwise",
+                                        "Funding Type":  "Pre-Seed",
+                                        "Money Raised":  "1000000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "1000000",
+                                        "Announced Date":  "2025-04-11",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "InsightWise is an AI-powered platform for consultants and strategy teams.",
+                                        "Organization Industries":  "Artificial Intelligence (AI), Machine Learning, Online Portals",
+                                        "Organization Website":  "https://www.insightwise.ai/",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "1000000",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "1000000",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "ALIAVIA Ventures",
+                                        "Investor Names":  "ALIAVIA Ventures, Craig Weaver, FB10x adVentures, No Brand, TreeArc Investment Group",
+                                        "Number of Investors":  "5",
+                                        "Number of Partner Investors":  "1"
+                                    },
+                 "investee_name_raw":  "InsightWise",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://www.insightwise.ai/",
+                 "org_industries_raw":  "Artificial Intelligence (AI), Machine Learning, Online Portals",
+                 "round_type_raw":  "Pre-Seed",
+                 "round_stage":  "pre_seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-04-11",
+                 "money_raised_raw":  "1000000",
+                 "amount":  1000000,
+                 "currency":  "USD",
+                 "amount_usd":  1000000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "1000000",
+                 "investor_names_raw":  "ALIAVIA Ventures, Craig Weaver, FB10x adVentures, No Brand, TreeArc Investment Group",
+                 "lead_investor_names_raw":  "ALIAVIA Ventures",
+                 "imported_at":  "2026-07-30T14:07:04.5906494+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "partial_round_mismatch",
+                 "verification_source_url":  "https://www.insightwise.ai/post/insightwise-raises-1m-in-an-oversubscribed-pre-seed-round-to-become-the-ai-partner-of-choice-for-global-consulting-and-strategy-teams",
+                 "verification_notes":  "Company announcement verifies a US$1m pre-seed led by ALIAVIA and No Brand, with FB10x, Wollemi and angels.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:insightwise"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:insightwise-pre-seed--603c6c35"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Imported 11 Apr 2025 date differs from the July announcement.",
+                                  "Imported TreeArc does not match Wollemi named in the public announcement."
+                              ]
+               }
+}

@@ -1,0 +1,39 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investor_team_members",
+    "record_key":  "investor_team_member:checker-media:jesse-angelo",
+    "operation":  "upsert",
+    "data":  {
+                 "contact_id":  null,
+                 "first_name":  "Jesse",
+                 "last_name":  "Angelo",
+                 "role_title":  "Founder and CEO",
+                 "seniority":  "founder",
+                 "linkedin_url":  "https://www.linkedin.com/in/jesse-angelo-254051412",
+                 "claimed_focus":  [
+                                       "media",
+                                       "news",
+                                       "AI-enabled production"
+                                   ],
+                 "bio_summary":  "Founder and CEO of the media investment and production company participating in LeadStory\u0027s financing.",
+                 "source_url":  "https://checker.media/",
+                 "retrieved_at":  "2026-07-30",
+                 "is_active":  true
+             },
+    "refs":  {
+                 "investor_key":  "investor:checker-media",
+                 "contact_key":  null
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:recent-deal2026-7-30:investor-team-audit",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

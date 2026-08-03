@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:fair-supply",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Fair Supply",
+                 "website_url":  "https://www.fairsupply.com",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "New South Wales",
+                 "hq_city":  "Sydney",
+                 "is_anz":  true,
+                 "sector_primary":  "esg_software",
+                 "sector_secondary":  "supply_chain_risk",
+                 "use_case_primary":  "modern_slavery_and_esg_due_diligence",
+                 "use_case_secondary":  [
+                                            "scope_3_emissions_analytics",
+                                            "supply_chain_risk_mapping"
+                                        ],
+                 "customer_type":  "enterprise",
+                 "business_model":  "subscription_saas",
+                 "sales_motion":  "enterprise_top_down",
+                 "technology_depth":  "applied_ai",
+                 "ai_relevance":  "ai_enabled",
+                 "ai_usage_type":  "risk_scoring",
+                 "ai_core_or_enabler":  "feature_layer",
+                 "company_summary":  "Fair Supply provides supply chain ESG risk analytics, modern slavery due diligence, and Scope 3 insights for companies and investors.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/fair-supply-series-a--945bdbfe",
+                                     "https://www.crunchbase.com/organization/fair-supply",
+                                     "https://www.fairsupply.com"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:fair-supply-series-a--945bdbfe"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:auzvolt-seed--6a2c7057",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "auzvolt-seed--6a2c7057",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/auzvolt-seed--6a2c7057",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Auzvolt Energy",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/auzvolt-seed--6a2c7057",
+                                        "Organization Location":  "Perth, Western Australia, Australia, Oceania",
+                                        "Organization Name":  "Auzvolt Energy",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/auzvolt",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "7000000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "4580169",
+                                        "Announced Date":  "2025-08-31",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "45000000",
+                                        "Pre-Money Valuation Currency":  "AUD",
+                                        "Pre-Money Valuation (in USD)":  "29443941",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Renewable Energy Project Developer, Owner and Operator",
+                                        "Organization Industries":  "Data Center, Electrical Distribution, Energy, Power Grid, Renewable Energy, Solar",
+                                        "Organization Website":  "https://auzvolt.com/",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "7000000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "4580169",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "BPMF Holdings",
+                                        "Investor Names":  "BPMF Holdings, Green Peak",
+                                        "Number of Investors":  "2",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "Auzvolt Energy",
+                 "org_location_raw":  "Perth, Western Australia, Australia, Oceania",
+                 "org_website_raw":  "https://auzvolt.com/",
+                 "org_industries_raw":  "Data Center, Electrical Distribution, Energy, Power Grid, Renewable Energy, Solar",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-08-31",
+                 "money_raised_raw":  "7000000",
+                 "amount":  7000000,
+                 "currency":  "AUD",
+                 "amount_usd":  4580169,
+                 "pre_money_valuation_raw":  "45000000",
+                 "pre_money_valuation":  45000000,
+                 "valuation_currency":  "AUD",
+                 "valuation_usd":  29443941,
+                 "equity_only":  true,
+                 "total_funding_raw":  "7000000",
+                 "investor_names_raw":  "BPMF Holdings, Green Peak",
+                 "lead_investor_names_raw":  "BPMF Holdings",
+                 "imported_at":  "2026-07-30T14:07:04.4873140+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "unverified_publicly",
+                 "verification_source_url":  "https://www.crunchbase.com/funding_round/auzvolt-seed--6a2c7057",
+                 "verification_notes":  "No exact public funding announcement was located in this pass. Imported transaction is retained as-is for manual follow-up.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:auzvolt"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:auzvolt-seed--6a2c7057"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact round amount/date/investors not independently verified."
+                              ]
+               }
+}

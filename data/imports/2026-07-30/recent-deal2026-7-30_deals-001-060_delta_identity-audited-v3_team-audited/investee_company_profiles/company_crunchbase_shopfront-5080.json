@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:shopfront-5080",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Shopfront",
+                 "website_url":  "https://shopfrontapp.co",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "Victoria",
+                 "hq_city":  "South Melbourne",
+                 "is_anz":  true,
+                 "sector_primary":  "ecommerce_software",
+                 "sector_secondary":  "marketplace_management",
+                 "use_case_primary":  "multichannel_listing_automation",
+                 "use_case_secondary":  [
+                                            "inventory_management",
+                                            "automated_delisting"
+                                        ],
+                 "customer_type":  "smb",
+                 "business_model":  "subscription_saas",
+                 "sales_motion":  "product_led",
+                 "technology_depth":  "conventional_software",
+                 "ai_relevance":  "none",
+                 "ai_usage_type":  "not_applicable",
+                 "ai_core_or_enabler":  "not_core",
+                 "company_summary":  "Shopfront provides tools for automated list generation, publishing, managing, and delisting of products across various marketplaces.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/shopfront-5080-pre-seed--1d2f7ca3",
+                                     "https://www.crunchbase.com/organization/shopfront-5080",
+                                     "https://shopfrontapp.co"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:shopfront-5080-pre-seed--1d2f7ca3"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

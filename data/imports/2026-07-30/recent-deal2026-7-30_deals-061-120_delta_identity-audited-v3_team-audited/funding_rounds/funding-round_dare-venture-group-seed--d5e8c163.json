@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:dare-venture-group-seed--d5e8c163",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "dare-venture-group-seed--d5e8c163",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/dare-venture-group-seed--d5e8c163",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - DARE Venture Group",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/dare-venture-group-seed--d5e8c163",
+                                        "Organization Location":  "Melbourne, Victoria, Australia, Oceania",
+                                        "Organization Name":  "DARE Venture Group",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/dare-venture-group",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "500000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "319285",
+                                        "Announced Date":  "2025-05-01",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "A marketing and venture services company guided by a deep understanding of human behaviour.",
+                                        "Organization Industries":  "Marketing, Venture Capital",
+                                        "Organization Website":  "https://www.dareventure.group",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "500000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "319285",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "",
+                                        "Number of Investors":  "",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "DARE Venture Group",
+                 "org_location_raw":  "Melbourne, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://www.dareventure.group",
+                 "org_industries_raw":  "Marketing, Venture Capital",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-05-01",
+                 "money_raised_raw":  "500000",
+                 "amount":  500000,
+                 "currency":  "AUD",
+                 "amount_usd":  319285,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "500000",
+                 "investor_names_raw":  null,
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:04.9183063+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "verified_secondary",
+                 "verification_source_url":  "https://au.linkedin.com/company/dare-venture-group",
+                 "verification_notes":  "Public company profile reports a June 2025 seed equivalent to about US$317k.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:dare-venture-group"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:dare-venture-group-seed--d5e8c163"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Imported date is 1 May 2025 and A$500k; exact announcement was not located."
+                              ]
+               }
+}

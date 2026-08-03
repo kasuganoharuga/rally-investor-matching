@@ -1,0 +1,31 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "deal_investors",
+    "record_key":  "deal_investor:crunchbase:magnaterra-seed--ad5ae2ce:rfc-ambrian-funds-management-rfm",
+    "operation":  "upsert",
+    "data":  {
+                 "raw_name":  "RFC Ambrian Funds Management (RFM)",
+                 "role":  "lead",
+                 "participation_status":  "unknown",
+                 "resolution":  "resolved",
+                 "resolution_confidence":  "high",
+                 "identity_resolution":  "new_investor"
+             },
+    "refs":  {
+                 "deal_key":  "funding_round:crunchbase:magnaterra-seed--ad5ae2ce",
+                 "investor_key":  "investor:rfc-ambrian-funds-management-rfm",
+                 "raw_investor_candidate_key":  "raw_investor_candidate:rfc-ambrian-funds-management-rfm"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:magnaterra-seed--ad5ae2ce"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

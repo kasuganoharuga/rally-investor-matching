@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:tracksuit-series-b--49d8c270",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "tracksuit-series-b--49d8c270",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/tracksuit-series-b--49d8c270",
+                 "source_payload":  {
+                                        "Transaction Name":  "Series B - Tracksuit",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/tracksuit-series-b--49d8c270",
+                                        "Organization Location":  "Auckland, Auckland, New Zealand, Oceania",
+                                        "Organization Name":  "Tracksuit",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/tracksuit",
+                                        "Funding Type":  "Series B",
+                                        "Money Raised":  "42000000",
+                                        "Money Raised Currency":  "NZD",
+                                        "Money Raised (in USD)":  "25350853",
+                                        "Announced Date":  "2025-06-11",
+                                        "Funding Stage":  "Early Stage Venture",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Tracksuit is the beautiful, always-on and radically affordable way for companies to measure, understand and communicate the value of brand.",
+                                        "Organization Industries":  "Brand Marketing, Market Research, SaaS, Software",
+                                        "Organization Website":  "https://www.gotracksuit.com",
+                                        "Organization Revenue Range":  "$1M to $10M",
+                                        "Total Funding Amount":  "43621099",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "43621099",
+                                        "Funding Status":  "Early Stage Venture",
+                                        "Lead Investors":  "VMG Partners",
+                                        "Investor Names":  "Altos Ventures, Blackbird Ventures, Footwork, Icehouse Ventures, VMG Partners",
+                                        "Number of Investors":  "5",
+                                        "Number of Partner Investors":  "5"
+                                    },
+                 "investee_name_raw":  "Tracksuit",
+                 "org_location_raw":  "Auckland, Auckland, New Zealand, Oceania",
+                 "org_website_raw":  "https://www.gotracksuit.com",
+                 "org_industries_raw":  "Brand Marketing, Market Research, SaaS, Software",
+                 "round_type_raw":  "Series B",
+                 "round_stage":  "series_b",
+                 "funding_stage_raw":  "Early Stage Venture",
+                 "announced_date":  "2025-06-11",
+                 "money_raised_raw":  "42000000",
+                 "amount":  42000000,
+                 "currency":  "NZD",
+                 "amount_usd":  25350853,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "43621099",
+                 "investor_names_raw":  "Altos Ventures, Blackbird Ventures, Footwork, Icehouse Ventures, VMG Partners",
+                 "lead_investor_names_raw":  "VMG Partners",
+                 "imported_at":  "2026-07-30T14:07:04.9620031+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "verified_secondary",
+                 "verification_source_url":  "https://www.nbr.co.nz/deals/tracksuit-raises-42m-with-backing-from-us-consumer-investor-vmg/",
+                 "verification_notes":  "Public coverage verifies NZ$42m Series B led by VMG with Altos, Blackbird, Footwork and Icehouse participation.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:tracksuit"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:tracksuit-series-b--49d8c270"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

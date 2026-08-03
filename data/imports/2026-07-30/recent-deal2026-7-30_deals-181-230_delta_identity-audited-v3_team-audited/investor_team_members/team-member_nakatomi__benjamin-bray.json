@@ -1,0 +1,39 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investor_team_members",
+    "record_key":  "investor_team_member:nakatomi:benjamin-bray",
+    "operation":  "upsert",
+    "data":  {
+                 "contact_id":  null,
+                 "first_name":  "Benjamin",
+                 "last_name":  "Bray",
+                 "role_title":  "Founding Partner",
+                 "seniority":  "partner",
+                 "linkedin_url":  null,
+                 "claimed_focus":  [
+                                       "venture building",
+                                       "product strategy",
+                                       "commercial strategy"
+                                   ],
+                 "bio_summary":  "Founding partner focused on venture building, product strategy, technology and commercial strategy.",
+                 "source_url":  "https://nakatomi.com/who-we-are",
+                 "retrieved_at":  "2026-07-30",
+                 "is_active":  true
+             },
+    "refs":  {
+                 "investor_key":  "investor:nakatomi",
+                 "contact_key":  null
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:recent-deal2026-7-30:investor-team-audit",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "person_linkedin_not_verified"
+                              ]
+               }
+}

@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:esper-satellite-imagery-seed--3d61f226",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "esper-satellite-imagery-seed--3d61f226",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/esper-satellite-imagery-seed--3d61f226",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Esper Satellite Imagery",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/esper-satellite-imagery-seed--3d61f226",
+                                        "Organization Location":  "Melbourne, Victoria, Australia, Oceania",
+                                        "Organization Name":  "Esper Satellite Imagery",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/esper-satellite-imagery",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "5000000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "3133951",
+                                        "Announced Date":  "2025-03-04",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Builder and operator of remote sensing satellites capable of high-resolution hyperspectral imagery.",
+                                        "Organization Industries":  "Aerospace, Agriculture, Military, Mining, Remote Sensing",
+                                        "Organization Website":  "https://espersatellites.co",
+                                        "Organization Revenue Range":  "$1M to $10M",
+                                        "Total Funding Amount":  "4375409",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "4375409",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Hejaz Financial Services, Paspalis",
+                                        "Investor Names":  "Day One Ventures, Dolby Family Ventures, Hejaz Financial Services, Paspalis, Stellar Ventures",
+                                        "Number of Investors":  "5",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "Esper Satellite Imagery",
+                 "org_location_raw":  "Melbourne, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://espersatellites.co",
+                 "org_industries_raw":  "Aerospace, Agriculture, Military, Mining, Remote Sensing",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-03-04",
+                 "money_raised_raw":  "5000000",
+                 "amount":  5000000,
+                 "currency":  "AUD",
+                 "amount_usd":  3133951,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "4375409",
+                 "investor_names_raw":  "Day One Ventures, Dolby Family Ventures, Hejaz Financial Services, Paspalis, Stellar Ventures",
+                 "lead_investor_names_raw":  "Hejaz Financial Services, Paspalis",
+                 "imported_at":  "2026-07-30T14:07:05.6498672+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "partially_verified",
+                 "verification_source_url":  "https://www.hejazfs.com.au/media/-we-re-changing-how-the-world-finds-critical-minerals---esper-secures--5m-in-seed-funding-round/",
+                 "verification_notes":  "Investor-hosted coverage verifies an A$5m seed led by Hejaz and Paspalis.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:esper-satellite-imagery"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:esper-satellite-imagery-seed--3d61f226"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Later coverage reports A$5.6m; imported amount may omit part of the final close."
+                              ]
+               }
+}

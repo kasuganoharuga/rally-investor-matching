@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:twine-ai",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Twine AI",
+                 "website_url":  "https://twine.com",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "New South Wales",
+                 "hq_city":  "Sydney",
+                 "is_anz":  true,
+                 "sector_primary":  "revenue_operations",
+                 "sector_secondary":  "artificial_intelligence",
+                 "use_case_primary":  "ai_operating_system_for_gtm_and_product_teams",
+                 "use_case_secondary":  [
+                                            "customer_intelligence",
+                                            "workflow_orchestration"
+                                        ],
+                 "customer_type":  "enterprise",
+                 "business_model":  "subscription_saas",
+                 "sales_motion":  "enterprise_top_down",
+                 "technology_depth":  "applied_ai",
+                 "ai_relevance":  "ai_native",
+                 "ai_usage_type":  "analytics_and_automation",
+                 "ai_core_or_enabler":  "core_product",
+                 "company_summary":  "Twine AI create an operating system for modern go-to-market and product teams.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/twine-ai-seed--aef77d66",
+                                     "https://www.crunchbase.com/organization/twine-ai",
+                                     "https://twine.com"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:twine-ai-seed--aef77d66"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

@@ -1,0 +1,39 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investor_team_members",
+    "record_key":  "investor_team_member:opacity:hersh-patel",
+    "operation":  "upsert",
+    "data":  {
+                 "contact_id":  null,
+                 "first_name":  "Hersh",
+                 "last_name":  "Patel",
+                 "role_title":  "CEO and Co-Founder",
+                 "seniority":  "founder",
+                 "linkedin_url":  "https://www.linkedin.com/in/hersh-patel-opacity",
+                 "claimed_focus":  [
+                                       "verifiable data",
+                                       "zkTLS",
+                                       "capital markets"
+                                   ],
+                 "bio_summary":  "CEO and co-founder of Opacity Labs, building verifiable-data and capital-markets infrastructure.",
+                 "source_url":  "https://www.opacity.network/blog/a-crypto-narrative-with-pmf",
+                 "retrieved_at":  "2026-07-30",
+                 "is_active":  true
+             },
+    "refs":  {
+                 "investor_key":  "investor:opacity",
+                 "contact_key":  null
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:recent-deal2026-7-30:investor-team-audit",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

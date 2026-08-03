@@ -1,0 +1,28 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_external_ids",
+    "record_key":  "investee_external_id:crunchbase:the-laundry-lady",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "external_id":  "the-laundry-lady",
+                 "external_url":  "https://www.crunchbase.com/organization/the-laundry-lady",
+                 "first_seen_at":  "2026-07-30T14:07:05.1327838+09:30",
+                 "last_seen_at":  "2026-07-30T14:07:05.1327838+09:30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:the-laundry-lady"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:the-laundry-lady-seed--79fa8696"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

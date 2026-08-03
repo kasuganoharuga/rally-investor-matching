@@ -1,0 +1,58 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investor_web_profiles",
+    "record_key":  "investor_web_profile:headline:2026-07-24",
+    "operation":  "upsert",
+    "data":  {
+                 "source_urls":  [
+                                     "https://headline.com/",
+                                     "https://www.linkedin.com/company/headlinevc"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "website_status":  "ok",
+                 "raw_content_hash":  null,
+                 "raw_content_ref":  "data/03_research/investors/headline/investor_raw_collection.json",
+                 "extraction_model":  "fixed-ai-workflow",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high",
+                 "claimed_thesis":  "Join 850+ Venture Capitalists, Private Equity Firms, Investment Banks and Corporates who leverage Tracxn to track the world\u0026#x27;s most innovative companies and emerging sectors.",
+                 "claimed_stages":  {
+
+                                    },
+                 "claimed_sectors":  {
+
+                                     },
+                 "claimed_geographies":  {
+
+                                         },
+                 "claimed_business_models":  [
+
+                                             ],
+                 "claimed_cheque_min":  null,
+                 "claimed_cheque_max":  null,
+                 "claimed_cheque_currency":  null,
+                 "contact_emails":  [
+
+                                    ],
+                 "application_url":  null,
+                 "contact_notes":  "Identity fields were audited against official websites and LinkedIn company pages where a unique match was available. Remaining nulls are documented in investor_identity_audit.json.",
+                 "is_current":  true,
+                 "superseded_at":  null
+             },
+    "refs":  {
+                 "investor_key":  "investor:headline"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:2026-07-24",
+                       "source_keys":  [
+                                           "research_source:headline:headline_src_official",
+                                           "research_source:headline:headline_src_deal_round-crunchbase-oscer-series-b-a8ffc8af"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

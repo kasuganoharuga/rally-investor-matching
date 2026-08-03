@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:personr",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "personr",
+                 "website_url":  "https://www.personr.co/",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "Western Australia",
+                 "hq_city":  "Perth",
+                 "is_anz":  true,
+                 "sector_primary":  "regtech",
+                 "sector_secondary":  "aml_compliance",
+                 "use_case_primary":  "aml_compliance_management",
+                 "use_case_secondary":  [
+                                            "kyc_and_identity_verification",
+                                            "compliance_records"
+                                        ],
+                 "customer_type":  "financial_and_regulated_enterprise",
+                 "business_model":  "subscription_saas",
+                 "sales_motion":  "enterprise_sales",
+                 "technology_depth":  "conventional_software",
+                 "ai_relevance":  "not_ai",
+                 "ai_usage_type":  "none",
+                 "ai_core_or_enabler":  "none",
+                 "company_summary":  "Single source of truth for AML compliance",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/personr-seed--cf0fb468",
+                                     "https://www.crunchbase.com/organization/personr",
+                                     "https://www.personr.co/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:personr-seed--cf0fb468"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:nexusmd-ai",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "NexusMD.ai",
+                 "website_url":  "https://nexusmd.ai",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "Victoria",
+                 "hq_city":  "Richmond",
+                 "is_anz":  true,
+                 "sector_primary":  "health_technology",
+                 "sector_secondary":  "clinical_administration",
+                 "use_case_primary":  "agentic_ai_for_healthcare_admin",
+                 "use_case_secondary":  [
+                                            "workflow_automation",
+                                            "clinical_operations_support"
+                                        ],
+                 "customer_type":  "healthcare_provider",
+                 "business_model":  "subscription_saas",
+                 "sales_motion":  "enterprise_top_down",
+                 "technology_depth":  "applied_ai",
+                 "ai_relevance":  "ai_native",
+                 "ai_usage_type":  "copilot_or_agent",
+                 "ai_core_or_enabler":  "core_product",
+                 "company_summary":  "NexusMD.ai is a healthcare technology company specializing in agentic AI solutions designed to streamline and automate administrative tasks.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/nexusmd-ai-seed--b193f757",
+                                     "https://www.crunchbase.com/organization/nexusmd-ai",
+                                     "https://nexusmd.ai"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:nexusmd-ai-seed--b193f757"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

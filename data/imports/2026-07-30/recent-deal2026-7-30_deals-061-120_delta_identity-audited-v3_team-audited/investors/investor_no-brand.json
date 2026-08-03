@@ -1,0 +1,49 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investors",
+    "record_key":  "investor:no-brand",
+    "operation":  "upsert",
+    "data":  {
+                 "canonical_name":  "No Brand Holdings",
+                 "aliases":  [
+                                 "No Brand"
+                             ],
+                 "investor_type":  "investment_firm",
+                 "investor_subtype":  "family_office",
+                 "eligibility_mode":  "none",
+                 "classification_confidence":  "high",
+                 "classification_evidence_urls":  [
+                                                      "https://www.nbrnd.com/",
+                                                      "https://au.linkedin.com/company/no-brand-holdings"
+                                                  ],
+                 "classified_at":  "2026-07-30",
+                 "website_url":  "https://www.nbrnd.com/",
+                 "linkedin_url":  "https://au.linkedin.com/company/no-brand-holdings",
+                 "hq_country":  "AU",
+                 "hq_state":  "New South Wales",
+                 "hq_city":  "Sydney",
+                 "offices":  [
+
+                             ],
+                 "status":  "active",
+                 "merged_into_id":  null,
+                 "review_status":  "reviewed",
+                 "last_reviewed_at":  "2026-07-30",
+                 "last_reviewed_by":  "codex-investor-identity-audit"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:scoped:recent-deal2026-7-30_deals-061-120",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

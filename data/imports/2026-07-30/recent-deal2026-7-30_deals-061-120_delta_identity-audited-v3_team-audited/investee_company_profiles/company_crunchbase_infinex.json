@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:infinex",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Infinex",
+                 "website_url":  "https://infinex.xyz",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "New South Wales",
+                 "hq_city":  "Sydney",
+                 "is_anz":  true,
+                 "sector_primary":  "web3",
+                 "sector_secondary":  "decentralised_finance",
+                 "use_case_primary":  "onchain_application_access",
+                 "use_case_secondary":  [
+                                            "defi_protocol_interface",
+                                            "digital_asset_account_management"
+                                        ],
+                 "customer_type":  "consumer",
+                 "business_model":  "transaction_and_protocol_fees",
+                 "sales_motion":  "product_led",
+                 "technology_depth":  "blockchain",
+                 "ai_relevance":  "none",
+                 "ai_usage_type":  "not_applicable",
+                 "ai_core_or_enabler":  "not_core",
+                 "company_summary":  "The Infinex platform provides access to onchain protocols, services and applications.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/infinex-pre-seed--b02f53f6",
+                                     "https://www.crunchbase.com/organization/infinex",
+                                     "https://infinex.xyz"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:infinex-pre-seed--b02f53f6"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

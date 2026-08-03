@@ -1,0 +1,28 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_external_ids",
+    "record_key":  "investee_external_id:crunchbase:shopfront-5080",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "external_id":  "shopfront-5080",
+                 "external_url":  "https://www.crunchbase.com/organization/shopfront-5080",
+                 "first_seen_at":  "2026-07-30T14:07:04.3696044+09:30",
+                 "last_seen_at":  "2026-07-30T14:07:04.3696044+09:30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:shopfront-5080"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:shopfront-5080-pre-seed--1d2f7ca3"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

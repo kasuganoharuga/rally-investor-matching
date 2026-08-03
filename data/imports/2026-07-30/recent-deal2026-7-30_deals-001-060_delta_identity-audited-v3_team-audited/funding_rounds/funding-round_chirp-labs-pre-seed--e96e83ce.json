@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:chirp-labs-pre-seed--e96e83ce",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "chirp-labs-pre-seed--e96e83ce",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/chirp-labs-pre-seed--e96e83ce",
+                 "source_payload":  {
+                                        "Transaction Name":  "Pre Seed Round - Chirp Labs",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/chirp-labs-pre-seed--e96e83ce",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "Chirp Labs",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/chirp-labs",
+                                        "Funding Type":  "Pre-Seed",
+                                        "Money Raised":  "1500000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "935160",
+                                        "Announced Date":  "2025-01-15",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "5000000",
+                                        "Pre-Money Valuation Currency":  "USD",
+                                        "Pre-Money Valuation (in USD)":  "5000000",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "AI-native voice agent that runs your CRM.",
+                                        "Organization Industries":  "Artificial Intelligence (AI), CRM, Sales Enablement, Software",
+                                        "Organization Website":  "https://trychirp.com",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "1500000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "935160",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Startmate",
+                                        "Investor Names":  "Startmate, Trampoline Venture Partners",
+                                        "Number of Investors":  "2",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "Chirp Labs",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://trychirp.com",
+                 "org_industries_raw":  "Artificial Intelligence (AI), CRM, Sales Enablement, Software",
+                 "round_type_raw":  "Pre-Seed",
+                 "round_stage":  "pre_seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-01-15",
+                 "money_raised_raw":  "1500000",
+                 "amount":  1500000,
+                 "currency":  "AUD",
+                 "amount_usd":  935160,
+                 "pre_money_valuation_raw":  "5000000",
+                 "pre_money_valuation":  5000000,
+                 "valuation_currency":  "USD",
+                 "valuation_usd":  5000000,
+                 "equity_only":  true,
+                 "total_funding_raw":  "1500000",
+                 "investor_names_raw":  "Startmate, Trampoline Venture Partners",
+                 "lead_investor_names_raw":  "Startmate",
+                 "imported_at":  "2026-07-30T14:07:04.4112477+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "unverified_publicly",
+                 "verification_source_url":  "https://www.crunchbase.com/funding_round/chirp-labs-pre-seed--e96e83ce",
+                 "verification_notes":  "No exact public funding announcement was located in this pass. Imported transaction is retained as-is for manual follow-up.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:chirp-labs"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:chirp-labs-pre-seed--e96e83ce"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact round amount/date/investors not independently verified."
+                              ]
+               }
+}

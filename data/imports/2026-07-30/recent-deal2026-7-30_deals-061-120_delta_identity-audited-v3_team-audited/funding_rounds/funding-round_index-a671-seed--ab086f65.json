@@ -1,0 +1,83 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:index-a671-seed--ab086f65",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "index-a671-seed--ab086f65",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/index-a671-seed--ab086f65",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Index",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/index-a671-seed--ab086f65",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "Index",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/index-a671",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "",
+                                        "Money Raised Currency":  "",
+                                        "Money Raised (in USD)":  "",
+                                        "Announced Date":  "2025-02-11",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Index is a project management based firm that takes out planning out of pain.",
+                                        "Organization Industries":  "Product Management, Project Management, Service Industry",
+                                        "Organization Website":  "https://index.inc/",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "",
+                                        "Total Funding Amount Currency":  "",
+                                        "Total Funding Amount (in USD)":  "",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Blackbird Ventures",
+                                        "Investor Names":  "Bain Capital Ventures, Blackbird Ventures",
+                                        "Number of Investors":  "2",
+                                        "Number of Partner Investors":  "2"
+                                    },
+                 "investee_name_raw":  "Index",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://index.inc/",
+                 "org_industries_raw":  "Product Management, Project Management, Service Industry",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-02-11",
+                 "money_raised_raw":  null,
+                 "amount":  null,
+                 "currency":  null,
+                 "amount_usd":  null,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  null,
+                 "investor_names_raw":  "Bain Capital Ventures, Blackbird Ventures",
+                 "lead_investor_names_raw":  "Blackbird Ventures",
+                 "imported_at":  "2026-07-30T14:07:04.7972062+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "amount_supplemented",
+                 "verification_source_url":  "https://index.inc/blog/index-raises-3m-seed-round",
+                 "verification_notes":  "Company announcement verifies an A$3.5m seed led by Blackbird and Bain Capital Ventures.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:index-a671"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:index-a671-seed--ab086f65"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Imported amount is blank.",
+                                  "Company announcement also names YC and angels not present in the imported investor list."
+                              ]
+               }
+}

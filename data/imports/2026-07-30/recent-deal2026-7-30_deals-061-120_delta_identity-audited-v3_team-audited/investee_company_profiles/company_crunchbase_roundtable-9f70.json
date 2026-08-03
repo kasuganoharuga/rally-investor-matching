@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:roundtable-9f70",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Roundtable",
+                 "website_url":  "https://www.itsroundtable.com/",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "New South Wales",
+                 "hq_city":  "Sydney",
+                 "is_anz":  true,
+                 "sector_primary":  "creator_economy",
+                 "sector_secondary":  "live_video",
+                 "use_case_primary":  "paid_creator_fan_interactions",
+                 "use_case_secondary":  [
+                                            "live_video_experiences",
+                                            "superfan_monetisation"
+                                        ],
+                 "customer_type":  "consumer",
+                 "business_model":  "transaction_and_creator_fees",
+                 "sales_motion":  "community_led",
+                 "technology_depth":  "conventional_software",
+                 "ai_relevance":  "none",
+                 "ai_usage_type":  "not_applicable",
+                 "ai_core_or_enabler":  "not_core",
+                 "company_summary":  "RoundTable connects creators with superfans through live video experiences, enabling face-to-face interactions and revenue opportunities.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/roundtable-9f70-pre-seed--9af02b3a",
+                                     "https://www.crunchbase.com/organization/roundtable-9f70",
+                                     "https://www.itsroundtable.com/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:roundtable-9f70-pre-seed--9af02b3a"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

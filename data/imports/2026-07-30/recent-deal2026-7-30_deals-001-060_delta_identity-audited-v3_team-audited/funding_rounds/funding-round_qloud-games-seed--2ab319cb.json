@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:qloud-games-seed--2ab319cb",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "qloud-games-seed--2ab319cb",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/qloud-games-seed--2ab319cb",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Qloud Games",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/qloud-games-seed--2ab319cb",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "Qloud Games",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/qloud-games",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "5000000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "5000000",
+                                        "Announced Date":  "2025-08-13",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Qloud Games is an independent game studio with a vision to create Loftia, a cozy MMO that emphasizes community.",
+                                        "Organization Industries":  "Gamification, Gaming, MMO Games, Online Games",
+                                        "Organization Website":  "https://loftia.gg",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "5000000",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "5000000",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "BITKRAFT Ventures, GFR Fund",
+                                        "Investor Names":  "1Up Ventures, Andreessen Horowitz, BITKRAFT Ventures, Gaingels, GFR Fund",
+                                        "Number of Investors":  "5",
+                                        "Number of Partner Investors":  "1"
+                                    },
+                 "investee_name_raw":  "Qloud Games",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://loftia.gg",
+                 "org_industries_raw":  "Gamification, Gaming, MMO Games, Online Games",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-08-13",
+                 "money_raised_raw":  "5000000",
+                 "amount":  5000000,
+                 "currency":  "USD",
+                 "amount_usd":  5000000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "5000000",
+                 "investor_names_raw":  "1Up Ventures, Andreessen Horowitz, BITKRAFT Ventures, Gaingels, GFR Fund",
+                 "lead_investor_names_raw":  "BITKRAFT Ventures, GFR Fund",
+                 "imported_at":  "2026-07-30T14:07:04.3426066+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "verified_primary",
+                 "verification_source_url":  "https://www.prnewswire.com/news-releases/qloud-games-raises-5m-seed-round-led-by-bitkraft-and-gfr-fund-to-build-the-first-cozy-solarpunk-mmo-loftia-302528635.html",
+                 "verification_notes":  "Company-issued release verifies US$5m seed led by BITKRAFT and GFR, with a16z, 1Up and Gaingels.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:qloud-games"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:qloud-games-seed--2ab319cb"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:voltavate-pre-seed--fe4e7e0d",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "voltavate-pre-seed--fe4e7e0d",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/voltavate-pre-seed--fe4e7e0d",
+                 "source_payload":  {
+                                        "Transaction Name":  "Pre Seed Round - Voltavate",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/voltavate-pre-seed--fe4e7e0d",
+                                        "Organization Location":  "Melbourne, Victoria, Australia, Oceania",
+                                        "Organization Name":  "Voltavate",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/voltavate",
+                                        "Funding Type":  "Pre-Seed",
+                                        "Money Raised":  "850000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "553248",
+                                        "Announced Date":  "2025-06-11",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Voltavate is dedicated to driving innovation in battery technology to support the global transition towards sustainable energy solutions.",
+                                        "Organization Industries":  "Battery, Industrial, Machinery Manufacturing, Sustainability",
+                                        "Organization Website":  "https://www.voltavate.com",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "4400000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "3086887",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Artesian VC",
+                                        "Investor Names":  "Artesian VC, Christiaan Jordaan, Electrifi Ventures, Investible, John Wood, Reza Behnam, Steven Vassiloudis",
+                                        "Number of Investors":  "7",
+                                        "Number of Partner Investors":  "2"
+                                    },
+                 "investee_name_raw":  "Voltavate",
+                 "org_location_raw":  "Melbourne, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://www.voltavate.com",
+                 "org_industries_raw":  "Battery, Industrial, Machinery Manufacturing, Sustainability",
+                 "round_type_raw":  "Pre-Seed",
+                 "round_stage":  "pre_seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-06-11",
+                 "money_raised_raw":  "850000",
+                 "amount":  850000,
+                 "currency":  "AUD",
+                 "amount_usd":  553248,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "4400000",
+                 "investor_names_raw":  "Artesian VC, Christiaan Jordaan, Electrifi Ventures, Investible, John Wood, Reza Behnam, Steven Vassiloudis",
+                 "lead_investor_names_raw":  "Artesian VC",
+                 "imported_at":  "2026-07-30T14:07:05.3087186+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "verified_primary",
+                 "verification_source_url":  "https://www.prnewswire.com/apac/news-releases/voltavate-receives-a850-000-in-oversubscribed-pre-seed-round-led-by-artesian-302478293.html",
+                 "verification_notes":  "Company-issued release verifies A$850k pre-seed led by Artesian with Investible, Electrifi and the imported angels on 11 Jun 2025.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:voltavate"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:voltavate-pre-seed--fe4e7e0d"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

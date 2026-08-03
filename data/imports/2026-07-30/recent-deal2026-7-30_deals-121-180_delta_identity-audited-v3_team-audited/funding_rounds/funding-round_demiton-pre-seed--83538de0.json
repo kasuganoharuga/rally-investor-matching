@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:demiton-pre-seed--83538de0",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "demiton-pre-seed--83538de0",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/demiton-pre-seed--83538de0",
+                 "source_payload":  {
+                                        "Transaction Name":  "Pre Seed Round - Demiton",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/demiton-pre-seed--83538de0",
+                                        "Organization Location":  "Gold Coast, Queensland, Australia, Oceania",
+                                        "Organization Name":  "Demiton",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/demiton",
+                                        "Funding Type":  "Pre-Seed",
+                                        "Money Raised":  "50000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "50000",
+                                        "Announced Date":  "2025-05-10",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Sovereign Financial Infrastructure for Microsoft Dynamics 365.",
+                                        "Organization Industries":  "Compliance, Cyber Security, Enterprise Software, Financial Services, FinTech, GovTech",
+                                        "Organization Website":  "https://demiton.io",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "50000",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "50000",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Justin Trollip",
+                                        "Investor Names":  "Justin Trollip",
+                                        "Number of Investors":  "1",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "Demiton",
+                 "org_location_raw":  "Gold Coast, Queensland, Australia, Oceania",
+                 "org_website_raw":  "https://demiton.io",
+                 "org_industries_raw":  "Compliance, Cyber Security, Enterprise Software, Financial Services, FinTech, GovTech",
+                 "round_type_raw":  "Pre-Seed",
+                 "round_stage":  "pre_seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-05-10",
+                 "money_raised_raw":  "50000",
+                 "amount":  50000,
+                 "currency":  "USD",
+                 "amount_usd":  50000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "50000",
+                 "investor_names_raw":  "Justin Trollip",
+                 "lead_investor_names_raw":  "Justin Trollip",
+                 "imported_at":  "2026-07-30T14:07:05.2297415+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "unverified_publicly",
+                 "verification_source_url":  "https://www.crunchbase.com/funding_round/demiton-pre-seed--83538de0",
+                 "verification_notes":  "No exact independent public announcement was located in this pass. The imported transaction is retained for manual follow-up.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:demiton"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:demiton-pre-seed--83538de0"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact round amount/date/stage/investors not independently verified."
+                              ]
+               }
+}

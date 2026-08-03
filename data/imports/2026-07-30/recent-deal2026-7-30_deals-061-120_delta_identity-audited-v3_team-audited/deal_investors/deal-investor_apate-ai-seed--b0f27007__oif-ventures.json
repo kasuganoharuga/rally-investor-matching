@@ -1,0 +1,31 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "deal_investors",
+    "record_key":  "deal_investor:crunchbase:apate-ai-seed--b0f27007:oif-ventures",
+    "operation":  "upsert",
+    "data":  {
+                 "raw_name":  "OIF Ventures",
+                 "role":  "lead",
+                 "participation_status":  "unknown",
+                 "resolution":  "resolved",
+                 "resolution_confidence":  "high",
+                 "identity_resolution":  "existing_database_investor"
+             },
+    "refs":  {
+                 "deal_key":  "funding_round:crunchbase:apate-ai-seed--b0f27007",
+                 "investor_key":  "investor:oif-ventures",
+                 "raw_investor_candidate_key":  "raw_investor_candidate:oif-ventures"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:apate-ai-seed--b0f27007"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

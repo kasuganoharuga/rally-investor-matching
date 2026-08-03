@@ -1,0 +1,59 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investor_web_profiles",
+    "record_key":  "investor_web_profile:ecotone-ventures:2026-07-22",
+    "operation":  "upsert",
+    "data":  {
+                 "source_urls":  [
+                                     "https://www.ecotonepartners.com.au/ecotone-ventures",
+                                     "https://www.linkedin.com/company/ecotone-partners"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "website_status":  "ok",
+                 "raw_content_hash":  null,
+                 "raw_content_ref":  "data/03_research/investors/ecotone-ventures/investor_raw_collection.json",
+                 "extraction_model":  "fixed-ai-workflow",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high",
+                 "claimed_thesis":  "Climate-focused angel network and investment platform associated with Ecotone Partners.",
+                 "claimed_stages":  {
+
+                                    },
+                 "claimed_sectors":  {
+
+                                     },
+                 "claimed_geographies":  {
+
+                                         },
+                 "claimed_business_models":  [
+
+                                             ],
+                 "claimed_cheque_min":  null,
+                 "claimed_cheque_max":  null,
+                 "claimed_cheque_currency":  null,
+                 "contact_emails":  [
+
+                                    ],
+                 "application_url":  null,
+                 "contact_notes":  "Identity fields were audited against official websites and LinkedIn company pages where a unique match was available. Remaining nulls are documented in investor_identity_audit.json.",
+                 "is_current":  true,
+                 "superseded_at":  null
+             },
+    "refs":  {
+                 "investor_key":  "investor:ecotone-ventures"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:2026-07-24",
+                       "source_keys":  [
+                                           "research_source:ecotone-ventures:ecotone-ventures_src_official",
+                                           "research_source:ecotone-ventures:ecotone-ventures_src_linkedin",
+                                           "research_source:ecotone-ventures:ecotone-ventures_src_deal"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

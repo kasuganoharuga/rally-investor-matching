@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:levur",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Levur",
+                 "website_url":  "https://levur.com.au/",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "New South Wales",
+                 "hq_city":  "Sydney",
+                 "is_anz":  true,
+                 "sector_primary":  "biotechnology",
+                 "sector_secondary":  "sustainable_ingredients",
+                 "use_case_primary":  "fermentation_derived_cosmetic_oils",
+                 "use_case_secondary":  [
+                                            "palm_oil_substitution",
+                                            "cosmetic_ingredient_manufacturing"
+                                        ],
+                 "customer_type":  "enterprise",
+                 "business_model":  "ingredient_sales_and_licensing",
+                 "sales_motion":  "enterprise_top_down",
+                 "technology_depth":  "deep_tech_biotechnology",
+                 "ai_relevance":  "none",
+                 "ai_usage_type":  "not_applicable",
+                 "ai_core_or_enabler":  "not_core",
+                 "company_summary":  "Levur is a Biotechnology Research oriented firm that manufactures cosmetic oil substitutes for their customers.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/levur-pre-seed--18678e06",
+                                     "https://www.crunchbase.com/organization/levur",
+                                     "https://levur.com.au/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:levur-pre-seed--18678e06"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

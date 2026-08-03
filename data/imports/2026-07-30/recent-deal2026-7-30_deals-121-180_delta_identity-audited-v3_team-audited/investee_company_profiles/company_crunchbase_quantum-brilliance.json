@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:quantum-brilliance",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Quantum Brilliance",
+                 "website_url":  "https://quantumbrilliance.com",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "Australian Capital Territory",
+                 "hq_city":  "Canberra",
+                 "is_anz":  true,
+                 "sector_primary":  "quantum_computing",
+                 "sector_secondary":  "diamond_quantum_hardware",
+                 "use_case_primary":  "diamond_quantum_accelerators",
+                 "use_case_secondary":  [
+                                            "room_temperature_quantum_systems",
+                                            "edge_quantum_computing"
+                                        ],
+                 "customer_type":  "enterprise_and_government",
+                 "business_model":  "hardware_sales_and_partnerships",
+                 "sales_motion":  "enterprise_top_down",
+                 "technology_depth":  "deep_tech_hardware",
+                 "ai_relevance":  "none",
+                 "ai_usage_type":  "not_applicable",
+                 "ai_core_or_enabler":  "not_core",
+                 "company_summary":  "Quantum Brilliance is a global leader in diamond-based quantum technology on a mission to enable the mass deployment of quantum.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/quantum-brilliance-series-a--0254d304",
+                                     "https://www.crunchbase.com/organization/quantum-brilliance",
+                                     "https://quantumbrilliance.com"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:quantum-brilliance-series-a--0254d304"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

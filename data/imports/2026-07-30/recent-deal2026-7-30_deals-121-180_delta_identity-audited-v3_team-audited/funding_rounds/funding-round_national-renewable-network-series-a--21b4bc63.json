@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:national-renewable-network-series-a--21b4bc63",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "national-renewable-network-series-a--21b4bc63",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/national-renewable-network-series-a--21b4bc63",
+                 "source_payload":  {
+                                        "Transaction Name":  "Series A - National Renewable Network",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/national-renewable-network-series-a--21b4bc63",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "National Renewable Network",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/national-renewable-network",
+                                        "Funding Type":  "Series A",
+                                        "Money Raised":  "17200000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "11203227",
+                                        "Announced Date":  "2025-08-11",
+                                        "Funding Stage":  "Early Stage Venture",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "The National Renewable Network is a linked network of solar and storage systems that transforms the way energy is supplied.",
+                                        "Organization Industries":  "Environmental Consulting, Renewable Energy",
+                                        "Organization Website":  "https://nrn.com.au",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "78200000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "50987843",
+                                        "Funding Status":  "Early Stage Venture",
+                                        "Lead Investors":  "Investible, Virescent Ventures",
+                                        "Investor Names":  "Ecotone Ventures, Electrifi Ventures, Investible, Virescent Ventures",
+                                        "Number of Investors":  "4",
+                                        "Number of Partner Investors":  "5"
+                                    },
+                 "investee_name_raw":  "National Renewable Network",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://nrn.com.au",
+                 "org_industries_raw":  "Environmental Consulting, Renewable Energy",
+                 "round_type_raw":  "Series A",
+                 "round_stage":  "series_a",
+                 "funding_stage_raw":  "Early Stage Venture",
+                 "announced_date":  "2025-08-11",
+                 "money_raised_raw":  "17200000",
+                 "amount":  17200000,
+                 "currency":  "AUD",
+                 "amount_usd":  11203227,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "78200000",
+                 "investor_names_raw":  "Ecotone Ventures, Electrifi Ventures, Investible, Virescent Ventures",
+                 "lead_investor_names_raw":  "Investible, Virescent Ventures",
+                 "imported_at":  "2026-07-30T14:07:05.1608383+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "amount_mismatch",
+                 "verification_source_url":  "https://www.prnewswire.com/news-releases/nrn-secures-67m-in-one-of-australias-largest-climate-tech-series-a-deals-302526355.html",
+                 "verification_notes":  "Company-issued release reports a A$67.2m Series A financing package.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:national-renewable-network"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:national-renewable-network-series-a--21b4bc63"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Imported amount is A$17.2m; financing composition and transaction identity require manual reconciliation."
+                              ]
+               }
+}

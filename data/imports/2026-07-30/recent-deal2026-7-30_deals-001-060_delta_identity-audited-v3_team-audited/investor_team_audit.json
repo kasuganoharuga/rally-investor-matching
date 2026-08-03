@@ -1,0 +1,1304 @@
+{
+    "schema_version":  "1.0.0",
+    "generated_at":  "2026-07-30T16:15:13.3695428+09:30",
+    "audit_date":  "2026-07-30",
+    "source_batch_id":  "recent-deal2026-7-30_deals-001-060_delta_identity-audited-v3",
+    "audited_batch_id":  "recent-deal2026-7-30_deals-001-060_delta_identity-audited-v3_team-audited",
+    "policy":  [
+                   "Individual angels are represented by investor records and are not duplicated as their own team members.",
+                   "Only publicly verified, investment-relevant leaders are imported.",
+                   "Strategic corporate executives are not imported unless their role is tied to the investment activity.",
+                   "A missing member record is documented as a coverage gap and never treated as proof that no team exists.",
+                   "Personal LinkedIn URLs remain null unless uniquely verified."
+               ],
+    "counts":  {
+                   "institutions_audited":  58,
+                   "new_institutions_with_verified_core_members":  7,
+                   "existing_investors_receiving_member_supplements":  0,
+                   "existing_dependency_investors_audited":  52,
+                   "existing_dependencies_with_historical_team":  20,
+                   "existing_dependencies_without_historical_team":  32,
+                   "team_member_records_imported":  23,
+                   "new_institutions_without_verified_core_members":  103
+               },
+    "records":  [
+                    {
+                        "investor_key":  "investor:1up-ventures",
+                        "canonical_name":  "1Up Ventures",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "verified_public_core_members",
+                        "imported_member_count":  6,
+                        "imported_member_keys":  [
+                                                     "investor_team_member:1up-ventures:sean-hua",
+                                                     "investor_team_member:1up-ventures:himal-randeniya",
+                                                     "investor_team_member:1up-ventures:chenelle-tanglao",
+                                                     "investor_team_member:1up-ventures:chris-pang",
+                                                     "investor_team_member:1up-ventures:mike-cunningham",
+                                                     "investor_team_member:1up-ventures:david-le"
+                                                 ],
+                        "reason":  "One or more current investment-relevant leaders were verified from official firm or exact professional sources."
+                    },
+                    {
+                        "investor_key":  "investor:2040-ventures",
+                        "canonical_name":  "2040 Ventures",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:5h-values-capital",
+                        "canonical_name":  "5H Values Capital",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "verified_public_core_members",
+                        "imported_member_count":  2,
+                        "imported_member_keys":  [
+                                                     "investor_team_member:5h-values-capital:james-chin-moody",
+                                                     "investor_team_member:5h-values-capital:geraldine-chin-moody"
+                                                 ],
+                        "reason":  "One or more current investment-relevant leaders were verified from official firm or exact professional sources."
+                    },
+                    {
+                        "investor_key":  "investor:afterwork-ventures",
+                        "canonical_name":  "AfterWork Ventures",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "verified_public_core_members",
+                        "imported_member_count":  4,
+                        "imported_member_keys":  [
+                                                     "investor_team_member:afterwork-ventures:alex-khor",
+                                                     "investor_team_member:afterwork-ventures:adrian-petersen",
+                                                     "investor_team_member:afterwork-ventures:adam-smith",
+                                                     "investor_team_member:afterwork-ventures:mike-forster"
+                                                 ],
+                        "reason":  "One or more current investment-relevant leaders were verified from official firm or exact professional sources."
+                    },
+                    {
+                        "investor_key":  "investor:andreessen-horowitz",
+                        "canonical_name":  "Andreessen Horowitz",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:animoca-brands",
+                        "canonical_name":  "Animoca Brands",
+                        "investor_type":  "strategic_corporate",
+                        "coverage_status":  "no_public_investment_team_attributed",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "The investor is an operating or strategic company and no deal-relevant investment-team member was safely attributable from the reviewed public identity sources."
+                    },
+                    {
+                        "investor_key":  "investor:arcanys-ventures",
+                        "canonical_name":  "Arcanys Ventures",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "verified_public_core_members",
+                        "imported_member_count":  3,
+                        "imported_member_keys":  [
+                                                     "investor_team_member:arcanys-ventures:alan-debonneville",
+                                                     "investor_team_member:arcanys-ventures:frederic-joye",
+                                                     "investor_team_member:arcanys-ventures:karen-lawson"
+                                                 ],
+                        "reason":  "One or more current investment-relevant leaders were verified from official firm or exact professional sources."
+                    },
+                    {
+                        "investor_key":  "investor:avicella-capital",
+                        "canonical_name":  "Avicella Capital",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "verified_public_core_members",
+                        "imported_member_count":  3,
+                        "imported_member_keys":  [
+                                                     "investor_team_member:avicella-capital:gennady-bratslavsky",
+                                                     "investor_team_member:avicella-capital:brooke-raphael",
+                                                     "investor_team_member:avicella-capital:david-saab"
+                                                 ],
+                        "reason":  "One or more current investment-relevant leaders were verified from official firm or exact professional sources."
+                    },
+                    {
+                        "investor_key":  "investor:bain-capital-ventures",
+                        "canonical_name":  "Bain Capital Ventures",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:banco-popular-de-puerto-rico",
+                        "canonical_name":  "Banco Popular de Puerto Rico",
+                        "investor_type":  "bank_lender",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:becker-ventures",
+                        "canonical_name":  "Becker Ventures",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "identity_or_team_not_fully_resolved",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "The institution identity or its public leadership remains insufficiently resolved; no member record was imported to avoid a false attribution."
+                    },
+                    {
+                        "investor_key":  "investor:bitkraft-ventures",
+                        "canonical_name":  "BITKRAFT Ventures",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:bpmf-holdings",
+                        "canonical_name":  "BPMF Holdings",
+                        "investor_type":  "investment_firm",
+                        "coverage_status":  "identity_or_team_not_fully_resolved",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "The institution identity or its public leadership remains insufficiently resolved; no member record was imported to avoid a false attribution."
+                    },
+                    {
+                        "investor_key":  "investor:bridgewest-ventures",
+                        "canonical_name":  "Bridgewest Ventures",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:brinc",
+                        "canonical_name":  "Brinc",
+                        "investor_type":  "investment_firm",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:bupa-ventures",
+                        "canonical_name":  "Bupa Ventures",
+                        "investor_type":  "strategic_corporate",
+                        "coverage_status":  "identity_or_team_not_fully_resolved",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "The institution identity or its public leadership remains insufficiently resolved; no member record was imported to avoid a false attribution."
+                    },
+                    {
+                        "investor_key":  "investor:chevron-technology-ventures",
+                        "canonical_name":  "Chevron Technology Ventures",
+                        "investor_type":  "strategic_corporate",
+                        "coverage_status":  "no_public_investment_team_attributed",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "The investor is an operating or strategic company and no deal-relevant investment-team member was safely attributable from the reviewed public identity sources."
+                    },
+                    {
+                        "investor_key":  "investor:cogitent-ventures",
+                        "canonical_name":  "Cogitent Ventures",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:coreline-ventures",
+                        "canonical_name":  "Coreline Ventures",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:coyote-ventures",
+                        "canonical_name":  "Coyote Ventures",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:fathom-fund",
+                        "canonical_name":  "Fathom Fund",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:fifth-estate-asset-management",
+                        "canonical_name":  "Fifth Estate Asset Management",
+                        "investor_type":  "investment_firm",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:forte-securities",
+                        "canonical_name":  "Forte Securities",
+                        "investor_type":  "investment_firm",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:fund-wa",
+                        "canonical_name":  "Fund WA",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:gfr-fund",
+                        "canonical_name":  "GFR Fund",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:green-peak",
+                        "canonical_name":  "Green Peak",
+                        "investor_type":  "angel",
+                        "coverage_status":  "identity_or_team_not_fully_resolved",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "The institution identity or its public leadership remains insufficiently resolved; no member record was imported to avoid a false attribution."
+                    },
+                    {
+                        "investor_key":  "investor:inhouse-ventures",
+                        "canonical_name":  "Inhouse Ventures",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:innovationclub",
+                        "canonical_name":  "InnovationClub",
+                        "investor_type":  "investment_firm",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:jam-pad-investments",
+                        "canonical_name":  "Jam Pad Investments",
+                        "investor_type":  "investment_firm",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:king-river-capital",
+                        "canonical_name":  "King River Capital",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:larsen-ventures",
+                        "canonical_name":  "Larsen Ventures",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:level-equity-management",
+                        "canonical_name":  "Level Equity",
+                        "investor_type":  "private_equity",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:lord-pastoral",
+                        "canonical_name":  "Lord Pastoral",
+                        "investor_type":  "investment_firm",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:macdoch-ventures",
+                        "canonical_name":  "Macdoch Ventures",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:marathon-petroleum",
+                        "canonical_name":  "Marathon Petroleum",
+                        "investor_type":  "strategic_corporate",
+                        "coverage_status":  "no_public_investment_team_attributed",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "The investor is an operating or strategic company and no deal-relevant investment-team member was safely attributable from the reviewed public identity sources."
+                    },
+                    {
+                        "investor_key":  "investor:melba-support-services",
+                        "canonical_name":  "Melba Support Services",
+                        "investor_type":  "strategic_corporate",
+                        "coverage_status":  "no_public_investment_team_attributed",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "The investor is an operating or strategic company and no deal-relevant investment-team member was safely attributable from the reviewed public identity sources."
+                    },
+                    {
+                        "investor_key":  "investor:monash-university",
+                        "canonical_name":  "Monash University",
+                        "investor_type":  "university_fund",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:notch-ventures",
+                        "canonical_name":  "Notch ventures",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "identity_or_team_not_fully_resolved",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "The institution identity or its public leadership remains insufficiently resolved; no member record was imported to avoid a false attribution."
+                    },
+                    {
+                        "investor_key":  "investor:peak-xv-partners",
+                        "canonical_name":  "Peak XV Partners",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:perth-angels",
+                        "canonical_name":  "Perth Angels",
+                        "investor_type":  "angel_group",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:precursor-ventures",
+                        "canonical_name":  "Precursor Ventures",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:revel-partners",
+                        "canonical_name":  "Revel Partners",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:rfc-ambrian-funds-management-rfm",
+                        "canonical_name":  "RFC Ambrian Funds Management",
+                        "investor_type":  "investment_firm",
+                        "coverage_status":  "identity_or_team_not_fully_resolved",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "The institution identity or its public leadership remains insufficiently resolved; no member record was imported to avoid a false attribution."
+                    },
+                    {
+                        "investor_key":  "investor:rio-tinto",
+                        "canonical_name":  "Rio Tinto",
+                        "investor_type":  "strategic_corporate",
+                        "coverage_status":  "no_public_investment_team_attributed",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "The investor is an operating or strategic company and no deal-relevant investment-team member was safely attributable from the reviewed public identity sources."
+                    },
+                    {
+                        "investor_key":  "investor:rising-tide",
+                        "canonical_name":  "Rising Tide Investment",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "verified_public_core_members",
+                        "imported_member_count":  4,
+                        "imported_member_keys":  [
+                                                     "investor_team_member:rising-tide:fiona-armstrong",
+                                                     "investor_team_member:rising-tide:jay-armstrong",
+                                                     "investor_team_member:rising-tide:james-budden",
+                                                     "investor_team_member:rising-tide:alison-budden"
+                                                 ],
+                        "reason":  "One or more current investment-relevant leaders were verified from official firm or exact professional sources."
+                    },
+                    {
+                        "investor_key":  "investor:rsb-capital",
+                        "canonical_name":  "RSB Capital",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:saltwater-fund",
+                        "canonical_name":  "Saltwater Fund",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:sparklabs-cultiv8",
+                        "canonical_name":  "SparkLabs Cultiv8",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:sprint-ventures",
+                        "canonical_name":  "Sprint Ventures",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:sputnik-atx",
+                        "canonical_name":  "Sputnik ATX",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:tin-alley-ventures",
+                        "canonical_name":  "Tin Alley Ventures",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:trampoline-venture-partners",
+                        "canonical_name":  "Trampoline Venture Partners",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "verified_public_core_members",
+                        "imported_member_count":  1,
+                        "imported_member_keys":  [
+                                                     "investor_team_member:trampoline-venture-partners:ignacio-garcia"
+                                                 ],
+                        "reason":  "One or more current investment-relevant leaders were verified from official firm or exact professional sources."
+                    },
+                    {
+                        "investor_key":  "investor:ubuntu-ventures",
+                        "canonical_name":  "Ubuntu Ventures",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:uniservices",
+                        "canonical_name":  "Auckland UniServices",
+                        "investor_type":  "university_fund",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:unsw-founders",
+                        "canonical_name":  "UNSW Founders",
+                        "investor_type":  "university_fund",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:veridical-ventures",
+                        "canonical_name":  "Veridical Ventures",
+                        "investor_type":  "vc_fund",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:vista-energy",
+                        "canonical_name":  "Vista Energy",
+                        "investor_type":  "strategic_corporate",
+                        "coverage_status":  "no_public_investment_team_attributed",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "The investor is an operating or strategic company and no deal-relevant investment-team member was safely attributable from the reviewed public identity sources."
+                    },
+                    {
+                        "investor_key":  "investor:x21-digital",
+                        "canonical_name":  "X21 Digital",
+                        "investor_type":  "investment_firm",
+                        "coverage_status":  "no_public_core_member_verified",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "reason":  "No current core investment decision-maker was safely verified in this pass; this is an explicit data gap, not evidence that the institution has no team."
+                    },
+                    {
+                        "investor_key":  "investor:agrizeronz",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_not_found_in_local_snapshot",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  0,
+                        "reason":  "The investor master is an existing database dependency, but no prior normalized team-member record was found in the available local database snapshot; this remains a supplement gap."
+                    },
+                    {
+                        "investor_key":  "investor:airtree-ventures",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_present",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  3,
+                        "reason":  "The investor master is an existing database dependency and prior normalized team-member records were found; they are not duplicated in this incremental package."
+                    },
+                    {
+                        "investor_key":  "investor:antler",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_not_found_in_local_snapshot",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  0,
+                        "reason":  "The investor master is an existing database dependency, but no prior normalized team-member record was found in the available local database snapshot; this remains a supplement gap."
+                    },
+                    {
+                        "investor_key":  "investor:archangel-ventures",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_not_found_in_local_snapshot",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  0,
+                        "reason":  "The investor master is an existing database dependency, but no prior normalized team-member record was found in the available local database snapshot; this remains a supplement gap."
+                    },
+                    {
+                        "investor_key":  "investor:aussie-angels",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_not_found_in_local_snapshot",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  0,
+                        "reason":  "The investor master is an existing database dependency, but no prior normalized team-member record was found in the available local database snapshot; this remains a supplement gap."
+                    },
+                    {
+                        "investor_key":  "investor:bessemer-venture-partners",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_present",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  1,
+                        "reason":  "The investor master is an existing database dependency and prior normalized team-member records were found; they are not duplicated in this incremental package."
+                    },
+                    {
+                        "investor_key":  "investor:blackbird-ventures",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_present",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  1,
+                        "reason":  "The investor master is an existing database dependency and prior normalized team-member records were found; they are not duplicated in this incremental package."
+                    },
+                    {
+                        "investor_key":  "investor:black-nova-venture-capital",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_not_found_in_local_snapshot",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  0,
+                        "reason":  "The investor master is an existing database dependency, but no prior normalized team-member record was found in the available local database snapshot; this remains a supplement gap."
+                    },
+                    {
+                        "investor_key":  "investor:black-sheep-capital",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_present",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  3,
+                        "reason":  "The investor master is an existing database dependency and prior normalized team-member records were found; they are not duplicated in this incremental package."
+                    },
+                    {
+                        "investor_key":  "investor:bond",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_present",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  2,
+                        "reason":  "The investor master is an existing database dependency and prior normalized team-member records were found; they are not duplicated in this incremental package."
+                    },
+                    {
+                        "investor_key":  "investor:booster",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_not_found_in_local_snapshot",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  0,
+                        "reason":  "The investor master is an existing database dependency, but no prior normalized team-member record was found in the available local database snapshot; this remains a supplement gap."
+                    },
+                    {
+                        "investor_key":  "investor:brand-fund-by-previously-unavailable",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_not_found_in_local_snapshot",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  0,
+                        "reason":  "The investor master is an existing database dependency, but no prior normalized team-member record was found in the available local database snapshot; this remains a supplement gap."
+                    },
+                    {
+                        "investor_key":  "investor:breakthrough-victoria",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_not_found_in_local_snapshot",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  0,
+                        "reason":  "The investor master is an existing database dependency, but no prior normalized team-member record was found in the available local database snapshot; this remains a supplement gap."
+                    },
+                    {
+                        "investor_key":  "investor:brisbane-angels",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_not_found_in_local_snapshot",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  0,
+                        "reason":  "The investor master is an existing database dependency, but no prior normalized team-member record was found in the available local database snapshot; this remains a supplement gap."
+                    },
+                    {
+                        "investor_key":  "investor:co-ventures",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_not_found_in_local_snapshot",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  0,
+                        "reason":  "The investor master is an existing database dependency, but no prior normalized team-member record was found in the available local database snapshot; this remains a supplement gap."
+                    },
+                    {
+                        "investor_key":  "investor:five-v-capital-pty-ltd",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_not_found_in_local_snapshot",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  0,
+                        "reason":  "The investor master is an existing database dependency, but no prior normalized team-member record was found in the available local database snapshot; this remains a supplement gap."
+                    },
+                    {
+                        "investor_key":  "investor:founders-factory",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_present",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  3,
+                        "reason":  "The investor master is an existing database dependency and prior normalized team-member records were found; they are not duplicated in this incremental package."
+                    },
+                    {
+                        "investor_key":  "investor:gaingels",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_present",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  3,
+                        "reason":  "The investor master is an existing database dependency and prior normalized team-member records were found; they are not duplicated in this incremental package."
+                    },
+                    {
+                        "investor_key":  "investor:gd1-global-from-day-one",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_present",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  3,
+                        "reason":  "The investor master is an existing database dependency and prior normalized team-member records were found; they are not duplicated in this incremental package."
+                    },
+                    {
+                        "investor_key":  "investor:graincorp-ventures",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_not_found_in_local_snapshot",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  0,
+                        "reason":  "The investor master is an existing database dependency, but no prior normalized team-member record was found in the available local database snapshot; this remains a supplement gap."
+                    },
+                    {
+                        "investor_key":  "investor:horizons-ventures",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_not_found_in_local_snapshot",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  0,
+                        "reason":  "The investor master is an existing database dependency, but no prior normalized team-member record was found in the available local database snapshot; this remains a supplement gap."
+                    },
+                    {
+                        "investor_key":  "investor:hostplus",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_present",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  3,
+                        "reason":  "The investor master is an existing database dependency and prior normalized team-member records were found; they are not duplicated in this incremental package."
+                    },
+                    {
+                        "investor_key":  "investor:icehouse-ventures",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_present",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  3,
+                        "reason":  "The investor master is an existing database dependency and prior normalized team-member records were found; they are not duplicated in this incremental package."
+                    },
+                    {
+                        "investor_key":  "investor:insight-partners",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_present",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  3,
+                        "reason":  "The investor master is an existing database dependency and prior normalized team-member records were found; they are not duplicated in this incremental package."
+                    },
+                    {
+                        "investor_key":  "investor:ip-group",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_present",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  3,
+                        "reason":  "The investor master is an existing database dependency and prior normalized team-member records were found; they are not duplicated in this incremental package."
+                    },
+                    {
+                        "investor_key":  "investor:ip-group-australia",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_not_found_in_local_snapshot",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  0,
+                        "reason":  "The investor master is an existing database dependency, but no prior normalized team-member record was found in the available local database snapshot; this remains a supplement gap."
+                    },
+                    {
+                        "investor_key":  "investor:iqt",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_not_found_in_local_snapshot",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  0,
+                        "reason":  "The investor master is an existing database dependency, but no prior normalized team-member record was found in the available local database snapshot; this remains a supplement gap."
+                    },
+                    {
+                        "investor_key":  "investor:jelix-ventures",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_not_found_in_local_snapshot",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  0,
+                        "reason":  "The investor master is an existing database dependency, but no prior normalized team-member record was found in the available local database snapshot; this remains a supplement gap."
+                    },
+                    {
+                        "investor_key":  "investor:la-trobe-university",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_not_found_in_local_snapshot",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  0,
+                        "reason":  "The investor master is an existing database dependency, but no prior normalized team-member record was found in the available local database snapshot; this remains a supplement gap."
+                    },
+                    {
+                        "investor_key":  "investor:lighthouse",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_not_found_in_local_snapshot",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  0,
+                        "reason":  "The investor master is an existing database dependency, but no prior normalized team-member record was found in the available local database snapshot; this remains a supplement gap."
+                    },
+                    {
+                        "investor_key":  "investor:localglobe",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_not_found_in_local_snapshot",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  0,
+                        "reason":  "The investor master is an existing database dependency, but no prior normalized team-member record was found in the available local database snapshot; this remains a supplement gap."
+                    },
+                    {
+                        "investor_key":  "investor:m8-ventures",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_present",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  3,
+                        "reason":  "The investor master is an existing database dependency and prior normalized team-member records were found; they are not duplicated in this incremental package."
+                    },
+                    {
+                        "investor_key":  "investor:main-sequence-ventures",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_present",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  3,
+                        "reason":  "The investor master is an existing database dependency and prior normalized team-member records were found; they are not duplicated in this incremental package."
+                    },
+                    {
+                        "investor_key":  "investor:melbourne-angels",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_present",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  3,
+                        "reason":  "The investor master is an existing database dependency and prior normalized team-member records were found; they are not duplicated in this incremental package."
+                    },
+                    {
+                        "investor_key":  "investor:movac",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_not_found_in_local_snapshot",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  0,
+                        "reason":  "The investor master is an existing database dependency, but no prior normalized team-member record was found in the available local database snapshot; this remains a supplement gap."
+                    },
+                    {
+                        "investor_key":  "investor:new-zealand-growth-capital-partners",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_not_found_in_local_snapshot",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  0,
+                        "reason":  "The investor master is an existing database dependency, but no prior normalized team-member record was found in the available local database snapshot; this remains a supplement gap."
+                    },
+                    {
+                        "investor_key":  "investor:octopus-ventures",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_not_found_in_local_snapshot",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  0,
+                        "reason":  "The investor master is an existing database dependency, but no prior normalized team-member record was found in the available local database snapshot; this remains a supplement gap."
+                    },
+                    {
+                        "investor_key":  "investor:oif-ventures",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_present",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  3,
+                        "reason":  "The investor master is an existing database dependency and prior normalized team-member records were found; they are not duplicated in this incremental package."
+                    },
+                    {
+                        "investor_key":  "investor:oneventures",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_present",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  1,
+                        "reason":  "The investor master is an existing database dependency and prior normalized team-member records were found; they are not duplicated in this incremental package."
+                    },
+                    {
+                        "investor_key":  "investor:phase-one-ventures",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_not_found_in_local_snapshot",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  0,
+                        "reason":  "The investor master is an existing database dependency, but no prior normalized team-member record was found in the available local database snapshot; this remains a supplement gap."
+                    },
+                    {
+                        "investor_key":  "investor:punakaiki-fund",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_not_found_in_local_snapshot",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  0,
+                        "reason":  "The investor master is an existing database dependency, but no prior normalized team-member record was found in the available local database snapshot; this remains a supplement gap."
+                    },
+                    {
+                        "investor_key":  "investor:purpose-ventures",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_present",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  1,
+                        "reason":  "The investor master is an existing database dependency and prior normalized team-member records were found; they are not duplicated in this incremental package."
+                    },
+                    {
+                        "investor_key":  "investor:qic",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_not_found_in_local_snapshot",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  0,
+                        "reason":  "The investor master is an existing database dependency, but no prior normalized team-member record was found in the available local database snapshot; this remains a supplement gap."
+                    },
+                    {
+                        "investor_key":  "investor:salus-ventures",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_not_found_in_local_snapshot",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  0,
+                        "reason":  "The investor master is an existing database dependency, but no prior normalized team-member record was found in the available local database snapshot; this remains a supplement gap."
+                    },
+                    {
+                        "investor_key":  "investor:shaw-and-partners-financial-services",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_not_found_in_local_snapshot",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  0,
+                        "reason":  "The investor master is an existing database dependency, but no prior normalized team-member record was found in the available local database snapshot; this remains a supplement gap."
+                    },
+                    {
+                        "investor_key":  "investor:sosv",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_not_found_in_local_snapshot",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  0,
+                        "reason":  "The investor master is an existing database dependency, but no prior normalized team-member record was found in the available local database snapshot; this remains a supplement gap."
+                    },
+                    {
+                        "investor_key":  "investor:startmate",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_not_found_in_local_snapshot",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  0,
+                        "reason":  "The investor master is an existing database dependency, but no prior normalized team-member record was found in the available local database snapshot; this remains a supplement gap."
+                    },
+                    {
+                        "investor_key":  "investor:ten13",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_present",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  6,
+                        "reason":  "The investor master is an existing database dependency and prior normalized team-member records were found; they are not duplicated in this incremental package."
+                    },
+                    {
+                        "investor_key":  "investor:tidal-ventures",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_not_found_in_local_snapshot",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  0,
+                        "reason":  "The investor master is an existing database dependency, but no prior normalized team-member record was found in the available local database snapshot; this remains a supplement gap."
+                    },
+                    {
+                        "investor_key":  "investor:tribe-global-ventures",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_not_found_in_local_snapshot",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  0,
+                        "reason":  "The investor master is an existing database dependency, but no prior normalized team-member record was found in the available local database snapshot; this remains a supplement gap."
+                    },
+                    {
+                        "investor_key":  "investor:university-of-melbourne-genesis-pre-seed-fund",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_present",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  3,
+                        "reason":  "The investor master is an existing database dependency and prior normalized team-member records were found; they are not duplicated in this incremental package."
+                    },
+                    {
+                        "investor_key":  "investor:y-combinator",
+                        "canonical_name":  null,
+                        "investor_type":  null,
+                        "coverage_status":  "existing_database_team_records_not_found_in_local_snapshot",
+                        "imported_member_count":  0,
+                        "imported_member_keys":  [
+
+                                                 ],
+                        "historical_team_record_count":  0,
+                        "reason":  "The investor master is an existing database dependency, but no prior normalized team-member record was found in the available local database snapshot; this remains a supplement gap."
+                    }
+                ]
+}

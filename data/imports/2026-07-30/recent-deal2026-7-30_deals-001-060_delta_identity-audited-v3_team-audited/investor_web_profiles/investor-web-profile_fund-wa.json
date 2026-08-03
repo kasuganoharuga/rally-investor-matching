@@ -1,0 +1,59 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investor_web_profiles",
+    "record_key":  "investor_web_profile:fund-wa:2026-07-24",
+    "operation":  "upsert",
+    "data":  {
+                 "source_urls":  [
+                                     "https://www.fundwa.com.au/",
+                                     "https://www.linkedin.com/company/fundwa"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "website_status":  "ok",
+                 "raw_content_hash":  null,
+                 "raw_content_ref":  "data/03_research/investors/fund-wa/investor_raw_collection.json",
+                 "extraction_model":  "fixed-ai-workflow",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high",
+                 "claimed_thesis":  "We invest in Western Australian Innovators with bold ideas and global ambitions. At Fund WA, we\u0027re committed to powering Western Australia\u0027s most innovative, high-growth, and scalable ventures from the early stages of commercialization. As the state\u0027s only 100% WA-dedicated early-stage VC fund, we invest from Seed to Series A, providing the capital, expertise, and networks needed to ...",
+                 "claimed_stages":  {
+
+                                    },
+                 "claimed_sectors":  {
+
+                                     },
+                 "claimed_geographies":  {
+
+                                         },
+                 "claimed_business_models":  [
+
+                                             ],
+                 "claimed_cheque_min":  null,
+                 "claimed_cheque_max":  null,
+                 "claimed_cheque_currency":  null,
+                 "contact_emails":  [
+
+                                    ],
+                 "application_url":  null,
+                 "contact_notes":  "Identity fields were audited against official websites and LinkedIn company pages where a unique match was available. Remaining nulls are documented in investor_identity_audit.json.",
+                 "is_current":  true,
+                 "superseded_at":  null
+             },
+    "refs":  {
+                 "investor_key":  "investor:fund-wa"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:2026-07-24",
+                       "source_keys":  [
+                                           "research_source:fund-wa:fund-wa_src_official",
+                                           "research_source:fund-wa:fund-wa_src_deal_g-round-crunchbase-personr-seed-9ab28d2d",
+                                           "research_source:fund-wa:fund-wa_src_recent_result"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

@@ -1,0 +1,31 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "deal_investors",
+    "record_key":  "deal_investor:crunchbase:twine-ai-seed--aef77d66:hemal-shah",
+    "operation":  "upsert",
+    "data":  {
+                 "raw_name":  "Hemal Shah",
+                 "role":  "participant",
+                 "participation_status":  "unknown",
+                 "resolution":  "resolved",
+                 "resolution_confidence":  "high",
+                 "identity_resolution":  "new_investor"
+             },
+    "refs":  {
+                 "deal_key":  "funding_round:crunchbase:twine-ai-seed--aef77d66",
+                 "investor_key":  "investor:hemal-shah",
+                 "raw_investor_candidate_key":  "raw_investor_candidate:hemal-shah"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:twine-ai-seed--aef77d66"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

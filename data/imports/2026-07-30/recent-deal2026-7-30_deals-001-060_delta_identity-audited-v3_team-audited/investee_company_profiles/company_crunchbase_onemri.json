@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:onemri",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "OneMRI",
+                 "website_url":  "https://www.onemri.com.au",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "Queensland",
+                 "hq_city":  "Brisbane",
+                 "is_anz":  true,
+                 "sector_primary":  "medical_imaging",
+                 "sector_secondary":  "preventive_health",
+                 "use_case_primary":  "whole_body_mri_screening",
+                 "use_case_secondary":  [
+                                            "radiologist_reviewed_diagnostics",
+                                            "early_health_risk_detection"
+                                        ],
+                 "customer_type":  "consumer",
+                 "business_model":  "healthcare_services",
+                 "sales_motion":  "direct_to_consumer",
+                 "technology_depth":  "medical_imaging_technology",
+                 "ai_relevance":  "none",
+                 "ai_usage_type":  "not_applicable",
+                 "ai_core_or_enabler":  "not_core",
+                 "company_summary":  "OneMRI is a provider of comprehensive whole-body MRI scans that are radiation-free, clinically reviewed by radiologists.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/onemri-seed--c715261e",
+                                     "https://www.crunchbase.com/organization/onemri",
+                                     "https://www.onemri.com.au"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:onemri-seed--c715261e"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

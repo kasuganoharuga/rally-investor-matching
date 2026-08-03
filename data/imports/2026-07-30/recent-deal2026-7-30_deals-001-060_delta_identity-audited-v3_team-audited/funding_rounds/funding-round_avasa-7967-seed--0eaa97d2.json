@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:avasa-7967-seed--0eaa97d2",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "avasa-7967-seed--0eaa97d2",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/avasa-7967-seed--0eaa97d2",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Avasa",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/avasa-7967-seed--0eaa97d2",
+                                        "Organization Location":  "Auckland, Auckland, New Zealand, Oceania",
+                                        "Organization Name":  "Avasa",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/avasa-7967",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "4750000",
+                                        "Money Raised Currency":  "NZD",
+                                        "Money Raised (in USD)":  "2778057",
+                                        "Announced Date":  "2025-08-25",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Avasa is a medical device company that helps to improve surgical procedures by developing novel implantable devices.",
+                                        "Organization Industries":  "Manufacturing, Medical, Medical Device",
+                                        "Organization Website":  "https://www.avasa.io",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "4402303",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "4402303",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Movac",
+                                        "Investor Names":  "Booster, Bridgewest Ventures, Icehouse Ventures, Movac, New Zealand Growth Capital Partners, Uniservices",
+                                        "Number of Investors":  "6",
+                                        "Number of Partner Investors":  "3"
+                                    },
+                 "investee_name_raw":  "Avasa",
+                 "org_location_raw":  "Auckland, Auckland, New Zealand, Oceania",
+                 "org_website_raw":  "https://www.avasa.io",
+                 "org_industries_raw":  "Manufacturing, Medical, Medical Device",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-08-25",
+                 "money_raised_raw":  "4750000",
+                 "amount":  4750000,
+                 "currency":  "NZD",
+                 "amount_usd":  2778057,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "4402303",
+                 "investor_names_raw":  "Booster, Bridgewest Ventures, Icehouse Ventures, Movac, New Zealand Growth Capital Partners, Uniservices",
+                 "lead_investor_names_raw":  "Movac",
+                 "imported_at":  "2026-07-30T14:07:04.1885012+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "partial_stage_mismatch",
+                 "verification_source_url":  "https://bridgewestgroup.com/company-news/avasa-secures-pre-series-a-funding-to-transform-microsurgery",
+                 "verification_notes":  "Bridgewest confirms expected NZ$4.75m pre-Series A led by Movac with Bridgewest participation.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:avasa-7967"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:avasa-7967-seed--0eaa97d2"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Imported Funding Type is Seed, while the primary source calls it pre-Series A; other listed investors need separate confirmation."
+                              ]
+               }
+}

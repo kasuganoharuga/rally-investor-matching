@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:auric-essentials-seed--bf9ca547",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "auric-essentials-seed--bf9ca547",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/auric-essentials-seed--bf9ca547",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Auric Essentials",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/auric-essentials-seed--bf9ca547",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "Auric Essentials",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/auric-essentials",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "300000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "300000",
+                                        "Announced Date":  "2025-08-12",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "12500000",
+                                        "Pre-Money Valuation Currency":  "USD",
+                                        "Pre-Money Valuation (in USD)":  "12500000",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "AI-driven Aroma HealthTech enhancing mental wellness through biometric-powered scent personalization.",
+                                        "Organization Industries":  "Artificial Intelligence (AI), Internet of Things, Mental Health, Smart Home, Wellness",
+                                        "Organization Website":  "https://www.auricnow.com",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "1217693",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "1217693",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Antler Australia, Sputnik ATX",
+                                        "Investor Names":  "Antler Australia, Sputnik ATX",
+                                        "Number of Investors":  "2",
+                                        "Number of Partner Investors":  "1"
+                                    },
+                 "investee_name_raw":  "Auric Essentials",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://www.auricnow.com",
+                 "org_industries_raw":  "Artificial Intelligence (AI), Internet of Things, Mental Health, Smart Home, Wellness",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-08-12",
+                 "money_raised_raw":  "300000",
+                 "amount":  300000,
+                 "currency":  "USD",
+                 "amount_usd":  300000,
+                 "pre_money_valuation_raw":  "12500000",
+                 "pre_money_valuation":  12500000,
+                 "valuation_currency":  "USD",
+                 "valuation_usd":  12500000,
+                 "equity_only":  true,
+                 "total_funding_raw":  "1217693",
+                 "investor_names_raw":  "Antler Australia, Sputnik ATX",
+                 "lead_investor_names_raw":  "Antler Australia, Sputnik ATX",
+                 "imported_at":  "2026-07-30T14:07:04.0303923+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "partial_round_mismatch",
+                 "verification_source_url":  "https://www.auric.au/post/auric-essentials-joins-sputnik-atx-summer-2025-cohort-secures-first-u-s-venture-capital-investment",
+                 "verification_notes":  "Company confirms US$100k Sputnik ATX SAFE plus possible follow-on and separately confirms Antler backing; this does not directly evidence a US$300k single round.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:auric-essentials"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:auric-essentials-seed--bf9ca547"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Imported amount appears to aggregate or conflate commitments."
+                              ]
+               }
+}

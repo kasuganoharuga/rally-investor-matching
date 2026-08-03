@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:knowby-seed--7efc22dc",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "knowby-seed--7efc22dc",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/knowby-seed--7efc22dc",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Knowby",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/knowby-seed--7efc22dc",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "Knowby",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/knowby",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "650000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "404690",
+                                        "Announced Date":  "2025-02-01",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "12600000",
+                                        "Pre-Money Valuation Currency":  "AUD",
+                                        "Pre-Money Valuation (in USD)":  "7844758",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Capturing Humanity\u0027s Know-How and Making Everyone an Instant Expert!",
+                                        "Organization Industries":  "Consulting, Manufacturing, Mining, Professional Services, Real Estate, Service Industry, Software, Training",
+                                        "Organization Website":  "https://www.knowby.co",
+                                        "Organization Revenue Range":  "Less than $1M",
+                                        "Total Funding Amount":  "2950000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "1888877",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "",
+                                        "Number of Investors":  "",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "Knowby",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://www.knowby.co",
+                 "org_industries_raw":  "Consulting, Manufacturing, Mining, Professional Services, Real Estate, Service Industry, Software, Training",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-02-01",
+                 "money_raised_raw":  "650000",
+                 "amount":  650000,
+                 "currency":  "AUD",
+                 "amount_usd":  404690,
+                 "pre_money_valuation_raw":  "12600000",
+                 "pre_money_valuation":  12600000,
+                 "valuation_currency":  "AUD",
+                 "valuation_usd":  7844758,
+                 "equity_only":  true,
+                 "total_funding_raw":  "2950000",
+                 "investor_names_raw":  null,
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:04.9228106+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "date_mismatch",
+                 "verification_source_url":  "https://app.dealroom.co/companies/knowby",
+                 "verification_notes":  "Funding database reports an A$650k Seed for Knowby.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:knowby"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:knowby-seed--7efc22dc"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Database dates the round to April 2024, not imported February 2025."
+                              ]
+               }
+}

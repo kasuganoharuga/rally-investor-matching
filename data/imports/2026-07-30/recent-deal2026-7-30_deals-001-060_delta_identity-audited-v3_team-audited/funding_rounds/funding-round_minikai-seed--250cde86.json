@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:minikai-seed--250cde86",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "minikai-seed--250cde86",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/minikai-seed--250cde86",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Minikai",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/minikai-seed--250cde86",
+                                        "Organization Location":  "Carlton, Victoria, Australia, Oceania",
+                                        "Organization Name":  "Minikai",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/minikai",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "2500000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "1574213",
+                                        "Announced Date":  "2025-02-11",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Minikai is a healthtech company that simplifies artificial intelligence to assist and support health caregivers.",
+                                        "Organization Industries":  "Artificial Intelligence (AI), Health Care, SaaS",
+                                        "Organization Website":  "https://www.minikai.com/",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "2520000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "1587463",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Tidal Ventures",
+                                        "Investor Names":  "Antler, Tidal Ventures",
+                                        "Number of Investors":  "2",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "Minikai",
+                 "org_location_raw":  "Carlton, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://www.minikai.com/",
+                 "org_industries_raw":  "Artificial Intelligence (AI), Health Care, SaaS",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-02-11",
+                 "money_raised_raw":  "2500000",
+                 "amount":  2500000,
+                 "currency":  "AUD",
+                 "amount_usd":  1574213,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "2520000",
+                 "investor_names_raw":  "Antler, Tidal Ventures",
+                 "lead_investor_names_raw":  "Tidal Ventures",
+                 "imported_at":  "2026-07-30T14:07:04.0443917+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "partial_investor_mismatch",
+                 "verification_source_url":  "https://www.tidalvc.com/topics/investment-notes",
+                 "verification_notes":  "Tidal investment note supports the A$2.5m seed and Antler participation, and also names Mangosteen as a participant.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:minikai"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:minikai-seed--250cde86"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Imported investor list omits Mangosteen."
+                              ]
+               }
+}

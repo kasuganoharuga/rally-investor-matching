@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:ovum-cbae",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Ovum",
+                 "website_url":  "https://www.askovum.com",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "Victoria",
+                 "hq_city":  "Malvern",
+                 "is_anz":  true,
+                 "sector_primary":  "womens_health",
+                 "sector_secondary":  "digital_health",
+                 "use_case_primary":  "ai_health_journal_for_women",
+                 "use_case_secondary":  [
+                                            "personal_health_tracking",
+                                            "health_information_assistance"
+                                        ],
+                 "customer_type":  "consumer",
+                 "business_model":  "subscription_saas",
+                 "sales_motion":  "product_led",
+                 "technology_depth":  "applied_ai",
+                 "ai_relevance":  "ai_native",
+                 "ai_usage_type":  "copilot_or_agent",
+                 "ai_core_or_enabler":  "core_product",
+                 "company_summary":  "Ovum is a health technology platform described as an intelligent health journal and AI assistant designed specifically for women.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/ovum-cbae-pre-seed--cf4dc506",
+                                     "https://www.crunchbase.com/organization/ovum-cbae",
+                                     "https://www.askovum.com"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:ovum-cbae-pre-seed--cf4dc506"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

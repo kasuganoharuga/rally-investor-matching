@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:fleetyr-seed--926fa01f",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "fleetyr-seed--926fa01f",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/fleetyr-seed--926fa01f",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Fleetyr",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/fleetyr-seed--926fa01f",
+                                        "Organization Location":  "Brisbane, Queensland, Australia, Oceania",
+                                        "Organization Name":  "Fleetyr",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/fleetyr",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "550000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "345554",
+                                        "Announced Date":  "2025-03-30",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "5500000",
+                                        "Pre-Money Valuation Currency":  "AUD",
+                                        "Pre-Money Valuation (in USD)":  "3455538",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Fleetyr connects and cleans your data across multiple sources, so you can make smarter business decisions.",
+                                        "Organization Industries":  "Analytics, Automotive, Data Integration, Data Visualization, Fleet Management, Software",
+                                        "Organization Website":  "http://fleetyr.com",
+                                        "Organization Revenue Range":  "Less than $1M",
+                                        "Total Funding Amount":  "1330000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "862877",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "",
+                                        "Number of Investors":  "",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "Fleetyr",
+                 "org_location_raw":  "Brisbane, Queensland, Australia, Oceania",
+                 "org_website_raw":  "http://fleetyr.com",
+                 "org_industries_raw":  "Analytics, Automotive, Data Integration, Data Visualization, Fleet Management, Software",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-03-30",
+                 "money_raised_raw":  "550000",
+                 "amount":  550000,
+                 "currency":  "AUD",
+                 "amount_usd":  345554,
+                 "pre_money_valuation_raw":  "5500000",
+                 "pre_money_valuation":  5500000,
+                 "valuation_currency":  "AUD",
+                 "valuation_usd":  3455538,
+                 "equity_only":  true,
+                 "total_funding_raw":  "1330000",
+                 "investor_names_raw":  null,
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:05.5121833+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "unverified_publicly",
+                 "verification_source_url":  "https://www.crunchbase.com/funding_round/fleetyr-seed--926fa01f",
+                 "verification_notes":  "No exact independent public announcement was located in this pass. The imported transaction is retained for manual follow-up.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:fleetyr"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:fleetyr-seed--926fa01f"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact round amount/date/stage/investors not independently verified."
+                              ]
+               }
+}

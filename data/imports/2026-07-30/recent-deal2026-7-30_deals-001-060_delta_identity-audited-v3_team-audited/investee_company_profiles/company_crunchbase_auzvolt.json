@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:auzvolt",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Auzvolt Energy",
+                 "website_url":  "https://auzvolt.com/",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "Western Australia",
+                 "hq_city":  "Perth",
+                 "is_anz":  true,
+                 "sector_primary":  "renewable_energy",
+                 "sector_secondary":  "energy_infrastructure",
+                 "use_case_primary":  "renewable_project_development",
+                 "use_case_secondary":  [
+                                            "asset_ownership",
+                                            "asset_operation"
+                                        ],
+                 "customer_type":  "enterprise",
+                 "business_model":  "project_development_and_energy_sales",
+                 "sales_motion":  "project_based",
+                 "technology_depth":  "infrastructure_enabled",
+                 "ai_relevance":  "none",
+                 "ai_usage_type":  "not_applicable",
+                 "ai_core_or_enabler":  "not_core",
+                 "company_summary":  "Renewable Energy Project Developer, Owner and Operator",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/auzvolt-seed--6a2c7057",
+                                     "https://www.crunchbase.com/organization/auzvolt",
+                                     "https://auzvolt.com/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:auzvolt-seed--6a2c7057"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

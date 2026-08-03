@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:parkbooker-pre-seed--c9a9c1cd",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "parkbooker-pre-seed--c9a9c1cd",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/parkbooker-pre-seed--c9a9c1cd",
+                 "source_payload":  {
+                                        "Transaction Name":  "Pre Seed Round - ParkBooker",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/parkbooker-pre-seed--c9a9c1cd",
+                                        "Organization Location":  "Melbourne, Victoria, Australia, Oceania",
+                                        "Organization Name":  "ParkBooker",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/parkbooker",
+                                        "Funding Type":  "Pre-Seed",
+                                        "Money Raised":  "600000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "381137",
+                                        "Announced Date":  "2025-02-18",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "ParkBooker is an online travel platform enabling users to discover, compare, and book holiday parks easily.",
+                                        "Organization Industries":  "Information Technology, Internet, Marketplace, Software, Travel",
+                                        "Organization Website":  "https://parkbooker.com/",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "600000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "381137",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "Chad Stephens, Rising Tide, Tim Rossanis, Yaniv Bernstein",
+                                        "Number of Investors":  "4",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "ParkBooker",
+                 "org_location_raw":  "Melbourne, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://parkbooker.com/",
+                 "org_industries_raw":  "Information Technology, Internet, Marketplace, Software, Travel",
+                 "round_type_raw":  "Pre-Seed",
+                 "round_stage":  "pre_seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-02-18",
+                 "money_raised_raw":  "600000",
+                 "amount":  600000,
+                 "currency":  "AUD",
+                 "amount_usd":  381137,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "600000",
+                 "investor_names_raw":  "Chad Stephens, Rising Tide, Tim Rossanis, Yaniv Bernstein",
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:04.2079727+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "verified_reliable",
+                 "verification_source_url":  "https://www.startupdaily.net/topic/former-sweat-exec-launches-caravan-park-booking-platform-after-600000-pre-seed-raise/",
+                 "verification_notes":  "Australian startup press reports the A$600k pre-seed and named investor group consistent with the import.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:parkbooker"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:parkbooker-pre-seed--c9a9c1cd"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

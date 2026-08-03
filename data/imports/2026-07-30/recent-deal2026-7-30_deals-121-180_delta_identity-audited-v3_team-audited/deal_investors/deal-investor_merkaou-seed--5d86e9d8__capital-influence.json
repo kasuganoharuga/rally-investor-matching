@@ -1,0 +1,31 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "deal_investors",
+    "record_key":  "deal_investor:crunchbase:merkaou-seed--5d86e9d8:capital-influence",
+    "operation":  "upsert",
+    "data":  {
+                 "raw_name":  "Capital Influence",
+                 "role":  "lead",
+                 "participation_status":  "unknown",
+                 "resolution":  "resolved",
+                 "resolution_confidence":  "high",
+                 "identity_resolution":  "new_investor"
+             },
+    "refs":  {
+                 "deal_key":  "funding_round:crunchbase:merkaou-seed--5d86e9d8",
+                 "investor_key":  "investor:capital-influence",
+                 "raw_investor_candidate_key":  "raw_investor_candidate:capital-influence"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:merkaou-seed--5d86e9d8"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

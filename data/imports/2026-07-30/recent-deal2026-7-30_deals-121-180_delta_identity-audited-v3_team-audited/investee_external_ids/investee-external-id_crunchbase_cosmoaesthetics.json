@@ -1,0 +1,28 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_external_ids",
+    "record_key":  "investee_external_id:crunchbase:cosmoaesthetics",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "external_id":  "cosmoaesthetics",
+                 "external_url":  "https://www.crunchbase.com/organization/cosmoaesthetics",
+                 "first_seen_at":  "2026-07-30T14:07:05.2782678+09:30",
+                 "last_seen_at":  "2026-07-30T14:07:05.2782678+09:30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:cosmoaesthetics"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:cosmoaesthetics-seed--70f2ac28"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

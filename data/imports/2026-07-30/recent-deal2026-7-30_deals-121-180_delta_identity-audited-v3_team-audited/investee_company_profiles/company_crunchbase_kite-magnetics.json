@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:kite-magnetics",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Kite Magnetics",
+                 "website_url":  "https://kitemagnetics.com",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "Victoria",
+                 "hq_city":  "Notting Hill",
+                 "is_anz":  true,
+                 "sector_primary":  "electric_aviation",
+                 "sector_secondary":  "electric_motors",
+                 "use_case_primary":  "high_performance_electric_aircraft_motors",
+                 "use_case_secondary":  [
+                                            "magnetic_materials",
+                                            "electric_propulsion_systems"
+                                        ],
+                 "customer_type":  "enterprise",
+                 "business_model":  "motor_sales_and_licensing",
+                 "sales_motion":  "enterprise_top_down",
+                 "technology_depth":  "deep_tech_hardware",
+                 "ai_relevance":  "none",
+                 "ai_usage_type":  "not_applicable",
+                 "ai_core_or_enabler":  "not_core",
+                 "company_summary":  "Kite Magnetics is an electric aviation motor manufacturing company.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/kite-magnetics-seed--b6b3b3fa",
+                                     "https://www.crunchbase.com/organization/kite-magnetics",
+                                     "https://kitemagnetics.com"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:kite-magnetics-seed--b6b3b3fa"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

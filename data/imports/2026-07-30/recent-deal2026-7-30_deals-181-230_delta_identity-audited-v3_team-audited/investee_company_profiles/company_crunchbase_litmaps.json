@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:litmaps",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Litmaps",
+                 "website_url":  "https://www.litmaps.com/",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "NZ",
+                 "hq_state":  "Wellington",
+                 "hq_city":  "Wellington",
+                 "is_anz":  true,
+                 "sector_primary":  "research_software",
+                 "sector_secondary":  "knowledge_discovery",
+                 "use_case_primary":  "literature_mapping_and_discovery",
+                 "use_case_secondary":  [
+                                            "citation_graph",
+                                            "research_monitoring"
+                                        ],
+                 "customer_type":  "researcher_and_research_institution",
+                 "business_model":  "subscription_saas",
+                 "sales_motion":  "product_led",
+                 "technology_depth":  "applied_ai",
+                 "ai_relevance":  "ai_enabled",
+                 "ai_usage_type":  "search_and_recommendations",
+                 "ai_core_or_enabler":  "feature_layer",
+                 "company_summary":  "Litmaps is a provider of a research software platform.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/litmaps-series-a--c2fbf0b1",
+                                     "https://www.crunchbase.com/organization/litmaps",
+                                     "https://www.litmaps.com/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:litmaps-series-a--c2fbf0b1"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

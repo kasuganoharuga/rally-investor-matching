@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:sprintsuite-seed--d5fb7c43",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "sprintsuite-seed--d5fb7c43",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/sprintsuite-seed--d5fb7c43",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - SprintSuite",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/sprintsuite-seed--d5fb7c43",
+                                        "Organization Location":  "Melbourne, Victoria, Australia, Oceania",
+                                        "Organization Name":  "SprintSuite",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/sprintsuite",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "3500000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "3500000",
+                                        "Announced Date":  "2025-08-12",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "SprintSuite is a field service, project, and workshop management platform.",
+                                        "Organization Industries":  "Asset Management, Field Support, Mining",
+                                        "Organization Website":  "https://sprintsuite.com",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "3500000",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "3500000",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "EVP",
+                                        "Investor Names":  "EVP",
+                                        "Number of Investors":  "1",
+                                        "Number of Partner Investors":  "1"
+                                    },
+                 "investee_name_raw":  "SprintSuite",
+                 "org_location_raw":  "Melbourne, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://sprintsuite.com",
+                 "org_industries_raw":  "Asset Management, Field Support, Mining",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-08-12",
+                 "money_raised_raw":  "3500000",
+                 "amount":  3500000,
+                 "currency":  "USD",
+                 "amount_usd":  3500000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "3500000",
+                 "investor_names_raw":  "EVP",
+                 "lead_investor_names_raw":  "EVP",
+                 "imported_at":  "2026-07-30T14:07:04.8952975+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "verified_investor",
+                 "verification_source_url":  "https://www.linkedin.com/posts/evp-vc_miningtech-b2bsoftware-verticalsoftware-activity-7361292681345486848-D_c6",
+                 "verification_notes":  "Lead investor EVP verifies a $3.5m Seed round.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:sprintsuite"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:sprintsuite-seed--d5fb7c43"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Public post uses an unqualified dollar symbol; imported USD currency is not independently confirmed."
+                              ]
+               }
+}

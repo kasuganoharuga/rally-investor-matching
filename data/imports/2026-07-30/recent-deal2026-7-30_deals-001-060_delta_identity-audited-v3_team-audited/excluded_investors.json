@@ -1,0 +1,21 @@
+{
+    "schema_version":  "1.0.0",
+    "created_at":  "2026-07-30T14:38:55.7620136+09:30",
+    "policy":  "No source Investor relationship was excluded. Identity duplicates were resolved to canonical keys.",
+    "excluded_investors":  [
+
+                           ],
+    "excluded_deal_investor_relations":  [
+
+                                         ],
+    "identity_duplicates":  [
+                                "investor:antler-australia",
+                                "investor:five-v-capital",
+                                "investor:genesis-pre-seed-fund",
+                                "investor:horizon",
+                                "investor:sosv-sf-and-ny-fka-indiebio",
+                                "investor:shaw-and-partners",
+                                "investor:brand-fund",
+                                "investor:trampoline"
+                            ]
+}

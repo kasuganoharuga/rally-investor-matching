@@ -1,0 +1,31 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "deal_investors",
+    "record_key":  "deal_investor:crunchbase:herd-i-com-pre-seed--0a5195e2:untapped-ventures",
+    "operation":  "upsert",
+    "data":  {
+                 "raw_name":  "Untapped Ventures",
+                 "role":  "participant",
+                 "participation_status":  "unknown",
+                 "resolution":  "resolved",
+                 "resolution_confidence":  "high",
+                 "identity_resolution":  "new_investor"
+             },
+    "refs":  {
+                 "deal_key":  "funding_round:crunchbase:herd-i-com-pre-seed--0a5195e2",
+                 "investor_key":  "investor:untapped-ventures",
+                 "raw_investor_candidate_key":  "raw_investor_candidate:untapped-ventures"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:herd-i-com-pre-seed--0a5195e2"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

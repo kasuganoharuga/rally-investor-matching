@@ -1,0 +1,31 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "deal_investors",
+    "record_key":  "deal_investor:crunchbase:electralith-series-a--6e651c8d:vista-energy",
+    "operation":  "upsert",
+    "data":  {
+                 "raw_name":  "Vista Energy",
+                 "role":  "participant",
+                 "participation_status":  "unknown",
+                 "resolution":  "resolved",
+                 "resolution_confidence":  "high",
+                 "identity_resolution":  "new_investor"
+             },
+    "refs":  {
+                 "deal_key":  "funding_round:crunchbase:electralith-series-a--6e651c8d",
+                 "investor_key":  "investor:vista-energy",
+                 "raw_investor_candidate_key":  "raw_investor_candidate:vista-energy"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:electralith-series-a--6e651c8d"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

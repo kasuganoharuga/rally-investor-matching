@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:hachiko-b89d-pre-seed--a6ec70e6",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "hachiko-b89d-pre-seed--a6ec70e6",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/hachiko-b89d-pre-seed--a6ec70e6",
+                 "source_payload":  {
+                                        "Transaction Name":  "Pre Seed Round - Hachiko",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/hachiko-b89d-pre-seed--a6ec70e6",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "Hachiko",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/hachiko-b89d",
+                                        "Funding Type":  "Pre-Seed",
+                                        "Money Raised":  "1000000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "1000000",
+                                        "Announced Date":  "2025-03-27",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Hachiko is a software building platform that aims to help the battery portfolio owners, also the firm is for energy trading.",
+                                        "Organization Industries":  "Battery, Renewable Energy, Software",
+                                        "Organization Website":  "https://www.hachiko.energy/",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "3500000",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "3500000",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Twynam Agricultural Group",
+                                        "Investor Names":  "Twynam Agricultural Group",
+                                        "Number of Investors":  "1",
+                                        "Number of Partner Investors":  "1"
+                                    },
+                 "investee_name_raw":  "Hachiko",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://www.hachiko.energy/",
+                 "org_industries_raw":  "Battery, Renewable Energy, Software",
+                 "round_type_raw":  "Pre-Seed",
+                 "round_stage":  "pre_seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-03-27",
+                 "money_raised_raw":  "1000000",
+                 "amount":  1000000,
+                 "currency":  "USD",
+                 "amount_usd":  1000000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "3500000",
+                 "investor_names_raw":  "Twynam Agricultural Group",
+                 "lead_investor_names_raw":  "Twynam Agricultural Group",
+                 "imported_at":  "2026-07-30T14:07:05.0773033+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "unverified_publicly",
+                 "verification_source_url":  "https://www.crunchbase.com/funding_round/hachiko-b89d-pre-seed--a6ec70e6",
+                 "verification_notes":  "No exact independent public announcement was located in this pass. The imported transaction is retained for manual follow-up.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:hachiko-b89d"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:hachiko-b89d-pre-seed--a6ec70e6"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact round amount/date/stage/investors not independently verified."
+                              ]
+               }
+}

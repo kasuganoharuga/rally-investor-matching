@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:eclipse-ingredients-seed--054fdb6a",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "eclipse-ingredients-seed--054fdb6a",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/eclipse-ingredients-seed--054fdb6a",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Eclipse Ingredients",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/eclipse-ingredients-seed--054fdb6a",
+                                        "Organization Location":  "Brisbane, Queensland, Australia, Oceania",
+                                        "Organization Name":  "Eclipse Ingredients",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/eclipse-ingredients",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "7000000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "4580663",
+                                        "Announced Date":  "2025-07-14",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Eclipse Ingredients transform the future of health and wellbeing by making beneficial ingredients accessible through sustainable production.",
+                                        "Organization Industries":  "Health Care, Manufacturing, Product Design",
+                                        "Organization Website":  "https://www.eclipseingredients.com/",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "8904487",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "5824085",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "AgFunder",
+                                        "Investor Names":  "AgFunder, CSIRO, FaBA, Queensland University of Technology",
+                                        "Number of Investors":  "4",
+                                        "Number of Partner Investors":  "2"
+                                    },
+                 "investee_name_raw":  "Eclipse Ingredients",
+                 "org_location_raw":  "Brisbane, Queensland, Australia, Oceania",
+                 "org_website_raw":  "https://www.eclipseingredients.com/",
+                 "org_industries_raw":  "Health Care, Manufacturing, Product Design",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-07-14",
+                 "money_raised_raw":  "7000000",
+                 "amount":  7000000,
+                 "currency":  "AUD",
+                 "amount_usd":  4580663,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "8904487",
+                 "investor_names_raw":  "AgFunder, CSIRO, FaBA, Queensland University of Technology",
+                 "lead_investor_names_raw":  "AgFunder",
+                 "imported_at":  "2026-07-30T14:07:05.7123820+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "amount_mismatch",
+                 "verification_source_url":  "https://faba.au/news/faba-invests-in-5-5m-eclipse-ingredients-project-to-commercialise-human-lactoferrin-protein/",
+                 "verification_notes":  "FaBA describes a A$5.5m commercialisation project with research partners; CSIRO confirms the spinout and partner group.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:eclipse-ingredients"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:eclipse-ingredients-seed--054fdb6a"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Imported transaction is A$7m Seed; public sources describe a A$5.5m project rather than a conventional seed round."
+                              ]
+               }
+}

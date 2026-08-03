@@ -1,0 +1,38 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investor_team_members",
+    "record_key":  "investor_team_member:aliavia-ventures:alexis-versandi",
+    "operation":  "upsert",
+    "data":  {
+                 "contact_id":  null,
+                 "first_name":  "Alexis",
+                 "last_name":  "Versandi",
+                 "role_title":  "Venture Partner and Investment Committee Member",
+                 "seniority":  "partner",
+                 "linkedin_url":  null,
+                 "claimed_focus":  [
+                                       "venture capital",
+                                       "investment committee"
+                                   ],
+                 "bio_summary":  "Venture partner and investment committee member with institutional investment experience.",
+                 "source_url":  "https://www.aliavia.vc/team",
+                 "retrieved_at":  "2026-07-30",
+                 "is_active":  true
+             },
+    "refs":  {
+                 "investor_key":  "investor:aliavia-ventures",
+                 "contact_key":  null
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:recent-deal2026-7-30:investor-team-audit",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "person_linkedin_not_verified"
+                              ]
+               }
+}

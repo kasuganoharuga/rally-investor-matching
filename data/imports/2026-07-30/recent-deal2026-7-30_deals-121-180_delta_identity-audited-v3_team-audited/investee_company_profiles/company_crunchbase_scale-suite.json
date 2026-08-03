@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:scale-suite",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Scale Suite",
+                 "website_url":  "https://www.scalesuite.com.au/",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "New South Wales",
+                 "hq_city":  "Sydney",
+                 "is_anz":  true,
+                 "sector_primary":  "accounting_services",
+                 "sector_secondary":  "fractional_finance",
+                 "use_case_primary":  "outsourced_finance_for_smes",
+                 "use_case_secondary":  [
+                                            "bookkeeping",
+                                            "fractional_cfo_services"
+                                        ],
+                 "customer_type":  "smb",
+                 "business_model":  "services",
+                 "sales_motion":  "sales_led",
+                 "technology_depth":  "other",
+                 "ai_relevance":  "none",
+                 "ai_usage_type":  "not_applicable",
+                 "ai_core_or_enabler":  "not_core",
+                 "company_summary":  "Outsourced finance team for Australian SMEs. Weekly bookkeeping to fractional CFO.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/scale-suite-seed--1b8a7e19",
+                                     "https://www.crunchbase.com/organization/scale-suite",
+                                     "https://www.scalesuite.com.au/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:scale-suite-seed--1b8a7e19"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

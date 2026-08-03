@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:ekion",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Ekion",
+                 "website_url":  "https://www.ekion.com.au/",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "Western Australia",
+                 "hq_city":  "Perth",
+                 "is_anz":  true,
+                 "sector_primary":  "mining_technology",
+                 "sector_secondary":  "energy_transition",
+                 "use_case_primary":  "mining_technology_commercialisation",
+                 "use_case_secondary":  [
+                                            "resource_efficiency",
+                                            "energy_transition_minerals"
+                                        ],
+                 "customer_type":  "enterprise",
+                 "business_model":  "technology_licensing_and_services",
+                 "sales_motion":  "enterprise_top_down",
+                 "technology_depth":  "deep_tech",
+                 "ai_relevance":  "none",
+                 "ai_usage_type":  "not_applicable",
+                 "ai_core_or_enabler":  "not_core",
+                 "company_summary":  "Mining technology enabling global energy transition",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/ekion-pre-seed--08314c53",
+                                     "https://www.crunchbase.com/organization/ekion",
+                                     "https://www.ekion.com.au/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "medium"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:ekion-pre-seed--08314c53"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

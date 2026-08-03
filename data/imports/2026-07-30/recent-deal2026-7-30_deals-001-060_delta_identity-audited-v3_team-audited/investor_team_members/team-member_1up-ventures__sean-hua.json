@@ -1,0 +1,39 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investor_team_members",
+    "record_key":  "investor_team_member:1up-ventures:sean-hua",
+    "operation":  "upsert",
+    "data":  {
+                 "contact_id":  null,
+                 "first_name":  "Sean",
+                 "last_name":  "Hua",
+                 "role_title":  "Equal Partner",
+                 "seniority":  "partner",
+                 "linkedin_url":  null,
+                 "claimed_focus":  [
+                                       "design",
+                                       "fintech",
+                                       "urban development"
+                                   ],
+                 "bio_summary":  "Public partner profile lists design, fintech, urban planning and development experience.",
+                 "source_url":  "https://1up.vc/",
+                 "retrieved_at":  "2026-07-30",
+                 "is_active":  true
+             },
+    "refs":  {
+                 "investor_key":  "investor:1up-ventures",
+                 "contact_key":  null
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:recent-deal2026-7-30:investor-team-audit",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "person_linkedin_not_verified"
+                              ]
+               }
+}

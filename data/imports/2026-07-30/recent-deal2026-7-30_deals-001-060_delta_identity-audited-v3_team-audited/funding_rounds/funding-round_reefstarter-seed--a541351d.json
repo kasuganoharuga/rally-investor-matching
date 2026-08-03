@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:reefstarter-seed--a541351d",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "reefstarter-seed--a541351d",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/reefstarter-seed--a541351d",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Reefstarter",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/reefstarter-seed--a541351d",
+                                        "Organization Location":  "Melbourne, Victoria, Australia, Oceania",
+                                        "Organization Name":  "Reefstarter",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/reefstarter",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "",
+                                        "Money Raised Currency":  "",
+                                        "Money Raised (in USD)":  "",
+                                        "Announced Date":  "2025-08-11",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "ReefStarter designs modular reef-like systems to protect coastlines, reduce waves, and support marine life.",
+                                        "Organization Industries":  "Environmental Engineering, Marine Technology, Service Industry",
+                                        "Organization Website":  "https://www.reefstarter.net/",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "",
+                                        "Total Funding Amount Currency":  "",
+                                        "Total Funding Amount (in USD)":  "",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "SOSV",
+                                        "Investor Names":  "SOSV, SOSV SF \u0026 NY (Fka IndieBio)",
+                                        "Number of Investors":  "2",
+                                        "Number of Partner Investors":  "1"
+                                    },
+                 "investee_name_raw":  "Reefstarter",
+                 "org_location_raw":  "Melbourne, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://www.reefstarter.net/",
+                 "org_industries_raw":  "Environmental Engineering, Marine Technology, Service Industry",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-08-11",
+                 "money_raised_raw":  null,
+                 "amount":  null,
+                 "currency":  null,
+                 "amount_usd":  null,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  null,
+                 "investor_names_raw":  "SOSV, SOSV SF \u0026 NY (Fka IndieBio)",
+                 "lead_investor_names_raw":  "SOSV",
+                 "imported_at":  "2026-07-30T14:07:04.4227528+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "partial_stage_mismatch",
+                 "verification_source_url":  "https://indiebio.co/company/reefstarter/",
+                 "verification_notes":  "IndieBio portfolio page classifies Reefstarter as Pre-Seed and reports US$200k funding to date.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:reefstarter"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:reefstarter-seed--a541351d"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Imported Funding Type is Seed with no amount."
+                              ]
+               }
+}

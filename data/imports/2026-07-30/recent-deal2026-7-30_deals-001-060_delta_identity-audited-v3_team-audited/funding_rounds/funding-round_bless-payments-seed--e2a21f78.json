@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:bless-payments-seed--e2a21f78",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "bless-payments-seed--e2a21f78",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/bless-payments-seed--e2a21f78",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Bless Payments",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/bless-payments-seed--e2a21f78",
+                                        "Organization Location":  "Perth, Western Australia, Australia, Oceania",
+                                        "Organization Name":  "Bless Payments",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/bless-payments",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "3750000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "3750000",
+                                        "Announced Date":  "2025-07-01",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Bless Payments enables secure, low-fee global money transfers, focusing on migrants.",
+                                        "Organization Industries":  "Finance, Financial Services, Payments",
+                                        "Organization Website":  "https://blesspayments.com.au",
+                                        "Organization Revenue Range":  "$1M to $10M",
+                                        "Total Funding Amount":  "3750000",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "3750000",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Forte Securities, Professor Khalil (Charlie) Shahin AO",
+                                        "Investor Names":  "Forte Securities, Professor Khalil (Charlie) Shahin AO",
+                                        "Number of Investors":  "2",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "Bless Payments",
+                 "org_location_raw":  "Perth, Western Australia, Australia, Oceania",
+                 "org_website_raw":  "https://blesspayments.com.au",
+                 "org_industries_raw":  "Finance, Financial Services, Payments",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-07-01",
+                 "money_raised_raw":  "3750000",
+                 "amount":  3750000,
+                 "currency":  "USD",
+                 "amount_usd":  3750000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "3750000",
+                 "investor_names_raw":  "Forte Securities, Professor Khalil (Charlie) Shahin AO",
+                 "lead_investor_names_raw":  "Forte Securities, Professor Khalil (Charlie) Shahin AO",
+                 "imported_at":  "2026-07-30T14:07:04.2337056+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "partial_currency_mismatch",
+                 "verification_source_url":  "https://www.startupdaily.net/topic/funding/remittance-fintech-bless-payments-raises-3-75-million-seed-round/",
+                 "verification_notes":  "Australian startup press reports a A$3.75m seed round and the named backers.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:bless-payments"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:bless-payments-seed--e2a21f78"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Imported currency is USD; public report states AUD."
+                              ]
+               }
+}

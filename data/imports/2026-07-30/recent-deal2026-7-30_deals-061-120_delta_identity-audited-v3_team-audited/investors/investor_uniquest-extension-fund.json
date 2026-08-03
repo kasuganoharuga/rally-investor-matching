@@ -1,0 +1,51 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investors",
+    "record_key":  "investor:uniquest-extension-fund",
+    "operation":  "upsert",
+    "data":  {
+                 "canonical_name":  "UniQuest Extension Fund",
+                 "aliases":  [
+
+                             ],
+                 "investor_type":  "university_fund",
+                 "website_url":  "https://uniquest.com.au/venture-capital/",
+                 "linkedin_url":  "https://www.linkedin.com/company/uniquest-extension-fund",
+                 "hq_country":  "AU",
+                 "hq_state":  "Queensland",
+                 "hq_city":  "Brisbane",
+                 "offices":  [
+
+                             ],
+                 "status":  "active",
+                 "merged_into_id":  null,
+                 "review_status":  "reviewed",
+                 "last_reviewed_at":  "2026-07-30",
+                 "last_reviewed_by":  "codex-investor-identity-audit",
+                 "investor_subtype":  "university_fund",
+                 "classification_confidence":  "high",
+                 "classification_source":  "current research entity_type_raw mapping",
+                 "eligibility_mode":  "conditional",
+                 "classification_evidence_urls":  [
+                                                      "https://uniquest.com.au/venture-capital/",
+                                                      "https://www.linkedin.com/company/uniquest-extension-fund"
+                                                  ],
+                 "classified_at":  "2026-07-30"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:2026-07-24",
+                       "source_keys":  [
+                                           "research_source:uniquest-extension-fund:uniquest-extension-fund_src_official",
+                                           "research_source:uniquest-extension-fund:uniquest-extension-fund_src_deal_und-crunchbase-veriquantix-seed-f04a2f6e"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

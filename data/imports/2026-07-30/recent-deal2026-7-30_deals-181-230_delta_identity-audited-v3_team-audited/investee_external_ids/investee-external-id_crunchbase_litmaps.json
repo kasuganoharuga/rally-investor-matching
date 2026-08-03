@@ -1,0 +1,28 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_external_ids",
+    "record_key":  "investee_external_id:crunchbase:litmaps",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "external_id":  "litmaps",
+                 "external_url":  "https://www.crunchbase.com/organization/litmaps",
+                 "first_seen_at":  "2026-07-30T14:07:05.7459514+09:30",
+                 "last_seen_at":  "2026-07-30T14:07:05.7459514+09:30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:litmaps"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:litmaps-series-a--c2fbf0b1"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

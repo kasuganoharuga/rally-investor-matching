@@ -1,0 +1,49 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investors",
+    "record_key":  "investor:nakatomi",
+    "operation":  "upsert",
+    "data":  {
+                 "canonical_name":  "Nakatomi",
+                 "aliases":  [
+
+                             ],
+                 "investor_type":  "investment_firm",
+                 "investor_subtype":  "venture_studio",
+                 "eligibility_mode":  "none",
+                 "classification_confidence":  "high",
+                 "classification_evidence_urls":  [
+                                                      "https://nakatomi.com/",
+                                                      "https://au.linkedin.com/company/nakatomiventure"
+                                                  ],
+                 "classified_at":  "2026-07-30",
+                 "website_url":  "https://nakatomi.com/",
+                 "linkedin_url":  "https://au.linkedin.com/company/nakatomiventure",
+                 "hq_country":  "AU",
+                 "hq_state":  "New South Wales",
+                 "hq_city":  "Darlinghurst",
+                 "offices":  [
+
+                             ],
+                 "status":  "active",
+                 "merged_into_id":  null,
+                 "review_status":  "reviewed",
+                 "last_reviewed_at":  "2026-07-30",
+                 "last_reviewed_by":  "codex-investor-identity-audit"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:scoped:recent-deal2026-7-30_deals-181-230",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

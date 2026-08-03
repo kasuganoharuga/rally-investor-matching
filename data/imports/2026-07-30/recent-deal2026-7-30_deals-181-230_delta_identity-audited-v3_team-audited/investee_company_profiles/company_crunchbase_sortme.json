@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:sortme",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "SortMe",
+                 "website_url":  "https://www.sortme.com/",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "NZ",
+                 "hq_state":  "Auckland",
+                 "hq_city":  "Auckland",
+                 "is_anz":  true,
+                 "sector_primary":  "consumer_fintech",
+                 "sector_secondary":  "bill_management",
+                 "use_case_primary":  "household_bill_management",
+                 "use_case_secondary":  [
+                                            "budgeting",
+                                            "payment_organisation"
+                                        ],
+                 "customer_type":  "consumer",
+                 "business_model":  "subscription_and_financial_services",
+                 "sales_motion":  "product_led",
+                 "technology_depth":  "conventional_software",
+                 "ai_relevance":  "not_ai",
+                 "ai_usage_type":  "none",
+                 "ai_core_or_enabler":  "none",
+                 "company_summary":  "SortMe is the developer of a personal finance management software designed to manage clients\u0027 personal and household bills.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/sortme-seed--ef4d6f51",
+                                     "https://www.crunchbase.com/organization/sortme",
+                                     "https://www.sortme.com/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:sortme-seed--ef4d6f51"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

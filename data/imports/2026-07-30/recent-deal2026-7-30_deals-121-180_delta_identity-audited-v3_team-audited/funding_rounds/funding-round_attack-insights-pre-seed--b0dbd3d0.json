@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:attack-insights-pre-seed--b0dbd3d0",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "attack-insights-pre-seed--b0dbd3d0",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/attack-insights-pre-seed--b0dbd3d0",
+                 "source_payload":  {
+                                        "Transaction Name":  "Pre Seed Round - Attack Insights",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/attack-insights-pre-seed--b0dbd3d0",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "Attack Insights",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/attack-insights",
+                                        "Funding Type":  "Pre-Seed",
+                                        "Money Raised":  "",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "",
+                                        "Announced Date":  "2025-04-30",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "AUD",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "External Attack Surface Management Software",
+                                        "Organization Industries":  "Software",
+                                        "Organization Website":  "https://attackinsights.ai",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "",
+                                        "Number of Investors":  "",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "Attack Insights",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://attackinsights.ai",
+                 "org_industries_raw":  "Software",
+                 "round_type_raw":  "Pre-Seed",
+                 "round_stage":  "pre_seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-04-30",
+                 "money_raised_raw":  null,
+                 "amount":  null,
+                 "currency":  "AUD",
+                 "amount_usd":  null,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  "AUD",
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  null,
+                 "investor_names_raw":  null,
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:05.3544698+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "unverified_publicly",
+                 "verification_source_url":  "https://www.crunchbase.com/funding_round/attack-insights-pre-seed--b0dbd3d0",
+                 "verification_notes":  "No exact independent public announcement was located in this pass. The imported transaction is retained for manual follow-up.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:attack-insights"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:attack-insights-pre-seed--b0dbd3d0"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact round amount/date/stage/investors not independently verified."
+                              ]
+               }
+}

@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:cuttable",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Cuttable",
+                 "website_url":  "https://www.cuttable.com/",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "Victoria",
+                 "hq_city":  "South Yarra",
+                 "is_anz":  true,
+                 "sector_primary":  "advertising_technology",
+                 "sector_secondary":  "generative_ai",
+                 "use_case_primary":  "ai_advertising_creation",
+                 "use_case_secondary":  [
+                                            "brand_consistent_creative",
+                                            "campaign_content_generation"
+                                        ],
+                 "customer_type":  "enterprise",
+                 "business_model":  "subscription_saas",
+                 "sales_motion":  "product_led",
+                 "technology_depth":  "applied_ai",
+                 "ai_relevance":  "ai_native",
+                 "ai_usage_type":  "content_generation",
+                 "ai_core_or_enabler":  "core_product",
+                 "company_summary":  "Cuttable is an AI-driven advertising platform that provides intelligent, effective, and brand-enhancing advertisements within seconds.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/cuttable-seed--b3a46452",
+                                     "https://www.crunchbase.com/organization/cuttable",
+                                     "https://www.cuttable.com/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:cuttable-seed--b3a46452"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

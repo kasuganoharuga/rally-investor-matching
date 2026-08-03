@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:sortme-seed--ef4d6f51",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "sortme-seed--ef4d6f51",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/sortme-seed--ef4d6f51",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - SortMe",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/sortme-seed--ef4d6f51",
+                                        "Organization Location":  "Auckland, Auckland, New Zealand, Oceania",
+                                        "Organization Name":  "SortMe",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/sortme",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "",
+                                        "Money Raised Currency":  "",
+                                        "Money Raised (in USD)":  "",
+                                        "Announced Date":  "2025-01-01",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "SortMe is the developer of a personal finance management software designed to manage clients\u0027 personal and household bills.",
+                                        "Organization Industries":  "Enterprise Software, Financial Services, SaaS",
+                                        "Organization Website":  "https://www.sortme.com/",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "",
+                                        "Total Funding Amount Currency":  "",
+                                        "Total Funding Amount (in USD)":  "",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "NZ Fintech Fund",
+                                        "Number of Investors":  "1",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "SortMe",
+                 "org_location_raw":  "Auckland, Auckland, New Zealand, Oceania",
+                 "org_website_raw":  "https://www.sortme.com/",
+                 "org_industries_raw":  "Enterprise Software, Financial Services, SaaS",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-01-01",
+                 "money_raised_raw":  null,
+                 "amount":  null,
+                 "currency":  null,
+                 "amount_usd":  null,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  null,
+                 "investor_names_raw":  "NZ Fintech Fund",
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:05.6151271+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "unverified_publicly",
+                 "verification_source_url":  "https://www.crunchbase.com/funding_round/sortme-seed--ef4d6f51",
+                 "verification_notes":  "No exact independent public announcement was located in this pass. The imported transaction is retained for manual follow-up.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:sortme"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:sortme-seed--ef4d6f51"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact round amount/date/stage/investors not independently verified."
+                              ]
+               }
+}

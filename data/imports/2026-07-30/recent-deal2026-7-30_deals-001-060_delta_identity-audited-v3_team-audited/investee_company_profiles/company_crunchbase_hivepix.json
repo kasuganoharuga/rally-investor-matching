@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:hivepix",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "HivePix",
+                 "website_url":  "https://www.hivepix.com",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "New South Wales",
+                 "hq_city":  "Sydney",
+                 "is_anz":  true,
+                 "sector_primary":  "data_management",
+                 "sector_secondary":  "technology_consulting",
+                 "use_case_primary":  "product_data_automation",
+                 "use_case_secondary":  [
+                                            "data_flow_integration",
+                                            "ai_and_quantum_consulting"
+                                        ],
+                 "customer_type":  "enterprise",
+                 "business_model":  "services_and_software",
+                 "sales_motion":  "enterprise_top_down",
+                 "technology_depth":  "applied_ai",
+                 "ai_relevance":  "ai_enabled",
+                 "ai_usage_type":  "automation",
+                 "ai_core_or_enabler":  "feature_layer",
+                 "company_summary":  "Hivepix offers consulting services for product data management, automating data flows and leveraging AI and quantum computing.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/hivepix-pre-seed--9d757fc5",
+                                     "https://www.crunchbase.com/organization/hivepix",
+                                     "https://www.hivepix.com"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "medium"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:hivepix-pre-seed--9d757fc5"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

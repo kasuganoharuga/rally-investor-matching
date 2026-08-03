@@ -1,0 +1,31 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "deal_investors",
+    "record_key":  "deal_investor:crunchbase:index-a671-seed--ab086f65:bain-capital-ventures",
+    "operation":  "upsert",
+    "data":  {
+                 "raw_name":  "Bain Capital Ventures",
+                 "role":  "participant",
+                 "participation_status":  "unknown",
+                 "resolution":  "resolved",
+                 "resolution_confidence":  "high",
+                 "identity_resolution":  "existing_database_investor"
+             },
+    "refs":  {
+                 "deal_key":  "funding_round:crunchbase:index-a671-seed--ab086f65",
+                 "investor_key":  "investor:bain-capital-ventures",
+                 "raw_investor_candidate_key":  "raw_investor_candidate:bain-capital-ventures"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:index-a671-seed--ab086f65"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

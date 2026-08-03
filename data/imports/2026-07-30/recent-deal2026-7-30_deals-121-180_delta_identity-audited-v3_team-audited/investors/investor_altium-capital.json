@@ -1,0 +1,49 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investors",
+    "record_key":  "investor:altium-capital",
+    "operation":  "upsert",
+    "data":  {
+                 "canonical_name":  "Alium Capital Management",
+                 "aliases":  [
+                                 "Altium Capital"
+                             ],
+                 "investor_type":  "investment_firm",
+                 "investor_subtype":  "asset_manager",
+                 "eligibility_mode":  "none",
+                 "classification_confidence":  "high",
+                 "classification_evidence_urls":  [
+                                                      "https://aliumcap.com/",
+                                                      "https://www.linkedin.com/company/alium-capital"
+                                                  ],
+                 "classified_at":  "2026-07-30",
+                 "website_url":  "https://aliumcap.com/",
+                 "linkedin_url":  "https://www.linkedin.com/company/alium-capital",
+                 "hq_country":  "AU",
+                 "hq_state":  "New South Wales",
+                 "hq_city":  "Sydney",
+                 "offices":  [
+
+                             ],
+                 "status":  "active",
+                 "merged_into_id":  null,
+                 "review_status":  "reviewed",
+                 "last_reviewed_at":  "2026-07-30",
+                 "last_reviewed_by":  "codex-investor-identity-audit"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:scoped:recent-deal2026-7-30_deals-121-180",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

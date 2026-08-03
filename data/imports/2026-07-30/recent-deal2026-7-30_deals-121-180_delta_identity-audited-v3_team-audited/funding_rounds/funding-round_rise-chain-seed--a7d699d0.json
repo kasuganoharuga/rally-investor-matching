@@ -1,0 +1,83 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:rise-chain-seed--a7d699d0",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "rise-chain-seed--a7d699d0",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/rise-chain-seed--a7d699d0",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - RISE Chain",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/rise-chain-seed--a7d699d0",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "RISE Chain",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/rise-chain",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "4000000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "4000000",
+                                        "Announced Date":  "2025-06-09",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "RISE is a fast, scalable Ethereum Layer 2 blockchain delivering instant transactions with full decentralization.",
+                                        "Organization Industries":  "Blockchain, Cryptocurrency, Ethereum",
+                                        "Organization Website":  "https://risechain.com",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "7200000",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "7200000",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Galaxy Digital",
+                                        "Investor Names":  "DCF GOD, Digital Asset Capital Management, ether.fi, Finality Capital Partners, Galaxy Digital, Luke Belmar, Sandeep Nailwal, SMOKEY , Stani Kulechov, Vitalik Buterin",
+                                        "Number of Investors":  "10",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "RISE Chain",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://risechain.com",
+                 "org_industries_raw":  "Blockchain, Cryptocurrency, Ethereum",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-06-09",
+                 "money_raised_raw":  "4000000",
+                 "amount":  4000000,
+                 "currency":  "USD",
+                 "amount_usd":  4000000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "7200000",
+                 "investor_names_raw":  "DCF GOD, Digital Asset Capital Management, ether.fi, Finality Capital Partners, Galaxy Digital, Luke Belmar, Sandeep Nailwal, SMOKEY , Stani Kulechov, Vitalik Buterin",
+                 "lead_investor_names_raw":  "Galaxy Digital",
+                 "imported_at":  "2026-07-30T14:07:05.3594701+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "verified_secondary",
+                 "verification_source_url":  "https://www.coindesk.com/tech/2025/06/06/rise-chain-secures-4m-from-galaxy-to-power-ultra-fast-layer-2",
+                 "verification_notes":  "Public coverage verifies US$4m financing from Galaxy in June 2025.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:rise-chain"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:rise-chain-seed--a7d699d0"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Full imported angel and fund syndicate is not confirmed by the cited article.",
+                                  "Coverage is dated 6 Jun while import is dated 9 Jun 2025."
+                              ]
+               }
+}

@@ -1,0 +1,57 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:fleetyr",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Fleetyr",
+                 "website_url":  "http://fleetyr.com",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "Queensland",
+                 "hq_city":  "Brisbane",
+                 "is_anz":  true,
+                 "sector_primary":  "fleet_software",
+                 "sector_secondary":  "data_integration",
+                 "use_case_primary":  "fleet_data_unification",
+                 "use_case_secondary":  [
+                                            "data_cleaning",
+                                            "business_intelligence"
+                                        ],
+                 "customer_type":  "fleet_enterprise",
+                 "business_model":  "subscription_saas",
+                 "sales_motion":  "enterprise_sales",
+                 "technology_depth":  "conventional_software",
+                 "ai_relevance":  "not_ai",
+                 "ai_usage_type":  "none",
+                 "ai_core_or_enabler":  "none",
+                 "company_summary":  "Fleetyr connects and cleans your data across multiple sources, so you can make smarter business decisions.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/fleetyr-seed--926fa01f",
+                                     "https://www.crunchbase.com/organization/fleetyr",
+                                     "http://fleetyr.com",
+                                     "https://fleetyr.com/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:fleetyr-seed--926fa01f"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:juristechne-pty-ltd-seed--d09cefcd",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "juristechne-pty-ltd-seed--d09cefcd",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/juristechne-pty-ltd-seed--d09cefcd",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - JurisTechne Pty Ltd",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/juristechne-pty-ltd-seed--d09cefcd",
+                                        "Organization Location":  "Ultimo, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "JurisTechne Pty Ltd",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/juristechne-pty-ltd",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "1252194",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "782806",
+                                        "Announced Date":  "2025-01-28",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "12500000",
+                                        "Pre-Money Valuation Currency":  "AUD",
+                                        "Pre-Money Valuation (in USD)":  "7814341",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "JurisTechne provides AI tools and data analytics to support legal research and case analysis for law firms.",
+                                        "Organization Industries":  "Analytics, Information Technology, Legal Tech, Professional Services",
+                                        "Organization Website":  "https://juristechne.com/",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "1252194",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "782806",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "",
+                                        "Number of Investors":  "",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "JurisTechne Pty Ltd",
+                 "org_location_raw":  "Ultimo, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://juristechne.com/",
+                 "org_industries_raw":  "Analytics, Information Technology, Legal Tech, Professional Services",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-01-28",
+                 "money_raised_raw":  "1252194",
+                 "amount":  1252194,
+                 "currency":  "AUD",
+                 "amount_usd":  782806,
+                 "pre_money_valuation_raw":  "12500000",
+                 "pre_money_valuation":  12500000,
+                 "valuation_currency":  "AUD",
+                 "valuation_usd":  7814341,
+                 "equity_only":  true,
+                 "total_funding_raw":  "1252194",
+                 "investor_names_raw":  null,
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:05.5724860+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "unverified_publicly",
+                 "verification_source_url":  "https://www.crunchbase.com/funding_round/juristechne-pty-ltd-seed--d09cefcd",
+                 "verification_notes":  "No exact independent public announcement was located in this pass. The imported transaction is retained for manual follow-up.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:juristechne-pty-ltd"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:juristechne-pty-ltd-seed--d09cefcd"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact round amount/date/stage/investors not independently verified."
+                              ]
+               }
+}

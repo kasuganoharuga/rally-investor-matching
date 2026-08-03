@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:packapill-series-a--f071a01c",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "packapill-series-a--f071a01c",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/packapill-series-a--f071a01c",
+                 "source_payload":  {
+                                        "Transaction Name":  "Series A - Hola Health",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/packapill-series-a--f071a01c",
+                                        "Organization Location":  "Perth, Western Australia, Australia, Oceania",
+                                        "Organization Name":  "Hola Health",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/packapill",
+                                        "Funding Type":  "Series A",
+                                        "Money Raised":  "6000000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "3573119",
+                                        "Announced Date":  "2025-04-08",
+                                        "Funding Stage":  "Early Stage Venture",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Hola Health is a digital healthcare platform that connects customers with any local pharmacy.",
+                                        "Organization Industries":  "Health Care, Home Health Care, Medical, Pharmaceutical",
+                                        "Organization Website":  "https://hola.health",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "11750000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "7474084",
+                                        "Funding Status":  "Early Stage Venture",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "Fund WA, M8 Ventures",
+                                        "Number of Investors":  "2",
+                                        "Number of Partner Investors":  "1"
+                                    },
+                 "investee_name_raw":  "Hola Health",
+                 "org_location_raw":  "Perth, Western Australia, Australia, Oceania",
+                 "org_website_raw":  "https://hola.health",
+                 "org_industries_raw":  "Health Care, Home Health Care, Medical, Pharmaceutical",
+                 "round_type_raw":  "Series A",
+                 "round_stage":  "series_a",
+                 "funding_stage_raw":  "Early Stage Venture",
+                 "announced_date":  "2025-04-08",
+                 "money_raised_raw":  "6000000",
+                 "amount":  6000000,
+                 "currency":  "AUD",
+                 "amount_usd":  3573119,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "11750000",
+                 "investor_names_raw":  "Fund WA, M8 Ventures",
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:04.1401869+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "partially_verified",
+                 "verification_source_url":  "https://medium.com/m8-ventures/announcing-hola-healths-aud4-5m-pre-series-a-led-by-m8-ventures-b903c8b8eb5b",
+                 "verification_notes":  "M8 confirms an earlier A$4.5m pre-Series A; it does not directly verify the imported A$6m Series A dated 8 Apr 2025.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:packapill"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:packapill-series-a--f071a01c"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Cited primary investor page is for a different round."
+                              ]
+               }
+}

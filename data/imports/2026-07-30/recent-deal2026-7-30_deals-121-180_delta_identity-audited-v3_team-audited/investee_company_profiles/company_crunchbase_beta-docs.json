@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:beta-docs",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Beta Docs",
+                 "website_url":  "https://www.getbetadocs.com/",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "Victoria",
+                 "hq_city":  "Melbourne",
+                 "is_anz":  true,
+                 "sector_primary":  "research_software",
+                 "sector_secondary":  "grant_management",
+                 "use_case_primary":  "ai_research_grant_applications",
+                 "use_case_secondary":  [
+                                            "funding_opportunity_discovery",
+                                            "grant_writing_and_workflow"
+                                        ],
+                 "customer_type":  "research_institution",
+                 "business_model":  "subscription_saas",
+                 "sales_motion":  "product_led",
+                 "technology_depth":  "applied_ai",
+                 "ai_relevance":  "ai_native",
+                 "ai_usage_type":  "document_processing",
+                 "ai_core_or_enabler":  "core_product",
+                 "company_summary":  "Beta Docs is an AI-powered platform that helps researchers and universities find, write, and manage competitive research grant applications.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/beta-docs-pre-seed--a6563557",
+                                     "https://www.crunchbase.com/organization/beta-docs",
+                                     "https://www.getbetadocs.com/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:beta-docs-pre-seed--a6563557"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

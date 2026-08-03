@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:bitwise-agronomy-seed--1e3b4d21",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "bitwise-agronomy-seed--1e3b4d21",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/bitwise-agronomy-seed--1e3b4d21",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Bitwise Agronomy",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/bitwise-agronomy-seed--1e3b4d21",
+                                        "Organization Location":  "Launceston, Tasmania, Australia, Oceania",
+                                        "Organization Name":  "Bitwise Agronomy",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/bitwise-agronomy",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "1000000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "655089",
+                                        "Announced Date":  "2025-08-13",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Bitwise Agronomy uses AI to analyze crop video footage and provide growers with insights into crop health, growth, and yield potential.",
+                                        "Organization Industries":  "Agriculture, AgTech, Artificial Intelligence (AI)",
+                                        "Organization Website":  "https://bitwiseag.com",
+                                        "Organization Revenue Range":  "$1M to $10M",
+                                        "Total Funding Amount":  "1000000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "655089",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Melbourne Angels",
+                                        "Investor Names":  "Jelix Ventures, Melbourne Angels, Sprint Ventures",
+                                        "Number of Investors":  "3",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "Bitwise Agronomy",
+                 "org_location_raw":  "Launceston, Tasmania, Australia, Oceania",
+                 "org_website_raw":  "https://bitwiseag.com",
+                 "org_industries_raw":  "Agriculture, AgTech, Artificial Intelligence (AI)",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-08-13",
+                 "money_raised_raw":  "1000000",
+                 "amount":  1000000,
+                 "currency":  "AUD",
+                 "amount_usd":  655089,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "1000000",
+                 "investor_names_raw":  "Jelix Ventures, Melbourne Angels, Sprint Ventures",
+                 "lead_investor_names_raw":  "Melbourne Angels",
+                 "imported_at":  "2026-07-30T14:07:04.0783919+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "partially_verified",
+                 "verification_source_url":  "https://sprint.vc/resources/investment-notes-bitwise-agronomy/",
+                 "verification_notes":  "Sprint verifies earlier participation with Jelix; the cited page is not an exact announcement for the imported 13 Aug 2025 A$1m round.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:bitwise-agronomy"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:bitwise-agronomy-seed--1e3b4d21"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact transaction still needs a dated primary announcement."
+                              ]
+               }
+}

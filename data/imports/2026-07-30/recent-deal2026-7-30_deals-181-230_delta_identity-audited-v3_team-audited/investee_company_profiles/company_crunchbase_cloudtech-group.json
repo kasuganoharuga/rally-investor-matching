@@ -1,0 +1,57 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:cloudtech-group",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "CloudTech Group",
+                 "website_url":  "https://cloudtechgroup.com/",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "Victoria",
+                 "hq_city":  "Melbourne",
+                 "is_anz":  true,
+                 "sector_primary":  "crypto_fintech",
+                 "sector_secondary":  "blockchain_financial_services",
+                 "use_case_primary":  "digital_asset_financial_platform",
+                 "use_case_secondary":  [
+                                            "crypto_trading_and_payments",
+                                            "custody_and_asset_management"
+                                        ],
+                 "customer_type":  "consumer_and_enterprise",
+                 "business_model":  "transaction_custody_and_management_fees",
+                 "sales_motion":  "platform_and_partnerships",
+                 "technology_depth":  "blockchain",
+                 "ai_relevance":  "not_ai",
+                 "ai_usage_type":  "none",
+                 "ai_core_or_enabler":  "none",
+                 "company_summary":  "CloudTech Group: Elevation Block by Block.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/cloudtech-group-series-a--61c3a936",
+                                     "https://www.crunchbase.com/organization/cloudtech-group",
+                                     "https://cloudtechgroup.com/",
+                                     "https://www.cloudtechgroup.com.au/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:cloudtech-group-series-a--61c3a936"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

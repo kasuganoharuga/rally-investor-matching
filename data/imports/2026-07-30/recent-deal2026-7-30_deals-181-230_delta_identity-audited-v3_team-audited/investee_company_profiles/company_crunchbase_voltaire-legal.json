@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:voltaire-legal",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Voltaire Legal",
+                 "website_url":  "https://www.voltairelegal.com/",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "New South Wales",
+                 "hq_city":  "Sydney",
+                 "is_anz":  true,
+                 "sector_primary":  "legal_technology",
+                 "sector_secondary":  "pro_bono_services",
+                 "use_case_primary":  "ai_pro_bono_work_management",
+                 "use_case_secondary":  [
+                                            "matter_intake",
+                                            "case_workflow_and_reporting"
+                                        ],
+                 "customer_type":  "law_firm_and_legal_team",
+                 "business_model":  "subscription_saas",
+                 "sales_motion":  "enterprise_sales",
+                 "technology_depth":  "applied_ai",
+                 "ai_relevance":  "ai_native",
+                 "ai_usage_type":  "legal_workflow_and_document_processing",
+                 "ai_core_or_enabler":  "core_product",
+                 "company_summary":  "Voltaire is an AI-native software designed to streamline and manage pro bono work for the legal industry.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/voltaire-legal-pre-seed--c5ea116c",
+                                     "https://www.crunchbase.com/organization/voltaire-legal",
+                                     "https://www.voltairelegal.com/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:voltaire-legal-pre-seed--c5ea116c"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

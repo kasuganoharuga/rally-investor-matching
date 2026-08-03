@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:calctree-pre-seed--97b5b89b",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "calctree-pre-seed--97b5b89b",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/calctree-pre-seed--97b5b89b",
+                 "source_payload":  {
+                                        "Transaction Name":  "Pre Seed Round - CalcTree",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/calctree-pre-seed--97b5b89b",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "CalcTree",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/calctree",
+                                        "Funding Type":  "Pre-Seed",
+                                        "Money Raised":  "3800000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "3800000",
+                                        "Announced Date":  "2025-05-28",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "CalcTree is a modern engineering calculation management platform",
+                                        "Organization Industries":  "Architecture, Chemical Engineering, Civil Engineering, Construction, Consulting, Industrial Engineering, Mechanical Engineering",
+                                        "Organization Website":  "https://www.calctree.com/",
+                                        "Organization Revenue Range":  "$1M to $10M",
+                                        "Total Funding Amount":  "5237715",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "5237715",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Foundamental",
+                                        "Investor Names":  "Antler, Foundamental, Kungari, Suffolk Technologies",
+                                        "Number of Investors":  "4",
+                                        "Number of Partner Investors":  "3"
+                                    },
+                 "investee_name_raw":  "CalcTree",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://www.calctree.com/",
+                 "org_industries_raw":  "Architecture, Chemical Engineering, Civil Engineering, Construction, Consulting, Industrial Engineering, Mechanical Engineering",
+                 "round_type_raw":  "Pre-Seed",
+                 "round_stage":  "pre_seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-05-28",
+                 "money_raised_raw":  "3800000",
+                 "amount":  3800000,
+                 "currency":  "USD",
+                 "amount_usd":  3800000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "5237715",
+                 "investor_names_raw":  "Antler, Foundamental, Kungari, Suffolk Technologies",
+                 "lead_investor_names_raw":  "Foundamental",
+                 "imported_at":  "2026-07-30T14:07:04.6951174+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "amount_round_mismatch",
+                 "verification_source_url":  "https://www.linkedin.com/posts/calctree_were-excited-to-share-this-news-with-our-activity-7134724378402959360-YFna",
+                 "verification_notes":  "Company post describes an additional US$1.5m and US$2.2m total funding.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:calctree"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:calctree-pre-seed--97b5b89b"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Imported US$3.8m single pre-seed does not match the company-described amount/round structure."
+                              ]
+               }
+}

@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:levur-pre-seed--18678e06",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "levur-pre-seed--18678e06",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/levur-pre-seed--18678e06",
+                 "source_payload":  {
+                                        "Transaction Name":  "Pre Seed Round - Levur",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/levur-pre-seed--18678e06",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "Levur",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/levur",
+                                        "Funding Type":  "Pre-Seed",
+                                        "Money Raised":  "1200000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "780492",
+                                        "Announced Date":  "2025-05-06",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Levur is a Biotechnology Research oriented firm that manufactures cosmetic oil substitutes for their customers.",
+                                        "Organization Industries":  "Biopharma, Biotechnology, Cosmetics",
+                                        "Organization Website":  "https://levur.com.au/",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "880492",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "880492",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "GrainCorp Ventures, Main Sequence Ventures",
+                                        "Investor Names":  "GrainCorp Ventures, Main Sequence Ventures, SparkLabs Cultiv8, UNSW Founders",
+                                        "Number of Investors":  "4",
+                                        "Number of Partner Investors":  "2"
+                                    },
+                 "investee_name_raw":  "Levur",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://levur.com.au/",
+                 "org_industries_raw":  "Biopharma, Biotechnology, Cosmetics",
+                 "round_type_raw":  "Pre-Seed",
+                 "round_stage":  "pre_seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-05-06",
+                 "money_raised_raw":  "1200000",
+                 "amount":  1200000,
+                 "currency":  "AUD",
+                 "amount_usd":  780492,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "880492",
+                 "investor_names_raw":  "GrainCorp Ventures, Main Sequence Ventures, SparkLabs Cultiv8, UNSW Founders",
+                 "lead_investor_names_raw":  "GrainCorp Ventures, Main Sequence Ventures",
+                 "imported_at":  "2026-07-30T14:07:04.4629696+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "partial_amount_mismatch",
+                 "verification_source_url":  "https://www.coesb.com.au/wp-content/uploads/2026/03/2025annualreportfinal.pdf",
+                 "verification_notes":  "University annual report states Levur secured A$1.27m pre-seed including Main Sequence and GrainCorp.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:levur"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:levur-pre-seed--18678e06"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Imported amount is A$1.2m and adds SparkLabs Cultiv8 / UNSW Founders."
+                              ]
+               }
+}

@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:nexusmd-ai-seed--b193f757",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "nexusmd-ai-seed--b193f757",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/nexusmd-ai-seed--b193f757",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - NexusMD.ai",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/nexusmd-ai-seed--b193f757",
+                                        "Organization Location":  "Richmond, Victoria, Australia, Oceania",
+                                        "Organization Name":  "NexusMD.ai",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/nexusmd-ai",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "6300000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "4092038",
+                                        "Announced Date":  "2025-06-24",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "NexusMD.ai is a healthcare technology company specializing in agentic AI solutions designed to streamline and automate administrative tasks.",
+                                        "Organization Industries":  "Agentic AI, Artificial Intelligence (AI), Health Care, Information Technology",
+                                        "Organization Website":  "https://nexusmd.ai",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "6300000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "4092038",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Square Peg Ventures",
+                                        "Investor Names":  "Square Peg Ventures",
+                                        "Number of Investors":  "1",
+                                        "Number of Partner Investors":  "1"
+                                    },
+                 "investee_name_raw":  "NexusMD.ai",
+                 "org_location_raw":  "Richmond, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://nexusmd.ai",
+                 "org_industries_raw":  "Agentic AI, Artificial Intelligence (AI), Health Care, Information Technology",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-06-24",
+                 "money_raised_raw":  "6300000",
+                 "amount":  6300000,
+                 "currency":  "AUD",
+                 "amount_usd":  4092038,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "6300000",
+                 "investor_names_raw":  "Square Peg Ventures",
+                 "lead_investor_names_raw":  "Square Peg Ventures",
+                 "imported_at":  "2026-07-30T14:07:05.0843023+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "unverified_publicly",
+                 "verification_source_url":  "https://www.crunchbase.com/funding_round/nexusmd-ai-seed--b193f757",
+                 "verification_notes":  "No exact independent public announcement was located in this pass. The imported transaction is retained for manual follow-up.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:nexusmd-ai"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:nexusmd-ai-seed--b193f757"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact round amount/date/stage/investors not independently verified."
+                              ]
+               }
+}

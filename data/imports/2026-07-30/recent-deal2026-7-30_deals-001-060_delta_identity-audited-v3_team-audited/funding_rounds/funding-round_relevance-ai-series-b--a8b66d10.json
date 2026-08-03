@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:relevance-ai-series-b--a8b66d10",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "relevance-ai-series-b--a8b66d10",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/relevance-ai-series-b--a8b66d10",
+                 "source_payload":  {
+                                        "Transaction Name":  "Series B - Relevance AI",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/relevance-ai-series-b--a8b66d10",
+                                        "Organization Location":  "Surry Hills, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "Relevance AI",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/relevance-ai",
+                                        "Funding Type":  "Series B",
+                                        "Money Raised":  "24000000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "24000000",
+                                        "Announced Date":  "2025-05-06",
+                                        "Funding Stage":  "Early Stage Venture",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Relevance AI provides an AI agent operating system that helps companies automate repetitive reasoning tasks.",
+                                        "Organization Industries":  "Agentic AI, Analytics, Artificial Intelligence (AI), Generative AI, Machine Learning, Software",
+                                        "Organization Website":  "https://relevanceai.com",
+                                        "Organization Revenue Range":  "$1M to $10M",
+                                        "Total Funding Amount":  "42000000",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "42000000",
+                                        "Funding Status":  "Early Stage Venture",
+                                        "Lead Investors":  "Bessemer Venture Partners",
+                                        "Investor Names":  "Bessemer Venture Partners, Insight Partners, King River Capital, Peak XV Partners",
+                                        "Number of Investors":  "4",
+                                        "Number of Partner Investors":  "3"
+                                    },
+                 "investee_name_raw":  "Relevance AI",
+                 "org_location_raw":  "Surry Hills, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://relevanceai.com",
+                 "org_industries_raw":  "Agentic AI, Analytics, Artificial Intelligence (AI), Generative AI, Machine Learning, Software",
+                 "round_type_raw":  "Series B",
+                 "round_stage":  "series_b",
+                 "funding_stage_raw":  "Early Stage Venture",
+                 "announced_date":  "2025-05-06",
+                 "money_raised_raw":  "24000000",
+                 "amount":  24000000,
+                 "currency":  "USD",
+                 "amount_usd":  24000000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "42000000",
+                 "investor_names_raw":  "Bessemer Venture Partners, Insight Partners, King River Capital, Peak XV Partners",
+                 "lead_investor_names_raw":  "Bessemer Venture Partners",
+                 "imported_at":  "2026-07-30T14:07:04.3827320+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "verified_reliable",
+                 "verification_source_url":  "https://techcrunch.com/2025/05/06/relevance-ai-raises-24m-series-b-to-help-anyone-build-teams-of-ai-agents/",
+                 "verification_notes":  "TechCrunch reports US$24m Series B led by Bessemer with King River, Insight and Peak XV.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:relevance-ai"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:relevance-ai-series-b--a8b66d10"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

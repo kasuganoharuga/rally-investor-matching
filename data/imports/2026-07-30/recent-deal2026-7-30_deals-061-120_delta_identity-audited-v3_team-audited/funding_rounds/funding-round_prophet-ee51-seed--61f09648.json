@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:prophet-ee51-seed--61f09648",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "prophet-ee51-seed--61f09648",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/prophet-ee51-seed--61f09648",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Prophet",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/prophet-ee51-seed--61f09648",
+                                        "Organization Location":  "Melbourne, Victoria, Australia, Oceania",
+                                        "Organization Name":  "Prophet",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/prophet-ee51",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "1270000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "1270000",
+                                        "Announced Date":  "2025-01-18",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "26270000",
+                                        "Pre-Money Valuation Currency":  "USD",
+                                        "Pre-Money Valuation (in USD)":  "26270000",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Prophet is a decision intelligence and AI platform that builds digital clones of enterprises; enabling simulation before action.",
+                                        "Organization Industries":  "Agentic AI, Artificial Intelligence (AI), Machine Learning, Predictive Analytics",
+                                        "Organization Website":  "https://www.prophet.ml",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "4526499",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "4526499",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "",
+                                        "Number of Investors":  "",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "Prophet",
+                 "org_location_raw":  "Melbourne, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://www.prophet.ml",
+                 "org_industries_raw":  "Agentic AI, Artificial Intelligence (AI), Machine Learning, Predictive Analytics",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-01-18",
+                 "money_raised_raw":  "1270000",
+                 "amount":  1270000,
+                 "currency":  "USD",
+                 "amount_usd":  1270000,
+                 "pre_money_valuation_raw":  "26270000",
+                 "pre_money_valuation":  26270000,
+                 "valuation_currency":  "USD",
+                 "valuation_usd":  26270000,
+                 "equity_only":  true,
+                 "total_funding_raw":  "4526499",
+                 "investor_names_raw":  null,
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:04.8329266+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "unverified_publicly",
+                 "verification_source_url":  "https://www.crunchbase.com/funding_round/prophet-ee51-seed--61f09648",
+                 "verification_notes":  "No exact independent public announcement was located in this pass. The imported transaction is retained for manual follow-up.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:prophet-ee51"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:prophet-ee51-seed--61f09648"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact round amount/date/stage/investors not independently verified."
+                              ]
+               }
+}

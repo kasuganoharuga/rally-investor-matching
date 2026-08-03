@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:roundtable-9f70-pre-seed--9af02b3a",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "roundtable-9f70-pre-seed--9af02b3a",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/roundtable-9f70-pre-seed--9af02b3a",
+                 "source_payload":  {
+                                        "Transaction Name":  "Pre Seed Round - Roundtable",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/roundtable-9f70-pre-seed--9af02b3a",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "Roundtable",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/roundtable-9f70",
+                                        "Funding Type":  "Pre-Seed",
+                                        "Money Raised":  "157000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "100255",
+                                        "Announced Date":  "2025-05-01",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "1650000",
+                                        "Pre-Money Valuation Currency":  "AUD",
+                                        "Pre-Money Valuation (in USD)":  "1053641",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "RoundTable connects creators with superfans through live video experiences, enabling face-to-face interactions and revenue opportunities.",
+                                        "Organization Industries":  "Media and Entertainment, Social Media",
+                                        "Organization Website":  "https://www.itsroundtable.com/",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "382000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "248012",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Antler",
+                                        "Investor Names":  "Antler",
+                                        "Number of Investors":  "1",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "Roundtable",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://www.itsroundtable.com/",
+                 "org_industries_raw":  "Media and Entertainment, Social Media",
+                 "round_type_raw":  "Pre-Seed",
+                 "round_stage":  "pre_seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-05-01",
+                 "money_raised_raw":  "157000",
+                 "amount":  157000,
+                 "currency":  "AUD",
+                 "amount_usd":  100255,
+                 "pre_money_valuation_raw":  "1650000",
+                 "pre_money_valuation":  1650000,
+                 "valuation_currency":  "AUD",
+                 "valuation_usd":  1053641,
+                 "equity_only":  true,
+                 "total_funding_raw":  "382000",
+                 "investor_names_raw":  "Antler",
+                 "lead_investor_names_raw":  "Antler",
+                 "imported_at":  "2026-07-30T14:07:04.5701908+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "partially_verified",
+                 "verification_source_url":  "https://www.businessnewsaustralia.com/articles/eight-early-stage-startups-secure-backing-from-antler-as-the-focus-shifts-to-ai-led-solutions.html",
+                 "verification_notes":  "Public coverage verifies Roundtable in an Antler-backed cohort.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:roundtable-9f70"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:roundtable-9f70-pre-seed--9af02b3a"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact A$157k amount and 1 May 2025 transaction date were not independently confirmed."
+                              ]
+               }
+}

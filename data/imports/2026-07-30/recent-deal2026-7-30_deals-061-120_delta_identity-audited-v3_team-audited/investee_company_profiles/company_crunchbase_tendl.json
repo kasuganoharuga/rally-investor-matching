@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:tendl",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Tendl",
+                 "website_url":  "https://www.tendl.ai/",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "Queensland",
+                 "hq_city":  "Toowoomba",
+                 "is_anz":  true,
+                 "sector_primary":  "procurement_software",
+                 "sector_secondary":  "bid_management",
+                 "use_case_primary":  "tender_and_submission_automation",
+                 "use_case_secondary":  [
+                                            "proposal_workflow",
+                                            "government_and_enterprise_bidding"
+                                        ],
+                 "customer_type":  "enterprise",
+                 "business_model":  "subscription_saas",
+                 "sales_motion":  "enterprise_top_down",
+                 "technology_depth":  "applied_ai",
+                 "ai_relevance":  "ai_native",
+                 "ai_usage_type":  "document_processing",
+                 "ai_core_or_enabler":  "core_product",
+                 "company_summary":  "Tendl helps organizations chase more possibilities, provide better results, and substantially reduce the burden of submissions.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/tendl-pre-seed--2b7d3af5",
+                                     "https://www.crunchbase.com/organization/tendl",
+                                     "https://www.tendl.ai/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:tendl-pre-seed--2b7d3af5"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

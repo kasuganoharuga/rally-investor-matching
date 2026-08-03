@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:termina-05da-seed--866cd0ec",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "termina-05da-seed--866cd0ec",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/termina-05da-seed--866cd0ec",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Termina",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/termina-05da-seed--866cd0ec",
+                                        "Organization Location":  "Melbourne, Victoria, Australia, Oceania",
+                                        "Organization Name":  "Termina",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/termina-05da",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "3000000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "3000000",
+                                        "Announced Date":  "2025-05-23",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Termina operates as an energy tech startup.",
+                                        "Organization Industries":  "Energy, Energy Management, Software",
+                                        "Organization Website":  "https://termina.io/",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "3000000",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "3000000",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "EVP",
+                                        "Investor Names":  "Archangel Ventures, EVP, Skalata",
+                                        "Number of Investors":  "3",
+                                        "Number of Partner Investors":  "1"
+                                    },
+                 "investee_name_raw":  "Termina",
+                 "org_location_raw":  "Melbourne, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://termina.io/",
+                 "org_industries_raw":  "Energy, Energy Management, Software",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-05-23",
+                 "money_raised_raw":  "3000000",
+                 "amount":  3000000,
+                 "currency":  "USD",
+                 "amount_usd":  3000000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "3000000",
+                 "investor_names_raw":  "Archangel Ventures, EVP, Skalata",
+                 "lead_investor_names_raw":  "EVP",
+                 "imported_at":  "2026-07-30T14:07:04.7899018+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "stage_mismatch",
+                 "verification_source_url":  "https://www.linkedin.com/posts/termina_big-news-from-termina-were-thrilled-to-activity-7335125517890703361-plf0",
+                 "verification_notes":  "Company post verifies US$3m financing with Archangel, EVP and Skalata.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:termina-05da"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:termina-05da-seed--866cd0ec"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Public announcement calls the round pre-Series A; import calls it Seed."
+                              ]
+               }
+}

@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:natural-velocity-pty-ltd",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Natural Velocity",
+                 "website_url":  "https://naturalvelocity.ai",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "Victoria",
+                 "hq_city":  "Docklands",
+                 "is_anz":  true,
+                 "sector_primary":  "ai_ecosystem",
+                 "sector_secondary":  "technology_services",
+                 "use_case_primary":  "ai_solution_marketplace_and_delivery",
+                 "use_case_secondary":  [
+                                            "ai_training_and_acceleration",
+                                            "compute_and_innovation_centre_access"
+                                        ],
+                 "customer_type":  "enterprise",
+                 "business_model":  "membership_marketplace_and_services",
+                 "sales_motion":  "partnership_led",
+                 "technology_depth":  "infrastructure_enabled",
+                 "ai_relevance":  "ai_infrastructure",
+                 "ai_usage_type":  "model_infrastructure",
+                 "ai_core_or_enabler":  "enabling_infrastructure",
+                 "company_summary":  "Natural Velocity operates an ecosystem focused on addressing the AI supply chain challenge.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/natural-velocity-pty-ltd-pre-seed--c507ad47",
+                                     "https://www.crunchbase.com/organization/natural-velocity-pty-ltd",
+                                     "https://naturalvelocity.ai"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:natural-velocity-pty-ltd-pre-seed--c507ad47"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

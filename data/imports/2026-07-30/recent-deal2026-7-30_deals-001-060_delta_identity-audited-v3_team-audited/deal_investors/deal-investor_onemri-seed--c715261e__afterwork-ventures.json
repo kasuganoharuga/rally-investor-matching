@@ -1,0 +1,31 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "deal_investors",
+    "record_key":  "deal_investor:crunchbase:onemri-seed--c715261e:afterwork-ventures",
+    "operation":  "upsert",
+    "data":  {
+                 "raw_name":  "AfterWork Ventures",
+                 "role":  "participant",
+                 "participation_status":  "unknown",
+                 "resolution":  "resolved",
+                 "resolution_confidence":  "high",
+                 "identity_resolution":  "new_investor"
+             },
+    "refs":  {
+                 "deal_key":  "funding_round:crunchbase:onemri-seed--c715261e",
+                 "investor_key":  "investor:afterwork-ventures",
+                 "raw_investor_candidate_key":  "raw_investor_candidate:afterwork-ventures"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:onemri-seed--c715261e"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

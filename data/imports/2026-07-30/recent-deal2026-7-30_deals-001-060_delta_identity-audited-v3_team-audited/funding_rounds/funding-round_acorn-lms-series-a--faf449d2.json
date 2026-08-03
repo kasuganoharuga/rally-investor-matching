@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:acorn-lms-series-a--faf449d2",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "acorn-lms-series-a--faf449d2",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/acorn-lms-series-a--faf449d2",
+                 "source_payload":  {
+                                        "Transaction Name":  "Series A - Acorn",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/acorn-lms-series-a--faf449d2",
+                                        "Organization Location":  "Canberra, Australian Capital Territory, Australia, Oceania",
+                                        "Organization Name":  "Acorn",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/acorn-lms",
+                                        "Funding Type":  "Series A",
+                                        "Money Raised":  "16800000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "16800000",
+                                        "Announced Date":  "2025-06-18",
+                                        "Funding Stage":  "Early Stage Venture",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Empowering people with strategically impactful HR technology",
+                                        "Organization Industries":  "Corporate Training, EdTech, E-Learning, Software",
+                                        "Organization Website":  "https://acornlms.com/",
+                                        "Organization Revenue Range":  "$1M to $10M",
+                                        "Total Funding Amount":  "16800000",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "16800000",
+                                        "Funding Status":  "Early Stage Venture",
+                                        "Lead Investors":  "Level Equity Management",
+                                        "Investor Names":  "Level Equity Management",
+                                        "Number of Investors":  "1",
+                                        "Number of Partner Investors":  "3"
+                                    },
+                 "investee_name_raw":  "Acorn",
+                 "org_location_raw":  "Canberra, Australian Capital Territory, Australia, Oceania",
+                 "org_website_raw":  "https://acornlms.com/",
+                 "org_industries_raw":  "Corporate Training, EdTech, E-Learning, Software",
+                 "round_type_raw":  "Series A",
+                 "round_stage":  "series_a",
+                 "funding_stage_raw":  "Early Stage Venture",
+                 "announced_date":  "2025-06-18",
+                 "money_raised_raw":  "16800000",
+                 "amount":  16800000,
+                 "currency":  "USD",
+                 "amount_usd":  16800000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "16800000",
+                 "investor_names_raw":  "Level Equity Management",
+                 "lead_investor_names_raw":  "Level Equity Management",
+                 "imported_at":  "2026-07-30T14:07:04.2694111+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "partial_amount_mismatch",
+                 "verification_source_url":  "https://acorn.works/news/acorn-announces-series-a-funding",
+                 "verification_notes":  "Company announcement verifies US$12.3m Series A led by Level Equity on 17 Jun 2025.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:acorn-lms"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:acorn-lms-series-a--faf449d2"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Imported amount is US$16.8m, materially above the primary announcement."
+                              ]
+               }
+}

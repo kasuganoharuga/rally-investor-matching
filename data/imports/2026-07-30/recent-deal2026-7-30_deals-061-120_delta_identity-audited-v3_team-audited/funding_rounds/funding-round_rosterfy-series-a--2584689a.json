@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:rosterfy-series-a--2584689a",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "rosterfy-series-a--2584689a",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/rosterfy-series-a--2584689a",
+                 "source_payload":  {
+                                        "Transaction Name":  "Series A - Rosterfy",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/rosterfy-series-a--2584689a",
+                                        "Organization Location":  "Southbank, Victoria, Australia, Oceania",
+                                        "Organization Name":  "Rosterfy",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/rosterfy",
+                                        "Funding Type":  "Series A",
+                                        "Money Raised":  "8500000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "5319372",
+                                        "Announced Date":  "2025-02-09",
+                                        "Funding Stage":  "Early Stage Venture",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Rosterfy is an event workforce management and scheduling software.",
+                                        "Organization Industries":  "Scheduling, Software",
+                                        "Organization Website":  "https://rosterfy.com/",
+                                        "Organization Revenue Range":  "$1M to $10M",
+                                        "Total Funding Amount":  "15119372",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "15119372",
+                                        "Funding Status":  "Early Stage Venture",
+                                        "Lead Investors":  "OIF Ventures",
+                                        "Investor Names":  "Bailador Technology Investments, OIF Ventures",
+                                        "Number of Investors":  "2",
+                                        "Number of Partner Investors":  "2"
+                                    },
+                 "investee_name_raw":  "Rosterfy",
+                 "org_location_raw":  "Southbank, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://rosterfy.com/",
+                 "org_industries_raw":  "Scheduling, Software",
+                 "round_type_raw":  "Series A",
+                 "round_stage":  "series_a",
+                 "funding_stage_raw":  "Early Stage Venture",
+                 "announced_date":  "2025-02-09",
+                 "money_raised_raw":  "8500000",
+                 "amount":  8500000,
+                 "currency":  "AUD",
+                 "amount_usd":  5319372,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "15119372",
+                 "investor_names_raw":  "Bailador Technology Investments, OIF Ventures",
+                 "lead_investor_names_raw":  "OIF Ventures",
+                 "imported_at":  "2026-07-30T14:07:04.5761919+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "verified_primary",
+                 "verification_source_url":  "https://bailador.com.au/assets/downloads/250210_Rosterfy_ASX_Release.pdf",
+                 "verification_notes":  "Bailador ASX release verifies a combined A$8.5m investment: A$5.5m from OIF and A$3m from Bailador.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:rosterfy"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:rosterfy-series-a--2584689a"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Release is dated 10 Feb 2025; imported date is 9 Feb 2025."
+                              ]
+               }
+}

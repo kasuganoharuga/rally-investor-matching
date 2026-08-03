@@ -1,0 +1,28 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_external_ids",
+    "record_key":  "investee_external_id:crunchbase:beem-d969",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "external_id":  "beem-d969",
+                 "external_url":  "https://www.crunchbase.com/organization/beem-d969",
+                 "first_seen_at":  "2026-07-30T14:07:05.0591653+09:30",
+                 "last_seen_at":  "2026-07-30T14:07:05.0591653+09:30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:beem-d969"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:beem-d969-pre-seed--f6459887"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

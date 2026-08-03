@@ -1,0 +1,49 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investors",
+    "record_key":  "investor:sputnik-atx",
+    "operation":  "upsert",
+    "data":  {
+                 "canonical_name":  "Sputnik ATX",
+                 "aliases":  [
+
+                             ],
+                 "investor_type":  "vc_fund",
+                 "investor_subtype":  "accelerator_operator",
+                 "eligibility_mode":  "conditional",
+                 "classification_confidence":  "high",
+                 "classification_evidence_urls":  [
+                                                      "https://www.sputnikatx.com/",
+                                                      "https://www.linkedin.com/company/sputnikatx"
+                                                  ],
+                 "classified_at":  "2026-07-30",
+                 "website_url":  "https://www.sputnikatx.com/",
+                 "linkedin_url":  "https://www.linkedin.com/company/sputnikatx",
+                 "hq_country":  "US",
+                 "hq_state":  "Texas",
+                 "hq_city":  "Austin",
+                 "offices":  [
+
+                             ],
+                 "status":  "active",
+                 "merged_into_id":  null,
+                 "review_status":  "reviewed",
+                 "last_reviewed_at":  "2026-07-30",
+                 "last_reviewed_by":  "codex-investor-identity-audit"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:scoped:recent-deal2026-7-30_deals-001-060",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

@@ -1,0 +1,31 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "deal_investors",
+    "record_key":  "deal_investor:crunchbase:unleash-live-series-b--cc3799d2:revel-partners",
+    "operation":  "upsert",
+    "data":  {
+                 "raw_name":  "Revel Partners",
+                 "role":  "participant",
+                 "participation_status":  "unknown",
+                 "resolution":  "resolved",
+                 "resolution_confidence":  "high",
+                 "identity_resolution":  "new_investor"
+             },
+    "refs":  {
+                 "deal_key":  "funding_round:crunchbase:unleash-live-series-b--cc3799d2",
+                 "investor_key":  "investor:revel-partners",
+                 "raw_investor_candidate_key":  "raw_investor_candidate:revel-partners"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:unleash-live-series-b--cc3799d2"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

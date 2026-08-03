@@ -1,0 +1,49 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investors",
+    "record_key":  "investor:laser-digital",
+    "operation":  "upsert",
+    "data":  {
+                 "canonical_name":  "Laser Digital",
+                 "aliases":  [
+
+                             ],
+                 "investor_type":  "strategic_corporate",
+                 "investor_subtype":  "corporate_venture",
+                 "eligibility_mode":  "none",
+                 "classification_confidence":  "high",
+                 "classification_evidence_urls":  [
+                                                      "https://www.laserdigital.com/",
+                                                      "https://www.linkedin.com/company/laserdigital"
+                                                  ],
+                 "classified_at":  "2026-07-30",
+                 "website_url":  "https://www.laserdigital.com/",
+                 "linkedin_url":  "https://www.linkedin.com/company/laserdigital",
+                 "hq_country":  "CH",
+                 "hq_state":  null,
+                 "hq_city":  "Zurich",
+                 "offices":  [
+
+                             ],
+                 "status":  "active",
+                 "merged_into_id":  null,
+                 "review_status":  "reviewed",
+                 "last_reviewed_at":  "2026-07-30",
+                 "last_reviewed_by":  "codex-investor-identity-audit"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:scoped:recent-deal2026-7-30_deals-061-120",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Headquarters state/region was not disclosed by the verified sources."
+                              ]
+               }
+}

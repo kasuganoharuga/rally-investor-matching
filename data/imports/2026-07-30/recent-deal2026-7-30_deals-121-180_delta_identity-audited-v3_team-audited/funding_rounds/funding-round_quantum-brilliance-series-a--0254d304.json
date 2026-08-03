@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:quantum-brilliance-series-a--0254d304",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "quantum-brilliance-series-a--0254d304",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/quantum-brilliance-series-a--0254d304",
+                 "source_payload":  {
+                                        "Transaction Name":  "Series A - Quantum Brilliance",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/quantum-brilliance-series-a--0254d304",
+                                        "Organization Location":  "Canberra, Australian Capital Territory, Australia, Oceania",
+                                        "Organization Name":  "Quantum Brilliance",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/quantum-brilliance",
+                                        "Funding Type":  "Series A",
+                                        "Money Raised":  "20000000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "20000000",
+                                        "Announced Date":  "2025-01-15",
+                                        "Funding Stage":  "Early Stage Venture",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Quantum Brilliance is a global leader in diamond-based quantum technology on a mission to enable the mass deployment of quantum.",
+                                        "Organization Industries":  "Cloud Computing, Hardware, Quantum Computing, Remote Sensing, Software",
+                                        "Organization Website":  "https://quantumbrilliance.com",
+                                        "Organization Revenue Range":  "$1M to $10M",
+                                        "Total Funding Amount":  "79441797",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "79441797",
+                                        "Funding Status":  "Early Stage Venture",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "Altium Capital, Breakthrough Victoria, InterValley Ventures, Investible, IQT, Jelix Ventures, Main Sequence Ventures, National Reconstruction Fund Corporation",
+                                        "Number of Investors":  "8",
+                                        "Number of Partner Investors":  "3"
+                                    },
+                 "investee_name_raw":  "Quantum Brilliance",
+                 "org_location_raw":  "Canberra, Australian Capital Territory, Australia, Oceania",
+                 "org_website_raw":  "https://quantumbrilliance.com",
+                 "org_industries_raw":  "Cloud Computing, Hardware, Quantum Computing, Remote Sensing, Software",
+                 "round_type_raw":  "Series A",
+                 "round_stage":  "series_a",
+                 "funding_stage_raw":  "Early Stage Venture",
+                 "announced_date":  "2025-01-15",
+                 "money_raised_raw":  "20000000",
+                 "amount":  20000000,
+                 "currency":  "USD",
+                 "amount_usd":  20000000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "79441797",
+                 "investor_names_raw":  "Altium Capital, Breakthrough Victoria, InterValley Ventures, Investible, IQT, Jelix Ventures, Main Sequence Ventures, National Reconstruction Fund Corporation",
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:05.1122589+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "verified_primary",
+                 "verification_source_url":  "https://quantumbrilliance.com/press-release/quantum-brilliance-raises-usd-20-million-in-series-a-funding-round-jp",
+                 "verification_notes":  "Company announcement verifies US$20m Series A and the imported deep-tech investor group on 15 Jan 2025.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:quantum-brilliance"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:quantum-brilliance-series-a--0254d304"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Imported Altium Capital likely represents Alium Capital Management; identity resolution is handled separately."
+                              ]
+               }
+}

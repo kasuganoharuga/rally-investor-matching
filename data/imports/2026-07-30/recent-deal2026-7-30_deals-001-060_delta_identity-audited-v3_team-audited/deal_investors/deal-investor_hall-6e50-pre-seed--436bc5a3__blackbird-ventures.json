@@ -1,0 +1,31 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "deal_investors",
+    "record_key":  "deal_investor:crunchbase:hall-6e50-pre-seed--436bc5a3:blackbird-ventures",
+    "operation":  "upsert",
+    "data":  {
+                 "raw_name":  "Blackbird Ventures",
+                 "role":  "lead",
+                 "participation_status":  "unknown",
+                 "resolution":  "resolved",
+                 "resolution_confidence":  "high",
+                 "identity_resolution":  "existing_database_investor"
+             },
+    "refs":  {
+                 "deal_key":  "funding_round:crunchbase:hall-6e50-pre-seed--436bc5a3",
+                 "investor_key":  "investor:blackbird-ventures",
+                 "raw_investor_candidate_key":  "raw_investor_candidate:blackbird-ventures"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:hall-6e50-pre-seed--436bc5a3"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

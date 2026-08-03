@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:block-earner-series-a--0c2c9b3f",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "block-earner-series-a--0c2c9b3f",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/block-earner-series-a--0c2c9b3f",
+                 "source_payload":  {
+                                        "Transaction Name":  "Series A - Block Earner",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/block-earner-series-a--0c2c9b3f",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "Block Earner",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/block-earner",
+                                        "Funding Type":  "Series A",
+                                        "Money Raised":  "8000000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "5210029",
+                                        "Announced Date":  "2025-08-17",
+                                        "Funding Stage":  "Early Stage Venture",
+                                        "Pre-Money Valuation":  "67000000",
+                                        "Pre-Money Valuation Currency":  "AUD",
+                                        "Pre-Money Valuation (in USD)":  "43633995",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Block Earner is a company that provides crypto-backed loans and a platform to buy and sell cryptocurrencies.",
+                                        "Organization Industries":  "Bitcoin, Blockchain, Cryptocurrency, Decentralized Finance (DeFi), FinTech",
+                                        "Organization Website":  "https://blockearner.com.au",
+                                        "Organization Revenue Range":  "$1M to $10M",
+                                        "Total Funding Amount":  "9710029",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "9710029",
+                                        "Funding Status":  "Early Stage Venture",
+                                        "Lead Investors":  "Titan Fund",
+                                        "Investor Names":  "King River Capital, Titan Fund",
+                                        "Number of Investors":  "2",
+                                        "Number of Partner Investors":  "2"
+                                    },
+                 "investee_name_raw":  "Block Earner",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://blockearner.com.au",
+                 "org_industries_raw":  "Bitcoin, Blockchain, Cryptocurrency, Decentralized Finance (DeFi), FinTech",
+                 "round_type_raw":  "Series A",
+                 "round_stage":  "series_a",
+                 "funding_stage_raw":  "Early Stage Venture",
+                 "announced_date":  "2025-08-17",
+                 "money_raised_raw":  "8000000",
+                 "amount":  8000000,
+                 "currency":  "AUD",
+                 "amount_usd":  5210029,
+                 "pre_money_valuation_raw":  "67000000",
+                 "pre_money_valuation":  67000000,
+                 "valuation_currency":  "AUD",
+                 "valuation_usd":  43633995,
+                 "equity_only":  true,
+                 "total_funding_raw":  "9710029",
+                 "investor_names_raw":  "King River Capital, Titan Fund",
+                 "lead_investor_names_raw":  "Titan Fund",
+                 "imported_at":  "2026-07-30T14:07:04.5822847+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "verified_primary",
+                 "verification_source_url":  "https://blockearner.com.au/newsroom/block-earner-secures-a-8-million-to-expand-crypto-product-portfolio/",
+                 "verification_notes":  "Company announcement verifies an A$8m Series A led by Titan Fund with King River participation.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:block-earner"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:block-earner-series-a--0c2c9b3f"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Announcement is dated 18 Aug 2025; imported date is 17 Aug 2025."
+                              ]
+               }
+}

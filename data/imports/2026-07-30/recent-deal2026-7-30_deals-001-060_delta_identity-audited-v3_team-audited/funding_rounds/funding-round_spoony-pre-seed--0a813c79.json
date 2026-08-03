@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:spoony-pre-seed--0a813c79",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "spoony-pre-seed--0a813c79",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/spoony-pre-seed--0a813c79",
+                 "source_payload":  {
+                                        "Transaction Name":  "Pre Seed Round - Spoony",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/spoony-pre-seed--0a813c79",
+                                        "Organization Location":  "Melbourne, Victoria, Australia, Oceania",
+                                        "Organization Name":  "Spoony",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/spoony",
+                                        "Funding Type":  "Pre-Seed",
+                                        "Money Raised":  "1000000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "1000000",
+                                        "Announced Date":  "2025-01-28",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "The social app for the neurodivergent, chronically ill, and disabled community.",
+                                        "Organization Industries":  "Consumer, Health Care, Marketplace, Social Media, Social Network, Software",
+                                        "Organization Website":  "https://spoony.app",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "1148449",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "1148449",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Antler",
+                                        "Investor Names":  "Antler, Melba Support Services, Piroska Bisits Bullen, trampoline",
+                                        "Number of Investors":  "4",
+                                        "Number of Partner Investors":  "1"
+                                    },
+                 "investee_name_raw":  "Spoony",
+                 "org_location_raw":  "Melbourne, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://spoony.app",
+                 "org_industries_raw":  "Consumer, Health Care, Marketplace, Social Media, Social Network, Software",
+                 "round_type_raw":  "Pre-Seed",
+                 "round_stage":  "pre_seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-01-28",
+                 "money_raised_raw":  "1000000",
+                 "amount":  1000000,
+                 "currency":  "USD",
+                 "amount_usd":  1000000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "1148449",
+                 "investor_names_raw":  "Antler, Melba Support Services, Piroska Bisits Bullen, trampoline",
+                 "lead_investor_names_raw":  "Antler",
+                 "imported_at":  "2026-07-30T14:07:04.5113246+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "unverified_publicly",
+                 "verification_source_url":  "https://www.crunchbase.com/funding_round/spoony-pre-seed--0a813c79",
+                 "verification_notes":  "No exact public funding announcement was located in this pass. Imported transaction is retained as-is for manual follow-up.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:spoony"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:spoony-pre-seed--0a813c79"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact round amount/date/investors not independently verified."
+                              ]
+               }
+}

@@ -1,0 +1,57 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:carbon280",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Carbon280",
+                 "website_url":  "https://carbon280.com",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "Western Australia",
+                 "hq_city":  "Perth",
+                 "is_anz":  true,
+                 "sector_primary":  "hydrogen_technology",
+                 "sector_secondary":  "energy_storage",
+                 "use_case_primary":  "hydrilyte_hydrogen_storage",
+                 "use_case_secondary":  [
+                                            "hydrogen_transport",
+                                            "industrial_energy_storage"
+                                        ],
+                 "customer_type":  "energy_and_industrial_enterprise",
+                 "business_model":  "equipment_projects_and_licensing",
+                 "sales_motion":  "enterprise_partnerships",
+                 "technology_depth":  "deep_tech_industrial",
+                 "ai_relevance":  "not_ai",
+                 "ai_usage_type":  "none",
+                 "ai_core_or_enabler":  "none",
+                 "company_summary":  "Carbon280 is putting the Hydrilyte Hydrogen Storage System on the market.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/carbon280-seed--6a4a64a9",
+                                     "https://www.crunchbase.com/organization/carbon280",
+                                     "https://carbon280.com",
+                                     "https://carbon280.com/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:carbon280-seed--6a4a64a9"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

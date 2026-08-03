@@ -1,0 +1,38 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investor_team_members",
+    "record_key":  "investor_team_member:kungari:evan-jones",
+    "operation":  "upsert",
+    "data":  {
+                 "contact_id":  null,
+                 "first_name":  "Evan",
+                 "last_name":  "Jones",
+                 "role_title":  "Investment Manager",
+                 "seniority":  "investment_manager",
+                 "linkedin_url":  null,
+                 "claimed_focus":  [
+                                       "standards-related innovation",
+                                       "early stage"
+                                   ],
+                 "bio_summary":  "Investment Manager for Standards Australia\u0027s Future Fund, the current public investment program associated with Kungari.",
+                 "source_url":  "https://www.standards.org.au/futurefund",
+                 "retrieved_at":  "2026-07-30",
+                 "is_active":  true
+             },
+    "refs":  {
+                 "investor_key":  "investor:kungari",
+                 "contact_key":  null
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:recent-deal2026-7-30:investor-team-audit",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "person_linkedin_not_verified"
+                              ]
+               }
+}

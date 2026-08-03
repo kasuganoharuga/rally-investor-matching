@@ -1,0 +1,31 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "deal_investors",
+    "record_key":  "deal_investor:crunchbase:the-laundry-lady-seed--79fa8696:brisbane-angels",
+    "operation":  "upsert",
+    "data":  {
+                 "raw_name":  "Brisbane Angels",
+                 "role":  "participant",
+                 "participation_status":  "unknown",
+                 "resolution":  "resolved",
+                 "resolution_confidence":  "high",
+                 "identity_resolution":  "existing_database_investor"
+             },
+    "refs":  {
+                 "deal_key":  "funding_round:crunchbase:the-laundry-lady-seed--79fa8696",
+                 "investor_key":  "investor:brisbane-angels",
+                 "raw_investor_candidate_key":  "raw_investor_candidate:brisbane-angels"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:the-laundry-lady-seed--79fa8696"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

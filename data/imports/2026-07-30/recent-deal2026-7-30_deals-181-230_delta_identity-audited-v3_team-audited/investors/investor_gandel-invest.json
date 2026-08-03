@@ -1,0 +1,49 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investors",
+    "record_key":  "investor:gandel-invest",
+    "operation":  "upsert",
+    "data":  {
+                 "canonical_name":  "Gandel Invest",
+                 "aliases":  [
+
+                             ],
+                 "investor_type":  "investment_firm",
+                 "investor_subtype":  "family_office",
+                 "eligibility_mode":  "none",
+                 "classification_confidence":  "high",
+                 "classification_evidence_urls":  [
+                                                      "https://www.gandelinvest.com/",
+                                                      "https://www.linkedin.com/company/gandel-invest"
+                                                  ],
+                 "classified_at":  "2026-07-30",
+                 "website_url":  "https://www.gandelinvest.com/",
+                 "linkedin_url":  "https://www.linkedin.com/company/gandel-invest",
+                 "hq_country":  "AU",
+                 "hq_state":  "Victoria",
+                 "hq_city":  "Melbourne",
+                 "offices":  [
+
+                             ],
+                 "status":  "active",
+                 "merged_into_id":  null,
+                 "review_status":  "reviewed",
+                 "last_reviewed_at":  "2026-07-30",
+                 "last_reviewed_by":  "codex-investor-identity-audit"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:scoped:recent-deal2026-7-30_deals-181-230",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

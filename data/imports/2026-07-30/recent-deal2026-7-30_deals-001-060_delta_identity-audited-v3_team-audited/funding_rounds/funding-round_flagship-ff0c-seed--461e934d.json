@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:flagship-ff0c-seed--461e934d",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "flagship-ff0c-seed--461e934d",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/flagship-ff0c-seed--461e934d",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Flagship",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/flagship-ff0c-seed--461e934d",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "Flagship",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/flagship-ff0c",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "6000000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "3759570",
+                                        "Announced Date":  "2025-04-02",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Flagship is a retail technology platform to bring new technology to the brick-and-mortar retail world.",
+                                        "Organization Industries":  "Retail, Retail Technology",
+                                        "Organization Website":  "https://flagship.ai",
+                                        "Organization Revenue Range":  "$10M to $50M",
+                                        "Total Funding Amount":  "5759570",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "5759570",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Coreline Ventures, Veridical Ventures",
+                                        "Investor Names":  "Coreline Ventures, Macdoch Ventures, Tidal Ventures, Veridical Ventures",
+                                        "Number of Investors":  "4",
+                                        "Number of Partner Investors":  "3"
+                                    },
+                 "investee_name_raw":  "Flagship",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://flagship.ai",
+                 "org_industries_raw":  "Retail, Retail Technology",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-04-02",
+                 "money_raised_raw":  "6000000",
+                 "amount":  6000000,
+                 "currency":  "AUD",
+                 "amount_usd":  3759570,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "5759570",
+                 "investor_names_raw":  "Coreline Ventures, Macdoch Ventures, Tidal Ventures, Veridical Ventures",
+                 "lead_investor_names_raw":  "Coreline Ventures, Veridical Ventures",
+                 "imported_at":  "2026-07-30T14:07:04.4469683+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "partial_amount_mismatch",
+                 "verification_source_url":  "https://www.flagship.ai/stories/afterpay-cofounder-backs-his-brothers-retail-data-startup-in-2-million-seed-round",
+                 "verification_notes":  "Company announcement describes a A$2m seed led by Tidal with Macdoch/Co and angels.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:flagship-ff0c"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:flagship-ff0c-seed--461e934d"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Imported amount is A$6m; investor list may also omit named angels."
+                              ]
+               }
+}

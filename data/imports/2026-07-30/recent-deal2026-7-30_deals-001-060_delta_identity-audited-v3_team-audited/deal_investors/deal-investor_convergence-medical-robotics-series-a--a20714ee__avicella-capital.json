@@ -1,0 +1,31 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "deal_investors",
+    "record_key":  "deal_investor:crunchbase:convergence-medical-robotics-series-a--a20714ee:avicella-capital",
+    "operation":  "upsert",
+    "data":  {
+                 "raw_name":  "Avicella Capital",
+                 "role":  "lead",
+                 "participation_status":  "unknown",
+                 "resolution":  "resolved",
+                 "resolution_confidence":  "high",
+                 "identity_resolution":  "new_investor"
+             },
+    "refs":  {
+                 "deal_key":  "funding_round:crunchbase:convergence-medical-robotics-series-a--a20714ee",
+                 "investor_key":  "investor:avicella-capital",
+                 "raw_investor_candidate_key":  "raw_investor_candidate:avicella-capital"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:convergence-medical-robotics-series-a--a20714ee"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:oak-ridge-software-seed--d9c3cfab",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "oak-ridge-software-seed--d9c3cfab",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/oak-ridge-software-seed--d9c3cfab",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Oak Ridge Software",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/oak-ridge-software-seed--d9c3cfab",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "Oak Ridge Software",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/oak-ridge-software",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "250000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "250000",
+                                        "Announced Date":  "2025-06-27",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Oak Ridge Software is a software company that offers tech services.",
+                                        "Organization Industries":  "Information Technology, SaaS, Software",
+                                        "Organization Website":  "",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "250000",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "250000",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "",
+                                        "Number of Investors":  "",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "Oak Ridge Software",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  null,
+                 "org_industries_raw":  "Information Technology, SaaS, Software",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-06-27",
+                 "money_raised_raw":  "250000",
+                 "amount":  250000,
+                 "currency":  "USD",
+                 "amount_usd":  250000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "250000",
+                 "investor_names_raw":  null,
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:05.1741665+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "unverified_publicly",
+                 "verification_source_url":  "https://www.crunchbase.com/funding_round/oak-ridge-software-seed--d9c3cfab",
+                 "verification_notes":  "No exact independent public announcement was located in this pass. The imported transaction is retained for manual follow-up.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:oak-ridge-software"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:oak-ridge-software-seed--d9c3cfab"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact round amount/date/stage/investors not independently verified."
+                              ]
+               }
+}

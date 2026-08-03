@@ -1,0 +1,49 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investors",
+    "record_key":  "investor:american-public-media-group-s-horizon-fund",
+    "operation":  "upsert",
+    "data":  {
+                 "canonical_name":  "American Public Media Group Horizon Fund",
+                 "aliases":  [
+                                 "American Public Media Group\u0027s Horizon Fund"
+                             ],
+                 "investor_type":  "vc_fund",
+                 "investor_subtype":  "corporate_venture",
+                 "eligibility_mode":  "none",
+                 "classification_confidence":  "high",
+                 "classification_evidence_urls":  [
+                                                      "https://www.glennelson.org/",
+                                                      "https://www.linkedin.com/company/glen-nelson-center"
+                                                  ],
+                 "classified_at":  "2026-07-30",
+                 "website_url":  "https://www.glennelson.org/",
+                 "linkedin_url":  "https://www.linkedin.com/company/glen-nelson-center",
+                 "hq_country":  "US",
+                 "hq_state":  "Minnesota",
+                 "hq_city":  "Saint Paul",
+                 "offices":  [
+
+                             ],
+                 "status":  "active",
+                 "merged_into_id":  null,
+                 "review_status":  "reviewed",
+                 "last_reviewed_at":  "2026-07-30",
+                 "last_reviewed_by":  "codex-investor-identity-audit"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:scoped:recent-deal2026-7-30_deals-061-120",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:bovotica-seed--d182a1fe",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "bovotica-seed--d182a1fe",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/bovotica-seed--d182a1fe",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Bovotica",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/bovotica-seed--d182a1fe",
+                                        "Organization Location":  "Brisbane, Queensland, Australia, Oceania",
+                                        "Organization Name":  "Bovotica",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/bovotica",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "3400000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "3400000",
+                                        "Announced Date":  "2025-05-12",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "6000000",
+                                        "Pre-Money Valuation Currency":  "USD",
+                                        "Pre-Money Valuation (in USD)":  "6000000",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Bovotica aims to eliminate the microbiota in the rumen to lower methane.",
+                                        "Organization Industries":  "AgTech, Biotechnology, Livestock",
+                                        "Organization Website":  "https://bovotica.com",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "3400000",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "3400000",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "AgriZeroNZ",
+                                        "Investor Names":  "AgriZeroNZ, InnovationClub, Lord Pastoral",
+                                        "Number of Investors":  "3",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "Bovotica",
+                 "org_location_raw":  "Brisbane, Queensland, Australia, Oceania",
+                 "org_website_raw":  "https://bovotica.com",
+                 "org_industries_raw":  "AgTech, Biotechnology, Livestock",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-05-12",
+                 "money_raised_raw":  "3400000",
+                 "amount":  3400000,
+                 "currency":  "USD",
+                 "amount_usd":  3400000,
+                 "pre_money_valuation_raw":  "6000000",
+                 "pre_money_valuation":  6000000,
+                 "valuation_currency":  "USD",
+                 "valuation_usd":  6000000,
+                 "equity_only":  true,
+                 "total_funding_raw":  "3400000",
+                 "investor_names_raw":  "AgriZeroNZ, InnovationClub, Lord Pastoral",
+                 "lead_investor_names_raw":  "AgriZeroNZ",
+                 "imported_at":  "2026-07-30T14:07:04.4793134+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "partial_investor_mismatch",
+                 "verification_source_url":  "https://app.dealroom.co/companies/bovotica",
+                 "verification_notes":  "Dealroom reports a US$3.4m-equivalent 2025 round and a broader syndicate than the imported list.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:bovotica"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:bovotica-seed--d182a1fe"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Investor list appears incomplete; confirm currency and syndicate."
+                              ]
+               }
+}

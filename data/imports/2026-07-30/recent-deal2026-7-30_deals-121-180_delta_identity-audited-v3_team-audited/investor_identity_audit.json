@@ -1,0 +1,2316 @@
+{
+    "schema_version":  "1.0.0",
+    "generated_at":  "2026-07-30T17:49:46.3797345+09:30",
+    "audit_date":  "2026-07-30",
+    "source_batch_id":  "recent-deal2026-7-30_deals-121-180_delta",
+    "audited_batch_id":  "recent-deal2026-7-30_deals-121-180_delta_identity-audited-v3",
+    "methodology":  [
+                        "Exact investor name plus observed deal context search.",
+                        "Official website and official LinkedIn company or personal profile cross-check.",
+                        "Namesake candidates rejected unless the deal context matched.",
+                        "Individual angel headquarters fields treated as not applicable; personal residence is never inferred.",
+                        "Null values retained only with a field-level reason."
+                    ],
+    "records":  [
+                    {
+                        "record_key":  "investor:aera-vc",
+                        "canonical_name":  "Aera VC",
+                        "original_name":  "Aera VC",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Aera VC\" official website LinkedIn headquarters investor",
+                                               "\"Aera VC\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.aera.vc/",
+                                              "https://www.linkedin.com/company/aera-vc"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "not_disclosed_by_verified_sources",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "vc_fund",
+                                               "investor_subtype":  "venture_capital",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Official venture fund profile; corrected from angel."
+                    },
+                    {
+                        "record_key":  "investor:altium-capital",
+                        "canonical_name":  "Alium Capital Management",
+                        "original_name":  "Altium Capital",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Altium Capital\" official website LinkedIn headquarters investor",
+                                               "\"Altium Capital\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://aliumcap.com/",
+                                              "https://www.linkedin.com/company/alium-capital"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "investment_firm",
+                                               "investor_subtype":  "asset_manager",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Quantum Brilliance evidence identifies Alium Capital Management; Altium retained as an alias."
+                    },
+                    {
+                        "record_key":  "investor:altos-ventures",
+                        "canonical_name":  "Altos Ventures",
+                        "original_name":  "Altos Ventures",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Altos Ventures\" official website LinkedIn headquarters investor",
+                                               "\"Altos Ventures\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.altos.vc/",
+                                              "https://www.linkedin.com/company/altos-ventures"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "vc_fund",
+                                               "investor_subtype":  "venture_capital",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Official VC profile."
+                    },
+                    {
+                        "record_key":  "investor:angel-investors-marlborough",
+                        "canonical_name":  "Angel Investors Marlborough",
+                        "original_name":  "Angel Investors Marlborough",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Angel Investors Marlborough\" official website LinkedIn headquarters investor",
+                                               "\"Angel Investors Marlborough\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.angelinvestorsmarlborough.co.nz/",
+                                              "https://www.linkedin.com/company/angelinvestorsmarlborough"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "angel_group",
+                                               "investor_subtype":  "angel_network",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Official angel network identity."
+                    },
+                    {
+                        "record_key":  "investor:aut-ventures",
+                        "canonical_name":  "AUT Ventures",
+                        "original_name":  "AUT Ventures",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"AUT Ventures\" official website LinkedIn headquarters investor",
+                                               "\"AUT Ventures\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://ventures.aut.ac.nz/",
+                                              "https://www.linkedin.com/company/autventures"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "university_fund",
+                                               "investor_subtype":  "university_fund",
+                                               "eligibility_mode":  "conditional",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Official Auckland University of Technology venture arm."
+                    },
+                    {
+                        "record_key":  "investor:bam-ventures",
+                        "canonical_name":  "BAM Ventures",
+                        "original_name":  "BAM Ventures",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"BAM Ventures\" official website LinkedIn headquarters investor",
+                                               "\"BAM Ventures\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://bam.vc/",
+                                              "https://www.linkedin.com/company/bam-ventures-llc"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "vc_fund",
+                                               "investor_subtype":  "venture_capital",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Official venture fund profile."
+                    },
+                    {
+                        "record_key":  "investor:belinda-hogan",
+                        "canonical_name":  "Belinda Hogan",
+                        "original_name":  "Belinda Hogan",
+                        "entity_kind":  "individual",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Belinda Hogan\" official website LinkedIn headquarters investor",
+                                               "\"Belinda Hogan\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.linkedin.com/in/belinda-hogan-2b3b7332"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "not_found_after_targeted_search",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_state":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_city":  "not_applicable_individual_personal_location_not_collected"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "angel",
+                                               "investor_subtype":  "individual_investor",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Exact personal LinkedIn matched to LiveHeats context."
+                    },
+                    {
+                        "record_key":  "investor:benjamin-richardson",
+                        "canonical_name":  "Benjamin Richardson",
+                        "original_name":  "Benjamin Richardson",
+                        "entity_kind":  "individual",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Benjamin Richardson\" official website LinkedIn headquarters investor",
+                                               "\"Benjamin Richardson\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+
+                                          ],
+                        "fields":  {
+                                       "website_url":  "not_found_after_targeted_search",
+                                       "linkedin_url":  "not_found_or_not_uniquely_attributable_after_targeted_search",
+                                       "hq_country":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_state":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_city":  "not_applicable_individual_personal_location_not_collected"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "angel",
+                                               "investor_subtype":  "individual_investor",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "medium",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Individual angel; only secondary investor-directory evidence found."
+                    },
+                    {
+                        "record_key":  "investor:betterlabs-ventures",
+                        "canonical_name":  "BetterLabs",
+                        "original_name":  "BetterLabs Ventures",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"BetterLabs Ventures\" official website LinkedIn headquarters investor",
+                                               "\"BetterLabs Ventures\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.betterlabs.com.au/",
+                                              "https://www.linkedin.com/company/better-labs"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "investment_firm",
+                                               "investor_subtype":  "venture_studio",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Official venture studio identity."
+                    },
+                    {
+                        "record_key":  "investor:boson-ventures",
+                        "canonical_name":  "Boson Ventures",
+                        "original_name":  "Boson Ventures",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Boson Ventures\" official website LinkedIn headquarters investor",
+                                               "\"Boson Ventures\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://boson.vc/",
+                                              "https://www.linkedin.com/company/boson-ventures"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "vc_fund",
+                                               "investor_subtype":  "venture_capital",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Official site and linked company profile matched; the official site lists its Melbourne office at 770 Blackburn Road, Clayton, Victoria."
+                    },
+                    {
+                        "record_key":  "investor:brindabella-capital",
+                        "canonical_name":  "Brindabella Capital",
+                        "original_name":  "Brindabella Capital",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Brindabella Capital\" official website LinkedIn headquarters investor",
+                                               "\"Brindabella Capital\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.brindabellacapital.com.au/",
+                                              "https://www.linkedin.com/company/brindabella-capital"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "vc_fund",
+                                               "investor_subtype":  "venture_capital",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Official Australian investment firm profile."
+                    },
+                    {
+                        "record_key":  "investor:capital-influence",
+                        "canonical_name":  "Capital Influence",
+                        "original_name":  "Capital Influence",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Capital Influence\" official website LinkedIn headquarters investor",
+                                               "\"Capital Influence\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.capinfluence.com/",
+                                              "https://www.linkedin.com/company/capital-influence"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "vc_fund",
+                                               "investor_subtype":  "venture_capital",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Official venture firm profile."
+                    },
+                    {
+                        "record_key":  "investor:carl-stubbings",
+                        "canonical_name":  "Carl Stubbings",
+                        "original_name":  "Carl Stubbings",
+                        "entity_kind":  "individual",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Carl Stubbings\" official website LinkedIn headquarters investor",
+                                               "\"Carl Stubbings\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.linkedin.com/in/carl-stubbings-87a18a13"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "not_found_after_targeted_search",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_state":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_city":  "not_applicable_individual_personal_location_not_collected"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "angel",
+                                               "investor_subtype":  "individual_investor",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Exact personal LinkedIn matched to Diag-Nose context."
+                    },
+                    {
+                        "record_key":  "investor:catriona-wallace",
+                        "canonical_name":  "Catriona Wallace",
+                        "original_name":  "Catriona Wallace",
+                        "entity_kind":  "individual",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Catriona Wallace\" official website LinkedIn headquarters investor",
+                                               "\"Catriona Wallace\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+
+                                          ],
+                        "fields":  {
+                                       "website_url":  "not_found_after_targeted_search",
+                                       "linkedin_url":  "not_found_or_not_uniquely_attributable_after_targeted_search",
+                                       "hq_country":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_state":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_city":  "not_applicable_individual_personal_location_not_collected"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "angel",
+                                               "investor_subtype":  "individual_investor",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "medium",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Individual angel; no uniquely attributable profile surfaced in the targeted funding search."
+                    },
+                    {
+                        "record_key":  "investor:christiaan-jordaan",
+                        "canonical_name":  "Christiaan Jordaan",
+                        "original_name":  "Christiaan Jordaan",
+                        "entity_kind":  "individual",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Christiaan Jordaan\" official website LinkedIn headquarters investor",
+                                               "\"Christiaan Jordaan\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+
+                                          ],
+                        "fields":  {
+                                       "website_url":  "not_found_after_targeted_search",
+                                       "linkedin_url":  "not_found_or_not_uniquely_attributable_after_targeted_search",
+                                       "hq_country":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_state":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_city":  "not_applicable_individual_personal_location_not_collected"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "angel",
+                                               "investor_subtype":  "individual_investor",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "medium",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Individual angel; targeted Voltavate search returned unrelated people."
+                    },
+                    {
+                        "record_key":  "investor:cn-ventures",
+                        "canonical_name":  "CN Ventures",
+                        "original_name":  "CN Ventures",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"CN Ventures\" official website LinkedIn headquarters investor",
+                                               "\"CN Ventures\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.linkedin.com/company/cn-ventures"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "not_found_after_targeted_search",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "vc_fund",
+                                               "investor_subtype":  "venture_capital",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "medium",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "needs_more_data",
+                        "audit_note":  "Exact company LinkedIn found; search results did not establish a unique official website."
+                    },
+                    {
+                        "record_key":  "investor:daniel-bignold",
+                        "canonical_name":  "Daniel Bignold",
+                        "original_name":  "Daniel Bignold",
+                        "entity_kind":  "individual",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Daniel Bignold\" official website LinkedIn headquarters investor",
+                                               "\"Daniel Bignold\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+
+                                          ],
+                        "fields":  {
+                                       "website_url":  "not_found_after_targeted_search",
+                                       "linkedin_url":  "not_found_or_not_uniquely_attributable_after_targeted_search",
+                                       "hq_country":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_state":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_city":  "not_applicable_individual_personal_location_not_collected"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "angel",
+                                               "investor_subtype":  "individual_investor",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "medium",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Individual angel; no unique official profile found."
+                    },
+                    {
+                        "record_key":  "investor:dcf-god",
+                        "canonical_name":  "DCF GOD",
+                        "original_name":  "DCF GOD",
+                        "entity_kind":  "individual",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"DCF GOD\" official website LinkedIn headquarters investor",
+                                               "\"DCF GOD\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+
+                                          ],
+                        "fields":  {
+                                       "website_url":  "not_found_after_targeted_search",
+                                       "linkedin_url":  "not_found_or_not_uniquely_attributable_after_targeted_search",
+                                       "hq_country":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_state":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_city":  "not_applicable_individual_personal_location_not_collected"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "angel",
+                                               "investor_subtype":  "individual_investor",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "medium",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Pseudonymous individual investor; no authoritative official website or LinkedIn found."
+                    },
+                    {
+                        "record_key":  "investor:dorado-capital",
+                        "canonical_name":  "Dorado Capital",
+                        "original_name":  "Dorado Capital",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Dorado Capital\" official website LinkedIn headquarters investor",
+                                               "\"Dorado Capital\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://dorado.capital/",
+                                              "https://www.linkedin.com/company/dorado-capital-us"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "vc_fund",
+                                               "investor_subtype":  "venture_capital",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Official firm identity matched by name and funding context."
+                    },
+                    {
+                        "record_key":  "investor:eastcourt",
+                        "canonical_name":  "Eastcourt",
+                        "original_name":  "Eastcourt",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "supplemental_research_verified",
+                        "search_queries":  [
+                                               "\"Eastcourt\" official website LinkedIn headquarters investor",
+                                               "\"Eastcourt\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.cbinsights.com/investor/eastcourt",
+                                              "https://abr.business.gov.au/ABN/View?abn=44124511084"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "ambiguous_or_not_found_after_targeted_search",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "other",
+                                               "investor_subtype":  "unclassified",
+                                               "eligibility_mode":  "unknown",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "needs_more_data",
+                        "audit_note":  "Eastcourt Management and Eastcourt Capital were matched to the WeMoney round and Applecross registered location."
+                    },
+                    {
+                        "record_key":  "investor:ecotone-ventures",
+                        "canonical_name":  "Ecotone Ventures",
+                        "original_name":  "Ecotone Ventures",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Ecotone Ventures\" official website LinkedIn headquarters investor",
+                                               "\"Ecotone Ventures\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.ecotonepartners.com.au/ecotone-ventures",
+                                              "https://www.linkedin.com/company/ecotone-partners"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "vc_fund",
+                                               "investor_subtype":  "venture_capital",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Australian Ecotone Partners venture arm; unrelated ecotone.eco result rejected."
+                    },
+                    {
+                        "record_key":  "investor:efficient-frontier",
+                        "canonical_name":  "Efficient Frontier",
+                        "original_name":  "Efficient Frontier",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Efficient Frontier\" official website LinkedIn headquarters investor",
+                                               "\"Efficient Frontier\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.efrontier.io/",
+                                              "https://www.linkedin.com/company/efficientfrontier"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "not_disclosed_by_verified_sources",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "strategic_corporate",
+                                               "investor_subtype":  "digital_asset_market_maker",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Official company site and LinkedIn match the ZKCandy financing participant; the official contact address is in Gibraltar."
+                    },
+                    {
+                        "record_key":  "investor:energy-transition-ventures",
+                        "canonical_name":  "Energy Transition Ventures",
+                        "original_name":  "Energy Transition Ventures",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Energy Transition Ventures\" official website LinkedIn headquarters investor",
+                                               "\"Energy Transition Ventures\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://energytransitionventures.com/",
+                                              "https://www.linkedin.com/company/energy-transition-ventures"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "vc_fund",
+                                               "investor_subtype":  "venture_capital",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Official energy transition VC profile."
+                    },
+                    {
+                        "record_key":  "investor:ether-fi",
+                        "canonical_name":  "ether.fi",
+                        "original_name":  "ether.fi",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"ether.fi\" official website LinkedIn headquarters investor",
+                                               "\"ether.fi\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.ether.fi/",
+                                              "https://www.linkedin.com/company/etherfi"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "strategic_corporate",
+                                               "investor_subtype":  "strategic_corporate",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Official protocol/company profile."
+                    },
+                    {
+                        "record_key":  "investor:finality-capital-partners",
+                        "canonical_name":  "Finality Capital Partners",
+                        "original_name":  "Finality Capital Partners",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "supplemental_research_verified",
+                        "search_queries":  [
+                                               "\"Finality Capital Partners\" official website LinkedIn headquarters investor",
+                                               "\"Finality Capital Partners\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.finality.capital/",
+                                              "https://www.linkedin.com/company/finality-capital",
+                                              "https://bizfileonline.sos.ca.gov/search/business"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "vc_fund",
+                                               "investor_subtype":  "venture_capital",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "The exact firm identity and California business registration evidence place Finality Capital Partners in Beverly Hills."
+                    },
+                    {
+                        "record_key":  "investor:footwork",
+                        "canonical_name":  "Footwork",
+                        "original_name":  "Footwork",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Footwork\" official website LinkedIn headquarters investor",
+                                               "\"Footwork\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.footwork.vc/",
+                                              "https://www.linkedin.com/company/footworkvc"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "vc_fund",
+                                               "investor_subtype":  "venture_capital",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Official venture fund; corrected from other."
+                    },
+                    {
+                        "record_key":  "investor:frank-greeff",
+                        "canonical_name":  "Frank Greeff",
+                        "original_name":  "Frank Greeff",
+                        "entity_kind":  "individual",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Frank Greeff\" official website LinkedIn headquarters investor",
+                                               "\"Frank Greeff\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+
+                                          ],
+                        "fields":  {
+                                       "website_url":  "not_found_after_targeted_search",
+                                       "linkedin_url":  "not_found_or_not_uniquely_attributable_after_targeted_search",
+                                       "hq_country":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_state":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_city":  "not_applicable_individual_personal_location_not_collected"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "angel",
+                                               "investor_subtype":  "individual_investor",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "medium",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Individual angel; targeted Foundit search returned another person."
+                    },
+                    {
+                        "record_key":  "investor:gillian-findlay",
+                        "canonical_name":  "Gillian Findlay",
+                        "original_name":  "Gillian Findlay",
+                        "entity_kind":  "individual",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Gillian Findlay\" official website LinkedIn headquarters investor",
+                                               "\"Gillian Findlay\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+
+                                          ],
+                        "fields":  {
+                                       "website_url":  "not_found_after_targeted_search",
+                                       "linkedin_url":  "not_found_or_not_uniquely_attributable_after_targeted_search",
+                                       "hq_country":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_state":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_city":  "not_applicable_individual_personal_location_not_collected"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "angel",
+                                               "investor_subtype":  "individual_investor",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "medium",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Individual angel; only secondary directory evidence found."
+                    },
+                    {
+                        "record_key":  "investor:hemal-shah",
+                        "canonical_name":  "Hemal Shah",
+                        "original_name":  "Hemal Shah",
+                        "entity_kind":  "individual",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Hemal Shah\" official website LinkedIn headquarters investor",
+                                               "\"Hemal Shah\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+
+                                          ],
+                        "fields":  {
+                                       "website_url":  "not_found_after_targeted_search",
+                                       "linkedin_url":  "not_found_or_not_uniquely_attributable_after_targeted_search",
+                                       "hq_country":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_state":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_city":  "not_applicable_individual_personal_location_not_collected"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "angel",
+                                               "investor_subtype":  "individual_investor",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "medium",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Individual angel; common name and no unique Twine-linked profile."
+                    },
+                    {
+                        "record_key":  "investor:hephzibah-financial-pty-ltd",
+                        "canonical_name":  "Hephzibah Financial Pty Ltd",
+                        "original_name":  "Hephzibah Financial Pty Ltd",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "supplemental_research_verified",
+                        "search_queries":  [
+                                               "\"Hephzibah Financial Pty Ltd\" official website LinkedIn headquarters investor",
+                                               "\"Hephzibah Financial Pty Ltd\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://abr.business.gov.au/ABN/View/90612978275"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "ambiguous_or_not_found_after_targeted_search",
+                                       "linkedin_url":  "ambiguous_or_not_found_after_targeted_search",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "angel",
+                                               "investor_subtype":  "individual_investor",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "needs_more_data",
+                        "audit_note":  "Australian Business Register confirms active Hephzibah Financial Pty Ltd in NSW 2000; no unique official website or LinkedIn page was found."
+                    },
+                    {
+                        "record_key":  "investor:hubspot-ventures",
+                        "canonical_name":  "HubSpot Ventures",
+                        "original_name":  "HubSpot Ventures",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"HubSpot Ventures\" official website LinkedIn headquarters investor",
+                                               "\"HubSpot Ventures\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.hubspot.com/ventures",
+                                              "https://www.linkedin.com/company/hubspot-ventures"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "strategic_corporate",
+                                               "investor_subtype":  "corporate_venture",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Official corporate venture arm."
+                    },
+                    {
+                        "record_key":  "investor:icm-hpqc",
+                        "canonical_name":  "ICM HPQC",
+                        "original_name":  "ICM HPQC",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"ICM HPQC\" official website LinkedIn headquarters investor",
+                                               "\"ICM HPQC\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.hpqcfund.com/",
+                                              "https://www.linkedin.com/company/icm-hpqc-fund"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "not_disclosed_by_verified_sources",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "investment_firm",
+                                               "investor_subtype":  "asset_manager",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Official fund profile; corrected from angel."
+                    },
+                    {
+                        "record_key":  "investor:intervalley-ventures",
+                        "canonical_name":  "InterValley Ventures",
+                        "original_name":  "InterValley Ventures",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"InterValley Ventures\" official website LinkedIn headquarters investor",
+                                               "\"InterValley Ventures\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.intervalley.vc/",
+                                              "https://www.linkedin.com/company/intervalley-ventures"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "vc_fund",
+                                               "investor_subtype":  "venture_capital",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Official venture fund profile."
+                    },
+                    {
+                        "record_key":  "investor:jacques-greeff",
+                        "canonical_name":  "Jacques Greeff",
+                        "original_name":  "Jacques Greeff",
+                        "entity_kind":  "individual",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Jacques Greeff\" official website LinkedIn headquarters investor",
+                                               "\"Jacques Greeff\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+
+                                          ],
+                        "fields":  {
+                                       "website_url":  "not_found_after_targeted_search",
+                                       "linkedin_url":  "not_found_or_not_uniquely_attributable_after_targeted_search",
+                                       "hq_country":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_state":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_city":  "not_applicable_individual_personal_location_not_collected"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "angel",
+                                               "investor_subtype":  "individual_investor",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "medium",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Individual angel; targeted Foundit search returned another person."
+                    },
+                    {
+                        "record_key":  "investor:joel-parkinson",
+                        "canonical_name":  "Joel Parkinson",
+                        "original_name":  "Joel Parkinson",
+                        "entity_kind":  "individual",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Joel Parkinson\" official website LinkedIn headquarters investor",
+                                               "\"Joel Parkinson\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+
+                                          ],
+                        "fields":  {
+                                       "website_url":  "not_found_after_targeted_search",
+                                       "linkedin_url":  "not_found_or_not_uniquely_attributable_after_targeted_search",
+                                       "hq_country":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_state":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_city":  "not_applicable_individual_personal_location_not_collected"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "angel",
+                                               "investor_subtype":  "individual_investor",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "medium",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Individual angel; targeted LiveHeats search returned other people."
+                    },
+                    {
+                        "record_key":  "investor:john-wood",
+                        "canonical_name":  "John Wood",
+                        "original_name":  "John Wood",
+                        "entity_kind":  "individual",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"John Wood\" official website LinkedIn headquarters investor",
+                                               "\"John Wood\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+
+                                          ],
+                        "fields":  {
+                                       "website_url":  "not_found_after_targeted_search",
+                                       "linkedin_url":  "not_found_or_not_uniquely_attributable_after_targeted_search",
+                                       "hq_country":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_state":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_city":  "not_applicable_individual_personal_location_not_collected"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "angel",
+                                               "investor_subtype":  "individual_investor",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "medium",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Individual angel; common name and no unique Voltavate-linked profile."
+                    },
+                    {
+                        "record_key":  "investor:justin-trollip",
+                        "canonical_name":  "Justin Trollip",
+                        "original_name":  "Justin Trollip",
+                        "entity_kind":  "individual",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Justin Trollip\" official website LinkedIn headquarters investor",
+                                               "\"Justin Trollip\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.linkedin.com/in/justintrollip"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "not_found_after_targeted_search",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_state":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_city":  "not_applicable_individual_personal_location_not_collected"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "angel",
+                                               "investor_subtype":  "individual_investor",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Exact personal LinkedIn matched to the Demiton context."
+                    },
+                    {
+                        "record_key":  "investor:karl-jacoby",
+                        "canonical_name":  "Karl Jacoby",
+                        "original_name":  "Karl Jacoby",
+                        "entity_kind":  "individual",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Karl Jacoby\" official website LinkedIn headquarters investor",
+                                               "\"Karl Jacoby\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.linkedin.com/in/karl-jacoby-4485588"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "not_found_after_targeted_search",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_state":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_city":  "not_applicable_individual_personal_location_not_collected"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "angel",
+                                               "investor_subtype":  "individual_investor",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Exact personal LinkedIn matched to the funding context."
+                    },
+                    {
+                        "record_key":  "investor:lance-east-office",
+                        "canonical_name":  "Lance East Office",
+                        "original_name":  "Lance East Office",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Lance East Office\" official website LinkedIn headquarters investor",
+                                               "\"Lance East Office\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.lanceeast.com.au/",
+                                              "https://www.linkedin.com/company/lance-east-office"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "investment_firm",
+                                               "investor_subtype":  "family_office",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Official family office; corrected from angel."
+                    },
+                    {
+                        "record_key":  "investor:lecca-ventures",
+                        "canonical_name":  "Lecca Ventures",
+                        "original_name":  "Lecca Ventures",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Lecca Ventures\" official website LinkedIn headquarters investor",
+                                               "\"Lecca Ventures\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://leccaventures.com/",
+                                              "https://www.linkedin.com/company/leccaventures"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "not_disclosed_by_verified_sources",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "vc_fund",
+                                               "investor_subtype":  "venture_capital",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Official Web3 venture firm profile."
+                    },
+                    {
+                        "record_key":  "investor:luke-belmar",
+                        "canonical_name":  "Luke Belmar",
+                        "original_name":  "Luke Belmar",
+                        "entity_kind":  "individual",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Luke Belmar\" official website LinkedIn headquarters investor",
+                                               "\"Luke Belmar\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+
+                                          ],
+                        "fields":  {
+                                       "website_url":  "not_found_after_targeted_search",
+                                       "linkedin_url":  "not_found_or_not_uniquely_attributable_after_targeted_search",
+                                       "hq_country":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_state":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_city":  "not_applicable_individual_personal_location_not_collected"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "angel",
+                                               "investor_subtype":  "individual_investor",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "medium",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Individual or pseudonymous investor; no authoritative profile was assignable from the Rise Chain search."
+                    },
+                    {
+                        "record_key":  "investor:mastercard",
+                        "canonical_name":  "Mastercard",
+                        "original_name":  "Mastercard",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Mastercard\" official website LinkedIn headquarters investor",
+                                               "\"Mastercard\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.mastercard.com/",
+                                              "https://www.linkedin.com/company/mastercard"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "strategic_corporate",
+                                               "investor_subtype":  "strategic_corporate",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Official operating company profile."
+                    },
+                    {
+                        "record_key":  "investor:monash-investment-holdings",
+                        "canonical_name":  "Monash investment holdings",
+                        "original_name":  "Monash investment holdings",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Monash investment holdings\" official website LinkedIn headquarters investor",
+                                               "\"Monash investment holdings\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.monash.edu/monash-innovation/about/monash-investment-holdings-mih"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "not_found_after_targeted_search",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "university_fund",
+                                               "investor_subtype":  "university_fund",
+                                               "eligibility_mode":  "conditional",
+                                               "confidence":  "medium",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "needs_more_data",
+                        "audit_note":  "Official Monash commercialisation entity page."
+                    },
+                    {
+                        "record_key":  "investor:morgan-creek-digital",
+                        "canonical_name":  "Morgan Creek Digital",
+                        "original_name":  "Morgan Creek Digital",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Morgan Creek Digital\" official website LinkedIn headquarters investor",
+                                               "\"Morgan Creek Digital\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.morgancreekcap.com/",
+                                              "https://www.linkedin.com/company/morgan-creek-capital-management"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "investment_firm",
+                                               "investor_subtype":  "asset_manager",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Official asset manager identity; unrelated 24 Exchange result rejected."
+                    },
+                    {
+                        "record_key":  "investor:newsouth-innovations",
+                        "canonical_name":  "NewSouth Innovations",
+                        "original_name":  "NewSouth Innovations",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"NewSouth Innovations\" official website LinkedIn headquarters investor",
+                                               "\"NewSouth Innovations\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.unsw.edu.au/industry/partner-with-us/new-south-innovations"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "not_found_after_targeted_search",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "university_fund",
+                                               "investor_subtype":  "university_fund",
+                                               "eligibility_mode":  "conditional",
+                                               "confidence":  "medium",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "needs_more_data",
+                        "audit_note":  "Official UNSW commercialisation page replaces obsolete or unrelated domains."
+                    },
+                    {
+                        "record_key":  "investor:patron",
+                        "canonical_name":  "Patron",
+                        "original_name":  "Patron",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Patron\" official website LinkedIn headquarters investor",
+                                               "\"Patron\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://patron.fund/",
+                                              "https://www.linkedin.com/company/patronxyz"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "vc_fund",
+                                               "investor_subtype":  "venture_capital",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Official venture fund profile."
+                    },
+                    {
+                        "record_key":  "investor:perlone-capital",
+                        "canonical_name":  "Perlone Capital",
+                        "original_name":  "Perlone Capital",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "supplemental_research_verified",
+                        "search_queries":  [
+                                               "\"Perlone Capital\" official website LinkedIn headquarters investor",
+                                               "\"Perlone Capital\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.perlonecap.com/",
+                                              "https://www.linkedin.com/company/perone"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "not_disclosed_by_verified_sources",
+                                       "hq_city":  "not_disclosed_by_verified_sources"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "vc_fund",
+                                               "investor_subtype":  "venture_capital",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "The exact Perlone Capital LinkedIn page links to the already verified official website."
+                    },
+                    {
+                        "record_key":  "investor:peter-matthews",
+                        "canonical_name":  "Peter Matthews",
+                        "original_name":  "Peter Matthews",
+                        "entity_kind":  "individual",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Peter Matthews\" official website LinkedIn headquarters investor",
+                                               "\"Peter Matthews\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+
+                                          ],
+                        "fields":  {
+                                       "website_url":  "not_found_after_targeted_search",
+                                       "linkedin_url":  "not_found_or_not_uniquely_attributable_after_targeted_search",
+                                       "hq_country":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_state":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_city":  "not_applicable_individual_personal_location_not_collected"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "angel",
+                                               "investor_subtype":  "individual_investor",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "medium",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Individual angel; common name and no unique Foundit-linked profile."
+                    },
+                    {
+                        "record_key":  "investor:point72-ventures",
+                        "canonical_name":  "Point72 Ventures",
+                        "original_name":  "Point72 Ventures",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Point72 Ventures\" official website LinkedIn headquarters investor",
+                                               "\"Point72 Ventures\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://p72.vc/",
+                                              "https://www.linkedin.com/company/point72-ventures"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "vc_fund",
+                                               "investor_subtype":  "venture_capital",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Official venture fund profile."
+                    },
+                    {
+                        "record_key":  "investor:presto",
+                        "canonical_name":  "Presto",
+                        "original_name":  "Presto",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "supplemental_research_verified",
+                        "search_queries":  [
+                                               "\"Presto\" official website LinkedIn headquarters investor",
+                                               "\"Presto\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.prestolabs.io/",
+                                              "https://www.linkedin.com/company/presto-official",
+                                              "https://www.icandy.io/project/operational-update-zkcandy-raises-us4m-in-seed-funding-led-by-institutional-investors/"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "ambiguous_or_not_found_after_targeted_search",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "other",
+                                               "investor_subtype":  "unclassified",
+                                               "eligibility_mode":  "unknown",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "The ZKcandy announcement names Presto Labs; official website and company LinkedIn confirm the quantitative trading firm."
+                    },
+                    {
+                        "record_key":  "investor:prometheuz",
+                        "canonical_name":  "PROMETHEUZ",
+                        "original_name":  "PROMETHEUZ",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "searched_but_identity_not_uniquely_resolved",
+                        "search_queries":  [
+                                               "\"PROMETHEUZ\" official website LinkedIn headquarters investor",
+                                               "\"PROMETHEUZ\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+
+                                          ],
+                        "fields":  {
+                                       "website_url":  "ambiguous_or_not_found_after_targeted_search",
+                                       "linkedin_url":  "ambiguous_or_not_found_after_targeted_search",
+                                       "hq_country":  "ambiguous_or_not_found_after_targeted_search",
+                                       "hq_state":  "ambiguous_or_not_found_after_targeted_search",
+                                       "hq_city":  "ambiguous_or_not_found_after_targeted_search"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "other",
+                                               "investor_subtype":  "unclassified",
+                                               "eligibility_mode":  "unknown",
+                                               "confidence":  "low",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "needs_more_data",
+                        "audit_note":  "Exact-name and deal-context searches did not produce a unique authoritative identity; nulls were retained to avoid a namesake merge."
+                    },
+                    {
+                        "record_key":  "investor:quantonation",
+                        "canonical_name":  "Quantonation",
+                        "original_name":  "Quantonation",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Quantonation\" official website LinkedIn headquarters investor",
+                                               "\"Quantonation\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.quantonation.com/",
+                                              "https://www.linkedin.com/company/quantonation"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "vc_fund",
+                                               "investor_subtype":  "venture_capital",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Official quantum venture fund."
+                    },
+                    {
+                        "record_key":  "investor:reza-behnam",
+                        "canonical_name":  "Reza Behnam",
+                        "original_name":  "Reza Behnam",
+                        "entity_kind":  "individual",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Reza Behnam\" official website LinkedIn headquarters investor",
+                                               "\"Reza Behnam\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+
+                                          ],
+                        "fields":  {
+                                       "website_url":  "not_found_after_targeted_search",
+                                       "linkedin_url":  "not_found_or_not_uniquely_attributable_after_targeted_search",
+                                       "hq_country":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_state":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_city":  "not_applicable_individual_personal_location_not_collected"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "angel",
+                                               "investor_subtype":  "individual_investor",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "medium",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Individual angel; targeted Voltavate search returned unrelated people."
+                    },
+                    {
+                        "record_key":  "investor:richard-lipscombe",
+                        "canonical_name":  "Richard Lipscombe",
+                        "original_name":  "Richard Lipscombe",
+                        "entity_kind":  "individual",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Richard Lipscombe\" official website LinkedIn headquarters investor",
+                                               "\"Richard Lipscombe\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+
+                                          ],
+                        "fields":  {
+                                       "website_url":  "not_found_after_targeted_search",
+                                       "linkedin_url":  "not_found_or_not_uniquely_attributable_after_targeted_search",
+                                       "hq_country":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_state":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_city":  "not_applicable_individual_personal_location_not_collected"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "angel",
+                                               "investor_subtype":  "individual_investor",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "medium",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Individual angel; only secondary funding-directory evidence found."
+                    },
+                    {
+                        "record_key":  "investor:robert-bell",
+                        "canonical_name":  "Robert Bell",
+                        "original_name":  "Robert Bell",
+                        "entity_kind":  "individual",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Robert Bell\" official website LinkedIn headquarters investor",
+                                               "\"Robert Bell\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+
+                                          ],
+                        "fields":  {
+                                       "website_url":  "not_found_after_targeted_search",
+                                       "linkedin_url":  "not_found_or_not_uniquely_attributable_after_targeted_search",
+                                       "hq_country":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_state":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_city":  "not_applicable_individual_personal_location_not_collected"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "angel",
+                                               "investor_subtype":  "individual_investor",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "medium",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Individual angel; targeted LiveHeats search returned other people."
+                    },
+                    {
+                        "record_key":  "investor:sam-nickless",
+                        "canonical_name":  "Sam Nickless",
+                        "original_name":  "Sam Nickless",
+                        "entity_kind":  "individual",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Sam Nickless\" official website LinkedIn headquarters investor",
+                                               "\"Sam Nickless\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+
+                                          ],
+                        "fields":  {
+                                       "website_url":  "not_found_after_targeted_search",
+                                       "linkedin_url":  "not_found_or_not_uniquely_attributable_after_targeted_search",
+                                       "hq_country":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_state":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_city":  "not_applicable_individual_personal_location_not_collected"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "angel",
+                                               "investor_subtype":  "individual_investor",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "medium",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Individual angel; only secondary investor-directory evidence found."
+                    },
+                    {
+                        "record_key":  "investor:sandeep-nailwal",
+                        "canonical_name":  "Sandeep Nailwal",
+                        "original_name":  "Sandeep Nailwal",
+                        "entity_kind":  "individual",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Sandeep Nailwal\" official website LinkedIn headquarters investor",
+                                               "\"Sandeep Nailwal\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+
+                                          ],
+                        "fields":  {
+                                       "website_url":  "not_found_after_targeted_search",
+                                       "linkedin_url":  "not_found_or_not_uniquely_attributable_after_targeted_search",
+                                       "hq_country":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_state":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_city":  "not_applicable_individual_personal_location_not_collected"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "angel",
+                                               "investor_subtype":  "individual_investor",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "medium",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Individual angel; funding context found but no current official profile assigned."
+                    },
+                    {
+                        "record_key":  "investor:sands-capital-ventures",
+                        "canonical_name":  "Sands Capital Ventures",
+                        "original_name":  "Sands Capital Ventures",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "supplemental_research_verified",
+                        "search_queries":  [
+                                               "\"Sands Capital Ventures\" official website LinkedIn headquarters investor",
+                                               "\"Sands Capital Ventures\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://sandscapitalventures.com/",
+                                              "https://www.linkedin.com/company/sands-capital-management",
+                                              "https://www.sandscapital.com/"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "vc_fund",
+                                               "investor_subtype":  "venture_capital",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Sands Capital\u0027s official company page covers its integrated venture platform and confirms the Arlington Virginia headquarters."
+                    },
+                    {
+                        "record_key":  "investor:sginnovate",
+                        "canonical_name":  "SGInnovate",
+                        "original_name":  "SGInnovate",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"SGInnovate\" official website LinkedIn headquarters investor",
+                                               "\"SGInnovate\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.sginnovate.com/",
+                                              "https://www.linkedin.com/company/sginnovate"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "not_disclosed_by_verified_sources",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "investment_firm",
+                                               "investor_subtype":  "government_fund",
+                                               "eligibility_mode":  "conditional",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Official Singapore innovation investor."
+                    },
+                    {
+                        "record_key":  "investor:smokey",
+                        "canonical_name":  "SMOKEY",
+                        "original_name":  "SMOKEY",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "searched_but_identity_not_uniquely_resolved",
+                        "search_queries":  [
+                                               "\"SMOKEY\" official website LinkedIn headquarters investor",
+                                               "\"SMOKEY\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+
+                                          ],
+                        "fields":  {
+                                       "website_url":  "ambiguous_or_not_found_after_targeted_search",
+                                       "linkedin_url":  "ambiguous_or_not_found_after_targeted_search",
+                                       "hq_country":  "ambiguous_or_not_found_after_targeted_search",
+                                       "hq_state":  "ambiguous_or_not_found_after_targeted_search",
+                                       "hq_city":  "ambiguous_or_not_found_after_targeted_search"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "other",
+                                               "investor_subtype":  "unclassified",
+                                               "eligibility_mode":  "unknown",
+                                               "confidence":  "low",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "needs_more_data",
+                        "audit_note":  "Exact-name and deal-context searches did not produce a unique authoritative identity; nulls were retained to avoid a namesake merge."
+                    },
+                    {
+                        "record_key":  "investor:solo-crest-capital",
+                        "canonical_name":  "Solo Crest Capital",
+                        "original_name":  "Solo Crest Capital",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "searched_but_identity_not_uniquely_resolved",
+                        "search_queries":  [
+                                               "\"Solo Crest Capital\" official website LinkedIn headquarters investor",
+                                               "\"Solo Crest Capital\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+
+                                          ],
+                        "fields":  {
+                                       "website_url":  "ambiguous_or_not_found_after_targeted_search",
+                                       "linkedin_url":  "ambiguous_or_not_found_after_targeted_search",
+                                       "hq_country":  "ambiguous_or_not_found_after_targeted_search",
+                                       "hq_state":  "ambiguous_or_not_found_after_targeted_search",
+                                       "hq_city":  "ambiguous_or_not_found_after_targeted_search"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "vc_fund",
+                                               "investor_subtype":  "venture_capital",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "low",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "needs_more_data",
+                        "audit_note":  "Exact-name and deal-context searches did not produce a unique authoritative identity; nulls were retained to avoid a namesake merge."
+                    },
+                    {
+                        "record_key":  "investor:specialty-physician-associates",
+                        "canonical_name":  "Specialty Physician Associates",
+                        "original_name":  "Specialty Physician Associates",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Specialty Physician Associates\" official website LinkedIn headquarters investor",
+                                               "\"Specialty Physician Associates\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://specialtyphysicianassociates.com/",
+                                              "https://www.linkedin.com/company/specialty-physician-associates-llc"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "strategic_corporate",
+                                               "investor_subtype":  "strategic_corporate",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Operating medical practice; corrected from angel."
+                    },
+                    {
+                        "record_key":  "investor:sqm-lithium-ventures",
+                        "canonical_name":  "SQM Lithium Ventures",
+                        "original_name":  "SQM Lithium Ventures",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"SQM Lithium Ventures\" official website LinkedIn headquarters investor",
+                                               "\"SQM Lithium Ventures\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.sqmlithiumventures.com/",
+                                              "https://www.linkedin.com/company/sqm-international-lithium"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "strategic_corporate",
+                                               "investor_subtype":  "corporate_venture",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Official corporate venture unit."
+                    },
+                    {
+                        "record_key":  "investor:stani-kulechov",
+                        "canonical_name":  "Stani Kulechov",
+                        "original_name":  "Stani Kulechov",
+                        "entity_kind":  "individual",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Stani Kulechov\" official website LinkedIn headquarters investor",
+                                               "\"Stani Kulechov\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.linkedin.com/in/stani-kulechov-361284132"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "not_found_after_targeted_search",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_state":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_city":  "not_applicable_individual_personal_location_not_collected"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "angel",
+                                               "investor_subtype":  "individual_investor",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Exact personal LinkedIn matched to the Rise Chain context."
+                    },
+                    {
+                        "record_key":  "investor:stephen-ho",
+                        "canonical_name":  "Stephen Ho",
+                        "original_name":  "Stephen Ho",
+                        "entity_kind":  "individual",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Stephen Ho\" official website LinkedIn headquarters investor",
+                                               "\"Stephen Ho\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+
+                                          ],
+                        "fields":  {
+                                       "website_url":  "not_found_after_targeted_search",
+                                       "linkedin_url":  "not_found_or_not_uniquely_attributable_after_targeted_search",
+                                       "hq_country":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_state":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_city":  "not_applicable_individual_personal_location_not_collected"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "angel",
+                                               "investor_subtype":  "individual_investor",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "medium",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Individual angel; common name and no unique Diag-Nose-linked profile."
+                    },
+                    {
+                        "record_key":  "investor:steven-vassiloudis",
+                        "canonical_name":  "Steven Vassiloudis",
+                        "original_name":  "Steven Vassiloudis",
+                        "entity_kind":  "individual",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Steven Vassiloudis\" official website LinkedIn headquarters investor",
+                                               "\"Steven Vassiloudis\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+
+                                          ],
+                        "fields":  {
+                                       "website_url":  "not_found_after_targeted_search",
+                                       "linkedin_url":  "not_found_or_not_uniquely_attributable_after_targeted_search",
+                                       "hq_country":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_state":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_city":  "not_applicable_individual_personal_location_not_collected"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "angel",
+                                               "investor_subtype":  "individual_investor",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "medium",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Individual angel; targeted Voltavate search returned unrelated people."
+                    },
+                    {
+                        "record_key":  "investor:the-spartan-group",
+                        "canonical_name":  "The Spartan Group",
+                        "original_name":  "The Spartan Group",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"The Spartan Group\" official website LinkedIn headquarters investor",
+                                               "\"The Spartan Group\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.spartangroup.io/",
+                                              "https://www.linkedin.com/company/spartangroup"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "not_disclosed_by_verified_sources",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "investment_firm",
+                                               "investor_subtype":  "investment_firm",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Web3 investment firm; unrelated US consulting namesake rejected."
+                    },
+                    {
+                        "record_key":  "investor:touring-capital",
+                        "canonical_name":  "Touring Capital",
+                        "original_name":  "Touring Capital",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Touring Capital\" official website LinkedIn headquarters investor",
+                                               "\"Touring Capital\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://touringcapital.com/",
+                                              "https://www.linkedin.com/company/touring-capital"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "vc_fund",
+                                               "investor_subtype":  "venture_capital",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Official venture fund."
+                    },
+                    {
+                        "record_key":  "investor:trevor-folsom",
+                        "canonical_name":  "Trevor Folsom",
+                        "original_name":  "Trevor Folsom",
+                        "entity_kind":  "individual",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Trevor Folsom\" official website LinkedIn headquarters investor",
+                                               "\"Trevor Folsom\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.linkedin.com/in/trevorfolsom"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "not_found_after_targeted_search",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_state":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_city":  "not_applicable_individual_personal_location_not_collected"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "angel",
+                                               "investor_subtype":  "individual_investor",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Exact personal LinkedIn matched to LiveHeats."
+                    },
+                    {
+                        "record_key":  "investor:utiliti-group",
+                        "canonical_name":  "Utiliti Group",
+                        "original_name":  "Utiliti Group",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Utiliti Group\" official website LinkedIn headquarters investor",
+                                               "\"Utiliti Group\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.utiliti.com/",
+                                              "https://www.linkedin.com/company/utiliti-group"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "investment_firm",
+                                               "investor_subtype":  "investment_firm",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Official investment group."
+                    },
+                    {
+                        "record_key":  "investor:vitalik-buterin",
+                        "canonical_name":  "Vitalik Buterin",
+                        "original_name":  "Vitalik Buterin",
+                        "entity_kind":  "individual",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Vitalik Buterin\" official website LinkedIn headquarters investor",
+                                               "\"Vitalik Buterin\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+
+                                          ],
+                        "fields":  {
+                                       "website_url":  "not_found_after_targeted_search",
+                                       "linkedin_url":  "not_found_or_not_uniquely_attributable_after_targeted_search",
+                                       "hq_country":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_state":  "not_applicable_individual_personal_location_not_collected",
+                                       "hq_city":  "not_applicable_individual_personal_location_not_collected"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "angel",
+                                               "investor_subtype":  "individual_investor",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "medium",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Public individual investor; search results did not establish an official LinkedIn and no business headquarters is applicable."
+                    },
+                    {
+                        "record_key":  "investor:vmg-partners",
+                        "canonical_name":  "VMG Partners",
+                        "original_name":  "VMG Partners",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"VMG Partners\" official website LinkedIn headquarters investor",
+                                               "\"VMG Partners\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.vmgpartners.com/",
+                                              "https://www.linkedin.com/company/vmg-partners"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "private_equity",
+                                               "investor_subtype":  "private_equity",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Official growth investment firm."
+                    },
+                    {
+                        "record_key":  "investor:volition-capital",
+                        "canonical_name":  "Volition Capital",
+                        "original_name":  "Volition Capital",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Volition Capital\" official website LinkedIn headquarters investor",
+                                               "\"Volition Capital\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.volitioncapital.com/",
+                                              "https://www.linkedin.com/company/volition-capital"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "verified",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "private_equity",
+                                               "investor_subtype":  "private_equity",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Official growth-equity investor."
+                    },
+                    {
+                        "record_key":  "investor:wemix",
+                        "canonical_name":  "WEMIX",
+                        "original_name":  "WEMIX",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"WEMIX\" official website LinkedIn headquarters investor",
+                                               "\"WEMIX\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://www.wemix.com/",
+                                              "https://www.linkedin.com/company/wemix"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "not_disclosed_by_verified_sources",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "strategic_corporate",
+                                               "investor_subtype":  "strategic_corporate",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Official Web3 company."
+                    },
+                    {
+                        "record_key":  "investor:z-venture-capital",
+                        "canonical_name":  "Z Venture Capital",
+                        "original_name":  "Z Venture Capital",
+                        "entity_kind":  "institution",
+                        "mapping_status":  "audited_mapping_available",
+                        "search_queries":  [
+                                               "\"Z Venture Capital\" official website LinkedIn headquarters investor",
+                                               "\"Z Venture Capital\" observed deal context official LinkedIn"
+                                           ],
+                        "evidence_urls":  [
+                                              "https://zvc.vc/en/",
+                                              "https://www.linkedin.com/company/z-venture-capital"
+                                          ],
+                        "fields":  {
+                                       "website_url":  "verified",
+                                       "linkedin_url":  "verified",
+                                       "hq_country":  "verified",
+                                       "hq_state":  "not_disclosed_by_verified_sources",
+                                       "hq_city":  "verified"
+                                   },
+                        "classification":  {
+                                               "investor_type":  "strategic_corporate",
+                                               "investor_subtype":  "corporate_venture",
+                                               "eligibility_mode":  "none",
+                                               "confidence":  "high",
+                                               "classified_at":  "2026-07-30"
+                                           },
+                        "review_status":  "reviewed",
+                        "audit_note":  "Official corporate venture firm."
+                    }
+                ],
+    "supplemental_research":  {
+                                  "applied_at":  "2026-07-30T17:49:46.3797345+09:30",
+                                  "mapping_file":  "data/03_research/enrichment/recent-deal2026-7-30-investor-identity-gap-supplement.psv",
+                                  "records_updated_in_package":  6,
+                                  "policy":  "Only uniquely matched official, registry, or exact deal-context evidence was applied."
+                              }
+}

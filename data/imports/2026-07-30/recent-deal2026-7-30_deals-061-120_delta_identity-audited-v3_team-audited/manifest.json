@@ -1,0 +1,2012 @@
+{
+    "schema_version":  "1.2.0",
+    "batch_id":  "recent-deal2026-7-30_deals-061-120_delta_identity-audited-v3_team-audited",
+    "created_at":  "2026-07-30T17:49:45.9023213+09:30",
+    "pipeline_version":  "1.9.0-investor-identity-gap-supplement",
+    "package_type":  "database_incremental_import",
+    "dependency":  {
+                       "requires_existing_investor_keys":  [
+                                                               "investor:airtree-ventures",
+                                                               "investor:animoca-brands",
+                                                               "investor:antler",
+                                                               "investor:archangel-ventures",
+                                                               "investor:athletic-ventures",
+                                                               "investor:aussie-angels",
+                                                               "investor:bain-capital-ventures",
+                                                               "investor:blackbird-ventures",
+                                                               "investor:black-sheep-capital",
+                                                               "investor:brand-fund-by-previously-unavailable",
+                                                               "investor:breakthrough-victoria",
+                                                               "investor:brisbane-angels",
+                                                               "investor:callaghan-innovation",
+                                                               "investor:coact-capital",
+                                                               "investor:epic-angels",
+                                                               "investor:evp",
+                                                               "investor:flying-fox-ventures",
+                                                               "investor:gd1-global-from-day-one",
+                                                               "investor:icehouse-ventures",
+                                                               "investor:investible",
+                                                               "investor:k1w1",
+                                                               "investor:king-river-capital",
+                                                               "investor:launchvic",
+                                                               "investor:m8-ventures",
+                                                               "investor:macdoch-ventures",
+                                                               "investor:oif-ventures",
+                                                               "investor:pacific-channel",
+                                                               "investor:peak-xv-partners",
+                                                               "investor:punakaiki-fund",
+                                                               "investor:rampersand",
+                                                               "investor:reinventure-group",
+                                                               "investor:saltwater-fund",
+                                                               "investor:skip-capital",
+                                                               "investor:sprout-agritech",
+                                                               "investor:square-peg-capital",
+                                                               "investor:startmate",
+                                                               "investor:ten13",
+                                                               "investor:tidal-ventures",
+                                                               "investor:treearc-investment-group",
+                                                               "investor:uniseed",
+                                                               "investor:university-of-melbourne-genesis-pre-seed-fund",
+                                                               "investor:unsw-founders",
+                                                               "investor:virescent-ventures"
+                                                           ],
+                       "dependency_count":  43
+                   },
+    "scope":  {
+                  "source_rows":  "62-121",
+                  "transactions":  60,
+                  "grouping":  "3 x 20",
+                  "investor_delta":  "43 existing references + 71 new masters"
+              },
+    "counts":  {
+                   "investors":  71,
+                   "investor_external_ids":  0,
+                   "investor_web_profiles":  71,
+                   "investor_programs":  0,
+                   "investor_team_members":  11,
+                   "investee_company_profiles":  60,
+                   "investee_external_ids":  60,
+                   "funding_rounds":  60,
+                   "deal_investors":  143
+               },
+    "files":  [
+                  {
+                      "path":  "investors/investor_25fifteen.json",
+                      "sha256":  "8aa24835eb41c8a3aab4f604bdf043c024f978ece8e52656702e7120e0ef986c"
+                  },
+                  {
+                      "path":  "investors/investor_77-partners.json",
+                      "sha256":  "96fb6374b1eacc7bf0f9261a050c5b17d1f23c42eb340510fa6e25f2575e57af"
+                  },
+                  {
+                      "path":  "investors/investor_aliavia-ventures.json",
+                      "sha256":  "88e4dbf4f3ad904799f53b9f6ebee1f80c08d06722e0c5f7f3a91535271e4935"
+                  },
+                  {
+                      "path":  "investors/investor_american-public-media-group-s-horizon-fund.json",
+                      "sha256":  "69b2a6aaf12650490dea2276e6401b814b04473c11679d9c61044d97a3a9b199"
+                  },
+                  {
+                      "path":  "investors/investor_antonio-separovic.json",
+                      "sha256":  "7081c4747e231f347027e5de425dd969348c4a01dc53945ff4e3894561f396d6"
+                  },
+                  {
+                      "path":  "investors/investor_bailador-technology-investments.json",
+                      "sha256":  "f4df51b521651a9e10672a9ae3464630ae73dee5a55c1a0f578ba84a06d609df"
+                  },
+                  {
+                      "path":  "investors/investor_bossa-invest.json",
+                      "sha256":  "388aa06b156b64edd4c76499616d344dc4ac3c4c9c6d3e4a35ff195a06910d46"
+                  },
+                  {
+                      "path":  "investors/investor_bridgewest-group.json",
+                      "sha256":  "72d2eac244f35f9d162077f739589e862a0ee7af813b07f2047a117b166fdfd9"
+                  },
+                  {
+                      "path":  "investors/investor_capital-49.json",
+                      "sha256":  "eb53ccec06ee84d262440a066d218dff33b3b9462b7eb38994092863db7cb8e3"
+                  },
+                  {
+                      "path":  "investors/investor_checker-media.json",
+                      "sha256":  "317e2a0a1f4f54b44cbf58cfb8c05fc141e2ea9c581523611bb0344d03a5fec9"
+                  },
+                  {
+                      "path":  "investors/investor_climate-venture-capital-fund.json",
+                      "sha256":  "465faea5b3207ccb0418174f1f23a065d5d81c8b35a044853b573b9bcafb254e"
+                  },
+                  {
+                      "path":  "investors/investor_comcast-nbcuniversal-sportstech.json",
+                      "sha256":  "2abbb9c5343f77178720770a9a4e45497a8ee597019d30d18f34b9953106a982"
+                  },
+                  {
+                      "path":  "investors/investor_cp-ventures.json",
+                      "sha256":  "b18e86f66c383de3ee8a6cbd32a3b76228479f26ec49d660be8ecc33366bb885"
+                  },
+                  {
+                      "path":  "investors/investor_craig-martin.json",
+                      "sha256":  "706d66e237fe60678071d59737c495b90c0c6c3ea18f2205ff90d61c8fd10a00"
+                  },
+                  {
+                      "path":  "investors/investor_craig-weaver.json",
+                      "sha256":  "7cce260eea5189124a1d0b5e30d1f83c001afd73f28d4cba7f705f659c9dffae"
+                  },
+                  {
+                      "path":  "investors/investor_david-orth.json",
+                      "sha256":  "93fd87e323f876e3ea0c294a7476c89ce3a1f6790e047ca1bf5072392baa5e4c"
+                  },
+                  {
+                      "path":  "investors/investor_decibel-partners.json",
+                      "sha256":  "8ce0bad3e31a88d2d0c085328f43c027677ec798e7781796a213359ef173fff5"
+                  },
+                  {
+                      "path":  "investors/investor_eden-block.json",
+                      "sha256":  "a20ed4d8ffcaaf742002e0eb85bbe6c28f225d8d29f44f53a78854c5772a350d"
+                  },
+                  {
+                      "path":  "investors/investor_engie-factory.json",
+                      "sha256":  "9a728678a0a98685abb0e10497ee067a9d75a708b1e8a68bcdcd60ce4d954d9d"
+                  },
+                  {
+                      "path":  "investors/investor_eric-ries.json",
+                      "sha256":  "434581e97fdbe0d7eee1a0b2da895195cb23500fa5f54211d8c8c0a1e82aa72a"
+                  },
+                  {
+                      "path":  "investors/investor_escape-velocity.json",
+                      "sha256":  "dd05de17680ecbdf273197e829922e1ec9a116e74d8e84428856975bcf0e73be"
+                  },
+                  {
+                      "path":  "investors/investor_fb10x-adventures.json",
+                      "sha256":  "0671556395ae3ea024487d8d32f16cfd14bcaeefd1a29d4b9e06bfe598c48926"
+                  },
+                  {
+                      "path":  "investors/investor_finistere-ventures.json",
+                      "sha256":  "24145f1968612ba7590b56825aec1a6c25b15427ed7a6eadda9cedaeb444b9fc"
+                  },
+                  {
+                      "path":  "investors/investor_first-row-partners.json",
+                      "sha256":  "b8133a905b7f76951d0105f3515d64105454d32f3f1d98c15c1b229ff08e14cc"
+                  },
+                  {
+                      "path":  "investors/investor_fonterra-co-operative-group.json",
+                      "sha256":  "40352f10f1d4b80f73e4458ea5144c69a51f33b79437bd0cee8d0bd74ecfb468"
+                  },
+                  {
+                      "path":  "investors/investor_foundamental.json",
+                      "sha256":  "b41d48b52ecf01d25428bb0783c4ebc49b3291b368540d12a88dea83f80c1d33"
+                  },
+                  {
+                      "path":  "investors/investor_founder-collective.json",
+                      "sha256":  "fa296fd21b83105991b3471b6c9fbb99a75228e57222e24dcfa3b88b20204d61"
+                  },
+                  {
+                      "path":  "investors/investor_hedosophia.json",
+                      "sha256":  "5a977a4c2be8bf77eb28e49044b0c3c6eff1c197acf6022e1d52d333ecf7f4fd"
+                  },
+                  {
+                      "path":  "investors/investor_high-tor-capital.json",
+                      "sha256":  "17828284c5bfee970d9ea12f08c01cf49573474b8269a936d12ebb4c5167a518"
+                  },
+                  {
+                      "path":  "investors/investor_hugo-messer.json",
+                      "sha256":  "341a9c2ebcfe855930e07195829c6de4c8911a76705f6c00764f46744474fdc7"
+                  },
+                  {
+                      "path":  "investors/investor_hummingbird-ventures.json",
+                      "sha256":  "0a28ad7178dae3020c79728b5617d9ccbe88dc66668f2e103c185ef953607094"
+                  },
+                  {
+                      "path":  "investors/investor_jason-schultz.json",
+                      "sha256":  "5a59e0f394cb958acebe0a088730542c8f44b9308e7a4e5a0d5f98b90d4cc1cf"
+                  },
+                  {
+                      "path":  "investors/investor_jean-denis-greze.json",
+                      "sha256":  "79722243bdd07376925807e8e542f2a3f05bb50e73569c2cc2efb129a0c2f20c"
+                  },
+                  {
+                      "path":  "investors/investor_kungari.json",
+                      "sha256":  "3582606c5ec74519bdee5e3bc9a39e05d377e6dce97653d93906f73d24343f81"
+                  },
+                  {
+                      "path":  "investors/investor_kyber-ventures.json",
+                      "sha256":  "7bc8b1837bab2c782e9eb3829cf32148183f4bba7b506cc0a8e5fdb6ab55ae49"
+                  },
+                  {
+                      "path":  "investors/investor_laser-digital.json",
+                      "sha256":  "2bdbab4f1a3a0ecab7384a26da0d05b142c1b4fbb9f77ffd5d91fe69f9eb3a4d"
+                  },
+                  {
+                      "path":  "investors/investor_maxwell-capital.json",
+                      "sha256":  "5c33b7c3b628077a9497e236a9114a80bc0f76bbc530a090b1a8665556f9b245"
+                  },
+                  {
+                      "path":  "investors/investor_mentat-group.json",
+                      "sha256":  "629e5ecdc0dd0e4277189b126a07072f6db5a054bf3c4eb3113edc3cd3f5f0b1"
+                  },
+                  {
+                      "path":  "investors/investor_michelle-holmes.json",
+                      "sha256":  "7bdf27e6fc61c75ce12c2512116959ca438bf6cf76f2575fb882c7b75f9b3bb9"
+                  },
+                  {
+                      "path":  "investors/investor_monash-ventures.json",
+                      "sha256":  "ce8767537ca2f32965ea9b258e8e4fb523c21d5139ebd9c67a253b2e75f799fa"
+                  },
+                  {
+                      "path":  "investors/investor_mysten-labs.json",
+                      "sha256":  "ccf6b329e9d6bb79a457655afb61a24ae8ceb09b34fd12758d350473f95a64e6"
+                  },
+                  {
+                      "path":  "investors/investor_no-brand.json",
+                      "sha256":  "971dc5d0c0efe44d6ac1b9da67d759a58dca368a907e42f118742f30594fcbc3"
+                  },
+                  {
+                      "path":  "investors/investor_opacity.json",
+                      "sha256":  "511d8e3c8d67de78ef4f51f62f80a5a7806605e26b9b8ed1da66c7bb8ac9464e"
+                  },
+                  {
+                      "path":  "investors/investor_operator-partners.json",
+                      "sha256":  "bc3ee093f45537f3027140e096e5d8357677a6b54dd4b4590cf8aad3bbd22b37"
+                  },
+                  {
+                      "path":  "investors/investor_ourcrowd.json",
+                      "sha256":  "5b6b8f52b39c5212e2ba7579676c792d55dd215dcd45f0185b0e8511e06abf3a"
+                  },
+                  {
+                      "path":  "investors/investor_paul-limbrey.json",
+                      "sha256":  "7b885f3693a428321c68ca9a9069ae09aa7b10050ffdb845761e2a15a3e9cec0"
+                  },
+                  {
+                      "path":  "investors/investor_peter-yunghanns.json",
+                      "sha256":  "78dcd9fb5d3c3a082fe581ac18d85642e26e5512e79e2a112f90a865afdbfc71"
+                  },
+                  {
+                      "path":  "investors/investor_prosus-ventures.json",
+                      "sha256":  "8a684d529ae1df32f2b0f8e805fa9973af78b33a4a26762a9034ef95062f979d"
+                  },
+                  {
+                      "path":  "investors/investor_qed-investors.json",
+                      "sha256":  "3b3ca2903f32eb146ecc2979c08b812ff8eb04041631dfcf8ec90c940c920c96"
+                  },
+                  {
+                      "path":  "investors/investor_rkkvc.json",
+                      "sha256":  "33ef5394deffdc0f91197b2c77588b67638bae2c490a4631a4128c0867af67f2"
+                  },
+                  {
+                      "path":  "investors/investor_ryft-fund.json",
+                      "sha256":  "1fdbf77fbe959ae4161e19070b63cb6c2de8dc00af0e8931f538b3a886fc188f"
+                  },
+                  {
+                      "path":  "investors/investor_saab.json",
+                      "sha256":  "674731397d76ba8c89a714e1c156abaa8248821b9d8bd2995e1e63ba2de656dc"
+                  },
+                  {
+                      "path":  "investors/investor_side-stage-ventures.json",
+                      "sha256":  "47fd732f6fea79751f883056416519ffe789732c731fbfcf2f75ae8f923ed599"
+                  },
+                  {
+                      "path":  "investors/investor_skalata.json",
+                      "sha256":  "1997dd5298b5c649b6c29d85c510f99aac46e53eaac6a2c2838024363ac1f412"
+                  },
+                  {
+                      "path":  "investors/investor_somethingreal.json",
+                      "sha256":  "ed157d2ded523696beff9e2a35ec14185002ee86ea341d4d8ba1238258107d28"
+                  },
+                  {
+                      "path":  "investors/investor_steven-holmes.json",
+                      "sha256":  "87d3e723c55c36527cb7a0a683845f5302e3ba84c864c51c405dfbf35a983245"
+                  },
+                  {
+                      "path":  "investors/investor_streshi.json",
+                      "sha256":  "a9fd02b22cbe29ef511a58f5795d1933ae58ffee5f238eb90dbdfd3ee3cd49df"
+                  },
+                  {
+                      "path":  "investors/investor_suffolk-technologies.json",
+                      "sha256":  "7b94d80802ca77b9266b2432188157968d64feb8e1ba3ce87d111aa5252c07c8"
+                  },
+                  {
+                      "path":  "investors/investor_swaminathan-narayanan.json",
+                      "sha256":  "9b53e925cb8037d6ee4a027755f15b6a11362b470a1880db241c8e71b5a26eb4"
+                  },
+                  {
+                      "path":  "investors/investor_swinburne-university-of-technology.json",
+                      "sha256":  "0d5b0839b3f820c15c2eb6579c209e5fb18d768b52da90aa8ff9590256212558"
+                  },
+                  {
+                      "path":  "investors/investor_synertec-corporation.json",
+                      "sha256":  "56bc38f710516dff0e57c4674e182a8bb8108e60adc16fdda4a4e3fabb1cd1e5"
+                  },
+                  {
+                      "path":  "investors/investor_tech-labs-capital.json",
+                      "sha256":  "b5dd84d332bc357a6789beeff838ca6b5c3c863c8a744120d5b2869caa7dd270"
+                  },
+                  {
+                      "path":  "investors/investor_ten-coves-capital.json",
+                      "sha256":  "c8956019feef39fffe6d0852f918b5b4b84607e56bd1d2fc7223db5419e0b10c"
+                  },
+                  {
+                      "path":  "investors/investor_titan-fund.json",
+                      "sha256":  "cb61b5cc32e4590f09cf4a4b9ba6aa13e7806cc3bb7baf3704dfbf0957639303"
+                  },
+                  {
+                      "path":  "investors/investor_uniquest-extension-fund.json",
+                      "sha256":  "16d198c62ff118fec2d80dd380e6d23a5160b5248375dab94e9b1712f7005d6a"
+                  },
+                  {
+                      "path":  "investors/investor_untapped-ventures.json",
+                      "sha256":  "14a64964d798ded59717d4eec4cd1dacdb80f8a3ec934c18d10976688593aec7"
+                  },
+                  {
+                      "path":  "investors/investor_verona.json",
+                      "sha256":  "7e888194a6aecfeed8bdbec409d08cc3cb3790635e307d9af6ecbdf9a0fc4422"
+                  },
+                  {
+                      "path":  "investors/investor_vessel-capital.json",
+                      "sha256":  "d416874da4b7c71def21e2f9e28a25ff477df8d0d0911d4731c1ff25f971e5d2"
+                  },
+                  {
+                      "path":  "investors/investor_yellow-brick-road.json",
+                      "sha256":  "a9d59773abb78db3d39553dd63111207e908b093b2e42f0760ab13e17ff9e922"
+                  },
+                  {
+                      "path":  "investors/investor_yield-guild-games.json",
+                      "sha256":  "a49e724bf8224b0e55dff69c78c9622eae129678d3aa4f4ed4eca4721e996902"
+                  },
+                  {
+                      "path":  "investors/investor_zach-brock.json",
+                      "sha256":  "516ba45de79c34160a86c478b441822ace8060b838b8cab6ca8497306cb12fd8"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_25fifteen.json",
+                      "sha256":  "ca06ce18fdcd2421ff21cafe25cb2f42d5af23d56f7f4aa93a06db96808f9d7e"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_77-partners.json",
+                      "sha256":  "1d6f0b02d4c0cbcc874988fe9974a897b2121326f5d5d4ad3c3b8de2c8097a24"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_aliavia-ventures.json",
+                      "sha256":  "a4e8aa5844d8b3066deea1efca18834294d1d9d9ad8e89ed241d25e329e7477a"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_american-public-media-group-s-horizon-fund.json",
+                      "sha256":  "5d187485ed6e6f723e89eceb29b6c9e4060cebdf27e9e2ad237057210b7e8b04"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_antonio-separovic.json",
+                      "sha256":  "6b17f20785fad636345bda7a682b0ae492fbd7f90dce334425b8adb9941a030c"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_bailador-technology-investments.json",
+                      "sha256":  "0d9f662751ca4f416bb546867319823ad352c7f26d9f3eb935d539152fae9c39"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_bossa-invest.json",
+                      "sha256":  "617fceee770febdeb8830414ce22ae330d62fdd0739f956ef5e39a4128267cbf"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_bridgewest-group.json",
+                      "sha256":  "4d85b97b5b51d36a7ba0f13b4dde11f8cb2b88e783876b155c350cc689938800"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_capital-49.json",
+                      "sha256":  "b884bd5e8f085da1e3e8ca45b2817c9c8f3ed355be66bf2317b94fe233d450af"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_checker-media.json",
+                      "sha256":  "7cef290a9805b259fbe469976c74c5971fd35f2b842e9c5769dc7bbe9db95060"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_climate-venture-capital-fund.json",
+                      "sha256":  "cd7324d550fae5c78c0c6a979725c8c3a2c44096107001d3187bc9318c236c99"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_comcast-nbcuniversal-sportstech.json",
+                      "sha256":  "c14b31f8c6ef056ed8190b637ca5404985cf315476c3e707f320eb08a5543f8e"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_cp-ventures.json",
+                      "sha256":  "783d3ce52594d0bff43da8491f9151d2c1246a355c53d8dc0beab33ecb2008b2"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_craig-martin.json",
+                      "sha256":  "99f91c236cff355d91d9e5ce7e32b363ddd013166798a50b0fa0d64284fa76f0"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_craig-weaver.json",
+                      "sha256":  "ebf0650d8af70600eaeb6b0c3737fd702138af60bb9d34a51f23c3f4ab9c7f4f"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_david-orth.json",
+                      "sha256":  "6f7c01ecacf4d27010d4c6bae076e45192c0f5720f0c5fe77790101eaffd5343"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_decibel-partners.json",
+                      "sha256":  "4b92e5e38689bc650c4b29247b9e5cff3c2dbcde179a191d65696816fce57338"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_eden-block.json",
+                      "sha256":  "8fe27d9ee7b4803e149d2557dbfe5467a9a1bfd623286e18d30c973c2a7e8488"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_engie-factory.json",
+                      "sha256":  "33d5663a40d57b4cc03674673dce3ef8263232017ffaca9b70564e22ab675a82"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_eric-ries.json",
+                      "sha256":  "873d68108dadb343707dd54020e8ca8d13ca8db0f6a155709be2c52d4f0d3fb3"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_escape-velocity.json",
+                      "sha256":  "78d2a1c7893ccce81433ef4cfd5c52b21078c197bed43cb88c50d6031604a1ee"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_fb10x-adventures.json",
+                      "sha256":  "53c7ee2b8a297c7c685859cd81c74c330c9c176d3a2bbd1eff04b2071955adad"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_finistere-ventures.json",
+                      "sha256":  "fffbcd3215081df7ad6bf938a255fcb44127e5d4b20505c5bf5a5f1d4ba06a43"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_first-row-partners.json",
+                      "sha256":  "7947536889ae23e7e49b06cae924f98d790f1c51bbe78b53b2ec29a3f17d9943"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_fonterra-co-operative-group.json",
+                      "sha256":  "01be45b2e3b584e523ff96bc4a77f14d2da770ad5f16c366774e0844c88f55de"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_foundamental.json",
+                      "sha256":  "d2617b8a100edd7d127dc18f499d3892689c405eff90136961662986d24f6fca"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_founder-collective.json",
+                      "sha256":  "c801682558521d4f794d3735fd4696e68d1ad2cb5c1e9d6389b8c461fd74f2d5"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_hedosophia.json",
+                      "sha256":  "e5e81d0d2dcdc0afef927b5e434a1dc98419808a55ef06ee62edf45f40c9c4a9"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_high-tor-capital.json",
+                      "sha256":  "19155f15f9bc6b812ffe4af113d9992528e7458110f9eacc1143a1485d296d3f"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_hugo-messer.json",
+                      "sha256":  "2531384904d2d6b4e2a52a3787eb3515025c601da99df812e8b4629adb86b21a"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_hummingbird-ventures.json",
+                      "sha256":  "85ec43d6c5cda60200a6f60bbc187243842bce080d37040dc5c122dd82c6f805"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_jason-schultz.json",
+                      "sha256":  "38249e098aab0625ef5475de3b332ef0ba33a7baab6ec705c47aa3429c3c04a9"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_jean-denis-greze.json",
+                      "sha256":  "16d85a503af57ba4bf8e38c221e2dd0a73fc08e7a3ea6f77dad7cdd382ac8dde"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_kungari.json",
+                      "sha256":  "c1752d41c194773075eaebe57e7e5a8c98ab391c7393c8f4204943a9ab61b0a7"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_kyber-ventures.json",
+                      "sha256":  "40c3c545be5638080537f14dc9095e24a398362bf63f77477e5142fe1d6c73e2"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_laser-digital.json",
+                      "sha256":  "26f164d709d30715a0ac8f4f087fdbcedf31d1cf3868ed732562ffb9f05a6fe2"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_maxwell-capital.json",
+                      "sha256":  "1569f215be9f0ecb72d83da545b358bd701738c16c112c0687157f17f80d5695"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_mentat-group.json",
+                      "sha256":  "ff1a570bcb41c44b55273dfc826e423aba4636d051f958c4226861980992f284"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_michelle-holmes.json",
+                      "sha256":  "dc773767bac2942679b84f534d993b931fc56b4bb9ada1e3bd5ef2a65e48d9e9"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_monash-ventures.json",
+                      "sha256":  "86fbe09566f114a54902976790114428e64ac0fc5515c6e6a8d0eb7699d48e63"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_mysten-labs.json",
+                      "sha256":  "005831b4f59486fe32bd3f054f190d68ef09187a936df48ecfaada0dc4e3d0b2"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_no-brand.json",
+                      "sha256":  "61c64c6b3671c90d9130376c36a508815dc286cf2eae0aa6de6e4fa4eb62bba5"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_opacity.json",
+                      "sha256":  "9917d627ff9651ff1dc001f274653218aa0be7d2810c92f9a43f79d6468ceef2"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_operator-partners.json",
+                      "sha256":  "16c0de838c46068824162285a0af84fc72e4f04afcac5e181e7ff6555bdff480"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_ourcrowd.json",
+                      "sha256":  "a30d37ef6866bf5a5f4ad872bb36e711e24ebf1e79ca480ad69f4deafc504b64"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_paul-limbrey.json",
+                      "sha256":  "05df3399c34e6d820c2dc9d1b0daa01bb3e8a275f07efc8ac6632e0161160dc9"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_peter-yunghanns.json",
+                      "sha256":  "79c7bea28e25585a2d6662fee2a9503eeb8a80765baceb239c6af877837c6263"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_prosus-ventures.json",
+                      "sha256":  "5316627383215bf9e80cf61ca3120ce0fe8a5f67a19d310eb2893d457a017442"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_qed-investors.json",
+                      "sha256":  "81e3ab5eb677d286047c65fd353a2af87ca211c5354cb4f09c8523467bf9fcdd"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_rkkvc.json",
+                      "sha256":  "b41706317022bcf2bb6a5f4395e7ef3dbb5dbb9908fee5a3ffda0e2b236b3353"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_ryft-fund.json",
+                      "sha256":  "c5b5bb267e4e5c09f4e9085e874d96b0e4274c18bb5cd8eefda76a68255f3c8b"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_saab.json",
+                      "sha256":  "571b5f1381d7f6ebf587842a80947e0e2d8bce612aec17e6d85d45e958ecdbbd"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_side-stage-ventures.json",
+                      "sha256":  "f0867b9bfe26e69b3397bce96bf253a79006707179474f3213322760b4597ea6"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_skalata.json",
+                      "sha256":  "240a500446d5d83a58aa48a7ac31b14dd85367ae214d3baa81b0a3ebb54d43d6"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_somethingreal.json",
+                      "sha256":  "5c2afcf74bd42df10bdadb62decd049ae1c467ee07ffab642f8651d27c09e23d"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_steven-holmes.json",
+                      "sha256":  "30769e1a037389ca3345576b6da13c94fa2ec6af128b7dd0143b2827a5c2869a"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_streshi.json",
+                      "sha256":  "b92206231cb8b0d0638c05eee33a8acac9e240351c7cc4967851bef568c0a286"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_suffolk-technologies.json",
+                      "sha256":  "7406a012761f7fdc93133e86a40bddde71cefd93472ab6048d408552aea22a18"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_swaminathan-narayanan.json",
+                      "sha256":  "faea8cb692bf01702d1e6ae9ca078890343e86895d8be6c4c2de66f8078fe84d"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_swinburne-university-of-technology.json",
+                      "sha256":  "427269421f304870ec1ce4821d7f90534024357ecd8303d615a635e93fdba894"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_synertec-corporation.json",
+                      "sha256":  "79131b334467efc7695e9d320a4a9bd11db64c2f64325efb9ed4851feb0dddad"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_tech-labs-capital.json",
+                      "sha256":  "d3292eea23bd9ef4647317e8a655973a43f04df8128294523dbe93b18503e503"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_ten-coves-capital.json",
+                      "sha256":  "ae69f6713bacab65820a6475334cf505cbb1eb67efef3bd16ea5ff907de2acc1"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_titan-fund.json",
+                      "sha256":  "a237cf8b02b915327c32b3ff39883b51a9b186e80c39c247ee56d373f6458d85"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_uniquest-extension-fund.json",
+                      "sha256":  "25fae27b6f687b41bfcbae26146db0a270004965269af0b435640c92541a53c0"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_untapped-ventures.json",
+                      "sha256":  "75fddfd7a5e4b45b0269ebde980ac74c24a0a7acc671a400aa06990ea7619ae5"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_verona.json",
+                      "sha256":  "28b1081270feaf7adef79d65c83755b954f003a97c8a0a7d4e9e6d0de3e8f3bb"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_vessel-capital.json",
+                      "sha256":  "5073be9bf23a393e84614fe9579176e3c464f8b5111b1ec5295eaacf398e1cca"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_yellow-brick-road.json",
+                      "sha256":  "6e7bf0a6bebc52ebcd8fb82058185726e541f0d7979e3e3c5d936f441e73fcdf"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_yield-guild-games.json",
+                      "sha256":  "d77bf2a1a27b38fa6dbb3f1f3c1251b489072568ff84ae6c9083d23d07e7f3da"
+                  },
+                  {
+                      "path":  "investor_web_profiles/investor-web-profile_zach-brock.json",
+                      "sha256":  "dd0c36773d045a054945f3963a32988ebb6f3a4f10e39768226eec40e53eb844"
+                  },
+                  {
+                      "path":  "investor_team_members/team-member_aliavia-ventures__alexis-versandi.json",
+                      "sha256":  "0c3dc2122b2ae19ac4bff15a25b432e436a95edfa12f07e85e291023a31be015"
+                  },
+                  {
+                      "path":  "investor_team_members/team-member_aliavia-ventures__marisa-warren.json",
+                      "sha256":  "330ee097c738f8e1911b1d5901f2f00e4150ec84297bc9449163d6dc918676ad"
+                  },
+                  {
+                      "path":  "investor_team_members/team-member_checker-media__jesse-angelo.json",
+                      "sha256":  "e955f095a51a3947aa8db155bc6a89ba2eca65eb11570e0219c4887534f2855e"
+                  },
+                  {
+                      "path":  "investor_team_members/team-member_escape-velocity__mahesh-ramakrishnan.json",
+                      "sha256":  "3ae66d671dd935dc574270e999e1a218b6f2be24d4c7c32972012431d1665538"
+                  },
+                  {
+                      "path":  "investor_team_members/team-member_escape-velocity__salvador-gala.json",
+                      "sha256":  "aff82e990eb59ce6f60fbbae993691f6038f36a1a07af26bed897af7493cd926"
+                  },
+                  {
+                      "path":  "investor_team_members/team-member_kungari__evan-jones.json",
+                      "sha256":  "957a36b47455d2f9fd7bbe49f5ea8037c426e0ce7527d4daa2858097a64574c4"
+                  },
+                  {
+                      "path":  "investor_team_members/team-member_no-brand__ari-klinger.json",
+                      "sha256":  "b38781f68428795df2b44ba580adc26ec1c3f6522364581428ceb4b771850de3"
+                  },
+                  {
+                      "path":  "investor_team_members/team-member_no-brand__lucy-klinger.json",
+                      "sha256":  "7c3210ca07284b9bd9416952f2096e900edcbbe36811e0e482159544884c6861"
+                  },
+                  {
+                      "path":  "investor_team_members/team-member_opacity__hersh-patel.json",
+                      "sha256":  "b9745e40298764c3773267237117faf0d797a66b581de32a03c1d0d500c948d2"
+                  },
+                  {
+                      "path":  "investor_team_members/team-member_tech-labs-capital__ash-farrugia.json",
+                      "sha256":  "97276e1d9cc96b519a6b613708fc187afbec930d024864cbc5d286a6dacd1ef4"
+                  },
+                  {
+                      "path":  "investor_team_members/team-member_titan-fund__shiau-sin-yen.json",
+                      "sha256":  "622e2b1363bb41bb068d469a6d6ccf34676906229b60e5c08fd14488cba10218"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_advisewell-650b.json",
+                      "sha256":  "c3a74f4af3ba18c1d4c67cc720218a76c5321b04a295d8d18f8d266e2d402b17"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_altai-47db.json",
+                      "sha256":  "40b19771e23ecc55a3d451d14b8cedc85bbf3841eba1dc1e8ee64a4e5ce3ecfa"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_apate-ai.json",
+                      "sha256":  "b54d6fbcf24a1d10c5ced6163fd2b573e197325698b2308920200f74ef82e213"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_arclaim.json",
+                      "sha256":  "496245ab70074c6c4739995e3ebc976afef4cde3c6290305a205022784816bb8"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_bizly-4a56.json",
+                      "sha256":  "55b873ecbb957dc324ce3848355fb3c959d21cae07bb0fe1a4722a629c8620f9"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_block-earner.json",
+                      "sha256":  "3f2981567e29dd481fbf03ead3f444613717b8235968b50f7e598d92281d2daa"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_brainfish.json",
+                      "sha256":  "ba65387cd517b58d1f89896b0db7fa73b4e24c1438e3b17045720647d10145f8"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_broadsource-537a.json",
+                      "sha256":  "f95005b3f64af2aad3292f23536064129749665ab0b9698e8b38d41b3decdcf9"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_butter-c725.json",
+                      "sha256":  "e9b12726ec9b0234b391897c43a7d43168fb312cf06d676f887339f26ea59c70"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_calctree.json",
+                      "sha256":  "b08ce38f88a12adc3a85c5af87536beb4fd89f673ab050096df99c776f61df7f"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_carbon-asset-solutions.json",
+                      "sha256":  "11525fff9f1e35d7cd2e57cb1f4f84d37a6adaf45b786299ddf521a91bc9e15a"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_coinstash.json",
+                      "sha256":  "8aff5f42e2d6e1908c786c0f92c01028e4c917c5ac88a2ee1de7bbccc78403c1"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_cuttable.json",
+                      "sha256":  "1ffb295f02037b8d005c5ad2c7a31583aaaed297a7e901d18842cc0b6623da80"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_dare-venture-group.json",
+                      "sha256":  "477e6384ea3f76eb227a550e20c665309c6830992655f4df763d786258a93eff"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_earnos.json",
+                      "sha256":  "542ebf9cdc2daa0184ad7b15dd8468348551bc97cfbb1a3cfca3f1cc86aa3437"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_entromat.json",
+                      "sha256":  "caf9c1397e7a6b30eee8ffbc62546460e9ae651ea85af0edc4e0bdebe07bc295"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_factor-house.json",
+                      "sha256":  "1713be7552a9fc38db9329e2fdc51efd04eb9844571f98255b1049fee93a56dc"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_flowing-bee.json",
+                      "sha256":  "63f16589e4469d94b3f765e6c981f54377acd22ea4ad9328644b1d3d4358c176"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_gbitechs.json",
+                      "sha256":  "1dbb90550116fd67fc3b8d4e13419262b4279e6a1387f6559083f3a5b6c184c5"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_harmony-intelligence.json",
+                      "sha256":  "1e8ba9130f9420b22b404602442268e64f2e8a12613edaa127d528b083b49175"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_herd-i-com.json",
+                      "sha256":  "ade2b264c8a6ca77a6ca41f2ac232307f3e2428987f70681b9740ff06f5d018d"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_heron-5f8b.json",
+                      "sha256":  "e57470ea2426b017b6d39b2e5bb2438728b2da535dc2a6e0704396c59a5da583"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_hypersonix-launch-systems.json",
+                      "sha256":  "547c14ab8c8c3cb7aab47f53ab60c409889cefbc5f587a6d261242e574a25582"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_index-a671.json",
+                      "sha256":  "71db921a8dbc214d0b905017712b8c130bcb637e64ece835fa8df1431cd8444f"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_infinex.json",
+                      "sha256":  "48ea3d7c25a7b2c731ae8e007057dd1158f325377c4be113d88a1c78ab923bf6"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_insightwise.json",
+                      "sha256":  "613dff0f3fe9f23fa79dce63a3461a3614b7f4a93da39436e791553e8de2c54c"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_instant-3719.json",
+                      "sha256":  "a9d73116f805487b31b42a710b69318bbb37123840ae2da86a7dcff254ede784"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_insurspy.json",
+                      "sha256":  "d7ac78e546c522570057b1db1174e3a7bc7a9fe589e506bc03720f9136584b00"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_knocknoc.json",
+                      "sha256":  "401966764a27f93918f431d8b414a2faf048afcb284b468c974a5faadf43fc37"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_knowby.json",
+                      "sha256":  "5701a5f38395edba9d991aecc180bef75c920beeab5928fe2e1fcee1c86893fb"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_kwetta.json",
+                      "sha256":  "8233f437a86b6109a8e6b2ec918055b1bd70038941eda7f3e8d86141f1f3be61"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_leadstory.json",
+                      "sha256":  "19bcab112f14c27960274a5506c4783ef814640d4de3685328a5b33fc5574f12"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_lorikeet.json",
+                      "sha256":  "dbec0d171b35f2859454944d89f05b4634e93ef56a87045ed21dde991f27a377"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_lucia-bio.json",
+                      "sha256":  "b6134263c59b486cea3f7936926d3e1242e794faf6719dff89a07203732e5642"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_mara-bio.json",
+                      "sha256":  "3fce19fda1b78e10497ff2a23b02b6b37a21c854f8679754dd2742376fad55f2"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_mygigsters.json",
+                      "sha256":  "1d7bf96a0717daf348c62ff9aac0776ef93806596ae1964fa7445fe5ba688eed"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_myostellar.json",
+                      "sha256":  "38ec12082f48b5923f7780d13ff94980c93396a7b6feb885783665790d7e095a"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_neurode.json",
+                      "sha256":  "38838966aa8a47a96f18950a4a579891b7229c740b6a73d18473c9542eb49ec4"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_one-touch-systems-28fc.json",
+                      "sha256":  "8c6037d425077f0461453a4ce9e63ad69e627651adc69efbb4629d8aaf7aba33"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_pam-e50b.json",
+                      "sha256":  "e34d53ca444a1cf87335fdf788d5c98c5a527e701df98528314f0b399d471500"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_phnxx.json",
+                      "sha256":  "88cc06abc0bbe48d0e77881d5c003427e48092632598cca37b9a4f930ba53773"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_pop-bd16.json",
+                      "sha256":  "d8586714dda8de5a161188c6c0512323345387629e95b8a602c209b771080ea9"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_project-manda.json",
+                      "sha256":  "ff5f1f54172a1f84b34b5c090ab02570aafdc0064250f371f30f960d44e956ef"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_projectworks-io.json",
+                      "sha256":  "478a589fe9d3fee56f67aacf4ceb260d66e4f1a9c9dff80e27c5701acde0cd3a"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_prophet-ee51.json",
+                      "sha256":  "08567238fb399140fd08a51b9b3d268a05388cbc324ffad64a7eb45926706bcb"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_qsic.json",
+                      "sha256":  "8adca9a36e2d113dda5b7116df0414a6d98fd11b150c8b2690fcd94b6ac89c2b"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_redowl.json",
+                      "sha256":  "846ea9c59dbaf5c472a18598394f2bf67662974326c4f3af1b57c7e878f429c6"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_rosterfy.json",
+                      "sha256":  "7e0a46890c5dba11d0b0bc0ba21b8212c1a8f61caa96ba95fd7dbb6e101c6dae"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_roundtable-9f70.json",
+                      "sha256":  "c096c5cea64090b352c8f1958fc11b28dff83c4a0f467be179568ec3bd9a0781"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_shards-342f.json",
+                      "sha256":  "23b3df8f4a654b29d2eb0d31c718bc533551070fa222698ea1210d6673102cf0"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_springboards.json",
+                      "sha256":  "46ef8bf2bb0e26b0194469555387c3945611baa8ae6bc6288cc34518c5e80445"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_sprintsuite.json",
+                      "sha256":  "fb107801b08dfcc912726e2fee08f46f0895157bc94129436a9d48d9a711b5ec"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_support-fusion.json",
+                      "sha256":  "1c960a4b0418dedc695f5530959ffc6478db3932535b98e269a94cdf4b69f9f2"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_teg-pty-ltd.json",
+                      "sha256":  "29418e1a0fa89361e5afa63b4fff6de056644c9d88cf62c94dcceb0a9bf3570d"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_tendl.json",
+                      "sha256":  "d1c26a7c2c1497a96b009bb8d72e5bdb6e29559baf6fb8ff3341e2c84114e369"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_termina-05da.json",
+                      "sha256":  "f2a62b46c12caa2f0b3429ca023e68ae988276a7de6a42c1454ccf92e20af24f"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_thanks-a09c.json",
+                      "sha256":  "f96c12b745f4fccfdc7d7b55ae023906cf75b567deb20a73d9b180022923e830"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_trusst-ai.json",
+                      "sha256":  "93b69994df09968d621a99fc425ebe4a210cfc0baed681f82fc2b48f5994455d"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_vern-efe8.json",
+                      "sha256":  "c240fd69b30949ab9cb3e329dcba3a464169e04fb93b69f1d3d7115dd88e9c1c"
+                  },
+                  {
+                      "path":  "investee_company_profiles/company_crunchbase_voqo-ai.json",
+                      "sha256":  "a22d23fd8115d0122f75874491070f9e19ca941787aff5861f6401c5429afdfa"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_advisewell-650b.json",
+                      "sha256":  "824fcaff105b01b089371c53b1ac5fdffcbaabca508343063499dfb138aa2ab7"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_altai-47db.json",
+                      "sha256":  "7c3c8c5f5ed9efe7cbdacb990ecac018cc7fb989307e2d9d899722f26f02c77f"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_apate-ai.json",
+                      "sha256":  "50c855787e85ca9ea0b856fcade6f26306f8e2c0efc7023eb460df7367230cf6"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_arclaim.json",
+                      "sha256":  "ae6f6073bac4056f3df0b1e634485c972b9d26ba739e9dbedc7cf170e04cb2a4"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_bizly-4a56.json",
+                      "sha256":  "c3fb3e520739097da7cfac80bc05d550d28d55113b653367dd1432977a1db645"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_block-earner.json",
+                      "sha256":  "23a5d6575c67c02a131b90f42b5ab99834ed83c969b1565767836d66ccbea021"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_brainfish.json",
+                      "sha256":  "fde06ee4c10f7f94bb20991d8eee2eb6838e674f3c70242fb20916fed8dd14fb"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_broadsource-537a.json",
+                      "sha256":  "f9f484805058058920ad1c515dcae2f3c9ae26806ce1f99d6c647e05816c9c4d"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_butter-c725.json",
+                      "sha256":  "657fa65000480e6962c557bbe0d9563a28bc5da89dff0c2bbe6523d78abf11f6"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_calctree.json",
+                      "sha256":  "b24a7b9004e7952f8cc6bc8d11f2f28a780039aee93dac3c0f04400861606a8e"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_carbon-asset-solutions.json",
+                      "sha256":  "0e37dff695f9b417d47902832969acc834973c2bd6f85669fc869da2b0a043cc"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_coinstash.json",
+                      "sha256":  "7f65e06645c3259b3167e5c5ba9b4ec44702a1ea71cc4fbab0c795916699b6c7"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_cuttable.json",
+                      "sha256":  "36a4e51418f3b2fcdabc4099b4a87b0ddceafe95e41c8ccace1223f496496755"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_dare-venture-group.json",
+                      "sha256":  "fdb1356a2a7a7a48b139b169e98b9832f993aa84feef62af918b0177c6fb8f56"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_earnos.json",
+                      "sha256":  "a258c56ec3b3060c85a94fb3fe8400d52ee633006f2cb1e56ee5b19aeb8726b6"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_entromat.json",
+                      "sha256":  "fe8607f21409e0359258485264f1fe63881750989a6730b5e4592f42bc235313"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_factor-house.json",
+                      "sha256":  "5e70f26b5ba0fc8e89b981f3bc5d8f9c234655846a5ebaed4d44b0d7ed86d656"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_flowing-bee.json",
+                      "sha256":  "f090dfe41f632d0839a5b3e5624719695fe0439b9a986e404b2432c938fe1eaf"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_gbitechs.json",
+                      "sha256":  "36f135260c98d8aa89f232ae423444c52a990ed42b265c257dee63c93b40d0b9"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_harmony-intelligence.json",
+                      "sha256":  "c952185b7c2329ca1b0132c694c46fdeb5a0cf2ac397bb63591e82a0a82c5cc9"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_herd-i-com.json",
+                      "sha256":  "93f46a5ddfe33120ef9bbdab1b6eba0e8a6e6b1087657ee0b731581ef7c54dfd"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_heron-5f8b.json",
+                      "sha256":  "d0311c16842f28fde832ae971ae94012167c67539f75dd8fdaa234bb577aeb9d"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_hypersonix-launch-systems.json",
+                      "sha256":  "ac2a3645c95e26554ffe089074c151c22f456d1080913e8d975141432de733af"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_index-a671.json",
+                      "sha256":  "14c297fa013645d67a55754afc369ef43f07c790b244527812bf15768788039e"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_infinex.json",
+                      "sha256":  "78b8a4cd21dc8fa533f8b9339e1a2e293ca2acda39c3ebef183d9e45a0c6c324"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_insightwise.json",
+                      "sha256":  "24430a16a74a967b615212776b1286c0a0afa089388b481a6fd3500a260d196f"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_instant-3719.json",
+                      "sha256":  "a8eb521995308d507ceefc609db531bd04f13bf223c5d39c432fb48f4cc37a8f"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_insurspy.json",
+                      "sha256":  "a134d074a7c2f17987a6be73ac8bc8f5e9264f50d4ad9edc3d9c0002eae67cdb"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_knocknoc.json",
+                      "sha256":  "f60aefc13e5907b125493f0ff7d584f4a953d88ec1d767694b2be4af6c76c12b"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_knowby.json",
+                      "sha256":  "6375775a69401ec591c3faf8d0b2f9702ef3a4b5aa6c58e615b99f15d01eee8c"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_kwetta.json",
+                      "sha256":  "7582d8386edb059ce72ea623dce55256e7599fb3c4ac1503d21bb26fd54487fb"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_leadstory.json",
+                      "sha256":  "98ba8ad7eefe9890e1ecd3a4ba098141de3349dc062dfb6e3914291e5806f04f"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_lorikeet.json",
+                      "sha256":  "4f9e9737a6816e6f06d17d79f70d0869c674668ee13c5265785af87099525211"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_lucia-bio.json",
+                      "sha256":  "9bb528fe3bba77e142f4dc73e74436cb5424c6485ee95f19e9cd821047a45e44"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_mara-bio.json",
+                      "sha256":  "76c45571249e2f5f06070df6a8b74f698a402ac98314b5c6031374272f1d78d1"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_mygigsters.json",
+                      "sha256":  "1a2841de72240b0ef8c24f9ff2b3bda69a0ebdeaf44e0c0510c22c16c10d67a4"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_myostellar.json",
+                      "sha256":  "47c65f90dcb1609cab3d0af4dedf7ea8bb07d29fca88598413cd5b66a2f87cc1"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_neurode.json",
+                      "sha256":  "1f06683a5762fe600c2abfb63697e9914752ed2aab680d44aad6910464d2f0b8"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_one-touch-systems-28fc.json",
+                      "sha256":  "a5033fea2ba03876c6659657e9dc8cfec2657b92eda55de39463cf22c3411642"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_pam-e50b.json",
+                      "sha256":  "459f01651376ae7d82aad5beb7614eb45e7454e411e2056a74a1b2e32940f56f"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_phnxx.json",
+                      "sha256":  "e9401efe0ccffc939136920cbfad93826175f674bb059976099743e2f115b392"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_pop-bd16.json",
+                      "sha256":  "9d3572cf28d5faf562c43ebc4f24573620484f499df90a45014e34f33e69e7f9"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_project-manda.json",
+                      "sha256":  "1734434469d0a518a00dabcad85311f2ddda1cdbd616ae9c292ff5eba2a1234e"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_projectworks-io.json",
+                      "sha256":  "335d5f0b3db014161e3e20732075b0540429d40352bf2b98c95c2a44d6e132f5"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_prophet-ee51.json",
+                      "sha256":  "1fda83e4c4e771f7250899c4782a72f869483d9a9a1a9b3a1ddd7b8a5c98ec80"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_qsic.json",
+                      "sha256":  "82c2ec83322c0c446b79d73fb4178de7a1d12f9f5726120324139df1bfa2be2b"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_redowl.json",
+                      "sha256":  "0c3e4a74b088a3741c682c30ef757a0a5ab450f3cf13d1b94f74dce6fed36373"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_rosterfy.json",
+                      "sha256":  "099127b548b4b6883caf70345e3bfdbe45af1d215b10cf0450c4f10e116fa203"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_roundtable-9f70.json",
+                      "sha256":  "423fb88a75a7904e965b20750271332318fe39b4fbbf6648266085e53e5d1289"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_shards-342f.json",
+                      "sha256":  "1f797809c8c01063e3221ca7c171141e7ccdf5b35551d4ea719c67a4bc1436ca"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_springboards.json",
+                      "sha256":  "fe30d6b1f87ec8fe173e57891f54692049648d0f11f6a82de43c3e2288877d44"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_sprintsuite.json",
+                      "sha256":  "701c3e1069b130448de415bbdb2f1f03c703ebbdf16e8e43ca73be811af28fa3"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_support-fusion.json",
+                      "sha256":  "85ae4f28549bf01b3fad2cee38117ef5864ebb679322a61b8a4430c6559a83c6"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_teg-pty-ltd.json",
+                      "sha256":  "46caebb81ffd4fd78d5144e3ae7932a1160eaae70927d94316b4606b3761bbd1"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_tendl.json",
+                      "sha256":  "87d2c31180e2934c18a9f77b4c6f612c074eb20e6c2d63916a769789c5142962"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_termina-05da.json",
+                      "sha256":  "1f8e5ee9293166abbf93eb61887896d7d066f9eb7de0a9a096d3e8b3ea9165a0"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_thanks-a09c.json",
+                      "sha256":  "7b0caec9b14090c06742f444f8fd553eaa35b56d95f942270713533e7fce14b7"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_trusst-ai.json",
+                      "sha256":  "9241abdebd8c8e49ccfc6e0d526fe57cb4882bd959db815e93cb72554cc497bc"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_vern-efe8.json",
+                      "sha256":  "f60393155f98816a6e2ee2ad4e6f993782b92e02f6d82fb0b51718a32c0fbf10"
+                  },
+                  {
+                      "path":  "investee_external_ids/investee-external-id_crunchbase_voqo-ai.json",
+                      "sha256":  "9bcdea93c0df2746d54c38f2f5f073e8a194b07119193dc5d3086ea9789f6c64"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_advisewell-650b-pre-seed--83bb280a.json",
+                      "sha256":  "671884019d19b8a1dce3ad983e62276dee06f38aac686ccc7c15e2800034a8c2"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_altai-47db-seed--b717d392.json",
+                      "sha256":  "aa1411801748e7e218ee027a8ab13aff1885b54fba61fb4154f71e65f0d27097"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_apate-ai-seed--b0f27007.json",
+                      "sha256":  "223c3078b042afc2c7998a3e76ce903917b76e123eff89183d32030c5a993d00"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_arclaim-series-a--0c05d127.json",
+                      "sha256":  "cebe96c7b24a7ec9844361d195875e0a47d9c25ba71b9b0a0329f90972abde77"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_bizly-4a56-seed--70c8dbb0.json",
+                      "sha256":  "65bd99bab5aea868cb0e5e4862f076d57c8f56b39b88f012ee4dd645880a3a9f"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_block-earner-series-a--0c2c9b3f.json",
+                      "sha256":  "01e00880d259cee7c4984de4e01e625fb51a764ac563b8d34979b1684d1aa9d8"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_brainfish-seed--1b0dcbf5.json",
+                      "sha256":  "ee73728832c9a35caebef9960295f34387f29394242ba8f30e5a5276a19c7883"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_broadsource-537a-seed--264ec9fc.json",
+                      "sha256":  "6334c64be0e2d9e453a37f3c29d9f3e57943473fb92bc021a889e018fb313230"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_butter-c725-pre-seed--f0132861.json",
+                      "sha256":  "eab551a5ad84648a364de1537165fa3f3dfd56783bbf0ef4a543c262cf83177e"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_calctree-pre-seed--97b5b89b.json",
+                      "sha256":  "2f938eada687b52d3cb896bb31b361a1fc0da32be03a9fbf132dfe852ef87601"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_carbon-asset-solutions-series-a--47e7acbd.json",
+                      "sha256":  "3ea8a5c4de9c8279f6c0b61b653fdd4e7d59fdca4b3fc5cfe0149ffd4374ec82"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_coinstash-series-a--c5398148.json",
+                      "sha256":  "b466f6d4747ada7193cc3f3cf2c2044b643eca4e48a100c4503a439cdcd7200f"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_cuttable-seed--b3a46452.json",
+                      "sha256":  "8f6db3e05be0e01c4560800b7d99e24ac1aef9c93b9223dd62254e7872934229"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_dare-venture-group-seed--d5e8c163.json",
+                      "sha256":  "96bf990030a0b1dbe4f6c55edbd7470b1061fdad17ce2965a4917132377c1c75"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_earnos-seed--57385e37.json",
+                      "sha256":  "6e50ca95bb2b12a0c05cfb2e1405fe17a719d49623dd1975bf1ed7c51d4af03e"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_entromat-seed--0566a623.json",
+                      "sha256":  "ba84b206fad77ce027050f13f22479ea25ca576c7ce4a8f96c7a96c6838384f9"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_factor-house-seed--bdce4adc.json",
+                      "sha256":  "f83e308d70574bd4ffc09f1c74fea2e3a56139715abd49aeed8fa0cd80c0873d"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_flowing-bee-pre-seed--1b7561bb.json",
+                      "sha256":  "6c6b5251498affbe53053769b1a055896d34650b71236d4d0a665a6d7069703f"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_gbitechs-pre-seed--398995a4.json",
+                      "sha256":  "b60a946f7f70347ae62027d95b31480a03fa05b901b0bc9e9e94cb2d08a2995f"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_harmony-intelligence-seed--d7d490f3.json",
+                      "sha256":  "0c26277e8a63d9ceb75d83e5cae7cddc59115fa17395cbfb9558a2eaa63bb5bc"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_herd-i-com-pre-seed--0a5195e2.json",
+                      "sha256":  "6e1e108765fedf68eb8f15dc6c70a0a167334d2d427c76ec9993c4eb2f90b144"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_heron-5f8b-pre-seed--82542fa6.json",
+                      "sha256":  "d4fa6014bada791ab8edb19cd42d7c6166cacf97a61d53f23ce44a9609e1a7d7"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_hypersonix-launch-systems-series-a--03046d3f.json",
+                      "sha256":  "12dadadacbaf0b1006cfb481a2a51606c2ccc4f3b0fda9d98945deaf1f4c9c4d"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_index-a671-seed--ab086f65.json",
+                      "sha256":  "6fc12d0413167b2f81453d882fb201d86ee3b40e9cdf749238b76b46d641a142"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_infinex-pre-seed--b02f53f6.json",
+                      "sha256":  "fe235965e081ce1913a908ecb92ea7ab08c8b9028451879aa738d4371aafc232"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_insightwise-pre-seed--603c6c35.json",
+                      "sha256":  "584aa1af2dcbae7683bcd9b82d246034ad30676302c588f1ce576f796d39f32d"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_instant-3719-series-a--2443edb7.json",
+                      "sha256":  "f6086164d06b124f3306aed310081098484bf464f3f1fc17a133541a685c8c7e"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_insurspy-pre-seed--b2204cdd.json",
+                      "sha256":  "bdf1a25785eb4c68403593160fba118fd4c4e6439def24d0f43ec43d7504b4dd"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_knocknoc-seed--12846e1a.json",
+                      "sha256":  "f2c4c0a8451b4b6239bc5fc1c588e228872b3f74589451ce65d0b82c57fc4d0e"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_knowby-seed--7efc22dc.json",
+                      "sha256":  "c27c52aa937192d9c3e71eeccee15e78bce69ffb2ffc0396f03c1d002fc22594"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_kwetta-series-a--f36f4a1d.json",
+                      "sha256":  "39feb054e72adb90b2808bcb6ac470e1be36d394ad82e0c0b752e3c3e489a330"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_leadstory-seed--053aa3f2.json",
+                      "sha256":  "a5064cf8d1e91e371123c604c5691386531d036484752607dec08a3f83d8722c"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_lorikeet-series-a--d93360c2.json",
+                      "sha256":  "60f1aa51a42523d0616be73e34fc0238d4f7c5803691a943c1a604bf30ee9466"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_lucia-bio-seed--15546121.json",
+                      "sha256":  "3d56604fe185b511d0cfe1ded2dd1b2ef9557fbd7c71882289285927d0667ed1"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_mara-bio-seed--1d9cf794.json",
+                      "sha256":  "bcf0440ccd7f27ceed0434cf848874a33f0a894c590fa3938d3875e041639157"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_mygigsters-seed--d2ef14cc.json",
+                      "sha256":  "397d5ab8b53bffe2b0355ae97f69cb81fe9643f7705b6197bc967ceb283c5cb2"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_myostellar-pre-seed--0ce7d85c.json",
+                      "sha256":  "276bed4182b4b67c7f6b3b2d578178a987b763f2667f126a02059bbc88a46b0a"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_neurode-seed--7d06c91e.json",
+                      "sha256":  "94f811c8e08e57c43b7794d2b3faca6277ba9dcfd08ef2d7d1d8767e5dcad2d3"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_one-touch-systems-28fc-seed--855e18e2.json",
+                      "sha256":  "a7912634cf50204b522ef0dbe58f595abb376fba6e7e62512a458dd4ae20c992"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_pam-e50b-seed--a402c3c1.json",
+                      "sha256":  "572abc8850e45242bd17ddd569a439e9144aa62bb5e3ceed6015b06e26da8189"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_phnxx-seed--1aa760a7.json",
+                      "sha256":  "d71fa10783bb44751a068ac337861e192c8ad0f4039f4819b2d48964956565d0"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_pop-bd16-pre-seed--81bf40a5.json",
+                      "sha256":  "3f90a4ce065724c7cf50f9bc95261e0a00052ab22442cb35a24b48f0389d91c7"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_project-manda-pre-seed--e9ee403e.json",
+                      "sha256":  "d937e6f086484f8705e63e693e01eb3cad8fa65bc55f763a882ae3ee95d1a8cb"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_projectworks-io-series-a--65ac6642.json",
+                      "sha256":  "34e4cee3a6bf2a7f657b1651ff9e1e9ad8dce8503b1b5df2c109d5189b40f11e"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_prophet-ee51-seed--61f09648.json",
+                      "sha256":  "e321d8f27e4a2d2037445b20ab65af18c7b4132b747e33aa30ae1bdc7f0f9844"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_qsic-series-b--7c909e26.json",
+                      "sha256":  "350a608212a6b8f6f69f3655b84364e7c1f182d90a8aeb23c49e9cbb444b9028"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_redowl-seed--ce12583f.json",
+                      "sha256":  "153db4c4b67b0865b04ca5d2487ed05be7cffa68935b0567684d7d15acee2895"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_rosterfy-series-a--2584689a.json",
+                      "sha256":  "7bd7809e8fbf7215f0bc3eb8fba40f133ee1dcca8b024cbace3b77bf96a712eb"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_roundtable-9f70-pre-seed--9af02b3a.json",
+                      "sha256":  "3485a644518eb2442190e2bdd7a335bc72d06d7c89ae18be14ea6ee7b26a7d4b"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_shards-342f-seed--96bab314.json",
+                      "sha256":  "b3b08fbe6ebab11437fd68a76804b6adbbd1a7b66fd2bdabe12504e37e4729e1"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_springboards-seed--b2ce2024.json",
+                      "sha256":  "6adba5a671d975c7891c092c7220a805c77ae92fec45988a5a6cbe0c1a8c68af"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_sprintsuite-seed--d5fb7c43.json",
+                      "sha256":  "dc92900d4b9d9dcfdc4c02c14db7d80d82efbd4fb427adcf72be93750aad2ca6"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_support-fusion-pre-seed--126d0979.json",
+                      "sha256":  "a8801fdc5e5e8a47c25dae39991dd0a86aba6ee60114ee6a0743181a1714d126"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_teg-pty-ltd-pre-seed--4323b36e.json",
+                      "sha256":  "257b3350df8d14f1521a619a053f302dd61bea6cc063ee432828ccf2fc653ebe"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_tendl-pre-seed--2b7d3af5.json",
+                      "sha256":  "413a3a6e34e312b842ea877ceae0ca3c341017968a1bf6851baa7bd6bc1a5fff"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_termina-05da-seed--866cd0ec.json",
+                      "sha256":  "1ad3ad86ea5bdfa220c16bb2df96952d67be436e03a95e482c9e52a7bfe1cc41"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_thanks-a09c-seed--d9068c05.json",
+                      "sha256":  "2b1a2e06669fbef69cb6042fbdb4a90cf2e9b27b2a5b44fb1d6a519ca34b6dc3"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_trusst-ai-seed--d6d2c932.json",
+                      "sha256":  "c0fc49100c72aeec5c873601f341852a7d338a82d813cd491a3ac54a09be7f9b"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_vern-efe8-pre-seed--521f1bed.json",
+                      "sha256":  "f82f31b262d0e586e36aed5663e79b51b26692a9d0da564c3fda1de5d655a376"
+                  },
+                  {
+                      "path":  "funding_rounds/funding-round_voqo-ai-pre-seed--98a1cf07.json",
+                      "sha256":  "13058fcfdde292f887b91d77b85df0f7d809d788de11d9e10ff167d31bec79b0"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_advisewell-650b-pre-seed--83bb280a__antler.json",
+                      "sha256":  "d216b57d891168ce2c4e1142010873c04831d7ba3de609010747078c117c42d2"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_altai-47db-seed--b717d392__epic-angels.json",
+                      "sha256":  "f5caf7388cd18b6ae49137252280e7db6572375eca28e4249068e331b0ab22bb"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_apate-ai-seed--b0f27007__investible.json",
+                      "sha256":  "a4c9b9ab0605ef3628e9d25d90ca71396481bdcf7f8e6348de1f69e65175e623"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_apate-ai-seed--b0f27007__oif-ventures.json",
+                      "sha256":  "6c31b693cf80d73785e14781ae230a562d051a229f31682d02192467b8eab718"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_bizly-4a56-seed--70c8dbb0__25fifteen.json",
+                      "sha256":  "1def70dad37104aee27ba6e0cb474dc6411f75333ec709e670f157f0f8be4fb3"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_block-earner-series-a--0c2c9b3f__king-river-capital.json",
+                      "sha256":  "d77f6106b7b15dcc9d653f89b5f30635617cb855fd786d0ddee2def1879840ca"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_block-earner-series-a--0c2c9b3f__titan-fund.json",
+                      "sha256":  "4d63b65bf4c85877849a26c608695488ff200ff1d94306e17f32113247dd83b5"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_brainfish-seed--1b0dcbf5__black-sheep-capital.json",
+                      "sha256":  "7ecb98eff5b35165e910a7c1f47841b825c639ba75f647bbbd93f123ced6ff81"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_brainfish-seed--1b0dcbf5__macdoch-ventures.json",
+                      "sha256":  "0148a1633d52b644ecf4de2dc48e48cb9ffe2dc4005f1f876d68c978acb027b4"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_brainfish-seed--1b0dcbf5__peak-xv-partners.json",
+                      "sha256":  "949eca7ed4d84915ac36539bcca94110c58cedb90c5da7b5aff3f5d57058737d"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_brainfish-seed--1b0dcbf5__prosus-ventures.json",
+                      "sha256":  "a8c84afd4aa2f879e4b715853b950f4119063138987daf21bb06e5cfffc36ca9"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_butter-c725-pre-seed--f0132861__antler.json",
+                      "sha256":  "9962d6d01385fd9fc7a85561a3d48a641e5e160b5fec88e0513f736b7a592fd5"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_calctree-pre-seed--97b5b89b__antler.json",
+                      "sha256":  "0c59df86f2313761a572a8ec7807ec514d98731be5bfe8d71a5e2f3d2c078514"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_calctree-pre-seed--97b5b89b__foundamental.json",
+                      "sha256":  "ee80821c17470846a8cbb2b79fa49c8edcb3427aa62086f6af8d14df29a81c57"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_calctree-pre-seed--97b5b89b__kungari.json",
+                      "sha256":  "86b0f1ded3d5480adaaf951c31849fefdb1e6fe555b8505fc7419da93733f00d"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_calctree-pre-seed--97b5b89b__suffolk-technologies.json",
+                      "sha256":  "70d73157081105ced57466f67399f51e306eefdb931d8b8d9fb711e4f0d4a415"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_cuttable-seed--b3a46452__brand-fund.json",
+                      "sha256":  "5e5a335cf2b06f98608e18aa07e0eefe465d0e5fd9b20d9ca7a4ae37461428a8"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_cuttable-seed--b3a46452__rampersand.json",
+                      "sha256":  "225c450f1f845b5e7a4ae907b1e241fdf0bb856882f0fb3efe0c035baac45ed3"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_cuttable-seed--b3a46452__square-peg-capital.json",
+                      "sha256":  "c03307b0fe2be8ea21230aa88c369cdc8d553b10e112b2bde0464e8cca14d1e8"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_earnos-seed--57385e37__animoca-brands.json",
+                      "sha256":  "96a4af1fe2c63916bf87547edb8176e699c9cb983bcd931ec43cbda7fe0c681b"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_earnos-seed--57385e37__escape-velocity.json",
+                      "sha256":  "c86df0240cbd778e4459a45a2ca83b43282f2007698090c9bf246e43352b1a66"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_earnos-seed--57385e37__gd1-global-from-day-one.json",
+                      "sha256":  "c6341780923e2f505efa1cf92a8d9e6c8e47823b6f91f0f32520c2981e0e0892"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_earnos-seed--57385e37__laser-digital.json",
+                      "sha256":  "5785d7fcf54c579f75bd1cfabd5ba00f0a439ce801afd88493bad94946af6278"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_earnos-seed--57385e37__mentat-group.json",
+                      "sha256":  "1f8c7e28626ee9ca282d40c9dc6ad2fa5fe4f8507af79af6610454e3ba07d3db"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_earnos-seed--57385e37__mysten-labs.json",
+                      "sha256":  "b518d3649730c86052eca34d913eb5f67cbfdb617df5b79c6be9d3ba2152c814"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_earnos-seed--57385e37__opacity.json",
+                      "sha256":  "b837a4c7061b714cf5a45ba2f1a076ed4887776b86dcaebf1b158907fec50137"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_earnos-seed--57385e37__verona.json",
+                      "sha256":  "3cb3dcc8e81a7b0b13d2cad29d8a46cf27790debca558caf1d8f5d6594e6f2ce"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_earnos-seed--57385e37__vessel-capital.json",
+                      "sha256":  "89a424f8edb16c6ac7571eaf52a5781426b291391841639040d30e6037795cfe"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_entromat-seed--0566a623__breakthrough-victoria.json",
+                      "sha256":  "d5bc8c74f16b9ee007261c2d33621308b69270c8c32f78de08601df4ba1df2dc"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_entromat-seed--0566a623__swinburne-university-of-technology.json",
+                      "sha256":  "5e12ccd7e3a43f192c13c609eb73398e40d06a24fc8b17a1fb34b23ebeb50004"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_factor-house-seed--bdce4adc__blackbird-ventures.json",
+                      "sha256":  "d71825da983e462e83b878babdbe1e0714fe5cd3dd4af355d84c6b3332b5e9d7"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_factor-house-seed--bdce4adc__flying-fox-ventures.json",
+                      "sha256":  "3f74d9fab548d50d21cba8ce6f529d6f7aad3609243ad2ff02b2fe00a0660509"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_factor-house-seed--bdce4adc__launchvic.json",
+                      "sha256":  "e7a35f9f3ec05bdb45a69adb7c63386e22a99b81d4e2dbbfedb7dab099037786"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_factor-house-seed--bdce4adc__michelle-holmes.json",
+                      "sha256":  "2a79c5e918432d2d523a66fc9f5974979d53f7acbaccede8208f2e87d3712678"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_factor-house-seed--bdce4adc__oif-ventures.json",
+                      "sha256":  "8a72e67eb0e78f8a934484fa2aaacdc489813914a9e1d603cfd45c3c8011478c"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_factor-house-seed--bdce4adc__steven-holmes.json",
+                      "sha256":  "612739034d19822a8336223b8c1899c7baf0a5d711e93b0cfae9631e8e11a948"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_flowing-bee-pre-seed--1b7561bb__antler.json",
+                      "sha256":  "219924c8c28a25a4cc1d221d23083e462621d32c8014b2e45bbf60d06a2817b3"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_flowing-bee-pre-seed--1b7561bb__archangel-ventures.json",
+                      "sha256":  "6cbf5b334fb2546eb8cbf8db0d70818dc32d2a6c0d1839e9901f5aac34ddf5d4"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_flowing-bee-pre-seed--1b7561bb__genesis-pre-seed-fund.json",
+                      "sha256":  "4cfa16cc0f9c102dca69bff5dc8f4ecb716cb70cbfb1d49d4f5b0379b6e7e1a5"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_flowing-bee-pre-seed--1b7561bb__launchvic.json",
+                      "sha256":  "5498cc9b893af6d16fb12eecdb79760617a21b739ef5a5def3948c716286e8e4"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_flowing-bee-pre-seed--1b7561bb__m8-ventures.json",
+                      "sha256":  "7275eeeb4d5bb39ab7d9a9eb8cfa332eae88de610126a77c50ead8ce5fce9580"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_harmony-intelligence-seed--d7d490f3__airtree-ventures.json",
+                      "sha256":  "05a4b0d24693ab42dd38ff4b6d2cf82f861ce6513921a1716231edd8b3da6619"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_harmony-intelligence-seed--d7d490f3__eric-ries.json",
+                      "sha256":  "7252645d4950619f497cdd13bf580c896cd1364d48ebe0fae1b176915adf03db"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_harmony-intelligence-seed--d7d490f3__first-row-partners.json",
+                      "sha256":  "40c17608130c3aef39fdd708fdc0206676ee2f2ac6ae07ca4a7ab4c3ec9962f4"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_harmony-intelligence-seed--d7d490f3__jason-schultz.json",
+                      "sha256":  "dc2d96508a00213b96f0ba35a444ff1a5b96908d26db8e802ee291b808bfe84d"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_harmony-intelligence-seed--d7d490f3__jean-denis-greze.json",
+                      "sha256":  "05878b69d2069f2c6a64a6006c80f4c1b0c0edec1cb8c3a4a298ab3838bd4a61"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_harmony-intelligence-seed--d7d490f3__maxwell-capital.json",
+                      "sha256":  "3693bb2d568e6eac81fc8a43807ac4eecfef7ca9bd04dd7cd94a08dd7d2bf2a5"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_harmony-intelligence-seed--d7d490f3__zach-brock.json",
+                      "sha256":  "e7d026fdf6c4078fb846dfd873efa9dd6d1d11d830f54a6dec55ffd41380529c"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_herd-i-com-pre-seed--0a5195e2__untapped-ventures.json",
+                      "sha256":  "8cd9fcdbc2bd5085f21105d38ae44749447f9b523410dd07583c90dc4c7c60f4"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_heron-5f8b-pre-seed--82542fa6__ryft-fund.json",
+                      "sha256":  "3e09ca0b3a276995465c62d4c6d4cb68be15fc01660855c9b6fa2b32cb0aafab"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_hypersonix-launch-systems-series-a--03046d3f__high-tor-capital.json",
+                      "sha256":  "b46fe492f42efaa2d9f541650427f04bec152abc297741f376d7159e1b091f43"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_hypersonix-launch-systems-series-a--03046d3f__rkkvc.json",
+                      "sha256":  "c28788433bbefadf99db71afb75aeee84987bf678128f30841e70331c9c6ee89"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_hypersonix-launch-systems-series-a--03046d3f__saab.json",
+                      "sha256":  "e17d836eb061c8f9617f07aeb7eddcb01f712128f04032439c0b3339d0b4c821"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_index-a671-seed--ab086f65__bain-capital-ventures.json",
+                      "sha256":  "b3484ebf8ba6d584d859f707fea9face1bc113c3121ad2a2dfe6ae405aa78a01"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_index-a671-seed--ab086f65__blackbird-ventures.json",
+                      "sha256":  "3c98781f984ee62695c3f19c0ae7b4dde585d89ceedc7aefd10e7d67fe569ab5"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_infinex-pre-seed--b02f53f6__eden-block.json",
+                      "sha256":  "d094db7d8ce3890a22c695bcdf5310c6334ceacb0fc66a954fc1cf1bb6a17f23"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_insightwise-pre-seed--603c6c35__aliavia-ventures.json",
+                      "sha256":  "268ebfe9a19ccb96fdb9f9a4eac447d448961d5c12748c8f8c76e47cf176a2f6"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_insightwise-pre-seed--603c6c35__craig-weaver.json",
+                      "sha256":  "a1cf39dda92231ac3152a672cfdfce33f071c937977f9b2df0b181d15fbf2523"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_insightwise-pre-seed--603c6c35__fb10x-adventures.json",
+                      "sha256":  "4730110505314ffdb5dba5f9b89cd53bdd2b1c71f040c60ba5ec5835cd335ae8"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_insightwise-pre-seed--603c6c35__no-brand.json",
+                      "sha256":  "459afb20fac8249cb7223ff73d1f09a2297555966e5722c33bff8e600bdfb5af"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_insightwise-pre-seed--603c6c35__treearc-investment-group.json",
+                      "sha256":  "553595e4909fc9e1ac3b253e01aa34e62f326baf47ccc1b85bf6b581febac7b3"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_instant-3719-series-a--2443edb7__blackbird-ventures.json",
+                      "sha256":  "ebde09fcbf86e0a3cb1decd8e475d31b2e2e35163679ed9510e7fe243d995f96"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_instant-3719-series-a--2443edb7__hummingbird-ventures.json",
+                      "sha256":  "83938563618ffe57ea7310a774d83cdee21d1edca743b6dc059ca19efba475ca"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_instant-3719-series-a--2443edb7__reinventure.json",
+                      "sha256":  "8341dbf538ed1577f5ce28a02712bbc0f142b97b6fe7b60740482423bad3bd14"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_instant-3719-series-a--2443edb7__ten13.json",
+                      "sha256":  "58378643389b7a51e7d34800e9ceb17ce770c5ef7965aa364891756c929300f0"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_knocknoc-seed--12846e1a__coact-capital.json",
+                      "sha256":  "6a12cc4ca38f74b59e62059adb8fe4efde90e7a5441a837e9c176c90df0bf50f"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_knocknoc-seed--12846e1a__decibel-partners.json",
+                      "sha256":  "b0d14332309b7b52dc642b2b6585d2288f4447874ee1241c4d59454f575132ed"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_knocknoc-seed--12846e1a__somethingreal.json",
+                      "sha256":  "d22a94f01958423e9f567462ec3108ec04272c83d2ff1d758daf4b114fc4a7c8"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_kwetta-series-a--f36f4a1d__blackbird-ventures.json",
+                      "sha256":  "2de65f6246e64eed3a89276da6d4decc489e79bd0cd5bb6b0157efa55654ae60"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_kwetta-series-a--f36f4a1d__icehouse-ventures.json",
+                      "sha256":  "11147453d76bfbd8f800c0a197b4d7df2e86630a92fd2c6d5a30ce880041ab1d"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_kwetta-series-a--f36f4a1d__virescent-ventures.json",
+                      "sha256":  "f67a6836423da7189dae14994d3e23c52fedb2700c2a822541cf30947e8b3751"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_leadstory-seed--053aa3f2__american-public-media-group-s-horizon-fund.json",
+                      "sha256":  "cba3356b74e07c5e209d2b7540f1c88e16d0378d4bdd35d6a6e8478c94d13a5e"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_leadstory-seed--053aa3f2__checker-media.json",
+                      "sha256":  "3a2749184e2a34ea65e2104cb4d2af77cb9ad7fc13cb4889589a06cd6dbf7ff2"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_leadstory-seed--053aa3f2__cp-ventures.json",
+                      "sha256":  "6a50fcd901aec844a8a565d57bfdc4e258dcc40fb74024d875725dd43b412c45"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_lorikeet-series-a--d93360c2__airtree-ventures.json",
+                      "sha256":  "e7ca010ced78387e7c54cfbf4aafe52b2e9dff8d8b2897ae3094b249b0f94390"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_lorikeet-series-a--d93360c2__athletic-ventures.json",
+                      "sha256":  "7cf8ee247ac8293d56963cdf1c61644f34cf2cff3bc05fc25e7ce7a854d5d322"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_lorikeet-series-a--d93360c2__blackbird-ventures.json",
+                      "sha256":  "de77a4cb8a2ef369a5008ec2954d74545ee58b4d9ca1387f8ec6289ffae25e02"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_lorikeet-series-a--d93360c2__capital-49.json",
+                      "sha256":  "cbee7ca3499fc13b4d94f63bf6ecb7fc4e9575127cb0649f66f9be74cf9f9db6"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_lorikeet-series-a--d93360c2__operator-partners.json",
+                      "sha256":  "e80f89a30d3b392a1810247c68c50047db98a5e98bfec4acc0cc73d6edc37e3c"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_lorikeet-series-a--d93360c2__qed-investors.json",
+                      "sha256":  "c390c9ee55ff0c737d8dd753770920f991dd373356268b9296217d6b1fb76b5f"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_lorikeet-series-a--d93360c2__skip-capital.json",
+                      "sha256":  "0a7405260efcb82818eb92a9ea3b7809587b15429d2fdb2b8f1dabd908649926"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_lorikeet-series-a--d93360c2__square-peg-capital.json",
+                      "sha256":  "05f54a1cd7b9012fcb56b790df31bffd516cc5eff3d07c4030ae7eae355e585b"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_lucia-bio-seed--15546121__uniquest-extension-fund.json",
+                      "sha256":  "e453f165b5170c3269da6355e24e99b3554f1aaa5140a50db2a1ec52dee62bef"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_lucia-bio-seed--15546121__uniseed.json",
+                      "sha256":  "7ea8f381ebaa8098144296555c196e25133682375f147b41e8c4d4eccc8d2f43"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_mara-bio-seed--1d9cf794__climate-venture-capital-fund.json",
+                      "sha256":  "5d8cde3a7fd985a43841fb0077fe0c093d874287f61ddf6cdd8bef0090072968"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_mara-bio-seed--1d9cf794__k1w1.json",
+                      "sha256":  "69919b4e3d9ffd014dfd1bc5418062cfb6f6b85cda389eca69b8de84ea985598"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_mygigsters-seed--d2ef14cc__antler.json",
+                      "sha256":  "1bdd03f1a01f17acb1e1b397c6aad49c50e7eaac1398eee55368f7e3c2b9a6d1"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_mygigsters-seed--d2ef14cc__antonio-separovic.json",
+                      "sha256":  "675a36e5f8116bd2e31da04a8c18c41929d67be1ec6dfdb935c36501b205135c"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_mygigsters-seed--d2ef14cc__craig-martin.json",
+                      "sha256":  "958b9dbcd7da608cf1c144a73b9d1d4b07bacfa74e49efe261842219c202c6c0"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_mygigsters-seed--d2ef14cc__david-orth.json",
+                      "sha256":  "3e0d0fcc096b8a84fa28afb521269d89d04cde5d53f01935339c4e27540c6791"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_mygigsters-seed--d2ef14cc__hugo-messer.json",
+                      "sha256":  "31a108d3f3d348fa3eba0d1a4bf43ce2823180b82e28b60e2126b8e56e4868d9"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_mygigsters-seed--d2ef14cc__launchvic.json",
+                      "sha256":  "f977c3f17b1797091d0fc8574214bd0933fe711e1b764109bdb73876de9373e7"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_mygigsters-seed--d2ef14cc__startmate.json",
+                      "sha256":  "36d2a81e986f1d1ef8f116f8f87a5f9f84ec13268b602087119be7436495e21a"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_mygigsters-seed--d2ef14cc__swaminathan-narayanan.json",
+                      "sha256":  "7a42c2f47bdbd6b7912ac33916d77fae0a90164bf1128b5061957086b9984c0a"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_myostellar-pre-seed--0ce7d85c__breakthrough-victoria.json",
+                      "sha256":  "147289cabc6d3dbbfdcbe97d41a0952b710178844a2259ad0ba6c75e4b17677a"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_myostellar-pre-seed--0ce7d85c__monash-ventures.json",
+                      "sha256":  "f1caa9909d0550795b46d1d35a1e3e06bc2074a4a2710375aa574c1d7d66a56e"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_neurode-seed--7d06c91e__streshi.json",
+                      "sha256":  "3084ac2b86dbb4db76f2e75aa346a1355f828feb0b1794a456a188a39bc4cab5"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_pam-e50b-seed--a402c3c1__comcast-nbcuniversal-sportstech.json",
+                      "sha256":  "5e2b09a9edab46f8d9080770315372078acb376689426b646a65ca54119a584e"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_phnxx-seed--1aa760a7__engie-factory.json",
+                      "sha256":  "5b464591f34a711fbf4f242116bb35e6c4489ba773f35c44b873f9928d19c048"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_phnxx-seed--1aa760a7__launchvic.json",
+                      "sha256":  "f81e6899dc61f96dcf5a4540746e4205c6d520a7a5ff7ab1f81d03d74eb4ea03"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_phnxx-seed--1aa760a7__pacific-channel.json",
+                      "sha256":  "2d1f981fe0186725df3167d906598dec6be38ef06387daa7887555e03bf98ce5"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_phnxx-seed--1aa760a7__synertec-corporation.json",
+                      "sha256":  "2871f72f6523c2c73ec58fb67db9adf54fe6a9e4cb6b545c728f5ddf9bd147d3"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_pop-bd16-pre-seed--81bf40a5__callaghan-innovation.json",
+                      "sha256":  "e7b702afbeba2c92d612273f4f5322eddfcfe6cddbc6981fd3a8b61ed80542d4"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_pop-bd16-pre-seed--81bf40a5__finistere-ventures.json",
+                      "sha256":  "802fa9c673197eaf480c66f97ccccfe06c832e82099ac23c5b71a843dfc4eedf"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_pop-bd16-pre-seed--81bf40a5__fonterra-co-operative-group.json",
+                      "sha256":  "89add310eb6b56d70491cfe3f4b5444861d4629be29a75469fe77a77d1f24658"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_pop-bd16-pre-seed--81bf40a5__ourcrowd.json",
+                      "sha256":  "518226b54bb1d5a0b354e99744506f34480e614d680afc20335147446d0f1d54"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_pop-bd16-pre-seed--81bf40a5__sprout.json",
+                      "sha256":  "06b4bd2e6d99787eebf6d164a1f3b69cf95b2741c6d7f6beb22e8322e7f3271e"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_project-manda-pre-seed--e9ee403e__black-sheep-capital.json",
+                      "sha256":  "1cf85e32ea05b0b40dd660097334b11aa2a2248238de5ab0a703c903e3b4f2f3"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_project-manda-pre-seed--e9ee403e__paul-limbrey.json",
+                      "sha256":  "c017ba0964074828e49c66cdf9ce054c96888b488b3d1d47aa112651df3bcba9"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_project-manda-pre-seed--e9ee403e__peter-yunghanns.json",
+                      "sha256":  "860ae5acc1f573f4b5234b90ff164675c673dac3f6c6c1679cffe3b1feda3000"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_project-manda-pre-seed--e9ee403e__tech-labs-capital.json",
+                      "sha256":  "ff3739a11f2ca7ecde19bf984422d0c5f64d8594897fadcee50c78431ad5e5a7"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_projectworks-io-series-a--65ac6642__bridgewest-group.json",
+                      "sha256":  "09f2aa58c96830e87a9fa319f3ab0cb4e60e4b5a8538ecac6cfb83179cc5d63f"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_projectworks-io-series-a--65ac6642__punakaiki-fund.json",
+                      "sha256":  "e1a4664d3a542cf59dded51756004097f8a9cffcb3bb2b7dd920e25d4d899684"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_projectworks-io-series-a--65ac6642__ten-coves-capital.json",
+                      "sha256":  "fce515e399c58e7592bb151a2aea4a1dafceea7d7e0b0be6739be80b4d8d6343"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_qsic-series-b--7c909e26__hedosophia.json",
+                      "sha256":  "b6b795ddaca253f287a124bdff5eac344f5cc91b497d4315ebaed0b610798060"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_redowl-seed--ce12583f__saltwater-fund.json",
+                      "sha256":  "d430be3b2406f70294937d48bbc4e3ce758755cd2d352ff92dbba68fbbdcd14a"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_rosterfy-series-a--2584689a__bailador-technology-investments.json",
+                      "sha256":  "31bcebc74a2c6b9d401a099943ebfd1ca071f96bd1179743092c1e0d748f9deb"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_rosterfy-series-a--2584689a__oif-ventures.json",
+                      "sha256":  "b18c2ecb9ade3f731f794645bdc1d1cb15ffdd2c54a8c94a93e371068e6e0b53"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_roundtable-9f70-pre-seed--9af02b3a__antler.json",
+                      "sha256":  "916f68eb5465ba155c99413f4529e0baed80762b30678be77150120e0312fb29"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_shards-342f-seed--96bab314__animoca-brands.json",
+                      "sha256":  "9510b5590db4f1974757b0c41275a076e2ee18456cb9dc0b423326136a9affef"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_shards-342f-seed--96bab314__kyber-ventures.json",
+                      "sha256":  "199a1d3dfafd7dd02f16e6a85e418ae5d688668ff3298d0b89576223b1930aa1"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_shards-342f-seed--96bab314__yield-guild-games.json",
+                      "sha256":  "8a081ae8cd0170f31495678a2336e4522733028f6ac5a0246052a7440f3f13e2"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_springboards-seed--b2ce2024__blackbird-ventures.json",
+                      "sha256":  "4c5e2e7228b6e238d4a85a5b991d627311b165c07aac922585f9b00a9fa96dd6"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_sprintsuite-seed--d5fb7c43__evp.json",
+                      "sha256":  "93d1f08dd76456501044c80ed3f106b2e9ce51386b787bd076f40a24676cc2a2"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_support-fusion-pre-seed--126d0979__antler.json",
+                      "sha256":  "e5339e0455babb3008a68586b1edc1653e407754004360c3e7ee08663f7fcbe9"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_teg-pty-ltd-pre-seed--4323b36e__bossa-invest.json",
+                      "sha256":  "980c54dda9099a82dae31e8a3f2e6e312b731440c29d810e159d3f18de737993"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_tendl-pre-seed--2b7d3af5__77-partners.json",
+                      "sha256":  "1e976d799993ad892287cb92e16e12f3c4a79ba9e99fc7022c5272c4cb645989"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_tendl-pre-seed--2b7d3af5__aussie-angels.json",
+                      "sha256":  "74b7616073038af8f4333c0a1593aecc21df89d07db445eecb5d519403b50afb"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_tendl-pre-seed--2b7d3af5__brisbane-angels.json",
+                      "sha256":  "887a6f2148fb566ef9170677408dc636b843c110dba296559f6d179d465215ea"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_tendl-pre-seed--2b7d3af5__startmate.json",
+                      "sha256":  "e60fdfc8696522f1fa697bc01c3482c58a506c264f51a9ebe06e39f9f735f7a8"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_tendl-pre-seed--2b7d3af5__tidal-ventures.json",
+                      "sha256":  "1afd3df2fd2860812b7419ab55f8f2be5cf8ca4c8a45e1d8fc365691ab56bc58"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_termina-05da-seed--866cd0ec__archangel-ventures.json",
+                      "sha256":  "0cc94411b60591bfb46c13f1d3b0892ec292407d3e667c7a18d358b84f45154e"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_termina-05da-seed--866cd0ec__evp.json",
+                      "sha256":  "54dece17b83a6343c4d8b8abc67e69ef25620a7d7f1ced43cafcfbff7441df38"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_termina-05da-seed--866cd0ec__skalata.json",
+                      "sha256":  "cb758a477a9035dc3a985174b206c99a7c5cdcccfa32a228abaa441e3861693e"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_thanks-a09c-seed--d9068c05__founder-collective.json",
+                      "sha256":  "2fade505efa750e11fabed9e7f86b03954696be1363d8fb6055832da853ca4ac"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_thanks-a09c-seed--d9068c05__peak-xv-partners.json",
+                      "sha256":  "fae2de46418d51aaab744784c94033bbf2cc85564c03e4add81c9adbfe05215b"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_thanks-a09c-seed--d9068c05__side-stage-ventures.json",
+                      "sha256":  "0a45e100f6b7c184677aa117c67be387269f14793398b2b15f6c32290eba530d"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_trusst-ai-seed--d6d2c932__oif-ventures.json",
+                      "sha256":  "ecc031eb1b2477c749de6cdf10f820fda83217e28b89a90fbd19d6df50a13a6d"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_vern-efe8-pre-seed--521f1bed__antler.json",
+                      "sha256":  "49f843549b1ef80b5180f05b93ab7dc2d519792ccaf3102913391fe6dbf46c15"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_voqo-ai-pre-seed--98a1cf07__blackbird-ventures.json",
+                      "sha256":  "c5387a77c8f439aed434c14a0204168fcf16391d85ea922b54f4a30530981be8"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_voqo-ai-pre-seed--98a1cf07__startmate.json",
+                      "sha256":  "afec1eeadc638fc523c0cc2c57d740fa028b9fc1f13ad8d47e59ec98b716a5bd"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_voqo-ai-pre-seed--98a1cf07__unsw-founders.json",
+                      "sha256":  "d58e8237568be498b7ad0589237563ed070c1ceb08e775fb4648a13634c7e808"
+                  },
+                  {
+                      "path":  "deal_investors/deal-investor_voqo-ai-pre-seed--98a1cf07__yellow-brick-road.json",
+                      "sha256":  "c2004055b78f8dccb173fb83139efe52a917432d6e3e1cee054299e25c966783"
+                  }
+              ],
+    "validation":  {
+                       "status":  "passed_with_documented_identity_team_and_investee_schema_gaps",
+                       "errors":  [
+
+                                  ],
+                       "warnings":  [
+                                        "Remaining null identity fields have explicit reasons in investor_identity_audit.json.",
+                                        "Institutions without a verified public core member have an explicit status in investor_team_audit.json.",
+                                        "Individual angel headquarters fields are not applicable and personal residence was not inferred."
+                                    ]
+                   },
+    "import_order":  [
+                         "investors",
+                         "investor_external_ids",
+                         "investor_web_profiles",
+                         "investor_programs",
+                         "investor_team_members",
+                         "investee_company_profiles",
+                         "investee_external_ids",
+                         "funding_rounds",
+                         "deal_investors"
+                     ],
+    "system_review_required":  true,
+    "control_files":  [
+                          "scope.json",
+                          "investor_resolution.json",
+                          "excluded_investors.json",
+                          "quality_report.json",
+                          "validation.json",
+                          "README.md",
+                          "investor_identity_audit.json",
+                          "investor_team_audit.json",
+                          "investee_business_classification_audit.json"
+                      ]
+}

@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:ubet",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Ubet",
+                 "website_url":  "https://ubet.io/",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "New South Wales",
+                 "hq_city":  "Sydney",
+                 "is_anz":  true,
+                 "sector_primary":  "online_gambling",
+                 "sector_secondary":  "crypto",
+                 "use_case_primary":  "crypto_betting_and_casino",
+                 "use_case_secondary":  [
+                                            "sports_betting",
+                                            "casino_games"
+                                        ],
+                 "customer_type":  "consumer",
+                 "business_model":  "gaming_margin_and_transaction_fees",
+                 "sales_motion":  "community_and_product_led",
+                 "technology_depth":  "blockchain",
+                 "ai_relevance":  "not_ai",
+                 "ai_usage_type":  "none",
+                 "ai_core_or_enabler":  "none",
+                 "company_summary":  "Ubet is a crypto-only site platform offering promotions for new players and a games to enjoy",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/ubet-seed--7cf11955",
+                                     "https://www.crunchbase.com/organization/ubet",
+                                     "https://ubet.io/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:ubet-seed--7cf11955"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

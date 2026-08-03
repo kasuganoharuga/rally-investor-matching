@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:polarbear-pre-seed--abb9f718",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "polarbear-pre-seed--abb9f718",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/polarbear-pre-seed--abb9f718",
+                 "source_payload":  {
+                                        "Transaction Name":  "Pre Seed Round - Polarbear",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/polarbear-pre-seed--abb9f718",
+                                        "Organization Location":  "Melbourne, Victoria, Australia, Oceania",
+                                        "Organization Name":  "Polarbear",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/polarbear",
+                                        "Funding Type":  "Pre-Seed",
+                                        "Money Raised":  "260000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "163520",
+                                        "Announced Date":  "2025-04-11",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Polarbear develops online educational productivity tool designed to help students study more effectively.",
+                                        "Organization Industries":  "Artificial Intelligence (AI), EdTech, Education",
+                                        "Organization Website":  "https://www.trypolarbear.com/",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "260000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "163520",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "Antler",
+                                        "Number of Investors":  "1",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "Polarbear",
+                 "org_location_raw":  "Melbourne, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://www.trypolarbear.com/",
+                 "org_industries_raw":  "Artificial Intelligence (AI), EdTech, Education",
+                 "round_type_raw":  "Pre-Seed",
+                 "round_stage":  "pre_seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-04-11",
+                 "money_raised_raw":  "260000",
+                 "amount":  260000,
+                 "currency":  "AUD",
+                 "amount_usd":  163520,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "260000",
+                 "investor_names_raw":  "Antler",
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:05.3921575+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "partially_verified",
+                 "verification_source_url":  "https://www.antler.co/location/australia",
+                 "verification_notes":  "Antler public terms support the imported A$260k pre-seed structure.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:polarbear"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:polarbear-pre-seed--abb9f718"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "No Polarbear-specific announcement was located."
+                              ]
+               }
+}

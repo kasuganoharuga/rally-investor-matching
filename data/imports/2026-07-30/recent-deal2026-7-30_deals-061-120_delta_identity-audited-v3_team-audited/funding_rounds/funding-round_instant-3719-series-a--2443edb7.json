@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:instant-3719-series-a--2443edb7",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "instant-3719-series-a--2443edb7",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/instant-3719-series-a--2443edb7",
+                 "source_payload":  {
+                                        "Transaction Name":  "Series A - Instant",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/instant-3719-series-a--2443edb7",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "Instant",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/instant-3719",
+                                        "Funding Type":  "Series A",
+                                        "Money Raised":  "18000000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "18000000",
+                                        "Announced Date":  "2025-03-02",
+                                        "Funding Stage":  "Early Stage Venture",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Instant is a fintech startup that makes online payments quick and simple.",
+                                        "Organization Industries":  "E-Commerce, Software",
+                                        "Organization Website":  "https://www.instant.one",
+                                        "Organization Revenue Range":  "Less than $1M",
+                                        "Total Funding Amount":  "20200000",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "20200000",
+                                        "Funding Status":  "Early Stage Venture",
+                                        "Lead Investors":  "Hummingbird Ventures",
+                                        "Investor Names":  "Blackbird Ventures, Hummingbird Ventures, Reinventure, TEN13",
+                                        "Number of Investors":  "4",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "Instant",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://www.instant.one",
+                 "org_industries_raw":  "E-Commerce, Software",
+                 "round_type_raw":  "Series A",
+                 "round_stage":  "series_a",
+                 "funding_stage_raw":  "Early Stage Venture",
+                 "announced_date":  "2025-03-02",
+                 "money_raised_raw":  "18000000",
+                 "amount":  18000000,
+                 "currency":  "USD",
+                 "amount_usd":  18000000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "20200000",
+                 "investor_names_raw":  "Blackbird Ventures, Hummingbird Ventures, Reinventure, TEN13",
+                 "lead_investor_names_raw":  "Hummingbird Ventures",
+                 "imported_at":  "2026-07-30T14:07:04.8509373+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "verified_primary",
+                 "verification_source_url":  "https://www.instant.one/articles/instant-raises-18m-to-scale-the-future-of-retention-marketing",
+                 "verification_notes":  "Company announcement verifies an $18m Series A led by Hummingbird with Blackbird, TEN13 and Reinventure.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:instant-3719"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:instant-3719-series-a--2443edb7"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Company page is dated 17 Mar 2025 while imported date is 2 Mar 2025; currency symbol is not explicitly qualified on the page."
+                              ]
+               }
+}

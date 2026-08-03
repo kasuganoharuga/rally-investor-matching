@@ -1,0 +1,48 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investors",
+    "record_key":  "investor:cn-ventures",
+    "operation":  "upsert",
+    "data":  {
+                 "canonical_name":  "CN Ventures",
+                 "aliases":  [
+
+                             ],
+                 "investor_type":  "vc_fund",
+                 "investor_subtype":  "venture_capital",
+                 "eligibility_mode":  "none",
+                 "classification_confidence":  "medium",
+                 "classification_evidence_urls":  [
+                                                      "https://www.linkedin.com/company/cn-ventures"
+                                                  ],
+                 "classified_at":  "2026-07-30",
+                 "website_url":  null,
+                 "linkedin_url":  "https://www.linkedin.com/company/cn-ventures",
+                 "hq_country":  "CN",
+                 "hq_state":  "Beijing",
+                 "hq_city":  "Beijing",
+                 "offices":  [
+
+                             ],
+                 "status":  "active",
+                 "merged_into_id":  null,
+                 "review_status":  "needs_more_data",
+                 "last_reviewed_at":  "2026-07-30",
+                 "last_reviewed_by":  "codex-investor-identity-audit"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:scoped:recent-deal2026-7-30_deals-121-180",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "No unique official website could be confirmed after exact-name and deal-context searches."
+                              ]
+               }
+}

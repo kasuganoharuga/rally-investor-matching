@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:syenta-seed--a99c6993",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "syenta-seed--a99c6993",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/syenta-seed--a99c6993",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Syenta",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/syenta-seed--a99c6993",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "Syenta",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/syenta",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "8800000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "5746233",
+                                        "Announced Date":  "2025-08-12",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Enabling the transition to 2.5D and 3D chiplet stacking and increasing the performance of semiconductor chips to meet the growing demand.",
+                                        "Organization Industries":  "Manufacturing, Semiconductor",
+                                        "Organization Website":  "https://www.syenta.com.",
+                                        "Organization Revenue Range":  "$1M to $10M",
+                                        "Total Funding Amount":  "54300000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "37571169",
+                                        "Funding Status":  "Early Stage Venture",
+                                        "Lead Investors":  "Investible",
+                                        "Investor Names":  "Blackbird Ventures, Brindabella Capital, Investible, IQT, Jelix Ventures, OIF Ventures, Salus Ventures, SGInnovate, TreeArc Investment Group",
+                                        "Number of Investors":  "9",
+                                        "Number of Partner Investors":  "2"
+                                    },
+                 "investee_name_raw":  "Syenta",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://www.syenta.com.",
+                 "org_industries_raw":  "Manufacturing, Semiconductor",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-08-12",
+                 "money_raised_raw":  "8800000",
+                 "amount":  8800000,
+                 "currency":  "AUD",
+                 "amount_usd":  5746233,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "54300000",
+                 "investor_names_raw":  "Blackbird Ventures, Brindabella Capital, Investible, IQT, Jelix Ventures, OIF Ventures, Salus Ventures, SGInnovate, TreeArc Investment Group",
+                 "lead_investor_names_raw":  "Investible",
+                 "imported_at":  "2026-07-30T14:07:05.2090590+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "stage_mismatch",
+                 "verification_source_url":  "https://www.investible.com/blog-category/investment-notes",
+                 "verification_notes":  "Lead investor Investible lists an A$8.8m pre-Series A with the imported institutional syndicate.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:syenta"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:syenta-seed--a99c6993"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Import classifies the transaction as Seed; investor source calls it pre-Series A."
+                              ]
+               }
+}

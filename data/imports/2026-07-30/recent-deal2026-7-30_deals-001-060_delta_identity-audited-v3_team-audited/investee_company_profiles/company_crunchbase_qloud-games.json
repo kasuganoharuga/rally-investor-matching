@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:qloud-games",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Qloud Games",
+                 "website_url":  "https://loftia.gg",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "New South Wales",
+                 "hq_city":  "Sydney",
+                 "is_anz":  true,
+                 "sector_primary":  "gaming",
+                 "sector_secondary":  "online_worlds",
+                 "use_case_primary":  "cozy_mmo_game_development",
+                 "use_case_secondary":  [
+                                            "community_driven_virtual_world",
+                                            "online_social_gameplay"
+                                        ],
+                 "customer_type":  "consumer",
+                 "business_model":  "game_sales_and_in_app_purchases",
+                 "sales_motion":  "community_led",
+                 "technology_depth":  "conventional_software",
+                 "ai_relevance":  "none",
+                 "ai_usage_type":  "not_applicable",
+                 "ai_core_or_enabler":  "not_core",
+                 "company_summary":  "Qloud Games is an independent game studio with a vision to create Loftia, a cozy MMO that emphasizes community.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/qloud-games-seed--2ab319cb",
+                                     "https://www.crunchbase.com/organization/qloud-games",
+                                     "https://loftia.gg"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:qloud-games-seed--2ab319cb"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

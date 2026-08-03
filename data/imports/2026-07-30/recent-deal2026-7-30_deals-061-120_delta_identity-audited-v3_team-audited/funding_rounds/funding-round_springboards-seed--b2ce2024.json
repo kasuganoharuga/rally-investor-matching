@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:springboards-seed--b2ce2024",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "springboards-seed--b2ce2024",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/springboards-seed--b2ce2024",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Springboards",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/springboards-seed--b2ce2024",
+                                        "Organization Location":  "Noosa, Queensland, Australia, Oceania",
+                                        "Organization Name":  "Springboards",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/springboards",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "5000000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "3158312",
+                                        "Announced Date":  "2025-02-13",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "20000000",
+                                        "Pre-Money Valuation Currency":  "AUD",
+                                        "Pre-Money Valuation (in USD)":  "12633249",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Springboards changes the creative process for professionals in the advertising field by integrating AI and human ingenuity.",
+                                        "Organization Industries":  "Advertising, Artificial Intelligence (AI), Information Technology",
+                                        "Organization Website":  "https://springboards.ai/news",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "5000000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "3158312",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Blackbird Ventures",
+                                        "Investor Names":  "Blackbird Ventures",
+                                        "Number of Investors":  "1",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "Springboards",
+                 "org_location_raw":  "Noosa, Queensland, Australia, Oceania",
+                 "org_website_raw":  "https://springboards.ai/news",
+                 "org_industries_raw":  "Advertising, Artificial Intelligence (AI), Information Technology",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-02-13",
+                 "money_raised_raw":  "5000000",
+                 "amount":  5000000,
+                 "currency":  "AUD",
+                 "amount_usd":  3158312,
+                 "pre_money_valuation_raw":  "20000000",
+                 "pre_money_valuation":  20000000,
+                 "valuation_currency":  "AUD",
+                 "valuation_usd":  12633249,
+                 "equity_only":  true,
+                 "total_funding_raw":  "5000000",
+                 "investor_names_raw":  "Blackbird Ventures",
+                 "lead_investor_names_raw":  "Blackbird Ventures",
+                 "imported_at":  "2026-07-30T14:07:04.9407830+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "verified_secondary",
+                 "verification_source_url":  "https://www.forbes.com.au/news/entrepreneurs/blackbird-vaults-ai-startup-springboards-forward-with-5m-seed-raise/",
+                 "verification_notes":  "Public coverage verifies a A$5m seed led by Blackbird.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:springboards"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:springboards-seed--b2ce2024"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Coverage is dated 4 Mar 2025; imported date is 13 Feb 2025."
+                              ]
+               }
+}

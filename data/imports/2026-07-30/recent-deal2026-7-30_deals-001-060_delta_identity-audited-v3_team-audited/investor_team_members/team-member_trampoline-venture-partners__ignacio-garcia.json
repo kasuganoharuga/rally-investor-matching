@@ -1,0 +1,39 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investor_team_members",
+    "record_key":  "investor_team_member:trampoline-venture-partners:ignacio-garcia",
+    "operation":  "upsert",
+    "data":  {
+                 "contact_id":  null,
+                 "first_name":  "Ignacio",
+                 "last_name":  "Garcia",
+                 "role_title":  "Founder",
+                 "seniority":  "founder",
+                 "linkedin_url":  null,
+                 "claimed_focus":  [
+                                       "pre-seed",
+                                       "Series B",
+                                       "family office"
+                                   ],
+                 "bio_summary":  "Founder of the private investment office backing companies from pre-seed through Series B.",
+                 "source_url":  "https://www.trampolinevp.com/",
+                 "retrieved_at":  "2026-07-30",
+                 "is_active":  true
+             },
+    "refs":  {
+                 "investor_key":  "investor:trampoline-venture-partners",
+                 "contact_key":  null
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:recent-deal2026-7-30:investor-team-audit",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "person_linkedin_not_verified"
+                              ]
+               }
+}

@@ -1,0 +1,49 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investors",
+    "record_key":  "investor:saab",
+    "operation":  "upsert",
+    "data":  {
+                 "canonical_name":  "Saab",
+                 "aliases":  [
+
+                             ],
+                 "investor_type":  "strategic_corporate",
+                 "investor_subtype":  "strategic_corporate",
+                 "eligibility_mode":  "none",
+                 "classification_confidence":  "high",
+                 "classification_evidence_urls":  [
+                                                      "https://www.saab.com/",
+                                                      "https://www.linkedin.com/company/saab"
+                                                  ],
+                 "classified_at":  "2026-07-30",
+                 "website_url":  "https://www.saab.com/",
+                 "linkedin_url":  "https://www.linkedin.com/company/saab",
+                 "hq_country":  "SE",
+                 "hq_state":  "Stockholm County",
+                 "hq_city":  "Stockholm",
+                 "offices":  [
+
+                             ],
+                 "status":  "active",
+                 "merged_into_id":  null,
+                 "review_status":  "reviewed",
+                 "last_reviewed_at":  "2026-07-30",
+                 "last_reviewed_by":  "codex-investor-identity-audit"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:scoped:recent-deal2026-7-30_deals-061-120",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

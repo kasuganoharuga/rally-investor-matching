@@ -1,0 +1,31 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "deal_investors",
+    "record_key":  "deal_investor:crunchbase:levur-pre-seed--18678e06:sparklabs-cultiv8",
+    "operation":  "upsert",
+    "data":  {
+                 "raw_name":  "SparkLabs Cultiv8",
+                 "role":  "participant",
+                 "participation_status":  "unknown",
+                 "resolution":  "resolved",
+                 "resolution_confidence":  "high",
+                 "identity_resolution":  "new_investor"
+             },
+    "refs":  {
+                 "deal_key":  "funding_round:crunchbase:levur-pre-seed--18678e06",
+                 "investor_key":  "investor:sparklabs-cultiv8",
+                 "raw_investor_candidate_key":  "raw_investor_candidate:sparklabs-cultiv8"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:levur-pre-seed--18678e06"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

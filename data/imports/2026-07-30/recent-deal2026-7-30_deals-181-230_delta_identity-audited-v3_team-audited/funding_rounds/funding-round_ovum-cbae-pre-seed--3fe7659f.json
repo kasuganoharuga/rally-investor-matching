@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:ovum-cbae-pre-seed--3fe7659f",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "ovum-cbae-pre-seed--3fe7659f",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/ovum-cbae-pre-seed--3fe7659f",
+                 "source_payload":  {
+                                        "Transaction Name":  "Pre Seed Round - Ovum",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/ovum-cbae-pre-seed--3fe7659f",
+                                        "Organization Location":  "Malvern, Victoria, Australia, Oceania",
+                                        "Organization Name":  "Ovum",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/ovum-cbae",
+                                        "Funding Type":  "Pre-Seed",
+                                        "Money Raised":  "1700000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "1062398",
+                                        "Announced Date":  "2025-02-04",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Ovum is a health technology platform described as an intelligent health journal and AI assistant designed specifically for women.",
+                                        "Organization Industries":  "Apps, Artificial Intelligence (AI), Enterprise Software, Health Care",
+                                        "Organization Website":  "https://www.askovum.com",
+                                        "Organization Revenue Range":  "$1M to $10M",
+                                        "Total Funding Amount":  "5760000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "3901068",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Giant Leap Fund",
+                                        "Investor Names":  "Antler, Casey Cosh, Giant Leap Fund, LaunchVic, Nakatomi, Nick Engerer, Tim Cosh, TreeArc Investment Group, VentureStudio",
+                                        "Number of Investors":  "9",
+                                        "Number of Partner Investors":  "3"
+                                    },
+                 "investee_name_raw":  "Ovum",
+                 "org_location_raw":  "Malvern, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://www.askovum.com",
+                 "org_industries_raw":  "Apps, Artificial Intelligence (AI), Enterprise Software, Health Care",
+                 "round_type_raw":  "Pre-Seed",
+                 "round_stage":  "pre_seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-02-04",
+                 "money_raised_raw":  "1700000",
+                 "amount":  1700000,
+                 "currency":  "AUD",
+                 "amount_usd":  1062398,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "5760000",
+                 "investor_names_raw":  "Antler, Casey Cosh, Giant Leap Fund, LaunchVic, Nakatomi, Nick Engerer, Tim Cosh, TreeArc Investment Group, VentureStudio",
+                 "lead_investor_names_raw":  "Giant Leap Fund",
+                 "imported_at":  "2026-07-30T14:07:05.7641790+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "partially_verified",
+                 "verification_source_url":  "https://www.antler.co/location/australia",
+                 "verification_notes":  "Imported investor group and A$1.7m pre-seed are consistent with public ecosystem reporting, while Antler confirms its Australian early-stage program.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:ovum-cbae"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:ovum-cbae-pre-seed--3fe7659f"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "An exact primary company announcement was not located in this pass."
+                              ]
+               }
+}

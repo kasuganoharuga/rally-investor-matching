@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:space-colab",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Space Colab",
+                 "website_url":  "https://www.spacecolab.co/",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "Victoria",
+                 "hq_city":  "Geelong",
+                 "is_anz":  true,
+                 "sector_primary":  "cybersecurity",
+                 "sector_secondary":  "post_quantum_cryptography",
+                 "use_case_primary":  "post_quantum_secure_communications",
+                 "use_case_secondary":  [
+                                            "critical_infrastructure_security",
+                                            "space_and_government_communications"
+                                        ],
+                 "customer_type":  "enterprise_and_government",
+                 "business_model":  "technology_licensing_and_contracts",
+                 "sales_motion":  "enterprise_top_down",
+                 "technology_depth":  "deep_tech_research",
+                 "ai_relevance":  "none",
+                 "ai_usage_type":  "not_applicable",
+                 "ai_core_or_enabler":  "not_core",
+                 "company_summary":  "Space Colab develops post-quantum secure communications for government, critical infrastructure, health, finance and space sectors.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/space-colab-pre-seed--6b4b3b0f",
+                                     "https://www.crunchbase.com/organization/space-colab",
+                                     "https://www.spacecolab.co/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:space-colab-pre-seed--6b4b3b0f"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

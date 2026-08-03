@@ -1,0 +1,39 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investor_team_members",
+    "record_key":  "investor_team_member:1up-ventures:mike-cunningham",
+    "operation":  "upsert",
+    "data":  {
+                 "contact_id":  null,
+                 "first_name":  "Mike",
+                 "last_name":  "Cunningham",
+                 "role_title":  "Equal Partner",
+                 "seniority":  "partner",
+                 "linkedin_url":  null,
+                 "claimed_focus":  [
+                                       "founders",
+                                       "venture capital",
+                                       "technology recruitment"
+                                   ],
+                 "bio_summary":  "Public partner profile lists founder, ventures and technology recruitment experience.",
+                 "source_url":  "https://1up.vc/",
+                 "retrieved_at":  "2026-07-30",
+                 "is_active":  true
+             },
+    "refs":  {
+                 "investor_key":  "investor:1up-ventures",
+                 "contact_key":  null
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:recent-deal2026-7-30:investor-team-audit",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "person_linkedin_not_verified"
+                              ]
+               }
+}

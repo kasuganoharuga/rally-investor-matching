@@ -1,0 +1,48 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investors",
+    "record_key":  "investor:comcast-nbcuniversal-sportstech",
+    "operation":  "upsert",
+    "data":  {
+                 "canonical_name":  "Comcast NBCUniversal SportsTech",
+                 "aliases":  [
+
+                             ],
+                 "investor_type":  "strategic_corporate",
+                 "investor_subtype":  "accelerator_operator",
+                 "eligibility_mode":  "conditional",
+                 "classification_confidence":  "medium",
+                 "classification_evidence_urls":  [
+                                                      "https://www.comcastsportstech.com/"
+                                                  ],
+                 "classified_at":  "2026-07-30",
+                 "website_url":  "https://www.comcastsportstech.com/",
+                 "linkedin_url":  null,
+                 "hq_country":  "US",
+                 "hq_state":  "Pennsylvania",
+                 "hq_city":  "Philadelphia",
+                 "offices":  [
+
+                             ],
+                 "status":  "active",
+                 "merged_into_id":  null,
+                 "review_status":  "needs_more_data",
+                 "last_reviewed_at":  "2026-07-30",
+                 "last_reviewed_by":  "codex-investor-identity-audit"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:scoped:recent-deal2026-7-30_deals-061-120",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "No unique official LinkedIn company profile could be confirmed; namesake results were rejected."
+                              ]
+               }
+}

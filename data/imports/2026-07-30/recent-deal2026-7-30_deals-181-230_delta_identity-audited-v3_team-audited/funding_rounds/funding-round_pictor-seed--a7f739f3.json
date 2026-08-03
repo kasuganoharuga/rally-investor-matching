@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:pictor-seed--a7f739f3",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "pictor-seed--a7f739f3",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/pictor-seed--a7f739f3",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Pictor",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/pictor-seed--a7f739f3",
+                                        "Organization Location":  "Parnell, Auckland, New Zealand, Oceania",
+                                        "Organization Name":  "Pictor",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/pictor",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "5000000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "5000000",
+                                        "Announced Date":  "2025-05-22",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Pictor is a biotechnology company that develops, manufactures, and markets immunodiagnostic products.",
+                                        "Organization Industries":  "Biotechnology, Health Care, Health Diagnostics, Manufacturing, Product Design, Product Research, Veterinary",
+                                        "Organization Website":  "https://www.pictordx.com",
+                                        "Organization Revenue Range":  "$1M to $10M",
+                                        "Total Funding Amount":  "23765680",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "23765680",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "",
+                                        "Number of Investors":  "",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "Pictor",
+                 "org_location_raw":  "Parnell, Auckland, New Zealand, Oceania",
+                 "org_website_raw":  "https://www.pictordx.com",
+                 "org_industries_raw":  "Biotechnology, Health Care, Health Diagnostics, Manufacturing, Product Design, Product Research, Veterinary",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-05-22",
+                 "money_raised_raw":  "5000000",
+                 "amount":  5000000,
+                 "currency":  "USD",
+                 "amount_usd":  5000000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "23765680",
+                 "investor_names_raw":  null,
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:05.7846751+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "verified_secondary",
+                 "verification_source_url":  "https://arcxp-prod.genomeweb.com/proteomics-protein-research/pictor-raises-5m-funding-support-expansion-us",
+                 "verification_notes":  "Industry coverage reports US$5m seed funding on 22 May 2025 for US expansion.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:pictor"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:pictor-seed--a7f739f3"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Investor identities were not publicly disclosed in the cited report."
+                              ]
+               }
+}

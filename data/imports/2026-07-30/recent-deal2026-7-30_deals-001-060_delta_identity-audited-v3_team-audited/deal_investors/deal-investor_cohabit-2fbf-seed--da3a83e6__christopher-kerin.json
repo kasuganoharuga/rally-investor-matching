@@ -1,0 +1,31 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "deal_investors",
+    "record_key":  "deal_investor:crunchbase:cohabit-2fbf-seed--da3a83e6:christopher-kerin",
+    "operation":  "upsert",
+    "data":  {
+                 "raw_name":  "Christopher Kerin",
+                 "role":  "lead",
+                 "participation_status":  "unknown",
+                 "resolution":  "resolved",
+                 "resolution_confidence":  "high",
+                 "identity_resolution":  "new_investor"
+             },
+    "refs":  {
+                 "deal_key":  "funding_round:crunchbase:cohabit-2fbf-seed--da3a83e6",
+                 "investor_key":  "investor:christopher-kerin",
+                 "raw_investor_candidate_key":  "raw_investor_candidate:christopher-kerin"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:cohabit-2fbf-seed--da3a83e6"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

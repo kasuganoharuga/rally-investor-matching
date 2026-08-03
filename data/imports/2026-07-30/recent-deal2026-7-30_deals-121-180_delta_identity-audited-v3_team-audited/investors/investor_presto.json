@@ -1,0 +1,50 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investors",
+    "record_key":  "investor:presto",
+    "operation":  "upsert",
+    "data":  {
+                 "canonical_name":  "Presto",
+                 "aliases":  [
+
+                             ],
+                 "investor_type":  "other",
+                 "investor_subtype":  "unclassified",
+                 "eligibility_mode":  "unknown",
+                 "classification_confidence":  "high",
+                 "classification_evidence_urls":  [
+                                                      "https://www.prestolabs.io/",
+                                                      "https://www.linkedin.com/company/presto-official",
+                                                      "https://www.icandy.io/project/operational-update-zkcandy-raises-us4m-in-seed-funding-led-by-institutional-investors/"
+                                                  ],
+                 "classified_at":  "2026-07-30",
+                 "website_url":  "https://www.prestolabs.io/",
+                 "linkedin_url":  "https://www.linkedin.com/company/presto-official",
+                 "hq_country":  "SG",
+                 "hq_state":  null,
+                 "hq_city":  "Singapore",
+                 "offices":  [
+
+                             ],
+                 "status":  "active",
+                 "merged_into_id":  null,
+                 "review_status":  "reviewed",
+                 "last_reviewed_at":  "2026-07-30",
+                 "last_reviewed_by":  "codex-investor-identity-gap-supplement"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:scoped:recent-deal2026-7-30_deals-121-180",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Headquarters state or region is not separately disclosed or is not applicable to the jurisdiction."
+                              ]
+               }
+}

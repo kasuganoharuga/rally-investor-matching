@@ -1,0 +1,49 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investors",
+    "record_key":  "investor:ether-fi",
+    "operation":  "upsert",
+    "data":  {
+                 "canonical_name":  "ether.fi",
+                 "aliases":  [
+
+                             ],
+                 "investor_type":  "strategic_corporate",
+                 "investor_subtype":  "strategic_corporate",
+                 "eligibility_mode":  "none",
+                 "classification_confidence":  "high",
+                 "classification_evidence_urls":  [
+                                                      "https://www.ether.fi/",
+                                                      "https://www.linkedin.com/company/etherfi"
+                                                  ],
+                 "classified_at":  "2026-07-30",
+                 "website_url":  "https://www.ether.fi/",
+                 "linkedin_url":  "https://www.linkedin.com/company/etherfi",
+                 "hq_country":  "KY",
+                 "hq_state":  "Grand Cayman",
+                 "hq_city":  "George Town",
+                 "offices":  [
+
+                             ],
+                 "status":  "active",
+                 "merged_into_id":  null,
+                 "review_status":  "reviewed",
+                 "last_reviewed_at":  "2026-07-30",
+                 "last_reviewed_by":  "codex-investor-identity-audit"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:scoped:recent-deal2026-7-30_deals-121-180",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

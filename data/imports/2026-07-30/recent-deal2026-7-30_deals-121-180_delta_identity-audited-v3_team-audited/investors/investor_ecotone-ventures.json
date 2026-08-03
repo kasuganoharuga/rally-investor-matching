@@ -1,0 +1,52 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investors",
+    "record_key":  "investor:ecotone-ventures",
+    "operation":  "upsert",
+    "data":  {
+                 "canonical_name":  "Ecotone Ventures",
+                 "aliases":  [
+
+                             ],
+                 "investor_type":  "vc_fund",
+                 "website_url":  "https://www.ecotonepartners.com.au/ecotone-ventures",
+                 "linkedin_url":  "https://www.linkedin.com/company/ecotone-partners",
+                 "hq_country":  "AU",
+                 "hq_state":  "New South Wales",
+                 "hq_city":  "Sydney",
+                 "offices":  [
+
+                             ],
+                 "status":  "active",
+                 "merged_into_id":  null,
+                 "review_status":  "reviewed",
+                 "last_reviewed_at":  "2026-07-30",
+                 "last_reviewed_by":  "codex-investor-identity-audit",
+                 "investor_subtype":  "venture_capital",
+                 "classification_confidence":  "high",
+                 "classification_source":  "current research evidence with explicit classification repair",
+                 "eligibility_mode":  "none",
+                 "classification_evidence_urls":  [
+                                                      "https://www.ecotonepartners.com.au/ecotone-ventures",
+                                                      "https://www.linkedin.com/company/ecotone-partners"
+                                                  ],
+                 "classified_at":  "2026-07-30"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:2026-07-24",
+                       "source_keys":  [
+                                           "research_source:ecotone-ventures:ecotone-ventures_src_official",
+                                           "research_source:ecotone-ventures:ecotone-ventures_src_linkedin",
+                                           "research_source:ecotone-ventures:ecotone-ventures_src_deal"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:lorikeet-seed--28087fae",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "lorikeet-seed--28087fae",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/lorikeet-seed--28087fae",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Lorikeet",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/lorikeet-seed--28087fae",
+                                        "Organization Location":  "Surry Hills, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "Lorikeet",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/lorikeet",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "9000000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "9000000",
+                                        "Announced Date":  "2025-02-04",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Lorikeet is a developer of an AI–powered customer support platform designed for fintechs, healthtechs, and other complex businesses.",
+                                        "Organization Industries":  "Artificial Intelligence (AI), Customer Service, Enterprise Applications",
+                                        "Organization Website":  "https://www.lorikeetcx.ai",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "49000000",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "49000000",
+                                        "Funding Status":  "Early Stage Venture",
+                                        "Lead Investors":  "Blackbird Ventures",
+                                        "Investor Names":  "Blackbird Ventures, Skip Capital, Square Peg Capital",
+                                        "Number of Investors":  "3",
+                                        "Number of Partner Investors":  "2"
+                                    },
+                 "investee_name_raw":  "Lorikeet",
+                 "org_location_raw":  "Surry Hills, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://www.lorikeetcx.ai",
+                 "org_industries_raw":  "Artificial Intelligence (AI), Customer Service, Enterprise Applications",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-02-04",
+                 "money_raised_raw":  "9000000",
+                 "amount":  9000000,
+                 "currency":  "USD",
+                 "amount_usd":  9000000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "49000000",
+                 "investor_names_raw":  "Blackbird Ventures, Skip Capital, Square Peg Capital",
+                 "lead_investor_names_raw":  "Blackbird Ventures",
+                 "imported_at":  "2026-07-30T14:07:05.7741775+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "verified_primary",
+                 "verification_source_url":  "https://www.prnewswire.com/news-releases/lorikeet-secures-9-million-in-additional-funding-as-market-demand-surges-for-its-ai-customer-support-agents-302368146.html",
+                 "verification_notes":  "Company-issued release verifies US$9m additional funding from Blackbird, Square Peg and Skip Capital on 4 Feb 2025.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:lorikeet"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:lorikeet-seed--28087fae"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

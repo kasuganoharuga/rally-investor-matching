@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:bovonic-seed--c7554b56",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "bovonic-seed--c7554b56",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/bovonic-seed--c7554b56",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Bovonic",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/bovonic-seed--c7554b56",
+                                        "Organization Location":  "Omanawa, Auckland, New Zealand, Oceania",
+                                        "Organization Name":  "Bovonic",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/bovonic",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "",
+                                        "Money Raised Currency":  "",
+                                        "Money Raised (in USD)":  "",
+                                        "Announced Date":  "2025-08-20",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Bovonic is an agriculture software developer that helps dairy farmers to enhance the productivity and profitability of their animals.",
+                                        "Organization Industries":  "Agriculture, AgTech, Farming, Manufacturing, Software",
+                                        "Organization Website":  "https://bovonic.com/",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "958242",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "958242",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "Pacific Channel",
+                                        "Number of Investors":  "1",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "Bovonic",
+                 "org_location_raw":  "Omanawa, Auckland, New Zealand, Oceania",
+                 "org_website_raw":  "https://bovonic.com/",
+                 "org_industries_raw":  "Agriculture, AgTech, Farming, Manufacturing, Software",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-08-20",
+                 "money_raised_raw":  null,
+                 "amount":  null,
+                 "currency":  null,
+                 "amount_usd":  null,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "958242",
+                 "investor_names_raw":  "Pacific Channel",
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:05.2430397+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "unverified_publicly",
+                 "verification_source_url":  "https://www.crunchbase.com/funding_round/bovonic-seed--c7554b56",
+                 "verification_notes":  "No exact independent public announcement was located in this pass. The imported transaction is retained for manual follow-up.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:bovonic"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:bovonic-seed--c7554b56"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact round amount/date/stage/investors not independently verified."
+                              ]
+               }
+}

@@ -1,0 +1,43 @@
+{
+    "status":  "passed",
+    "validated_at":  "2026-07-30T17:49:46.3875273+09:30",
+    "checks":  [
+                   "exactly_60_funding_rounds",
+                   "exactly_60_investee_profiles",
+                   "existing_investor_masters_not_reimported",
+                   "new_investor_masters_included_once",
+                   "all_deal_investors_reference_existing_or_new_canonical_keys",
+                   "historical_aliases_resolve_to_confirmed_prior_keys",
+                   "no_duplicate_semantic_deal_relations",
+                   "no_duplicate_record_keys",
+                   "no_null_review_issues",
+                   "all_payload_records_are_upserts",
+                   "all_new_investors_have_classified_at",
+                   "all_null_identity_fields_have_field_level_audit_reasons",
+                   "official_identity_urls_cross_checked_against_deal_context",
+                   "unicode_format_controls_removed",
+                   "team_member_record_keys_unique",
+                   "team_member_investor_refs_resolve_within_package",
+                   "team_member_sources_present",
+                   "institution_level_team_coverage_status_recorded",
+                   "all_60_investees_have_primary_and_secondary_sector",
+                   "all_60_investees_have_primary_and_secondary_use_case",
+                   "all_60_investees_have_customer_business_model_and_sales_motion",
+                   "all_60_investees_have_technology_and_ai_classification",
+                   "investee_business_classification_audit_present",
+                   "investor_identity_gap_supplement_applied",
+                   "supplemental_identity_evidence_preserved",
+                   "ambiguous_investor_names_not_force_filled"
+               ],
+    "errors":  [
+
+               ],
+    "warnings":  [
+                     "The target database must already contain every key listed in scope.existing_database_investor_keys.",
+                     "Remaining nulls are field-level documented in investor_identity_audit.json and must not be interpreted as negative evidence.",
+                     "Individual angel headquarters values are intentionally not inferred from personal information.",
+                     "Institutions without a verified public core member remain explicit gaps in investor_team_audit.json.",
+                     "A null personal LinkedIn URL means it was not uniquely verified, not that no profile exists.",
+                     "Investee LinkedIn URL is not supported by the current investee_company_profiles import contract and remains a schema gap."
+                 ]
+}

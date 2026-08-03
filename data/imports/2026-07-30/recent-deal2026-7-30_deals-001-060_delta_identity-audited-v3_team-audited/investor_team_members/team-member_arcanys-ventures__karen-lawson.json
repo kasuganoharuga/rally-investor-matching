@@ -1,0 +1,40 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investor_team_members",
+    "record_key":  "investor_team_member:arcanys-ventures:karen-lawson",
+    "operation":  "upsert",
+    "data":  {
+                 "contact_id":  null,
+                 "first_name":  "Karen",
+                 "last_name":  "Lawson",
+                 "role_title":  "Managing Director AUNZ",
+                 "seniority":  "managing_director",
+                 "linkedin_url":  null,
+                 "claimed_focus":  [
+                                       "technology",
+                                       "growth",
+                                       "Australia",
+                                       "New Zealand"
+                                   ],
+                 "bio_summary":  "Managing director for Australia and New Zealand with technology, venture capital and growth leadership experience.",
+                 "source_url":  "https://ventures.arcanys.com/about-us",
+                 "retrieved_at":  "2026-07-30",
+                 "is_active":  true
+             },
+    "refs":  {
+                 "investor_key":  "investor:arcanys-ventures",
+                 "contact_key":  null
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:recent-deal2026-7-30:investor-team-audit",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "person_linkedin_not_verified"
+                              ]
+               }
+}

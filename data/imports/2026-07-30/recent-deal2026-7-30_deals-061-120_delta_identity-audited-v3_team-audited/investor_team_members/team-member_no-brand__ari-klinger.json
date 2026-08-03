@@ -1,0 +1,39 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investor_team_members",
+    "record_key":  "investor_team_member:no-brand:ari-klinger",
+    "operation":  "upsert",
+    "data":  {
+                 "contact_id":  null,
+                 "first_name":  "Ari",
+                 "last_name":  "Klinger",
+                 "role_title":  "Founder and Investor",
+                 "seniority":  "founder",
+                 "linkedin_url":  "https://au.linkedin.com/in/ariklinger",
+                 "claimed_focus":  [
+                                       "technology",
+                                       "growth companies",
+                                       "funds"
+                                   ],
+                 "bio_summary":  "Co-founder and investor at the Sydney private investment company.",
+                 "source_url":  "https://www.nbrnd.com/about",
+                 "retrieved_at":  "2026-07-30",
+                 "is_active":  true
+             },
+    "refs":  {
+                 "investor_key":  "investor:no-brand",
+                 "contact_key":  null
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:recent-deal2026-7-30:investor-team-audit",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

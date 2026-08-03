@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:imitation-machines",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Imitation Machines",
+                 "website_url":  "https://imitationmachines.com/",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "New South Wales",
+                 "hq_city":  "Sydney",
+                 "is_anz":  true,
+                 "sector_primary":  "robotics",
+                 "sector_secondary":  "artificial_intelligence",
+                 "use_case_primary":  "robot_learning_by_imitation",
+                 "use_case_secondary":  [
+                                            "autonomous_skill_acquisition",
+                                            "robot_behaviour_training"
+                                        ],
+                 "customer_type":  "enterprise",
+                 "business_model":  "licensing_and_software",
+                 "sales_motion":  "enterprise_top_down",
+                 "technology_depth":  "deep_tech",
+                 "ai_relevance":  "ai_native",
+                 "ai_usage_type":  "robotics_autonomy",
+                 "ai_core_or_enabler":  "core_product",
+                 "company_summary":  "Imitation Machines empower robots to learn and master their behavior by observing others and honing their skills through practice.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/imitation-machines-seed--f9e6e800",
+                                     "https://www.crunchbase.com/organization/imitation-machines",
+                                     "https://imitationmachines.com/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:imitation-machines-seed--f9e6e800"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

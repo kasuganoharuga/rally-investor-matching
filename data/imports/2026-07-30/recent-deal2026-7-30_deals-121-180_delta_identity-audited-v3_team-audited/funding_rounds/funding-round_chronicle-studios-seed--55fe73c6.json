@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:chronicle-studios-seed--55fe73c6",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "chronicle-studios-seed--55fe73c6",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/chronicle-studios-seed--55fe73c6",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Chronicle Studios",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/chronicle-studios-seed--55fe73c6",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "Chronicle Studios",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/chronicle-studios",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "11600000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "11600000",
+                                        "Announced Date":  "2025-06-24",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Chronicle Studios operates as an entertainment company.",
+                                        "Organization Industries":  "Artificial Intelligence (AI), Audio, Media and Entertainment",
+                                        "Organization Website":  "https://www.chronicle.studio",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "11600000",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "11600000",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Patron, Point72 Ventures",
+                                        "Investor Names":  "Patron, Point72 Ventures, Sands Capital Ventures, Z Venture Capital",
+                                        "Number of Investors":  "4",
+                                        "Number of Partner Investors":  "2"
+                                    },
+                 "investee_name_raw":  "Chronicle Studios",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://www.chronicle.studio",
+                 "org_industries_raw":  "Artificial Intelligence (AI), Audio, Media and Entertainment",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-06-24",
+                 "money_raised_raw":  "11600000",
+                 "amount":  11600000,
+                 "currency":  "USD",
+                 "amount_usd":  11600000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "11600000",
+                 "investor_names_raw":  "Patron, Point72 Ventures, Sands Capital Ventures, Z Venture Capital",
+                 "lead_investor_names_raw":  "Patron, Point72 Ventures",
+                 "imported_at":  "2026-07-30T14:07:05.3444695+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "verified_primary",
+                 "verification_source_url":  "https://www.businesswire.com/news/home/20250624439001/en/Chronicle-Studios-Raises-an-Oversubscribed-%2411.6M-Seed-Round-to-Supercharge-Original-Franchise-Creation",
+                 "verification_notes":  "Company-issued release verifies US$11.6m seed led by Patron and Point72 with Sands and Z Ventures on 24 Jun 2025.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:chronicle-studios"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:chronicle-studios-seed--55fe73c6"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

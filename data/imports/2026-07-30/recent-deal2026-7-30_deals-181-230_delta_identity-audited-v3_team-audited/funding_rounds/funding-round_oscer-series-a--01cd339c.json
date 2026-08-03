@@ -1,0 +1,83 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:oscer-series-a--01cd339c",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "oscer-series-a--01cd339c",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/oscer-series-a--01cd339c",
+                 "source_payload":  {
+                                        "Transaction Name":  "Series A - Heidi Health",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/oscer-series-a--01cd339c",
+                                        "Organization Location":  "Cremorne, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "Heidi Health",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/oscer",
+                                        "Funding Type":  "Series A",
+                                        "Money Raised":  "16600000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "16600000",
+                                        "Announced Date":  "2025-03-03",
+                                        "Funding Stage":  "Early Stage Venture",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Heidi Health is a healthtech company that develops an AI medical scribe platform that automates clinical documentation and related tasks.",
+                                        "Organization Industries":  "Artificial Intelligence (AI), Business Process Automation (BPA), Health Care, Software",
+                                        "Organization Website":  "https://www.heidihealth.com",
+                                        "Organization Revenue Range":  "$10M to $50M",
+                                        "Total Funding Amount":  "91550779",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "91550779",
+                                        "Funding Status":  "Early Stage Venture",
+                                        "Lead Investors":  "Headline",
+                                        "Investor Names":  "Aerion Partners, Anthropic, Archangel Ventures, Blackbird Ventures, Headline, HESTA, LocalGlobe, Menlo Ventures, Possible Ventures",
+                                        "Number of Investors":  "9",
+                                        "Number of Partner Investors":  "4"
+                                    },
+                 "investee_name_raw":  "Heidi Health",
+                 "org_location_raw":  "Cremorne, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://www.heidihealth.com",
+                 "org_industries_raw":  "Artificial Intelligence (AI), Business Process Automation (BPA), Health Care, Software",
+                 "round_type_raw":  "Series A",
+                 "round_stage":  "series_a",
+                 "funding_stage_raw":  "Early Stage Venture",
+                 "announced_date":  "2025-03-03",
+                 "money_raised_raw":  "16600000",
+                 "amount":  16600000,
+                 "currency":  "USD",
+                 "amount_usd":  16600000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "91550779",
+                 "investor_names_raw":  "Aerion Partners, Anthropic, Archangel Ventures, Blackbird Ventures, Headline, HESTA, LocalGlobe, Menlo Ventures, Possible Ventures",
+                 "lead_investor_names_raw":  "Headline",
+                 "imported_at":  "2026-07-30T14:07:05.6211268+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "verified_secondary",
+                 "verification_source_url":  "https://www.finsmes.com/2025/03/heidi-health-raises-usd-16-6m-in-funding.html",
+                 "verification_notes":  "Public coverage verifies US$16.6m Series A follow-on led by Headline with LocalGlobe, Anthology, Blackbird, HESTA, Possible and Archangel.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:oscer"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:oscer-series-a--01cd339c"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Public announcement coverage is dated 7 Mar 2025; import is dated 3 Mar 2025.",
+                                  "Anthropic and Menlo exposure is via the Anthology fund rather than necessarily direct investments."
+                              ]
+               }
+}

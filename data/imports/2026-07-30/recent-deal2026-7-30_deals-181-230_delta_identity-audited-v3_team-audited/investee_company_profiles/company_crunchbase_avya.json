@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:avya",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Avya",
+                 "website_url":  "https://www.theavyproject.io/",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "Victoria",
+                 "hq_city":  "Melbourne",
+                 "is_anz":  true,
+                 "sector_primary":  "education_technology",
+                 "sector_secondary":  "web3",
+                 "use_case_primary":  "gamified_learning_platform",
+                 "use_case_secondary":  [
+                                            "blockchain_credentials",
+                                            "ai_personalised_learning"
+                                        ],
+                 "customer_type":  "consumer_and_education_provider",
+                 "business_model":  "subscription_and_token_economy",
+                 "sales_motion":  "product_led_and_community",
+                 "technology_depth":  "blockchain",
+                 "ai_relevance":  "ai_enabled",
+                 "ai_usage_type":  "personalisation_and_recommendations",
+                 "ai_core_or_enabler":  "feature_layer",
+                 "company_summary":  "The Avy Project is a blockchain-enabled, AI-powered, gamified learning platform born in Melbourne (founded in 2022).",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/avya-pre-seed--7715f7b6",
+                                     "https://www.crunchbase.com/organization/avya",
+                                     "https://www.theavyproject.io/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "medium"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:avya-pre-seed--7715f7b6"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

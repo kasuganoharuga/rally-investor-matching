@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:hypersonix-launch-systems",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Hypersonix Launch Systems",
+                 "website_url":  "https://www.hypersonix.com/",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "New South Wales",
+                 "hq_city":  "Sydney",
+                 "is_anz":  true,
+                 "sector_primary":  "aerospace",
+                 "sector_secondary":  "hypersonic_propulsion",
+                 "use_case_primary":  "scramjet_engine_development",
+                 "use_case_secondary":  [
+                                            "hypersonic_vehicle_systems",
+                                            "high_speed_flight_testing"
+                                        ],
+                 "customer_type":  "enterprise_and_government",
+                 "business_model":  "hardware_and_development_contracts",
+                 "sales_motion":  "enterprise_top_down",
+                 "technology_depth":  "deep_tech_hardware",
+                 "ai_relevance":  "none",
+                 "ai_usage_type":  "not_applicable",
+                 "ai_core_or_enabler":  "not_core",
+                 "company_summary":  "Hypersonix Launch Systems specializes in hypersonic technology and scramjet engines in the global market.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/hypersonix-launch-systems-series-a--03046d3f",
+                                     "https://www.crunchbase.com/organization/hypersonix-launch-systems",
+                                     "https://www.hypersonix.com/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:hypersonix-launch-systems-series-a--03046d3f"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

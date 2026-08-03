@@ -1,0 +1,37 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investor_team_members",
+    "record_key":  "investor_team_member:ecotone-ventures:andrew-loh",
+    "operation":  "upsert",
+    "data":  {
+                 "contact_id":  null,
+                 "first_name":  "Andrew",
+                 "last_name":  "Loh",
+                 "role_title":  "Investment team",
+                 "seniority":  "other",
+                 "linkedin_url":  null,
+                 "claimed_focus":  [
+                                       "climate_venture_capital"
+                                   ],
+                 "bio_summary":  "Public investment-relevant person associated with Ecotone Ventures / Ecotone Partners.",
+                 "source_url":  "https://www.ecotonepartners.com.au/ecotone-ventures",
+                 "retrieved_at":  "2026-07-22",
+                 "is_active":  true
+             },
+    "refs":  {
+                 "investor_key":  "investor:ecotone-ventures",
+                 "contact_key":  null
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:2026-07-24",
+                       "source_keys":  [
+                                           "research_source:ecotone-ventures:ecotone-ventures_src_official"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

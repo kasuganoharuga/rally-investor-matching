@@ -1,0 +1,52 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investors",
+    "record_key":  "investor:fund-wa",
+    "operation":  "upsert",
+    "data":  {
+                 "canonical_name":  "Fund WA",
+                 "aliases":  [
+
+                             ],
+                 "investor_type":  "vc_fund",
+                 "website_url":  "https://www.fundwa.com.au/",
+                 "linkedin_url":  "https://www.linkedin.com/company/fundwa",
+                 "hq_country":  "AU",
+                 "hq_state":  "Western Australia",
+                 "hq_city":  "Perth",
+                 "offices":  [
+
+                             ],
+                 "status":  "active",
+                 "merged_into_id":  null,
+                 "review_status":  "reviewed",
+                 "last_reviewed_at":  "2026-07-30",
+                 "last_reviewed_by":  "codex-investor-identity-audit",
+                 "investor_subtype":  "venture_capital",
+                 "classification_confidence":  "high",
+                 "classification_source":  "current research entity_type_raw mapping",
+                 "eligibility_mode":  "none",
+                 "classification_evidence_urls":  [
+                                                      "https://www.fundwa.com.au/",
+                                                      "https://www.linkedin.com/company/fundwa"
+                                                  ],
+                 "classified_at":  "2026-07-30"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:2026-07-24",
+                       "source_keys":  [
+                                           "research_source:fund-wa:fund-wa_src_official",
+                                           "research_source:fund-wa:fund-wa_src_deal_g-round-crunchbase-personr-seed-9ab28d2d",
+                                           "research_source:fund-wa:fund-wa_src_recent_result"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

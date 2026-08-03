@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:auggie",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Auggie",
+                 "website_url":  "https://auggieai.com.au/",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "New South Wales",
+                 "hq_city":  "Sydney",
+                 "is_anz":  true,
+                 "sector_primary":  "dental_technology",
+                 "sector_secondary":  "patient_engagement",
+                 "use_case_primary":  "dental_patient_recall_automation",
+                 "use_case_secondary":  [
+                                            "appointment_scheduling",
+                                            "patient_retention"
+                                        ],
+                 "customer_type":  "healthcare_provider",
+                 "business_model":  "subscription_saas",
+                 "sales_motion":  "enterprise_top_down",
+                 "technology_depth":  "applied_ai",
+                 "ai_relevance":  "ai_native",
+                 "ai_usage_type":  "workflow_automation",
+                 "ai_core_or_enabler":  "core_product",
+                 "company_summary":  "Auggie is an AI platform automating patient engagement and appointment recalls to help dental clinics retain patients.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/auggie-seed--668d60c2",
+                                     "https://www.crunchbase.com/organization/auggie",
+                                     "https://auggieai.com.au/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:auggie-seed--668d60c2"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

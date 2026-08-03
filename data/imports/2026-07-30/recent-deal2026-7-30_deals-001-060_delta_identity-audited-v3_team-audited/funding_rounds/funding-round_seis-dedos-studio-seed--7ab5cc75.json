@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:seis-dedos-studio-seed--7ab5cc75",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "seis-dedos-studio-seed--7ab5cc75",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/seis-dedos-studio-seed--7ab5cc75",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Seis Dedos Studio",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/seis-dedos-studio-seed--7ab5cc75",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "Seis Dedos Studio",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/seis-dedos-studio",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "",
+                                        "Money Raised Currency":  "",
+                                        "Money Raised (in USD)":  "",
+                                        "Announced Date":  "2025-04-07",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Estudio Seis Dedos is as a creative studio that develops ideas through multidisciplinary design work.",
+                                        "Organization Industries":  "Advertising, Animation, Digital Marketing, Graphic Design, Photo Editing, Video Editing, Web Development",
+                                        "Organization Website":  "http://estudioseisdedos.com/index.php",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "",
+                                        "Total Funding Amount Currency":  "",
+                                        "Total Funding Amount (in USD)":  "",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Banco Popular de Puerto Rico",
+                                        "Investor Names":  "Banco Popular de Puerto Rico",
+                                        "Number of Investors":  "1",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "Seis Dedos Studio",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "http://estudioseisdedos.com/index.php",
+                 "org_industries_raw":  "Advertising, Animation, Digital Marketing, Graphic Design, Photo Editing, Video Editing, Web Development",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-04-07",
+                 "money_raised_raw":  null,
+                 "amount":  null,
+                 "currency":  null,
+                 "amount_usd":  null,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  null,
+                 "investor_names_raw":  "Banco Popular de Puerto Rico",
+                 "lead_investor_names_raw":  "Banco Popular de Puerto Rico",
+                 "imported_at":  "2026-07-30T14:07:04.5193243+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "classification_review",
+                 "verification_source_url":  "https://newsismybusiness.com/santurce-businesses-get-40k-in-seed-capital-through-nuestro-barrio/",
+                 "verification_notes":  "Public report describes Banco Popular seed-capital grants totaling US$40k across nine businesses, including Seis Dedos.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:seis-dedos-studio"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:seis-dedos-studio-seed--7ab5cc75"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "May be a grant/accelerator award rather than a conventional venture Seed round."
+                              ]
+               }
+}

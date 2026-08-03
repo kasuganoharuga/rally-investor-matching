@@ -1,0 +1,39 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investor_team_members",
+    "record_key":  "investor_team_member:nakatomi:mike-dunn",
+    "operation":  "upsert",
+    "data":  {
+                 "contact_id":  null,
+                 "first_name":  "Mike",
+                 "last_name":  "Dunn",
+                 "role_title":  "Head of Growth and Venture Partner",
+                 "seniority":  "partner",
+                 "linkedin_url":  null,
+                 "claimed_focus":  [
+                                       "growth",
+                                       "go-to-market",
+                                       "venture building"
+                                   ],
+                 "bio_summary":  "Venture partner responsible for growth, go-to-market and enterprise strategy.",
+                 "source_url":  "https://nakatomi.com/who-we-are",
+                 "retrieved_at":  "2026-07-30",
+                 "is_active":  true
+             },
+    "refs":  {
+                 "investor_key":  "investor:nakatomi",
+                 "contact_key":  null
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:recent-deal2026-7-30:investor-team-audit",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "person_linkedin_not_verified"
+                              ]
+               }
+}

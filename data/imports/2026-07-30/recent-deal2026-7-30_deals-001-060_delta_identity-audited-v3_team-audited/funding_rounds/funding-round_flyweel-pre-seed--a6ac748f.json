@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:flyweel-pre-seed--a6ac748f",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "flyweel-pre-seed--a6ac748f",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/flyweel-pre-seed--a6ac748f",
+                 "source_payload":  {
+                                        "Transaction Name":  "Pre Seed Round - Flyweel",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/flyweel-pre-seed--a6ac748f",
+                                        "Organization Location":  "Brisbane, Queensland, Australia, Oceania",
+                                        "Organization Name":  "Flyweel",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/flyweel",
+                                        "Funding Type":  "Pre-Seed",
+                                        "Money Raised":  "260000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "166105",
+                                        "Announced Date":  "2025-04-18",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "2000000",
+                                        "Pre-Money Valuation Currency":  "AUD",
+                                        "Pre-Money Valuation (in USD)":  "1277728",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Ad money goes out today, comes back in months, and lives in tools that don\u0027t talk. Flyweel is agentic fintech that runs it all.",
+                                        "Organization Industries":  "Advertising Platforms, Artificial Intelligence (AI), Data Visualization, FinTech, Marketing Automation",
+                                        "Organization Website":  "https://flyweel.co",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "2670000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "1892617",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Antler",
+                                        "Investor Names":  "Antler",
+                                        "Number of Investors":  "1",
+                                        "Number of Partner Investors":  "2"
+                                    },
+                 "investee_name_raw":  "Flyweel",
+                 "org_location_raw":  "Brisbane, Queensland, Australia, Oceania",
+                 "org_website_raw":  "https://flyweel.co",
+                 "org_industries_raw":  "Advertising Platforms, Artificial Intelligence (AI), Data Visualization, FinTech, Marketing Automation",
+                 "round_type_raw":  "Pre-Seed",
+                 "round_stage":  "pre_seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-04-18",
+                 "money_raised_raw":  "260000",
+                 "amount":  260000,
+                 "currency":  "AUD",
+                 "amount_usd":  166105,
+                 "pre_money_valuation_raw":  "2000000",
+                 "pre_money_valuation":  2000000,
+                 "valuation_currency":  "AUD",
+                 "valuation_usd":  1277728,
+                 "equity_only":  true,
+                 "total_funding_raw":  "2670000",
+                 "investor_names_raw":  "Antler",
+                 "lead_investor_names_raw":  "Antler",
+                 "imported_at":  "2026-07-30T14:07:03.9648733+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "partial_round_mismatch",
+                 "verification_source_url":  "https://www.flyweel.co/announcements/flyweel-pre-seed-raise",
+                 "verification_notes":  "Company announcement verifies a later A$2.41m pre-seed led by TEN13 with QIC and Antler (18 Jun 2026), not the imported A$260k round dated 18 Apr 2025.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:flyweel"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:flyweel-pre-seed--a6ac748f"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Later public round exists; do not merge it into this imported transaction."
+                              ]
+               }
+}

@@ -1,0 +1,38 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investor_team_members",
+    "record_key":  "investor_team_member:no-brand:lucy-klinger",
+    "operation":  "upsert",
+    "data":  {
+                 "contact_id":  null,
+                 "first_name":  "Lucy",
+                 "last_name":  "Klinger",
+                 "role_title":  "Co-Founder",
+                 "seniority":  "founder",
+                 "linkedin_url":  null,
+                 "claimed_focus":  [
+                                       "technology",
+                                       "future-focused investment"
+                                   ],
+                 "bio_summary":  "Named by the official company site as a co-founder of No Brand Holdings.",
+                 "source_url":  "https://www.nbrnd.com/about",
+                 "retrieved_at":  "2026-07-30",
+                 "is_active":  true
+             },
+    "refs":  {
+                 "investor_key":  "investor:no-brand",
+                 "contact_key":  null
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:recent-deal2026-7-30:investor-team-audit",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "person_linkedin_not_verified"
+                              ]
+               }
+}

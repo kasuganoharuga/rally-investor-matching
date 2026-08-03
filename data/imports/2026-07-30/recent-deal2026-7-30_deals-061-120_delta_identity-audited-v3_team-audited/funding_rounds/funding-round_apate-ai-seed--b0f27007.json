@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:apate-ai-seed--b0f27007",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "apate-ai-seed--b0f27007",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/apate-ai-seed--b0f27007",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Apate.AI",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/apate-ai-seed--b0f27007",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "Apate.AI",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/apate-ai",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "2500000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "1620377",
+                                        "Announced Date":  "2025-08-25",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Apate.ai is an AI-powered fraud prevention and intelligence platform designed to combat scam operations proactively.",
+                                        "Organization Industries":  "Artificial Intelligence (AI), Cyber Security, Enterprise Software, Fraud Detection, Innovation Management, Intelligent Systems, Risk Management, SaaS, Telecommunications",
+                                        "Organization Website":  "https://www.apate.ai",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "2500000",
+                                        "Total Funding Amount Currency":  "AUD",
+                                        "Total Funding Amount (in USD)":  "1620377",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "OIF Ventures",
+                                        "Investor Names":  "Investible, OIF Ventures",
+                                        "Number of Investors":  "2",
+                                        "Number of Partner Investors":  "1"
+                                    },
+                 "investee_name_raw":  "Apate.AI",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://www.apate.ai",
+                 "org_industries_raw":  "Artificial Intelligence (AI), Cyber Security, Enterprise Software, Fraud Detection, Innovation Management, Intelligent Systems, Risk Management, SaaS, Telecommunications",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-08-25",
+                 "money_raised_raw":  "2500000",
+                 "amount":  2500000,
+                 "currency":  "AUD",
+                 "amount_usd":  1620377,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "2500000",
+                 "investor_names_raw":  "Investible, OIF Ventures",
+                 "lead_investor_names_raw":  "OIF Ventures",
+                 "imported_at":  "2026-07-30T14:07:04.9338176+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "partially_verified",
+                 "verification_source_url":  "https://www.investible.com/company/apate-ai",
+                 "verification_notes":  "Investible confirms a 2025 Seed investment in Apate.ai; public databases report A$2.5m with OIF participation.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:apate-ai"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:apate-ai-seed--b0f27007"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact amount and full syndicate are not stated on the cited primary investor page."
+                              ]
+               }
+}

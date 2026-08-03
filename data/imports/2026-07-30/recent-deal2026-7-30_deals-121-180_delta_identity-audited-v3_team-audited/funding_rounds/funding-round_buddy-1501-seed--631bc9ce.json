@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:buddy-1501-seed--631bc9ce",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "buddy-1501-seed--631bc9ce",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/buddy-1501-seed--631bc9ce",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Buddy",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/buddy-1501-seed--631bc9ce",
+                                        "Organization Location":  "Auckland, Auckland, New Zealand, Oceania",
+                                        "Organization Name":  "Buddy",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/buddy-1501",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "",
+                                        "Money Raised Currency":  "",
+                                        "Money Raised (in USD)":  "",
+                                        "Announced Date":  "2025-01-01",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Buddy is a marketplace for metal recyclables that transform the recycling market from manual to digital procurement processes.",
+                                        "Organization Industries":  "Marketplace, Procurement, Recycling",
+                                        "Organization Website":  "https://www.tradebuddy.io/",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "1525000",
+                                        "Total Funding Amount Currency":  "NZD",
+                                        "Total Funding Amount (in USD)":  "927225",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "BAM Ventures",
+                                        "Number of Investors":  "1",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "Buddy",
+                 "org_location_raw":  "Auckland, Auckland, New Zealand, Oceania",
+                 "org_website_raw":  "https://www.tradebuddy.io/",
+                 "org_industries_raw":  "Marketplace, Procurement, Recycling",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-01-01",
+                 "money_raised_raw":  null,
+                 "amount":  null,
+                 "currency":  null,
+                 "amount_usd":  null,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "1525000",
+                 "investor_names_raw":  "BAM Ventures",
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:05.2037055+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "unverified_publicly",
+                 "verification_source_url":  "https://www.crunchbase.com/funding_round/buddy-1501-seed--631bc9ce",
+                 "verification_notes":  "No exact independent public announcement was located in this pass. The imported transaction is retained for manual follow-up.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:buddy-1501"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:buddy-1501-seed--631bc9ce"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact round amount/date/stage/investors not independently verified."
+                              ]
+               }
+}

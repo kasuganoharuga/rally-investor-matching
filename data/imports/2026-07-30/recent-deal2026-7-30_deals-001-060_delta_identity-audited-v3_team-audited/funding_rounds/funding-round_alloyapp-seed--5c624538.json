@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:alloyapp-seed--5c624538",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "alloyapp-seed--5c624538",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/alloyapp-seed--5c624538",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Alloy",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/alloyapp-seed--5c624538",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "Alloy",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/alloyapp",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "3500000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "2203898",
+                                        "Announced Date":  "2025-02-11",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "30000000",
+                                        "Pre-Money Valuation Currency":  "AUD",
+                                        "Pre-Money Valuation (in USD)":  "18890558",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Alloy is an AI prototyping tool for product managers",
+                                        "Organization Industries":  "Artificial Intelligence (AI), Productivity Tools, Software, UX Design, Web Design",
+                                        "Organization Website":  "https://alloy.app",
+                                        "Organization Revenue Range":  "$1M to $10M",
+                                        "Total Funding Amount":  "2703898",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "2703898",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Bain Capital Ventures, Blackbird Ventures",
+                                        "Investor Names":  "Alex Zaccaria, Bain Capital Ventures, Blackbird Ventures, Bond, Dave Fowler, Jay Simons, Max Marchione, Thomas Mann, Y Combinator, Zac Altman",
+                                        "Number of Investors":  "10",
+                                        "Number of Partner Investors":  "3"
+                                    },
+                 "investee_name_raw":  "Alloy",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://alloy.app",
+                 "org_industries_raw":  "Artificial Intelligence (AI), Productivity Tools, Software, UX Design, Web Design",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-02-11",
+                 "money_raised_raw":  "3500000",
+                 "amount":  3500000,
+                 "currency":  "AUD",
+                 "amount_usd":  2203898,
+                 "pre_money_valuation_raw":  "30000000",
+                 "pre_money_valuation":  30000000,
+                 "valuation_currency":  "AUD",
+                 "valuation_usd":  18890558,
+                 "equity_only":  true,
+                 "total_funding_raw":  "2703898",
+                 "investor_names_raw":  "Alex Zaccaria, Bain Capital Ventures, Blackbird Ventures, Bond, Dave Fowler, Jay Simons, Max Marchione, Thomas Mann, Y Combinator, Zac Altman",
+                 "lead_investor_names_raw":  "Bain Capital Ventures, Blackbird Ventures",
+                 "imported_at":  "2026-07-30T14:07:04.0583904+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "verified_primary",
+                 "verification_source_url":  "https://alloy.app/press",
+                 "verification_notes":  "Company press page supports the A$3.5m seed backed by Blackbird and Bain, with Y Combinator and named angels.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:alloyapp"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:alloyapp-seed--5c624538"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

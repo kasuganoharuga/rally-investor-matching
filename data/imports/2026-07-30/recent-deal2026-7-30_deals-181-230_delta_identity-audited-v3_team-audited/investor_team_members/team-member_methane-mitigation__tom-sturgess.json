@@ -1,0 +1,39 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investor_team_members",
+    "record_key":  "investor_team_member:methane-mitigation:tom-sturgess",
+    "operation":  "upsert",
+    "data":  {
+                 "contact_id":  null,
+                 "first_name":  "Tom",
+                 "last_name":  "Sturgess",
+                 "role_title":  "Founder",
+                 "seniority":  "founder",
+                 "linkedin_url":  null,
+                 "claimed_focus":  [
+                                       "agritech",
+                                       "methane reduction",
+                                       "climate technology"
+                                   ],
+                 "bio_summary":  "Founder financing technologies and measurement systems that reduce agricultural methane emissions.",
+                 "source_url":  "https://www.methanemitigation.earth/",
+                 "retrieved_at":  "2026-07-30",
+                 "is_active":  true
+             },
+    "refs":  {
+                 "investor_key":  "investor:methane-mitigation",
+                 "contact_key":  null
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:recent-deal2026-7-30:investor-team-audit",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "person_linkedin_not_verified"
+                              ]
+               }
+}

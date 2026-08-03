@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:mirugen",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Mirugen",
+                 "website_url":  "https://www.mirugen.com/",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "Victoria",
+                 "hq_city":  "Melbourne",
+                 "is_anz":  true,
+                 "sector_primary":  "biotechnology",
+                 "sector_secondary":  "regenerative_medicine",
+                 "use_case_primary":  "cellular_reprogramming_therapeutics",
+                 "use_case_secondary":  [
+                                            "cell_fate_instruction",
+                                            "regenerative_treatment_discovery"
+                                        ],
+                 "customer_type":  "healthcare_and_research",
+                 "business_model":  "drug_development_and_licensing",
+                 "sales_motion":  "partnership_led",
+                 "technology_depth":  "deep_tech_biotechnology",
+                 "ai_relevance":  "none",
+                 "ai_usage_type":  "not_applicable",
+                 "ai_core_or_enabler":  "not_core",
+                 "company_summary":  "Mirugen is a preclinical biotechnology company identifying the optimal set of cellular instructions to ask one cell type to become another.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/mirugen-seed--888fd228",
+                                     "https://www.crunchbase.com/organization/mirugen",
+                                     "https://www.mirugen.com/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:mirugen-seed--888fd228"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

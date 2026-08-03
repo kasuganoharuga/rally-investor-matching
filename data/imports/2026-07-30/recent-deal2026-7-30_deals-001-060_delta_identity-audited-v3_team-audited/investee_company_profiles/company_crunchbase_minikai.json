@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:minikai",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Minikai",
+                 "website_url":  "https://www.minikai.com/",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "Victoria",
+                 "hq_city":  "Carlton",
+                 "is_anz":  true,
+                 "sector_primary":  "health_technology",
+                 "sector_secondary":  "care_support",
+                 "use_case_primary":  "ai_caregiver_assistance",
+                 "use_case_secondary":  [
+                                            "care_coordination",
+                                            "care_workflow_support"
+                                        ],
+                 "customer_type":  "healthcare_provider",
+                 "business_model":  "subscription_saas",
+                 "sales_motion":  "enterprise_top_down",
+                 "technology_depth":  "applied_ai",
+                 "ai_relevance":  "ai_enabled",
+                 "ai_usage_type":  "copilot_or_agent",
+                 "ai_core_or_enabler":  "feature_layer",
+                 "company_summary":  "Minikai is a healthtech company that simplifies artificial intelligence to assist and support health caregivers.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/minikai-seed--250cde86",
+                                     "https://www.crunchbase.com/organization/minikai",
+                                     "https://www.minikai.com/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "medium"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:minikai-seed--250cde86"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:myostellar-pre-seed--0ce7d85c",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "myostellar-pre-seed--0ce7d85c",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/myostellar-pre-seed--0ce7d85c",
+                 "source_payload":  {
+                                        "Transaction Name":  "Pre Seed Round - Myostellar",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/myostellar-pre-seed--0ce7d85c",
+                                        "Organization Location":  "Melbourne, Victoria, Australia, Oceania",
+                                        "Organization Name":  "Myostellar",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/myostellar",
+                                        "Funding Type":  "Pre-Seed",
+                                        "Money Raised":  "",
+                                        "Money Raised Currency":  "",
+                                        "Money Raised (in USD)":  "",
+                                        "Announced Date":  "2025-08-01",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Myostellar is an Australian biotechnology spin-out that is creating innovative treatments for the regeneration of skeletal muscle.",
+                                        "Organization Industries":  "Biotechnology, Medical, Medical Device",
+                                        "Organization Website":  "https://myostellar.com",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "",
+                                        "Total Funding Amount Currency":  "",
+                                        "Total Funding Amount (in USD)":  "",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Breakthrough Victoria, Monash Ventures",
+                                        "Investor Names":  "Breakthrough Victoria, Monash Ventures",
+                                        "Number of Investors":  "2",
+                                        "Number of Partner Investors":  "2"
+                                    },
+                 "investee_name_raw":  "Myostellar",
+                 "org_location_raw":  "Melbourne, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://myostellar.com",
+                 "org_industries_raw":  "Biotechnology, Medical, Medical Device",
+                 "round_type_raw":  "Pre-Seed",
+                 "round_stage":  "pre_seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-08-01",
+                 "money_raised_raw":  null,
+                 "amount":  null,
+                 "currency":  null,
+                 "amount_usd":  null,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  null,
+                 "investor_names_raw":  "Breakthrough Victoria, Monash Ventures",
+                 "lead_investor_names_raw":  "Breakthrough Victoria, Monash Ventures",
+                 "imported_at":  "2026-07-30T14:07:04.8086267+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "amount_supplemented",
+                 "verification_source_url":  "https://breakthroughvictoria.com/media-releases/monash-ventures-pre-seed-fund/",
+                 "verification_notes":  "Primary government source reports A$750k total investment in Myostellar through the Monash Ventures Pre-Seed Fund.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:myostellar"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:myostellar-pre-seed--0ce7d85c"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Imported amount is blank."
+                              ]
+               }
+}

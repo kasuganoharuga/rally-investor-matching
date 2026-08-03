@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:shards-342f-seed--96bab314",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "shards-342f-seed--96bab314",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/shards-342f-seed--96bab314",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Shards",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/shards-342f-seed--96bab314",
+                                        "Organization Location":  "Gold Coast, Queensland, Australia, Oceania",
+                                        "Organization Name":  "Shards",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/shards-342f",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "2000000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "2000000",
+                                        "Announced Date":  "2025-06-04",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "Fractionalized Guild SDK for games",
+                                        "Organization Industries":  "Gaming",
+                                        "Organization Website":  "https://shards.tech",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "3485867",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "3485867",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "Animoca Brands, Kyber Ventures, Yield Guild Games",
+                                        "Number of Investors":  "3",
+                                        "Number of Partner Investors":  "2"
+                                    },
+                 "investee_name_raw":  "Shards",
+                 "org_location_raw":  "Gold Coast, Queensland, Australia, Oceania",
+                 "org_website_raw":  "https://shards.tech",
+                 "org_industries_raw":  "Gaming",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-06-04",
+                 "money_raised_raw":  "2000000",
+                 "amount":  2000000,
+                 "currency":  "USD",
+                 "amount_usd":  2000000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "3485867",
+                 "investor_names_raw":  "Animoca Brands, Kyber Ventures, Yield Guild Games",
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:04.7566622+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "round_structure_mismatch",
+                 "verification_source_url":  "https://mpost.io/shards-raises-2m-in-oversubscribed-round-backed-by-animoca-brands-kyber-ventures-and-ygg/",
+                 "verification_notes":  "Coverage verifies US$2m raised with Animoca, Kyber and YGG.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:shards-342f"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:shards-342f-seed--96bab314"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Source describes aggregate/multiple-round financing rather than one clearly identified Seed transaction."
+                              ]
+               }
+}

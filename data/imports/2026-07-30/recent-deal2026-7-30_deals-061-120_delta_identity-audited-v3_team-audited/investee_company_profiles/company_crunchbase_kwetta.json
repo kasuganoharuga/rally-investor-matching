@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:kwetta",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Kwetta",
+                 "website_url":  "https://kwetta.com",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "NZ",
+                 "hq_state":  "Hawke\u0027s Bay",
+                 "hq_city":  "Onekawa",
+                 "is_anz":  true,
+                 "sector_primary":  "electric_vehicle_infrastructure",
+                 "sector_secondary":  "power_electronics",
+                 "use_case_primary":  "high_power_ev_charging",
+                 "use_case_secondary":  [
+                                            "grid_capacity_optimisation",
+                                            "charging_infrastructure_deployment"
+                                        ],
+                 "customer_type":  "enterprise",
+                 "business_model":  "hardware_and_infrastructure_sales",
+                 "sales_motion":  "enterprise_top_down",
+                 "technology_depth":  "deep_tech_hardware",
+                 "ai_relevance":  "none",
+                 "ai_usage_type":  "not_applicable",
+                 "ai_core_or_enabler":  "not_core",
+                 "company_summary":  "Kwetta mission is to revolutionize electric vehicle charging by unlocking the potential of power grids.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/kwetta-series-a--f36f4a1d",
+                                     "https://www.crunchbase.com/organization/kwetta",
+                                     "https://kwetta.com"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:kwetta-series-a--f36f4a1d"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

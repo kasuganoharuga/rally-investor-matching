@@ -1,0 +1,31 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "deal_investors",
+    "record_key":  "deal_investor:crunchbase:cuttable-seed--b3a46452:brand-fund",
+    "operation":  "upsert",
+    "data":  {
+                 "raw_name":  "Brand Fund",
+                 "role":  "participant",
+                 "participation_status":  "unknown",
+                 "resolution":  "resolved",
+                 "resolution_confidence":  "high",
+                 "identity_resolution":  "existing_database_investor"
+             },
+    "refs":  {
+                 "deal_key":  "funding_round:crunchbase:cuttable-seed--b3a46452",
+                 "investor_key":  "investor:brand-fund-by-previously-unavailable",
+                 "raw_investor_candidate_key":  "raw_investor_candidate:brand-fund"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:cuttable-seed--b3a46452"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

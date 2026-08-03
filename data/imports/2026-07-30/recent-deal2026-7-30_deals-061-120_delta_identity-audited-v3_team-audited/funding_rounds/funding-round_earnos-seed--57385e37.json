@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:earnos-seed--57385e37",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "earnos-seed--57385e37",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/earnos-seed--57385e37",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - EarnOS",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/earnos-seed--57385e37",
+                                        "Organization Location":  "Perth, Western Australia, Australia, Oceania",
+                                        "Organization Name":  "EarnOS",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/earnos",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "5000000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "5000000",
+                                        "Announced Date":  "2025-01-16",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "EarnOS is a financial technology and Web3 software company that develops a rewards and payment platform connecting brands with consumers.",
+                                        "Organization Industries":  "FinTech, Information Technology, Payments, Web3",
+                                        "Organization Website":  "https://earnos.com",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "23500000",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "23500000",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "Escape Velocity",
+                                        "Investor Names":  "Animoca Brands, Escape Velocity, GD1 (Global From Day One), Laser Digital, Mentat Group, Mysten Labs, Opacity, VERONA, Vessel Capital",
+                                        "Number of Investors":  "9",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "EarnOS",
+                 "org_location_raw":  "Perth, Western Australia, Australia, Oceania",
+                 "org_website_raw":  "https://earnos.com",
+                 "org_industries_raw":  "FinTech, Information Technology, Payments, Web3",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-01-16",
+                 "money_raised_raw":  "5000000",
+                 "amount":  5000000,
+                 "currency":  "USD",
+                 "amount_usd":  5000000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "23500000",
+                 "investor_names_raw":  "Animoca Brands, Escape Velocity, GD1 (Global From Day One), Laser Digital, Mentat Group, Mysten Labs, Opacity, VERONA, Vessel Capital",
+                 "lead_investor_names_raw":  "Escape Velocity",
+                 "imported_at":  "2026-07-30T14:07:04.5253670+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "partially_verified",
+                 "verification_source_url":  "https://www.globenewswire.com/news-release/2025/01/19/3011793/0/en/earnos-raises-5-million-to-reinvent-brand-user-interactions-online.html",
+                 "verification_notes":  "Company-issued release verifies a US$5m seed and the named investor group; release date is 19 Jan 2025.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:earnos"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:earnos-seed--57385e37"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Imported date 16 Jan 2025 differs from the public release date."
+                              ]
+               }
+}

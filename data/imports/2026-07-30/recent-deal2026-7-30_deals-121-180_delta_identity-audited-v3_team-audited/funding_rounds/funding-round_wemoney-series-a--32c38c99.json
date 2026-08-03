@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:wemoney-series-a--32c38c99",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "wemoney-series-a--32c38c99",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/wemoney-series-a--32c38c99",
+                 "source_payload":  {
+                                        "Transaction Name":  "Series A - WeMoney",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/wemoney-series-a--32c38c99",
+                                        "Organization Location":  "Sydney, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "WeMoney",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/wemoney",
+                                        "Funding Type":  "Series A",
+                                        "Money Raised":  "12000000",
+                                        "Money Raised Currency":  "AUD",
+                                        "Money Raised (in USD)":  "7651129",
+                                        "Announced Date":  "2025-04-22",
+                                        "Funding Stage":  "Early Stage Venture",
+                                        "Pre-Money Valuation":  "88000000",
+                                        "Pre-Money Valuation Currency":  "USD",
+                                        "Pre-Money Valuation (in USD)":  "88000000",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "WeMoney is a personal finance management app that allows you to see all your finances in one place.",
+                                        "Organization Industries":  "Apps, Financial Services, FinTech",
+                                        "Organization Website":  "https://www.wemoney.com.au/",
+                                        "Organization Revenue Range":  "$1M to $10M",
+                                        "Total Funding Amount":  "15950929",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "15950929",
+                                        "Funding Status":  "Early Stage Venture",
+                                        "Lead Investors":  "Lance East Office",
+                                        "Investor Names":  "Angel Investors Marlborough, BetterLabs Ventures, Dorado Capital, Eastcourt, Lance East Office, Mastercard",
+                                        "Number of Investors":  "6",
+                                        "Number of Partner Investors":  "1"
+                                    },
+                 "investee_name_raw":  "WeMoney",
+                 "org_location_raw":  "Sydney, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://www.wemoney.com.au/",
+                 "org_industries_raw":  "Apps, Financial Services, FinTech",
+                 "round_type_raw":  "Series A",
+                 "round_stage":  "series_a",
+                 "funding_stage_raw":  "Early Stage Venture",
+                 "announced_date":  "2025-04-22",
+                 "money_raised_raw":  "12000000",
+                 "amount":  12000000,
+                 "currency":  "AUD",
+                 "amount_usd":  7651129,
+                 "pre_money_valuation_raw":  "88000000",
+                 "pre_money_valuation":  88000000,
+                 "valuation_currency":  "USD",
+                 "valuation_usd":  88000000,
+                 "equity_only":  true,
+                 "total_funding_raw":  "15950929",
+                 "investor_names_raw":  "Angel Investors Marlborough, BetterLabs Ventures, Dorado Capital, Eastcourt, Lance East Office, Mastercard",
+                 "lead_investor_names_raw":  "Lance East Office",
+                 "imported_at":  "2026-07-30T14:07:04.9855218+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "verified_secondary",
+                 "verification_source_url":  "https://au.marketscreener.com/quote/stock/MASTERCARD-INC-17163/news/WeMoney-Pty-Ltd-announced-that-it-has-received-AUD-12-million-in-funding-from-Lance-East-Office-Pty-49689292/",
+                 "verification_notes":  "Public market report verifies A$12m financing on 22 Apr 2025 and the imported strategic backers.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:wemoney"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:wemoney-series-a--32c38c99"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:gridsight",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Gridsight",
+                 "website_url":  "https://www.gridsight.ai/",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "New South Wales",
+                 "hq_city":  "Wollongong",
+                 "is_anz":  true,
+                 "sector_primary":  "energy_software",
+                 "sector_secondary":  "electricity_distribution",
+                 "use_case_primary":  "low_voltage_grid_visibility",
+                 "use_case_secondary":  [
+                                            "customer_transformer_mapping",
+                                            "neutral_fault_and_complaint_resolution"
+                                        ],
+                 "customer_type":  "enterprise",
+                 "business_model":  "subscription_saas",
+                 "sales_motion":  "enterprise_top_down",
+                 "technology_depth":  "applied_ai",
+                 "ai_relevance":  "ai_enabled",
+                 "ai_usage_type":  "analytics_prediction",
+                 "ai_core_or_enabler":  "feature_layer",
+                 "company_summary":  "Gridsight is a cloud platform with a feature of degrading neutrals, customer-transformer mapping, integrations, and complaint resolution.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/gridsight-series-a--34913765",
+                                     "https://www.crunchbase.com/organization/gridsight",
+                                     "https://www.gridsight.ai/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:gridsight-series-a--34913765"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:cloudtech-group-series-a--61c3a936",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "cloudtech-group-series-a--61c3a936",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/cloudtech-group-series-a--61c3a936",
+                 "source_payload":  {
+                                        "Transaction Name":  "Series A - CloudTech Group",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/cloudtech-group-series-a--61c3a936",
+                                        "Organization Location":  "Melbourne, Victoria, Australia, Oceania",
+                                        "Organization Name":  "CloudTech Group",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/cloudtech-group",
+                                        "Funding Type":  "Series A",
+                                        "Money Raised":  "14000000",
+                                        "Money Raised Currency":  "USD",
+                                        "Money Raised (in USD)":  "14000000",
+                                        "Announced Date":  "2025-06-11",
+                                        "Funding Stage":  "Early Stage Venture",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "CloudTech Group: Elevation Block by Block.",
+                                        "Organization Industries":  "Blockchain, Cryptocurrency, FinTech, Payments, Software, Venture Capital, Web3",
+                                        "Organization Website":  "https://cloudtechgroup.com/",
+                                        "Organization Revenue Range":  "$1M to $10M",
+                                        "Total Funding Amount":  "24500000",
+                                        "Total Funding Amount Currency":  "USD",
+                                        "Total Funding Amount (in USD)":  "24500000",
+                                        "Funding Status":  "Early Stage Venture",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "",
+                                        "Number of Investors":  "",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "CloudTech Group",
+                 "org_location_raw":  "Melbourne, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://cloudtechgroup.com/",
+                 "org_industries_raw":  "Blockchain, Cryptocurrency, FinTech, Payments, Software, Venture Capital, Web3",
+                 "round_type_raw":  "Series A",
+                 "round_stage":  "series_a",
+                 "funding_stage_raw":  "Early Stage Venture",
+                 "announced_date":  "2025-06-11",
+                 "money_raised_raw":  "14000000",
+                 "amount":  14000000,
+                 "currency":  "USD",
+                 "amount_usd":  14000000,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "24500000",
+                 "investor_names_raw":  null,
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:05.6598699+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "unverified_publicly",
+                 "verification_source_url":  "https://www.crunchbase.com/funding_round/cloudtech-group-series-a--61c3a936",
+                 "verification_notes":  "No exact independent public announcement was located in this pass. The imported transaction is retained for manual follow-up.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:cloudtech-group"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:cloudtech-group-series-a--61c3a936"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Exact round amount/date/stage/investors not independently verified."
+                              ]
+               }
+}

@@ -1,0 +1,31 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "deal_investors",
+    "record_key":  "deal_investor:crunchbase:voqo-ai-pre-seed--98a1cf07:yellow-brick-road",
+    "operation":  "upsert",
+    "data":  {
+                 "raw_name":  "Yellow Brick Road",
+                 "role":  "participant",
+                 "participation_status":  "unknown",
+                 "resolution":  "resolved",
+                 "resolution_confidence":  "high",
+                 "identity_resolution":  "new_investor"
+             },
+    "refs":  {
+                 "deal_key":  "funding_round:crunchbase:voqo-ai-pre-seed--98a1cf07",
+                 "investor_key":  "investor:yellow-brick-road",
+                 "raw_investor_candidate_key":  "raw_investor_candidate:yellow-brick-road"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:voqo-ai-pre-seed--98a1cf07"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "unreviewed",
+                   "issues":  [
+
+                              ]
+               }
+}

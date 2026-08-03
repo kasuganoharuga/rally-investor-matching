@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:one-touch-systems-28fc-seed--855e18e2",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "one-touch-systems-28fc-seed--855e18e2",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/one-touch-systems-28fc-seed--855e18e2",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - One Touch Systems",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/one-touch-systems-28fc-seed--855e18e2",
+                                        "Organization Location":  "Melbourne, Victoria, Australia, Oceania",
+                                        "Organization Name":  "One Touch Systems",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/one-touch-systems-28fc",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "250000",
+                                        "Money Raised Currency":  "GBP",
+                                        "Money Raised (in USD)":  "319752",
+                                        "Announced Date":  "2025-04-08",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "One-Touch Systems Driving innovation in restaurant operations through our cutting-edge Voice AI.",
+                                        "Organization Industries":  "Artificial Intelligence (AI), Hospitality, Information Technology, Restaurants",
+                                        "Organization Website":  "https://www.one-touch.co",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "250000",
+                                        "Total Funding Amount Currency":  "GBP",
+                                        "Total Funding Amount (in USD)":  "319752",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "",
+                                        "Investor Names":  "",
+                                        "Number of Investors":  "",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "One Touch Systems",
+                 "org_location_raw":  "Melbourne, Victoria, Australia, Oceania",
+                 "org_website_raw":  "https://www.one-touch.co",
+                 "org_industries_raw":  "Artificial Intelligence (AI), Hospitality, Information Technology, Restaurants",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-04-08",
+                 "money_raised_raw":  "250000",
+                 "amount":  250000,
+                 "currency":  "GBP",
+                 "amount_usd":  319752,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  "250000",
+                 "investor_names_raw":  null,
+                 "lead_investor_names_raw":  null,
+                 "imported_at":  "2026-07-30T14:07:04.7126147+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "verified_secondary",
+                 "verification_source_url":  "https://www.thebusinessdesk.com/yorkshire/news/2137404-start-up-secures-six-figure-funding-deal",
+                 "verification_notes":  "Public coverage verifies 拢250k seed from Andrew Pennock on 8 Apr 2025.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:one-touch-systems-28fc"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:one-touch-systems-28fc-seed--855e18e2"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Investor was missing from the imported investor list."
+                              ]
+               }
+}

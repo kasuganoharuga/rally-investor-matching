@@ -1,0 +1,40 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investor_team_members",
+    "record_key":  "investor_team_member:methane-mitigation:adrian-barker",
+    "operation":  "upsert",
+    "data":  {
+                 "contact_id":  null,
+                 "first_name":  "Adrian",
+                 "last_name":  "Barker",
+                 "role_title":  "Director",
+                 "seniority":  "director",
+                 "linkedin_url":  null,
+                 "claimed_focus":  [
+                                       "commercialisation",
+                                       "IP",
+                                       "go-to-market",
+                                       "agritech"
+                                   ],
+                 "bio_summary":  "Director responsible for setting and executing the commercialisation pathway.",
+                 "source_url":  "https://www.methanemitigation.earth/",
+                 "retrieved_at":  "2026-07-30",
+                 "is_active":  true
+             },
+    "refs":  {
+                 "investor_key":  "investor:methane-mitigation",
+                 "contact_key":  null
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:recent-deal2026-7-30:investor-team-audit",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "person_linkedin_not_verified"
+                              ]
+               }
+}

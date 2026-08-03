@@ -1,0 +1,56 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:voqo-ai",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Voqo AI",
+                 "website_url":  "https://www.voqo.ai/",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "AU",
+                 "hq_state":  "New South Wales",
+                 "hq_city":  "Sydney",
+                 "is_anz":  true,
+                 "sector_primary":  "property_technology",
+                 "sector_secondary":  "conversational_ai",
+                 "use_case_primary":  "voice_agents_for_real_estate",
+                 "use_case_secondary":  [
+                                            "property_management_communications",
+                                            "lead_and_tenant_call_automation"
+                                        ],
+                 "customer_type":  "enterprise",
+                 "business_model":  "subscription_and_usage_based",
+                 "sales_motion":  "enterprise_top_down",
+                 "technology_depth":  "applied_ai",
+                 "ai_relevance":  "ai_native",
+                 "ai_usage_type":  "copilot_or_agent",
+                 "ai_core_or_enabler":  "core_product",
+                 "company_summary":  "Voqo AI is a startup specializing in AI-powered voice agents designed primarily for the real estate and property management sectors.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/voqo-ai-pre-seed--98a1cf07",
+                                     "https://www.crunchbase.com/organization/voqo-ai",
+                                     "https://www.voqo.ai/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:voqo-ai-pre-seed--98a1cf07"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

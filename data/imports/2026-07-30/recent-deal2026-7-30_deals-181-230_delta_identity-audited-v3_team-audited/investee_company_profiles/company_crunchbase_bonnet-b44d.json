@@ -1,0 +1,58 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investee_company_profiles",
+    "record_key":  "company:crunchbase:bonnet-b44d",
+    "operation":  "upsert",
+    "data":  {
+                 "name":  "Bonnet",
+                 "website_url":  "https://bonnet.co.nz",
+                 "crunchbase_uuid":  null,
+                 "hq_country":  "NZ",
+                 "hq_state":  "Gisborne",
+                 "hq_city":  "Tauranga",
+                 "is_anz":  true,
+                 "sector_primary":  "fleet_management",
+                 "sector_secondary":  "compliance_software",
+                 "use_case_primary":  "vehicle_compliance_and_fleet_management",
+                 "use_case_secondary":  [
+                                            "maintenance_management",
+                                            "safety_compliance"
+                                        ],
+                 "customer_type":  "construction_and_agriculture_enterprise",
+                 "business_model":  "subscription_saas",
+                 "sales_motion":  "enterprise_sales",
+                 "technology_depth":  "conventional_software",
+                 "ai_relevance":  "not_ai",
+                 "ai_usage_type":  "none",
+                 "ai_core_or_enabler":  "none",
+                 "company_summary":  "Bonnet is a vehicle compliance software that provides fleet management for sectors like construction and agriculture.",
+                 "source_urls":  [
+                                     "https://www.crunchbase.com/funding_round/bonnet-b44d-pre-seed--53da627c",
+                                     "https://www.crunchbase.com/organization/bonnet-b44d",
+                                     "https://bonnet.co.nz ",
+                                     "https://bonnet.co.nz",
+                                     "https://bonnet.co.nz/"
+                                 ],
+                 "retrieved_at":  "2026-07-30",
+                 "raw_content_hash":  null,
+                 "extraction_model":  "codex-investee-gap-enrichment",
+                 "extraction_version":  "1.0.0",
+                 "confidence":  "high"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:bonnet-b44d-pre-seed--53da627c"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+                                  "Business and use-case taxonomy was enriched from the imported company description and the exact official website identity.",
+                                  "Investee LinkedIn is not a field in the current import contract; it remains a schema-level enrichment gap."
+                              ]
+               }
+}

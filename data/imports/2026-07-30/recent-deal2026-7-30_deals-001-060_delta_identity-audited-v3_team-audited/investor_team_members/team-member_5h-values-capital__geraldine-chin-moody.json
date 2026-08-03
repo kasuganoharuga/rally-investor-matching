@@ -1,0 +1,38 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investor_team_members",
+    "record_key":  "investor_team_member:5h-values-capital:geraldine-chin-moody",
+    "operation":  "upsert",
+    "data":  {
+                 "contact_id":  null,
+                 "first_name":  "Geraldine",
+                 "last_name":  "Chin-Moody",
+                 "role_title":  "Director and Co-Founder",
+                 "seniority":  "partner",
+                 "linkedin_url":  null,
+                 "claimed_focus":  [
+                                       "impact investing",
+                                       "leadership"
+                                   ],
+                 "bio_summary":  "Public leadership evidence identifies Geraldine Chin Moody as a co-founder investing in impact-driven businesses.",
+                 "source_url":  "https://www.linkedin.com/company/5h-values-capital/",
+                 "retrieved_at":  "2026-07-30",
+                 "is_active":  true
+             },
+    "refs":  {
+                 "investor_key":  "investor:5h-values-capital",
+                 "contact_key":  null
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:recent-deal2026-7-30:investor-team-audit",
+                       "source_keys":  [
+
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "person_linkedin_not_verified"
+                              ]
+               }
+}

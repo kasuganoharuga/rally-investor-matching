@@ -1,0 +1,82 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "funding_rounds",
+    "record_key":  "funding_round:crunchbase:bizly-4a56-seed--70c8dbb0",
+    "operation":  "upsert",
+    "data":  {
+                 "source_provider":  "crunchbase",
+                 "source_record_id":  "bizly-4a56-seed--70c8dbb0",
+                 "dedupe_key":  null,
+                 "source_url":  "https://www.crunchbase.com/funding_round/bizly-4a56-seed--70c8dbb0",
+                 "source_payload":  {
+                                        "Transaction Name":  "Seed Round - Bizly",
+                                        "Transaction Name URL":  "https://www.crunchbase.com/funding_round/bizly-4a56-seed--70c8dbb0",
+                                        "Organization Location":  "Surry Hills, New South Wales, Australia, Oceania",
+                                        "Organization Name":  "Bizly",
+                                        "Organization Name URL":  "https://www.crunchbase.com/organization/bizly-4a56",
+                                        "Funding Type":  "Seed",
+                                        "Money Raised":  "",
+                                        "Money Raised Currency":  "",
+                                        "Money Raised (in USD)":  "",
+                                        "Announced Date":  "2025-07-02",
+                                        "Funding Stage":  "Seed",
+                                        "Pre-Money Valuation":  "",
+                                        "Pre-Money Valuation Currency":  "",
+                                        "Pre-Money Valuation (in USD)":  "",
+                                        "Equity Only Funding":  "Yes",
+                                        "Organization Description":  "At Bizly, we make trust simple, visible, and useful for every Australian business.",
+                                        "Organization Industries":  "Analytics, FinTech, Risk Management, Software",
+                                        "Organization Website":  "https://bizly.com.au/",
+                                        "Organization Revenue Range":  "",
+                                        "Total Funding Amount":  "",
+                                        "Total Funding Amount Currency":  "",
+                                        "Total Funding Amount (in USD)":  "",
+                                        "Funding Status":  "Seed",
+                                        "Lead Investors":  "25fifteen",
+                                        "Investor Names":  "25fifteen",
+                                        "Number of Investors":  "1",
+                                        "Number of Partner Investors":  ""
+                                    },
+                 "investee_name_raw":  "Bizly",
+                 "org_location_raw":  "Surry Hills, New South Wales, Australia, Oceania",
+                 "org_website_raw":  "https://bizly.com.au/",
+                 "org_industries_raw":  "Analytics, FinTech, Risk Management, Software",
+                 "round_type_raw":  "Seed",
+                 "round_stage":  "seed",
+                 "funding_stage_raw":  "Seed",
+                 "announced_date":  "2025-07-02",
+                 "money_raised_raw":  null,
+                 "amount":  null,
+                 "currency":  null,
+                 "amount_usd":  null,
+                 "pre_money_valuation_raw":  null,
+                 "pre_money_valuation":  null,
+                 "valuation_currency":  null,
+                 "valuation_usd":  null,
+                 "equity_only":  true,
+                 "total_funding_raw":  null,
+                 "investor_names_raw":  "25fifteen",
+                 "lead_investor_names_raw":  "25fifteen",
+                 "imported_at":  "2026-07-30T14:07:04.6631169+09:30",
+                 "import_batch_id":  "recent-deal2026-7-30_ea2361a6",
+                 "verification_status":  "unverified_publicly",
+                 "verification_source_url":  "https://bizly.com.au/about.html",
+                 "verification_notes":  "Company identity and 25Fifteen association were located, but no exact public round announcement was found.",
+                 "verification_checked_at":  "2026-07-30"
+             },
+    "refs":  {
+                 "investee_company_key":  "company:crunchbase:bizly-4a56"
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:crunchbase:recent-deal2026-7-30_ea2361a6",
+                       "source_keys":  [
+                                           "source:crunchbase:bizly-4a56-seed--70c8dbb0"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "needs_more_data",
+                   "issues":  [
+                                  "Amount/date/stage require manual verification."
+                              ]
+               }
+}

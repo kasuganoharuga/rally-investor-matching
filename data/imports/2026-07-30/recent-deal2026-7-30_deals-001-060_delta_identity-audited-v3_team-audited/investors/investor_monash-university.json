@@ -1,0 +1,52 @@
+{
+    "schema_version":  "1.0.0",
+    "table":  "investors",
+    "record_key":  "investor:monash-university",
+    "operation":  "upsert",
+    "data":  {
+                 "canonical_name":  "Monash University",
+                 "aliases":  [
+
+                             ],
+                 "investor_type":  "university_fund",
+                 "website_url":  "https://www.monash.edu/",
+                 "linkedin_url":  "https://www.linkedin.com/school/monash-university",
+                 "hq_country":  "AU",
+                 "hq_state":  "Victoria",
+                 "hq_city":  "Melbourne",
+                 "offices":  [
+
+                             ],
+                 "status":  "active",
+                 "merged_into_id":  null,
+                 "review_status":  "reviewed",
+                 "last_reviewed_at":  "2026-07-30",
+                 "last_reviewed_by":  "codex-investor-identity-audit",
+                 "investor_subtype":  "university",
+                 "classification_confidence":  "high",
+                 "classification_source":  "current research evidence with explicit classification repair",
+                 "eligibility_mode":  "conditional",
+                 "classification_evidence_urls":  [
+                                                      "https://www.monash.edu/",
+                                                      "https://www.linkedin.com/school/monash-university"
+                                                  ],
+                 "classified_at":  "2026-07-30"
+             },
+    "refs":  {
+
+             },
+    "provenance":  {
+                       "collection_run_key":  "collection:research:2026-07-24",
+                       "source_keys":  [
+                                           "research_source:monash-university:monash-university_src_official",
+                                           "research_source:monash-university:monash-university_src_linkedin",
+                                           "research_source:monash-university:monash-university_src_deal"
+                                       ]
+                   },
+    "review":  {
+                   "status":  "reviewed",
+                   "issues":  [
+
+                              ]
+               }
+}
