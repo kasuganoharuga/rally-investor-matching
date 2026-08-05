@@ -317,7 +317,7 @@ export const DIRECTION_OPTIONS_BY_SECTOR: Record<string, IntakeOption[]> = {
   ]),
 };
 
-export const structuredIntakeValuesSchema = z.object({
+const structuredIntakeValuesObjectSchema = z.object({
   companyName: z.string(),
   companySummary: z.string(),
   hqCountry: z.string(),
@@ -330,12 +330,33 @@ export const structuredIntakeValuesSchema = z.object({
   leadNeeded: z.string(),
   sectors: z.array(z.string()),
   directions: z.array(z.string()),
-  customerType: z.string(),
-  businessModel: z.string(),
+  customerTypes: z.array(z.string()).max(3),
+  businessModels: z.array(z.string()).max(3),
   salesMotion: z.string(),
   technologyDepth: z.string(),
   aiRelevance: z.string(),
 });
+
+export const structuredIntakeValuesSchema = z.preprocess((value) => {
+  if (typeof value !== "object" || value === null || Array.isArray(value)) {
+    return value;
+  }
+
+  const legacy = value as Record<string, unknown>;
+  return {
+    ...legacy,
+    customerTypes:
+      legacy.customerTypes ??
+      (typeof legacy.customerType === "string" && legacy.customerType
+        ? [legacy.customerType]
+        : []),
+    businessModels:
+      legacy.businessModels ??
+      (typeof legacy.businessModel === "string" && legacy.businessModel
+        ? [legacy.businessModel]
+        : []),
+  };
+}, structuredIntakeValuesObjectSchema);
 
 export type StructuredIntakeValues = z.infer<typeof structuredIntakeValuesSchema>;
 
@@ -352,8 +373,8 @@ export const EMPTY_STRUCTURED_INTAKE: StructuredIntakeValues = {
   leadNeeded: "",
   sectors: [],
   directions: [],
-  customerType: "",
-  businessModel: "",
+  customerTypes: [],
+  businessModels: [],
   salesMotion: "",
   technologyDepth: "",
   aiRelevance: "",
@@ -391,7 +412,9 @@ export function isCompanyAndRaiseComplete(values: StructuredIntakeValues): boole
 
 export function isMatchingSignalsComplete(values: StructuredIntakeValues): boolean {
   return Boolean(
-    values.sectors.length > 0 && values.customerType && values.businessModel,
+    values.sectors.length > 0 &&
+    values.customerTypes.length > 0 &&
+    values.businessModels.length > 0,
   );
 }
 
@@ -424,8 +447,10 @@ export function buildStructuredIntakeMessage(values: StructuredIntakeValues): st
     values.directions.length > 0
       ? `Actual theme codes: ${values.directions.join(", ")}`
       : "",
-    `Customer type: ${values.customerType}`,
-    `Business model: ${values.businessModel}`,
+    `Primary customer type: ${values.customerTypes[0]}`,
+    `Customer type codes: ${values.customerTypes.join(", ")}`,
+    `Primary business model: ${values.businessModels[0]}`,
+    `Business model codes: ${values.businessModels.join(", ")}`,
     values.salesMotion ? `Sales motion: ${values.salesMotion}` : "",
     values.technologyDepth ? `Technology depth: ${values.technologyDepth}` : "",
     values.aiRelevance ? `AI relevance: ${values.aiRelevance}` : "",
@@ -576,14 +601,14 @@ export function structuredIntakeFromParsedProfile(
     leadNeeded: leadNeededValue(profile.lead_needed),
     sectors,
     directions,
-    customerType: normalizedOptionValue(
+    customerTypes: knownOptionValues(
       CUSTOMER_TYPE_OPTIONS,
-      profileString(profile, "customer_type"),
-    ),
-    businessModel: normalizedOptionValue(
+      profileStrings(profile, "customer_types", "customer_type"),
+    ).slice(0, 3),
+    businessModels: knownOptionValues(
       BUSINESS_MODEL_OPTIONS,
-      profileString(profile, "business_model"),
-    ),
+      profileStrings(profile, "business_models", "business_model"),
+    ).slice(0, 3),
     salesMotion: normalizedOptionValue(
       SALES_MOTION_OPTIONS,
       profileString(profile, "sales_motion"),

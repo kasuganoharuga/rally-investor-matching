@@ -48,6 +48,8 @@ function cloneStructuredIntake(values: StructuredIntakeValues): StructuredIntake
     ...values,
     sectors: [...values.sectors],
     directions: [...values.directions],
+    customerTypes: [...values.customerTypes],
+    businessModels: [...values.businessModels],
   };
 }
 
@@ -173,6 +175,12 @@ export function StructuredIntakeScreen({
           onSectorsChange={updateSectors}
           onDirectionsChange={(directions) =>
             setValues((current) => ({ ...current, directions }))
+          }
+          onCustomerTypesChange={(customerTypes) =>
+            setValues((current) => ({ ...current, customerTypes }))
+          }
+          onBusinessModelsChange={(businessModels) =>
+            setValues((current) => ({ ...current, businessModels }))
           }
           onCompanySummaryChange={(value) => updateTextField("companySummary", value)}
           onEditCompany={() => setActiveStep(0)}

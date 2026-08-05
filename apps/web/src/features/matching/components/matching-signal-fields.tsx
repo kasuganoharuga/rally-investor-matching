@@ -23,20 +23,19 @@ export function MatchingSignalFields({
   onTextChange,
   onSectorsChange,
   onDirectionsChange,
+  onCustomerTypesChange,
+  onBusinessModelsChange,
 }: {
   values: StructuredIntakeValues;
   disabled: boolean;
   onTextChange: (
-    field:
-      | "customerType"
-      | "businessModel"
-      | "salesMotion"
-      | "technologyDepth"
-      | "aiRelevance",
+    field: "salesMotion" | "technologyDepth" | "aiRelevance",
     value: string,
   ) => void;
   onSectorsChange: (values: string[]) => void;
   onDirectionsChange: (values: string[]) => void;
+  onCustomerTypesChange: (values: string[]) => void;
+  onBusinessModelsChange: (values: string[]) => void;
 }) {
   const directionOptions = getDirectionOptions(values.sectors);
 
@@ -80,21 +79,25 @@ export function MatchingSignalFields({
       </div>
 
       <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-        <SelectField
-          id="customer-type"
+        <MultiSelectField
           label="Primary customer"
-          value={values.customerType}
+          placeholder="Select customer types"
           options={CUSTOMER_TYPE_OPTIONS}
+          selected={values.customerTypes}
+          maxSelected={3}
           required
-          onChange={(value) => onTextChange("customerType", value)}
+          disabled={disabled}
+          onChange={onCustomerTypesChange}
         />
-        <SelectField
-          id="business-model"
+        <MultiSelectField
           label="Business model"
-          value={values.businessModel}
+          placeholder="Select business models"
           options={BUSINESS_MODEL_OPTIONS}
+          selected={values.businessModels}
+          maxSelected={3}
           required
-          onChange={(value) => onTextChange("businessModel", value)}
+          disabled={disabled}
+          onChange={onBusinessModelsChange}
         />
         <SelectField
           id="sales-motion"

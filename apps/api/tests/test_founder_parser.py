@@ -22,7 +22,9 @@ class _FakeLLM:
                 "sector": "enterprise AI workflow",
                 "actual_sector": ["enterprise_software_data_security"],
                 "customer_type": "B2B",
+                "customer_types": ["B2B", "SME", "government", "consumer"],
                 "business_model": "SaaS",
+                "business_models": ["SaaS", "services", "licensing", "freemium"],
                 "sales_motion": None,
                 "technology_depth": None,
                 "ai_relevance": "ai_enabled",
@@ -66,3 +68,6 @@ def test_parse_founder_message_uses_two_passes_and_sector_gated_themes() -> None
         "developer_tools_app_platforms",
     ]
     assert parsed["customer_type"] == "enterprise"
+    assert parsed["customer_types"] == ["enterprise", "smb", "government"]
+    assert parsed["business_model"] == "SaaS"
+    assert parsed["business_models"] == ["SaaS", "services", "licensing"]

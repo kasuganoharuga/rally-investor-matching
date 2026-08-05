@@ -16,6 +16,8 @@ export function StructuredIntakeStepBody({
   onTextChange,
   onSectorsChange,
   onDirectionsChange,
+  onCustomerTypesChange,
+  onBusinessModelsChange,
   onCompanySummaryChange,
   onEditCompany,
   onEditSignals,
@@ -28,6 +30,8 @@ export function StructuredIntakeStepBody({
   onTextChange: (field: keyof StructuredIntakeValues, value: string) => void;
   onSectorsChange: (sectors: string[]) => void;
   onDirectionsChange: (directions: string[]) => void;
+  onCustomerTypesChange: (customerTypes: string[]) => void;
+  onBusinessModelsChange: (businessModels: string[]) => void;
   onCompanySummaryChange: (value: string) => void;
   onEditCompany: () => void;
   onEditSignals: () => void;
@@ -55,6 +59,8 @@ export function StructuredIntakeStepBody({
           onTextChange={onTextChange}
           onSectorsChange={onSectorsChange}
           onDirectionsChange={onDirectionsChange}
+          onCustomerTypesChange={onCustomerTypesChange}
+          onBusinessModelsChange={onBusinessModelsChange}
         />
         <StructuredIntakeContextFields
           value={values.companySummary}

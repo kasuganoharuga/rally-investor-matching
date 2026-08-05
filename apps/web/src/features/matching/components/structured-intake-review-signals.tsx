@@ -63,13 +63,13 @@ export function StructuredIntakeReviewSignals({
           values={labelsFor(directionOptions, values.directions)}
           wide
         />
-        <ReviewBadgeItem
+        <ReviewChipsItem
           label="Primary customer"
-          value={getIntakeOptionLabel(CUSTOMER_TYPE_OPTIONS, values.customerType)}
+          values={labelsFor(CUSTOMER_TYPE_OPTIONS, values.customerTypes)}
         />
-        <ReviewBadgeItem
+        <ReviewChipsItem
           label="Business model"
-          value={getIntakeOptionLabel(BUSINESS_MODEL_OPTIONS, values.businessModel)}
+          values={labelsFor(BUSINESS_MODEL_OPTIONS, values.businessModels)}
         />
         <ReviewBadgeItem
           label="How customers buy"

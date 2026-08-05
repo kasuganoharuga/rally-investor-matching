@@ -19,6 +19,8 @@ MAX_FOUNDER_SECTORS = 2
 MAX_PRIMARY_THEMES = 1
 MAX_SECONDARY_THEMES = 2
 MAX_FOUNDER_THEMES = MAX_PRIMARY_THEMES + MAX_SECONDARY_THEMES
+MAX_CUSTOMER_TYPES = 3
+MAX_BUSINESS_MODELS = 3
 
 SECTOR_ORDER = [
     "healthcare_life_sciences",
@@ -48,9 +50,15 @@ Primary market is geographic, such as "Australia", "New Zealand", "ANZ",
 "US", or "Global".
 Do not put business model labels such as B2B or B2C in primary_market.
 
-For customer_type, prefer one of:
-enterprise, smb, consumer, healthcare_provider, government, other.
+For customer_types, return 1-3 values from:
+consumer, smb, mid_market, enterprise, developer, healthcare_provider,
+government, education_institution, other.
+Put the first customer_types value in customer_type for backwards compatibility.
 Map B2B to enterprise and B2C to consumer.
+
+For business_models, return 1-3 business model codes explicitly supported by
+the user text. Put the first business_models value in business_model for
+backwards compatibility.
 
 For actual_sector, choose 1-2 codes from this closed list only:
 {chr(10).join(f"- {sector}" for sector in SECTOR_ORDER)}
@@ -72,7 +80,9 @@ Required JSON keys:
 - sector
 - actual_sector
 - customer_type
+- customer_types
 - business_model
+- business_models
 - sales_motion
 - technology_depth
 - ai_relevance
@@ -186,11 +196,24 @@ def normalize_parsed_founder_profile(profile: dict[str, Any]) -> dict[str, Any]:
     normalized["secondary_themes"] = secondary
     normalized["actual_themes"] = themes
 
-    customer_type = normalized.get("customer_type")
-    if isinstance(customer_type, str):
-        normalized["customer_type"] = normalize_customer_type_code(customer_type)
-    elif customer_type is not None:
-        normalized["customer_type"] = normalize_customer_type_code(str(customer_type))
+    raw_customer_types = _as_string_list(normalized.get("customer_types"))
+    if not raw_customer_types:
+        raw_customer_types = _as_string_list(normalized.get("customer_type"))
+    customer_types = [
+        customer_type
+        for value in raw_customer_types
+        if (customer_type := normalize_customer_type_code(value))
+    ]
+    customer_types = list(dict.fromkeys(customer_types))[:MAX_CUSTOMER_TYPES]
+    normalized["customer_types"] = customer_types
+    normalized["customer_type"] = customer_types[0] if customer_types else None
+
+    raw_business_models = _as_string_list(normalized.get("business_models"))
+    if not raw_business_models:
+        raw_business_models = _as_string_list(normalized.get("business_model"))
+    business_models = list(dict.fromkeys(raw_business_models))[:MAX_BUSINESS_MODELS]
+    normalized["business_models"] = business_models
+    normalized["business_model"] = business_models[0] if business_models else None
 
     return normalized
 

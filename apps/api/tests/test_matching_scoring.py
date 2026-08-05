@@ -5,7 +5,10 @@ from app.schemas.match import MatchingConfiguration, MatchingWeights
 from app.services.founder_parser_service import normalize_parsed_founder_profile
 from app.services.matching_scoring import (
     MATCHING_WEIGHTS,
+    founder_business_models,
     founder_customer_type,
+    founder_customer_types,
+    score_customer_icp,
     score_profile,
     score_theme_fit,
     score_tier,
@@ -23,6 +26,27 @@ def test_customer_type_aliases_map_b2b_to_enterprise() -> None:
     assert normalize_customer_type_code("b2c") == "consumer"
     assert normalize_customer_type_code("SME") == "smb"
     assert founder_customer_type({"customer_type": "B2B"}) == "enterprise"
+
+
+def test_customer_and_business_model_multi_selects_are_clamped_and_scored() -> None:
+    founder = {
+        "customer_types": ["consumer", "B2B", "SME", "government"],
+        "business_models": ["services", "SaaS", "licensing", "freemium"],
+    }
+    preference = {
+        "dimension_distributions": {
+            "customer_type": {"weighted": {"enterprise": 0.9}},
+            "business_model": {"weighted": {"subscription_saas": 0.8}},
+        }
+    }
+
+    assert founder_customer_types(founder) == ["consumer", "enterprise", "smb"]
+    assert founder_business_models(founder) == [
+        "services",
+        "subscription_saas",
+        "licensing",
+    ]
+    assert score_customer_icp(founder, preference) == 5
 
 
 def test_normalize_parsed_founder_profile_splits_primary_secondary() -> None:

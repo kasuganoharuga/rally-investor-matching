@@ -736,10 +736,19 @@ def infer_founder_taxonomy(founder: dict[str, Any]) -> dict[str, list[str]]:
     }
 
 
-def founder_customer_type(founder: dict[str, Any]) -> str | None:
-    value = founder.get("customer_type") or founder.get("target_customer")
-    if value:
-        return normalize_customer_type_code(str(value))
+def founder_customer_types(founder: dict[str, Any]) -> list[str]:
+    explicit_values = as_list(founder.get("customer_types"))
+    if not explicit_values:
+        explicit_values = as_list(
+            founder.get("customer_type") or founder.get("target_customer")
+        )
+    normalized_values = [
+        customer_type
+        for value in explicit_values
+        if (customer_type := normalize_customer_type_code(str(value)))
+    ]
+    if normalized_values:
+        return list(dict.fromkeys(normalized_values))[:3]
 
     text = " ".join(
         norm_phrase(founder.get(field))
@@ -747,18 +756,23 @@ def founder_customer_type(founder: dict[str, Any]) -> str | None:
         if founder.get(field)
     )
     if any(term in text for term in ("hospital", "clinic", "healthcare provider")):
-        return "healthcare_provider"
+        return ["healthcare_provider"]
     if any(term in text for term in ("consumer", "b2c", "parents", "pet")):
-        return "consumer"
+        return ["consumer"]
     if any(term in text for term in ("smb", "small business", "restaurant")):
-        return "smb"
+        return ["smb"]
     if any(term in text for term in ("enterprise", "b2b", "company", "companies")):
-        return "enterprise"
-    return None
+        return ["enterprise"]
+    return []
 
 
-def founder_business_model(founder: dict[str, Any]) -> str | None:
-    value = norm_phrase(founder.get("business_model"))
+def founder_customer_type(founder: dict[str, Any]) -> str | None:
+    values = founder_customer_types(founder)
+    return values[0] if values else None
+
+
+def normalize_founder_business_model(value: Any) -> str | None:
+    value = norm_phrase(value)
     if not value:
         return None
     if "saas" in value or "subscription" in value:
@@ -774,6 +788,23 @@ def founder_business_model(founder: dict[str, Any]) -> str | None:
     if "service" in value:
         return "services"
     return value.replace(" ", "_")
+
+
+def founder_business_models(founder: dict[str, Any]) -> list[str]:
+    explicit_values = as_list(founder.get("business_models"))
+    if not explicit_values:
+        explicit_values = as_list(founder.get("business_model"))
+    normalized_values = [
+        business_model
+        for value in explicit_values
+        if (business_model := normalize_founder_business_model(value))
+    ]
+    return list(dict.fromkeys(normalized_values))[:3]
+
+
+def founder_business_model(founder: dict[str, Any]) -> str | None:
+    values = founder_business_models(founder)
+    return values[0] if values else None
 
 
 def founder_ai_relevance(founder: dict[str, Any]) -> str:
@@ -1353,17 +1384,15 @@ def score_recent_deal_similarity(
 def score_customer_icp(founder: dict[str, Any], pref: dict[str, Any] | None) -> int:
     if not pref:
         return 0
-    customer_type = founder_customer_type(founder)
-    business_model = founder_business_model(founder)
+    customer_types = founder_customer_types(founder)
+    business_models = founder_business_models(founder)
     score = 0
-    if customer_type:
-        customer_weight = max_distribution_weight(
-            pref, "customer_type", [customer_type]
-        )
+    if customer_types:
+        customer_weight = max_distribution_weight(pref, "customer_type", customer_types)
         if customer_weight:
             score += 3 + round(customer_weight)
-    if business_model:
-        model_weight = max_distribution_weight(pref, "business_model", [business_model])
+    if business_models:
+        model_weight = max_distribution_weight(pref, "business_model", business_models)
         if model_weight:
             score += 1 + round(model_weight)
     return min(score, 5)
