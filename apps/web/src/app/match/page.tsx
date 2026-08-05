@@ -1,5 +1,11 @@
 import { MatchingPage } from "@/features/matching";
 
-export default function MatchPage() {
-  return <MatchingPage />;
+type PageProps = {
+  searchParams: Promise<{ rematch?: string | string[] }>;
+};
+
+export default async function MatchPage({ searchParams }: PageProps) {
+  const params = await searchParams;
+  const rematchId = Array.isArray(params.rematch) ? params.rematch[0] : params.rematch;
+  return <MatchingPage rematchId={rematchId} />;
 }

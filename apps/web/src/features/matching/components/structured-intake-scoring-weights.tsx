@@ -20,6 +20,7 @@ function cloneDefaultConfiguration(): MatchingConfiguration {
     weights: { ...DEFAULT_MATCHING_CONFIGURATION.weights },
     hard_filters: { ...DEFAULT_MATCHING_CONFIGURATION.hard_filters },
     result_limit: DEFAULT_MATCHING_CONFIGURATION.result_limit,
+    excluded_investor_types: [],
   };
 }
 

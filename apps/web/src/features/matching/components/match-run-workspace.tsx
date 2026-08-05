@@ -101,10 +101,13 @@ export function MatchRunWorkspace({ runId }: { runId: string }) {
     return (
       <MatchResultsScreen
         response={record.response}
+        matchingConfiguration={record.matchingConfiguration}
+        matchedAt={record.createdAt}
         onSelectMatch={(investorId) =>
           router.push(`/match/${runId}?investor=${encodeURIComponent(investorId)}`)
         }
         onBack={() => router.push("/match/history")}
+        onRematch={() => router.push(`/match?rematch=${encodeURIComponent(runId)}`)}
       />
     );
   }

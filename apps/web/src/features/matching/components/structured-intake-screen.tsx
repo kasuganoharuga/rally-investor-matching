@@ -28,22 +28,55 @@ function defaultMatchingConfiguration(): MatchingConfiguration {
     weights: { ...DEFAULT_MATCHING_CONFIGURATION.weights },
     hard_filters: { ...DEFAULT_MATCHING_CONFIGURATION.hard_filters },
     result_limit: DEFAULT_MATCHING_CONFIGURATION.result_limit,
+    excluded_investor_types: [],
+  };
+}
+
+function cloneMatchingConfiguration(
+  configuration: MatchingConfiguration,
+): MatchingConfiguration {
+  return {
+    weights: { ...configuration.weights },
+    hard_filters: { ...configuration.hard_filters },
+    result_limit: configuration.result_limit,
+    excluded_investor_types: [...configuration.excluded_investor_types],
+  };
+}
+
+function cloneStructuredIntake(values: StructuredIntakeValues): StructuredIntakeValues {
+  return {
+    ...values,
+    sectors: [...values.sectors],
+    directions: [...values.directions],
   };
 }
 
 export function StructuredIntakeScreen({
   isSubmitting,
   errorMessage,
+  initialValues,
+  initialConfiguration,
+  initialStep = 0,
   onSubmit,
 }: {
   isSubmitting: boolean;
   errorMessage: string | null;
-  onSubmit: (message: string, configuration: MatchingConfiguration) => void;
+  initialValues?: StructuredIntakeValues;
+  initialConfiguration?: MatchingConfiguration;
+  initialStep?: IntakeStep;
+  onSubmit: (
+    message: string,
+    configuration: MatchingConfiguration,
+    values: StructuredIntakeValues,
+  ) => void;
 }) {
-  const [values, setValues] = useState<StructuredIntakeValues>(EMPTY_STRUCTURED_INTAKE);
-  const [matchingConfiguration, setMatchingConfiguration] =
-    useState<MatchingConfiguration>(defaultMatchingConfiguration);
-  const [activeStep, setActiveStep] = useState<IntakeStep>(0);
+  const [values, setValues] = useState<StructuredIntakeValues>(() =>
+    cloneStructuredIntake(initialValues ?? EMPTY_STRUCTURED_INTAKE),
+  );
+  const [matchingConfiguration, setMatchingConfiguration] = useState(() =>
+    cloneMatchingConfiguration(initialConfiguration ?? defaultMatchingConfiguration()),
+  );
+  const [activeStep, setActiveStep] = useState<IntakeStep>(initialStep);
   const isBusy = isSubmitting;
   const companyAndRaiseComplete = isCompanyAndRaiseComplete(values);
   const matchingSignalsComplete = isMatchingSignalsComplete(values);
@@ -91,12 +124,17 @@ export function StructuredIntakeScreen({
       return;
     }
     if (canSubmit) {
-      onSubmit(buildStructuredIntakeMessage(values), {
-        ...matchingConfiguration,
-        result_limit:
-          matchingConfiguration.result_limit ??
-          DEFAULT_MATCHING_CONFIGURATION.result_limit,
-      });
+      onSubmit(
+        buildStructuredIntakeMessage(values),
+        {
+          ...matchingConfiguration,
+          result_limit:
+            matchingConfiguration.result_limit ??
+            DEFAULT_MATCHING_CONFIGURATION.result_limit,
+          excluded_investor_types: [...matchingConfiguration.excluded_investor_types],
+        },
+        cloneStructuredIntake(values),
+      );
     }
   }
 

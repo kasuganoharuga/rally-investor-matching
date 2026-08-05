@@ -1,5 +1,7 @@
 import { z } from "zod";
 
+import { structuredIntakeValuesSchema } from "@/features/matching/types/structured-intake";
+
 const nullableNumberSchema = z.preprocess((value) => {
   if (typeof value === "string" && value.trim() !== "") {
     const parsed = Number(value);
@@ -35,6 +37,31 @@ export const MIN_MATCH_RESULT_LIMIT = 10;
 export const MAX_MATCH_RESULT_LIMIT = 30;
 export const DEFAULT_MATCH_RESULT_LIMIT = 20;
 
+export const INVESTOR_TYPE_VALUES = [
+  "vc_fund",
+  "angel",
+  "angel_group",
+  "family_office",
+  "corporate_vc",
+  "accelerator",
+  "government_fund",
+  "other",
+] as const;
+
+export const investorTypeSchema = z.enum(INVESTOR_TYPE_VALUES);
+export type InvestorType = z.infer<typeof investorTypeSchema>;
+
+export const INVESTOR_TYPE_LABELS: Record<InvestorType, string> = {
+  vc_fund: "Venture capital funds",
+  angel: "Individual angel investors",
+  angel_group: "Angel groups",
+  family_office: "Family offices",
+  corporate_vc: "Corporate venture capital",
+  accelerator: "Accelerators",
+  government_fund: "Government-backed funds",
+  other: "Other / unclassified investors",
+};
+
 export const matchingConfigurationSchema = z.object({
   weights: matchingWeightsSchema.refine(
     (weights) =>
@@ -48,6 +75,7 @@ export const matchingConfigurationSchema = z.object({
     .min(MIN_MATCH_RESULT_LIMIT)
     .max(MAX_MATCH_RESULT_LIMIT)
     .default(DEFAULT_MATCH_RESULT_LIMIT),
+  excluded_investor_types: z.array(investorTypeSchema).max(8).default([]),
 });
 
 export const intakeRequestSchema = z.object({
@@ -55,6 +83,7 @@ export const intakeRequestSchema = z.object({
   follow_up_answer: z.string().optional(),
   follow_up_count: z.number().int().min(0).max(1).optional(),
   matching_configuration: matchingConfigurationSchema.optional(),
+  structured_intake: structuredIntakeValuesSchema.optional(),
 });
 export type IntakeRequest = z.infer<typeof intakeRequestSchema>;
 export type MatchingWeights = z.infer<typeof matchingWeightsSchema>;
@@ -79,6 +108,7 @@ export const DEFAULT_MATCHING_CONFIGURATION: MatchingConfiguration = {
     geography: true,
   },
   result_limit: DEFAULT_MATCH_RESULT_LIMIT,
+  excluded_investor_types: [],
 };
 
 export const matchEvidenceSchema = z.object({
@@ -247,6 +277,8 @@ export const matchRecordSchema = z.object({
   id: z.string(),
   createdAt: z.string(),
   response: intakeResponseSchema,
+  matchingConfiguration: matchingConfigurationSchema.nullable(),
+  structuredIntake: structuredIntakeValuesSchema.nullable(),
 });
 
 export const runMatchDataSchema = z.object({

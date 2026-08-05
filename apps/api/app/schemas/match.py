@@ -1,8 +1,19 @@
 from __future__ import annotations
 
-from typing import Any
+from typing import Any, Literal
 
-from pydantic import BaseModel, Field, model_validator
+from pydantic import BaseModel, Field, field_validator, model_validator
+
+InvestorType = Literal[
+    "vc_fund",
+    "angel",
+    "angel_group",
+    "family_office",
+    "corporate_vc",
+    "accelerator",
+    "government_fund",
+    "other",
+]
 
 
 class MatchingWeights(BaseModel):
@@ -32,6 +43,18 @@ class MatchingConfiguration(BaseModel):
     weights: MatchingWeights = Field(default_factory=MatchingWeights)
     hard_filters: HardFilterSettings = Field(default_factory=HardFilterSettings)
     result_limit: int = Field(default=20, ge=10, le=30)
+    excluded_investor_types: list[InvestorType] = Field(
+        default_factory=list,
+        max_length=8,
+    )
+
+    @field_validator("excluded_investor_types")
+    @classmethod
+    def remove_duplicate_investor_types(
+        cls,
+        values: list[InvestorType],
+    ) -> list[InvestorType]:
+        return list(dict.fromkeys(values))
 
 
 class IntakeRequest(BaseModel):

@@ -1,20 +1,30 @@
-import { ArrowLeft, Download } from "lucide-react";
+import { ArrowLeft, Download, RefreshCw } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { MatchingConfigurationSummary } from "@/features/matching/components/matching-configuration-summary";
 import { MatchResultRow } from "@/features/matching/components/match-result-row";
 import { scoreTier } from "@/features/matching/components/match-result-display";
 import { downloadMatchResultsCsv } from "@/features/matching/components/match-results-csv";
-import type { IntakeResponse } from "@/features/matching/types/match";
+import type {
+  IntakeResponse,
+  MatchingConfiguration,
+} from "@/features/matching/types/match";
 
 export function MatchResultsScreen({
   response,
+  matchingConfiguration,
+  matchedAt,
   onSelectMatch,
   onBack,
+  onRematch,
 }: {
   response: IntakeResponse;
+  matchingConfiguration: MatchingConfiguration | null;
+  matchedAt: string;
   onSelectMatch: (investorId: string) => void;
   onBack: () => void;
+  onRematch: () => void;
 }) {
   const matches = response.matches;
   const strongCount = matches.filter(
@@ -57,21 +67,40 @@ export function MatchResultsScreen({
             </div>
           </div>
           <div className="flex flex-col items-end gap-3">
-            <Button
-              type="button"
-              variant="outline"
-              size="lg"
-              onClick={() => downloadMatchResultsCsv(matches, companyName)}
-            >
-              <Download className="size-4" aria-hidden="true" />
-              Download CSV
-            </Button>
+            <div className="flex flex-wrap justify-end gap-2">
+              <Button type="button" size="lg" onClick={onRematch}>
+                <RefreshCw className="size-4" aria-hidden="true" />
+                Rematch
+              </Button>
+              <Button
+                type="button"
+                variant="outline"
+                size="lg"
+                onClick={() => downloadMatchResultsCsv(matches, companyName)}
+              >
+                <Download className="size-4" aria-hidden="true" />
+                Download CSV
+              </Button>
+            </div>
             <div className="text-right text-sm text-muted-foreground">
               <p>{companyName}</p>
-              <p>Matched {new Intl.DateTimeFormat("en-AU").format(new Date())}</p>
+              <p>
+                Matched{" "}
+                {new Intl.DateTimeFormat("en-AU", {
+                  dateStyle: "medium",
+                  timeStyle: "short",
+                }).format(new Date(matchedAt))}
+              </p>
             </div>
           </div>
         </div>
+
+        {matchingConfiguration ? (
+          <MatchingConfigurationSummary
+            configuration={matchingConfiguration}
+            className="mt-4 border-t border-border pt-4"
+          />
+        ) : null}
       </div>
 
       <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-b border-primary pb-3">

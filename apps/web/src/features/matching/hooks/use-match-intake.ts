@@ -12,6 +12,7 @@ import type {
   MatchingConfiguration,
   MatchRecord,
 } from "@/features/matching/types/match";
+import type { StructuredIntakeValues } from "@/features/matching/types/structured-intake";
 import { ApiError } from "@/lib/api/errors";
 
 export type { MatchRecord } from "@/features/matching/types/match";
@@ -39,6 +40,7 @@ type MatchIntakeState = {
   followUpAnswer: string;
   response: IntakeResponse | null;
   matchingConfiguration: MatchingConfiguration | null;
+  structuredIntake: StructuredIntakeValues | null;
   messages: ChatMessage[];
   uploadedFiles: UploadedFounderFile[];
   records: MatchRecord[];
@@ -54,6 +56,7 @@ function initialState(): MatchIntakeState {
     followUpAnswer: "",
     response: null,
     matchingConfiguration: null,
+    structuredIntake: null,
     messages: [
       {
         id: "assistant-initial",
@@ -234,7 +237,11 @@ export function useMatchIntake() {
   }, []);
 
   const submitInitial = useCallback(
-    async (messageOverride?: string, matchingConfiguration?: MatchingConfiguration) => {
+    async (
+      messageOverride?: string,
+      matchingConfiguration?: MatchingConfiguration,
+      structuredIntake?: StructuredIntakeValues,
+    ) => {
       const sourceMessage = messageOverride ?? state.message;
       const requestMessage = buildRequestMessage(sourceMessage, state.uploadedFiles);
       setState((current) => ({ ...current, isSubmitting: true, error: null }));
@@ -242,6 +249,7 @@ export function useMatchIntake() {
         const { response, record } = await runMatchIntake({
           message: requestMessage,
           matching_configuration: matchingConfiguration,
+          structured_intake: structuredIntake,
         });
         setState((current) => ({
           ...current,
@@ -249,6 +257,7 @@ export function useMatchIntake() {
           message: "",
           response,
           matchingConfiguration: matchingConfiguration ?? null,
+          structuredIntake: structuredIntake ?? null,
           followUpAnswer: "",
           uploadedFiles: [],
           messages: [
@@ -283,6 +292,7 @@ export function useMatchIntake() {
         follow_up_answer: state.followUpAnswer,
         follow_up_count: state.response?.follow_up_count ?? 1,
         matching_configuration: state.matchingConfiguration ?? undefined,
+        structured_intake: state.structuredIntake ?? undefined,
       });
       setState((current) => ({
         ...current,
@@ -313,6 +323,7 @@ export function useMatchIntake() {
     state.followUpAnswer,
     state.matchingConfiguration,
     state.response?.follow_up_count,
+    state.structuredIntake,
   ]);
 
   const reset = useCallback(() => {
@@ -326,7 +337,8 @@ export function useMatchIntake() {
     setState((current) => ({
       ...current,
       response: record.response,
-      matchingConfiguration: null,
+      matchingConfiguration: record.matchingConfiguration,
+      structuredIntake: record.structuredIntake,
       message: "",
       baseMessage: "",
       followUpAnswer: "",

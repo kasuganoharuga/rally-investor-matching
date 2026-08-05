@@ -100,12 +100,13 @@ def investor_row(
     id_value: str = "10000000-0000-0000-0000-000000000001",
     name: str = "AirTree",
     slug: str = "airtree",
+    investor_type: str = "VC",
 ) -> dict[str, object]:
     return {
         "id": id_value,
         "name": name,
         "slug": slug,
-        "investor_type": "VC",
+        "investor_type": investor_type,
         "website_url": "https://www.airtree.vc/",
         "linkedin_url": None,
         "founded_year": 2014,
@@ -459,5 +460,57 @@ def test_match_intake_honours_requested_result_limit(monkeypatch: object) -> Non
         body = response.json()["data"]
         assert response.status_code == 200
         assert len(body["matches"]) == 10
+    finally:
+        app.dependency_overrides.clear()
+
+
+def test_match_intake_excludes_selected_investor_types(monkeypatch: object) -> None:
+    def fake_parse(message: str) -> dict[str, object]:
+        return {
+            "company_name": "Example AI Health",
+            "company_hq_country": "australia",
+            "primary_market": "australia",
+            "stage": "seed",
+            "round_type": "seed",
+            "sector": "ai",
+            "business_model": "b2b",
+            "target_raise_value": 2.5,
+            "target_raise_currency": "AUD",
+            "target_raise_unit": "million",
+            "lead_needed": True,
+            "missing_information": [],
+        }
+
+    monkeypatch.setattr(match_service_module, "parse_founder_message", fake_parse)
+    app.dependency_overrides[get_connection] = lambda: FakeConnection(
+        [
+            investor_row(
+                id_value="30000000-0000-0000-0000-000000000001",
+                name="Keep VC",
+                slug="keep-vc",
+                investor_type="vc_fund",
+            ),
+            investor_row(
+                id_value="30000000-0000-0000-0000-000000000002",
+                name="Exclude Accelerator",
+                slug="exclude-accelerator",
+                investor_type="accelerator",
+            ),
+        ]
+    )
+    try:
+        client = TestClient(app)
+
+        response = client.post(
+            "/api/v1/match/intake",
+            json={
+                "message": "We are an AU AI health company.",
+                "matching_configuration": {"excluded_investor_types": ["accelerator"]},
+            },
+        )
+
+        body = response.json()["data"]
+        assert response.status_code == 200
+        assert [match["investor_name"] for match in body["matches"]] == ["Keep VC"]
     finally:
         app.dependency_overrides.clear()

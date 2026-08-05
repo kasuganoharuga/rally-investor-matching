@@ -34,7 +34,12 @@ export class MatchingHistoryService {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(request),
+      body: JSON.stringify({
+        message: request.message,
+        follow_up_answer: request.follow_up_answer,
+        follow_up_count: request.follow_up_count,
+        matching_configuration: request.matching_configuration,
+      }),
       cache: "no-store",
     });
 

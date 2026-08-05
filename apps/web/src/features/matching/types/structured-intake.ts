@@ -1,3 +1,5 @@
+import { z } from "zod";
+
 export type IntakeOption = {
   value: string;
   label: string;
@@ -315,25 +317,27 @@ export const DIRECTION_OPTIONS_BY_SECTOR: Record<string, IntakeOption[]> = {
   ]),
 };
 
-export type StructuredIntakeValues = {
-  companyName: string;
-  companySummary: string;
-  hqCountry: string;
-  otherHqCountry: string;
-  primaryMarket: string;
-  otherPrimaryMarket: string;
-  stage: string;
-  raiseAmount: string;
-  raiseCurrency: string;
-  leadNeeded: string;
-  sectors: string[];
-  directions: string[];
-  customerType: string;
-  businessModel: string;
-  salesMotion: string;
-  technologyDepth: string;
-  aiRelevance: string;
-};
+export const structuredIntakeValuesSchema = z.object({
+  companyName: z.string(),
+  companySummary: z.string(),
+  hqCountry: z.string(),
+  otherHqCountry: z.string(),
+  primaryMarket: z.string(),
+  otherPrimaryMarket: z.string(),
+  stage: z.string(),
+  raiseAmount: z.string(),
+  raiseCurrency: z.string(),
+  leadNeeded: z.string(),
+  sectors: z.array(z.string()),
+  directions: z.array(z.string()),
+  customerType: z.string(),
+  businessModel: z.string(),
+  salesMotion: z.string(),
+  technologyDepth: z.string(),
+  aiRelevance: z.string(),
+});
+
+export type StructuredIntakeValues = z.infer<typeof structuredIntakeValuesSchema>;
 
 export const EMPTY_STRUCTURED_INTAKE: StructuredIntakeValues = {
   companyName: "",
@@ -431,4 +435,166 @@ export function buildStructuredIntakeMessage(values: StructuredIntakeValues): st
   ];
 
   return lines.filter(Boolean).join("\n");
+}
+
+function normalizedOptionValue(options: IntakeOption[], value: unknown): string {
+  if (typeof value !== "string" || !value.trim()) {
+    return "";
+  }
+  const normalized = value.trim().toLowerCase().replaceAll("-", "_");
+  return (
+    options.find(
+      (option) =>
+        option.value.toLowerCase().replaceAll("-", "_") === normalized ||
+        option.label.toLowerCase().replaceAll("-", "_") === normalized,
+    )?.value ?? ""
+  );
+}
+
+function profileString(profile: Record<string, unknown>, ...keys: string[]): string {
+  for (const key of keys) {
+    const value = profile[key];
+    if (typeof value === "string" && value.trim()) {
+      return value.trim();
+    }
+    if (typeof value === "number" && Number.isFinite(value)) {
+      return String(value);
+    }
+  }
+  return "";
+}
+
+function profileStrings(profile: Record<string, unknown>, ...keys: string[]): string[] {
+  const values = new Set<string>();
+  for (const key of keys) {
+    const value = profile[key];
+    if (Array.isArray(value)) {
+      for (const item of value) {
+        if (typeof item === "string" && item.trim()) {
+          values.add(item.trim());
+        }
+      }
+      continue;
+    }
+    if (typeof value === "string" && value.trim()) {
+      values.add(value.trim());
+    }
+  }
+  return [...values];
+}
+
+function knownOptionValues(options: IntakeOption[], values: string[]): string[] {
+  return [
+    ...new Set(
+      values.map((value) => normalizedOptionValue(options, value)).filter(Boolean),
+    ),
+  ];
+}
+
+function otherOptionSelection(options: IntakeOption[], rawValue: string) {
+  const knownValue = normalizedOptionValue(options, rawValue);
+  if (knownValue) {
+    return { value: knownValue, otherValue: "" };
+  }
+  if (rawValue) {
+    return { value: "other", otherValue: rawValue };
+  }
+  return { value: "", otherValue: "" };
+}
+
+function wholeRaiseAmount(profile: Record<string, unknown>): string {
+  const rawValue = profileString(profile, "target_raise_value");
+  const amount = Number(rawValue);
+  if (!Number.isFinite(amount) || amount <= 0) {
+    return "";
+  }
+  const unit = profileString(profile, "target_raise_unit").toLowerCase();
+  const multiplier =
+    unit === "million" || unit === "m"
+      ? 1_000_000
+      : unit === "thousand" || unit === "k"
+        ? 1_000
+        : 1;
+  return String(Math.round(amount * multiplier));
+}
+
+function leadNeededValue(value: unknown): string {
+  if (typeof value === "boolean") {
+    return value ? "true" : "false";
+  }
+  if (typeof value !== "string") {
+    return "";
+  }
+  const normalized = value.trim().toLowerCase();
+  if (["true", "yes", "required", "needed"].includes(normalized)) {
+    return "true";
+  }
+  if (["false", "no", "covered", "not needed"].includes(normalized)) {
+    return "false";
+  }
+  return "";
+}
+
+/**
+ * Restores older history records that predate exact structured-intake snapshots.
+ * New records use their saved form values; this is a best-effort compatibility path.
+ */
+export function structuredIntakeFromParsedProfile(
+  profile: Record<string, unknown>,
+): StructuredIntakeValues {
+  const hq = otherOptionSelection(
+    HQ_COUNTRY_OPTIONS,
+    profileString(profile, "company_hq_country"),
+  );
+  const market = otherOptionSelection(
+    PRIMARY_MARKET_OPTIONS,
+    profileString(profile, "primary_market"),
+  );
+  const sectors = knownOptionValues(
+    SECTOR_OPTIONS,
+    profileStrings(profile, "actual_sector", "sector"),
+  );
+  const directionOptions = getDirectionOptions(sectors);
+  const directions = knownOptionValues(
+    directionOptions,
+    profileStrings(profile, "actual_themes", "primary_themes", "secondary_themes"),
+  );
+
+  return {
+    companyName: profileString(profile, "company_name"),
+    companySummary: profileString(profile, "one_sentence_summary", "traction_summary"),
+    hqCountry: hq.value,
+    otherHqCountry: hq.otherValue,
+    primaryMarket: market.value,
+    otherPrimaryMarket: market.otherValue,
+    stage: normalizedOptionValue(STAGE_OPTIONS, profileString(profile, "stage")),
+    raiseAmount: wholeRaiseAmount(profile),
+    raiseCurrency: normalizedOptionValue(
+      CURRENCY_OPTIONS,
+      profileString(profile, "target_raise_currency"),
+    ),
+    leadNeeded: leadNeededValue(profile.lead_needed),
+    sectors,
+    directions,
+    customerType: normalizedOptionValue(
+      CUSTOMER_TYPE_OPTIONS,
+      profileString(profile, "customer_type"),
+    ),
+    businessModel: normalizedOptionValue(
+      BUSINESS_MODEL_OPTIONS,
+      profileString(profile, "business_model"),
+    ),
+    salesMotion: normalizedOptionValue(
+      SALES_MOTION_OPTIONS,
+      profileString(profile, "sales_motion"),
+    ),
+    technologyDepth: normalizedOptionValue(
+      TECHNOLOGY_DEPTH_OPTIONS,
+      profileString(profile, "technology_depth"),
+    ),
+    aiRelevance: normalizedOptionValue(
+      AI_RELEVANCE_OPTIONS,
+      profileString(profile, "ai_relevance"),
+    ),
+  };
 }

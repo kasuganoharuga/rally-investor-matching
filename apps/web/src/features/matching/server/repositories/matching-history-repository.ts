@@ -1,11 +1,19 @@
 import "server-only";
 
 import {
+  DEFAULT_MATCHING_CONFIGURATION,
   intakeResponseSchema,
+  matchingConfigurationSchema,
   type IntakeRequest,
   type IntakeResponse,
+  type MatchingConfiguration,
   type MatchRecord,
 } from "@/features/matching/types/match";
+import {
+  structuredIntakeFromParsedProfile,
+  structuredIntakeValuesSchema,
+  type StructuredIntakeValues,
+} from "@/features/matching/types/structured-intake";
 import { getPool, type Queryable } from "@/lib/server/db";
 
 const HISTORY_LIMIT = 25;
@@ -78,20 +86,73 @@ function snapshotFromResponse(
       follow_up_count: request.follow_up_count ?? 0,
       has_follow_up_answer: Boolean(request.follow_up_answer?.trim()),
       matching_configuration: request.matching_configuration ?? null,
+      structured_intake: request.structured_intake ?? null,
     },
     response,
   };
 }
 
+function objectValue(value: unknown): Record<string, unknown> | null {
+  return typeof value === "object" && value !== null
+    ? (value as Record<string, unknown>)
+    : null;
+}
+
+function cloneDefaultConfiguration(): MatchingConfiguration {
+  return {
+    weights: { ...DEFAULT_MATCHING_CONFIGURATION.weights },
+    hard_filters: { ...DEFAULT_MATCHING_CONFIGURATION.hard_filters },
+    result_limit: DEFAULT_MATCHING_CONFIGURATION.result_limit,
+    excluded_investor_types: [],
+  };
+}
+
+function matchingConfigurationFromSnapshot(
+  snapshot: Record<string, unknown>,
+  response: IntakeResponse,
+): MatchingConfiguration {
+  const requestSummary = objectValue(snapshot.request_summary);
+  const savedConfiguration = matchingConfigurationSchema.safeParse(
+    requestSummary?.matching_configuration,
+  );
+  if (savedConfiguration.success) {
+    return savedConfiguration.data;
+  }
+
+  const firstMatch = response.matches[0];
+  const appliedConfiguration = matchingConfigurationSchema.safeParse({
+    weights: firstMatch?.scoring_weights ?? DEFAULT_MATCHING_CONFIGURATION.weights,
+    hard_filters:
+      firstMatch?.hard_filters ?? DEFAULT_MATCHING_CONFIGURATION.hard_filters,
+    result_limit: DEFAULT_MATCHING_CONFIGURATION.result_limit,
+    excluded_investor_types: [],
+  });
+  return appliedConfiguration.success
+    ? appliedConfiguration.data
+    : cloneDefaultConfiguration();
+}
+
+function structuredIntakeFromSnapshot(
+  snapshot: Record<string, unknown>,
+  response: IntakeResponse,
+): StructuredIntakeValues {
+  const requestSummary = objectValue(snapshot.request_summary);
+  const savedIntake = structuredIntakeValuesSchema.safeParse(
+    requestSummary?.structured_intake,
+  );
+  if (savedIntake.success) {
+    return savedIntake.data;
+  }
+  return structuredIntakeFromParsedProfile(response.parsed_company_profile);
+}
+
 function mapRow(row: MatchingRunRow): MatchRecord | null {
-  const snapshot = row.founder_profile_snapshot;
-  if (typeof snapshot !== "object" || snapshot === null || !("response" in snapshot)) {
+  const snapshot = objectValue(row.founder_profile_snapshot);
+  if (!snapshot || !("response" in snapshot)) {
     return null;
   }
 
-  const parsed = intakeResponseSchema.safeParse(
-    (snapshot as { response?: unknown }).response,
-  );
+  const parsed = intakeResponseSchema.safeParse(snapshot.response);
   if (!parsed.success) {
     return null;
   }
@@ -100,6 +161,8 @@ function mapRow(row: MatchingRunRow): MatchRecord | null {
     id: row.id,
     createdAt: row.created_at.toISOString(),
     response: parsed.data,
+    matchingConfiguration: matchingConfigurationFromSnapshot(snapshot, parsed.data),
+    structuredIntake: structuredIntakeFromSnapshot(snapshot, parsed.data),
   };
 }
 

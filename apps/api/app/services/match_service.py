@@ -173,6 +173,11 @@ class MatchService:
                     if request.matching_configuration
                     else MATCH_RESULT_LIMIT
                 ),
+                excluded_investor_types=(
+                    request.matching_configuration.excluded_investor_types
+                    if request.matching_configuration
+                    else None
+                ),
             ),
         )
 
@@ -184,9 +189,17 @@ class MatchService:
         matching_weights: dict[str, int] | None = None,
         hard_filters: dict[str, bool] | None = None,
         result_limit: int = MATCH_RESULT_LIMIT,
+        excluded_investor_types: list[str] | None = None,
     ) -> list[dict[str, Any]]:
         results = []
         rows = self._repository.list_match_profiles(connection)
+        excluded_types = set(excluded_investor_types or [])
+        if excluded_types:
+            rows = [
+                row
+                for row in rows
+                if str(row.get("investor_type") or "") not in excluded_types
+            ]
         profiles = [database_row_to_profile(row) for row in rows]
         theme_prevalence = build_theme_prevalence(profiles)
         for row, profile in zip(rows, profiles, strict=True):

@@ -1,19 +1,28 @@
 "use client";
 
-import { ListOrdered, ShieldCheck } from "lucide-react";
+import { ListOrdered, ShieldCheck, UserRoundX } from "lucide-react";
 
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { MultiSelectField } from "@/features/matching/components/structured-intake-controls";
 import { StructuredIntakeScoringWeights } from "@/features/matching/components/structured-intake-scoring-weights";
 import {
   DEFAULT_MATCHING_CONFIGURATION,
+  INVESTOR_TYPE_LABELS,
+  INVESTOR_TYPE_VALUES,
   MAX_MATCH_RESULT_LIMIT,
   MIN_MATCH_RESULT_LIMIT,
   type HardFilterSettings,
   type MatchingConfiguration,
 } from "@/features/matching/types/match";
+import type { IntakeOption } from "@/features/matching/types/structured-intake";
 import { cn } from "@/lib/utils";
+
+const INVESTOR_TYPE_OPTIONS: IntakeOption[] = INVESTOR_TYPE_VALUES.map((value) => ({
+  value,
+  label: INVESTOR_TYPE_LABELS[value],
+}));
 
 const HARD_FILTERS: {
   key: keyof HardFilterSettings;
@@ -66,6 +75,16 @@ export function StructuredIntakeScoring({
     });
   }
 
+  function updateExcludedInvestorTypes(values: string[]) {
+    onChange({
+      ...configuration,
+      result_limit: resultLimit,
+      excluded_investor_types: values.filter((value) =>
+        INVESTOR_TYPE_VALUES.includes(value as (typeof INVESTOR_TYPE_VALUES)[number]),
+      ) as MatchingConfiguration["excluded_investor_types"],
+    });
+  }
+
   return (
     <div className="divide-y divide-border">
       <StructuredIntakeScoringWeights
@@ -109,6 +128,30 @@ export function StructuredIntakeScoring({
               </span>
             </label>
           ))}
+        </div>
+      </section>
+
+      <section className="p-5 md:p-7">
+        <div className="flex items-center gap-2">
+          <UserRoundX className="size-4 text-muted-foreground" aria-hidden="true" />
+          <h2 className="text-base font-semibold text-foreground">
+            Investor type exclusions
+          </h2>
+        </div>
+        <p className="mt-1 text-xs text-muted-foreground">
+          Selected investor categories will be removed before ranking begins.
+        </p>
+
+        <div className="mt-4 max-w-xl">
+          <MultiSelectField
+            label="Investor types to exclude"
+            placeholder="No investor types excluded"
+            options={INVESTOR_TYPE_OPTIONS}
+            selected={configuration.excluded_investor_types}
+            maxSelected={INVESTOR_TYPE_OPTIONS.length}
+            disabled={disabled}
+            onChange={updateExcludedInvestorTypes}
+          />
         </div>
       </section>
 

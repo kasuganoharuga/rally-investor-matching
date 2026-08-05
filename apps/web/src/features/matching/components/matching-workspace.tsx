@@ -9,7 +9,11 @@ import { MatchingProgressScreen } from "@/features/matching/components/matching-
 import { StructuredIntakeScreen } from "@/features/matching/components/structured-intake-screen";
 import { WorkspaceSubnav } from "@/features/matching/components/workspace-subnav";
 import { useMatchIntake } from "@/features/matching/hooks/use-match-intake";
-import type { MatchingConfiguration } from "@/features/matching/types/match";
+import type {
+  MatchingConfiguration,
+  MatchRecord,
+} from "@/features/matching/types/match";
+import type { StructuredIntakeValues } from "@/features/matching/types/structured-intake";
 
 export type MatchIntakeVariant = "structured" | "free-text";
 
@@ -33,8 +37,10 @@ function NoMatchesScreen({ onStartOver }: { onStartOver: () => void }) {
 
 export function MatchingWorkspace({
   intakeVariant = "structured",
+  rematchRecord = null,
 }: {
   intakeVariant?: MatchIntakeVariant;
+  rematchRecord?: MatchRecord | null;
 }) {
   const intake = useMatchIntake();
   const router = useRouter();
@@ -46,8 +52,13 @@ export function MatchingWorkspace({
   async function submitInitial(
     messageOverride?: string,
     matchingConfiguration?: MatchingConfiguration,
+    structuredIntake?: StructuredIntakeValues,
   ) {
-    const result = await intake.submitInitial(messageOverride, matchingConfiguration);
+    const result = await intake.submitInitial(
+      messageOverride,
+      matchingConfiguration,
+      structuredIntake,
+    );
     if (result?.record) {
       router.push(`/match/${result.record.id}`);
     }
@@ -108,8 +119,12 @@ export function MatchingWorkspace({
 
     return (
       <StructuredIntakeScreen
+        key={rematchRecord?.id ?? "new-match"}
         isSubmitting={intake.isSubmitting}
         errorMessage={errorMessage}
+        initialValues={rematchRecord?.structuredIntake ?? undefined}
+        initialConfiguration={rematchRecord?.matchingConfiguration ?? undefined}
+        initialStep={rematchRecord ? 2 : 0}
         onSubmit={submitInitial}
       />
     );

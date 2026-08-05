@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { formatRecordDate } from "@/features/matching/components/match-display";
 import { summarizeRecord } from "@/features/matching/components/match-history-summary";
+import { MatchingConfigurationSummary } from "@/features/matching/components/matching-configuration-summary";
 import { ScoreRing } from "@/features/matching/components/score-ring";
 import type { MatchRecord } from "@/features/matching/types/match";
 
@@ -46,6 +47,14 @@ export function MatchHistoryRecordCard({ record }: { record: MatchRecord }) {
                 {summary.topInvestorName}
               </span>
             </p>
+          ) : null}
+
+          {record.matchingConfiguration ? (
+            <MatchingConfigurationSummary
+              configuration={record.matchingConfiguration}
+              compact
+              className="mt-3 border-t border-border pt-3"
+            />
           ) : null}
         </div>
 

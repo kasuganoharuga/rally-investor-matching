@@ -273,3 +273,14 @@ def test_matching_weights_must_total_100() -> None:
 def test_match_result_limit_must_be_between_10_and_30(result_limit: int) -> None:
     with pytest.raises(ValidationError):
         MatchingConfiguration(result_limit=result_limit)
+
+
+def test_excluded_investor_types_are_validated_and_deduplicated() -> None:
+    configuration = MatchingConfiguration(
+        excluded_investor_types=["accelerator", "angel", "accelerator"]
+    )
+
+    assert configuration.excluded_investor_types == ["accelerator", "angel"]
+
+    with pytest.raises(ValidationError):
+        MatchingConfiguration(excluded_investor_types=["not_a_real_type"])
