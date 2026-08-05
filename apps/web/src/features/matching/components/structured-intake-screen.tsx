@@ -59,6 +59,7 @@ export function StructuredIntakeScreen({
   initialValues,
   initialConfiguration,
   initialStep = 0,
+  showScoringStep,
   onSubmit,
 }: {
   isSubmitting: boolean;
@@ -66,6 +67,7 @@ export function StructuredIntakeScreen({
   initialValues?: StructuredIntakeValues;
   initialConfiguration?: MatchingConfiguration;
   initialStep?: IntakeStep;
+  showScoringStep: boolean;
   onSubmit: (
     message: string,
     configuration: MatchingConfiguration,
@@ -76,9 +78,16 @@ export function StructuredIntakeScreen({
     cloneStructuredIntake(initialValues ?? EMPTY_STRUCTURED_INTAKE),
   );
   const [matchingConfiguration, setMatchingConfiguration] = useState(() =>
-    cloneMatchingConfiguration(initialConfiguration ?? defaultMatchingConfiguration()),
+    cloneMatchingConfiguration(
+      showScoringStep
+        ? (initialConfiguration ?? defaultMatchingConfiguration())
+        : defaultMatchingConfiguration(),
+    ),
   );
-  const [activeStep, setActiveStep] = useState<IntakeStep>(initialStep);
+  const finalStep: IntakeStep = showScoringStep ? 3 : 2;
+  const [activeStep, setActiveStep] = useState<IntakeStep>(() =>
+    initialStep > finalStep ? finalStep : initialStep,
+  );
   const isBusy = isSubmitting;
   const companyAndRaiseComplete = isCompanyAndRaiseComplete(values);
   const matchingSignalsComplete = isMatchingSignalsComplete(values);
@@ -111,7 +120,7 @@ export function StructuredIntakeScreen({
 
   function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (activeStep < 3) {
+    if (activeStep < finalStep) {
       setActiveStep((activeStep + 1) as IntakeStep);
       return;
     }
@@ -126,15 +135,18 @@ export function StructuredIntakeScreen({
       return;
     }
     if (canSubmit) {
+      const submittedConfiguration = showScoringStep
+        ? {
+            ...matchingConfiguration,
+            result_limit:
+              matchingConfiguration.result_limit ??
+              DEFAULT_MATCHING_CONFIGURATION.result_limit,
+            excluded_investor_types: [...matchingConfiguration.excluded_investor_types],
+          }
+        : defaultMatchingConfiguration();
       onSubmit(
         buildStructuredIntakeMessage(values),
-        {
-          ...matchingConfiguration,
-          result_limit:
-            matchingConfiguration.result_limit ??
-            DEFAULT_MATCHING_CONFIGURATION.result_limit,
-          excluded_investor_types: [...matchingConfiguration.excluded_investor_types],
-        },
+        submittedConfiguration,
         cloneStructuredIntake(values),
       );
     }
@@ -158,6 +170,7 @@ export function StructuredIntakeScreen({
       <StructuredIntakeStepper
         activeStep={activeStep}
         isBusy={isBusy}
+        showScoringStep={showScoringStep}
         isStepComplete={isStepComplete}
         onStepChange={setActiveStep}
       />
@@ -193,7 +206,8 @@ export function StructuredIntakeScreen({
           isBusy={isBusy}
           isSubmitting={isSubmitting}
           canContinue={canContinue}
-          showWeightWarning={activeStep === 3 && totalWeight !== 100}
+          finalStep={finalStep}
+          showWeightWarning={showScoringStep && activeStep === 3 && totalWeight !== 100}
           onBack={() => setActiveStep((activeStep - 1) as IntakeStep)}
         />
       </form>

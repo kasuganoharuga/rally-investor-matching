@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { AccountMenu } from "@/features/auth/components/account-menu";
+import { canAccessManagement } from "@/features/auth/role-policy";
 import type { UserRole } from "@/features/auth/types/auth";
 import { DropdownMenu, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { NavDropdownContent, NavDropdownItem } from "@/components/nav-dropdown";
@@ -53,8 +54,6 @@ const MANAGEMENT_LINKS: readonly NavLink[] = [
     label: "Manage Companies",
   },
 ];
-const MANAGEMENT_ROLES: readonly UserRole[] = ["admin", "reviewer"];
-
 type SiteHeaderProps = {
   active: SiteHeaderSection;
   user: { email: string; role: UserRole };
@@ -71,7 +70,7 @@ type SiteHeaderProps = {
  * "Management" dropdown and its role gate only need to be written once.
  */
 export function SiteHeader({ active, user, width = "wide" }: SiteHeaderProps) {
-  const showManagement = MANAGEMENT_ROLES.includes(user.role);
+  const showManagement = canAccessManagement(user.role);
   const isManagementActive = MANAGEMENT_LINKS.some((link) => link.section === active);
 
   return (
@@ -84,7 +83,7 @@ export function SiteHeader({ active, user, width = "wide" }: SiteHeaderProps) {
         )}
       >
         <nav className="flex min-w-0 items-center gap-4 md:gap-8">
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/match" className="flex items-center gap-2">
             <Image
               src="/brand/rally-icon.png"
               alt="Rally"

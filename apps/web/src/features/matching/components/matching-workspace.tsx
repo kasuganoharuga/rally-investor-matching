@@ -38,9 +38,11 @@ function NoMatchesScreen({ onStartOver }: { onStartOver: () => void }) {
 export function MatchingWorkspace({
   intakeVariant = "structured",
   rematchRecord = null,
+  canConfigureMatching,
 }: {
   intakeVariant?: MatchIntakeVariant;
   rematchRecord?: MatchRecord | null;
+  canConfigureMatching: boolean;
 }) {
   const intake = useMatchIntake();
   const router = useRouter();
@@ -125,6 +127,7 @@ export function MatchingWorkspace({
         initialValues={rematchRecord?.structuredIntake ?? undefined}
         initialConfiguration={rematchRecord?.matchingConfiguration ?? undefined}
         initialStep={rematchRecord ? 2 : 0}
+        showScoringStep={canConfigureMatching}
         onSubmit={submitInitial}
       />
     );

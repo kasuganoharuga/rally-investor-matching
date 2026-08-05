@@ -7,6 +7,7 @@ export function StructuredIntakeFooter({
   isBusy,
   isSubmitting,
   canContinue,
+  finalStep,
   showWeightWarning,
   onBack,
 }: {
@@ -14,6 +15,7 @@ export function StructuredIntakeFooter({
   isBusy: boolean;
   isSubmitting: boolean;
   canContinue: boolean;
+  finalStep: number;
   showWeightWarning: boolean;
   onBack: () => void;
 }) {
@@ -47,8 +49,10 @@ export function StructuredIntakeFooter({
         ) : null}
         {isSubmitting
           ? "Starting match"
-          : activeStep === 3
-            ? "Run test match"
+          : activeStep === finalStep
+            ? finalStep === 3
+              ? "Run test match"
+              : "Run match"
             : "Continue"}
         {!isSubmitting ? <ArrowRight className="size-4" aria-hidden="true" /> : null}
       </Button>

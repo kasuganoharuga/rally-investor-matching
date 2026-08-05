@@ -1,5 +1,6 @@
 import "server-only";
 
+import { canConfigureMatching } from "@/features/auth/role-policy";
 import type { CurrentUser } from "@/features/auth/server/session";
 import {
   intakeResponseSchema,
@@ -28,6 +29,9 @@ function isDataEnvelope(value: unknown): value is { data: unknown } {
 
 export class MatchingHistoryService {
   async runIntake(request: IntakeRequest, user: CurrentUser): Promise<RunMatchData> {
+    const effectiveRequest = canConfigureMatching(user.role)
+      ? request
+      : { ...request, matching_configuration: undefined };
     const response = await fetch(`${MATCHING_API_BASE_URL}/api/v1/match/intake`, {
       method: "POST",
       headers: {
@@ -35,10 +39,10 @@ export class MatchingHistoryService {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        message: request.message,
-        follow_up_answer: request.follow_up_answer,
-        follow_up_count: request.follow_up_count,
-        matching_configuration: request.matching_configuration,
+        message: effectiveRequest.message,
+        follow_up_answer: effectiveRequest.follow_up_answer,
+        follow_up_count: effectiveRequest.follow_up_count,
+        matching_configuration: effectiveRequest.matching_configuration,
       }),
       cache: "no-store",
     });
@@ -61,7 +65,7 @@ export class MatchingHistoryService {
     const parsedResponse = intakeResponseSchema.parse(body.data);
     const record = await insertMatchingRun({
       userId: user.id,
-      request,
+      request: effectiveRequest,
       response: parsedResponse,
     });
 

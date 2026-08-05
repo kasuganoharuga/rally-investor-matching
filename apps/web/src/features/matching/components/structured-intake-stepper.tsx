@@ -36,31 +36,43 @@ export type IntakeStep = 0 | 1 | 2 | 3;
 export function StructuredIntakeStepper({
   activeStep,
   isBusy,
+  showScoringStep,
   isStepComplete,
   onStepChange,
 }: {
   activeStep: IntakeStep;
   isBusy: boolean;
+  showScoringStep: boolean;
   isStepComplete: (step: IntakeStep) => boolean;
   onStepChange: (step: IntakeStep) => void;
 }) {
-  const currentStep = INTAKE_STEPS[activeStep];
+  const visibleSteps = showScoringStep ? INTAKE_STEPS : INTAKE_STEPS.slice(0, 3);
+  const currentStep = visibleSteps[activeStep];
+  const currentDescription =
+    !showScoringStep && activeStep === 2
+      ? "Check the selected details before running the match."
+      : currentStep.description;
 
   return (
     <div className="border-b border-border pb-7">
       <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs font-semibold text-muted-foreground shadow-sm">
         <span className="size-2 rounded-full bg-primary" />
-        Step {activeStep + 1} of {INTAKE_STEPS.length}
+        Step {activeStep + 1} of {visibleSteps.length}
       </div>
       <h1 className="mt-4 text-3xl font-semibold text-foreground">
         {currentStep.heading}
       </h1>
       <p className="mt-2 max-w-2xl text-sm leading-6 text-muted-foreground">
-        {currentStep.description}
+        {currentDescription}
       </p>
 
-      <ol className="mt-6 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
-        {INTAKE_STEPS.map((step, index) => {
+      <ol
+        className={cn(
+          "mt-6 grid gap-2 sm:grid-cols-2",
+          showScoringStep ? "lg:grid-cols-4" : "lg:grid-cols-3",
+        )}
+      >
+        {visibleSteps.map((step, index) => {
           const stepIndex = index as IntakeStep;
           const isActive = stepIndex === activeStep;
           const isComplete = isStepComplete(stepIndex);
