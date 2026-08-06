@@ -101,6 +101,7 @@ export function MatchRunWorkspace({ runId }: { runId: string }) {
     return (
       <MatchResultsScreen
         response={record.response}
+        structuredIntake={record.structuredIntake}
         matchingConfiguration={record.matchingConfiguration}
         matchedAt={record.createdAt}
         onSelectMatch={(investorId) =>

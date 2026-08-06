@@ -1,8 +1,12 @@
-import { ArrowLeft, Download, RefreshCw } from "lucide-react";
+import { ArrowLeft, CircleCheck, Download, RefreshCw, Users } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { MatchingConfigurationSummary } from "@/features/matching/components/matching-configuration-summary";
+import {
+  estimateInvestmentCapacity,
+  formatCompactCurrency,
+} from "@/features/matching/components/match-investment-capacity";
 import { MatchResultRow } from "@/features/matching/components/match-result-row";
 import { scoreTier } from "@/features/matching/components/match-result-display";
 import { downloadMatchResultsCsv } from "@/features/matching/components/match-results-csv";
@@ -10,9 +14,11 @@ import type {
   IntakeResponse,
   MatchingConfiguration,
 } from "@/features/matching/types/match";
+import type { StructuredIntakeValues } from "@/features/matching/types/structured-intake";
 
 export function MatchResultsScreen({
   response,
+  structuredIntake,
   matchingConfiguration,
   matchedAt,
   onSelectMatch,
@@ -20,6 +26,7 @@ export function MatchResultsScreen({
   onRematch,
 }: {
   response: IntakeResponse;
+  structuredIntake: StructuredIntakeValues | null;
   matchingConfiguration: MatchingConfiguration | null;
   matchedAt: string;
   onSelectMatch: (investorId: string) => void;
@@ -34,6 +41,7 @@ export function MatchResultsScreen({
     (match) => scoreTier(match.score) === "possible",
   ).length;
   const weakCount = matches.length - strongCount - possibleCount;
+  const capacityEstimate = estimateInvestmentCapacity(matches.length, structuredIntake);
   const companyName =
     typeof response.parsed_company_profile.company_name === "string"
       ? response.parsed_company_profile.company_name
@@ -102,6 +110,48 @@ export function MatchResultsScreen({
           />
         ) : null}
       </div>
+
+      {capacityEstimate ? (
+        <div className="mt-4 flex flex-wrap items-center justify-between gap-4 rounded-lg border border-primary/20 bg-primary/5 px-5 py-4">
+          <div className="flex items-center gap-3">
+            <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
+              <Users className="size-5" aria-hidden="true" />
+            </div>
+            <div>
+              <p className="text-sm font-medium text-muted-foreground">
+                Estimated matched capacity / raise target
+              </p>
+              <p className="text-2xl font-semibold tracking-tight text-foreground">
+                {formatCompactCurrency(
+                  capacityEstimate.matchedAmount,
+                  capacityEstimate.currency,
+                )}{" "}
+                /{" "}
+                {formatCompactCurrency(
+                  capacityEstimate.targetAmount,
+                  capacityEstimate.currency,
+                )}
+              </p>
+            </div>
+          </div>
+          <div
+            className={
+              capacityEstimate.isEnough
+                ? "inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground"
+                : "inline-flex items-center gap-2 rounded-full border border-warning/30 bg-warning/15 px-4 py-2 text-sm font-semibold text-foreground"
+            }
+          >
+            {capacityEstimate.isEnough ? (
+              <CircleCheck className="size-4" aria-hidden="true" />
+            ) : (
+              <Users className="size-4" aria-hidden="true" />
+            )}
+            {capacityEstimate.isEnough
+              ? "Likely enough for this raise"
+              : "More investors likely needed"}
+          </div>
+        </div>
+      ) : null}
 
       <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-b border-primary pb-3">
         <span className="rounded-full border border-primary bg-primary px-4 py-1.5 text-sm font-semibold text-primary-foreground">
