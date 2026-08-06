@@ -59,7 +59,13 @@ function MatchRunError({ message, onRetry }: { message: string; onRetry: () => v
   );
 }
 
-export function MatchRunWorkspace({ runId }: { runId: string }) {
+export function MatchRunWorkspace({
+  runId,
+  showCalculationDetails,
+}: {
+  runId: string;
+  showCalculationDetails: boolean;
+}) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const { record, isLoading, error, notFound, reload } = useMatchingRun(runId);
@@ -102,6 +108,7 @@ export function MatchRunWorkspace({ runId }: { runId: string }) {
       <MatchResultsScreen
         response={record.response}
         structuredIntake={record.structuredIntake}
+        showCalculationDetails={showCalculationDetails}
         matchingConfiguration={record.matchingConfiguration}
         matchedAt={record.createdAt}
         onSelectMatch={(investorId) =>

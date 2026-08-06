@@ -21,9 +21,15 @@ const TARGET_CURRENCY_TO_AUD: Record<string, number> = {
   USD: 1.53,
 };
 
+export const CAPACITY_COVERAGE_MULTIPLIER = 1.5;
+
 export type InvestmentCapacityEstimate = {
   matchedAmount: number;
   targetAmount: number;
+  requiredAmount: number;
+  leadAmount: number;
+  nonLeadAmount: number;
+  nonLeadCount: number;
   currency: string;
   isEnough: boolean;
 };
@@ -51,12 +57,17 @@ export function estimateInvestmentCapacity(
   const capacityAud =
     chequeEstimate.leadAud + Math.max(matchCount - 1, 0) * chequeEstimate.nonLeadAud;
   const matchedAmount = capacityAud / currencyToAud;
+  const requiredAmount = targetAmount * CAPACITY_COVERAGE_MULTIPLIER;
 
   return {
     matchedAmount,
     targetAmount,
+    requiredAmount,
+    leadAmount: chequeEstimate.leadAud / currencyToAud,
+    nonLeadAmount: chequeEstimate.nonLeadAud / currencyToAud,
+    nonLeadCount: Math.max(matchCount - 1, 0),
     currency: intake.raiseCurrency,
-    isEnough: matchedAmount >= targetAmount,
+    isEnough: matchedAmount >= requiredAmount,
   };
 }
 

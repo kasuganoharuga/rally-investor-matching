@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { MatchingConfigurationSummary } from "@/features/matching/components/matching-configuration-summary";
 import {
+  CAPACITY_COVERAGE_MULTIPLIER,
   estimateInvestmentCapacity,
   formatCompactCurrency,
 } from "@/features/matching/components/match-investment-capacity";
@@ -19,6 +20,7 @@ import type { StructuredIntakeValues } from "@/features/matching/types/structure
 export function MatchResultsScreen({
   response,
   structuredIntake,
+  showCalculationDetails,
   matchingConfiguration,
   matchedAt,
   onSelectMatch,
@@ -27,6 +29,7 @@ export function MatchResultsScreen({
 }: {
   response: IntakeResponse;
   structuredIntake: StructuredIntakeValues | null;
+  showCalculationDetails: boolean;
   matchingConfiguration: MatchingConfiguration | null;
   matchedAt: string;
   onSelectMatch: (investorId: string) => void;
@@ -112,45 +115,90 @@ export function MatchResultsScreen({
       </div>
 
       {capacityEstimate ? (
-        <div className="mt-4 flex flex-wrap items-center justify-between gap-4 rounded-lg border border-primary/20 bg-primary/5 px-5 py-4">
-          <div className="flex items-center gap-3">
-            <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
-              <Users className="size-5" aria-hidden="true" />
+        <>
+          <div className="mt-4 flex flex-wrap items-center justify-between gap-4 rounded-lg border border-primary/20 bg-primary/5 px-5 py-4">
+            <div className="flex items-center gap-3">
+              <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                <Users className="size-5" aria-hidden="true" />
+              </div>
+              <div>
+                <p className="text-sm font-medium text-muted-foreground">
+                  Estimated matched capacity / raise target
+                </p>
+                <p className="text-2xl font-semibold tracking-tight text-foreground">
+                  {formatCompactCurrency(
+                    capacityEstimate.matchedAmount,
+                    capacityEstimate.currency,
+                  )}{" "}
+                  /{" "}
+                  {formatCompactCurrency(
+                    capacityEstimate.targetAmount,
+                    capacityEstimate.currency,
+                  )}
+                </p>
+              </div>
             </div>
-            <div>
-              <p className="text-sm font-medium text-muted-foreground">
-                Estimated matched capacity / raise target
-              </p>
-              <p className="text-2xl font-semibold tracking-tight text-foreground">
-                {formatCompactCurrency(
-                  capacityEstimate.matchedAmount,
-                  capacityEstimate.currency,
-                )}{" "}
-                /{" "}
-                {formatCompactCurrency(
-                  capacityEstimate.targetAmount,
-                  capacityEstimate.currency,
-                )}
-              </p>
+            <div
+              className={
+                capacityEstimate.isEnough
+                  ? "inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground"
+                  : "inline-flex items-center gap-2 rounded-full border border-warning/30 bg-warning/15 px-4 py-2 text-sm font-semibold text-foreground"
+              }
+            >
+              {capacityEstimate.isEnough ? (
+                <CircleCheck className="size-4" aria-hidden="true" />
+              ) : (
+                <Users className="size-4" aria-hidden="true" />
+              )}
+              {capacityEstimate.isEnough
+                ? "Likely enough for this raise"
+                : "More investors likely needed"}
             </div>
           </div>
-          <div
-            className={
-              capacityEstimate.isEnough
-                ? "inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground"
-                : "inline-flex items-center gap-2 rounded-full border border-warning/30 bg-warning/15 px-4 py-2 text-sm font-semibold text-foreground"
-            }
-          >
-            {capacityEstimate.isEnough ? (
-              <CircleCheck className="size-4" aria-hidden="true" />
-            ) : (
-              <Users className="size-4" aria-hidden="true" />
-            )}
-            {capacityEstimate.isEnough
-              ? "Likely enough for this raise"
-              : "More investors likely needed"}
-          </div>
-        </div>
+
+          {showCalculationDetails ? (
+            <details className="mt-3 rounded-lg border border-border bg-card px-5 py-3">
+              <summary className="cursor-pointer text-sm font-semibold text-foreground marker:text-primary">
+                Click to see how this is calculated
+              </summary>
+              <div className="mt-3 space-y-2 border-t border-border pt-3 text-sm text-muted-foreground">
+                <p>
+                  <span className="font-medium text-foreground">Matched capacity:</span>{" "}
+                  {formatCompactCurrency(
+                    capacityEstimate.leadAmount,
+                    capacityEstimate.currency,
+                  )}{" "}
+                  lead estimate + {capacityEstimate.nonLeadCount} x{" "}
+                  {formatCompactCurrency(
+                    capacityEstimate.nonLeadAmount,
+                    capacityEstimate.currency,
+                  )}{" "}
+                  participant estimate ={" "}
+                  {formatCompactCurrency(
+                    capacityEstimate.matchedAmount,
+                    capacityEstimate.currency,
+                  )}
+                </p>
+                <p>
+                  <span className="font-medium text-foreground">Enough threshold:</span>{" "}
+                  {formatCompactCurrency(
+                    capacityEstimate.targetAmount,
+                    capacityEstimate.currency,
+                  )}{" "}
+                  x {CAPACITY_COVERAGE_MULTIPLIER} ={" "}
+                  {formatCompactCurrency(
+                    capacityEstimate.requiredAmount,
+                    capacityEstimate.currency,
+                  )}
+                </p>
+                <p>
+                  Capacity is marked as enough only when it reaches 1.5x the raise
+                  target, allowing for matches that may not convert into investments.
+                </p>
+              </div>
+            </details>
+          ) : null}
+        </>
       ) : null}
 
       <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-b border-primary pb-3">
