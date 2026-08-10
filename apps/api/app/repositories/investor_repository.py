@@ -166,7 +166,7 @@ SELECT
   COALESCE(th.theme_focus, ARRAY[]::text[]) AS business_model_focus,
   ARRAY[]::text[] AS founder_fit,
   COALESCE(sr.cheque_ranges, '[]'::jsonb) AS cheque_ranges,
-  COALESCE(compat.cheque_ranges, '[]'::jsonb) AS declared_cheque_ranges,
+  '[]'::jsonb AS declared_cheque_ranges,
   CASE
     WHEN ap.lead_ratio >= 0.5 THEN 'lead'
     WHEN ap.lead_ratio > 0 THEN 'leads_and_follows'
@@ -193,8 +193,6 @@ SELECT
   i.created_at,
   i.updated_at
 FROM public.investors i
-LEFT JOIN mvp_compat.investors compat
-  ON compat.slug = {SLUG_SQL}
 LEFT JOIN public.investor_actual_preferences ap
   ON ap.investor_id = i.id
 LEFT JOIN stage_rollup sr
