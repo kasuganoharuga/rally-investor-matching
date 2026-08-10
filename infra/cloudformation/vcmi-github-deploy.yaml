@@ -26,7 +26,7 @@ Parameters:
     Description: Numeric GitHub repository ID (gh api /repos/<org>/<repo> --jq .id).
   GitHubBranch:
     Type: String
-    Default: develop_new
+    Default: develop
   GitHubOidcProviderArn:
     Type: String
     Description: Existing IAM OIDC provider ARN for token.actions.githubusercontent.com.

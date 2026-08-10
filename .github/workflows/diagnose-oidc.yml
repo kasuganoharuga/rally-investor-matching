@@ -25,9 +25,9 @@ jobs:
           token=$(jq -r '.value' <<<"$response")
           payload=$(cut -d. -f2 <<<"$token" | tr '_-' '/+' | awk '{ while (length($0) % 4) $0=$0"="; print }' | base64 -d)
           echo "Expected classic trust subject:"
-          echo "  repo:Torus-Group/rally-investor-matching:ref:refs/heads/develop_new"
+          echo "  repo:Torus-Group/rally-investor-matching:ref:refs/heads/develop"
           echo "Expected immutable trust subject:"
-          echo "  repo:Torus-Group@296493582/rally-investor-matching@1284664914:ref:refs/heads/develop_new"
+          echo "  repo:Torus-Group@296493582/rally-investor-matching@1284664914:ref:refs/heads/develop"
           echo
           echo "Actual OIDC claims presented to STS audience sts.amazonaws.com:"
           jq '{

@@ -3,7 +3,7 @@ name: Deploy formal AWS
 on:
   push:
     branches:
-      - develop_new
+      - develop
   workflow_dispatch:
 
 concurrency:
@@ -115,7 +115,7 @@ jobs:
           )
           sha256sum "$archive_path"
           aws s3 cp "$archive_path" "s3://${DEPLOY_BUCKET}/${DEPLOY_KEY}" \
-            --metadata "commit=${GITHUB_SHA},branch=develop_new"
+            --metadata "commit=${GITHUB_SHA},branch=develop"
 
       - name: Deploy with Systems Manager
         id: deploy
@@ -178,7 +178,7 @@ jobs:
           remote_script=$(cat <<EOF
           set -euo pipefail
           export RALLY_RELEASE_SHA='${GITHUB_SHA}'
-          export RALLY_RELEASE_BRANCH='develop_new'
+          export RALLY_RELEASE_BRANCH='develop'
           export RALLY_SOURCE_BUCKET='${DEPLOY_BUCKET}'
           export RALLY_SOURCE_KEY='${DEPLOY_KEY}'
           [[ '${GITHUB_SHA}' =~ ^[0-9a-f]{40}$ ]] || exit 1
@@ -259,6 +259,6 @@ jobs:
             --resources "$EC2_INSTANCE_ID" \
             --tags \
               "Key=RallyCommit,Value=${GITHUB_SHA}" \
-              "Key=RallyBranch,Value=develop_new" \
+              "Key=RallyBranch,Value=develop" \
               "Key=RallyWebUrl,Value=http://${public_ip}:3000"
           echo "Rally formal deployed to http://${public_ip}:3000"

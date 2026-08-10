@@ -151,7 +151,7 @@ Never commit `.env` or copied RDS credentials.
 
 ## Automatic Formal Deployment
 
-Pushes to `develop_new` are deployed to the formal EC2 environment by
+Pushes to `develop` are deployed to the formal EC2 environment by
 `.github/workflows/deploy-formal-aws.yml`.
 
 The workflow:
@@ -188,7 +188,7 @@ aws cloudformation deploy `
     GitHubOrganizationId=296493582 `
     GitHubRepository=rally-investor-matching `
     GitHubRepositoryId=1284664914 `
-    GitHubBranch=develop_new
+    GitHubBranch=develop
 ```
 
 If Deploy formal AWS fails at `Configure AWS credentials through OIDC` with
