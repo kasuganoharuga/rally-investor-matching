@@ -183,6 +183,12 @@ Resources:
           if [ -z "$APP_BASE_URL_VALUE" ]; then
             APP_BASE_URL_VALUE="http://$PUBLIC_IPV4:3000"
           fi
+          TRUSTED_ORIGINS_VALUE="$APP_BASE_URL_VALUE,http://$PUBLIC_IPV4:3000,http://$PUBLIC_HOSTNAME:3000"
+          CORS_ORIGINS_VALUE="$(jq -cn \
+            --arg app "$APP_BASE_URL_VALUE" \
+            --arg ip "http://$PUBLIC_IPV4:3000" \
+            --arg hostname "http://$PUBLIC_HOSTNAME:3000" \
+            '[$app, $ip, $hostname] | unique')"
 
           set +x
           SECRET_JSON="$(aws secretsmanager get-secret-value --region ${AWS::Region} --secret-id '${AppSecretName}' --query SecretString --output text)"
@@ -198,13 +204,14 @@ Resources:
             printf "DATABASE_URL=%s\n" "$(shell_quote "$DATABASE_URL")"
             printf "LLM_PROVIDER=%s\n" "$(shell_quote anthropic)"
             printf "ANTHROPIC_API_KEY=%s\n" "$(shell_quote "$ANTHROPIC_API_KEY")"
-            printf "CORS_ORIGINS=%s\n" "$(shell_quote "[\"http://$PUBLIC_IPV4:3000\",\"http://$PUBLIC_HOSTNAME:3000\"]")"
+            printf "CORS_ORIGINS=%s\n" "$(shell_quote "$CORS_ORIGINS_VALUE")"
           } > /etc/rally/api.env
           {
             printf "NODE_ENV=%s\n" "$(shell_quote production)"
             printf "DATABASE_URL=%s\n" "$(shell_quote "$DATABASE_URL")"
             printf "BETTER_AUTH_SECRET=%s\n" "$(shell_quote "$BETTER_AUTH_SECRET")"
-            printf "BETTER_AUTH_URL=%s\n" "$(shell_quote "http://$PUBLIC_IPV4:3000")"
+            printf "BETTER_AUTH_URL=%s\n" "$(shell_quote "$APP_BASE_URL_VALUE")"
+            printf "BETTER_AUTH_TRUSTED_ORIGINS=%s\n" "$(shell_quote "$TRUSTED_ORIGINS_VALUE")"
             printf "APP_BASE_URL=%s\n" "$(shell_quote "$APP_BASE_URL_VALUE")"
             printf "NEXT_PUBLIC_MATCHING_API_BASE_URL=%s\n" "$(shell_quote "http://$PUBLIC_IPV4:8000")"
             printf "MATCHING_API_BASE_URL=%s\n" "$(shell_quote "http://127.0.0.1:8000")"
