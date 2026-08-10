@@ -4,8 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { MatchingConfigurationSummary } from "@/features/matching/components/matching-configuration-summary";
 import {
-  CAPACITY_COVERAGE_MULTIPLIER,
-  estimateInvestmentCapacity,
+  formatCapacityPercent,
   formatCompactCurrency,
 } from "@/features/matching/components/match-investment-capacity";
 import { MatchResultRow } from "@/features/matching/components/match-result-row";
@@ -15,11 +14,9 @@ import type {
   IntakeResponse,
   MatchingConfiguration,
 } from "@/features/matching/types/match";
-import type { StructuredIntakeValues } from "@/features/matching/types/structured-intake";
 
 export function MatchResultsScreen({
   response,
-  structuredIntake,
   showCalculationDetails,
   matchingConfiguration,
   matchedAt,
@@ -28,7 +25,6 @@ export function MatchResultsScreen({
   onRematch,
 }: {
   response: IntakeResponse;
-  structuredIntake: StructuredIntakeValues | null;
   showCalculationDetails: boolean;
   matchingConfiguration: MatchingConfiguration | null;
   matchedAt: string;
@@ -44,7 +40,16 @@ export function MatchResultsScreen({
     (match) => scoreTier(match.score) === "possible",
   ).length;
   const weakCount = matches.length - strongCount - possibleCount;
-  const capacityEstimate = estimateInvestmentCapacity(matches.length, structuredIntake);
+  const capacityEstimate = response.investment_capacity;
+  const capacityStatus = capacityEstimate
+    ? capacityEstimate.remaining_target <= 0
+      ? "Raise already covered"
+      : !capacityEstimate.lead_requirement_met
+        ? "Lead coverage still needed"
+        : capacityEstimate.is_enough
+          ? "Coverage model indicates enough"
+          : "More investor coverage needed"
+    : "";
   const companyName =
     typeof response.parsed_company_profile.company_name === "string"
       ? response.parsed_company_profile.company_name
@@ -69,7 +74,7 @@ export function MatchResultsScreen({
             </h1>
             <p className="mt-1 text-sm text-muted-foreground">
               Top matches are ranked by evidence-backed fit across stage, sector,
-              geography, cheque size, and lead behaviour.
+              geography, round size, and lead behaviour.
             </p>
             <div className="mt-3 flex flex-wrap gap-2">
               <Badge variant="secondary">• {strongCount} strong fit</Badge>
@@ -123,16 +128,16 @@ export function MatchResultsScreen({
               </div>
               <div>
                 <p className="text-sm font-medium text-muted-foreground">
-                  Estimated matched capacity / raise target
+                  Risk-adjusted matched funding / remaining target
                 </p>
                 <p className="text-2xl font-semibold tracking-tight text-foreground">
                   {formatCompactCurrency(
-                    capacityEstimate.matchedAmount,
+                    capacityEstimate.risk_adjusted_capacity,
                     capacityEstimate.currency,
                   )}{" "}
                   /{" "}
                   {formatCompactCurrency(
-                    capacityEstimate.targetAmount,
+                    capacityEstimate.remaining_target,
                     capacityEstimate.currency,
                   )}
                 </p>
@@ -140,19 +145,17 @@ export function MatchResultsScreen({
             </div>
             <div
               className={
-                capacityEstimate.isEnough
+                capacityEstimate.is_enough
                   ? "inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground"
                   : "inline-flex items-center gap-2 rounded-full border border-warning/30 bg-warning/15 px-4 py-2 text-sm font-semibold text-foreground"
               }
             >
-              {capacityEstimate.isEnough ? (
+              {capacityEstimate.is_enough ? (
                 <CircleCheck className="size-4" aria-hidden="true" />
               ) : (
                 <Users className="size-4" aria-hidden="true" />
               )}
-              {capacityEstimate.isEnough
-                ? "Likely enough for this raise"
-                : "More investors likely needed"}
+              {capacityStatus}
             </div>
           </div>
 
@@ -163,38 +166,84 @@ export function MatchResultsScreen({
               </summary>
               <div className="mt-3 space-y-2 border-t border-border pt-3 text-sm text-muted-foreground">
                 <p>
-                  <span className="font-medium text-foreground">Matched capacity:</span>{" "}
-                  {formatCompactCurrency(
-                    capacityEstimate.leadAmount,
-                    capacityEstimate.currency,
-                  )}{" "}
-                  lead estimate + {capacityEstimate.nonLeadCount} x{" "}
-                  {formatCompactCurrency(
-                    capacityEstimate.nonLeadAmount,
-                    capacityEstimate.currency,
-                  )}{" "}
-                  participant estimate ={" "}
-                  {formatCompactCurrency(
-                    capacityEstimate.matchedAmount,
-                    capacityEstimate.currency,
-                  )}
+                  <span className="font-medium text-foreground">
+                    Standardised candidate pool:
+                  </span>{" "}
+                  Top {capacityEstimate.candidate_count} eligible matches are assessed,
+                  independently of whether Step 4 displays 10, 20, or 30 results.
                 </p>
                 <p>
-                  <span className="font-medium text-foreground">Enough threshold:</span>{" "}
+                  <span className="font-medium text-foreground">
+                    Gross planning capacity:
+                  </span>{" "}
                   {formatCompactCurrency(
-                    capacityEstimate.targetAmount,
-                    capacityEstimate.currency,
-                  )}{" "}
-                  x {CAPACITY_COVERAGE_MULTIPLIER} ={" "}
-                  {formatCompactCurrency(
-                    capacityEstimate.requiredAmount,
+                    capacityEstimate.gross_capacity,
                     capacityEstimate.currency,
                   )}
+                  . The {capacityEstimate.coverage_buffer_multiplier}x buffer requires{" "}
+                  {formatCompactCurrency(
+                    capacityEstimate.required_gross_capacity,
+                    capacityEstimate.currency,
+                  )}
+                  .
                 </p>
                 <p>
-                  Capacity is marked as enough only when it reaches 1.5x the raise
-                  target, allowing for matches that may not convert into investments.
+                  <span className="font-medium text-foreground">
+                    Risk-adjusted capacity:
+                  </span>{" "}
+                  {formatCompactCurrency(
+                    capacityEstimate.risk_adjusted_capacity,
+                    capacityEstimate.currency,
+                  )}{" "}
+                  against a remaining target of{" "}
+                  {formatCompactCurrency(
+                    capacityEstimate.remaining_target,
+                    capacityEstimate.currency,
+                  )}
+                  . Verified investor cheque ranges are used first; otherwise the stage
+                  and investor-type planning matrix supplies the estimate.
                 </p>
+                {capacityEstimate.committed_amount > 0 ? (
+                  <p>
+                    <span className="font-medium text-foreground">
+                      Confirmed before matching:
+                    </span>{" "}
+                    {formatCompactCurrency(
+                      capacityEstimate.committed_amount,
+                      capacityEstimate.currency,
+                    )}{" "}
+                    of a{" "}
+                    {formatCompactCurrency(
+                      capacityEstimate.target_amount,
+                      capacityEstimate.currency,
+                    )}{" "}
+                    raise.
+                  </p>
+                ) : null}
+                {capacityEstimate.lead_needed ? (
+                  <p>
+                    <span className="font-medium text-foreground">Lead coverage:</span>{" "}
+                    {capacityEstimate.lead_candidate_count} lead-capable candidates,
+                    with an estimated{" "}
+                    {formatCapacityPercent(capacityEstimate.lead_probability)} chance of
+                    securing one versus a{" "}
+                    {formatCapacityPercent(capacityEstimate.lead_probability_threshold)}{" "}
+                    planning threshold.
+                  </p>
+                ) : null}
+                <p>
+                  <span className="font-medium text-foreground">
+                    Provisional conversion assumptions:
+                  </span>{" "}
+                  {capacityEstimate.tier_breakdown
+                    .map(
+                      (tier) =>
+                        `${tier.tier.replaceAll("_", " ")} ${tier.candidate_count} x ${formatCapacityPercent(tier.base_conversion_factor)}`,
+                    )
+                    .join("; ") || "No eligible candidates"}
+                  .
+                </p>
+                <p>{capacityEstimate.assumption_note}</p>
               </div>
             </details>
           ) : null}

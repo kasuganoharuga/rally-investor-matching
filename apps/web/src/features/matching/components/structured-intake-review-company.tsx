@@ -33,6 +33,12 @@ export function StructuredIntakeReviewCompany({
   const formattedAmount = Number.isFinite(amount)
     ? new Intl.NumberFormat("en-AU", { maximumFractionDigits: 0 }).format(amount)
     : values.raiseAmount;
+  const committedAmount = Number(values.committedAmount || 0);
+  const formattedCommittedAmount = Number.isFinite(committedAmount)
+    ? new Intl.NumberFormat("en-AU", { maximumFractionDigits: 0 }).format(
+        committedAmount,
+      )
+    : values.committedAmount;
 
   return (
     <section className="p-5 md:p-7">
@@ -73,6 +79,10 @@ export function StructuredIntakeReviewCompany({
           label="Target raise"
           value={values.raiseAmount ? `${values.raiseCurrency} ${formattedAmount}` : ""}
           emphasize
+        />
+        <ReviewItem
+          label="Confirmed capital"
+          value={`${values.raiseCurrency} ${formattedCommittedAmount}`}
         />
         <ReviewBadgeItem
           label="Lead requirement"

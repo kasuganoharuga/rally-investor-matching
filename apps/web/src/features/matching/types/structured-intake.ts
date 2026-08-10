@@ -327,6 +327,7 @@ const structuredIntakeValuesObjectSchema = z.object({
   stage: z.string(),
   raiseAmount: z.string(),
   raiseCurrency: z.string(),
+  committedAmount: z.string().default(""),
   leadNeeded: z.string(),
   sectors: z.array(z.string()),
   directions: z.array(z.string()),
@@ -370,6 +371,7 @@ export const EMPTY_STRUCTURED_INTAKE: StructuredIntakeValues = {
   stage: "",
   raiseAmount: "",
   raiseCurrency: "AUD",
+  committedAmount: "",
   leadNeeded: "",
   sectors: [],
   directions: [],
@@ -397,6 +399,8 @@ export function isStructuredIntakeComplete(values: StructuredIntakeValues): bool
 }
 
 export function isCompanyAndRaiseComplete(values: StructuredIntakeValues): boolean {
+  const targetAmount = Number(values.raiseAmount);
+  const committedAmount = values.committedAmount ? Number(values.committedAmount) : 0;
   return Boolean(
     values.companyName.trim() &&
     values.hqCountry &&
@@ -404,7 +408,10 @@ export function isCompanyAndRaiseComplete(values: StructuredIntakeValues): boole
     values.primaryMarket &&
     (values.primaryMarket !== "other" || values.otherPrimaryMarket.trim()) &&
     values.stage &&
-    Number(values.raiseAmount) > 0 &&
+    targetAmount > 0 &&
+    Number.isFinite(committedAmount) &&
+    committedAmount >= 0 &&
+    committedAmount <= targetAmount &&
     values.raiseCurrency &&
     values.leadNeeded,
   );
@@ -438,6 +445,10 @@ export function buildStructuredIntakeMessage(values: StructuredIntakeValues): st
     `Target raise: ${values.raiseCurrency} ${values.raiseAmount} in whole currency units`,
     `Target raise value: ${values.raiseAmount}`,
     `Target raise unit: absolute`,
+    `Confirmed capital committed: ${values.raiseCurrency} ${values.committedAmount || "0"} in whole currency units`,
+    `Committed capital value: ${values.committedAmount || "0"}`,
+    `Committed capital currency: ${values.raiseCurrency}`,
+    `Committed capital unit: absolute`,
     `Lead investor needed: ${leadNeeded}`,
     `Sector: ${selectedLabels(SECTOR_OPTIONS, values.sectors)}`,
     `Actual sector codes: ${values.sectors.join(", ")}`,
@@ -543,6 +554,25 @@ function wholeRaiseAmount(profile: Record<string, unknown>): string {
   return String(Math.round(amount * multiplier));
 }
 
+function wholeCommittedAmount(profile: Record<string, unknown>): string {
+  const rawValue = profileString(profile, "committed_capital_value");
+  if (!rawValue) {
+    return "";
+  }
+  const amount = Number(rawValue);
+  if (!Number.isFinite(amount) || amount < 0) {
+    return "";
+  }
+  const unit = profileString(profile, "committed_capital_unit").toLowerCase();
+  const multiplier =
+    unit === "million" || unit === "m"
+      ? 1_000_000
+      : unit === "thousand" || unit === "k"
+        ? 1_000
+        : 1;
+  return String(Math.round(amount * multiplier));
+}
+
 function leadNeededValue(value: unknown): string {
   if (typeof value === "boolean") {
     return value ? "true" : "false";
@@ -598,6 +628,7 @@ export function structuredIntakeFromParsedProfile(
       CURRENCY_OPTIONS,
       profileString(profile, "target_raise_currency"),
     ),
+    committedAmount: wholeCommittedAmount(profile),
     leadNeeded: leadNeededValue(profile.lead_needed),
     sectors,
     directions,

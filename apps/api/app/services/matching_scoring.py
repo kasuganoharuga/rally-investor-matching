@@ -1014,6 +1014,7 @@ def database_row_to_profile(row: dict[str, Any]) -> dict[str, Any]:
         "supported_business_models": row.get("business_model_focus") or [],
         "geography_focus": geography_focus,
         "cheque_ranges": row.get("cheque_ranges") or [],
+        "declared_cheque_ranges": row.get("declared_cheque_ranges") or [],
         "lead_behavior": row.get("lead_behavior"),
         "ai_appetite": row.get("ai_appetite"),
         "recent_deals": row.get("recent_deals") or [],
@@ -1424,7 +1425,8 @@ def founder_raise_usd_estimate(founder: dict[str, Any]) -> float | None:
     return value * multiplier * fx_to_usd.get(currency, 1.0)
 
 
-def score_cheque_size_fit(founder: dict[str, Any], pref: dict[str, Any] | None) -> int:
+def score_round_size_fit(founder: dict[str, Any], pref: dict[str, Any] | None) -> int:
+    """Compare the raise with observed total round sizes, never investor cheques."""
     amount_usd = founder_raise_usd_estimate(founder)
     if amount_usd is None:
         return 2
@@ -1555,7 +1557,9 @@ def score_profile(
     )
     breakdown["recent_deal_similarity"] = recent_score
     breakdown["customer_icp_fit"] = score_customer_icp(founder, pref)
-    breakdown["cheque_size_fit"] = score_cheque_size_fit(founder, pref)
+    # The stored key remains ``cheque_size_fit`` for saved-weight and history
+    # compatibility. Its source values are observed total round sizes.
+    breakdown["cheque_size_fit"] = score_round_size_fit(founder, pref)
     breakdown["lead_behavior_fit"] = score_lead_behavior_fit(founder, pref)
     breakdown["data_quality_recency"] = score_data_quality_recency(pref, profile)
 
@@ -1609,9 +1613,9 @@ def score_profile(
         missing_evidence.append("customer_icp")
 
     if breakdown["cheque_size_fit"] >= 4:
-        strengths.append("Raise size appears within observed cheque range.")
+        strengths.append("Raise size appears within the observed total round range.")
     elif breakdown["cheque_size_fit"] <= 1:
-        risks.append("Raise size appears outside observed cheque range.")
+        risks.append("Raise size appears outside the observed total round range.")
 
     if founder.get("lead_needed") is True and breakdown["lead_behavior_fit"] >= 4:
         strengths.append("Observed lead behaviour fits a founder seeking a lead.")

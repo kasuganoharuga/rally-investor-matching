@@ -71,3 +71,4 @@ class IntakeResponse(BaseModel):
     follow_up_question: str | None
     follow_up_count: int
     matches: list[dict[str, Any]]
+    investment_capacity: dict[str, Any] | None = None

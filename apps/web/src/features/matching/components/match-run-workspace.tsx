@@ -107,7 +107,6 @@ export function MatchRunWorkspace({
     return (
       <MatchResultsScreen
         response={record.response}
-        structuredIntake={record.structuredIntake}
         showCalculationDetails={showCalculationDetails}
         matchingConfiguration={record.matchingConfiguration}
         matchedAt={record.createdAt}

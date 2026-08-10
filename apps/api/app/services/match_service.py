@@ -5,6 +5,7 @@ from psycopg import Connection
 from app.repositories.investor_repository import investor_repository
 from app.schemas.match import IntakeRequest, IntakeResponse
 from app.services.founder_parser_service import parse_founder_message
+from app.services.investment_capacity import estimate_investment_capacity
 from app.services.matching_scoring import (
     build_theme_prevalence,
     database_row_to_profile,
@@ -57,6 +58,7 @@ def build_match_investor_profile(row: dict[str, Any]) -> dict[str, Any]:
         "business_model_focus": row.get("business_model_focus") or [],
         "founder_fit": row.get("founder_fit") or [],
         "cheque_ranges": row.get("cheque_ranges") or [],
+        "declared_cheque_ranges": row.get("declared_cheque_ranges") or [],
         "lead_behavior": row.get("lead_behavior"),
         "ai_appetite": row.get("ai_appetite"),
         "recent_deals": row.get("recent_deals") or [],
@@ -146,6 +148,30 @@ class MatchService:
                 matches=[],
             )
 
+        matches, investment_capacity = self._run_database_match(
+            founder_profile=founder_profile,
+            connection=connection,
+            matching_weights=(
+                request.matching_configuration.weights.model_dump()
+                if request.matching_configuration
+                else None
+            ),
+            hard_filters=(
+                request.matching_configuration.hard_filters.model_dump()
+                if request.matching_configuration
+                else None
+            ),
+            result_limit=(
+                request.matching_configuration.result_limit
+                if request.matching_configuration
+                else MATCH_RESULT_LIMIT
+            ),
+            excluded_investor_types=(
+                request.matching_configuration.excluded_investor_types
+                if request.matching_configuration
+                else None
+            ),
+        )
         return IntakeResponse(
             status="matched_with_missing_information" if missing_fields else "matched",
             parsed_company_profile=founder_profile,
@@ -155,30 +181,8 @@ class MatchService:
                 request.follow_up_count + (1 if request.follow_up_answer else 0),
                 1,
             ),
-            matches=self._run_database_match(
-                founder_profile=founder_profile,
-                connection=connection,
-                matching_weights=(
-                    request.matching_configuration.weights.model_dump()
-                    if request.matching_configuration
-                    else None
-                ),
-                hard_filters=(
-                    request.matching_configuration.hard_filters.model_dump()
-                    if request.matching_configuration
-                    else None
-                ),
-                result_limit=(
-                    request.matching_configuration.result_limit
-                    if request.matching_configuration
-                    else MATCH_RESULT_LIMIT
-                ),
-                excluded_investor_types=(
-                    request.matching_configuration.excluded_investor_types
-                    if request.matching_configuration
-                    else None
-                ),
-            ),
+            matches=matches,
+            investment_capacity=investment_capacity,
         )
 
     def _run_database_match(
@@ -190,7 +194,7 @@ class MatchService:
         hard_filters: dict[str, bool] | None = None,
         result_limit: int = MATCH_RESULT_LIMIT,
         excluded_investor_types: list[str] | None = None,
-    ) -> list[dict[str, Any]]:
+    ) -> tuple[list[dict[str, Any]], dict[str, Any] | None]:
         results = []
         rows = self._repository.list_match_profiles(connection)
         excluded_types = set(excluded_investor_types or [])
@@ -215,7 +219,15 @@ class MatchService:
             result["investor_profile"] = build_match_investor_profile(row)
             results.append(result)
 
-        return select_ranked_matches(results, limit=result_limit)
+        investment_capacity, capacity_details = estimate_investment_capacity(
+            founder_profile, results
+        )
+        for result in results:
+            detail = capacity_details.get(str(result.get("investor_id")))
+            if detail:
+                result["capacity_estimate"] = detail
+
+        return select_ranked_matches(results, limit=result_limit), investment_capacity
 
 
 match_service = MatchService()

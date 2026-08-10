@@ -46,6 +46,8 @@ Preserve numeric amounts exactly. For example:
 - "A$2.5m" means target_raise_value 2.5, target_raise_currency "AUD",
   target_raise_unit "million".
 - "$750k" means target_raise_value 750, target_raise_unit "thousand".
+Confirmed/committed capital is separate from the target raise. Use zero when
+the user explicitly says none is committed, and null when it is not provided.
 Primary market is geographic, such as "Australia", "New Zealand", "ANZ",
 "US", or "Global".
 Do not put business model labels such as B2B or B2C in primary_market.
@@ -77,6 +79,9 @@ Required JSON keys:
 - target_raise_value
 - target_raise_currency
 - target_raise_unit
+- committed_capital_value
+- committed_capital_currency
+- committed_capital_unit
 - sector
 - actual_sector
 - customer_type

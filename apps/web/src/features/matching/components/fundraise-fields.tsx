@@ -19,7 +19,7 @@ export function FundraiseFields({
   values: StructuredIntakeValues;
   disabled: boolean;
   onChange: (
-    field: "stage" | "raiseAmount" | "raiseCurrency" | "leadNeeded",
+    field: "stage" | "raiseAmount" | "raiseCurrency" | "committedAmount" | "leadNeeded",
     value: string,
   ) => void;
 }) {
@@ -81,7 +81,34 @@ export function FundraiseFields({
         />
       </div>
 
-      <div className="max-w-md">
+      <div className="grid gap-5 md:grid-cols-2">
+        <div className="grid gap-2">
+          <label
+            htmlFor="committed-amount"
+            className="text-sm font-semibold text-foreground"
+          >
+            Confirmed capital already committed
+            <span className="ml-1 text-xs font-normal text-muted-foreground">
+              Optional
+            </span>
+          </label>
+          <Input
+            id="committed-amount"
+            type="number"
+            min="0"
+            max={values.raiseAmount || undefined}
+            step="1"
+            inputMode="numeric"
+            value={values.committedAmount}
+            onChange={(event) => onChange("committedAmount", event.target.value)}
+            placeholder="0"
+            className="h-11"
+          />
+          <p className="text-xs text-muted-foreground">
+            Count signed or confirmed commitments only, in the selected currency.
+          </p>
+        </div>
+
         <SelectField
           id="lead-needed"
           label="Do you need a lead investor?"

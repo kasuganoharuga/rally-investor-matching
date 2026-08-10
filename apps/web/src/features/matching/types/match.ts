@@ -192,6 +192,7 @@ export const matchInvestorProfileSchema = z.object({
   business_model_focus: z.array(z.string()).default([]),
   founder_fit: z.array(z.string()).default([]),
   cheque_ranges: z.array(z.record(z.string(), z.unknown())).default([]),
+  declared_cheque_ranges: z.array(z.record(z.string(), z.unknown())).default([]),
   lead_behavior: z.string().optional().nullable(),
   ai_appetite: z.string().optional().nullable(),
   recent_deals: z.array(matchRecentDealSchema).default([]),
@@ -215,6 +216,18 @@ export const matchEligibilitySchema = z.object({
   passed: z.boolean().default(true),
   hard_filter_reasons: z.array(z.string()).default([]),
   soft_warnings: z.array(z.string()).default([]),
+});
+
+export const matchCapacityEstimateSchema = z.object({
+  role: z.enum(["lead_candidate", "participant"]),
+  tier: z.string(),
+  conversion_factor: z.number(),
+  selection_probability: z.number(),
+  planning_cheque: z.number(),
+  risk_adjusted_amount: z.number(),
+  currency: z.string(),
+  cheque_source: z.enum(["investor_record", "stage_type_prior"]),
+  counted: z.boolean(),
 });
 
 // Optional: /api/matching/history persists whole IntakeResponse payloads, so
@@ -253,6 +266,37 @@ export const matchResultSchema = z.object({
   evidence: z.array(matchEvidenceSchema).default([]),
   investor_profile: matchInvestorProfileSchema.optional(),
   match_context: matchContextSchema.optional(),
+  capacity_estimate: matchCapacityEstimateSchema.optional(),
+});
+
+export const investmentCapacityTierSchema = z.object({
+  tier: z.string(),
+  candidate_count: z.number().int().nonnegative(),
+  base_conversion_factor: z.number().min(0).max(1),
+});
+
+export const investmentCapacitySchema = z.object({
+  model_version: z.string(),
+  currency: z.string(),
+  target_amount: z.number().nonnegative(),
+  committed_amount: z.number().nonnegative(),
+  remaining_target: z.number().nonnegative(),
+  gross_capacity: z.number().nonnegative(),
+  risk_adjusted_capacity: z.number().nonnegative(),
+  coverage_buffer_multiplier: z.number().positive(),
+  required_gross_capacity: z.number().nonnegative(),
+  coverage_buffer_met: z.boolean(),
+  risk_adjusted_coverage_met: z.boolean(),
+  candidate_count: z.number().int().nonnegative(),
+  participant_candidate_count: z.number().int().nonnegative(),
+  lead_needed: z.boolean(),
+  lead_candidate_count: z.number().int().nonnegative(),
+  lead_probability: z.number().min(0).max(1),
+  lead_probability_threshold: z.number().min(0).max(1),
+  lead_requirement_met: z.boolean(),
+  tier_breakdown: z.array(investmentCapacityTierSchema),
+  is_enough: z.boolean(),
+  assumption_note: z.string(),
 });
 
 export const intakeResponseSchema = z.object({
@@ -262,6 +306,7 @@ export const intakeResponseSchema = z.object({
   follow_up_question: z.string().nullable(),
   follow_up_count: z.number(),
   matches: z.array(matchResultSchema),
+  investment_capacity: investmentCapacitySchema.optional().nullable(),
 });
 
 export const fileExtractionResponseSchema = z.object({
@@ -296,7 +341,9 @@ export type MatchStagePreference = z.infer<typeof matchStagePreferenceSchema>;
 export type MatchInvestorProfile = z.infer<typeof matchInvestorProfileSchema>;
 export type MatchEligibility = z.infer<typeof matchEligibilitySchema>;
 export type MatchContext = z.infer<typeof matchContextSchema>;
+export type MatchCapacityEstimate = z.infer<typeof matchCapacityEstimateSchema>;
 export type MatchResult = z.infer<typeof matchResultSchema>;
+export type InvestmentCapacity = z.infer<typeof investmentCapacitySchema>;
 export type IntakeResponse = z.infer<typeof intakeResponseSchema>;
 export type FileExtractionResponse = z.infer<typeof fileExtractionResponseSchema>;
 export type MatchRecord = z.infer<typeof matchRecordSchema>;

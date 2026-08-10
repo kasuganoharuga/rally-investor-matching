@@ -460,6 +460,7 @@ def test_match_intake_honours_requested_result_limit(monkeypatch: object) -> Non
         body = response.json()["data"]
         assert response.status_code == 200
         assert len(body["matches"]) == 10
+        assert body["investment_capacity"]["candidate_count"] == 30
     finally:
         app.dependency_overrides.clear()
 
