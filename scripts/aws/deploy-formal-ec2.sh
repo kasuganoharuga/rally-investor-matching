@@ -199,13 +199,26 @@ if ! wait_for_url http://127.0.0.1:3000 45; then
   exit 1
 fi
 
+if [[ "${RALLY_PUBLIC_WEB_URL:-}" == https://* ]]; then
+  if ! bash "$release_dir/scripts/aws/configure-https.sh"; then
+    rollback
+    exit 1
+  fi
+  if ! wait_for_url "$RALLY_PUBLIC_WEB_URL" 30; then
+    journalctl -u nginx.service --no-pager -n 80 >&2 || true
+    rollback
+    exit 1
+  fi
+fi
+
 deployed_at=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 cat > "$release_dir/deploy-info.json" <<EOF
 {
   "commit": "$RALLY_RELEASE_SHA",
   "branch": "$RALLY_RELEASE_BRANCH",
   "deployed_at": "$deployed_at",
-  "source": "s3://$RALLY_SOURCE_BUCKET/$RALLY_SOURCE_KEY"
+  "source": "s3://$RALLY_SOURCE_BUCKET/$RALLY_SOURCE_KEY",
+  "web_url": "${RALLY_PUBLIC_WEB_URL:-http://127.0.0.1:3000}"
 }
 EOF
 

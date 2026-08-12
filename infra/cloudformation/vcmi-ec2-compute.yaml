@@ -1,7 +1,7 @@
 AWSTemplateFormatVersion: "2010-09-09"
 Description: >
   Rally Investor Matching MVP compute layer on one Amazon Linux EC2 instance.
-  Runs FastAPI on port 8000 and Next.js on port 3000 using systemd.
+  Runs FastAPI on port 8000 and Next.js on port 3000 behind an HTTPS reverse proxy.
 
 Parameters:
   ProjectSlug:
@@ -114,6 +114,16 @@ Resources:
       GroupDescription: !Sub "${ProjectSlug}-${Environment} EC2 web/API access"
       VpcId: !Ref VpcId
       SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: !Ref AllowedWebCidr
+          Description: HTTP access for certificate validation and redirect
+        - IpProtocol: tcp
+          FromPort: 443
+          ToPort: 443
+          CidrIp: !Ref AllowedWebCidr
+          Description: HTTPS application access
         - IpProtocol: tcp
           FromPort: 3000
           ToPort: 3000
