@@ -19,6 +19,7 @@ env:
   DEPLOY_BUCKET: vcmi-dev-deploy-765332581489-ap-southeast-2
   DEPLOY_KEY: releases/formal/rally-formal-source.zip
   EC2_INSTANCE_ID: i-0cd72e60d642457ae
+  RALLY_PUBLIC_WEB_URL: https://investormatch.rallyroadmap.com
 
 jobs:
   verify:
@@ -181,6 +182,7 @@ jobs:
           export RALLY_RELEASE_BRANCH='develop'
           export RALLY_SOURCE_BUCKET='${DEPLOY_BUCKET}'
           export RALLY_SOURCE_KEY='${DEPLOY_KEY}'
+          export RALLY_PUBLIC_WEB_URL='${RALLY_PUBLIC_WEB_URL}'
           [[ '${GITHUB_SHA}' =~ ^[0-9a-f]{40}$ ]] || exit 1
           archive="/tmp/rally-formal-${GITHUB_SHA}.zip"
           release="/opt/rally-releases/${GITHUB_SHA}"
@@ -254,11 +256,11 @@ jobs:
           curl --fail --silent --show-error --retry 8 --retry-delay 5 \
             "http://${public_ip}:8000/health"
           curl --fail --silent --show-error --retry 8 --retry-delay 5 \
-            --output /dev/null "http://${public_ip}:3000"
+            --output /dev/null "${RALLY_PUBLIC_WEB_URL}"
           aws ec2 create-tags \
             --resources "$EC2_INSTANCE_ID" \
             --tags \
               "Key=RallyCommit,Value=${GITHUB_SHA}" \
               "Key=RallyBranch,Value=develop" \
-              "Key=RallyWebUrl,Value=http://${public_ip}:3000"
-          echo "Rally formal deployed to http://${public_ip}:3000"
+              "Key=RallyWebUrl,Value=${RALLY_PUBLIC_WEB_URL}"
+          echo "Rally formal deployed to ${RALLY_PUBLIC_WEB_URL}"

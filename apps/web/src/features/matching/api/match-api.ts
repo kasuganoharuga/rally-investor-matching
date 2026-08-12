@@ -24,6 +24,10 @@ function getMatchingApiBaseUrl(): string {
     /^(?:\d{1,3}\.){3}\d{1,3}$/.test(hostname) ||
     /^ec2-[a-z0-9.-]+\.compute\.amazonaws\.com$/i.test(hostname);
 
+  if (protocol === "https:") {
+    return window.location.origin;
+  }
+
   return isEphemeralEc2Host
     ? `${protocol}//${hostname}:8000`
     : CONFIGURED_MATCHING_API_BASE_URL;

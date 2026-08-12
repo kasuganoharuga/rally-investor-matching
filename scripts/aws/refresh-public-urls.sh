@@ -60,13 +60,15 @@ fi
 
 public_web_url="http://${public_ipv4}:3000"
 public_api_url="http://${public_ipv4}:8000"
+requested_app_base_url="${RALLY_PUBLIC_WEB_URL:-}"
+requested_api_url="${RALLY_PUBLIC_API_URL:-${RALLY_PUBLIC_WEB_URL:-}}"
 
 set -a
 # shellcheck disable=SC1090
 . "$web_env_file"
 set +a
-configured_app_base_url="${APP_BASE_URL:-}"
-configured_api_url="${NEXT_PUBLIC_MATCHING_API_BASE_URL:-}"
+configured_app_base_url="${requested_app_base_url:-${APP_BASE_URL:-}}"
+configured_api_url="${requested_api_url:-${NEXT_PUBLIC_MATCHING_API_BASE_URL:-}}"
 
 resolved_app_base_url="$configured_app_base_url"
 if [[ -z "$resolved_app_base_url" ]] || is_ephemeral_ec2_url "$resolved_app_base_url"; then
@@ -92,4 +94,4 @@ upsert_env_value "$web_env_file" APP_BASE_URL "$resolved_app_base_url"
 upsert_env_value "$web_env_file" NEXT_PUBLIC_MATCHING_API_BASE_URL "$resolved_api_url"
 upsert_env_value "$api_env_file" CORS_ORIGINS "$cors_origins"
 
-echo "Refreshed Rally public URLs for $public_web_url"
+echo "Refreshed Rally public URLs: app=$resolved_app_base_url api=$resolved_api_url"
