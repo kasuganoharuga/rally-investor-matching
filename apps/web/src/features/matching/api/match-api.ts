@@ -11,8 +11,23 @@ import {
 } from "@/features/matching/types/match";
 import { apiFetch } from "@/lib/api/client";
 
-const MATCHING_API_BASE_URL =
+const CONFIGURED_MATCHING_API_BASE_URL =
   process.env.NEXT_PUBLIC_MATCHING_API_BASE_URL ?? "http://localhost:8000";
+
+function getMatchingApiBaseUrl(): string {
+  if (typeof window === "undefined") {
+    return CONFIGURED_MATCHING_API_BASE_URL;
+  }
+
+  const { hostname, protocol } = window.location;
+  const isEphemeralEc2Host =
+    /^(?:\d{1,3}\.){3}\d{1,3}$/.test(hostname) ||
+    /^ec2-[a-z0-9.-]+\.compute\.amazonaws\.com$/i.test(hostname);
+
+  return isEphemeralEc2Host
+    ? `${protocol}//${hostname}:8000`
+    : CONFIGURED_MATCHING_API_BASE_URL;
+}
 
 export async function runMatchIntake(request: IntakeRequest): Promise<RunMatchData> {
   const data = await apiFetch<unknown>("/api/matching/intake", {
@@ -43,7 +58,7 @@ export async function extractFileText(file: File): Promise<FileExtractionRespons
   body.append("file", file);
 
   const data = await apiFetch<unknown>("/api/v1/files/extract", {
-    baseUrl: MATCHING_API_BASE_URL,
+    baseUrl: getMatchingApiBaseUrl(),
     method: "POST",
     body,
   });

@@ -233,11 +233,28 @@ Resources:
           pnpm exec tsx --conditions=react-server scripts/seed-admin-password.ts | tee /etc/rally/admin-seed.log
           cd /opt/rally
 
+          cat > /etc/systemd/system/rally-refresh-public-urls.service <<'EOF'
+          [Unit]
+          Description=Refresh Rally public URLs from EC2 metadata
+          After=network-online.target
+          Wants=network-online.target
+          Before=rally-api.service rally-web.service
+
+          [Service]
+          Type=oneshot
+          ExecStart=/bin/bash /opt/rally/scripts/aws/refresh-public-urls.sh
+          RemainAfterExit=yes
+
+          [Install]
+          WantedBy=multi-user.target
+          EOF
+
           cat > /etc/systemd/system/rally-api.service <<'EOF'
           [Unit]
           Description=Rally FastAPI matching service
-          After=network-online.target
+          After=network-online.target rally-refresh-public-urls.service
           Wants=network-online.target
+          Requires=rally-refresh-public-urls.service
 
           [Service]
           Type=simple
@@ -272,6 +289,7 @@ Resources:
           EOF
 
           systemctl daemon-reload
+          systemctl enable --now rally-refresh-public-urls.service
           systemctl enable --now rally-api.service
           systemctl enable --now rally-web.service
 
