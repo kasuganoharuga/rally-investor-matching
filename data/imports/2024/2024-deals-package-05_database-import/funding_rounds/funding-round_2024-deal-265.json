@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-265",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-265",
+    "dedupe_key": "2024|matilda-migration-pty-ltd|2024-10-22|pre_seed",
+    "source_url": "https://reading.afterwork.vc/p/investment-notes-matilda",
+    "source_payload": {
+      "deal_number": 265,
+      "csv_investee": "Matilda Migration",
+      "normalized_investee": "Matilda Migration Pty Ltd",
+      "csv_date": "2024-09-24",
+      "normalized_date": "2024-09 / 2024-10-22 investment note",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-seed",
+      "csv_amount": "AUD 1,000,000",
+      "normalized_amount": "AUD 1,000,000",
+      "csv_investors": "AfterWork Ventures; Co Ventures; Everywhere Ventures; Startmate; TreeArc Investment Group",
+      "normalized_investors": "AfterWork Ventures (lead); Wollemi Capital; Everywhere Ventures; Co Ventures; Startmate",
+      "verification": "corrected",
+      "correction_or_issue": "AfterWork's official note confirms the round and replaces the CSV's TreeArc attribution with Wollemi Capital. Independent ecosystem reporting confirms A$1m.",
+      "primary_source": "https://reading.afterwork.vc/p/investment-notes-matilda",
+      "secondary_source": "https://www.overnightsuccess.vc/p/28th-september-2024"
+    },
+    "investee_name_raw": "Matilda Migration Pty Ltd",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.matildamigration.com/",
+    "org_industries_raw": "Legaltech / HR Tech",
+    "round_type_raw": "Pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-10-22",
+    "money_raised_raw": "AUD 1,000,000",
+    "amount": 1000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "AfterWork Ventures (lead); Wollemi Capital; Everywhere Ventures; Co Ventures; Startmate",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://reading.afterwork.vc/p/investment-notes-matilda",
+    "verification_notes": "AfterWork's official note confirms the round and replaces the CSV's TreeArc attribution with Wollemi Capital. Independent ecosystem reporting confirms A$1m.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:matilda-migration"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:65b22005911b62c99f35",
+      "source:url:5c9d5bdcd72dd60bf2e1"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

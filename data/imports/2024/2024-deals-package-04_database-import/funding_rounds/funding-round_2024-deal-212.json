@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-212",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-212",
+    "dedupe_key": "2024|released-software|no-genuine-january-1-close-corroborated|strategic",
+    "source_url": "https://www.crunchbase.com/funding_round/released-software-seed--a1bfb499",
+    "source_payload": {
+      "deal_number": 212,
+      "csv_investee": "Released Software",
+      "normalized_investee": "Released Software",
+      "csv_date": "2024-01-01",
+      "normalized_date": "No genuine January 1 close corroborated",
+      "csv_round": "Seed",
+      "normalized_round": "Strategic venture relationship; round unverified",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Atlassian Ventures",
+      "normalized_investors": "Atlassian Ventures (database-only for this company)",
+      "verification": "needs_review",
+      "correction_or_issue": "Atlassian Ventures is a valid investor, but neither Atlassian nor the company published a dated 2024 financing announcement located in this review.",
+      "primary_source": "https://www.crunchbase.com/funding_round/released-software-seed--a1bfb499",
+      "secondary_source": "https://released.so/"
+    },
+    "investee_name_raw": "Released Software",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://released.so/",
+    "org_industries_raw": "Enterprise SaaS / Product Management",
+    "round_type_raw": "Strategic venture relationship; round unverified",
+    "round_stage": "strategic",
+    "funding_stage_raw": "Seed",
+    "announced_date": null,
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Atlassian Ventures (database-only for this company)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://www.crunchbase.com/funding_round/released-software-seed--a1bfb499",
+    "verification_notes": "Atlassian Ventures is a valid investor, but neither Atlassian nor the company published a dated 2024 financing announcement located in this review.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:released-software"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:eed01ac924c46c3ab016",
+      "source:url:5a172324e606e50db3f9"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Atlassian Ventures is a valid investor, but neither Atlassian nor the company published a dated 2024 financing announcement located in this review.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

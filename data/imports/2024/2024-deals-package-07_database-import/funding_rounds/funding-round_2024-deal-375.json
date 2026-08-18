@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-375",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-375",
+    "dedupe_key": "2024|neocrete|2024-03-26|seed",
+    "source_url": "https://www.scoop.co.nz/stories/BU2403/S00358/neocrete-secures-65m-in-seed-venture-funding-led-by-wavemaker-partners-singapore.htm",
+    "source_payload": {
+      "deal_number": 375,
+      "csv_investee": "Neocrete",
+      "normalized_investee": "Neocrete",
+      "csv_date": "2024-03-26",
+      "normalized_date": "2024-03-26",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "NZD 6,500,000",
+      "normalized_amount": "NZD 6,500,000 (USD 4m)",
+      "csv_investors": "Wavemaker Ventures; Icehouse; New Zealand Green Investment Finance",
+      "normalized_investors": "Wavemaker Partners (lead); NZ Green Investment Finance; Icehouse Ventures; Velocity Ventures; named angels",
+      "verification": "verified_expanded_syndicate",
+      "correction_or_issue": "Company release verifies core syndicate; Wavemaker's note adds Velocity Ventures and named individuals.",
+      "primary_source": "https://www.scoop.co.nz/stories/BU2403/S00358/neocrete-secures-65m-in-seed-venture-funding-led-by-wavemaker-partners-singapore.htm",
+      "secondary_source": "https://wavemakerpartners.com/concrete-has-a-major-carbon-problem-heres-neocretes-solution/"
+    },
+    "investee_name_raw": "Neocrete",
+    "org_location_raw": "Auckland, New Zealand",
+    "org_website_raw": "https://www.neocrete.com/",
+    "org_industries_raw": "Climate Tech / Construction Materials",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-03-26",
+    "money_raised_raw": "NZD 6,500,000 (USD 4m)",
+    "amount": 6500000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Wavemaker Partners (lead); NZ Green Investment Finance; Icehouse Ventures; Velocity Ventures; named angels",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "verified_expanded_syndicate",
+    "verification_source_url": "https://www.scoop.co.nz/stories/BU2403/S00358/neocrete-secures-65m-in-seed-venture-funding-led-by-wavemaker-partners-singapore.htm",
+    "verification_notes": "Company release verifies core syndicate; Wavemaker's note adds Velocity Ventures and named individuals.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:neocrete"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:2eee5dcf23a7fffc287e",
+      "source:url:e5b9d07f05173a8d2bf0"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-145",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-145",
+    "dedupe_key": "2024|what-s-on-campus|2024-unsw-founders-10x-cohort|program_or_grant",
+    "source_url": "https://www.inside.unsw.edu.au/innovation-and-engagement/six-startups-receive-110k-investment-unsw-founders-program",
+    "source_payload": {
+      "deal_number": 145,
+      "csv_investee": "What's On!",
+      "normalized_investee": "What's On! Campus",
+      "csv_date": "2024-08-01",
+      "normalized_date": "2024 UNSW Founders 10x cohort",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "10x Accelerator investment",
+      "csv_amount": "Undisclosed AUD",
+      "normalized_amount": "AUD 110,000 program investment",
+      "csv_investors": "UNSW Founders",
+      "normalized_investors": "UNSW Founders 10x Accelerator",
+      "verification": "verified_program",
+      "correction_or_issue": "UNSW confirms 2024 10x companies receive A$110k each and the official Demo Day page identifies What's On as a 10x company.",
+      "primary_source": "https://www.inside.unsw.edu.au/innovation-and-engagement/six-startups-receive-110k-investment-unsw-founders-program",
+      "secondary_source": "https://unswfounders.com/demo-day-2024/whatson"
+    },
+    "investee_name_raw": "What's On! Campus",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://knowwhatson.com/",
+    "org_industries_raw": "Edtech / Analytics",
+    "round_type_raw": "10x Accelerator investment",
+    "round_stage": "program_or_grant",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "AUD 110,000 program investment",
+    "amount": 110000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "UNSW Founders 10x Accelerator",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "verified_program",
+    "verification_source_url": "https://www.inside.unsw.edu.au/innovation-and-engagement/six-startups-receive-110k-investment-unsw-founders-program",
+    "verification_notes": "UNSW confirms 2024 10x companies receive A$110k each and the official Demo Day page identifies What's On as a 10x company.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:what-s-on-campus"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:2060dbd0fb8796e6fd5f",
+      "source:url:5a6538ea0af7f20478a1"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

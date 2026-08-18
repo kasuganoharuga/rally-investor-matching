@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:healthnow",
+  "operation": "upsert",
+  "data": {
+    "name": "HealthNow",
+    "website_url": "https://www.extraordinary.co.nz/",
+    "crunchbase_uuid": null,
+    "hq_country": "NZ",
+    "hq_state": null,
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "fintech-employee-benefits",
+    "sector_secondary": null,
+    "use_case_primary": "employee-benefits-platform-enabling-employers-to-fund-flexible-health-and-wellbeing-allowances",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-saas-payments",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Employee-benefits platform enabling employers to fund flexible health and wellbeing allowances.",
+    "source_urls": [
+      "https://www.extraordinary.co.nz/",
+      "https://www.nbr.co.nz/tech/health-allowance-platform-healthnow-raises-3-4m-seed-round/",
+      "https://www.enterpriseangels.co.nz/project/extraordinary/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-356",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-356",
+    "dedupe_key": "2024|appetise-formerly-menuaid|2024-08-14|series_a",
+    "source_url": "https://www.linkedin.com/posts/tobyskilton_strap-in-for-a-couple-of-huge-announcements-activity-7229216720232529921-F94J",
+    "source_payload": {
+      "deal_number": 356,
+      "csv_investee": "Appetise",
+      "normalized_investee": "Appetise (formerly MenuAid)",
+      "csv_date": "2024-08-15",
+      "normalized_date": "2024-08-14 announcement",
+      "csv_round": "Seed",
+      "normalized_round": "Pre-Series A",
+      "csv_amount": "NZD 4,000,000",
+      "normalized_amount": "NZD 4,000,000",
+      "csv_investors": "Icehouse; OIF",
+      "normalized_investors": "OIF Ventures and Icehouse Ventures (co-leads)",
+      "verification": "corrected",
+      "correction_or_issue": "Founder and reporting describe the oversubscribed NZ$4m financing as pre-Series A, not seed.",
+      "primary_source": "https://www.linkedin.com/posts/tobyskilton_strap-in-for-a-couple-of-huge-announcements-activity-7229216720232529921-F94J",
+      "secondary_source": "https://www.nbr.co.nz/tech/chch-based-meal-planning-app-proves-appetising-for-investors/"
+    },
+    "investee_name_raw": "Appetise (formerly MenuAid)",
+    "org_location_raw": "Christchurch, New Zealand",
+    "org_website_raw": "https://appetise.io/",
+    "org_industries_raw": "Foodtech / Consumer Insights",
+    "round_type_raw": "Pre-Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-08-14",
+    "money_raised_raw": "NZD 4,000,000",
+    "amount": 4000000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "OIF Ventures and Icehouse Ventures (co-leads)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.linkedin.com/posts/tobyskilton_strap-in-for-a-couple-of-huge-announcements-activity-7229216720232529921-F94J",
+    "verification_notes": "Founder and reporting describe the oversubscribed NZ$4m financing as pre-Series A, not seed.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:appetise"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:daede02a5e133d613c51",
+      "source:url:6efd25cc407208791fa4"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

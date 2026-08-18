@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-199",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-199",
+    "dedupe_key": "2024|fluidity-money|2024-03-14|seed",
+    "source_url": "https://www.linkedin.com/posts/notanotherabdul_web3-vcfunding-frensdao-activity-7175688042379112448-HpNh",
+    "source_payload": {
+      "deal_number": 199,
+      "csv_investee": "Fluidity Money",
+      "normalized_investee": "Fluidity Money",
+      "csv_date": "2024-03-18",
+      "normalized_date": "2024-03-14 to 2024-03-18 token activity",
+      "csv_round": "Seed",
+      "normalized_round": "Strategic investment / ICO, not conventional seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "USD 750,000 ICO target reached; strategic amount undisclosed",
+      "csv_investors": "Frens Syndicate x VC DAO",
+      "normalized_investors": "Frens Syndicate x VC DAO",
+      "verification": "corrected",
+      "correction_or_issue": "Public evidence supports a Frens strategic investment and a US$750k token sale; the database's unnamed-amount seed classification is misleading.",
+      "primary_source": "https://www.linkedin.com/posts/notanotherabdul_web3-vcfunding-frensdao-activity-7175688042379112448-HpNh",
+      "secondary_source": "https://tokenradar.io/ico/fluidity"
+    },
+    "investee_name_raw": "Fluidity Money",
+    "org_location_raw": "Adelaide, SA, Australia / global",
+    "org_website_raw": "https://www.fluidity.money/",
+    "org_industries_raw": "Web3 / DeFi",
+    "round_type_raw": "Strategic investment / ICO, not conventional seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-03-14",
+    "money_raised_raw": "USD 750,000 ICO target reached; strategic amount undisclosed",
+    "amount": 750000,
+    "currency": "USD",
+    "amount_usd": 750000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Frens Syndicate x VC DAO",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.linkedin.com/posts/notanotherabdul_web3-vcfunding-frensdao-activity-7175688042379112448-HpNh",
+    "verification_notes": "Public evidence supports a Frens strategic investment and a US$750k token sale; the database's unnamed-amount seed classification is misleading.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:fluidity-money"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:ebec141777930bdea224",
+      "source:url:48c9e167444afac7664b"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

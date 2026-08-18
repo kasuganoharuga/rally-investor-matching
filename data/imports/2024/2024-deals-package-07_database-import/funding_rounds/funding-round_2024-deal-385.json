@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-385",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-385",
+    "dedupe_key": "2024|untitled-games|2024-08-database-record-only|unknown",
+    "source_url": "https://untitledgames.dev/",
+    "source_payload": {
+      "deal_number": 385,
+      "csv_investee": "Untitled Games",
+      "normalized_investee": "Untitled Games",
+      "csv_date": "2024-08-01",
+      "normalized_date": "2024-08 (database record only)",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Unverified financing",
+      "csv_amount": "USD 20,000",
+      "normalized_amount": "Unverified",
+      "csv_investors": null,
+      "normalized_investors": "Undisclosed / no verified investor",
+      "verification": "needs_review",
+      "correction_or_issue": "The operating studio is identifiable, but no reliable public source was found for the amount, date or investor.",
+      "primary_source": "https://untitledgames.dev/",
+      "secondary_source": null
+    },
+    "investee_name_raw": "Untitled Games",
+    "org_location_raw": "Auckland, New Zealand",
+    "org_website_raw": "https://untitledgames.dev/",
+    "org_industries_raw": "Gaming / Software",
+    "round_type_raw": "Unverified financing",
+    "round_stage": "unknown",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "Unverified",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed / no verified investor",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://untitledgames.dev/",
+    "verification_notes": "The operating studio is identifiable, but no reliable public source was found for the amount, date or investor.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown",
+    "amount_disclosure_status": "database_only_amount_unverified",
+    "amount_structuring_note": "No reliable public source verifies the claimed US$20k financing, exact date or investor.",
+    "supplemental_verification_urls": [
+      "https://untitledgames.dev/"
+    ]
+  },
+  "refs": {
+    "investee_company_key": "company:research:untitled-games"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:e176aaabfcc39ec407c0"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "The operating studio is identifiable, but no reliable public source was found for the amount, date or investor.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

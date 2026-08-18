@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_team_members",
+  "record_key": "investor_team_member:jekara-group:dr-david-finn",
+  "operation": "upsert",
+  "data": {
+    "contact_id": null,
+    "first_name": "Dr",
+    "last_name": "David Finn",
+    "role_title": "Partner",
+    "seniority": "partner",
+    "linkedin_url": null,
+    "claimed_focus": [
+      "investment_team"
+    ],
+    "bio_summary": "Partner listed on Jekara official team.",
+    "source_url": "https://www.jekaragroup.com/",
+    "retrieved_at": "2026-07-16",
+    "is_active": true
+  },
+  "refs": {
+    "investor_key": "investor:jekara-group",
+    "contact_key": null
+  },
+  "provenance": {
+    "collection_run_key": "collection:research:2026-07-24",
+    "source_keys": [
+      "research_source:jekara:jek_src_001"
+    ]
+  },
+  "review": {
+    "status": "unreviewed",
+    "issues": []
+  }
+}

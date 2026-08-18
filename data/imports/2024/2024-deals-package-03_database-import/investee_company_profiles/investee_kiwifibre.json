@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:kiwifibre",
+  "operation": "upsert",
+  "data": {
+    "name": "KiwiFibre",
+    "website_url": "https://kiwifibre.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "NZ",
+    "hq_state": null,
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "advanced-materials-climate",
+    "sector_secondary": null,
+    "use_case_primary": "produces-high-performance-natural-fibre-composite-materials-from-new-zealand-harakeke",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-materials",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Produces high-performance natural-fibre composite materials from New Zealand harakeke.",
+    "source_urls": [
+      "https://kiwifibre.com/",
+      "https://www.nbr.co.nz/entrepreneurs/agnition-ventures-backs-harakeke-composite-maker-kiwifibre/",
+      "https://www.christchurchnz.com/business/invest/kiwifibre",
+      "https://www.cbinsights.com/company/kiwifibre-innovations/financials",
+      "https://www.startmate.com/accelerator/program"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

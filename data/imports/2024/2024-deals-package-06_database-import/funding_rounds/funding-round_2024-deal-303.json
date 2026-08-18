@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-303",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-303",
+    "dedupe_key": "2024|zenno-astronautics|2024-11-29|seed",
+    "source_url": "https://www.mitsubishielectric.co.jp/ja/pr/2024/1129/",
+    "source_payload": {
+      "deal_number": 303,
+      "csv_investee": "Zenno Astronautics",
+      "normalized_investee": "Zenno Astronautics",
+      "csv_date": "2024-11-29",
+      "normalized_date": "2024-11-29",
+      "csv_round": "Seed",
+      "normalized_round": "Seed extension — first close",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "ANA Holdings; GD1; Global Brain; K1W1; Mitsubishi Electric; NZGCP; Nuance Capital; NZVC; Shasta Ventures; Uniservices",
+      "normalized_investors": "GD1 (lead); Shasta Ventures; Nuance Capital; K1W1; UniServices; NZVC; Aspire NZ Seed Fund; ANA Future Creation Fund; Mitsubishi Electric ME Innovation Fund",
+      "verification": "corrected",
+      "correction_or_issue": "Official Japanese investors and contemporaneous space-sector reporting confirm the first close of a seed extension. Normalize the strategic funds and NZGCP to Aspire NZ Seed Fund; amount remains undisclosed.",
+      "primary_source": "https://www.mitsubishielectric.co.jp/ja/pr/2024/1129/",
+      "secondary_source": "https://www.satelliteevolution.com/post/zenno-astronautics-secures-investment-from-global-brain-one-of-the-largest-vcs-in-japan-representi"
+    },
+    "investee_name_raw": "Zenno Astronautics",
+    "org_location_raw": "Auckland, New Zealand",
+    "org_website_raw": "https://zenno.space/",
+    "org_industries_raw": "Spacetech / Deep Tech",
+    "round_type_raw": "Seed extension — first close",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-11-29",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "GD1 (lead); Shasta Ventures; Nuance Capital; K1W1; UniServices; NZVC; Aspire NZ Seed Fund; ANA Future Creation Fund; Mitsubishi Electric ME Innovation Fund",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.mitsubishielectric.co.jp/ja/pr/2024/1129/",
+    "verification_notes": "Official Japanese investors and contemporaneous space-sector reporting confirm the first close of a seed extension. Normalize the strategic funds and NZGCP to Aspire NZ Seed Fund; amount remains undisclosed.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:zenno-astronautics"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:a16fcd0eae054a7f2d0d",
+      "source:url:893bfb516fbe2b9383d7"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

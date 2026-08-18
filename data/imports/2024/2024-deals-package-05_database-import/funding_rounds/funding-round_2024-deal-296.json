@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-296",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-296",
+    "dedupe_key": "2024|gpn-vaccines-ltd|2024-06-06|series_b",
+    "source_url": "https://gpnvaccines.com/gpn-vaccines-closes-oversubscribed-aud-18-million-usd-12-million-series-b1-investment-round/",
+    "source_payload": {
+      "deal_number": 296,
+      "csv_investee": "GPN Vaccines",
+      "normalized_investee": "GPN Vaccines Ltd",
+      "csv_date": "2024-06-06",
+      "normalized_date": "2024-06-06",
+      "csv_round": "Series B",
+      "normalized_round": "Series B1",
+      "csv_amount": "AUD 18,000,000",
+      "normalized_amount": "AUD 18,000,000",
+      "csv_investors": "Forepont Capital Partners; Kern Whelan Capital; Michael Gregg",
+      "normalized_investors": "Forepont Capital and Mike Gregg / Shearwater Capital (co-leads); Kern Capital; existing shareholders",
+      "verification": "corrected",
+      "correction_or_issue": "The company confirms the oversubscribed A$18m Series B1 and corrects 'Kern Whelan Capital' to Kern Capital. Mike Gregg co-led in his capacity as Shearwater Capital's founding partner.",
+      "primary_source": "https://gpnvaccines.com/gpn-vaccines-closes-oversubscribed-aud-18-million-usd-12-million-series-b1-investment-round/",
+      "secondary_source": "https://www.preqin.com/data/profile/asset/gpn-vaccines-ltd/645178"
+    },
+    "investee_name_raw": "GPN Vaccines Ltd",
+    "org_location_raw": "Adelaide, SA, Australia",
+    "org_website_raw": "https://gpnvaccines.com/",
+    "org_industries_raw": "Biotech / Vaccines",
+    "round_type_raw": "Series B1",
+    "round_stage": "series_b",
+    "funding_stage_raw": "Series B",
+    "announced_date": "2024-06-06",
+    "money_raised_raw": "AUD 18,000,000",
+    "amount": 18000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Forepont Capital and Mike Gregg / Shearwater Capital (co-leads); Kern Capital; existing shareholders",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://gpnvaccines.com/gpn-vaccines-closes-oversubscribed-aud-18-million-usd-12-million-series-b1-investment-round/",
+    "verification_notes": "The company confirms the oversubscribed A$18m Series B1 and corrects 'Kern Whelan Capital' to Kern Capital. Mike Gregg co-led in his capacity as Shearwater Capital's founding partner.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:gpn-vaccines"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:6ce6167036d43de8d5ae",
+      "source:url:09f58cb40d7b4e4fb3fa"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-394",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-394",
+    "dedupe_key": "2024|neurode|2024-09-10|pre_seed",
+    "source_url": "https://www.wsgr.com/print/v2/content/49032779/Wilson-Sonsini-Advises-Neurode-on-pre-Seed-Financing.pdf",
+    "source_payload": {
+      "deal_number": 394,
+      "csv_investee": "Neurode",
+      "normalized_investee": "Neurode",
+      "csv_date": "2024-09-13",
+      "normalized_date": "2024-09-10",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-seed",
+      "csv_amount": "USD 3,500,000",
+      "normalized_amount": "USD 3,500,000",
+      "csv_investors": "Khosla Ventures; PsyMed Ventures",
+      "normalized_investors": "Khosla Ventures (lead); PsyMed Ventures",
+      "verification": "verified",
+      "correction_or_issue": "Legal-adviser and deal reporting confirm amount, stage, lead and participant.",
+      "primary_source": "https://www.wsgr.com/print/v2/content/49032779/Wilson-Sonsini-Advises-Neurode-on-pre-Seed-Financing.pdf",
+      "secondary_source": "https://www.trymatchbox.com/startups/72bd1963-387f-45ab-8242-d706d599d5bc"
+    },
+    "investee_name_raw": "Neurode",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.neurodelabs.com/",
+    "org_industries_raw": "Neurotech / Medical Devices",
+    "round_type_raw": "Pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-09-10",
+    "money_raised_raw": "USD 3,500,000",
+    "amount": 3500000,
+    "currency": "USD",
+    "amount_usd": 3500000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Khosla Ventures (lead); PsyMed Ventures",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.wsgr.com/print/v2/content/49032779/Wilson-Sonsini-Advises-Neurode-on-pre-Seed-Financing.pdf",
+    "verification_notes": "Legal-adviser and deal reporting confirm amount, stage, lead and participant.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:neurode"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:fd8319906a8ab8694a38",
+      "source:url:65ff401a89daebc9160a"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

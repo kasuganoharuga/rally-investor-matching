@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "table": "deal_investors",
+  "record_key": "deal_investor:research-package:2024-deal-248:m8-ventures",
+  "operation": "upsert",
+  "data": {
+    "raw_name": "M8 Ventures",
+    "role": "participant",
+    "participation_status": "confirmed",
+    "resolution": "resolved",
+    "resolution_confidence": "high",
+    "identity_resolution": "existing_investor"
+  },
+  "refs": {
+    "deal_key": "funding_round:research-package:2024-deal-248",
+    "investor_key": "investor:m8-ventures",
+    "raw_investor_candidate_key": "raw_investor_candidate:m8-ventures"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Deal evidence remains incomplete; investor relation is preserved for review."
+    ]
+  }
+}

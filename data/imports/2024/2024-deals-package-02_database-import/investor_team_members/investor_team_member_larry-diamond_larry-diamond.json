@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_team_members",
+  "record_key": "investor_team_member:larry-diamond:larry-diamond",
+  "operation": "upsert",
+  "data": {
+    "contact_id": null,
+    "first_name": "Larry",
+    "last_name": "Diamond",
+    "role_title": "Fintech founder/operator; Zip co-founder",
+    "seniority": "partner",
+    "linkedin_url": null,
+    "claimed_focus": [],
+    "bio_summary": null,
+    "source_url": "https://www.flyweel.co/announcements/flyweel-pre-seed-raise",
+    "retrieved_at": null,
+    "is_active": true
+  },
+  "refs": {
+    "investor_key": "investor:larry-diamond",
+    "contact_key": null
+  },
+  "provenance": {
+    "collection_run_key": "collection:research:2026-07-24",
+    "source_keys": [
+      "research_source:larry-diamond:larry_src_001"
+    ]
+  },
+  "review": {
+    "status": "unreviewed",
+    "issues": []
+  }
+}

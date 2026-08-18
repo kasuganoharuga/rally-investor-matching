@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-455",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-455",
+    "dedupe_key": "2024|kimer-med|2024-07-10|series_a",
+    "source_url": "https://www.kimermed.co.nz/media/kimer-med-10m-closer-to-goal-of-virus-eradication",
+    "source_payload": {
+      "deal_number": 455,
+      "csv_investee": "Kimer Med",
+      "normalized_investee": "Kimer Med",
+      "csv_date": "2024-06-06",
+      "normalized_date": "2024-10 close; 2024-07-10 first-close announcement",
+      "csv_round": "Series A",
+      "normalized_round": "Series A",
+      "csv_amount": "NZD 14,000,000",
+      "normalized_amount": "NZD 14,000,000 (NZ$10m lead commitment + NZ$4m Catalist target)",
+      "csv_investors": null,
+      "normalized_investors": "Undisclosed lead investor; five new shareholders reported",
+      "verification": "verified_date_corrected",
+      "correction_or_issue": "Company sources confirm the NZ$14m Series A closed in October. The supplied June date predates the July first-close announcement.",
+      "primary_source": "https://www.kimermed.co.nz/media/kimer-med-10m-closer-to-goal-of-virus-eradication",
+      "secondary_source": "https://www.kimermed.co.nz/progress"
+    },
+    "investee_name_raw": "Kimer Med",
+    "org_location_raw": "Nelson, New Zealand",
+    "org_website_raw": "https://kimermed.co.nz/",
+    "org_industries_raw": "Biotech / Therapeutics",
+    "round_type_raw": "Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-07-10",
+    "money_raised_raw": "NZD 14,000,000 (NZ$10m lead commitment + NZ$4m Catalist target)",
+    "amount": 14000000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed lead investor; five new shareholders reported",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-08_database-import",
+    "verification_status": "verified_date_corrected",
+    "verification_source_url": "https://www.kimermed.co.nz/media/kimer-med-10m-closer-to-goal-of-virus-eradication",
+    "verification_notes": "Company sources confirm the NZ$14m Series A closed in October. The supplied June date predates the July first-close announcement.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:kimer-med"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": [
+      "source:url:79147b4c644051e60851",
+      "source:url:f31003c6c8418cfe14f0"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

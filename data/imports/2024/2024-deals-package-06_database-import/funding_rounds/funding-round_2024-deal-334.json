@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-334",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-334",
+    "dedupe_key": "2024|exoflare|2024-07-17|seed",
+    "source_url": "https://www.innovationaus.com/biosecurity-startup-exoflare-raises-5-3m/",
+    "source_payload": {
+      "deal_number": 334,
+      "csv_investee": "ExoFlare",
+      "normalized_investee": "ExoFlare",
+      "csv_date": "2024-07-16",
+      "normalized_date": "2024-07-17 reporting",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "AUD 5,300,000",
+      "normalized_amount": "AUD 5,300,000",
+      "csv_investors": "Catherine Harris; Cultiv8 Funds Management; David Harris; IQT; Peter Knoblanche; Robyn Denholm; Salus Ventures; W23; Wollemi",
+      "normalized_investors": "Salus Ventures (lead); W23; Cultiv8; In-Q-Tel; additional angels / investors",
+      "verification": "verified_core_syndicate",
+      "correction_or_issue": "Contemporaneous reporting confirms amount, lead and four institutional investors. Additional individual names and Wollemi in the CSV were not independently established for this close.",
+      "primary_source": "https://www.innovationaus.com/biosecurity-startup-exoflare-raises-5-3m/",
+      "secondary_source": "https://www.linkedin.com/posts/salus-vc_backingheroicfounders-joiningforces-activity-7218494294851039234-PN9d"
+    },
+    "investee_name_raw": "ExoFlare",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.exoflare.io/",
+    "org_industries_raw": "Agtech / Biosecurity",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-07-17",
+    "money_raised_raw": "AUD 5,300,000",
+    "amount": 5300000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Salus Ventures (lead); W23; Cultiv8; In-Q-Tel; additional angels / investors",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "verified_core_syndicate",
+    "verification_source_url": "https://www.innovationaus.com/biosecurity-startup-exoflare-raises-5-3m/",
+    "verification_notes": "Contemporaneous reporting confirms amount, lead and four institutional investors. Additional individual names and Wollemi in the CSV were not independently established for this close.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:exoflare"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:3e0a8a62b6f5bb9de712",
+      "source:url:18de562b080290f788e6"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

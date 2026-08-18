@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-239",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-239",
+    "dedupe_key": "2024|effie-ai|2024-10-03|pre_seed",
+    "source_url": "https://www.linkedin.com/company/effie-ai",
+    "source_payload": {
+      "deal_number": 239,
+      "csv_investee": "Effie",
+      "normalized_investee": "Effie AI",
+      "csv_date": "2024-09-03",
+      "normalized_date": "2024-10-03 profile date",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Unverified pre-seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Sequoia Capital",
+      "normalized_investors": "Sequoia Capital (database/social-profile claim only)",
+      "verification": "needs_review",
+      "correction_or_issue": "A social profile lists Sequoia, but no Sequoia announcement, amount or independent transaction evidence was found. Hold the investor link.",
+      "primary_source": "https://www.linkedin.com/company/effie-ai",
+      "secondary_source": "https://effie.digital/"
+    },
+    "investee_name_raw": "Effie AI",
+    "org_location_raw": "Adelaide, SA, Australia",
+    "org_website_raw": "https://effie.digital/",
+    "org_industries_raw": "Healthtech / Generative AI",
+    "round_type_raw": "Unverified pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-10-03",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Sequoia Capital (database/social-profile claim only)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://www.linkedin.com/company/effie-ai",
+    "verification_notes": "A social profile lists Sequoia, but no Sequoia announcement, amount or independent transaction evidence was found. Hold the investor link.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:effie-ai"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:3d93814957bb53443158",
+      "source:url:d117418b991fa594331a"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "A social profile lists Sequoia, but no Sequoia announcement, amount or independent transaction evidence was found. Hold the investor link.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

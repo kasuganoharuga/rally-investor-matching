@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-034",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-034",
+    "dedupe_key": "2024|teamology|2024-08-19|seed",
+    "source_url": "https://www.prnewswire.com/news-releases/teamology-secures-seed-round-to-revolutionize-mental-health-support-for-kids-302224857.html",
+    "source_payload": {
+      "deal_number": 34,
+      "csv_investee": "TEAMology",
+      "normalized_investee": "TEAMology",
+      "csv_date": "2024-08-06",
+      "normalized_date": "2024-08-19",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "USD 1,200,000",
+      "normalized_amount": "USD 1,200,000",
+      "csv_investors": "VC414 (lead); 1855 Capital Partners; Ben Franklin Technology Partners; Product10x Accelerator; Supes’ Fund; White Rose Ventures",
+      "normalized_investors": "VC 414 (lead); 1855 Capital; Ben Franklin Technology Partners; Product 10X; Supes' Fund; White Rose Ventures",
+      "verification": "corrected",
+      "correction_or_issue": "Official announcement date is Aug 19; company is based in University Park, Pennsylvania, not Sydney, so flag geography as outside ANZ directory scope.",
+      "primary_source": "https://www.prnewswire.com/news-releases/teamology-secures-seed-round-to-revolutionize-mental-health-support-for-kids-302224857.html",
+      "secondary_source": "https://teamology.team/"
+    },
+    "investee_name_raw": "TEAMology",
+    "org_location_raw": "University Park, Pennsylvania, USA",
+    "org_website_raw": "https://teamology.team/",
+    "org_industries_raw": "Edtech / Mental Health",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-08-19",
+    "money_raised_raw": "USD 1,200,000",
+    "amount": 1200000,
+    "currency": "USD",
+    "amount_usd": 1200000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "VC 414 (lead); 1855 Capital; Ben Franklin Technology Partners; Product 10X; Supes' Fund; White Rose Ventures",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.prnewswire.com/news-releases/teamology-secures-seed-round-to-revolutionize-mental-health-support-for-kids-302224857.html",
+    "verification_notes": "Official announcement date is Aug 19; company is based in University Park, Pennsylvania, not Sydney, so flag geography as outside ANZ directory scope.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:teamology"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:fa284590e858fcf0a73e",
+      "source:url:97ca54a8d2928f75bdef"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

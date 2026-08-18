@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-209",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-209",
+    "dedupe_key": "2024|cents2bills|2024-02-15|pre_seed",
+    "source_url": "https://www.cbinsights.com/company/cents2bills/financials",
+    "source_payload": {
+      "deal_number": 209,
+      "csv_investee": "Cents2Bills",
+      "normalized_investee": "Cents2Bills",
+      "csv_date": "2024-02-15",
+      "normalized_date": "2024-02-15 (database date)",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-Seed",
+      "csv_amount": "AUD 50,000",
+      "normalized_amount": "AUD 50,000",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Undisclosed",
+      "verification": "needs_review",
+      "correction_or_issue": "Funding databases agree on A$50k and the date, but no primary financing announcement or investor identity was found.",
+      "primary_source": "https://www.cbinsights.com/company/cents2bills/financials",
+      "secondary_source": "https://app.dealroom.co/companies/cents2bills"
+    },
+    "investee_name_raw": "Cents2Bills",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://cents2bills.com.au/",
+    "org_industries_raw": "Fintech / Personal Finance",
+    "round_type_raw": "Pre-Seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-02-15",
+    "money_raised_raw": "AUD 50,000",
+    "amount": 50000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://www.cbinsights.com/company/cents2bills/financials",
+    "verification_notes": "Funding databases agree on A$50k and the date, but no primary financing announcement or investor identity was found.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:cents2bills"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:f5a7888e33b169ad53e4",
+      "source:url:f3704cb87e8ee462ee91"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Funding databases agree on A$50k and the date, but no primary financing announcement or investor identity was found."
+    ]
+  }
+}

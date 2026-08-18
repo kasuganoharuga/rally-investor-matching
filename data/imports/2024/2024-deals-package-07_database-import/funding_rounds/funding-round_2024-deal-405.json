@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-405",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-405",
+    "dedupe_key": "2024|gelomics|2024-07-05|pre_seed",
+    "source_url": "https://www.jelix.vc/notes/gelomics-investment-notes",
+    "source_payload": {
+      "deal_number": 405,
+      "csv_investee": "Gelomics",
+      "normalized_investee": "Gelomics",
+      "csv_date": "2024-07-04",
+      "normalized_date": "2024-07-05",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-seed",
+      "csv_amount": "USD 2,200,000",
+      "normalized_amount": "AUD 2,200,000",
+      "csv_investors": "AngelLoop; Jelix; Queensland Investment Corporation",
+      "normalized_investors": "Jelix Ventures (lead); Queensland Investment Corporation; AngelLoop",
+      "verification": "corrected",
+      "correction_or_issue": "The round is A$2.2m, not US$2.2m; Jelix's note confirms the syndicate.",
+      "primary_source": "https://www.jelix.vc/notes/gelomics-investment-notes",
+      "secondary_source": "https://www.capitalbrief.com/briefing/qic-backs-gelomics-in-22m-raise-for-animal-free-medical-research-87687bd8-5540-4e0d-a057-a7da176c58aa/"
+    },
+    "investee_name_raw": "Gelomics",
+    "org_location_raw": "Brisbane, QLD, Australia",
+    "org_website_raw": "https://www.gelomics.com/",
+    "org_industries_raw": "Biotech / Research Tools",
+    "round_type_raw": "Pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-07-05",
+    "money_raised_raw": "AUD 2,200,000",
+    "amount": 2200000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Jelix Ventures (lead); Queensland Investment Corporation; AngelLoop",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.jelix.vc/notes/gelomics-investment-notes",
+    "verification_notes": "The round is A$2.2m, not US$2.2m; Jelix's note confirms the syndicate. Lead investor note and contemporaneous report confirm the A$2.2m pre-seed announcement.",
+    "verification_checked_at": "2026-08-14",
+    "supplemental_verification_urls": [
+      "https://www.jelix.vc/notes/gelomics-investment-notes",
+      "https://www.startupdaily.net/topic/funding/brisbane-biotech-gelomics-lands-2-2-million-pre-seed-round-for-animal-free-medical-research/"
+    ],
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:gelomics"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:6f0c3ad09fe066ad6922",
+      "source:url:c705c2fd81a63e401290"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

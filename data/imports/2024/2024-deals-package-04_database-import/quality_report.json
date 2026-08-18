@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-08-14T00:00:00+09:30",
+  "status": "passed_with_documented_gaps",
+  "source_reconciliation": {
+    "deals": 60,
+    "deal_dispositions": 60,
+    "investees": 60,
+    "unique_investee_profiles": 60,
+    "investors": 75,
+    "investor_dispositions": 75,
+    "sources": 120
+  },
+  "import_counts": {
+    "investors": 26,
+    "investor_external_ids": 0,
+    "investor_web_profiles": 26,
+    "investor_programs": 4,
+    "investor_team_members": 0,
+    "investee_company_profiles": 60,
+    "investee_external_ids": 0,
+    "funding_rounds": 49,
+    "deal_investors": 56
+  },
+  "structural": {
+    "total_payload_records": 221,
+    "duplicate_record_keys": 0,
+    "broken_investor_refs": 0,
+    "broken_deal_refs": 0,
+    "broken_company_refs": 0,
+    "unresolved_dependency_placeholders": 0,
+    "source_deals_without_disposition": 0,
+    "source_deals_with_multiple_dispositions": 0
+  },
+  "missing_fields": {
+    "deal_primary_source": {
+      "missing": 0,
+      "total": 60,
+      "rate": 0
+    },
+    "deal_secondary_source": {
+      "missing": 0,
+      "total": 60,
+      "rate": 0
+    },
+    "investee_website": {
+      "missing": 1,
+      "total": 60,
+      "rate": 0.016666666666666666
+    },
+    "new_investor_website": {
+      "missing": 6,
+      "total": 23,
+      "rate": 0.2608695652173913
+    },
+    "imported_round_exact_date": {
+      "missing": 10,
+      "total": 49,
+      "rate": 0.20408163265306123
+    },
+    "imported_round_structured_amount": {
+      "missing": 18,
+      "total": 49,
+      "rate": 0.3673469387755102
+    }
+  },
+  "documented_gaps": {
+    "excluded_deals": 11,
+    "excluded_investors": 14,
+    "unnamed_or_unresolved_investor_mentions": 19,
+    "excluded_investor_mentions": 8,
+    "records_needing_more_data": 93
+  },
+  "supplementation": {
+    "applied_at": "2026-08-14T00:00:00+09:30",
+    "change_count": 4,
+    "report_file": "supplementation_report.json"
+  },
+  "investor_identity": {
+    "upserts": 26,
+    "existing_investor_updates": 2,
+    "net_new_investors": 24,
+    "confirmed_aliases_canonicalized": 0
+  },
+  "accelerator_annotation": {
+    "accelerator_investors_in_scope": 4,
+    "investor_program_records": 4
+  },
+  "amount_availability": {
+    "structured_amount": 31,
+    "publicly_undisclosed": 18,
+    "other_documented_non_structured": 0,
+    "undocumented_missing": 0
+  }
+}

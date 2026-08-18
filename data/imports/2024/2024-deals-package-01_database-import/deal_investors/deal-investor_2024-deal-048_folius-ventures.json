@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "table": "deal_investors",
+  "record_key": "deal_investor:research-package:2024-deal-048:folius-ventures",
+  "operation": "upsert",
+  "data": {
+    "raw_name": "Folius Ventures",
+    "role": "participant",
+    "participation_status": "confirmed",
+    "resolution": "resolved",
+    "resolution_confidence": "high",
+    "identity_resolution": "new_investor"
+  },
+  "refs": {
+    "deal_key": "funding_round:research-package:2024-deal-048",
+    "investor_key": "investor:folius-ventures",
+    "raw_investor_candidate_key": "raw_investor_candidate:folius-ventures"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

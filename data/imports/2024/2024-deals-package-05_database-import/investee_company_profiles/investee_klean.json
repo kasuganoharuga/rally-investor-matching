@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:klean",
+  "operation": "upsert",
+  "data": {
+    "name": "Klean",
+    "website_url": "https://www.kleantech.com.au/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Queensland",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "climate-tech-esg",
+    "sector_secondary": null,
+    "use_case_primary": "esg-brand-authentication-platform-intended-to-validate-and-communicate-product-sustainability-credentials",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-saas-verification",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "ESG brand-authentication platform intended to validate and communicate product sustainability credentials.",
+    "source_urls": [
+      "https://www.prlog.org/13028191-klean-an-esg-brand-authentication-firm-raises-725000-in-its-pre-seed-round.pdf",
+      "https://www.prlog.org/13028191-klean-an-esg-brand-authentication-firm-raises-725000-in-its-pre-seed-round.html",
+      "https://www.kleantech.com.au/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-supplement",
+    "extraction_version": "1.0.0",
+    "confidence": "medium"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:2239d6b6d2e260670e47"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

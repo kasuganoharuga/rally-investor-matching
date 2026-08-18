@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:conflux-technology",
+  "operation": "upsert",
+  "data": {
+    "name": "Conflux Technology",
+    "website_url": "https://www.confluxtechnology.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Victoria",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "advanced-manufacturing-climate-tech",
+    "sector_secondary": null,
+    "use_case_primary": "designs-and-manufactures-high-performance-additively-manufactured-heat-exchangers",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-hardware-ip",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Designs and manufactures high-performance additively manufactured heat exchangers.",
+    "source_urls": [
+      "https://www.confluxtechnology.com/",
+      "https://www.confluxtechnology.com/resources/press-releases/conflux-raises-11m-in-series-b-funding-to-help-innovative-companies-achieve-net-zero-through-heat-exchange/",
+      "https://www.aumanufacturing.com.au/conflux-technology-secures-11-million-in-series-b-round"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

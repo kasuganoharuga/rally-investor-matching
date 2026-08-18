@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:starboard-maritime-intelligence",
+  "operation": "upsert",
+  "data": {
+    "name": "Starboard Maritime Intelligence",
+    "website_url": "https://starboard.nz/",
+    "crunchbase_uuid": null,
+    "hq_country": "NZ",
+    "hq_state": null,
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "maritime-tech-data-intelligence",
+    "sector_secondary": null,
+    "use_case_primary": "maritime-intelligence-platform-combining-vessel-fisheries-and-risk-data-to-help-governments-and-organisations-monitor-ac",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-government-saas",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Maritime intelligence platform combining vessel, fisheries and risk data to help governments and organisations monitor activity at sea.",
+    "source_urls": [
+      "https://starboard.nz/",
+      "https://m.scoop.co.nz/stories/SC2404/S00004/new-zealand-tech-helping-to-protect-our-oceans-secures-investment.htm"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

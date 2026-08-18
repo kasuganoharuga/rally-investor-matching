@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_team_members",
+  "record_key": "investor_team_member:university-of-melbourne-genesis-pre-seed-fund:brian-pang",
+  "operation": "upsert",
+  "data": {
+    "contact_id": null,
+    "first_name": "Brian",
+    "last_name": "Pang",
+    "role_title": "Investment team",
+    "seniority": "other",
+    "linkedin_url": null,
+    "claimed_focus": [],
+    "bio_summary": "Relevant leader or investor associated with University of Melbourne Genesis Pre-Seed Fund.",
+    "source_url": "https://research.unimelb.edu.au/commercialisation/community/funding-for-startups/genesis-pre-seed-fund/apply-for-funding",
+    "retrieved_at": "2026-07-16",
+    "is_active": true
+  },
+  "refs": {
+    "investor_key": "investor:university-of-melbourne-genesis-pre-seed-fund",
+    "contact_key": null
+  },
+  "provenance": {
+    "collection_run_key": "collection:research:2026-07-24",
+    "source_keys": [
+      "research_source:genesis-pre-seed-fund:gen_src_001"
+    ]
+  },
+  "review": {
+    "status": "unreviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-376",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-376",
+    "dedupe_key": "2024|slice|2024-08-02|seed",
+    "source_url": "https://www.hsfkramer.com/news/2024-08/hsf-advises-slice-on-its-series-seed-capital-raise",
+    "source_payload": {
+      "deal_number": 376,
+      "csv_investee": "Slice",
+      "normalized_investee": "Slice",
+      "csv_date": "2024-07-31",
+      "normalized_date": "2024-08-02 reporting",
+      "csv_round": "Seed",
+      "normalized_round": "Series Seed plus debt facility",
+      "csv_amount": "USD 7,500,000",
+      "normalized_amount": "AUD 7,500,000 equity + AUD 10,000,000 debt",
+      "csv_investors": "Peak XV Partners",
+      "normalized_investors": "Peak XV Partners (equity lead); Roadnight Capital (debt provider)",
+      "verification": "corrected_split_financing",
+      "correction_or_issue": "The CSV currency is wrong and omits a separate A$10m debt facility. Record A$7.5m equity and debt separately.",
+      "primary_source": "https://www.hsfkramer.com/news/2024-08/hsf-advises-slice-on-its-series-seed-capital-raise",
+      "secondary_source": "https://www.businessnewsaustralia.com/articles/-we-bet-the-farm---how-slice-founders-dug-deep--beat-the-odds-and-secured--17-5m.html"
+    },
+    "investee_name_raw": "Slice",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.slicegroup.co/",
+    "org_industries_raw": "Travel Fintech / Payments",
+    "round_type_raw": "Series Seed plus debt facility",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-08-02",
+    "money_raised_raw": "AUD 7,500,000 equity + AUD 10,000,000 debt",
+    "amount": 7500000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Peak XV Partners (equity lead); Roadnight Capital (debt provider)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "corrected_split_financing",
+    "verification_source_url": "https://www.hsfkramer.com/news/2024-08/hsf-advises-slice-on-its-series-seed-capital-raise",
+    "verification_notes": "The CSV currency is wrong and omits a separate A$10m debt facility. Record A$7.5m equity and debt separately.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:slice"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:6cb14125475a173e9a76",
+      "source:url:31ac9140f2d1d368b45f"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

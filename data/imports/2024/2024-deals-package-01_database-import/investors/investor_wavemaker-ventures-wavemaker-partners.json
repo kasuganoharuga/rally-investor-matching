@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investors",
+  "record_key": "investor:wavemaker-ventures-wavemaker-partners",
+  "operation": "upsert",
+  "data": {
+    "canonical_name": "Wavemaker Ventures / Wavemaker Partners",
+    "aliases": [
+      "Wavemaker Ventures",
+      "Wavemaker Partners"
+    ],
+    "investor_type": "vc_fund",
+    "website_url": "https://wavemaker.vc/",
+    "linkedin_url": "https://www.linkedin.com/company/wavemaker-partners/",
+    "hq_country": "SG",
+    "hq_state": null,
+    "hq_city": "Singapore",
+    "offices": [],
+    "status": "active",
+    "merged_into_id": null,
+    "review_status": "needs_more_data",
+    "last_reviewed_at": "2026-08-14",
+    "last_reviewed_by": "codex-2024-investor-dedupe-update",
+    "investor_subtype": "VC",
+    "classification_confidence": "high",
+    "classification_source": "inherited from previously completed detailed classification",
+    "eligibility_mode": "research_package_confirmed",
+    "classification_evidence_urls": [
+      "https://wavemaker.vc/"
+    ],
+    "classified_at": "2026-08-14",
+    "identity_resolution": "existing_investor_update",
+    "matched_existing_record_key": "investor:wavemaker-ventures-wavemaker-partners",
+    "identity_match_method": "exact_existing_key",
+    "identity_match_source": "normalized_master"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "research_source:wavemaker-ventures:wm_src_001",
+      "research_source:wavemaker-ventures:wm_src_002",
+      "research_source:wavemaker-ventures:wm_src_003",
+      "research_source:wavemaker-ventures:wm_src_004",
+      "research_source:wavemaker-ventures:wm_src_005",
+      "research_source:wavemaker-ventures:wm_src_006"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Research collection status: partial",
+      "datamasque_allocation_undisclosed",
+      "current_vehicle_size_not_isolated",
+      "personal_linkedin_not_resolved",
+      "recent_deal_history_not_exhaustive"
+    ]
+  }
+}

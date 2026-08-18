@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:gpn-vaccines",
+  "operation": "upsert",
+  "data": {
+    "name": "GPN Vaccines",
+    "website_url": "https://gpnvaccines.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "South Australia",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "biotech-vaccines",
+    "sector_secondary": null,
+    "use_case_primary": "clinical-stage-biotechnology-company-developing-gamma-pn-a-broad-spectrum-vaccine-against-pneumococcal-disease",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "clinical-stage-therapeutics",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Clinical-stage biotechnology company developing Gamma-PN, a broad-spectrum vaccine against pneumococcal disease.",
+    "source_urls": [
+      "https://gpnvaccines.com/",
+      "https://gpnvaccines.com/gpn-vaccines-closes-oversubscribed-aud-18-million-usd-12-million-series-b1-investment-round/",
+      "https://www.preqin.com/data/profile/asset/gpn-vaccines-ltd/645178"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

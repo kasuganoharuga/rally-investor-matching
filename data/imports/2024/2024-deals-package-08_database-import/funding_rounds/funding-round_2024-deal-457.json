@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-457",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-457",
+    "dedupe_key": "2024|quantum-brilliance|2024-12-10|series_a",
+    "source_url": "https://quantumbrilliance.com/news/quantum-brilliance-raises-usd-20-million-in-series-a-funding-round/",
+    "source_payload": {
+      "deal_number": 457,
+      "csv_investee": "Quantum Brilliance",
+      "normalized_investee": "Quantum Brilliance",
+      "csv_date": "2024-12-10",
+      "normalized_date": "2024-12-10 commitment announcement; company close announcement 2025-01-15",
+      "csv_round": "Series A",
+      "normalized_round": "Series A",
+      "csv_amount": "USD 30,000,000",
+      "normalized_amount": "AUD 30,000,000 / USD 20,000,000",
+      "csv_investors": "Breakthrough Victoria; National Reconstruction Fund Corporation",
+      "normalized_investors": "Main Sequence; In-Q-Tel; InterValley Ventures; NRFC; Breakthrough Victoria; Alium Capital; Investible; Jelix Ventures",
+      "verification": "corrected_currency_syndicate",
+      "correction_or_issue": "The CSV currency is wrong and omits six participants. Official sources reconcile A$30m with the later US$20m company announcement.",
+      "primary_source": "https://quantumbrilliance.com/news/quantum-brilliance-raises-usd-20-million-in-series-a-funding-round/",
+      "secondary_source": "https://assets.breakthroughvictoria.com/assets/Media-release-WORLDS-LEADING-QUANTUM-DIAMOND-FOUNDRY-TO-BE-CREATED-IN-VICTORIA_QB.pdf"
+    },
+    "investee_name_raw": "Quantum Brilliance",
+    "org_location_raw": "Canberra and Melbourne, Australia / Germany",
+    "org_website_raw": "https://quantumbrilliance.com/",
+    "org_industries_raw": "Quantum Computing / Deep Tech",
+    "round_type_raw": "Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-12-10",
+    "money_raised_raw": "AUD 30,000,000 / USD 20,000,000",
+    "amount": 30000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Main Sequence; In-Q-Tel; InterValley Ventures; NRFC; Breakthrough Victoria; Alium Capital; Investible; Jelix Ventures",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-08_database-import",
+    "verification_status": "corrected_currency_syndicate",
+    "verification_source_url": "https://quantumbrilliance.com/news/quantum-brilliance-raises-usd-20-million-in-series-a-funding-round/",
+    "verification_notes": "The CSV currency is wrong and omits six participants. Official sources reconcile A$30m with the later US$20m company announcement.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:quantum-brilliance"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": [
+      "source:url:b9c7a8ce1122538c77b5",
+      "source:url:9b9b15df33bcafbe8b7c"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

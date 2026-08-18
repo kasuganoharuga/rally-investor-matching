@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-07_database-import",
+  "updated_at": "2026-08-14T00:00:00+09:30",
+  "status": "completed",
+  "identity_summary": {
+    "upserts": 35,
+    "existing_investor_updates": 12,
+    "net_new_investors": 23,
+    "confirmed_aliases_canonicalized": 0
+  },
+  "matches": [
+    {
+      "package": 7,
+      "source_key": "investor:angelloop",
+      "canonical_key": "investor:angelloop",
+      "source_name": "Angelloop",
+      "canonical_name": "Angelloop",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 7,
+      "source_key": "investor:avicella-capital",
+      "canonical_key": "investor:avicella-capital",
+      "source_name": "Avicella Capital",
+      "canonical_name": "Avicella Capital",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-001-060_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 7,
+      "source_key": "investor:bandera-capital",
+      "canonical_key": "investor:bandera-capital",
+      "source_name": "Bandera Capital",
+      "canonical_name": "Bandera Capital",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 7,
+      "source_key": "investor:bridgewest-group",
+      "canonical_key": "investor:bridgewest-group",
+      "source_name": "Bridgewest Group",
+      "canonical_name": "Bridgewest Group",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-061-120_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 7,
+      "source_key": "investor:five-v-capital",
+      "canonical_key": "investor:five-v-capital",
+      "source_name": "Five V Capital",
+      "canonical_name": "Five V Capital",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 7,
+      "source_key": "investor:impact-ventures",
+      "canonical_key": "investor:impact-ventures",
+      "source_name": "Impact Ventures",
+      "canonical_name": "Impact Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 7,
+      "source_key": "investor:metagrove-ventures",
+      "canonical_key": "investor:metagrove-ventures",
+      "source_name": "Metagrove Ventures",
+      "canonical_name": "Metagrove Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-181-230_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 7,
+      "source_key": "investor:peak-xv-partners",
+      "canonical_key": "investor:peak-xv-partners",
+      "source_name": "Peak XV Partners",
+      "canonical_name": "Peak XV Partners",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-001-060_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 7,
+      "source_key": "investor:phase-one-ventures",
+      "canonical_key": "investor:phase-one-ventures",
+      "source_name": "Phase One Ventures",
+      "canonical_name": "Phase One Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 7,
+      "source_key": "investor:punakaiki-fund",
+      "canonical_key": "investor:punakaiki-fund",
+      "source_name": "Punakaiki Fund",
+      "canonical_name": "Punakaiki Fund",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 7,
+      "source_key": "investor:stoic-vc",
+      "canonical_key": "investor:stoic-vc",
+      "source_name": "Stoic VC",
+      "canonical_name": "Stoic VC",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 7,
+      "source_key": "investor:wavemaker-impact",
+      "canonical_key": "investor:wavemaker-impact",
+      "source_name": "Wavemaker Impact",
+      "canonical_name": "Wavemaker Impact",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    }
+  ],
+  "accelerator_programs": [
+    {
+      "investor_key": "investor:seaahead",
+      "package": 7,
+      "program_key": "program:seaahead:primary",
+      "reused_prior_program": false
+    }
+  ],
+  "manual_review_candidates": [],
+  "reviewed_distinct_candidates": []
+}

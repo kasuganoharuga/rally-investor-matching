@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-075",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-075",
+    "dedupe_key": "2024|terria|2024-12-11|seed",
+    "source_url": "https://www.csiro.au/en/news/all/news/2024/december/terria-bites-into-billion-dollar-geospatial-tech-market",
+    "source_payload": {
+      "deal_number": 75,
+      "csv_investee": "Terria",
+      "normalized_investee": "Terria",
+      "csv_date": "2024-12-11",
+      "normalized_date": "2024-12-11",
+      "csv_round": "Seed",
+      "normalized_round": "Spinout seed round",
+      "csv_amount": "USD 3,000,000",
+      "normalized_amount": "AUD 3,000,000",
+      "csv_investors": "Main Sequence Ventures",
+      "normalized_investors": "Main Sequence",
+      "verification": "corrected",
+      "correction_or_issue": "CSIRO confirms the spinout and investor but does not disclose US$3m; normalize amount to undisclosed.",
+      "primary_source": "https://www.csiro.au/en/news/all/news/2024/december/terria-bites-into-billion-dollar-geospatial-tech-market",
+      "secondary_source": "https://www.vcbacked.co/company/terria"
+    },
+    "investee_name_raw": "Terria",
+    "org_location_raw": "Canberra, ACT, Australia",
+    "org_website_raw": "https://terria.io/",
+    "org_industries_raw": "Geospatial / Digital Twins",
+    "round_type_raw": "Spinout seed round",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-12-11",
+    "money_raised_raw": "AUD 3,000,000",
+    "amount": 3000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Main Sequence",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.csiro.au/en/news/all/news/2024/december/terria-bites-into-billion-dollar-geospatial-tech-market",
+    "verification_notes": "CSIRO confirms the spinout and investor but does not disclose US$3m; normalize amount to undisclosed. Two independent funding databases report A$3m; CSIRO's official announcement confirms the 11 December 2024 seed round and Main Sequence but does not disclose the amount.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "secondary_databases_corroborated_official_announcement_undisclosed",
+    "amount_structuring_note": "Two independent funding databases report A$3m; CSIRO's official announcement confirms the 11 December 2024 seed round and Main Sequence but does not disclose the amount.",
+    "date_precision": "day",
+    "supplemental_verification_urls": [
+      "https://www.vcbacked.co/company/terria",
+      "https://fundediq.co/funded-startups-oceania/"
+    ]
+  },
+  "refs": {
+    "investee_company_key": "company:research:terria"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:b44b427c7e14e70e7a2b",
+      "source:url:8dafc763ef1a4d5b5a3e"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

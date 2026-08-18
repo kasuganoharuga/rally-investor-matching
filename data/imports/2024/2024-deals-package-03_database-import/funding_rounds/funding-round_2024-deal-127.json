@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-127",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-127",
+    "dedupe_key": "2024|mga-thermal|2024-12-04|series_b",
+    "source_url": "https://www.mgathermal.com/news/strategic-investment-amid-strong-growth-outlook-for-climate-tech",
+    "source_payload": {
+      "deal_number": 127,
+      "csv_investee": "MGA Thermal",
+      "normalized_investee": "MGA Thermal",
+      "csv_date": "2024-12-03",
+      "normalized_date": "2024-12-04 announcement",
+      "csv_round": "Series B",
+      "normalized_round": "Pre-Series B equity + government support",
+      "csv_amount": "USD 2,500,000",
+      "normalized_amount": "AUD 2,500,000 ARENA support + undisclosed Electrifi investment",
+      "csv_investors": "Australian Renewable Energy Agency; Electrifi Ventures",
+      "normalized_investors": "ARENA (non-dilutive/support); Electrifi Ventures; Climate Salad partnership",
+      "verification": "corrected",
+      "correction_or_issue": "Company says the equity investment was undisclosed and sat alongside an A$2.5m ARENA funding boost; do not treat the full amount as Series B equity.",
+      "primary_source": "https://www.mgathermal.com/news/strategic-investment-amid-strong-growth-outlook-for-climate-tech",
+      "secondary_source": "https://arena.gov.au/"
+    },
+    "investee_name_raw": "MGA Thermal",
+    "org_location_raw": "Newcastle, NSW, Australia",
+    "org_website_raw": "https://www.mgathermal.com/",
+    "org_industries_raw": "Climate Tech / Energy Storage",
+    "round_type_raw": "Pre-Series B equity + government support",
+    "round_stage": "series_b",
+    "funding_stage_raw": "Series B",
+    "announced_date": "2024-12-04",
+    "money_raised_raw": "AUD 2,500,000 ARENA support + undisclosed Electrifi investment",
+    "amount": 2500000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "ARENA (non-dilutive/support); Electrifi Ventures; Climate Salad partnership",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.mgathermal.com/news/strategic-investment-amid-strong-growth-outlook-for-climate-tech",
+    "verification_notes": "Company says the equity investment was undisclosed and sat alongside an A$2.5m ARENA funding boost; do not treat the full amount as Series B equity.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:mga-thermal"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:d504a20678fe140062d0",
+      "source:url:8e521d5e7b733b52b491"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

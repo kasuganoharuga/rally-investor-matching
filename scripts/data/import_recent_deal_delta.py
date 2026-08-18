@@ -21,6 +21,7 @@ from datetime import date, datetime
 from decimal import Decimal
 from pathlib import Path
 from typing import Any
+from urllib.parse import urlsplit
 from uuid import UUID
 
 import import_formal_sample as formal
@@ -87,6 +88,7 @@ class ImportBundle:
         default_factory=lambda: defaultdict(dict)
     )
     dependency_investor_keys: set[str] = field(default_factory=set)
+    dependency_investor_names: dict[str, str] = field(default_factory=dict)
     investor_alias_map: dict[str, str] = field(default_factory=dict)
     cleaning: Counter[str] = field(default_factory=Counter)
     duplicate_record_keys_replaced: Counter[str] = field(default_factory=Counter)
@@ -98,6 +100,7 @@ class ImportBundle:
 class IdentityMaps:
     investor_keys: dict[str, set[str]] = field(default_factory=dict)
     investor_names: dict[str, set[str]] = field(default_factory=dict)
+    investor_signatures: dict[str, set[str]] = field(default_factory=dict)
     investor_websites: dict[str, set[str]] = field(default_factory=dict)
     investor_linkedins: dict[str, set[str]] = field(default_factory=dict)
     company_keys: dict[str, str] = field(default_factory=dict)
@@ -111,8 +114,105 @@ def normalized_url(value: Any) -> str | None:
     return str(value).strip().rstrip("/").lower() or None
 
 
+def prepare_distinct_investor_websites(bundle: ImportBundle) -> None:
+    """Keep reviewed distinct entities from collapsing on a shared website.
+
+    The formal schema intentionally makes investor website URLs unique.  Some
+    reviewed 2024 identities are distinct people, funds, or investment arms
+    that cite the same parent/portfolio website.  Prefer an alternate official
+    URL from the payload evidence; otherwise retain the shared URL only on the
+    entity whose name matches the domain and leave it in profile provenance for
+    the other records.
+    """
+    records = list(bundle.records["investors"].values())
+
+    def groups() -> dict[str, list[dict[str, Any]]]:
+        result: dict[str, list[dict[str, Any]]] = defaultdict(list)
+        for envelope in records:
+            website = normalized_url(envelope.get("data", {}).get("website_url"))
+            if website:
+                result[website].append(envelope)
+        return {key: value for key, value in result.items() if len(value) > 1}
+
+    occupied = {
+        normalized_url(envelope.get("data", {}).get("website_url"))
+        for envelope in records
+        if normalized_url(envelope.get("data", {}).get("website_url"))
+    }
+    for website, envelopes in groups().items():
+        for envelope in envelopes:
+            data = envelope["data"]
+            alternatives = data.get("classification_evidence_urls") or []
+            for alternative in alternatives:
+                candidate = normalized_url(alternative)
+                if (
+                    candidate
+                    and "linkedin.com" not in candidate
+                    and candidate != website
+                    and candidate not in occupied
+                ):
+                    data["website_url"] = candidate
+                    occupied.add(candidate)
+                    bundle.cleaning["shared_investor_website_reassigned"] += 1
+                    break
+
+    for website, envelopes in groups().items():
+        hostname = (urlsplit(website).hostname or "").lower().removeprefix("www.")
+        hostname_text = re.sub(r"[^a-z0-9]+", "", hostname.split(".")[0])
+        owners: list[dict[str, Any]] = []
+        for envelope in envelopes:
+            name_words = re.sub(
+                r"[^a-z0-9]+",
+                " ",
+                str(envelope.get("data", {}).get("canonical_name") or "").lower(),
+            ).split()
+            if any(len(word) >= 4 and word in hostname_text for word in name_words):
+                owners.append(envelope)
+        owner = min(
+            owners,
+            key=lambda item: len(str(item["data"].get("canonical_name") or "")),
+            default=None,
+        )
+        for envelope in envelopes:
+            if envelope is owner:
+                continue
+            envelope["data"]["website_url"] = None
+            bundle.cleaning["shared_investor_website_cleared"] += 1
+
+
 def key_slug(record_key: str) -> str:
     return record_key.split(":", 1)[-1].strip().lower()
+
+
+def investor_name_signatures(value: Any) -> set[str]:
+    """Return conservative signatures for reviewed investor-name variants."""
+    text = str(value or "").strip().lower().replace("&", " and ")
+    if not text:
+        return set()
+    text = text.replace("new zealand", "nz")
+    variants = [text, *re.split(r"[/()]", text)]
+    ignored = {
+        "the",
+        "ventures",
+        "venture",
+        "capital",
+        "partners",
+        "partner",
+        "management",
+        "group",
+        "fund",
+        "funds",
+        "vc",
+        "australia",
+        "australian",
+    }
+    signatures: set[str] = set()
+    for variant in variants:
+        words = re.sub(r"[^a-z0-9]+", " ", variant).split()
+        signature = " ".join(word for word in words if word not in ignored)
+        if signature:
+            signatures.add(signature)
+    return signatures
 
 
 def add_candidate(mapping: dict[str, set[str]], key: str | None, value: str) -> None:
@@ -226,6 +326,13 @@ def load_bundle(input_root: Path) -> ImportBundle:
                     bundle.investor_alias_map.update(
                         {str(key): str(value) for key, value in aliases.items()}
                     )
+            for item in resolution.get("resolutions") or []:
+                if not isinstance(item, dict) or not item.get("dependency"):
+                    continue
+                record_key = str(item.get("record_key") or "")
+                canonical_name = str(item.get("canonical_investor") or "").strip()
+                if record_key and canonical_name:
+                    bundle.dependency_investor_names[record_key] = canonical_name
         if validation.get("status") != "passed":
             raise ValueError(f"Package validation did not pass: {package_dir.name}")
         bundle.packages.append(
@@ -239,6 +346,12 @@ def load_bundle(input_root: Path) -> ImportBundle:
         )
         bundle.dependency_investor_keys.update(
             str(key) for key in scope.get("existing_database_investor_keys", [])
+        )
+        bundle.dependency_investor_keys.update(
+            str(key)
+            for key in (manifest.get("dependency") or {}).get(
+                "requires_existing_investor_keys", []
+            )
         )
 
         for folder in manifest.get("import_order", []):
@@ -266,6 +379,7 @@ def load_bundle(input_root: Path) -> ImportBundle:
     if bundle.suspicious_samples:
         sample = json.dumps(bundle.suspicious_samples[:5], ensure_ascii=False)
         raise ValueError(f"Unresolved suspicious text remains: {sample}")
+    prepare_distinct_investor_websites(bundle)
     return bundle
 
 
@@ -403,6 +517,47 @@ def supplemental_envelopes(
     return master, web_profile
 
 
+def dependency_placeholder_envelope(
+    record_key: str, canonical_name: str
+) -> dict[str, Any]:
+    """Create a reviewable local master when a historical dependency is absent.
+
+    The audited package still needs the investor identity for its deal relation,
+    but it does not contain enough profile evidence to invent website, location,
+    or thesis data.  Preserve the reviewed name and flag the master for follow-up.
+    """
+    return {
+        "schema_version": "1.2.0",
+        "table": "investors",
+        "record_key": record_key,
+        "operation": "upsert",
+        "data": {
+            "canonical_name": canonical_name,
+            "aliases": [],
+            "investor_type": "other",
+            "website_url": None,
+            "linkedin_url": None,
+            "hq_country": None,
+            "hq_state": None,
+            "hq_city": None,
+            "offices": [],
+            "status": "active",
+            "review_status": "needs_more_data",
+            "last_reviewed_at": None,
+        },
+        "refs": {},
+        "provenance": {
+            "source": "2024_database_import_investor_resolution",
+            "dependency_only": True,
+        },
+        "review": {
+            "status": "needs_more_data",
+            "issues": ["Historical dependency was absent from the local master."],
+        },
+        "_source_path": "investor_resolution.json",
+    }
+
+
 def load_identity_maps(connection: Connection) -> IdentityMaps:
     maps = IdentityMaps()
     with connection.cursor(row_factory=dict_row) as cursor:
@@ -426,11 +581,15 @@ def load_identity_maps(connection: Connection) -> IdentityMaps:
             add_candidate(
                 maps.investor_names, canonical_name.strip().lower(), investor_id
             )
+            for signature in investor_name_signatures(canonical_name):
+                add_candidate(maps.investor_signatures, signature, investor_id)
             for alias in row["aliases"] if isinstance(row["aliases"], list) else []:
                 alias_rows.append((str(alias), investor_id))
                 add_candidate(
                     maps.investor_names, str(alias).strip().lower(), investor_id
                 )
+                for signature in investor_name_signatures(alias):
+                    add_candidate(maps.investor_signatures, signature, investor_id)
             add_candidate(
                 maps.investor_websites,
                 normalized_url(row["website_url"]),
@@ -520,6 +679,37 @@ def candidate_values(mapping: dict[str, set[str]], key: str | None) -> set[str]:
     return mapping.get(key or "", set())
 
 
+def register_dependency_name_matches(
+    maps: IdentityMaps, bundle: ImportBundle
+) -> None:
+    """Map reviewed legacy dependency keys to unique current master names."""
+    for record_key, canonical_name in bundle.dependency_investor_names.items():
+        exact_candidates = candidate_values(
+            maps.investor_names, canonical_name.strip().lower()
+        )
+        if exact_candidates:
+            investor_id = unique_candidate(exact_candidates, record_key)
+            if investor_id:
+                maps.investor_keys[record_key] = {investor_id}
+            continue
+
+        existing_key_candidates = candidate_values(maps.investor_keys, record_key)
+        if len(existing_key_candidates) == 1:
+            continue
+
+        for signature in sorted(
+            investor_name_signatures(canonical_name),
+            key=lambda item: len(item.split()),
+            reverse=True,
+        ):
+            signature_candidates = candidate_values(
+                maps.investor_signatures, signature
+            )
+            if len(signature_candidates) == 1:
+                maps.investor_keys[record_key] = set(signature_candidates)
+                break
+
+
 def resolve_investor(
     maps: IdentityMaps,
     record_key: str,
@@ -529,6 +719,26 @@ def resolve_investor(
     key_candidates = candidate_values(maps.investor_keys, record_key)
     if key_candidates:
         return unique_candidate(key_candidates, record_key)
+
+    name_candidates = set(
+        candidate_values(
+            maps.investor_names,
+            str(data.get("canonical_name") or "").strip().lower() or None,
+        )
+    )
+    for alias in data.get("aliases") or []:
+        name_candidates.update(
+            candidate_values(
+                maps.investor_names, str(alias).strip().lower() or None
+            )
+        )
+    if name_candidates:
+        return unique_candidate(name_candidates, record_key)
+
+    # Reviewed new identities may legitimately share a parent, portfolio, or
+    # programme website with another investor.  Do not merge them on URL alone.
+    if str(data.get("identity_resolution") or "") == "new_investor":
+        return None
 
     identity_candidates: set[str] = set()
     identity_candidates.update(
@@ -543,12 +753,7 @@ def resolve_investor(
     )
     if identity_candidates:
         return unique_candidate(identity_candidates, record_key)
-
-    name_candidates = candidate_values(
-        maps.investor_names,
-        str(data.get("canonical_name") or "").strip().lower() or None,
-    )
-    return unique_candidate(name_candidates, record_key)
+    return None
 
 
 def register_investor(
@@ -568,6 +773,8 @@ def register_investor(
         str(data.get("canonical_name") or "").strip().lower(),
         investor_id,
     )
+    for signature in investor_name_signatures(data.get("canonical_name")):
+        add_candidate(maps.investor_signatures, signature, investor_id)
     for alias in data.get("aliases") or []:
         add_candidate(
             maps.investor_keys,
@@ -575,6 +782,8 @@ def register_investor(
             investor_id,
         )
         add_candidate(maps.investor_names, str(alias).strip().lower(), investor_id)
+        for signature in investor_name_signatures(alias):
+            add_candidate(maps.investor_signatures, signature, investor_id)
     add_candidate(
         maps.investor_websites, normalized_url(data.get("website_url")), investor_id
     )
@@ -602,12 +811,22 @@ def dry_run_plan(
             planned_new_masters += 1
         register_investor(maps, record_key, investor_id, data)
 
+    # Schema 1.2 packages describe historical dependencies in the manifest
+    # and include their reviewed canonical names in investor_resolution.json.
+    # Register an exact, unique name match before deciding that a dependency
+    # is absent; this safely bridges legacy keys such as investor:blackbird to
+    # the current local master without creating a duplicate investor.
+    register_dependency_name_matches(maps, bundle)
+
     missing_dependencies = sorted(
         key
         for key in bundle.dependency_investor_keys
         if not candidate_values(maps.investor_keys, key)
     )
     supplemental_count = 0
+    dependency_placeholder_count = 0
+    supplemental_keys: list[str] = []
+    dependency_placeholder_keys: list[str] = []
     missing_from_workbook: list[str] = []
     for record_key in missing_dependencies:
         row = retained_investors.get(record_key)
@@ -622,7 +841,17 @@ def dry_run_plan(
             )
             row = retained_investors.get(source_alias or "")
         if not row:
-            missing_from_workbook.append(record_key)
+            canonical_name = bundle.dependency_investor_names.get(record_key)
+            if not canonical_name:
+                missing_from_workbook.append(record_key)
+                continue
+            master = dependency_placeholder_envelope(record_key, canonical_name)
+            bundle.records["investors"][record_key] = master
+            investor_id = f"planned:{record_key}"
+            register_investor(maps, record_key, investor_id, master["data"])
+            planned_new_masters += 1
+            dependency_placeholder_count += 1
+            dependency_placeholder_keys.append(record_key)
             continue
         master, web_profile = supplemental_envelopes(
             record_key, row, retained_source_path
@@ -633,6 +862,7 @@ def dry_run_plan(
         register_investor(maps, record_key, investor_id, master["data"])
         planned_new_masters += 1
         supplemental_count += 1
+        supplemental_keys.append(record_key)
 
     missing_dependencies = sorted(
         key
@@ -673,6 +903,11 @@ def dry_run_plan(
         "existing_master_matches": existing_master_matches,
         "planned_new_investor_masters": planned_new_masters,
         "workbook_dependency_supplements": supplemental_count,
+        "workbook_dependency_supplement_keys": sorted(supplemental_keys),
+        "resolution_dependency_placeholders": dependency_placeholder_count,
+        "resolution_dependency_placeholder_keys": sorted(
+            dependency_placeholder_keys
+        ),
         "record_counts": {
             table: len(records) for table, records in sorted(bundle.records.items())
         },
@@ -725,6 +960,43 @@ def persist_investor_key(
     )
 
 
+def collision_safe_investor_url(
+    connection: Connection,
+    column: str,
+    incoming_value: Any,
+    current_value: Any,
+    investor_id: str | None,
+    stats: Counter[str],
+) -> str | None:
+    """Choose an identity URL without stealing it from another investor."""
+    if column not in {"website_url", "linkedin_url"}:
+        raise ValueError(f"Unsupported investor URL column: {column}")
+
+    incoming = formal.normalize_identity_url(incoming_value)
+    current = formal.normalize_identity_url(current_value)
+    candidates = list(dict.fromkeys(value for value in (incoming, current) if value))
+    for candidate in candidates:
+        owner = connection.execute(
+            f"""
+            SELECT id::text
+            FROM investors
+            WHERE deleted_at IS NULL
+              AND lower({column}) = lower(%s)
+              AND (%s::uuid IS NULL OR id <> %s::uuid)
+            LIMIT 1
+            """,
+            (candidate, investor_id, investor_id),
+        ).fetchone()
+        if not owner:
+            if incoming and candidate != incoming:
+                stats[f"investor_{column}_collision_preserved"] += 1
+            return candidate
+
+    if incoming:
+        stats[f"investor_{column}_collision_cleared"] += 1
+    return None
+
+
 def upsert_investors(
     connection: Connection,
     bundle: ImportBundle,
@@ -736,10 +1008,31 @@ def upsert_investors(
         investor_id = resolve_investor(maps, record_key, data)
         if investor_id:
             existing = connection.execute(
-                "SELECT aliases FROM investors WHERE id = %s", (investor_id,)
+                """
+                SELECT aliases, website_url, linkedin_url
+                FROM investors
+                WHERE id = %s
+                """,
+                (investor_id,),
             ).fetchone()
             aliases = merged_aliases(
                 existing[0] if existing else [], data.get("aliases")
+            )
+            website_url = collision_safe_investor_url(
+                connection,
+                "website_url",
+                data.get("website_url"),
+                existing[1] if existing else None,
+                investor_id,
+                stats,
+            )
+            linkedin_url = collision_safe_investor_url(
+                connection,
+                "linkedin_url",
+                data.get("linkedin_url"),
+                existing[2] if existing else None,
+                investor_id,
+                stats,
             )
             connection.execute(
                 """
@@ -764,8 +1057,8 @@ def upsert_investors(
                     data.get("canonical_name"),
                     Jsonb(aliases),
                     formal.normalize_investor_type(data.get("investor_type")),
-                    formal.normalize_identity_url(data.get("website_url")),
-                    formal.normalize_identity_url(data.get("linkedin_url")),
+                    website_url,
+                    linkedin_url,
                     data.get("hq_country"),
                     data.get("hq_state"),
                     data.get("hq_city"),
@@ -778,6 +1071,22 @@ def upsert_investors(
             )
             stats["investors_updated_or_merged"] += 1
         else:
+            website_url = collision_safe_investor_url(
+                connection,
+                "website_url",
+                data.get("website_url"),
+                None,
+                None,
+                stats,
+            )
+            linkedin_url = collision_safe_investor_url(
+                connection,
+                "linkedin_url",
+                data.get("linkedin_url"),
+                None,
+                None,
+                stats,
+            )
             row = connection.execute(
                 """
                 INSERT INTO investors (
@@ -792,8 +1101,8 @@ def upsert_investors(
                     data.get("canonical_name"),
                     Jsonb(data.get("aliases") or []),
                     formal.normalize_investor_type(data.get("investor_type")),
-                    formal.normalize_identity_url(data.get("website_url")),
-                    formal.normalize_identity_url(data.get("linkedin_url")),
+                    website_url,
+                    linkedin_url,
                     data.get("hq_country"),
                     data.get("hq_state"),
                     data.get("hq_city"),
@@ -1603,6 +1912,7 @@ def apply_import(
     stats: Counter[str] = Counter()
     maps = load_identity_maps(connection)
     upsert_investors(connection, bundle, maps, stats)
+    register_dependency_name_matches(maps, bundle)
     upsert_web_profiles(connection, bundle, maps, stats)
     merge_investor_programs(connection, bundle, maps, stats)
     upsert_team_members(connection, bundle, maps, stats)

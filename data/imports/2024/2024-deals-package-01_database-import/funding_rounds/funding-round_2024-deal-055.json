@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-055",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-055",
+    "dedupe_key": "2024|redactive-ai|2024-07-02|seed",
+    "source_url": "https://www.axios.com/2024/07/02/exclusive-redactive-ai-75m-felicis-blackbird",
+    "source_payload": {
+      "deal_number": 55,
+      "csv_investee": "Redactive AI",
+      "normalized_investee": "Redactive AI",
+      "csv_date": "2024-07-02",
+      "normalized_date": "2024-07-02",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "USD 7,500,000",
+      "normalized_amount": "USD 7,500,000",
+      "csv_investors": "Atlassian Ventures; Blackbird; Felicis; Zapier",
+      "normalized_investors": "Felicis and Blackbird (co-leads); Atlassian Ventures; Zapier",
+      "verification": "verified",
+      "correction_or_issue": "Amount, date and lead investors independently corroborated.",
+      "primary_source": "https://www.axios.com/2024/07/02/exclusive-redactive-ai-75m-felicis-blackbird",
+      "secondary_source": "https://www.gaebler.com/VC-Funding-82A61BC3-2C89-4447-B155-6E41094AA7E7-Redactive-AI-07-02-2024"
+    },
+    "investee_name_raw": "Redactive AI",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://redactive.ai/",
+    "org_industries_raw": "Enterprise AI / Security",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-07-02",
+    "money_raised_raw": "USD 7,500,000",
+    "amount": 7500000,
+    "currency": "USD",
+    "amount_usd": 7500000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Felicis and Blackbird (co-leads); Atlassian Ventures; Zapier",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.axios.com/2024/07/02/exclusive-redactive-ai-75m-felicis-blackbird",
+    "verification_notes": "Amount, date and lead investors independently corroborated.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:redactive-ai"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:171f598e8bc6013cdcfa",
+      "source:url:7974bf5e740eaf89959c"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

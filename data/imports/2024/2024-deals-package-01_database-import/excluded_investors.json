@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-01_database-import",
+  "counts": {
+    "source_investors": 133,
+    "excluded": 14
+  },
+  "excluded_investors": [
+    {
+      "source_name": "Coreline Ventures",
+      "canonical_investor": "Coreline Ventures",
+      "action": "do_not_create",
+      "related_deals": "Squizify",
+      "website": "https://www.coreline.vc/",
+      "reason": "Investment is 2025; do not create from this 2024 batch row.",
+      "source_excel_row": 107
+    },
+    {
+      "source_name": "Development Bank of Wales group",
+      "canonical_investor": "Development Bank of Wales / angel syndicate",
+      "action": "do_not_create",
+      "related_deals": "10six Games",
+      "website": "https://developmentbank.wales/",
+      "reason": "Deal occurred in 2025; do not ingest from 2024 batch.",
+      "source_excel_row": 108
+    },
+    {
+      "source_name": "Jeremy Lu",
+      "canonical_investor": "Jeremy Lu",
+      "action": "do_not_create",
+      "related_deals": "KDH Advanced Research",
+      "website": "https://kdh-ar.com/about-us",
+      "reason": "Official KDH page identifies him as co-founder/executive.",
+      "source_excel_row": 109
+    },
+    {
+      "source_name": "M2P Engineering",
+      "canonical_investor": "M2P Engineering",
+      "action": "do_not_create",
+      "related_deals": "Green Gravity",
+      "website": "https://m2pengineering.com.au/",
+      "reason": "Official release calls it a delivery partner.",
+      "source_excel_row": 110
+    },
+    {
+      "source_name": "Macdoch Ventures",
+      "canonical_investor": "Macdoch Ventures",
+      "action": "do_not_create",
+      "related_deals": "Squizify",
+      "website": "https://www.macdochventures.com/",
+      "reason": "Existing directory investor, but Squizify deal belongs to 2025 and is excluded here.",
+      "source_excel_row": 111
+    },
+    {
+      "source_name": "Maelstrom; WAGMI",
+      "canonical_investor": "Maelstrom / WAGMI",
+      "action": "do_not_create",
+      "related_deals": "Drift Protocol",
+      "website": null,
+      "reason": "Omitted by official round announcement.",
+      "source_excel_row": 112
+    },
+    {
+      "source_name": "MyPiazza Pty Ltd",
+      "canonical_investor": "MyPiazza Pty Ltd",
+      "action": "do_not_create",
+      "related_deals": "PointLabs",
+      "website": "https://www.pointlabs.ai/",
+      "reason": "PointLabs is wholly owned by MyPiazza.",
+      "source_excel_row": 113
+    },
+    {
+      "source_name": "Robert Laidlaw",
+      "canonical_investor": "Robert Laidlaw",
+      "action": "do_not_create",
+      "related_deals": "FaceCloud",
+      "website": "https://www.facecloud.ai/about",
+      "reason": "Official page identifies him as founder/CEO.",
+      "source_excel_row": 114
+    },
+    {
+      "source_name": "Bell Capital",
+      "canonical_investor": "Bell Capital",
+      "action": "hold_unresolved",
+      "related_deals": "Terra Grow",
+      "website": null,
+      "reason": "Participation corroborated, but exact official entity/domain remains unresolved.",
+      "source_excel_row": 115
+    },
+    {
+      "source_name": "Rethink Education",
+      "canonical_investor": "Rethink Education",
+      "action": "hold_unresolved",
+      "related_deals": "Edexia",
+      "website": "https://www.rethink.vc/",
+      "reason": "Not independently confirmed for this round.",
+      "source_excel_row": 116
+    },
+    {
+      "source_name": "Sudhir Gupta",
+      "canonical_investor": "Sudhir Gupta",
+      "action": "hold_unresolved",
+      "related_deals": "Zigtal",
+      "website": null,
+      "reason": "Common name; exact investor identity cannot be safely resolved.",
+      "source_excel_row": 117
+    },
+    {
+      "source_name": "Supes’ Fund",
+      "canonical_investor": "Supes' Fund",
+      "action": "hold_unresolved",
+      "related_deals": "TEAMology",
+      "website": null,
+      "reason": "Deal role confirmed but exact legal entity/public mandate sparse.",
+      "source_excel_row": 118
+    },
+    {
+      "source_name": "TISI",
+      "canonical_investor": "TISI (identity unresolved)",
+      "action": "hold_unresolved",
+      "related_deals": "Q-CTRL",
+      "website": null,
+      "reason": "Q-CTRL source names TISI, but exact legal investor entity/domain not safely resolved.",
+      "source_excel_row": 119
+    },
+    {
+      "source_name": "Treble",
+      "canonical_investor": "Treble",
+      "action": "hold_unresolved",
+      "related_deals": "Build Club",
+      "website": null,
+      "reason": "Not independently confirmed for this round.",
+      "source_excel_row": 120
+    }
+  ]
+}

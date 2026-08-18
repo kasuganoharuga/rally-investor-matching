@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-169",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-169",
+    "dedupe_key": "2024|buildreview-homebuildersreviews|2024-06-database-month|seed",
+    "source_url": "https://app.dealroom.co/companies/homebuildersreviews",
+    "source_payload": {
+      "deal_number": 169,
+      "csv_investee": "BuildReview",
+      "normalized_investee": "BuildReview / HomeBuildersReviews",
+      "csv_date": "2024-06-01",
+      "normalized_date": "2024-06 (database month)",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "AUD 800,000",
+      "normalized_amount": "AUD 800,000 (database-only)",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Undisclosed",
+      "verification": "needs_review",
+      "correction_or_issue": "The A$800k seed entry is only visible in a funding database; no investor or independent announcement was located.",
+      "primary_source": "https://app.dealroom.co/companies/homebuildersreviews",
+      "secondary_source": "https://buildreview.com.au/"
+    },
+    "investee_name_raw": "BuildReview / HomeBuildersReviews",
+    "org_location_raw": "Wollongong, NSW, Australia",
+    "org_website_raw": "https://buildreview.com.au/",
+    "org_industries_raw": "Proptech / Construction Tech",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": null,
+    "money_raised_raw": "AUD 800,000 (database-only)",
+    "amount": 800000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://app.dealroom.co/companies/homebuildersreviews",
+    "verification_notes": "The A$800k seed entry is only visible in a funding database; no investor or independent announcement was located.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:buildreview"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:dc2e35ffada78e567a0f",
+      "source:url:e5db49deb3bbdadf2fe8"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "The A$800k seed entry is only visible in a funding database; no investor or independent announcement was located.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

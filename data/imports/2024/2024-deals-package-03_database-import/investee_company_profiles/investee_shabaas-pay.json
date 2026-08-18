@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:shabaas-pay",
+  "operation": "upsert",
+  "data": {
+    "name": "ShaBAAS Pay",
+    "website_url": "https://www.shabaas.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "fintech-payments",
+    "sector_secondary": null,
+    "use_case_primary": "real-time-payment-and-invoicing-platform-for-small-businesses-using-account-to-account-rails-and-qr-codes",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-fintech",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Real-time payment and invoicing platform for small businesses using account-to-account rails and QR codes.",
+    "source_urls": [
+      "https://www.shabaas.com/",
+      "https://www.startupbootcamp.com.au/alumni/shabaas",
+      "https://abr.business.gov.au/ABN/View/74653591550"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

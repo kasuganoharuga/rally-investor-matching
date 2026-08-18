@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:restoke",
+  "operation": "upsert",
+  "data": {
+    "name": "Restoke",
+    "website_url": "https://www.restoke.ai/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Victoria",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "hospitality-tech-ai",
+    "sector_secondary": null,
+    "use_case_primary": "ai-powered-restaurant-operating-system-for-workflows-food-costs-labour-and-profitability",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-saas",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "ai_related",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "AI-powered restaurant operating system for workflows, food costs, labour and profitability.",
+    "source_urls": [
+      "https://www.restoke.ai/",
+      "https://rampersand.vc/portfolio/restoke",
+      "https://www.crunchbase.com/funding_round/restoke-seed--33ff0fd7"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

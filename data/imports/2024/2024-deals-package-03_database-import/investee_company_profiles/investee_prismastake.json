@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:prismastake",
+  "operation": "upsert",
+  "data": {
+    "name": "PrismaStake",
+    "website_url": "https://prismastake.finance/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Victoria",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "web3-defi",
+    "sector_secondary": null,
+    "use_case_primary": "multi-chain-decentralised-staking-platform-offering-cryptocurrency-yield-products",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "crypto-platform",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Multi-chain decentralised staking platform offering cryptocurrency yield products.",
+    "source_urls": [
+      "https://prismastake.finance/",
+      "https://www.globenewswire.com/news-release/2024/04/02/2856517/0/en/PrismaStake-s-6-Million-Funding-Accelerates-DeFi-Staking-Innovation.html",
+      "https://2024.australianstartupfunding.com/State-of-Australian-Startup-Funding-2024-Final-.pdf"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

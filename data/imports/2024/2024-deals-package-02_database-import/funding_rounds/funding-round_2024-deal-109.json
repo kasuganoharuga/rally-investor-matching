@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-109",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-109",
+    "dedupe_key": "2024|the-three-thousands-studios|2024-08-01|pre_seed",
+    "source_url": "https://au.linkedin.com/company/thethreethousands",
+    "source_payload": {
+      "deal_number": 109,
+      "csv_investee": "The Three Thousands Studios",
+      "normalized_investee": "The Three Thousands Studios",
+      "csv_date": "2024-07-01",
+      "normalized_date": "2024-08-01 database date",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Unverified pre-seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "No external investor confirmed",
+      "verification": "needs_review",
+      "correction_or_issue": "Company existence and game-studio profile verified; no authoritative financing announcement, amount or investor found.",
+      "primary_source": "https://au.linkedin.com/company/thethreethousands",
+      "secondary_source": "https://abr.business.gov.au/ABN/View?id=60670311485"
+    },
+    "investee_name_raw": "The Three Thousands Studios",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.thethreethouands.com/",
+    "org_industries_raw": "Gaming / Automotive Media",
+    "round_type_raw": "Unverified pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-08-01",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "No external investor confirmed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://au.linkedin.com/company/thethreethousands",
+    "verification_notes": "Company existence and game-studio profile verified; no authoritative financing announcement, amount or investor found.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:the-three-thousands-studios"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:e96bf068493b6d7513fe",
+      "source:url:7659568a984ee143ac2c"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Company existence and game-studio profile verified; no authoritative financing announcement, amount or investor found.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

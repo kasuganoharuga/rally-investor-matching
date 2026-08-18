@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-174",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-174",
+    "dedupe_key": "2024|newsie|2024-map-cohort|program_or_grant",
+    "source_url": "https://www.melbconnect.com.au/events/2024-map-demo-day-2",
+    "source_payload": {
+      "deal_number": 174,
+      "csv_investee": "Newsie",
+      "normalized_investee": "Newsie",
+      "csv_date": "2024-05-24",
+      "normalized_date": "2024 MAP cohort",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Accelerator equity-free funding",
+      "csv_amount": "AUD 20,000",
+      "normalized_amount": "AUD 20,000 equity-free",
+      "csv_investors": "Melbourne Accelerator Program",
+      "normalized_investors": "Melbourne Accelerator Program (MAP)",
+      "verification": "verified_program",
+      "correction_or_issue": "MAP officially names Newsie in the 2024 cohort and states A$20k equity-free support; do not ingest as a seed equity round.",
+      "primary_source": "https://www.melbconnect.com.au/events/2024-map-demo-day-2",
+      "secondary_source": "https://www.themap.co/accelerator"
+    },
+    "investee_name_raw": "Newsie",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.newsie.com.au/",
+    "org_industries_raw": "Media Tech / Broadcast Analytics",
+    "round_type_raw": "Accelerator equity-free funding",
+    "round_stage": "program_or_grant",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "AUD 20,000 equity-free",
+    "amount": 20000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Melbourne Accelerator Program (MAP)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "verified_program",
+    "verification_source_url": "https://www.melbconnect.com.au/events/2024-map-demo-day-2",
+    "verification_notes": "MAP officially names Newsie in the 2024 cohort and states A$20k equity-free support; do not ingest as a seed equity round.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:newsie"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:bf63cfa47445af96ec9c",
+      "source:url:06c7e21e14c333ea6600"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

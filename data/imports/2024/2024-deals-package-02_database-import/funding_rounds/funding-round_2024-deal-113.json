@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-113",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-113",
+    "dedupe_key": "2024|mazaal-ai|2024-09-database-only|pre_seed",
+    "source_url": "https://app.dealroom.co/companies/mazaal_ai",
+    "source_payload": {
+      "deal_number": 113,
+      "csv_investee": "Mazaal AI",
+      "normalized_investee": "Mazaal AI",
+      "csv_date": "2024-09-01",
+      "normalized_date": "2024-09 (database-only)",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Unverified pre-seed",
+      "csv_amount": "AUD 200,000",
+      "normalized_amount": "AUD 200,000 (database-only)",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Undisclosed",
+      "verification": "needs_review",
+      "correction_or_issue": "Company and database amount are visible, but no independent round announcement or investor was found.",
+      "primary_source": "https://app.dealroom.co/companies/mazaal_ai",
+      "secondary_source": "https://mazaal.ai/"
+    },
+    "investee_name_raw": "Mazaal AI",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://mazaal.ai/",
+    "org_industries_raw": "Enterprise AI / No-code",
+    "round_type_raw": "Unverified pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "AUD 200,000 (database-only)",
+    "amount": 200000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://app.dealroom.co/companies/mazaal_ai",
+    "verification_notes": "Company and database amount are visible, but no independent round announcement or investor was found.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:mazaal-ai"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:a58de43a06da2a89b16f",
+      "source:url:2cd03ace1df8fcfbdb2a"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Company and database amount are visible, but no independent round announcement or investor was found.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

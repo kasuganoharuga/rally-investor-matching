@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_web_profiles",
+  "record_key": "investor_web_profile:bhatnagar-family:2026-08-14",
+  "operation": "upsert",
+  "data": {
+    "source_urls": [
+      "https://www.nzherald.co.nz/business/timelapse-meets-ai-as-timescapes-rakes-in-series-a-millions/TJNV2KA4VBGQRJRCYI2XOWRYYM/",
+      "https://oversightsolutions.co.nz/profile/TIMESCAPES-LIMITED"
+    ],
+    "retrieved_at": "2026-08-14",
+    "website_status": "no_standalone_website_found",
+    "raw_content_hash": null,
+    "raw_content_ref": null,
+    "extraction_model": "codex-2024-evidence-supplement",
+    "extraction_version": "1.0.0",
+    "confidence": "low",
+    "claimed_thesis": "Private family investment; no public general investment thesis was identified. Observed activity includes Timescapes.",
+    "claimed_stages": [
+      "early_stage"
+    ],
+    "claimed_sectors": [
+      "construction technology",
+      "software"
+    ],
+    "claimed_geographies": [
+      "New Zealand"
+    ],
+    "claimed_business_models": [],
+    "claimed_cheque_min": null,
+    "claimed_cheque_max": null,
+    "claimed_cheque_currency": null,
+    "contact_emails": [],
+    "application_url": null,
+    "contact_notes": "Supplemented to resolve a named investor relation. Profile fields are limited to observed deal activity and must not be interpreted as a broad mandate. Profile fields are limited to observed deal activity and must not be interpreted as a broad mandate. Profile fields are limited to observed deal activity and must not be interpreted as a broad mandate.",
+    "is_current": true,
+    "superseded_at": null,
+    "profile_scope_status": "deal_observed_only"
+  },
+  "refs": {
+    "investor_key": "investor:bhatnagar-family"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-supplement:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:4039d2e364f940e3adad",
+      "source:url:86531ed3e8aa0a7a16a7"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "No official standalone investor website was found."
+    ]
+  }
+}

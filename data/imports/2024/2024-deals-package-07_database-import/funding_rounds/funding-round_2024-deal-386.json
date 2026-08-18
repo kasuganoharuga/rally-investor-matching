@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-386",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-386",
+    "dedupe_key": "2024|metroelectro|2024-05-07|pre_seed",
+    "source_url": "https://wavemakerpartners.com/metroelectro-secures-au1-04m-of-pre-seed-funding-from-wavemaker-impact-to-develop-mid-sized-renewable-power-plants-to-fast-track-energy-transition/",
+    "source_payload": {
+      "deal_number": 386,
+      "csv_investee": "MetroElectro",
+      "normalized_investee": "MetroElectro",
+      "csv_date": "2024-05-07",
+      "normalized_date": "2024-05-07",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-seed",
+      "csv_amount": "AUD 1,030,000",
+      "normalized_amount": "AUD 1,030,000 (US$690k)",
+      "csv_investors": "Wavemaker Impact",
+      "normalized_investors": "Wavemaker Impact",
+      "verification": "verified",
+      "correction_or_issue": "Wavemaker's announcement confirms the amount, date, stage and investor.",
+      "primary_source": "https://wavemakerpartners.com/metroelectro-secures-au1-04m-of-pre-seed-funding-from-wavemaker-impact-to-develop-mid-sized-renewable-power-plants-to-fast-track-energy-transition/",
+      "secondary_source": "https://wavemaker.vc/wp-content/uploads/2024/09/Portfolio-Report_2024_Q2.pdf"
+    },
+    "investee_name_raw": "MetroElectro",
+    "org_location_raw": "St Kilda / Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.metroelectro.com.au/",
+    "org_industries_raw": "Climate Tech / Distributed Energy",
+    "round_type_raw": "Pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-05-07",
+    "money_raised_raw": "AUD 1,030,000 (US$690k)",
+    "amount": 1030000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Wavemaker Impact",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://wavemakerpartners.com/metroelectro-secures-au1-04m-of-pre-seed-funding-from-wavemaker-impact-to-develop-mid-sized-renewable-power-plants-to-fast-track-energy-transition/",
+    "verification_notes": "Wavemaker's announcement confirms the amount, date, stage and investor.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:metroelectro"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:b20c2683792dac1ebe6b",
+      "source:url:438bb178203a0c8fd7d3"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

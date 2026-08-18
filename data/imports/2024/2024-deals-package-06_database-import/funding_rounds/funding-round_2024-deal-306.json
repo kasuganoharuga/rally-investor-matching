@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-306",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-306",
+    "dedupe_key": "2024|lumos-leggo-studio-pty-ltd|2024-02-database-entry|pre_seed",
+    "source_url": "https://spotlumos.com/about",
+    "source_payload": {
+      "deal_number": 306,
+      "csv_investee": "LUMOS",
+      "normalized_investee": "Lumos / Leggo Studio Pty Ltd",
+      "csv_date": "2024-02-01",
+      "normalized_date": "2024-02 database entry",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Unverified pre-seed",
+      "csv_amount": "AUD 500,000",
+      "normalized_amount": "AUD 500,000 (database-only)",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Undisclosed",
+      "verification": "needs_review",
+      "correction_or_issue": "The Australian audience-intelligence business and legal entity are verified, but no public financing announcement, investor identity or exact close date was found for the A$500k entry.",
+      "primary_source": "https://spotlumos.com/about",
+      "secondary_source": "https://spotlumos.com/terms"
+    },
+    "investee_name_raw": "Lumos / Leggo Studio Pty Ltd",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://spotlumos.com/",
+    "org_industries_raw": "Adtech / Data",
+    "round_type_raw": "Unverified pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "AUD 500,000 (database-only)",
+    "amount": 500000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://spotlumos.com/about",
+    "verification_notes": "The Australian audience-intelligence business and legal entity are verified, but no public financing announcement, investor identity or exact close date was found for the A$500k entry.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:lumos"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:b0b72127a954d30c8111",
+      "source:url:8050c01af4e33a4fe566"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "The Australian audience-intelligence business and legal entity are verified, but no public financing announcement, investor identity or exact close date was found for the A$500k entry.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

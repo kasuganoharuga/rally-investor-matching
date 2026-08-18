@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "table": "deal_investors",
+  "record_key": "deal_investor:research-package:2024-deal-407:antler-australia",
+  "operation": "upsert",
+  "data": {
+    "raw_name": "Antler Australia",
+    "role": "participant",
+    "participation_status": "confirmed",
+    "resolution": "resolved",
+    "resolution_confidence": "high",
+    "identity_resolution": "existing_investor"
+  },
+  "refs": {
+    "deal_key": "funding_round:research-package:2024-deal-407",
+    "investor_key": "investor:antler-australia",
+    "raw_investor_candidate_key": "raw_investor_candidate:antler-australia"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Deal evidence remains incomplete; investor relation is preserved for review."
+    ]
+  }
+}

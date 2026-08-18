@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:llusern-scientific",
+  "operation": "upsert",
+  "data": {
+    "name": "Llusern Scientific",
+    "website_url": "https://llusern.co.uk/",
+    "crunchbase_uuid": null,
+    "hq_country": "GB",
+    "hq_state": null,
+    "hq_city": null,
+    "is_anz": false,
+    "sector_primary": "diagnostics-medtech",
+    "sector_secondary": null,
+    "use_case_primary": "university-spinout-developing-rapid-point-of-care-molecular-diagnostics-including-lodestar-dx-for-urinary-infections",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "diagnostic-device-and-consumables",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "University spinout developing rapid point-of-care molecular diagnostics, including Lodestar DX for urinary infections.",
+    "source_urls": [
+      "https://llusern.co.uk/",
+      "https://developmentbank.wales/news-and-events/development-bank-wales-invests-ps17-million-welsh-university-high-growth-spinouts",
+      "https://find-and-update.company-information.service.gov.uk/company/12545380"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

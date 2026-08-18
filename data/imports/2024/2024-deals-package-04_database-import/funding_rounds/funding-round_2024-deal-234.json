@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-234",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-234",
+    "dedupe_key": "2024|carbontrail|2024-08-28|seed",
+    "source_url": "https://www.crunchbase.com/funding_round/carbontrail-seed--a42ecaa1",
+    "source_payload": {
+      "deal_number": 234,
+      "csv_investee": "CarbonTrail",
+      "normalized_investee": "CarbonTrail",
+      "csv_date": "2024-08-28",
+      "normalized_date": "2024-08-28 (database date)",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "NZD 650,000",
+      "normalized_amount": "NZD 650,000",
+      "csv_investors": "Angel Investors Marlborough",
+      "normalized_investors": "Angel Investors Marlborough (lead)",
+      "verification": "partial",
+      "correction_or_issue": "AIM's relationship with CarbonTrail is corroborated by ecosystem material, but the exact NZ$650k close remains primarily database-led.",
+      "primary_source": "https://www.crunchbase.com/funding_round/carbontrail-seed--a42ecaa1",
+      "secondary_source": "https://events.humanitix.com/climate-action-week-marlborough-2025"
+    },
+    "investee_name_raw": "CarbonTrail",
+    "org_location_raw": "Christchurch, New Zealand",
+    "org_website_raw": "https://www.carbontrail.co/",
+    "org_industries_raw": "Climate SaaS / Carbon Accounting",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-08-28",
+    "money_raised_raw": "NZD 650,000",
+    "amount": 650000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Angel Investors Marlborough (lead)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://www.crunchbase.com/funding_round/carbontrail-seed--a42ecaa1",
+    "verification_notes": "AIM's relationship with CarbonTrail is corroborated by ecosystem material, but the exact NZ$650k close remains primarily database-led.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:carbontrail"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:06f89d6f4adafe91cb24",
+      "source:url:f38b011a63b14aac55df"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "AIM's relationship with CarbonTrail is corroborated by ecosystem material, but the exact NZ$650k close remains primarily database-led."
+    ]
+  }
+}

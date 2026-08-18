@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investors",
+  "record_key": "investor:uniservices",
+  "operation": "upsert",
+  "data": {
+    "canonical_name": "Auckland UniServices",
+    "aliases": [
+      "Uniservices",
+      "University of Auckland Inventors' Fund / UniServices"
+    ],
+    "investor_type": "government_or_university_fund",
+    "investor_subtype": "University evergreen fund",
+    "eligibility_mode": "research_package_confirmed",
+    "classification_confidence": "high",
+    "classification_evidence_urls": [
+      "https://www.uniservices.co.nz/",
+      "https://www.linkedin.com/company/auckland-uniservices-limited",
+      "https://www.uniservices.co.nz/what-we-do/investing-and-partnering/inventors-fund"
+    ],
+    "classified_at": "2026-08-14",
+    "website_url": "https://www.uniservices.co.nz/what-we-do/investing-and-partnering/inventors-fund",
+    "linkedin_url": "https://www.linkedin.com/company/auckland-uniservices-limited",
+    "hq_country": "NZ",
+    "hq_state": "Auckland",
+    "hq_city": "Auckland",
+    "offices": [],
+    "status": "active",
+    "merged_into_id": null,
+    "review_status": "reviewed",
+    "last_reviewed_at": "2026-08-14",
+    "last_reviewed_by": "codex-2024-investor-dedupe-update",
+    "identity_resolution": "existing_investor_update",
+    "matched_existing_record_key": "investor:uniservices",
+    "identity_match_method": "exact_existing_key",
+    "identity_match_source": "historical_import:recent-deal2026-7-30_deals-001-060_delta_identity-audited-v3_team-audited"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investors",
+  "record_key": "investor:university-of-melbourne-genesis-pre-seed-fund",
+  "operation": "upsert",
+  "data": {
+    "canonical_name": "University of Melbourne Genesis Pre-Seed Fund",
+    "aliases": [
+      "Genesis Pre-Seed Fund"
+    ],
+    "investor_type": "government_or_university_fund",
+    "website_url": "https://research.unimelb.edu.au/",
+    "linkedin_url": null,
+    "hq_country": "AU",
+    "hq_state": null,
+    "hq_city": "Melbourne",
+    "offices": [],
+    "status": "active",
+    "merged_into_id": null,
+    "review_status": "reviewed",
+    "last_reviewed_at": "2026-08-14",
+    "last_reviewed_by": "codex-2024-investor-dedupe-update",
+    "investor_subtype": "University fund",
+    "classification_confidence": "high",
+    "classification_source": "inherited from previously completed detailed classification",
+    "eligibility_mode": "research_package_confirmed",
+    "classification_evidence_urls": [
+      "https://research.unimelb.edu.au/",
+      "https://research.unimelb.edu.au/commercialisation/community/funding-for-startups/genesis-pre-seed-fund/apply-for-funding"
+    ],
+    "classified_at": "2026-08-14",
+    "identity_resolution": "existing_investor_update",
+    "matched_existing_record_key": "investor:university-of-melbourne-genesis-pre-seed-fund",
+    "identity_match_method": "exact_existing_key",
+    "identity_match_source": "normalized_master"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "research_source:genesis-pre-seed-fund:gen_src_001",
+      "research_source:genesis-pre-seed-fund:gen_src_002",
+      "research_source:genesis-pre-seed-fund:gen_src_003"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Research collection status: partial",
+      "individual_deal_amount_not_disclosed",
+      "complete_portfolio_not_verified"
+    ]
+  }
+}

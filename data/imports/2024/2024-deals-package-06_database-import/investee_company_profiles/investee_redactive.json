@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:redactive",
+  "operation": "upsert",
+  "data": {
+    "name": "Redactive",
+    "website_url": "https://redactive.ai/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Victoria",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "enterprise-ai-security",
+    "sector_secondary": null,
+    "use_case_primary": "enterprise-developer-platform-for-building-secure-permissions-aware-generative-ai-applications-over-sensitive-company-da",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-developer-platform",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "ai_related",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Enterprise developer platform for building secure, permissions-aware generative-AI applications over sensitive company data.",
+    "source_urls": [
+      "https://redactive.ai/",
+      "https://www.capitalbrief.com/briefing/redactive-ai-secures-115m-led-by-blackbird-felicis-8d35c495-c421-4e21-9f4c-e61906d78e0e/",
+      "https://www.axios.com/2024/07/02/exclusive-redactive-ai-75m-felicis-blackbird"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:siteforge",
+  "operation": "upsert",
+  "data": {
+    "name": "SiteForge",
+    "website_url": "https://siteforge.io/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "South Australia",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "generative-ai-web-design",
+    "sector_secondary": null,
+    "use_case_primary": "generative-ai-platform-for-website-wireframing-content-seo-and-rapid-site-generation",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-saas",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "ai_related",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Generative-AI platform for website wireframing, content, SEO and rapid site generation.",
+    "source_urls": [
+      "https://siteforge.io/",
+      "https://www.crunchbase.com/funding_round/siteforge-pre-seed--51d88b19"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

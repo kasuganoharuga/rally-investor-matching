@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:pearler-ai",
+  "operation": "upsert",
+  "data": {
+    "name": "Pearler.AI",
+    "website_url": "https://www.pearler.ai/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "South Australia",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "enterprise-ai-procurement",
+    "sector_secondary": null,
+    "use_case_primary": "ai-software-for-tender-proposal-and-rfp-workflows-helping-teams-discover-opportunities-and-prepare-submissions",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-saas",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "ai_related",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "AI software for tender, proposal and RFP workflows, helping teams discover opportunities and prepare submissions.",
+    "source_urls": [
+      "https://www.pearler.ai/",
+      "https://www.linkedin.com/company/pearler-app/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

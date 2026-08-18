@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "table": "deal_investors",
+  "record_key": "deal_investor:research-package:2024-deal-291:investible",
+  "operation": "upsert",
+  "data": {
+    "raw_name": "Investible Climate Tech Fund / Early Stage Fund 2 / Club Investible",
+    "role": "participant",
+    "participation_status": "confirmed",
+    "resolution": "resolved",
+    "resolution_confidence": "medium",
+    "identity_resolution": "existing_investor"
+  },
+  "refs": {
+    "deal_key": "funding_round:research-package:2024-deal-291",
+    "investor_key": "investor:investible",
+    "raw_investor_candidate_key": "raw_investor_candidate:investible-climate-tech-fund-early-stage-fund-2-club-investible"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

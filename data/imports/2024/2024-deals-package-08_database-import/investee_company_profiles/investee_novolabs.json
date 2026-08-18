@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:novolabs",
+  "operation": "upsert",
+  "data": {
+    "name": "NovoLabs",
+    "website_url": "https://novolabs.co.nz/",
+    "crunchbase_uuid": null,
+    "hq_country": "NZ",
+    "hq_state": null,
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "water-tech-climate-tech",
+    "sector_secondary": null,
+    "use_case_primary": "massey-university-spinout-commercialising-high-intensity-uv-systems-for-energy-efficient-disinfection-of-wastewater-and-",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "industrial-equipment-services",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Massey University spinout commercialising high-intensity UV systems for energy-efficient disinfection of wastewater and industrial liquids.",
+    "source_urls": [
+      "https://novolabs.co.nz/",
+      "https://www.nzherald.co.nz/business/feel-the-burn-novolabs-raises-funds-for-world-first-uv-disinfection-tech/WPZTVFADABC77JA6QQKYLHBCI4/",
+      "https://climatevcfund.com/climate-venture-capital-fund-invests-in-novolabs/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

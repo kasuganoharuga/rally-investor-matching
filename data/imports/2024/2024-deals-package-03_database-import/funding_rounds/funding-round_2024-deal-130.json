@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-130",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-130",
+    "dedupe_key": "2024|truestate|2024-06-18|pre_seed",
+    "source_url": "https://www.linkedin.com/posts/williamashford_truestate-secures-15-million-to-deliver-activity-7208726320325754880-Wcc8",
+    "source_payload": {
+      "deal_number": 130,
+      "csv_investee": "TrueState",
+      "normalized_investee": "TrueState",
+      "csv_date": "2024-06-18",
+      "normalized_date": "2024-06-18",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-Seed",
+      "csv_amount": "AUD 1,500,000",
+      "normalized_amount": "AUD 1,500,000",
+      "csv_investors": "AirTree Ventures; Galileo Ventures; Imprint Capital; Side Stage Ventures",
+      "normalized_investors": "AirTree Ventures (lead); Side Stage Ventures; Galileo Ventures; Imprint Capital Partners; others",
+      "verification": "verified",
+      "correction_or_issue": "Founder and business reporting confirm amount and named participants.",
+      "primary_source": "https://www.linkedin.com/posts/williamashford_truestate-secures-15-million-to-deliver-activity-7208726320325754880-Wcc8",
+      "secondary_source": "https://www.capitalbrief.com/briefing/ai-app-building-startup-truestate-secures-15m-raise-77d061af-23c5-4829-aa18-d6d2a7ddb2e1/"
+    },
+    "investee_name_raw": "TrueState",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://truestate.ai/",
+    "org_industries_raw": "Enterprise AI / App Development",
+    "round_type_raw": "Pre-Seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-06-18",
+    "money_raised_raw": "AUD 1,500,000",
+    "amount": 1500000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "AirTree Ventures (lead); Side Stage Ventures; Galileo Ventures; Imprint Capital Partners; others",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.linkedin.com/posts/williamashford_truestate-secures-15-million-to-deliver-activity-7208726320325754880-Wcc8",
+    "verification_notes": "Founder and business reporting confirm amount and named participants.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:truestate"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:097c4e3bb35f7b20be7a",
+      "source:url:04a36823972bb4338a41"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

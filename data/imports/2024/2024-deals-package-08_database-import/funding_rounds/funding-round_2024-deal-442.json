@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-442",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-442",
+    "dedupe_key": "2024|advisewell-operations-pty-ltd|2025-05-01|pre_seed",
+    "source_url": "https://advisewell.co/news",
+    "source_payload": {
+      "deal_number": 442,
+      "csv_investee": "AdviseWell",
+      "normalized_investee": "AdviseWell Operations Pty Ltd",
+      "csv_date": "2024-11-07",
+      "normalized_date": "2024 Antler residency; public announcement 2025-05-01",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Antler pre-seed / residency investment",
+      "csv_amount": "AUD 225,000",
+      "normalized_amount": "AUD 225,000 (database-led close terms)",
+      "csv_investors": "Antler",
+      "normalized_investors": "Antler Australia",
+      "verification": "partial_program_date",
+      "correction_or_issue": "Company registration began in October 2024 and Antler later confirmed backing; the exact 2024 close date and cheque are not in the public announcement.",
+      "primary_source": "https://advisewell.co/news",
+      "secondary_source": "https://www.antler.co/blog/antler-australia-12th-residency-eight-new-ai-first-startup-investments"
+    },
+    "investee_name_raw": "AdviseWell Operations Pty Ltd",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://advisewell.co/",
+    "org_industries_raw": "Fintech / Enterprise AI",
+    "round_type_raw": "Antler pre-seed / residency investment",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2025-05-01",
+    "money_raised_raw": "AUD 225,000 (database-led close terms)",
+    "amount": 225000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Antler Australia",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-08_database-import",
+    "verification_status": "partial_program_date",
+    "verification_source_url": "https://advisewell.co/news",
+    "verification_notes": "Company registration began in October 2024 and Antler later confirmed backing; the exact 2024 close date and cheque are not in the public announcement.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:advisewell-operations-pty-ltd"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": [
+      "source:url:0f18917eb6e2860f15ef",
+      "source:url:42d17fa4aef7303ecc25"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Company registration began in October 2024 and Antler later confirmed backing; the exact 2024 close date and cheque are not in the public announcement."
+    ]
+  }
+}

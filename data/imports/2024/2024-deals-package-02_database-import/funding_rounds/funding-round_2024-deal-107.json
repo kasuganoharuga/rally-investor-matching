@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-107",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-107",
+    "dedupe_key": "2024|tactiq|2024-08-01|series_a",
+    "source_url": "https://www.antler.co/portfolio/founder-stories/tactiq",
+    "source_payload": {
+      "deal_number": 107,
+      "csv_investee": "Tactiq",
+      "normalized_investee": "Tactiq",
+      "csv_date": "2024-08-01",
+      "normalized_date": "2024-08-01 database date / October close reported",
+      "csv_round": "Series A",
+      "normalized_round": "Series A",
+      "csv_amount": "USD 10,000,000",
+      "normalized_amount": "USD 10,000,000",
+      "csv_investors": "Antler; Flashpoint; Mucker Capital",
+      "normalized_investors": "Flashpoint (lead); Mucker Capital; Antler Elevate; Antler Australia",
+      "verification": "verified_secondary",
+      "correction_or_issue": "Antler and funding databases confirm amount and participants; reporting differs on August announcement versus October close timing.",
+      "primary_source": "https://www.antler.co/portfolio/founder-stories/tactiq",
+      "secondary_source": "https://www.vcbacked.co/company/tactiq"
+    },
+    "investee_name_raw": "Tactiq",
+    "org_location_raw": "Sydney, NSW, Australia / global",
+    "org_website_raw": "https://tactiq.io/",
+    "org_industries_raw": "Productivity SaaS / AI",
+    "round_type_raw": "Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-08-01",
+    "money_raised_raw": "USD 10,000,000",
+    "amount": 10000000,
+    "currency": "USD",
+    "amount_usd": 10000000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Flashpoint (lead); Mucker Capital; Antler Elevate; Antler Australia",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "verified_secondary",
+    "verification_source_url": "https://www.antler.co/portfolio/founder-stories/tactiq",
+    "verification_notes": "Antler and funding databases confirm amount and participants; reporting differs on August announcement versus October close timing.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:tactiq"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:0e2d1767c765a108ce8c",
+      "source:url:c3a0affad548707a3fde"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

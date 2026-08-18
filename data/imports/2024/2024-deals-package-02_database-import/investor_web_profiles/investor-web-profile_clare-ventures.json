@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_web_profiles",
+  "record_key": "investor_web_profile:clare-ventures:2026-08-14",
+  "operation": "upsert",
+  "data": {
+    "source_urls": [
+      "https://clareventures.nz/",
+      "https://clareventures.nz/portfolio/",
+      "https://clareventures.nz/about/",
+      "https://www.linkedin.com/company/clare-ventures-nz",
+      "https://www.baymatob.com/index.php/news-room/forbes-a3-05-2026"
+    ],
+    "retrieved_at": "2026-08-14",
+    "website_status": "verified_public_profile",
+    "raw_content_hash": null,
+    "raw_content_ref": null,
+    "extraction_model": "codex-2024-investor-dedupe-update",
+    "extraction_version": "1.0.0",
+    "confidence": "medium",
+    "claimed_thesis": "Female-founded businesses",
+    "claimed_stages": [
+      "Venture"
+    ],
+    "claimed_sectors": [
+      "Female-founded businesses"
+    ],
+    "claimed_geographies": [
+      "New Zealand"
+    ],
+    "claimed_business_models": [],
+    "claimed_cheque_min": null,
+    "claimed_cheque_max": null,
+    "claimed_cheque_currency": null,
+    "contact_emails": [],
+    "application_url": null,
+    "contact_notes": "Official portfolio confirms 2024 Series A2.",
+    "is_current": true,
+    "superseded_at": null
+  },
+  "refs": {
+    "investor_key": "investor:clare-ventures"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "research_source:clare-ventures:clare_src_001",
+      "research_source:clare-ventures:clare_src_002",
+      "research_source:clare-ventures:clare_src_003",
+      "research_source:clare-ventures:clare_src_004",
+      "research_source:clare-ventures:clare_src_005"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Research collection status: ",
+      "check_size_not_public",
+      "complete_recent_deal_dates_not_public",
+      "crunchbase_content_blocked"
+    ]
+  }
+}

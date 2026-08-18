@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-121",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-121",
+    "dedupe_key": "2024|salty-games|2024-exact-close-date-undisclosed|seed",
+    "source_url": "https://igea.net/wp-content/uploads/2024/12/IGEA-2024-Year-In-Review-.pdf",
+    "source_payload": {
+      "deal_number": 121,
+      "csv_investee": "Salty Games",
+      "normalized_investee": "Salty Games",
+      "csv_date": "2024-04-02",
+      "normalized_date": "2024 (exact close date undisclosed)",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "USD 20,000,000",
+      "normalized_amount": "AUD 1,500,000",
+      "csv_investors": "Paspalis",
+      "normalized_investors": "Paspalis Co-Investment Fund",
+      "verification": "corrected",
+      "correction_or_issue": "Industry report confirms A$1.5m seed funding; the CSV US$20m figure is not supported.",
+      "primary_source": "https://igea.net/wp-content/uploads/2024/12/IGEA-2024-Year-In-Review-.pdf",
+      "secondary_source": "https://paspalis.com.au/"
+    },
+    "investee_name_raw": "Salty Games",
+    "org_location_raw": "Darwin, NT, Australia",
+    "org_website_raw": "https://saltygames.com/",
+    "org_industries_raw": "Gaming",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": null,
+    "money_raised_raw": "AUD 1,500,000",
+    "amount": 1500000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Paspalis Co-Investment Fund",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://igea.net/wp-content/uploads/2024/12/IGEA-2024-Year-In-Review-.pdf",
+    "verification_notes": "Industry report confirms A$1.5m seed funding; the CSV US$20m figure is not supported.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:salty-games"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:7fe967e88139be26acaa",
+      "source:url:62eb541c2f8f0e01b97e"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

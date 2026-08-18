@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-400",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-400",
+    "dedupe_key": "2024|minikai|2024-map-cohort-company-update|pre_seed",
+    "source_url": "https://www.linkedin.com/pulse/minikai-update-autumn-2024-minikai-t8loc",
+    "source_payload": {
+      "deal_number": 400,
+      "csv_investee": "Minikai",
+      "normalized_investee": "Minikai",
+      "csv_date": "2024-05-24",
+      "normalized_date": "2024 MAP cohort / company update",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Accelerator equity-free support; separate pre-seed also disclosed",
+      "csv_amount": "AUD 20,000",
+      "normalized_amount": "AUD 20,000 equity-free from MAP; separate six-figure pre-seed amount/investors undisclosed",
+      "csv_investors": "Melbourne Accelerator Program",
+      "normalized_investors": "Melbourne Accelerator Program (MAP); separate investors undisclosed",
+      "verification": "corrected_program",
+      "correction_or_issue": "Company confirms MAP's A$20k additional funding and a separate six-figure pre-seed. Do not merge the two or infer the private-round syndicate.",
+      "primary_source": "https://www.linkedin.com/pulse/minikai-update-autumn-2024-minikai-t8loc",
+      "secondary_source": "https://www.themap.co/startups"
+    },
+    "investee_name_raw": "Minikai",
+    "org_location_raw": "Carlton / Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.minikai.com/",
+    "org_industries_raw": "Healthtech / Enterprise AI",
+    "round_type_raw": "Accelerator equity-free support; separate pre-seed also disclosed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "AUD 20,000 equity-free from MAP; separate six-figure pre-seed amount/investors undisclosed",
+    "amount": 20000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Melbourne Accelerator Program (MAP); separate investors undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "corrected_program",
+    "verification_source_url": "https://www.linkedin.com/pulse/minikai-update-autumn-2024-minikai-t8loc",
+    "verification_notes": "Company confirms MAP's A$20k additional funding and a separate six-figure pre-seed. Do not merge the two or infer the private-round syndicate.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:minikai"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:69e0c9b6637180a8c04c",
+      "source:url:c0218caf82326e06ccb3"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

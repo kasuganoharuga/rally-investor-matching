@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:build-club",
+  "operation": "upsert",
+  "data": {
+    "name": "Build Club",
+    "website_url": "https://www.buildclub.ai/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "edtech-developer-tools-ai",
+    "sector_secondary": null,
+    "use_case_primary": "ai-learning-and-community-platform-for-builders-and-technical-professionals",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2c-b2b-platform",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "ai_related",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "AI learning and community platform for builders and technical professionals.",
+    "source_urls": [
+      "https://www.buildclub.ai/",
+      "https://www.capitalbrief.com/briefing/build-club-raises-175m-in-pre-seed-led-by-blackbird-airtree-2e44a4d0-c956-4e53-b05a-a9c8fe40e654/",
+      "https://www.airtree.vc/companies/build-club"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

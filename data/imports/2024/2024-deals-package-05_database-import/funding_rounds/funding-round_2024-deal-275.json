@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-275",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-275",
+    "dedupe_key": "2024|cognitivo|2024-09-database-entry|pre_seed",
+    "source_url": "https://www.vcbacked.co/company/cognitivo",
+    "source_payload": {
+      "deal_number": 275,
+      "csv_investee": "Cognitivo",
+      "normalized_investee": "Cognitivo",
+      "csv_date": "2024-09-01",
+      "normalized_date": "2024-09 database entry",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-seed",
+      "csv_amount": "USD 250,000",
+      "normalized_amount": "USD 250,000 (database-only)",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Undisclosed",
+      "verification": "partial",
+      "correction_or_issue": "The Australian applied-AI company is verified, while the financing amount and date are only reproduced by specialist funding databases and no investor was disclosed.",
+      "primary_source": "https://www.vcbacked.co/company/cognitivo",
+      "secondary_source": "https://www.cognitivo.com.au/"
+    },
+    "investee_name_raw": "Cognitivo",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.cognitivo.com.au/",
+    "org_industries_raw": "Enterprise AI",
+    "round_type_raw": "Pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "USD 250,000 (database-only)",
+    "amount": 250000,
+    "currency": "USD",
+    "amount_usd": 250000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://www.vcbacked.co/company/cognitivo",
+    "verification_notes": "The Australian applied-AI company is verified, while the financing amount and date are only reproduced by specialist funding databases and no investor was disclosed.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:cognitivo"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:da27de74388d786b97de",
+      "source:url:b755038a1282c58bfb31"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "The Australian applied-AI company is verified, while the financing amount and date are only reproduced by specialist funding databases and no investor was disclosed.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

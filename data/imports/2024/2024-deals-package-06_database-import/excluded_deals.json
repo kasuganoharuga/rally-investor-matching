@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-06_database-import",
+  "policy": "Duplicate, outside-window, out-of-scope, and explicitly rejected financing rows do not create funding-round upserts, but remain fully auditable here.",
+  "counts": {
+    "source_deals": 60,
+    "imported": 58,
+    "excluded": 2
+  },
+  "excluded_deals": [
+    {
+      "deal_number": 313,
+      "investee": "AirRobe",
+      "verification": "rejected_2024_financing",
+      "reason": "Forbes dates the A$1.28m seed to 2020. Later capital was undisclosed; the CSV has recycled the old amount and investors into a 2024 placeholder record.",
+      "source_excel_row": 14,
+      "primary_source": "https://www.forbes.com.au/covers/entrepreneurs/dubbed-the-airbnb-of-clothing-can-this-aussie-start-up-help-solve-fast-fashion-waste/",
+      "secondary_source": "https://app.dealroom.co/companies/airrobe"
+    },
+    {
+      "deal_number": 342,
+      "investee": "Saltwater Games",
+      "verification": "verified_out_of_scope",
+      "reason": "Official investor release confirms the round. The company was described as Los Angeles-based/global rather than Sydney, so retain for audit but flag geography outside the ANZ company scope.",
+      "source_excel_row": 43,
+      "primary_source": "https://deusx.capital/saltwater-games-a-next-generation-gaming-company-closes-5-5m-seed-round/",
+      "secondary_source": "https://saltwatergames.com/"
+    }
+  ]
+}

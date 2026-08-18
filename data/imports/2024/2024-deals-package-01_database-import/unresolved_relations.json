@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-01_database-import",
+  "counts": {
+    "created_relations": 139,
+    "unresolved_or_unnamed": 17,
+    "excluded_by_investor_policy": 4
+  },
+  "unresolved_relations": [
+    {
+      "deal_number": 6,
+      "token": "Undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 9,
+      "token": "Undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 14,
+      "token": "Undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 15,
+      "token": "Undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 16,
+      "token": "No external investor confirmed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 19,
+      "token": "Carthona remains an earlier investor, not confirmed in 2024 transaction",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 21,
+      "token": "No external investor confirmed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 23,
+      "token": "consortium of technology founders and investors",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 24,
+      "token": "No external investor confirmed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 26,
+      "token": "Undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 31,
+      "token": "Undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 32,
+      "token": "Undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 36,
+      "token": "individual backers listed by company, but round-level participation beyond ACV not confirmed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 47,
+      "token": "additional participants per database",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 49,
+      "token": "CEFC managed by Virescent",
+      "disposition": "vehicle_not_separately_resolved_manager_queued"
+    },
+    {
+      "deal_number": 51,
+      "token": "angel investors including Simon Baume",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 59,
+      "token": "Undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    }
+  ],
+  "excluded_relations": [
+    {
+      "deal_number": 1,
+      "token": "TISI",
+      "canonical_investor": "TISI (identity unresolved)",
+      "action": "hold_unresolved",
+      "reason": "Q-CTRL source names TISI, but exact legal investor entity/domain not safely resolved."
+    },
+    {
+      "deal_number": 11,
+      "token": "Bell Capital",
+      "canonical_investor": "Bell Capital",
+      "action": "hold_unresolved",
+      "reason": "Participation corroborated, but exact official entity/domain remains unresolved."
+    },
+    {
+      "deal_number": 29,
+      "token": "Sudhir Gupta",
+      "canonical_investor": "Sudhir Gupta",
+      "action": "hold_unresolved",
+      "reason": "Common name; exact investor identity cannot be safely resolved."
+    },
+    {
+      "deal_number": 34,
+      "token": "Supes' Fund",
+      "canonical_investor": "Supes' Fund",
+      "action": "hold_unresolved",
+      "reason": "Deal role confirmed but exact legal entity/public mandate sparse."
+    }
+  ],
+  "resolved_by_supplement": [
+    {
+      "deal_number": 51,
+      "token": "Simon Baume",
+      "normalized_token": "Simon Baume",
+      "disposition": "resolved_from_supplemental_evidence",
+      "candidates": [],
+      "resolved_at": "2026-08-14"
+    }
+  ]
+}

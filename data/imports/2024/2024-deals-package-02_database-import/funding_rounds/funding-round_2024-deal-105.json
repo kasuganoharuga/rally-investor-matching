@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-105",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-105",
+    "dedupe_key": "2024|restoke|2024-09-24|seed",
+    "source_url": "https://rampersand.vc/portfolio/restoke",
+    "source_payload": {
+      "deal_number": 105,
+      "csv_investee": "Restoke",
+      "normalized_investee": "Restoke",
+      "csv_date": "2024-09-24",
+      "normalized_date": "2024-09-24",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "AUD 5,100,000",
+      "normalized_amount": "AUD 5,100,000",
+      "csv_investors": "Archangel Ventures; BC Growth Equity; Everywhere Ventures; Mandalay Venture Partners; Rampersand; Stage 2 Capital",
+      "normalized_investors": "Rampersand (lead); Archangel Ventures; BC Growth Equity; Everywhere Ventures; Mandalay Venture Partners; Stage 2 Capital",
+      "verification": "verified",
+      "correction_or_issue": "Lead and amount confirmed by Rampersand; participant list corroborated by funding database.",
+      "primary_source": "https://rampersand.vc/portfolio/restoke",
+      "secondary_source": "https://www.crunchbase.com/funding_round/restoke-seed--33ff0fd7"
+    },
+    "investee_name_raw": "Restoke",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.restoke.ai/",
+    "org_industries_raw": "Hospitality Tech / AI",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-09-24",
+    "money_raised_raw": "AUD 5,100,000",
+    "amount": 5100000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Rampersand (lead); Archangel Ventures; BC Growth Equity; Everywhere Ventures; Mandalay Venture Partners; Stage 2 Capital",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://rampersand.vc/portfolio/restoke",
+    "verification_notes": "Lead and amount confirmed by Rampersand; participant list corroborated by funding database.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:restoke"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:f34b7c4eec3a2749819c",
+      "source:url:93ebb01128f9a44ee008"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

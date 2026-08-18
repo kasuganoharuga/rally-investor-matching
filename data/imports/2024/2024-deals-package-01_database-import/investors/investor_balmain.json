@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investors",
+  "record_key": "investor:balmain",
+  "operation": "upsert",
+  "data": {
+    "canonical_name": "Balmain",
+    "aliases": [],
+    "investor_type": "strategic_corporate",
+    "website_url": "https://balmain.com.au/",
+    "linkedin_url": null,
+    "hq_country": "AU",
+    "hq_state": null,
+    "hq_city": null,
+    "offices": [],
+    "status": "active",
+    "merged_into_id": null,
+    "review_status": "reviewed",
+    "last_reviewed_at": "2026-08-14",
+    "last_reviewed_by": "codex-2024-investor-dedupe-update",
+    "investor_subtype": "Private credit / strategic investor",
+    "classification_confidence": "high",
+    "classification_source": "inherited from previously completed detailed classification",
+    "eligibility_mode": "research_package_confirmed",
+    "classification_evidence_urls": [
+      "https://balmain.com.au/",
+      "https://www.balmainopportunitytrust.com.au/"
+    ],
+    "classified_at": "2026-08-14",
+    "identity_resolution": "existing_investor_update",
+    "matched_existing_record_key": "investor:balmain",
+    "identity_match_method": "exact_existing_key",
+    "identity_match_source": "normalized_master"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "research_source:balmain:balmain_src_001",
+      "research_source:balmain:balmain_src_002"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Research collection status: partial",
+      "team_and_person_level_evidence_not_material_or_not_public",
+      "recent_portfolio_coverage_partial",
+      "linkedin_company_url_not_verified"
+    ]
+  }
+}

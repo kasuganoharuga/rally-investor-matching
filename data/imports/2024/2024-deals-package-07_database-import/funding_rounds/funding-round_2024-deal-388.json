@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-388",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-388",
+    "dedupe_key": "2024|aquila|2024-06-24|seed",
+    "source_url": "https://www.businessnewsaustralia.com/articles/aquila-raises-extra--2m-for-optical-power-beaming-tech-that-charges-drones-mid-flight.html",
+    "source_payload": {
+      "deal_number": 388,
+      "csv_investee": "Aquila",
+      "normalized_investee": "Aquila",
+      "csv_date": "2024-06-24",
+      "normalized_date": "2024-06-24",
+      "csv_round": "Seed",
+      "normalized_round": "Seed follow-on",
+      "csv_amount": "USD 2,000,000",
+      "normalized_amount": "AUD 2,000,000",
+      "csv_investors": "Alua Group; Blackbird; Icehouse; Pacific Channel",
+      "normalized_investors": "Alua Group (lead); Blackbird; Icehouse Ventures",
+      "verification": "corrected",
+      "correction_or_issue": "The follow-on was A$2m, not US$2m. Strong contemporaneous reporting does not include Pacific Channel in the round.",
+      "primary_source": "https://www.businessnewsaustralia.com/articles/aquila-raises-extra--2m-for-optical-power-beaming-tech-that-charges-drones-mid-flight.html",
+      "secondary_source": "https://app.dealroom.co/companies/aquila_"
+    },
+    "investee_name_raw": "Aquila",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.aquila.earth/",
+    "org_industries_raw": "Deep Tech / Energy / Photonics",
+    "round_type_raw": "Seed follow-on",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-06-24",
+    "money_raised_raw": "AUD 2,000,000",
+    "amount": 2000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Alua Group (lead); Blackbird; Icehouse Ventures",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.businessnewsaustralia.com/articles/aquila-raises-extra--2m-for-optical-power-beaming-tech-that-charges-drones-mid-flight.html",
+    "verification_notes": "The follow-on was A$2m, not US$2m. Strong contemporaneous reporting does not include Pacific Channel in the round.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:aquila"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:cadb469f6a13caf38307",
+      "source:url:915b051a86e4e2127289"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

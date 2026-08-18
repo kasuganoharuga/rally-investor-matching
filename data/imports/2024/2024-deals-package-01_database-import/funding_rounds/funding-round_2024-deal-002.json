@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-002",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-002",
+    "dedupe_key": "2024|rhubarb|2024-09-08|seed",
+    "source_url": "https://joinrhubarb.com/",
+    "source_payload": {
+      "deal_number": 2,
+      "csv_investee": "Rhubarb Labs",
+      "normalized_investee": "Rhubarb",
+      "csv_date": "2024-09-08",
+      "normalized_date": "2024-09-08",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Techstars",
+      "normalized_investors": "Techstars",
+      "verification": "partial",
+      "correction_or_issue": "Company and Techstars association confirmed; exact funding event/date not independently confirmed.",
+      "primary_source": "https://joinrhubarb.com/",
+      "secondary_source": null
+    },
+    "investee_name_raw": "Rhubarb",
+    "org_location_raw": "Byron Bay, NSW, Australia",
+    "org_website_raw": "https://joinrhubarb.com/",
+    "org_industries_raw": "Consumer / Home & Garden / AI",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-09-08",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Techstars",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://joinrhubarb.com/",
+    "verification_notes": "Company and Techstars association confirmed; exact funding event/date not independently confirmed. Public company funding profile corroborates an approximately A$1m 2024 round but lists 1 October rather than 1 September; the exact date remains unresolved.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day",
+    "supplemental_verification_urls": []
+  },
+  "refs": {
+    "investee_company_key": "company:research:rhubarb"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:9998b0db5407c966e8bd",
+      "source:url:2881b839a32ef24e69c5"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Company and Techstars association confirmed; exact funding event/date not independently confirmed.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

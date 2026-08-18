@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-083",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-083",
+    "dedupe_key": "2024|scannable|2024-11-18|seed",
+    "source_url": "https://www.cbinsights.com/company/scannable/financials",
+    "source_payload": {
+      "deal_number": 83,
+      "csv_investee": "Scannable",
+      "normalized_investee": "Scannable",
+      "csv_date": "2024-11-18",
+      "normalized_date": "2024-11-18",
+      "csv_round": "Seed",
+      "normalized_round": "Seed VC II",
+      "csv_amount": "NZD 5,100,000",
+      "normalized_amount": "USD 3,000,000 (about NZD 5.1m)",
+      "csv_investors": "DCM Ventures; Aura Ventures; DCM; NZGCP; Randy Reddig",
+      "normalized_investors": "DCM Ventures; Aura Ventures; NZ Growth Capital Partners; Randy Reddig; undisclosed investors",
+      "verification": "verified_secondary",
+      "correction_or_issue": "Database source confirms date, US$3m amount and named investors; DCM duplicate removed.",
+      "primary_source": "https://www.cbinsights.com/company/scannable/financials",
+      "secondary_source": "https://scannable.io/"
+    },
+    "investee_name_raw": "Scannable",
+    "org_location_raw": "New Zealand / USA",
+    "org_website_raw": "https://scannable.io/",
+    "org_industries_raw": "Industrial SaaS / Computer Vision",
+    "round_type_raw": "Seed VC II",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-11-18",
+    "money_raised_raw": "USD 3,000,000 (about NZD 5.1m)",
+    "amount": 3000000,
+    "currency": "USD",
+    "amount_usd": 3000000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "DCM Ventures; Aura Ventures; NZ Growth Capital Partners; Randy Reddig; undisclosed investors",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "verified_secondary",
+    "verification_source_url": "https://www.cbinsights.com/company/scannable/financials",
+    "verification_notes": "Database source confirms date, US$3m amount and named investors; DCM duplicate removed.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:scannable"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:e8ca723ce8f1a3ba18bb",
+      "source:url:8d8e780ce3b306454759"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

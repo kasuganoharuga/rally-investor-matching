@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-419",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-419",
+    "dedupe_key": "2024|planoverse|2024-unsw-founders-10x-cohort|program_or_grant",
+    "source_url": "https://www.inside.unsw.edu.au/innovation-and-engagement/six-startups-receive-110k-investment-unsw-founders-program",
+    "source_payload": {
+      "deal_number": 419,
+      "csv_investee": "Planoverse",
+      "normalized_investee": "Planoverse",
+      "csv_date": "2024-08-01",
+      "normalized_date": "2024 UNSW Founders 10x cohort",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "10x Accelerator investment",
+      "csv_amount": "AUD 20,000",
+      "normalized_amount": "AUD 110,000 standard 2024 10x investment/support package",
+      "csv_investors": "UNSW Founders",
+      "normalized_investors": "UNSW Founders 10x Accelerator",
+      "verification": "corrected_program",
+      "correction_or_issue": "Official 2024 terms set A$110k per company and the Demo Day page confirms Planoverse.",
+      "primary_source": "https://www.inside.unsw.edu.au/innovation-and-engagement/six-startups-receive-110k-investment-unsw-founders-program",
+      "secondary_source": "https://unswfounders.com/demo-day-2024/planoverse"
+    },
+    "investee_name_raw": "Planoverse",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.planoverse.com.au/",
+    "org_industries_raw": "Proptech / Planning Tech",
+    "round_type_raw": "10x Accelerator investment",
+    "round_stage": "program_or_grant",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "AUD 110,000 standard 2024 10x investment/support package",
+    "amount": 110000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "UNSW Founders 10x Accelerator",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "corrected_program",
+    "verification_source_url": "https://www.inside.unsw.edu.au/innovation-and-engagement/six-startups-receive-110k-investment-unsw-founders-program",
+    "verification_notes": "Official 2024 terms set A$110k per company and the Demo Day page confirms Planoverse.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:planoverse"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:2060dbd0fb8796e6fd5f",
+      "source:url:1f070c7bff174409dfd7"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

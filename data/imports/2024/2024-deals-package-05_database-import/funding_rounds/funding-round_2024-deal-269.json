@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-269",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-269",
+    "dedupe_key": "2024|infinity-studio-ai-limited|2024-07-01|seed",
+    "source_url": "https://www.linkedin.com/posts/rekha-kharbanda-0a906796_startup-investment-growth-activity-7225996679433371649-q-y6",
+    "source_payload": {
+      "deal_number": 269,
+      "csv_investee": "InfinityStudio.AI",
+      "normalized_investee": "Infinity Studio AI Limited",
+      "csv_date": "2024-07-01",
+      "normalized_date": "2024-07-01",
+      "csv_round": "Seed",
+      "normalized_round": "Growth capital / seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "New Zealand Growth Capital Partners",
+      "normalized_investors": "NZGCP Aspire NZ Seed Fund; consortium investors not disclosed",
+      "verification": "verified_limited",
+      "correction_or_issue": "Company and Aspire material confirm growth capital from a consortium including the Aspire fund. Amount remains undisclosed; later 2025 seed investors must not be backdated into this round.",
+      "primary_source": "https://www.linkedin.com/posts/rekha-kharbanda-0a906796_startup-investment-growth-activity-7225996679433371649-q-y6",
+      "secondary_source": "https://www.isvworld.com/search/news/1586668"
+    },
+    "investee_name_raw": "Infinity Studio AI Limited",
+    "org_location_raw": "Auckland, New Zealand",
+    "org_website_raw": "https://infinitystudio.ai/",
+    "org_industries_raw": "Contech / Engineering SaaS",
+    "round_type_raw": "Growth capital / seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-07-01",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "NZGCP Aspire NZ Seed Fund; consortium investors not disclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "verified_limited",
+    "verification_source_url": "https://www.linkedin.com/posts/rekha-kharbanda-0a906796_startup-investment-growth-activity-7225996679433371649-q-y6",
+    "verification_notes": "Company and Aspire material confirm growth capital from a consortium including the Aspire fund. Amount remains undisclosed; later 2025 seed investors must not be backdated into this round.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:infinitystudio-ai"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:302c00ee4dd8181c17cc",
+      "source:url:c006e99b9ab005863bec"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

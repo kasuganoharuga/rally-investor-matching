@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:neocrete",
+  "operation": "upsert",
+  "data": {
+    "name": "Neocrete",
+    "website_url": "https://www.neocrete.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "NZ",
+    "hq_state": null,
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "climate-tech-construction-materials",
+    "sector_secondary": null,
+    "use_case_primary": "developer-of-a-concrete-additive-that-replaces-significant-cement-content-using-activated-materials-reducing-embodied-ca",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "additive-manufacturing-and-sales",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Developer of a concrete additive that replaces significant cement content using activated materials, reducing embodied carbon.",
+    "source_urls": [
+      "https://www.neocrete.com/",
+      "https://www.scoop.co.nz/stories/BU2403/S00358/neocrete-secures-65m-in-seed-venture-funding-led-by-wavemaker-partners-singapore.htm",
+      "https://wavemakerpartners.com/concrete-has-a-major-carbon-problem-heres-neocretes-solution/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

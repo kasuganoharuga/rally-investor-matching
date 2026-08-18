@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-111",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-111",
+    "dedupe_key": "2024|algenie|2024-09-09|pre_seed",
+    "source_url": "https://www.uts.edu.au/news/2024/09/algae-biotech-launch",
+    "source_payload": {
+      "deal_number": 111,
+      "csv_investee": "Algenie",
+      "normalized_investee": "Algenie",
+      "csv_date": "2024-09-10",
+      "normalized_date": "2024-09-09 announcement",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-Seed / early funding",
+      "csv_amount": "AUD 1,100,000",
+      "normalized_amount": "AUD 1,100,000",
+      "csv_investors": "Better Bite Ventures; University of Sydney",
+      "normalized_investors": "Better Bite Ventures; University of Technology Sydney; strategic investors",
+      "verification": "corrected",
+      "correction_or_issue": "UTS source confirms A$1.1m and corrects University of Sydney to University of Technology Sydney.",
+      "primary_source": "https://www.uts.edu.au/news/2024/09/algae-biotech-launch",
+      "secondary_source": "https://www.algenie.com.au/"
+    },
+    "investee_name_raw": "Algenie",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.algenie.com.au/",
+    "org_industries_raw": "Climate Biotech / Advanced Manufacturing",
+    "round_type_raw": "Pre-Seed / early funding",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-09-09",
+    "money_raised_raw": "AUD 1,100,000",
+    "amount": 1100000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Better Bite Ventures; University of Technology Sydney; strategic investors",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.uts.edu.au/news/2024/09/algae-biotech-launch",
+    "verification_notes": "UTS source confirms A$1.1m and corrects University of Sydney to University of Technology Sydney.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:algenie"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:f153fb278b825025763e",
+      "source:url:a0433f82028349beffbb"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

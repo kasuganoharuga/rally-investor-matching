@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-015",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-015",
+    "dedupe_key": "2024|bluebell-health|2024-01-01|series_a",
+    "source_url": "https://www.bluebell.com.au/",
+    "source_payload": {
+      "deal_number": 15,
+      "csv_investee": "Bluebell Health",
+      "normalized_investee": "Bluebell Health",
+      "csv_date": "2024-01-01",
+      "normalized_date": "2024-01-01",
+      "csv_round": "Series A",
+      "normalized_round": "Series A",
+      "csv_amount": "AUD 600,000",
+      "normalized_amount": "AUD 600,000 (single-source)",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Undisclosed",
+      "verification": "needs_review",
+      "correction_or_issue": "Company and legal entity confirmed; Jan 1 date and round remain uncorroborated.",
+      "primary_source": "https://www.bluebell.com.au/",
+      "secondary_source": "https://abr.business.gov.au/ABN/View?abn=63643865463"
+    },
+    "investee_name_raw": "Bluebell Health",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.bluebell.com.au/",
+    "org_industries_raw": "Healthcare / Mental Health",
+    "round_type_raw": "Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-01-01",
+    "money_raised_raw": "AUD 600,000 (single-source)",
+    "amount": 600000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://www.bluebell.com.au/",
+    "verification_notes": "Company and legal entity confirmed; Jan 1 date and round remain uncorroborated.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:bluebell-health"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:0a8af047cbfaab7721cc",
+      "source:url:24cbef66289899257ee0"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Company and legal entity confirmed; Jan 1 date and round remain uncorroborated."
+    ]
+  }
+}

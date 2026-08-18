@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-050",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-050",
+    "dedupe_key": "2024|tour-amigo|2024-08-26|seed",
+    "source_url": "https://wavemaker.vc/tour-amigo-secures-us2m-seed-capital-to-accelerate-software-development-and-expand-global-operations-2/",
+    "source_payload": {
+      "deal_number": 50,
+      "csv_investee": "Tour Amigo",
+      "normalized_investee": "Tour Amigo",
+      "csv_date": "2024-08-26",
+      "normalized_date": "2024-08-26 transaction / 2024-09-04 announcement",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "USD 2,000,000",
+      "normalized_amount": "USD 1,500,000 legal subscription; USD 2,000,000 announced",
+      "csv_investors": "Wavemaker Ventures; 500 Global",
+      "normalized_investors": "Wavemaker Partners (lead); 500 Global",
+      "verification": "source_discrepancy",
+      "correction_or_issue": "Primary legal and investor announcements disagree on total; preserve both values.",
+      "primary_source": "https://wavemaker.vc/tour-amigo-secures-us2m-seed-capital-to-accelerate-software-development-and-expand-global-operations-2/",
+      "secondary_source": "https://www.allenandgledhill.com/sg/perspectives/articles/28908/subscription-of-seed-preference-shares-in-tour-amigo-pte-ltd-led-by-wavemaker-pacific-5-lp"
+    },
+    "investee_name_raw": "Tour Amigo",
+    "org_location_raw": "Australia / Singapore",
+    "org_website_raw": "https://touramigo.com/",
+    "org_industries_raw": "Traveltech / SaaS",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-08-26",
+    "money_raised_raw": "USD 1,500,000 legal subscription; USD 2,000,000 announced",
+    "amount": 1500000,
+    "currency": "USD",
+    "amount_usd": 1500000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Wavemaker Partners (lead); 500 Global",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "source_discrepancy",
+    "verification_source_url": "https://wavemaker.vc/tour-amigo-secures-us2m-seed-capital-to-accelerate-software-development-and-expand-global-operations-2/",
+    "verification_notes": "Primary legal and investor announcements disagree on total; preserve both values.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:tour-amigo"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:84d4953c040687e09057",
+      "source:url:2dc7d10780f84c0f97af"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Primary legal and investor announcements disagree on total; preserve both values."
+    ]
+  }
+}

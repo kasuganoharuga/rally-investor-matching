@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-05_database-import",
+  "supplemented_at": "2026-08-14T00:00:00+09:30",
+  "status": "completed_with_public_evidence_limits",
+  "change_count": 8,
+  "changes": [
+    {
+      "type": "investor_website",
+      "record_key": "investor:cultivate-ventures",
+      "value": "https://cultivateventures.co.nz/",
+      "evidence_url": "https://cultivateventures.co.nz/"
+    },
+    {
+      "type": "investor_website",
+      "record_key": "investor:mig-angels",
+      "value": "https://www.thefactorynz.co.nz/",
+      "evidence_url": "https://www.thefactorynz.co.nz/"
+    },
+    {
+      "type": "investor_website",
+      "record_key": "investor:utiliti-group",
+      "value": "https://www.utiliti.com/",
+      "evidence_url": "https://www.utiliti.com/"
+    },
+    {
+      "type": "investee_website",
+      "record_key": "company:research:exploretech",
+      "value": "https://www.exploretech.io/",
+      "evidence_url": "https://www.exploretech.io/"
+    },
+    {
+      "type": "investee_website",
+      "record_key": "company:research:huddled",
+      "value": "https://huddled.framer.website/",
+      "evidence_url": "https://www.linkedin.com/company/huddledco"
+    },
+    {
+      "type": "investee_website",
+      "record_key": "company:research:klean",
+      "value": "https://www.kleantech.com.au/",
+      "evidence_url": "https://www.prlog.org/13028191-klean-an-esg-brand-authentication-firm-raises-725000-in-its-pre-seed-round.pdf"
+    },
+    {
+      "type": "investee_website",
+      "record_key": "company:research:manifest",
+      "value": "https://gomanifest.ai/",
+      "evidence_url": "https://www.linkedin.com/company/techstars-tech-central-sydney-2023"
+    },
+    {
+      "type": "investee_website",
+      "record_key": "company:research:plaza",
+      "value": "https://getplaza.ai/",
+      "evidence_url": "https://careers.antler.co/companies/plaza-2-e86cb8bb-1186-48d3-8365-bc5bf2703aaf"
+    }
+  ],
+  "remaining_limits": {
+    "investee_websites_missing": 0,
+    "investor_websites_missing": 16,
+    "round_exact_dates_missing": 21,
+    "round_structured_amounts_missing": 16,
+    "unresolved_mentions": 28
+  }
+}

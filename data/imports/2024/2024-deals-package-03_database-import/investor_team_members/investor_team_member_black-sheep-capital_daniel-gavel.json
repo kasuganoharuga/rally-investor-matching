@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_team_members",
+  "record_key": "investor_team_member:black-sheep-capital:daniel-gavel",
+  "operation": "upsert",
+  "data": {
+    "contact_id": null,
+    "first_name": "Daniel",
+    "last_name": "Gavel",
+    "role_title": "Director",
+    "seniority": "other",
+    "linkedin_url": "https://au.linkedin.com/in/danielgavel",
+    "claimed_focus": [
+      "venture_capital"
+    ],
+    "bio_summary": "Public investment-relevant person associated with Black Sheep Capital.",
+    "source_url": "https://blacksheepcapital.com.au/",
+    "retrieved_at": "2026-07-22",
+    "is_active": true
+  },
+  "refs": {
+    "investor_key": "investor:black-sheep-capital",
+    "contact_key": null
+  },
+  "provenance": {
+    "collection_run_key": "collection:research:2026-07-24",
+    "source_keys": [
+      "research_source:black-sheep-capital:black-sheep-capital_src_official"
+    ]
+  },
+  "review": {
+    "status": "unreviewed",
+    "issues": []
+  }
+}

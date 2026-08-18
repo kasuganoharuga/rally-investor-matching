@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-330",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-330",
+    "dedupe_key": "2024|biomedical-performance-technologies-bpt|2024-unsw-founders-10x-cohort|program_or_grant",
+    "source_url": "https://unswfounders.com/demo-day-2024/bpt",
+    "source_payload": {
+      "deal_number": 330,
+      "csv_investee": "Biomedical Performance Technologies (BPT)",
+      "normalized_investee": "Biomedical Performance Technologies / BPT",
+      "csv_date": "2024-08-01",
+      "normalized_date": "2024 UNSW Founders 10x cohort",
+      "csv_round": "Seed",
+      "normalized_round": "Accelerator / program support",
+      "csv_amount": "AUD 20,000",
+      "normalized_amount": "Unverified",
+      "csv_investors": "UNSW Founders",
+      "normalized_investors": "UNSW Founders 10x relationship",
+      "verification": "needs_review",
+      "correction_or_issue": "UNSW Founders verifies BPT as a 10x cohort company, but the reviewed public page does not substantiate a A$20k equity investment or August close.",
+      "primary_source": "https://unswfounders.com/demo-day-2024/bpt",
+      "secondary_source": "https://www.unsw.edu.au/science/about-us/creating-impact/gaining-a-competitive-advantage-through-data"
+    },
+    "investee_name_raw": "Biomedical Performance Technologies / BPT",
+    "org_location_raw": "Canberra, ACT, Australia",
+    "org_website_raw": "https://biomedperformance.com.au/",
+    "org_industries_raw": "Sports Tech / Data Analytics",
+    "round_type_raw": "Accelerator / program support",
+    "round_stage": "program_or_grant",
+    "funding_stage_raw": "Seed",
+    "announced_date": null,
+    "money_raised_raw": "Unverified",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "UNSW Founders 10x relationship",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://unswfounders.com/demo-day-2024/bpt",
+    "verification_notes": "UNSW Founders verifies BPT as a 10x cohort company, but the reviewed public page does not substantiate a A$20k equity investment or August close.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown",
+    "amount_disclosure_status": "program_participation_not_verified_equity_amount",
+    "amount_structuring_note": "Cohort participation is verified, but the public evidence does not substantiate a A$20k equity investment.",
+    "supplemental_verification_urls": []
+  },
+  "refs": {
+    "investee_company_key": "company:research:biomedical-performance-technologies"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:7ab251809aa6c65ec635",
+      "source:url:e69eb8aa38aeefc1264e"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "UNSW Founders verifies BPT as a 10x cohort company, but the reviewed public page does not substantiate a A$20k equity investment or August close.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

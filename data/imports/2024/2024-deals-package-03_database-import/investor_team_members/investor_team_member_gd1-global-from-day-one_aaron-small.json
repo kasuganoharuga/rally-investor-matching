@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_team_members",
+  "record_key": "investor_team_member:gd1-global-from-day-one:aaron-small",
+  "operation": "upsert",
+  "data": {
+    "contact_id": null,
+    "first_name": "Aaron",
+    "last_name": "Small",
+    "role_title": "Investment Principal",
+    "seniority": "principal",
+    "linkedin_url": null,
+    "claimed_focus": [
+      "investment_relevant_person"
+    ],
+    "bio_summary": "Dawn announcement names GD1 as an existing investor.",
+    "source_url": "https://www.gd1.vc/",
+    "retrieved_at": "2026-07-16",
+    "is_active": true
+  },
+  "refs": {
+    "investor_key": "investor:gd1-global-from-day-one",
+    "contact_key": null
+  },
+  "provenance": {
+    "collection_run_key": "collection:research:2026-07-24",
+    "source_keys": [
+      "research_source:gd1-global-from-day-one:gd1_global_from_day_one_src_001"
+    ]
+  },
+  "review": {
+    "status": "unreviewed",
+    "issues": []
+  }
+}

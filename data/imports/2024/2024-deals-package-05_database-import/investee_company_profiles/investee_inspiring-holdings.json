@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:inspiring-holdings",
+  "operation": "upsert",
+  "data": {
+    "name": "Inspiring Holdings",
+    "website_url": "https://www.irdd.com.au/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Western Australia",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "medtech-respiratory",
+    "sector_secondary": null,
+    "use_case_primary": "develops-a-universal-spacer-system-designed-to-improve-delivery-of-inhaled-therapies",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "medical-device",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Develops a universal spacer system designed to improve delivery of inhaled therapies.",
+    "source_urls": [
+      "https://www.irdd.com.au/",
+      "https://www.fundwa.com.au/fundwaportfolio",
+      "https://au.linkedin.com/company/inspiring-holdings-pty-ltd"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

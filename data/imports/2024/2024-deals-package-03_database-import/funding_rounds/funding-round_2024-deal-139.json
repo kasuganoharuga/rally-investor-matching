@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-139",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-139",
+    "dedupe_key": "2024|ideally|2024-10-01|seed",
+    "source_url": "https://www.linkedin.com/posts/ideally-insights_its-an-exciting-day-for-the-team-at-ideally-activity-7246695814427803648-u86i",
+    "source_payload": {
+      "deal_number": 139,
+      "csv_investee": "Ideally",
+      "normalized_investee": "Ideally",
+      "csv_date": "2024-10-01",
+      "normalized_date": "2024-10-01",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "AUD 5,500,000",
+      "normalized_amount": "AUD 5,500,000",
+      "csv_investors": "Icehouse Ventures; OIF Ventures (leads)",
+      "normalized_investors": "Icehouse Ventures; OIF Ventures (co-leads)",
+      "verification": "verified",
+      "correction_or_issue": "Company announcement confirms amount, co-leads and use of funds.",
+      "primary_source": "https://www.linkedin.com/posts/ideally-insights_its-an-exciting-day-for-the-team-at-ideally-activity-7246695814427803648-u86i",
+      "secondary_source": "https://www.icehouseventures.co.nz/companies/ideally"
+    },
+    "investee_name_raw": "Ideally",
+    "org_location_raw": "Auckland, New Zealand / Australia",
+    "org_website_raw": "https://www.goideally.com/",
+    "org_industries_raw": "Martech / Consumer Insights",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-10-01",
+    "money_raised_raw": "AUD 5,500,000",
+    "amount": 5500000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Icehouse Ventures; OIF Ventures (co-leads)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.linkedin.com/posts/ideally-insights_its-an-exciting-day-for-the-team-at-ideally-activity-7246695814427803648-u86i",
+    "verification_notes": "Company announcement confirms amount, co-leads and use of funds.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:ideally"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:a833cab33079c1544848",
+      "source:url:0cc5eea7b135c6dfe58e"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

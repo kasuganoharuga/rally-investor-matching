@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-445",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-445",
+    "dedupe_key": "2024|shopfront|2024-07-01|pre_seed",
+    "source_url": "https://www.businessnewsaustralia.com/articles/how-shopfront-is-using-ai-to-simplify-the-second-hand-seller-experience.html",
+    "source_payload": {
+      "deal_number": 445,
+      "csv_investee": "Shopfront",
+      "normalized_investee": "Shopfront",
+      "csv_date": "2024-04-30",
+      "normalized_date": "2024-07-01 announcement",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Antler pre-seed",
+      "csv_amount": "AUD 225,000",
+      "normalized_amount": "AUD 225,000",
+      "csv_investors": "Antler",
+      "normalized_investors": "Antler Australia",
+      "verification": "verified",
+      "correction_or_issue": "Australian reporting confirms the A$225k Antler pre-seed investment; announcement timing is later than the database close date.",
+      "primary_source": "https://www.businessnewsaustralia.com/articles/how-shopfront-is-using-ai-to-simplify-the-second-hand-seller-experience.html",
+      "secondary_source": "https://www.startupdaily.net/partner-content/antler-australia/antler-investor-memo-series-shopfront-one-click-solution-for-multi-marketplace-reselling/"
+    },
+    "investee_name_raw": "Shopfront",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://shopfrontapp.co/",
+    "org_industries_raw": "Retail Tech / Marketplace SaaS",
+    "round_type_raw": "Antler pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-07-01",
+    "money_raised_raw": "AUD 225,000",
+    "amount": 225000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Antler Australia",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-08_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.businessnewsaustralia.com/articles/how-shopfront-is-using-ai-to-simplify-the-second-hand-seller-experience.html",
+    "verification_notes": "Australian reporting confirms the A$225k Antler pre-seed investment; announcement timing is later than the database close date.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:shopfront"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": [
+      "source:url:8bf81fb1e825efa460dd",
+      "source:url:370c513b68c289862529"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

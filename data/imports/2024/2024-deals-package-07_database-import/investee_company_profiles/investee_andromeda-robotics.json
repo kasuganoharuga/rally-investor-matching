@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:andromeda-robotics",
+  "operation": "upsert",
+  "data": {
+    "name": "Andromeda Robotics",
+    "website_url": "https://andromedarobotics.ai/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Victoria",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "robotics-ai-healthtech",
+    "sector_secondary": null,
+    "use_case_primary": "builds-emotionally-intelligent-humanoid-companion-robots-for-healthcare-aged-care-and-social-support-settings",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "hardware-software-services",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Builds emotionally intelligent humanoid companion robots for healthcare, aged-care and social-support settings.",
+    "source_urls": [
+      "https://andromedarobotics.ai/",
+      "https://www.capitalbrief.com/briefing/robotics-startup-andromeda-raises-3m-to-scale-ai-companion-robot-68e83025-3f32-4b63-889d-2c3d39a779f1/",
+      "https://www.businessnews.com.au/article/Purpose-ventures-beyond-WA"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-333",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-333",
+    "dedupe_key": "2024|justfund|2024-11-04|seed",
+    "source_url": "https://australianfintech.com.au/fintech-startup-justfund-accelerates-growth-with-86-million-capital-raise/",
+    "source_payload": {
+      "deal_number": 333,
+      "csv_investee": "JustFund",
+      "normalized_investee": "JustFund",
+      "csv_date": "2024-01-01",
+      "normalized_date": "2024-11-04",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "USD 5,700,000",
+      "normalized_amount": "AUD 5,700,000",
+      "csv_investors": "Dominic Pym; Matt Allen; Startmate; The LegalTech Fund; Tripple; Xilium",
+      "normalized_investors": "Xilium Capital (lead); Startmate; The LegalTech Fund; Tripple; Dom Pym; Matt Allen",
+      "verification": "corrected",
+      "correction_or_issue": "The A$5.7m seed occurred in November 2024, not 1 January, and Xilium also provided a separate A$7m debt facility. Correct both currency and date.",
+      "primary_source": "https://australianfintech.com.au/fintech-startup-justfund-accelerates-growth-with-86-million-capital-raise/",
+      "secondary_source": "https://app.dealroom.co/companies/just_fund"
+    },
+    "investee_name_raw": "JustFund",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.justfund.com.au/",
+    "org_industries_raw": "Fintech / Legal Finance",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-11-04",
+    "money_raised_raw": "AUD 5,700,000",
+    "amount": 5700000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Xilium Capital (lead); Startmate; The LegalTech Fund; Tripple; Dom Pym; Matt Allen",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://australianfintech.com.au/fintech-startup-justfund-accelerates-growth-with-86-million-capital-raise/",
+    "verification_notes": "The A$5.7m seed occurred in November 2024, not 1 January, and Xilium also provided a separate A$7m debt facility. Correct both currency and date.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:justfund"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:5ce6746b749d6b7acf4c",
+      "source:url:c1015027f7c250495815"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

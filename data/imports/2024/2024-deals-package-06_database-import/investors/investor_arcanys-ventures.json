@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investors",
+  "record_key": "investor:arcanys-ventures",
+  "operation": "upsert",
+  "data": {
+    "canonical_name": "Arcanys Ventures",
+    "aliases": [],
+    "investor_type": "vc_fund",
+    "investor_subtype": "Tech-for-equity investor",
+    "eligibility_mode": "research_package_confirmed",
+    "classification_confidence": "high",
+    "classification_evidence_urls": [
+      "https://ventures.arcanys.com/",
+      "https://www.linkedin.com/company/arcanys-ventures",
+      "https://www.arcanys.com/ventures"
+    ],
+    "classified_at": "2026-08-14",
+    "website_url": "https://www.arcanys.com/ventures",
+    "linkedin_url": "https://www.linkedin.com/company/arcanys-ventures",
+    "hq_country": "CH",
+    "hq_state": null,
+    "hq_city": "Lausanne",
+    "offices": [],
+    "status": "active",
+    "merged_into_id": null,
+    "review_status": "needs_more_data",
+    "last_reviewed_at": "2026-08-14",
+    "last_reviewed_by": "codex-2024-investor-dedupe-update",
+    "identity_resolution": "existing_investor_update",
+    "matched_existing_record_key": "investor:arcanys-ventures",
+    "identity_match_method": "exact_existing_key",
+    "identity_match_source": "historical_import:recent-deal2026-7-30_deals-001-060_delta_identity-audited-v3_team-audited"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Headquarters state/region was not disclosed by the verified sources."
+    ]
+  }
+}

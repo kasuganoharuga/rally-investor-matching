@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-207",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-207",
+    "dedupe_key": "2024|hapana|2024-08-12|series_a",
+    "source_url": "https://www.oifventures.com.au/insights/fitness-software-startup-hapana-presses-17-3-million-series-a-for-global-push",
+    "source_payload": {
+      "deal_number": 207,
+      "csv_investee": "Hapana",
+      "normalized_investee": "Hapana",
+      "csv_date": "2024-08-12",
+      "normalized_date": "2024-08-12",
+      "csv_round": "Series A",
+      "normalized_round": "Series A / growth-stage round",
+      "csv_amount": "AUD 17,300,000",
+      "normalized_amount": "AUD 17,300,000",
+      "csv_investors": "OIF Ventures; Bailador Technology Investments",
+      "normalized_investors": "OIF Ventures (A$9.6m); Bailador Technology Investments (A$7.7m)",
+      "verification": "verified",
+      "correction_or_issue": "Investor and ASX-backed sources reconcile the full A$17.3m round and the allocation between both investors.",
+      "primary_source": "https://www.oifventures.com.au/insights/fitness-software-startup-hapana-presses-17-3-million-series-a-for-global-push",
+      "secondary_source": "https://bailador.com.au/assets/downloads/BTI_Monthly_Report_August_2024.pdf"
+    },
+    "investee_name_raw": "Hapana",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.hapana.com/",
+    "org_industries_raw": "Fitness Tech / SaaS",
+    "round_type_raw": "Series A / growth-stage round",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-08-12",
+    "money_raised_raw": "AUD 17,300,000",
+    "amount": 17300000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "OIF Ventures (A$9.6m); Bailador Technology Investments (A$7.7m)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.oifventures.com.au/insights/fitness-software-startup-hapana-presses-17-3-million-series-a-for-global-push",
+    "verification_notes": "Investor and ASX-backed sources reconcile the full A$17.3m round and the allocation between both investors.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:hapana"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:e3078dba8c761e312150",
+      "source:url:76c71125f3a0072560a5"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

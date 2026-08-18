@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-149",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-149",
+    "dedupe_key": "2024|forever-network|2024-03-26|series_a",
+    "source_url": "https://www.capitalbrief.com/briefing/forever-network-to-drive-us-expansion-with-6m-series-a-funding-7b5efee4-b9d8-4cd8-8f33-3cffefef560e/",
+    "source_payload": {
+      "deal_number": 149,
+      "csv_investee": "Forever Network",
+      "normalized_investee": "Forever Network",
+      "csv_date": "2024-03-26",
+      "normalized_date": "2024-03-26 announcement",
+      "csv_round": "Series A",
+      "normalized_round": "Series A first close",
+      "csv_amount": "USD 6,000,000",
+      "normalized_amount": "AUD 6,000,000 / approximately USD 4,000,000",
+      "csv_investors": "Yolo Investments (lead); Astralis Capital; Folklore Ventures; Three Kings Capital",
+      "normalized_investors": "Yolo Investments (lead); Three Kings Capital; Astralis Capital; other angels",
+      "verification": "corrected",
+      "correction_or_issue": "Reporting gives A$6m (about US$4m). Folklore was an earlier investor and explicitly did not participate in this Series A.",
+      "primary_source": "https://www.capitalbrief.com/briefing/forever-network-to-drive-us-expansion-with-6m-series-a-funding-7b5efee4-b9d8-4cd8-8f33-3cffefef560e/",
+      "secondary_source": "https://www.smartcompany.com.au/startupsmart/6-million-raise-forever-network-raise-sports-media-betting-igaming/"
+    },
+    "investee_name_raw": "Forever Network",
+    "org_location_raw": "Sydney, NSW, Australia / USA",
+    "org_website_raw": "https://www.forevernetwork.com/",
+    "org_industries_raw": "Sports Media / Gaming",
+    "round_type_raw": "Series A first close",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-03-26",
+    "money_raised_raw": "AUD 6,000,000 / approximately USD 4,000,000",
+    "amount": 6000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Yolo Investments (lead); Three Kings Capital; Astralis Capital; other angels",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.capitalbrief.com/briefing/forever-network-to-drive-us-expansion-with-6m-series-a-funding-7b5efee4-b9d8-4cd8-8f33-3cffefef560e/",
+    "verification_notes": "Reporting gives A$6m (about US$4m). Folklore was an earlier investor and explicitly did not participate in this Series A.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:forever-network"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:a7c17e6cd786fc7593ce",
+      "source:url:a082a92a99595816b249"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

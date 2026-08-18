@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:validient",
+  "operation": "upsert",
+  "data": {
+    "name": "Validient",
+    "website_url": "https://validient.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "GB",
+    "hq_state": null,
+    "hq_city": null,
+    "is_anz": false,
+    "sector_primary": "regtech-legal-tech",
+    "sector_secondary": null,
+    "use_case_primary": "compliance-management-and-customer-due-diligence-software-for-law-firms-and-other-regulated-professional-services-busine",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-saas",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Compliance-management and customer due-diligence software for law firms and other regulated professional-services businesses.",
+    "source_urls": [
+      "https://validient.com/",
+      "https://fintechwales.org/news/fintech-wales-member-validient-secures-300000-investment/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

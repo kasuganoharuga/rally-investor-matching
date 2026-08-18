@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-040",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-040",
+    "dedupe_key": "2024|hysata|2024-05-08|series_b",
+    "source_url": "https://hysata.com/news/hysata-announces-111m-usd-series-b-investment-round/",
+    "source_payload": {
+      "deal_number": 40,
+      "csv_investee": "Hysata",
+      "normalized_investee": "Hysata",
+      "csv_date": "2024-05-08",
+      "normalized_date": "2024-05-08",
+      "csv_round": "Series B",
+      "normalized_round": "Series B",
+      "csv_amount": "USD 111,000,000",
+      "normalized_amount": "USD 111,300,000",
+      "csv_investors": "BP Ventures; Templewater (co-leads); BlueScopeX; Hostplus; IDO Investments; IMM Investment Hong Kong; IP Group Australia; Kiko Ventures; Oman Investment Fund; Posco; POSCO E&C; Shinhan Financial Group; Telstra Super; Twin Towers Ventures; Vestas Ventures; Virescent Ventures",
+      "normalized_investors": "bp Ventures; Templewater (co-leads); IP Group Australia; Kiko Ventures; Virescent Ventures; Hostplus; Vestas Ventures; BlueScopeX; POSCO Holdings; POSCO E&C; IMM Investment Hong Kong; Shinhan Financial Group; Twin Towers Ventures; Oman Investment Authority / IDO; TelstraSuper",
+      "verification": "verified",
+      "correction_or_issue": "Official company announcement supplies exact US$111.3m and canonical investor names; merge Oman/IDO duplicate references.",
+      "primary_source": "https://hysata.com/news/hysata-announces-111m-usd-series-b-investment-round/",
+      "secondary_source": "https://www.investegate.info/announcement/rns/ip-group--ipo/hysata-completes-us-111m-series-b-funding-round/8184063"
+    },
+    "investee_name_raw": "Hysata",
+    "org_location_raw": "Wollongong, NSW, Australia",
+    "org_website_raw": "https://hysata.com",
+    "org_industries_raw": "Climate / Hydrogen / Industrial Hardware",
+    "round_type_raw": "Series B",
+    "round_stage": "series_b",
+    "funding_stage_raw": "Series B",
+    "announced_date": "2024-05-08",
+    "money_raised_raw": "USD 111,300,000",
+    "amount": 111300000,
+    "currency": "USD",
+    "amount_usd": 111300000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "bp Ventures; Templewater (co-leads); IP Group Australia; Kiko Ventures; Virescent Ventures; Hostplus; Vestas Ventures; BlueScopeX; POSCO Holdings; POSCO E&C; IMM Investment Hong Kong; Shinhan Financial Group; Twin Towers Ventures; Oman Investment Authority / IDO; TelstraSuper",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://hysata.com/news/hysata-announces-111m-usd-series-b-investment-round/",
+    "verification_notes": "Official company announcement supplies exact US$111.3m and canonical investor names; merge Oman/IDO duplicate references.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:hysata"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:1d8bf157dbc3ceb8d0a3",
+      "source:url:d862b36c04330405bc84"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

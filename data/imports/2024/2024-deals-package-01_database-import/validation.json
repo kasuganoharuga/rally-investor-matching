@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "validated_at": "2026-08-14T00:00:00+09:30",
+  "errors": [],
+  "checks": [
+    "all_source_deals_have_exactly_one_import_or_exclusion_disposition",
+    "all_source_investors_have_exactly_one_create_dependency_or_exclusion_disposition",
+    "all_source_rows_reconciled",
+    "no_duplicate_record_keys",
+    "all_deal_investor_refs_resolve_to_exported_or_dependency_investors",
+    "all_funding_round_company_refs_resolve",
+    "all_payload_records_are_upserts",
+    "all_payload_files_are_sha256_manifested"
+  ],
+  "warnings": [
+    "Rows with incomplete public evidence are preserved as needs_more_data and are not silently upgraded.",
+    "Hold/reject investors are excluded from import and retained in excluded_investors.json.",
+    "Duplicate/out-of-window/out-of-scope financing rows are excluded from funding-round upserts and retained in excluded_deals.json.",
+    "Unresolved investor mentions are retained only where public evidence remains insufficient; four named relations were resolved through supplemental evidence."
+  ]
+}

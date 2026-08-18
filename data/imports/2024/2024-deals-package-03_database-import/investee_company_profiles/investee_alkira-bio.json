@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:alkira-bio",
+  "operation": "upsert",
+  "data": {
+    "name": "Alkira Bio",
+    "website_url": "https://alkira.bio/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Victoria",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "biotech-drug-discovery",
+    "sector_secondary": null,
+    "use_case_primary": "florey-institute-spinout-discovering-therapeutic-antibodies-against-complex-membrane-proteins",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "therapeutics-platform",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Florey Institute spinout discovering therapeutic antibodies against complex membrane proteins.",
+    "source_urls": [
+      "https://alkira.bio/",
+      "https://www.linkedin.com/posts/alkirabio_alkira-bio-is-excited-to-announce-that-we-activity-7214451990146240512-SOt-",
+      "https://www.biotechdaily.com.au/wp/wp-content/uploads/2024/07/BD-Biotech-Daily-Jul-8.pdf"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

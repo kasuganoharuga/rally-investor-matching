@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-459",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-459",
+    "dedupe_key": "2024|novolabs|2024-02-05|series_a",
+    "source_url": "https://www.nzherald.co.nz/business/feel-the-burn-novolabs-raises-funds-for-world-first-uv-disinfection-tech/WPZTVFADABC77JA6QQKYLHBCI4/",
+    "source_payload": {
+      "deal_number": 459,
+      "csv_investee": "NovoLabs",
+      "normalized_investee": "NovoLabs",
+      "csv_date": "2024-02-07",
+      "normalized_date": "2024-02-05/07",
+      "csv_round": "Series A",
+      "normalized_round": "Series A / strategic equity",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "NZD 1,000,000 for 7%",
+      "csv_investors": "Climate Venture Capital Fund",
+      "normalized_investors": "Climate Venture Capital Fund",
+      "verification": "verified",
+      "correction_or_issue": "Contemporaneous reporting discloses NZ$1m for a 7% stake, while the fund confirms the investment and strategic thesis.",
+      "primary_source": "https://www.nzherald.co.nz/business/feel-the-burn-novolabs-raises-funds-for-world-first-uv-disinfection-tech/WPZTVFADABC77JA6QQKYLHBCI4/",
+      "secondary_source": "https://climatevcfund.com/climate-venture-capital-fund-invests-in-novolabs/"
+    },
+    "investee_name_raw": "NovoLabs",
+    "org_location_raw": "Palmerston North, New Zealand",
+    "org_website_raw": "https://novolabs.co.nz/",
+    "org_industries_raw": "Water Tech / Climate Tech",
+    "round_type_raw": "Series A / strategic equity",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-02-05",
+    "money_raised_raw": "NZD 1,000,000 for 7%",
+    "amount": 1000000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Climate Venture Capital Fund",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-08_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.nzherald.co.nz/business/feel-the-burn-novolabs-raises-funds-for-world-first-uv-disinfection-tech/WPZTVFADABC77JA6QQKYLHBCI4/",
+    "verification_notes": "Contemporaneous reporting discloses NZ$1m for a 7% stake, while the fund confirms the investment and strategic thesis.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:novolabs"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": [
+      "source:url:e99301fad4a48b6a5af4",
+      "source:url:1e66fb09685bf73b1cc4"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

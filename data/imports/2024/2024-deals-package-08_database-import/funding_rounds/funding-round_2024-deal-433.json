@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-433",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-433",
+    "dedupe_key": "2024|bridgit-formerly-techlend|2024-06-11|series_a",
+    "source_url": "https://www.oifventures.com.au/insights/sydney-start-up-bridgit-has-raised-14-6m-as-it-takes-on-the-wealth-transfer-market",
+    "source_payload": {
+      "deal_number": 433,
+      "csv_investee": "Bridgit",
+      "normalized_investee": "Bridgit (formerly Techlend)",
+      "csv_date": "2024-06-11",
+      "normalized_date": "2024-06-11",
+      "csv_round": "Series A",
+      "normalized_round": "Series A extension plus separate debt facility",
+      "csv_amount": "AUD 14,600,000",
+      "normalized_amount": "AUD 14,600,000 equity + AUD 125,000,000 debt facility",
+      "csv_investors": "OIF Ventures",
+      "normalized_investors": "OIF Ventures (lead); Perennial Private Investments reported as participant",
+      "verification": "verified_split_financing",
+      "correction_or_issue": "A$14.6m equity and A$125m debt are separate; OIF confirms the raise.",
+      "primary_source": "https://www.oifventures.com.au/insights/sydney-start-up-bridgit-has-raised-14-6m-as-it-takes-on-the-wealth-transfer-market",
+      "secondary_source": "https://www.itnews.com.au/news/fintech-bridgit-raises-146m-in-series-a-round-608683"
+    },
+    "investee_name_raw": "Bridgit (formerly Techlend)",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://bridgit.com.au/",
+    "org_industries_raw": "Fintech / Proptech / Lending",
+    "round_type_raw": "Series A extension plus separate debt facility",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-06-11",
+    "money_raised_raw": "AUD 14,600,000 equity + AUD 125,000,000 debt facility",
+    "amount": 14600000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "OIF Ventures (lead); Perennial Private Investments reported as participant",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-08_database-import",
+    "verification_status": "verified_split_financing",
+    "verification_source_url": "https://www.oifventures.com.au/insights/sydney-start-up-bridgit-has-raised-14-6m-as-it-takes-on-the-wealth-transfer-market",
+    "verification_notes": "A$14.6m equity and A$125m debt are separate; OIF confirms the raise.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:bridgit"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": [
+      "source:url:c4682848fe707bd70ebd",
+      "source:url:829bad8a9d92da1300c5"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

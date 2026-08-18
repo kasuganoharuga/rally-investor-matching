@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-428",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-428",
+    "dedupe_key": "2024|quashed|2024-08|strategic",
+    "source_url": "https://www.turnersautogroup.co.nz/wp-content/uploads/2024/09/ASM-Preso-Sept-24-FINAL.pdf",
+    "source_payload": {
+      "deal_number": 428,
+      "csv_investee": "Quashed",
+      "normalized_investee": "Quashed",
+      "csv_date": "2024-08-13",
+      "normalized_date": "2024-08",
+      "csv_round": "Seed",
+      "normalized_round": "Strategic equity investment",
+      "csv_amount": "USD 1,000,000",
+      "normalized_amount": "NZD 1,000,000 for 13% stake",
+      "csv_investors": "Turners Automotive Group",
+      "normalized_investors": "Turners Automotive Group",
+      "verification": "corrected",
+      "correction_or_issue": "Turners' official presentation confirms a local NZ$1m strategic investment and 13% stake; CSV currency is wrong.",
+      "primary_source": "https://www.turnersautogroup.co.nz/wp-content/uploads/2024/09/ASM-Preso-Sept-24-FINAL.pdf",
+      "secondary_source": "https://quashed.co.nz/"
+    },
+    "investee_name_raw": "Quashed",
+    "org_location_raw": "Auckland, New Zealand",
+    "org_website_raw": "https://quashed.co.nz/",
+    "org_industries_raw": "Insurtech / Marketplace",
+    "round_type_raw": "Strategic equity investment",
+    "round_stage": "strategic",
+    "funding_stage_raw": "Seed",
+    "announced_date": null,
+    "money_raised_raw": "NZD 1,000,000 for 13% stake",
+    "amount": 1000000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Turners Automotive Group",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-08_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.turnersautogroup.co.nz/wp-content/uploads/2024/09/ASM-Preso-Sept-24-FINAL.pdf",
+    "verification_notes": "Turners' official presentation confirms a local NZ$1m strategic investment and 13% stake; CSV currency is wrong.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:quashed"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": [
+      "source:url:d342711d942c99c1ff36",
+      "source:url:f2ade26a7b5fdc23e89d"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

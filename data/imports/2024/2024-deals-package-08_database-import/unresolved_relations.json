@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-08_database-import",
+  "counts": {
+    "created_relations": 60,
+    "unresolved_or_unnamed": 14,
+    "excluded_by_investor_policy": 1
+  },
+  "unresolved_relations": [
+    {
+      "deal_number": 422,
+      "token": "UNSW Founders / Health 10x relationship",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 426,
+      "token": "Undisclosed / no verified investor",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 431,
+      "token": "Outlier Ventures and Futureverse (program partners/support)",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 437,
+      "token": "angels",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 439,
+      "token": "other investors undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 440,
+      "token": "Undisclosed investors",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 441,
+      "token": "Existing investors",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 446,
+      "token": "Undisclosed / no verified investor",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 454,
+      "token": "Undisclosed / no verified investor",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 455,
+      "token": "Undisclosed lead investor",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 455,
+      "token": "five new shareholders reported",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 461,
+      "token": "Aspire NZ Seed Fund is a verified shareholder but current-round participation is not public",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 464,
+      "token": "Undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 466,
+      "token": "Undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    }
+  ],
+  "excluded_relations": [
+    {
+      "deal_number": 441,
+      "token": "Tim Poskitt attributed by database only",
+      "canonical_investor": "Timothy Poskitt",
+      "action": "hold_unresolved",
+      "reason": "Dealroom attributes the 2024 round, but stronger reporting only says existing investors and names him as a 2020 investor."
+    }
+  ],
+  "resolved_by_supplement": []
+}

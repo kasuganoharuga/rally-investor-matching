@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:brainfish",
+  "operation": "upsert",
+  "data": {
+    "name": "Brainfish",
+    "website_url": "https://www.brainfishai.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "enterprise-ai-customer-support",
+    "sector_secondary": null,
+    "use_case_primary": "ai-customer-support-platform-learning-from-company-knowledge-to-resolve-queries-across-digital-service-channels",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-saas",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "ai_related",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "AI customer-support platform learning from company knowledge to resolve queries across digital service channels.",
+    "source_urls": [
+      "https://www.brainfishai.com/",
+      "https://www.hsfkramer.com/news/2024-05/hsf-advises-brainfish-on-a3-85-million-capital-raising",
+      "https://www.peakxv.com/companies/brainfish"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

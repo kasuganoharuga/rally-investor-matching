@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:mushroom-material",
+  "operation": "upsert",
+  "data": {
+    "name": "Mushroom Material",
+    "website_url": "https://www.mushroommaterial.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "NZ",
+    "hq_state": null,
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "climate-tech-advanced-materials",
+    "sector_secondary": null,
+    "use_case_primary": "biomaterials-company-producing-compostable-fungi-based-protective-packaging-designed-to-replace-polystyrene-and-cardboar",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "materials-manufacturing",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Biomaterials company producing compostable, fungi-based protective packaging designed to replace polystyrene and cardboard.",
+    "source_urls": [
+      "https://www.mushroommaterial.com/",
+      "https://www.linkedin.com/posts/shaun-seaman_mushroommaterial-sustainability-biomaterials-activity-7226435759602331650-_grX",
+      "https://www.nbr.co.nz/tech/material-startup-mushroom-material-raises-8m-in-seed-round/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

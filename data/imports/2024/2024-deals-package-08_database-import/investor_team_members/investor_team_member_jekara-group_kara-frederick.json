@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_team_members",
+  "record_key": "investor_team_member:jekara-group:kara-frederick",
+  "operation": "upsert",
+  "data": {
+    "contact_id": null,
+    "first_name": "Kara",
+    "last_name": "Frederick",
+    "role_title": "Managing Partner",
+    "seniority": "partner",
+    "linkedin_url": "https://au.linkedin.com/in/karafrederick",
+    "claimed_focus": [
+      "decision_maker",
+      "deal_spokesperson"
+    ],
+    "bio_summary": "Managing Partner; quoted by NET on the commercial potential of electric road freight.",
+    "source_url": "https://www.jekaragroup.com/",
+    "retrieved_at": "2026-07-16",
+    "is_active": true
+  },
+  "refs": {
+    "investor_key": "investor:jekara-group",
+    "contact_key": null
+  },
+  "provenance": {
+    "collection_run_key": "collection:research:2026-07-24",
+    "source_keys": [
+      "research_source:jekara:jek_src_001"
+    ]
+  },
+  "review": {
+    "status": "unreviewed",
+    "issues": []
+  }
+}

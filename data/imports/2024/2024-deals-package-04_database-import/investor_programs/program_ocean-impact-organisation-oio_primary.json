@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_programs",
+  "record_key": "program:ocean-impact-organisation-oio:primary",
+  "operation": "upsert",
+  "data": {
+    "name": "Ocean Impact Organisation (OIO)",
+    "program_type": "accelerator",
+    "status": "unknown",
+    "application_url": null,
+    "eligibility_mode": "conditional",
+    "eligibility_rules": [],
+    "eligibility_rules_status": "unknown_after_existing_official_source_review",
+    "source_url": "https://www.ocean-impact.org/",
+    "evidence_source_urls": [
+      "https://www.ocean-impact.org/"
+    ],
+    "last_verified_at": "2026-08-14",
+    "review_notes": "Accelerator/operator identity is confirmed; current program-specific eligibility and cohort terms require verification."
+  },
+  "refs": {
+    "investor_key": "investor:ocean-impact-organisation-oio"
+  },
+  "provenance": {
+    "source": "2024_investor_dedupe_accelerator_annotation",
+    "source_keys": [
+      "https://www.ocean-impact.org/"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Current program-specific eligibility rules and cohort terms require verification."
+    ]
+  }
+}

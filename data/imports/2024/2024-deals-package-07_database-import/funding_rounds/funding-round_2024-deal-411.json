@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-411",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-411",
+    "dedupe_key": "2024|kinoxis-therapeutics|2024-08-12|series_b",
+    "source_url": "https://kinoxistherapeutics.com/kinoxis-secures-14-5m-in-funding-and-announces-expansion-of-clinical-programs-to-target-agitation-and-aggression-in-dementia-patients/",
+    "source_payload": {
+      "deal_number": 411,
+      "csv_investee": "Kinoxis Therapeutics",
+      "normalized_investee": "Kinoxis Therapeutics",
+      "csv_date": "2024-08-12",
+      "normalized_date": "2024-08-12",
+      "csv_round": "Series B",
+      "normalized_round": "Series B",
+      "csv_amount": "AUD 14,500,000",
+      "normalized_amount": "AUD 14,500,000",
+      "csv_investors": "Avicella Capital; Stoic VC; Uniseed; UniSuper; University of Sydney",
+      "normalized_investors": "Avicella Capital; Stoic VC; Uniseed; UniSuper; University of Sydney; sophisticated investors",
+      "verification": "verified",
+      "correction_or_issue": "Official company release confirms the amount, stage and named investors.",
+      "primary_source": "https://kinoxistherapeutics.com/kinoxis-secures-14-5m-in-funding-and-announces-expansion-of-clinical-programs-to-target-agitation-and-aggression-in-dementia-patients/",
+      "secondary_source": "https://www.owler.com/company/kinoxistherapeutics/funding"
+    },
+    "investee_name_raw": "Kinoxis Therapeutics",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "http://www.kinoxistherapeutics.com/",
+    "org_industries_raw": "Biotech / CNS Therapeutics",
+    "round_type_raw": "Series B",
+    "round_stage": "series_b",
+    "funding_stage_raw": "Series B",
+    "announced_date": "2024-08-12",
+    "money_raised_raw": "AUD 14,500,000",
+    "amount": 14500000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Avicella Capital; Stoic VC; Uniseed; UniSuper; University of Sydney; sophisticated investors",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://kinoxistherapeutics.com/kinoxis-secures-14-5m-in-funding-and-announces-expansion-of-clinical-programs-to-target-agitation-and-aggression-in-dementia-patients/",
+    "verification_notes": "Official company release confirms the amount, stage and named investors. Independent funding history corroborates the August 2024 A$14.5m Series B and investor group. Independent funding history corroborates the August 2024 A$14.5m Series B and investor group. Independent funding history corroborates the August 2024 A$14.5m Series B and investor group.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day",
+    "secondary_source_status": "corroborated",
+    "supplemental_verification_urls": [
+      "https://www.owler.com/company/kinoxistherapeutics/funding"
+    ]
+  },
+  "refs": {
+    "investee_company_key": "company:research:kinoxis-therapeutics"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:c77bac5c97c6882e79db"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

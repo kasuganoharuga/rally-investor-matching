@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_web_profiles",
+  "record_key": "investor_web_profile:shasta-ventures:2026-08-14",
+  "operation": "upsert",
+  "data": {
+    "source_urls": [
+      "https://www.shasta.vc/",
+      "https://www.linkedin.com/company/shasta-ventures",
+      "https://www.dawnaerospace.com/latest-news/dawn-aerospace-closes-us25-million-series-b",
+      "https://www.crunchbase.com/organization/shasta-ventures"
+    ],
+    "retrieved_at": "2026-08-14",
+    "website_status": "verified_public_profile",
+    "raw_content_hash": null,
+    "raw_content_ref": null,
+    "extraction_model": "codex-2024-investor-dedupe-update",
+    "extraction_version": "1.0.0",
+    "confidence": "medium",
+    "claimed_thesis": "Technology",
+    "claimed_stages": [
+      "Seed onward"
+    ],
+    "claimed_sectors": [
+      "Technology"
+    ],
+    "claimed_geographies": [
+      "United States"
+    ],
+    "claimed_business_models": [],
+    "claimed_cheque_min": null,
+    "claimed_cheque_max": null,
+    "claimed_cheque_currency": null,
+    "contact_emails": [
+      "info@shasta.vc"
+    ],
+    "application_url": null,
+    "contact_notes": "Sector reporting confirms significant participation in the first close. | Previously processed in Group 16; company confirms follow-on.",
+    "is_current": true,
+    "superseded_at": null
+  },
+  "refs": {
+    "investor_key": "investor:shasta-ventures"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "research_source:shasta-ventures:shasta_ventures_src_001",
+      "research_source:shasta-ventures:shasta_ventures_src_002",
+      "research_source:shasta-ventures:shasta_ventures_src_003",
+      "research_source:shasta-ventures:shasta_ventures_src_004"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Research collection status: partial",
+      "crunchbase_content_blocked",
+      "recent_deal_history_not_exhaustive",
+      "deal_specific_cheque_not_disclosed",
+      "team_coverage_partial"
+    ]
+  }
+}

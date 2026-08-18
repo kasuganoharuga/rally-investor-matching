@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-396",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-396",
+    "dedupe_key": "2024|kiwifibre-innovations|2024-02-09|program_or_grant",
+    "source_url": "https://www.cbinsights.com/company/kiwifibre-innovations/financials",
+    "source_payload": {
+      "deal_number": 396,
+      "csv_investee": "KiwiFibre",
+      "normalized_investee": "KiwiFibre Innovations",
+      "csv_date": "2024-02-08",
+      "normalized_date": "2024-02-09",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Startmate accelerator convertible note",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "AUD 120,000 program investment (about USD 80k)",
+      "csv_investors": "Startmate",
+      "normalized_investors": "Startmate",
+      "verification": "corrected_program",
+      "correction_or_issue": "Startmate participation is verified. Funding databases report about US$80k, consistent with the program's A$120k standard investment.",
+      "primary_source": "https://www.cbinsights.com/company/kiwifibre-innovations/financials",
+      "secondary_source": "https://www.startmate.com/accelerator/program"
+    },
+    "investee_name_raw": "KiwiFibre Innovations",
+    "org_location_raw": "Christchurch, New Zealand",
+    "org_website_raw": "https://kiwifibre.com/",
+    "org_industries_raw": "Advanced Materials / Climate Tech",
+    "round_type_raw": "Startmate accelerator convertible note",
+    "round_stage": "program_or_grant",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-02-09",
+    "money_raised_raw": "AUD 120,000 program investment (about USD 80k)",
+    "amount": 120000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Startmate",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "corrected_program",
+    "verification_source_url": "https://www.cbinsights.com/company/kiwifibre-innovations/financials",
+    "verification_notes": "Startmate participation is verified. Funding databases report about US$80k, consistent with the program's A$120k standard investment.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:kiwifibre"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:d361080a1a77b2d76f88",
+      "source:url:a3010bfbbec556b96728"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

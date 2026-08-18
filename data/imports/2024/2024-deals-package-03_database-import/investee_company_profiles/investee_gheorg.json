@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:gheorg",
+  "operation": "upsert",
+  "data": {
+    "name": "Gheorg",
+    "website_url": "https://www.gheorg.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "digital-health-mental-health-ai",
+    "sector_secondary": null,
+    "use_case_primary": "child-focused-mental-health-app-using-evidence-based-activities-and-conversational-support-to-build-resilience-and-manag",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2c-clinical-support-platform",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Child-focused mental-health app using evidence-based activities and conversational support to build resilience and manage anxiety.",
+    "source_urls": [
+      "https://www.gheorg.com/",
+      "https://www.linkedin.com/company/gheorg",
+      "https://bouncewatch.com/explore/startup/gheorg"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

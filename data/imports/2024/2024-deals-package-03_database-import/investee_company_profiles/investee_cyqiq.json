@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:cyqiq",
+  "operation": "upsert",
+  "data": {
+    "name": "CYQIQ",
+    "website_url": "https://www.cyqiq.io/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Victoria",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "enterprise-ai-analytics",
+    "sector_secondary": null,
+    "use_case_primary": "ai-assisted-data-analysis-platform-for-consultants-combining-automated-financial-and-qualitative-analysis-with-chat-sear",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-saas",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "ai_related",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "AI-assisted data-analysis platform for consultants, combining automated financial and qualitative analysis with chat search.",
+    "source_urls": [
+      "https://www.cyqiq.io/",
+      "https://www.linkedin.com/posts/richard-hruby_cyqiq-skydeck-saas-activity-7060019988266438656-JSLv",
+      "https://skydeck.berkeley.edu/invest/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

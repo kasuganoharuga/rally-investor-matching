@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:rise",
+  "operation": "upsert",
+  "data": {
+    "name": "RISE",
+    "website_url": "https://www.risechain.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "blockchain-infrastructure",
+    "sector_secondary": null,
+    "use_case_primary": "high-performance-ethereum-layer-2-blockchain-designed-for-gigagas-scale-transaction-throughput",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "protocol-developer-platform",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "High-performance Ethereum layer-2 blockchain designed for gigagas-scale transaction throughput.",
+    "source_urls": [
+      "https://www.risechain.com/",
+      "https://www.theblock.co/amp/post/316493/rise-the-gigagas-layer-2-announces-its-3-2m-seed-round"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

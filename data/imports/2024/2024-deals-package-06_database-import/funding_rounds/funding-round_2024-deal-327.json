@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-327",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-327",
+    "dedupe_key": "2024|femtek|2024-03-28|seed",
+    "source_url": "https://www.linkedin.com/posts/arcanys-ventures_arcanys-ventures-welcomes-femtek-the-world-activity-7176062765227229184-FHvv",
+    "source_payload": {
+      "deal_number": 327,
+      "csv_investee": "Femtek",
+      "normalized_investee": "Femtek",
+      "csv_date": "2024-03-28",
+      "normalized_date": "2024-03-28",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "AUD 1,000,000",
+      "normalized_amount": "AUD 1,000,000",
+      "csv_investors": "Arcanys Ventures; Techstars",
+      "normalized_investors": "Arcanys Ventures (lead); Techstars Tech Central Sydney; angels",
+      "verification": "verified",
+      "correction_or_issue": "Arcanys and contemporaneous reporting confirm the A$1m hardware seed round and Techstars participation.",
+      "primary_source": "https://www.linkedin.com/posts/arcanys-ventures_arcanys-ventures-welcomes-femtek-the-world-activity-7176062765227229184-FHvv",
+      "secondary_source": "https://www.overnightsuccess.vc/p/6th-april-2024"
+    },
+    "investee_name_raw": "Femtek",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.femtek.co/",
+    "org_industries_raw": "Femtech / Wearables",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-03-28",
+    "money_raised_raw": "AUD 1,000,000",
+    "amount": 1000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Arcanys Ventures (lead); Techstars Tech Central Sydney; angels",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.linkedin.com/posts/arcanys-ventures_arcanys-ventures-welcomes-femtek-the-world-activity-7176062765227229184-FHvv",
+    "verification_notes": "Arcanys and contemporaneous reporting confirm the A$1m hardware seed round and Techstars participation.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:femtek"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:7b58b1235a80133a48c6",
+      "source:url:8faffb73a91646377765"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "table": "deal_investors",
+  "record_key": "deal_investor:research-package:2024-deal-104:digital-asset-capital-management",
+  "operation": "upsert",
+  "data": {
+    "raw_name": "DACM",
+    "role": "participant",
+    "participation_status": "confirmed",
+    "resolution": "resolved",
+    "resolution_confidence": "high",
+    "identity_resolution": "existing_investor_deduped"
+  },
+  "refs": {
+    "deal_key": "funding_round:research-package:2024-deal-104",
+    "investor_key": "investor:digital-asset-capital-management",
+    "raw_investor_candidate_key": "raw_investor_candidate:dacm"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

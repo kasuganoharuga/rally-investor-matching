@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-345",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-345",
+    "dedupe_key": "2024|shopsensei|2024-database-record-only|seed",
+    "source_url": "https://www.cdpventurecapital.it/en/",
+    "source_payload": {
+      "deal_number": 345,
+      "csv_investee": "ShopSensei",
+      "normalized_investee": "ShopSensei",
+      "csv_date": "2024-08-10",
+      "normalized_date": "2024 (database record only)",
+      "csv_round": "Seed",
+      "normalized_round": "Seed / database-only",
+      "csv_amount": "USD 250,000",
+      "normalized_amount": "Unverified",
+      "csv_investors": "CDP Venture Capital",
+      "normalized_investors": "CDP Venture Capital (database attribution only)",
+      "verification": "needs_review",
+      "correction_or_issue": "A portfolio/database trace exists, but no primary announcement or reliable amount/date evidence was found. Do not create the investor relationship automatically.",
+      "primary_source": "https://www.cdpventurecapital.it/en/",
+      "secondary_source": "https://teaserclub.com/investors/cdp-venture-capital"
+    },
+    "investee_name_raw": "ShopSensei",
+    "org_location_raw": "Cairns, QLD, Australia (database location)",
+    "org_website_raw": "https://shopsensei.site/",
+    "org_industries_raw": "Retail Tech / AI",
+    "round_type_raw": "Seed / database-only",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": null,
+    "money_raised_raw": "Unverified",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "CDP Venture Capital (database attribution only)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://www.cdpventurecapital.it/en/",
+    "verification_notes": "A portfolio/database trace exists, but no primary announcement or reliable amount/date evidence was found. Do not create the investor relationship automatically.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown",
+    "amount_disclosure_status": "no_reliable_amount_or_event_source",
+    "amount_structuring_note": "A portfolio trace exists, but no primary announcement or reliable amount/date evidence was found.",
+    "supplemental_verification_urls": []
+  },
+  "refs": {
+    "investee_company_key": "company:research:shopsensei"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:b6f6f51ad1d173f1f38d",
+      "source:url:15988ea2ec1dfc429cc6"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "A portfolio/database trace exists, but no primary announcement or reliable amount/date evidence was found. Do not create the investor relationship automatically.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

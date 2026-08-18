@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-402",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-402",
+    "dedupe_key": "2024|national-renewable-network|2024-06-28|series_a",
+    "source_url": "https://www.capitalbrief.com/article/national-renewable-network-brings-investible-on-board-as-it-plots-path-to-series-a-443e433a-9e6a-4531-b003-0734ff5b9347/",
+    "source_payload": {
+      "deal_number": 402,
+      "csv_investee": "National Renewable Network",
+      "normalized_investee": "National Renewable Network",
+      "csv_date": "2024-06-27",
+      "normalized_date": "2024-06-28 report",
+      "csv_round": "Seed",
+      "normalized_round": "Pre-Series A bridge",
+      "csv_amount": "AUD 1,000,000",
+      "normalized_amount": "AUD 1,000,000",
+      "csv_investors": "Electrifi Ventures; Investible",
+      "normalized_investors": "Investible Climate Tech Fund (lead); Electrifi Ventures",
+      "verification": "verified",
+      "correction_or_issue": "Contemporaneous reporting confirms the bridge and lead; database evidence corroborates Electrifi.",
+      "primary_source": "https://www.capitalbrief.com/article/national-renewable-network-brings-investible-on-board-as-it-plots-path-to-series-a-443e433a-9e6a-4531-b003-0734ff5b9347/",
+      "secondary_source": "https://www.crunchbase.com/organization/national-renewable-network"
+    },
+    "investee_name_raw": "National Renewable Network",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://nrn.com.au/",
+    "org_industries_raw": "Climate Tech / Distributed Energy",
+    "round_type_raw": "Pre-Series A bridge",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-06-28",
+    "money_raised_raw": "AUD 1,000,000",
+    "amount": 1000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Investible Climate Tech Fund (lead); Electrifi Ventures",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.capitalbrief.com/article/national-renewable-network-brings-investible-on-board-as-it-plots-path-to-series-a-443e433a-9e6a-4531-b003-0734ff5b9347/",
+    "verification_notes": "Contemporaneous reporting confirms the bridge and lead; database evidence corroborates Electrifi.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:national-renewable-network"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:b71c11c1c78b4dec5a7e",
+      "source:url:6a38bf6b1786042674d2"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

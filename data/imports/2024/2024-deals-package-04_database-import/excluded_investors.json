@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-04_database-import",
+  "counts": {
+    "source_investors": 75,
+    "excluded": 14
+  },
+  "excluded_investors": [
+    {
+      "source_name": "Dovetail Ventures",
+      "canonical_investor": "Dovetail Ventures",
+      "action": "do_not_create",
+      "related_deals": "Fluenccy",
+      "website": null,
+      "reason": "Historical Fluenccy backer; no 2024 round, so do not create from this deal.",
+      "source_excel_row": 25
+    },
+    {
+      "source_name": "Founder Institute Australia New Zealand",
+      "canonical_investor": "Founder Institute Australia & New Zealand",
+      "action": "do_not_create",
+      "related_deals": "ivygo; Sanux",
+      "website": "https://fi.co/s/australia",
+      "reason": "Official portfolio relationship does not establish an investment. | Official portfolio relationship does not establish invested capital.",
+      "source_excel_row": 26
+    },
+    {
+      "source_name": "Futureverse",
+      "canonical_investor": "Futureverse",
+      "action": "do_not_create",
+      "related_deals": "GymVibe",
+      "website": "https://www.futureverse.com/",
+      "reason": "Program sponsor/technology ecosystem; not independently shown as the investing entity.",
+      "source_excel_row": 27
+    },
+    {
+      "source_name": "Balaji Srinivasan; Chris Anderson; Fredrik Wester; Marc Andreessen",
+      "canonical_investor": "Quillette claimed investor set",
+      "action": "do_not_create",
+      "related_deals": "Quillette",
+      "website": null,
+      "reason": "No reliable 2024 deal corroboration; do not create or link from this row.",
+      "source_excel_row": 28
+    },
+    {
+      "source_name": "The Jagen Group",
+      "canonical_investor": "The Jagen Group",
+      "action": "do_not_create",
+      "related_deals": "Tutero (historical 2023)",
+      "website": null,
+      "reason": "Named in the 2023 round only; this rejected 2024 row does not justify creation.",
+      "source_excel_row": 29
+    },
+    {
+      "source_name": "FB10x adVentures",
+      "canonical_investor": "FB10x adVentures",
+      "action": "hold_unresolved",
+      "related_deals": "VOLI",
+      "website": null,
+      "reason": "Identity and exact 2024 VOLI financing were not independently corroborated.",
+      "source_excel_row": 30
+    },
+    {
+      "source_name": "Kentof Family Investments",
+      "canonical_investor": "Kentof Family Investments",
+      "action": "hold_unresolved",
+      "related_deals": "Earnr",
+      "website": null,
+      "reason": "Investor identity and 2024 Earnr relationship were not independently corroborated.",
+      "source_excel_row": 31
+    },
+    {
+      "source_name": "Loyal VC",
+      "canonical_investor": "Loyal VC",
+      "action": "hold_unresolved",
+      "related_deals": "Cellr",
+      "website": "https://www.loyal.vc/",
+      "reason": "Investor identity is valid, but the Cellr January 2024 participation is supported only by Dealroom.",
+      "source_excel_row": 32
+    },
+    {
+      "source_name": "Paloma Ventures",
+      "canonical_investor": "Paloma Capital / Paloma Group",
+      "action": "hold_unresolved",
+      "related_deals": "Taper",
+      "website": "https://www.palomagroup.com/",
+      "reason": "Firm identity is valid, but no primary evidence tied it to the exact Taper 2024 row.",
+      "source_excel_row": 33
+    },
+    {
+      "source_name": "Sequoia Capital",
+      "canonical_investor": "Sequoia Capital",
+      "action": "hold_unresolved",
+      "related_deals": "Effie AI",
+      "website": "https://www.sequoiacap.com/",
+      "reason": "Only the company's social funding profile names Sequoia; no Sequoia or independent announcement found.",
+      "source_excel_row": 34
+    },
+    {
+      "source_name": "Sora Ventures",
+      "canonical_investor": "Sora Ventures",
+      "action": "hold_unresolved",
+      "related_deals": "Swell Network",
+      "website": "https://www.sora.vc/",
+      "reason": "Firm identity is valid, but company-specific participation is only database-led.",
+      "source_excel_row": 35
+    },
+    {
+      "source_name": "Star Beta",
+      "canonical_investor": "Star Beta",
+      "action": "hold_unresolved",
+      "related_deals": "Mozaic",
+      "website": null,
+      "reason": "Only funding-directory evidence supports the exact 2024 round; hold new creation.",
+      "source_excel_row": 36
+    },
+    {
+      "source_name": "Utiliti Group",
+      "canonical_investor": "Utiliti Group",
+      "action": "hold_unresolved",
+      "related_deals": "Quantflo (prior relationship)",
+      "website": null,
+      "reason": "A prior relationship is listed by a funding database, but identity and transaction evidence were not sufficiently corroborated.",
+      "source_excel_row": 37
+    },
+    {
+      "source_name": "Wolf Capital Ventures",
+      "canonical_investor": "Wolf Capital Ventures",
+      "action": "hold_unresolved",
+      "related_deals": "Enevaro (historical relationship)",
+      "website": null,
+      "reason": "Investor is tied to carbonTRACK's 2015 seed, not proven in the 2024 Series B entry.",
+      "source_excel_row": 38
+    }
+  ]
+}

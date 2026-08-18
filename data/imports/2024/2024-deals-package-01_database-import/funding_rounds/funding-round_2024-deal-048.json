@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-048",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-048",
+    "dedupe_key": "2024|drift-protocol|2024-09-19|series_b",
+    "source_url": "https://www.drift.trade/updates/drift-raises-25m-in-series-b-funding-led-by-multicoin",
+    "source_payload": {
+      "deal_number": 48,
+      "csv_investee": "Drift",
+      "normalized_investee": "Drift Protocol",
+      "csv_date": "2024-09-19",
+      "normalized_date": "2024-09-19",
+      "csv_round": "Series B",
+      "normalized_round": "Series B",
+      "csv_amount": "USD 25,000,000",
+      "normalized_amount": "USD 25,000,000",
+      "csv_investors": "Blockchain Capital; Folius; Maelstrom; Multicoin; Primitive; WAGMI",
+      "normalized_investors": "Multicoin Capital (lead); Blockchain Capital; Primitive Ventures; Folius Ventures",
+      "verification": "verified",
+      "correction_or_issue": "Official release omits Maelstrom and WAGMI; remove unconfirmed names.",
+      "primary_source": "https://www.drift.trade/updates/drift-raises-25m-in-series-b-funding-led-by-multicoin",
+      "secondary_source": "https://solanafloor.com/news/drift-protocol-secures-25-m-in-series-b-as-de-fi-derivatives-and-prediction-markets-boom"
+    },
+    "investee_name_raw": "Drift Protocol",
+    "org_location_raw": "Global; Solana ecosystem",
+    "org_website_raw": "https://www.drift.trade/",
+    "org_industries_raw": "Crypto / DeFi",
+    "round_type_raw": "Series B",
+    "round_stage": "series_b",
+    "funding_stage_raw": "Series B",
+    "announced_date": "2024-09-19",
+    "money_raised_raw": "USD 25,000,000",
+    "amount": 25000000,
+    "currency": "USD",
+    "amount_usd": 25000000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Multicoin Capital (lead); Blockchain Capital; Primitive Ventures; Folius Ventures",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.drift.trade/updates/drift-raises-25m-in-series-b-funding-led-by-multicoin",
+    "verification_notes": "Official release omits Maelstrom and WAGMI; remove unconfirmed names. Contemporaneous industry report corroborates the US$25m Series B. Contemporaneous industry report corroborates the US$25m Series B. Contemporaneous industry report corroborates the US$25m Series B.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day",
+    "secondary_source_status": "corroborated",
+    "supplemental_verification_urls": [
+      "https://solanafloor.com/news/drift-protocol-secures-25-m-in-series-b-as-de-fi-derivatives-and-prediction-markets-boom"
+    ]
+  },
+  "refs": {
+    "investee_company_key": "company:research:drift-protocol"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:0278942a4605210edb52"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

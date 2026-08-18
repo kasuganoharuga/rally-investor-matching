@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-131",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-131",
+    "dedupe_key": "2024|hale-animal-health|2024-04-19|seed",
+    "source_url": "https://globalpetindustry.com/news/new-zealand-pet-cannabis-start-up-closes-seed-round/",
+    "source_payload": {
+      "deal_number": 131,
+      "csv_investee": "Hale Animal Health",
+      "normalized_investee": "Hale Animal Health",
+      "csv_date": "2024-04-19",
+      "normalized_date": "2024-04-19",
+      "csv_round": "Seed",
+      "normalized_round": "Seed / convertible note",
+      "csv_amount": "NZD 2,000,000",
+      "normalized_amount": "NZD 2,000,000",
+      "csv_investors": "WNT Ventures",
+      "normalized_investors": "WNT Ventures (lead)",
+      "verification": "verified",
+      "correction_or_issue": "Reporting and company ownership data confirm the NZ$2m round led by WNT Ventures.",
+      "primary_source": "https://globalpetindustry.com/news/new-zealand-pet-cannabis-start-up-closes-seed-round/",
+      "secondary_source": "https://www.companyhub.nz/companyDetails.cfm?nzbn=9429048115315"
+    },
+    "investee_name_raw": "Hale Animal Health",
+    "org_location_raw": "Auckland, New Zealand",
+    "org_website_raw": "https://haleanimal.co.nz/",
+    "org_industries_raw": "Animal Health / Pharmaceuticals",
+    "round_type_raw": "Seed / convertible note",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-04-19",
+    "money_raised_raw": "NZD 2,000,000",
+    "amount": 2000000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "WNT Ventures (lead)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://globalpetindustry.com/news/new-zealand-pet-cannabis-start-up-closes-seed-round/",
+    "verification_notes": "Reporting and company ownership data confirm the NZ$2m round led by WNT Ventures.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:hale-animal-health"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:923459fae7334d2eca5e",
+      "source:url:73e5c61898e0054c2776"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

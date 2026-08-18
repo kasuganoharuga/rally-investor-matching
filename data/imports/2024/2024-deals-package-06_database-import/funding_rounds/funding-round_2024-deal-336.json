@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-336",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-336",
+    "dedupe_key": "2024|the-leaf-protein-co|2024-06-12|pre_seed",
+    "source_url": "https://www.businessnewsaustralia.com/articles/melbourne-startup-the-leaf-protein-co-to-photosynthesise--850k-seed-raise-into-new-growth.html",
+    "source_payload": {
+      "deal_number": 336,
+      "csv_investee": "The Leaf Protein Company",
+      "normalized_investee": "The Leaf Protein Co",
+      "csv_date": "2024-06-12",
+      "normalized_date": "2024-06-12",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-seed",
+      "csv_amount": "AUD 850,000",
+      "normalized_amount": "AUD 850,000",
+      "csv_investors": "Big Idea Ventures; LaunchVic; Loyal VC; University of Melbourne",
+      "normalized_investors": "University of Melbourne Genesis Pre-Seed Fund / Breakthrough Victoria (lead); LaunchVic Hugh Victor McKay Fund; Loyal VC",
+      "verification": "corrected",
+      "correction_or_issue": "Reporting confirms the A$850k round and clarifies the specific University/LaunchVic funds. Big Idea Ventures is a supporter but not clearly identified as a cheque in this close.",
+      "primary_source": "https://www.businessnewsaustralia.com/articles/melbourne-startup-the-leaf-protein-co-to-photosynthesise--850k-seed-raise-into-new-growth.html",
+      "secondary_source": "https://research.unimelb.edu.au/__data/assets/pdf_file/0009/5347062/Enterprising-Melbourne-Review_2024.pdf"
+    },
+    "investee_name_raw": "The Leaf Protein Co",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.theleafprotein.com/",
+    "org_industries_raw": "Foodtech / Alternative Protein",
+    "round_type_raw": "Pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-06-12",
+    "money_raised_raw": "AUD 850,000",
+    "amount": 850000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "University of Melbourne Genesis Pre-Seed Fund / Breakthrough Victoria (lead); LaunchVic Hugh Victor McKay Fund; Loyal VC",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.businessnewsaustralia.com/articles/melbourne-startup-the-leaf-protein-co-to-photosynthesise--850k-seed-raise-into-new-growth.html",
+    "verification_notes": "Reporting confirms the A$850k round and clarifies the specific University/LaunchVic funds. Big Idea Ventures is a supporter but not clearly identified as a cheque in this close.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:the-leaf-protein-co"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:0866d487f2d1f0e4e28c",
+      "source:url:abe60f08cf53a5b55b21"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

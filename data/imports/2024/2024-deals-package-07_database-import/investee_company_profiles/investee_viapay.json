@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:viapay",
+  "operation": "upsert",
+  "data": {
+    "name": "ViaPay",
+    "website_url": "https://viapay.ai/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Victoria",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "fintech-enterprise-ai",
+    "sector_secondary": null,
+    "use_case_primary": "agentic-ai-platform-automating-b2b-order-to-payment-workflows-invoicing-reconciliation-and-payments",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-saas",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "ai_related",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Agentic AI platform automating B2B order-to-payment workflows, invoicing, reconciliation and payments.",
+    "source_urls": [
+      "https://viapay.ai/",
+      "https://www.antler.co/blog/antler-australia-12th-residency-eight-new-ai-first-startup-investments"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

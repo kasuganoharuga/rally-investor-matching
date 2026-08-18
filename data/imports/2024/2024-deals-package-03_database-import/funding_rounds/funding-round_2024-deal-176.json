@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-176",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-176",
+    "dedupe_key": "2024|enrola|2024-10-04|pre_seed",
+    "source_url": "https://www.linkedin.com/pulse/last-week-australian-startups-87-7th-october-2024-haris-qureshi-zvkjc",
+    "source_payload": {
+      "deal_number": 176,
+      "csv_investee": "Enrola",
+      "normalized_investee": "Enrola",
+      "csv_date": "2024-10-04",
+      "normalized_date": "2024-10-04",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-Seed",
+      "csv_amount": "USD 800,000",
+      "normalized_amount": "AUD 800,000",
+      "csv_investors": "AfterWork Ventures; Antler; Skalata",
+      "normalized_investors": "AfterWork Ventures; Skalata Ventures; Antler Australia",
+      "verification": "corrected",
+      "correction_or_issue": "Multiple startup-industry sources confirm the A$800k round and three investors; CSV currency corrected from USD to AUD.",
+      "primary_source": "https://www.linkedin.com/pulse/last-week-australian-startups-87-7th-october-2024-haris-qureshi-zvkjc",
+      "secondary_source": "https://www.startupdaily.net/partner-content/antler-australia/antler-investor-memo-series-enrola-helps-students-find-right-educational-courses/"
+    },
+    "investee_name_raw": "Enrola",
+    "org_location_raw": "Brisbane, QLD, Australia",
+    "org_website_raw": "https://getenrola.com/",
+    "org_industries_raw": "Edtech / AI / Sales Automation",
+    "round_type_raw": "Pre-Seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-10-04",
+    "money_raised_raw": "AUD 800,000",
+    "amount": 800000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "AfterWork Ventures; Skalata Ventures; Antler Australia",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.linkedin.com/pulse/last-week-australian-startups-87-7th-october-2024-haris-qureshi-zvkjc",
+    "verification_notes": "Multiple startup-industry sources confirm the A$800k round and three investors; CSV currency corrected from USD to AUD.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:enrola"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:3c21d8b76a6749b81af1",
+      "source:url:5011b53b4400f6c8dbe8"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

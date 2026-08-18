@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-01_database-import",
+  "policy": "Duplicate, outside-window, out-of-scope, and explicitly rejected financing rows do not create funding-round upserts, but remain fully auditable here.",
+  "counts": {
+    "source_deals": 60,
+    "imported": 58,
+    "excluded": 2
+  },
+  "excluded_deals": [
+    {
+      "deal_number": 39,
+      "investee": "Squizify",
+      "verification": "outside_window",
+      "reason": "Stronger evidence says Coreline led the Series A in 2025; exclude this row from the 2024 package.",
+      "source_excel_row": 40,
+      "primary_source": "https://note.com/corelinevc_japan/n/n7934aacbd039",
+      "secondary_source": "https://www.overnightsuccess.vc/p/13th-december-2025"
+    },
+    {
+      "deal_number": 54,
+      "investee": "10six Games",
+      "verification": "outside_window",
+      "reason": "Welsh company incorporated Oct 2024; financing publicly announced in 2025. Exclude from 2024 package.",
+      "source_excel_row": 55,
+      "primary_source": "https://developmentbank.wales/news-and-events/game-industry-veterans-secure-angel-backing-genai-game-innovation",
+      "secondary_source": "https://find-and-update.company-information.service.gov.uk/company/16006090"
+    }
+  ]
+}

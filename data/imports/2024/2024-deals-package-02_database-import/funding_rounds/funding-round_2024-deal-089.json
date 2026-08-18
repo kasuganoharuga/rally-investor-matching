@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-089",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-089",
+    "dedupe_key": "2024|taly|2024-12-04|pre_seed",
+    "source_url": "https://www.startupdaily.net/topic/funding/personality-testing-ai-analysis-startup-taly-lands-500000-pre-seed-from-skalata/",
+    "source_payload": {
+      "deal_number": 89,
+      "csv_investee": "TALY",
+      "normalized_investee": "TALY",
+      "csv_date": "2024-12-04",
+      "normalized_date": "2024-12-04",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-Seed",
+      "csv_amount": "USD 500,000",
+      "normalized_amount": "AUD 500,000",
+      "csv_investors": "Skalata",
+      "normalized_investors": "Skalata",
+      "verification": "corrected",
+      "correction_or_issue": "Australian reporting confirms a $500k pre-seed led by Skalata; normalize currency to AUD.",
+      "primary_source": "https://www.startupdaily.net/topic/funding/personality-testing-ai-analysis-startup-taly-lands-500000-pre-seed-from-skalata/",
+      "secondary_source": "https://www.vcbacked.co/company/taly"
+    },
+    "investee_name_raw": "TALY",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.taly.com.au/",
+    "org_industries_raw": "HR Tech / AI",
+    "round_type_raw": "Pre-Seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-12-04",
+    "money_raised_raw": "AUD 500,000",
+    "amount": 500000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Skalata",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.startupdaily.net/topic/funding/personality-testing-ai-analysis-startup-taly-lands-500000-pre-seed-from-skalata/",
+    "verification_notes": "Australian reporting confirms a $500k pre-seed led by Skalata; normalize currency to AUD.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:taly"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:b5932380c375c8a0bf5a",
+      "source:url:a79d12b7a5002e8646cd"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:goodwork-ai",
+  "operation": "upsert",
+  "data": {
+    "name": "GoodWork.ai",
+    "website_url": "https://www.goodwork.ai/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "retail-tech-enterprise-ai",
+    "sector_secondary": null,
+    "use_case_primary": "ai-analytics-platform-for-retail-merchandise-finance-and-operations-teams",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-saas",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "ai_related",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "AI analytics platform for retail merchandise, finance and operations teams.",
+    "source_urls": [
+      "https://www.goodwork.ai/",
+      "https://www.capitalbrief.com/briefing/goodworkai-raises-4m-in-round-led-by-square-peg-87e67078-1f5c-44a5-bc3b-fb44f7a51694/",
+      "https://www.startupdaily.net/topic/funding/ai-retail-sales-analytics-startup-raises-4-million-seed-round/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

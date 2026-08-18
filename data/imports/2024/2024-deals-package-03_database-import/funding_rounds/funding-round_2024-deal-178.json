@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-178",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-178",
+    "dedupe_key": "2024|stakedgain|2024-05-10|seed",
+    "source_url": "https://www.accessnewswire.com/newsroom/en/blockchain-and-cryptocurrency/stakedgain-launches-with-500-000-seed-investment-redefining-crypto-sta-862103",
+    "source_payload": {
+      "deal_number": 178,
+      "csv_investee": "Stakedgain",
+      "normalized_investee": "StakedGain",
+      "csv_date": "2024-05-10",
+      "normalized_date": "2024-05-10",
+      "csv_round": "Seed",
+      "normalized_round": "Seed / private token funding",
+      "csv_amount": "USD 500,000",
+      "normalized_amount": "USD 500,000",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Undisclosed",
+      "verification": "needs_review",
+      "correction_or_issue": "A company-issued distribution confirms US$500k but names no investors and offers no independent financing evidence; retain for manual review.",
+      "primary_source": "https://www.accessnewswire.com/newsroom/en/blockchain-and-cryptocurrency/stakedgain-launches-with-500-000-seed-investment-redefining-crypto-sta-862103",
+      "secondary_source": "https://icodrops.com/stakedgain/"
+    },
+    "investee_name_raw": "StakedGain",
+    "org_location_raw": "Melbourne, VIC, Australia (claimed)",
+    "org_website_raw": "https://www.stakedgain.com/",
+    "org_industries_raw": "Web3 / DeFi",
+    "round_type_raw": "Seed / private token funding",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-05-10",
+    "money_raised_raw": "USD 500,000",
+    "amount": 500000,
+    "currency": "USD",
+    "amount_usd": 500000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://www.accessnewswire.com/newsroom/en/blockchain-and-cryptocurrency/stakedgain-launches-with-500-000-seed-investment-redefining-crypto-sta-862103",
+    "verification_notes": "A company-issued distribution confirms US$500k but names no investors and offers no independent financing evidence; retain for manual review.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:stakedgain"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:a30658b1ec265ed6586f",
+      "source:url:115cdd47e69c2b0a5744"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "A company-issued distribution confirms US$500k but names no investors and offers no independent financing evidence; retain for manual review."
+    ]
+  }
+}

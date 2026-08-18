@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-289",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-289",
+    "dedupe_key": "2024|imersian|2024-08-database-entry|pre_seed",
+    "source_url": "https://www.crunchbase.com/funding_round/imersian-pre-seed--716c95c4",
+    "source_payload": {
+      "deal_number": 289,
+      "csv_investee": "Imersian",
+      "normalized_investee": "Imersian",
+      "csv_date": "2024-08-17",
+      "normalized_date": "2024-08 database entry",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Unverified micro pre-seed",
+      "csv_amount": "USD 1,000",
+      "normalized_amount": "USD 1,000 (database-only)",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Undisclosed",
+      "verification": "needs_review",
+      "correction_or_issue": "The operating company and product are verified, but the US$1k financing entry has no named investor or public announcement and may be a database artifact.",
+      "primary_source": "https://www.crunchbase.com/funding_round/imersian-pre-seed--716c95c4",
+      "secondary_source": "https://www.imersian.com/pricing"
+    },
+    "investee_name_raw": "Imersian",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.imersian.com/",
+    "org_industries_raw": "Retail Tech / Spatial AI",
+    "round_type_raw": "Unverified micro pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "USD 1,000 (database-only)",
+    "amount": 1000,
+    "currency": "USD",
+    "amount_usd": 1000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://www.crunchbase.com/funding_round/imersian-pre-seed--716c95c4",
+    "verification_notes": "The operating company and product are verified, but the US$1k financing entry has no named investor or public announcement and may be a database artifact.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:imersian"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:14c5c5cb57e2715821bd",
+      "source:url:6a28fa11f2bdce6d8158"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "The operating company and product are verified, but the US$1k financing entry has no named investor or public announcement and may be a database artifact.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

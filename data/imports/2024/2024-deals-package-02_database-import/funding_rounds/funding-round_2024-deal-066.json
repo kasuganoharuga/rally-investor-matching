@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-066",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-066",
+    "dedupe_key": "2024|capstack|2024-12-14|unknown",
+    "source_url": "https://www.capstack.com.au/",
+    "source_payload": {
+      "deal_number": 66,
+      "csv_investee": "CapStack",
+      "normalized_investee": "CapStack",
+      "csv_date": "2024-12-14",
+      "normalized_date": "2024-12-14 (dataset-only)",
+      "csv_round": "Seed",
+      "normalized_round": "Unverified financing",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "No external investor confirmed",
+      "verification": "needs_review",
+      "correction_or_issue": "Operating commercial-finance advisory firm verified; no independent equity financing evidence found.",
+      "primary_source": "https://www.capstack.com.au/",
+      "secondary_source": null
+    },
+    "investee_name_raw": "CapStack",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.capstack.com.au/",
+    "org_industries_raw": "Financial Services / Commercial Finance",
+    "round_type_raw": "Unverified financing",
+    "round_stage": "unknown",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-12-14",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "No external investor confirmed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://www.capstack.com.au/",
+    "verification_notes": "Operating commercial-finance advisory firm verified; no independent equity financing evidence found.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "no_verified_equity_financing",
+    "amount_structuring_note": "The operating business is verified, but no independent equity financing evidence was found.",
+    "date_precision": "day",
+    "supplemental_verification_urls": [
+      "https://www.capstack.com.au/"
+    ]
+  },
+  "refs": {
+    "investee_company_key": "company:research:capstack"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:aab1a44fcec757f15f54"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Operating commercial-finance advisory firm verified; no independent equity financing evidence found.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

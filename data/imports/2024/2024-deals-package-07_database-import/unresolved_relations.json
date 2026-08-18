@@ -1,0 +1,176 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-07_database-import",
+  "counts": {
+    "created_relations": 99,
+    "unresolved_or_unnamed": 24,
+    "excluded_by_investor_policy": 6
+  },
+  "unresolved_relations": [
+    {
+      "deal_number": 363,
+      "token": "Undisclosed / no verified investor",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 364,
+      "token": "Undisclosed / no verified investor",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 366,
+      "token": "angels",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 369,
+      "token": "Undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 371,
+      "token": "Ocean Impact Organisation program relationship",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 371,
+      "token": "KPMG prize funding",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 374,
+      "token": "strategic angels",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 375,
+      "token": "named angels",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 381,
+      "token": "founders / existing shareholders",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 385,
+      "token": "Undisclosed / no verified investor",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 393,
+      "token": "other undisclosed investors",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 395,
+      "token": "Callaghan Innovation program support",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 395,
+      "token": "Finistere, Fonterra and OurCrowd are Sprout fund partners / LPs",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 398,
+      "token": "existing shareholders not publicly identified",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 399,
+      "token": "Existing investors (not publicly named for this tranche)",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 400,
+      "token": "separate investors undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 401,
+      "token": "other investors",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 404,
+      "token": "angels",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 408,
+      "token": "Investor attribution held",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 409,
+      "token": "Boab AI (unverified attribution)",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 411,
+      "token": "sophisticated investors",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 412,
+      "token": "CNBM United Investment (unverified event attribution)",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 415,
+      "token": "Undisclosed investors",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 420,
+      "token": "high-net-worth investors",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    }
+  ],
+  "excluded_relations": [
+    {
+      "deal_number": 368,
+      "token": "Goodwater Capital (database attribution only)",
+      "canonical_investor": "Goodwater Capital",
+      "action": "hold_unresolved",
+      "reason": "Database attribution only; exact event unverified."
+    },
+    {
+      "deal_number": 377,
+      "token": "J. Stein",
+      "canonical_investor": "J. Stein",
+      "action": "hold_unresolved",
+      "reason": "CSV abbreviation does not identify the legal person sufficiently for creation."
+    },
+    {
+      "deal_number": 397,
+      "token": "Startupbootcamp Australia (program only)",
+      "canonical_investor": "Startupbootcamp Australia",
+      "action": "do_not_create",
+      "reason": "Program participation only; no company-specific financing terms verified."
+    },
+    {
+      "deal_number": 410,
+      "token": "Rootz Labs",
+      "canonical_investor": "Rootz Labs",
+      "action": "hold_unresolved",
+      "reason": "Database attribution only; do not auto-create."
+    },
+    {
+      "deal_number": 410,
+      "token": "Mindfulness Capital (database attribution)",
+      "canonical_investor": "Mindfulness Capital",
+      "action": "hold_unresolved",
+      "reason": "Database attribution only; do not auto-create."
+    },
+    {
+      "deal_number": 410,
+      "token": "Waterdrip belongs to a 2025 round",
+      "canonical_investor": "Waterdrip Capital",
+      "action": "do_not_create",
+      "reason": "Belongs to the 2025 round, not the 2024 row."
+    }
+  ],
+  "resolved_by_supplement": []
+}

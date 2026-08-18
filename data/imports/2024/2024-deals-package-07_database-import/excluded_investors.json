@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-07_database-import",
+  "counts": {
+    "source_investors": 106,
+    "excluded": 19
+  },
+  "excluded_investors": [
+    {
+      "source_name": "Alpine Venture Capital",
+      "canonical_investor": "Alpine Venture Capital",
+      "action": "do_not_create",
+      "related_deals": "VXT",
+      "website": null,
+      "reason": "No separate VXT round was verified; do not create from this duplicate row.",
+      "source_excel_row": 42
+    },
+    {
+      "source_name": "Amalfi Capital",
+      "canonical_investor": "Amalfi Capital",
+      "action": "do_not_create",
+      "related_deals": "Sonder",
+      "website": null,
+      "reason": "Not named in stronger sources for this extension.",
+      "source_excel_row": 43
+    },
+    {
+      "source_name": "Artesian VC",
+      "canonical_investor": "Artesian",
+      "action": "do_not_create",
+      "related_deals": "Tenmile",
+      "website": "https://www.artesianinvest.com/",
+      "reason": "CSV does not establish a valid 2024 company financing.",
+      "source_excel_row": 44
+    },
+    {
+      "source_name": "Callaghan Innovation",
+      "canonical_investor": "Callaghan Innovation",
+      "action": "do_not_create",
+      "related_deals": "Jooules",
+      "website": "https://www.callaghaninnovation.govt.nz/",
+      "reason": "Program support; not a conventional VC investor.",
+      "source_excel_row": 45
+    },
+    {
+      "source_name": "Cicada Innovations",
+      "canonical_investor": "Cicada Innovations",
+      "action": "do_not_create",
+      "related_deals": "Sonder",
+      "website": "https://www.cicadainnovations.com/",
+      "reason": "Not named in stronger sources for this extension.",
+      "source_excel_row": 46
+    },
+    {
+      "source_name": "KPMG Nature Positive Prize",
+      "canonical_investor": "KPMG Nature Positive Prize",
+      "action": "do_not_create",
+      "related_deals": "Blue Carbon",
+      "website": null,
+      "reason": "A$100k is prize funding, not an investor relationship.",
+      "source_excel_row": 47
+    },
+    {
+      "source_name": "Mark Orttung",
+      "canonical_investor": "Mark Orttung",
+      "action": "do_not_create",
+      "related_deals": "Projectworks",
+      "website": null,
+      "reason": "Projectworks CEO; no reliable evidence he invested in this round.",
+      "source_excel_row": 48
+    },
+    {
+      "source_name": "Startupbootcamp Australia",
+      "canonical_investor": "Startupbootcamp Australia",
+      "action": "do_not_create",
+      "related_deals": "Our Leg Up",
+      "website": "https://www.startupbootcamp.com.au/",
+      "reason": "Program participation only; no company-specific financing terms verified.",
+      "source_excel_row": 49
+    },
+    {
+      "source_name": "Value Create",
+      "canonical_investor": "Value Create Ventures",
+      "action": "do_not_create",
+      "related_deals": "Invest Inya Farmer",
+      "website": null,
+      "reason": "Broader database attribution only; not verified in the 2024 close.",
+      "source_excel_row": 50
+    },
+    {
+      "source_name": "Waterdrip Capital",
+      "canonical_investor": "Waterdrip Capital",
+      "action": "do_not_create",
+      "related_deals": "aZen Protocol",
+      "website": "https://waterdripcapital.com/",
+      "reason": "Belongs to the 2025 round, not the 2024 row.",
+      "source_excel_row": 51
+    },
+    {
+      "source_name": "Boab AI",
+      "canonical_investor": "Boab AI",
+      "action": "hold_unresolved",
+      "related_deals": "Pearler.AI",
+      "website": null,
+      "reason": "Hold: no reliable public evidence for the supplied event attribution.",
+      "source_excel_row": 52
+    },
+    {
+      "source_name": "CNBM United Investment",
+      "canonical_investor": "China National Building Materials United Investment",
+      "action": "hold_unresolved",
+      "related_deals": "AmPro Innovations",
+      "website": null,
+      "reason": "Hold: supplied 2024 event could not be independently verified.",
+      "source_excel_row": 53
+    },
+    {
+      "source_name": "Goodwater Capital",
+      "canonical_investor": "Goodwater Capital",
+      "action": "hold_unresolved",
+      "related_deals": "Mys Tyler",
+      "website": "https://www.goodwatercap.com/",
+      "reason": "Database attribution only; exact event unverified.",
+      "source_excel_row": 54
+    },
+    {
+      "source_name": "J. Stein",
+      "canonical_investor": "J. Stein",
+      "action": "hold_unresolved",
+      "related_deals": "VXT",
+      "website": null,
+      "reason": "CSV abbreviation does not identify the legal person sufficiently for creation.",
+      "source_excel_row": 55
+    },
+    {
+      "source_name": "LvlUp Ventures",
+      "canonical_investor": "LvlUp Ventures",
+      "action": "hold_unresolved",
+      "related_deals": "Matchfy",
+      "website": "https://www.lvlup.vc/",
+      "reason": "Hold: investor's portfolio company appears to be a different Matchfy entity.",
+      "source_excel_row": 56
+    },
+    {
+      "source_name": "Mindfulness Capital",
+      "canonical_investor": "Mindfulness Capital",
+      "action": "hold_unresolved",
+      "related_deals": "aZen Protocol",
+      "website": null,
+      "reason": "Database attribution only; do not auto-create.",
+      "source_excel_row": 57
+    },
+    {
+      "source_name": "Rootz Labs",
+      "canonical_investor": "Rootz Labs",
+      "action": "hold_unresolved",
+      "related_deals": "aZen Protocol",
+      "website": null,
+      "reason": "Database attribution only; do not auto-create.",
+      "source_excel_row": 58
+    },
+    {
+      "source_name": "Scott Bailey",
+      "canonical_investor": "Scott Bailey",
+      "action": "hold_unresolved",
+      "related_deals": "Sonder",
+      "website": null,
+      "reason": "Name is insufficiently identified and not corroborated for the round.",
+      "source_excel_row": 59
+    },
+    {
+      "source_name": "EVOS existing investors",
+      "canonical_investor": "Unidentified existing investors",
+      "action": "hold_unresolved",
+      "related_deals": "EVOS",
+      "website": null,
+      "reason": "Public reporting confirms existing-investor funding but does not name the tranche participants.",
+      "source_excel_row": 60
+    }
+  ]
+}

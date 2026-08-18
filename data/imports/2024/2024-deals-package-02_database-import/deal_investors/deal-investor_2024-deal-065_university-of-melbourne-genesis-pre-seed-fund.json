@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "table": "deal_investors",
+  "record_key": "deal_investor:research-package:2024-deal-065:university-of-melbourne-genesis-pre-seed-fund",
+  "operation": "upsert",
+  "data": {
+    "raw_name": "University of Melbourne Genesis Pre-Seed Fund",
+    "role": "participant",
+    "participation_status": "confirmed",
+    "resolution": "resolved",
+    "resolution_confidence": "high",
+    "identity_resolution": "existing_investor_deduped"
+  },
+  "refs": {
+    "deal_key": "funding_round:research-package:2024-deal-065",
+    "investor_key": "investor:university-of-melbourne-genesis-pre-seed-fund",
+    "raw_investor_candidate_key": "raw_investor_candidate:university-of-melbourne-genesis-pre-seed-fund"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

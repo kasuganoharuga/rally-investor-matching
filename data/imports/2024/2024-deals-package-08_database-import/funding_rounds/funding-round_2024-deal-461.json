@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-461",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-461",
+    "dedupe_key": "2024|hectre-group-limited|2024-08-16|seed",
+    "source_url": "https://www.nbr.co.nz/tech/fast-growing-startup-hectre-raises-2-5m-despite-funding-pullback/",
+    "source_payload": {
+      "deal_number": 461,
+      "csv_investee": "Hectre",
+      "normalized_investee": "Hectre Group Limited",
+      "csv_date": "2024-08-16",
+      "normalized_date": "2024-08-16",
+      "csv_round": "Seed",
+      "normalized_round": "Seed extension",
+      "csv_amount": "NZD 2,500,000",
+      "normalized_amount": "NZD 2,500,000",
+      "csv_investors": "Angel Investors Marlborough; New Zealand Growth Capital Partners",
+      "normalized_investors": "Angel Investors Marlborough reported; Aspire NZ Seed Fund is a verified shareholder but current-round participation is not public",
+      "verification": "partial_syndicate",
+      "correction_or_issue": "NBR verifies the NZ$2.5m close and names Angel Investors Marlborough in its deal coverage. Company ownership verifies Aspire/NZGCP as an investor, but not specifically in this extension.",
+      "primary_source": "https://www.nbr.co.nz/tech/fast-growing-startup-hectre-raises-2-5m-despite-funding-pullback/",
+      "secondary_source": "https://www.companiesnz.com/company/6264542/hectre-group-limited"
+    },
+    "investee_name_raw": "Hectre Group Limited",
+    "org_location_raw": "Auckland, New Zealand",
+    "org_website_raw": "https://www.hectre.com/",
+    "org_industries_raw": "Agtech / Computer Vision",
+    "round_type_raw": "Seed extension",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-08-16",
+    "money_raised_raw": "NZD 2,500,000",
+    "amount": 2500000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Angel Investors Marlborough reported; Aspire NZ Seed Fund is a verified shareholder but current-round participation is not public",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-08_database-import",
+    "verification_status": "partial_syndicate",
+    "verification_source_url": "https://www.nbr.co.nz/tech/fast-growing-startup-hectre-raises-2-5m-despite-funding-pullback/",
+    "verification_notes": "NBR verifies the NZ$2.5m close and names Angel Investors Marlborough in its deal coverage. Company ownership verifies Aspire/NZGCP as an investor, but not specifically in this extension.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:hectre-group-limited"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": [
+      "source:url:2974a642cb8ba9ce5530",
+      "source:url:9a7525dc9f9df1b1bcef"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "NBR verifies the NZ$2.5m close and names Angel Investors Marlborough in its deal coverage. Company ownership verifies Aspire/NZGCP as an investor, but not specifically in this extension."
+    ]
+  }
+}

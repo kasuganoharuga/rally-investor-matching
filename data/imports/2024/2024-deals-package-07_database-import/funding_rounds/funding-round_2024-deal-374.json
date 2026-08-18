@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-374",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-374",
+    "dedupe_key": "2024|cuttable|2024-07-23|seed",
+    "source_url": "https://www.capitalbrief.com/briefing/ai-led-advertising-startup-cuttable-closes-55m-seed-round-14f4f287-510d-46cc-958b-77dabb64ba32/",
+    "source_payload": {
+      "deal_number": 374,
+      "csv_investee": "Cuttable",
+      "normalized_investee": "Cuttable",
+      "csv_date": "2024-07-23",
+      "normalized_date": "2024-07-23",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "USD 5,500,000",
+      "normalized_amount": "AUD 5,500,000",
+      "csv_investors": "Square Peg Capital; Rampersand",
+      "normalized_investors": "Square Peg (lead); Rampersand; strategic angels",
+      "verification": "corrected",
+      "correction_or_issue": "Contemporaneous reporting and Square Peg identify an A$5.5m seed, not US$5.5m.",
+      "primary_source": "https://www.capitalbrief.com/briefing/ai-led-advertising-startup-cuttable-closes-55m-seed-round-14f4f287-510d-46cc-958b-77dabb64ba32/",
+      "secondary_source": "https://www.squarepeg.vc/news"
+    },
+    "investee_name_raw": "Cuttable",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.cuttable.com/",
+    "org_industries_raw": "Adtech / Generative AI",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-07-23",
+    "money_raised_raw": "AUD 5,500,000",
+    "amount": 5500000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Square Peg (lead); Rampersand; strategic angels",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.capitalbrief.com/briefing/ai-led-advertising-startup-cuttable-closes-55m-seed-round-14f4f287-510d-46cc-958b-77dabb64ba32/",
+    "verification_notes": "Contemporaneous reporting and Square Peg identify an A$5.5m seed, not US$5.5m.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:cuttable"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:7d17ef83fabbfa356019",
+      "source:url:3934728abdb68766fe3d"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

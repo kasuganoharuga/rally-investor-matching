@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-338",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-338",
+    "dedupe_key": "2024|rich-data-co-rdc-ai|2024-08-05|series_b",
+    "source_url": "https://rdc.ai/leading-ai-decisioning-platform-provider-rich-data-co-secures-further-9-million-in-funding-from-acorn-capital-rounding-out-a-37-million-series-b-raise/",
+    "source_payload": {
+      "deal_number": 338,
+      "csv_investee": "RDC.AI",
+      "normalized_investee": "Rich Data Co / RDC.AI",
+      "csv_date": "2024-08-05",
+      "normalized_date": "2024-08-05",
+      "csv_round": "Series B",
+      "normalized_round": "Series B extension",
+      "csv_amount": "AUD 9,000,000",
+      "normalized_amount": "AUD 9,000,000 extension; AUD 37,000,000 total Series B",
+      "csv_investors": "Acorn Capital",
+      "normalized_investors": "Acorn Capital",
+      "verification": "corrected",
+      "correction_or_issue": "Company announcement confirms a A$9m extension that rounded the Series B to A$37m; it is not a standalone initial Series B.",
+      "primary_source": "https://rdc.ai/leading-ai-decisioning-platform-provider-rich-data-co-secures-further-9-million-in-funding-from-acorn-capital-rounding-out-a-37-million-series-b-raise/",
+      "secondary_source": "https://www.richdataco.com/"
+    },
+    "investee_name_raw": "Rich Data Co / RDC.AI",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://rdc.ai/",
+    "org_industries_raw": "Fintech / Enterprise AI",
+    "round_type_raw": "Series B extension",
+    "round_stage": "series_b",
+    "funding_stage_raw": "Series B",
+    "announced_date": "2024-08-05",
+    "money_raised_raw": "AUD 9,000,000 extension; AUD 37,000,000 total Series B",
+    "amount": 9000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Acorn Capital",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://rdc.ai/leading-ai-decisioning-platform-provider-rich-data-co-secures-further-9-million-in-funding-from-acorn-capital-rounding-out-a-37-million-series-b-raise/",
+    "verification_notes": "Company announcement confirms a A$9m extension that rounded the Series B to A$37m; it is not a standalone initial Series B.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:rich-data-co"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:77932c05e416516d0c09",
+      "source:url:67b885186f2f345dd8ef"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

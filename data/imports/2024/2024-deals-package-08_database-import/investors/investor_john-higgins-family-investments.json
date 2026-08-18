@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investors",
+  "record_key": "investor:john-higgins-family-investments",
+  "operation": "upsert",
+  "data": {
+    "canonical_name": "John Higgins Family Investments",
+    "aliases": [
+      "Higgins Family Investments"
+    ],
+    "investor_type": "private_investment_firm",
+    "investor_subtype": "Family office",
+    "eligibility_mode": "research_package_confirmed",
+    "classification_confidence": "medium",
+    "classification_evidence_urls": [],
+    "classified_at": "2026-08-14",
+    "website_url": null,
+    "linkedin_url": null,
+    "hq_country": "AU",
+    "hq_state": null,
+    "hq_city": null,
+    "offices": [],
+    "status": "active",
+    "merged_into_id": null,
+    "review_status": "needs_more_data",
+    "last_reviewed_at": "2026-08-14",
+    "last_reviewed_by": "codex-2024-investor-dedupe-update",
+    "identity_resolution": "new_investor",
+    "matched_existing_record_key": null,
+    "identity_match_method": "no_prior_match",
+    "identity_match_source": null
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Official investor website is missing from the research package."
+    ]
+  }
+}

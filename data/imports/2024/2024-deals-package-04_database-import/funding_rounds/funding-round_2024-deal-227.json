@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-227",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-227",
+    "dedupe_key": "2024|iion|2024-06-11|seed",
+    "source_url": "https://www.ten13.vc/post/our-investment-in-iion",
+    "source_payload": {
+      "deal_number": 227,
+      "csv_investee": "iion",
+      "normalized_investee": "iion",
+      "csv_date": "2024-05-22",
+      "normalized_date": "2024-06-11 / 2024-06-13 announcements",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "TEN13; Archangel Ventures; PixCapital",
+      "normalized_investors": "TEN13 (lead); Archangel Ventures; PixCapital",
+      "verification": "verified",
+      "correction_or_issue": "TEN13 and PixCapital investment notes confirm the 2024 seed syndicate; amount remains undisclosed.",
+      "primary_source": "https://www.ten13.vc/post/our-investment-in-iion",
+      "secondary_source": "https://pixcapital.vc/news/pixcapital-spurs-innovation-with-iion-investment/"
+    },
+    "investee_name_raw": "iion",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.iion.io/",
+    "org_industries_raw": "Adtech / Gaming",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-06-11",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "TEN13 (lead); Archangel Ventures; PixCapital",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.ten13.vc/post/our-investment-in-iion",
+    "verification_notes": "TEN13 and PixCapital investment notes confirm the 2024 seed syndicate; amount remains undisclosed.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:iion"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:c435009eb7d0df4f1297",
+      "source:url:30116b07866816bd3877"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

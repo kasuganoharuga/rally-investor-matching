@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:mighty-partners",
+  "operation": "upsert",
+  "data": {
+    "name": "Mighty Partners",
+    "website_url": "https://www.mightypartners.com.au/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "fintech-private-credit",
+    "sector_secondary": null,
+    "use_case_primary": "growth-credit-provider-offering-venture-debt-and-r-and-d-finance-to-scaling-australian-technology-businesses",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "lending-fund-management",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Growth-credit provider offering venture debt and R&D finance to scaling Australian technology businesses.",
+    "source_urls": [
+      "https://www.mightypartners.com.au/",
+      "https://www.mightypartners.com.au/blog/fundabl-completes-3-2-million-equity-raise",
+      "https://www.startupdaily.net/topic/business/startup-lender-fundabl-rebrands-as-mighty-partners/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

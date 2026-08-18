@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_team_members",
+  "record_key": "investor_team_member:paul-greenberg:paul-greenberg",
+  "operation": "upsert",
+  "data": {
+    "contact_id": null,
+    "first_name": "Paul",
+    "last_name": "Greenberg",
+    "role_title": "Chairperson and adviser, Jam Pad Investments",
+    "seniority": "other",
+    "linkedin_url": "https://au.linkedin.com/in/paulgreenberghq",
+    "claimed_focus": [
+      "individual_investor"
+    ],
+    "bio_summary": "Public investment-relevant person associated with Paul Greenberg / Jam Pad Investments.",
+    "source_url": "https://www.linkedin.com/posts/paulgreenberghq_pleased-to-advise-that-jam-pad-investments-activity-7150311131213926400-_Xn8",
+    "retrieved_at": "2026-07-22",
+    "is_active": true
+  },
+  "refs": {
+    "investor_key": "investor:paul-greenberg",
+    "contact_key": null
+  },
+  "provenance": {
+    "collection_run_key": "collection:research:2026-07-24",
+    "source_keys": [
+      "research_source:paul-greenberg:paul-greenberg_src_deal"
+    ]
+  },
+  "review": {
+    "status": "unreviewed",
+    "issues": []
+  }
+}

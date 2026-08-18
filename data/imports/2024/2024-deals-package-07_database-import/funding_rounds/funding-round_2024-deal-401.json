@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-401",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-401",
+    "dedupe_key": "2024|vapar|2024-01-22|series_a",
+    "source_url": "https://www.vapar.co/autodesk-pureterra-united-states-expansion/",
+    "source_payload": {
+      "deal_number": 401,
+      "csv_investee": "VAPAR",
+      "normalized_investee": "VAPAR",
+      "csv_date": "2024-01-22",
+      "normalized_date": "2024-01-22",
+      "csv_round": "Series A",
+      "normalized_round": "Series A",
+      "csv_amount": "AUD 5,000,000",
+      "normalized_amount": "AUD 5,000,000",
+      "csv_investors": "PureTerra Ventures; Access Capital Ventures; Autodesk; Halma; Metagrove; Sprint",
+      "normalized_investors": "PureTerra Ventures (lead); Autodesk; Halma Ventures; Sprint Ventures; Access Capital Ventures; Metagrove Ventures; other investors",
+      "verification": "verified",
+      "correction_or_issue": "Official company announcement confirms amount, date and core syndicate.",
+      "primary_source": "https://www.vapar.co/autodesk-pureterra-united-states-expansion/",
+      "secondary_source": "https://bouncewatch.com/company/vapar"
+    },
+    "investee_name_raw": "VAPAR",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.vapar.co/",
+    "org_industries_raw": "Water Tech / Infrastructure AI",
+    "round_type_raw": "Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-01-22",
+    "money_raised_raw": "AUD 5,000,000",
+    "amount": 5000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "PureTerra Ventures (lead); Autodesk; Halma Ventures; Sprint Ventures; Access Capital Ventures; Metagrove Ventures; other investors",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.vapar.co/autodesk-pureterra-united-states-expansion/",
+    "verification_notes": "Official company announcement confirms amount, date and core syndicate. Independent funding profile and existing investor post corroborate the A$5m raise announced on 22 January 2024. Independent funding profile and existing investor post corroborate the A$5m raise announced on 22 January 2024. Independent funding profile and existing investor post corroborate the A$5m raise announced on 22 January 2024.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day",
+    "secondary_source_status": "corroborated",
+    "supplemental_verification_urls": [
+      "https://bouncewatch.com/company/vapar",
+      "https://www.linkedin.com/posts/sprint-vc_pipe-dreams-vapar-secures-5-million-for-activity-7155341986458144769-MdiZ"
+    ]
+  },
+  "refs": {
+    "investee_company_key": "company:research:vapar"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:624fe2067bbcf033115c"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

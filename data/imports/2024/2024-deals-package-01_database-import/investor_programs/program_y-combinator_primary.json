@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_programs",
+  "record_key": "program:y-combinator:primary",
+  "operation": "upsert",
+  "data": {
+    "name": "Y Combinator",
+    "program_type": "accelerator",
+    "status": "unknown",
+    "application_url": null,
+    "eligibility_mode": "conditional",
+    "eligibility_rules": [],
+    "eligibility_rules_status": "unknown_after_existing_official_source_review",
+    "source_url": "https://www.ycombinator.com/",
+    "evidence_source_urls": [
+      "https://www.ycombinator.com/"
+    ],
+    "last_verified_at": "2026-08-14",
+    "review_notes": "Accelerator/operator identity is confirmed; current program-specific eligibility and cohort terms require verification."
+  },
+  "refs": {
+    "investor_key": "investor:y-combinator"
+  },
+  "provenance": {
+    "source": "2024_investor_dedupe_accelerator_annotation",
+    "source_keys": [
+      "https://www.ycombinator.com/"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Current program-specific eligibility rules and cohort terms require verification."
+    ]
+  }
+}

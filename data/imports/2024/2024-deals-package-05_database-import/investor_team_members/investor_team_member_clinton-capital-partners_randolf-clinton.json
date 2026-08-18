@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_team_members",
+  "record_key": "investor_team_member:clinton-capital-partners:randolf-clinton",
+  "operation": "upsert",
+  "data": {
+    "contact_id": null,
+    "first_name": "Randolf",
+    "last_name": "Clinton",
+    "role_title": "Founder",
+    "seniority": "partner",
+    "linkedin_url": null,
+    "claimed_focus": [
+      "venture_advisory"
+    ],
+    "bio_summary": "Public investment-relevant person associated with Clinton Capital Partners.",
+    "source_url": "https://www.clintoncapitalpartners.com.au/",
+    "retrieved_at": "2026-07-22",
+    "is_active": true
+  },
+  "refs": {
+    "investor_key": "investor:clinton-capital-partners",
+    "contact_key": null
+  },
+  "provenance": {
+    "collection_run_key": "collection:research:2026-07-24",
+    "source_keys": [
+      "research_source:clinton-capital-partners:clinton-capital-partners_src_official"
+    ]
+  },
+  "review": {
+    "status": "unreviewed",
+    "issues": []
+  }
+}

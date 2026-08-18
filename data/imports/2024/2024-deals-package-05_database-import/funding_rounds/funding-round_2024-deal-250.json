@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-250",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-250",
+    "dedupe_key": "2024|taxcube|2024-08-20|seed",
+    "source_url": "https://www.crunchbase.com/funding_round/taxcube-0da8-seed--e78bba38",
+    "source_payload": {
+      "deal_number": 250,
+      "csv_investee": "TaxCube",
+      "normalized_investee": "TaxCube",
+      "csv_date": "2024-08-20",
+      "normalized_date": "2024-08-20 database date",
+      "csv_round": "Seed",
+      "normalized_round": "Unverified seed",
+      "csv_amount": "USD 200,000",
+      "normalized_amount": "USD 200,000 (database-only)",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Undisclosed",
+      "verification": "needs_review",
+      "correction_or_issue": "Tax Cube Pty Ltd and its operating business are identifiable, but no primary financing announcement or investor evidence was found for the US$200k round.",
+      "primary_source": "https://www.crunchbase.com/funding_round/taxcube-0da8-seed--e78bba38",
+      "secondary_source": "https://abr.business.gov.au/ABN/View?abn=13633013582"
+    },
+    "investee_name_raw": "TaxCube",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://taxcube.com.au/",
+    "org_industries_raw": "Fintech / Tax",
+    "round_type_raw": "Unverified seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-08-20",
+    "money_raised_raw": "USD 200,000 (database-only)",
+    "amount": 200000,
+    "currency": "USD",
+    "amount_usd": 200000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://www.crunchbase.com/funding_round/taxcube-0da8-seed--e78bba38",
+    "verification_notes": "Tax Cube Pty Ltd and its operating business are identifiable, but no primary financing announcement or investor evidence was found for the US$200k round.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:taxcube"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:645f80c8470540e2249f",
+      "source:url:d019ae6b4d2d635559d7"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Tax Cube Pty Ltd and its operating business are identifiable, but no primary financing announcement or investor evidence was found for the US$200k round."
+    ]
+  }
+}

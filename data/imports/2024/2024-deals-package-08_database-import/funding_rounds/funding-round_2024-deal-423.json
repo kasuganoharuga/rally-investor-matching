@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-423",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-423",
+    "dedupe_key": "2024|number-8-bio|2024-09-10|seed",
+    "source_url": "https://globalaginvesting.com/number-8-bio-raises-a7m-in-seed-round-to-reduce-methane-emissions-in-livestock/",
+    "source_payload": {
+      "deal_number": 423,
+      "csv_investee": "Number 8 bio",
+      "normalized_investee": "Number 8 Bio",
+      "csv_date": "2024-09-10",
+      "normalized_date": "2024-09-10 / 12 reporting",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "AUD 7,000,000",
+      "normalized_amount": "AUD 7,000,000",
+      "csv_investors": "Breakthrough Victoria; Main Sequence Ventures; The March Group",
+      "normalized_investors": "Main Sequence (lead); Breakthrough Victoria; The March Group",
+      "verification": "verified",
+      "correction_or_issue": "Company and contemporaneous reporting confirm amount and full institutional syndicate.",
+      "primary_source": "https://globalaginvesting.com/number-8-bio-raises-a7m-in-seed-round-to-reduce-methane-emissions-in-livestock/",
+      "secondary_source": "https://www.number8.bio/our-story"
+    },
+    "investee_name_raw": "Number 8 Bio",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.number8.bio/",
+    "org_industries_raw": "Agtech / Industrial Biotech / Climate",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-09-10",
+    "money_raised_raw": "AUD 7,000,000",
+    "amount": 7000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Main Sequence (lead); Breakthrough Victoria; The March Group",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-08_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://globalaginvesting.com/number-8-bio-raises-a7m-in-seed-round-to-reduce-methane-emissions-in-livestock/",
+    "verification_notes": "Company and contemporaneous reporting confirm amount and full institutional syndicate.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:number-8-bio"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": [
+      "source:url:1103137c7327684d4924",
+      "source:url:dbe2e6a3b8fd224c7e32"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

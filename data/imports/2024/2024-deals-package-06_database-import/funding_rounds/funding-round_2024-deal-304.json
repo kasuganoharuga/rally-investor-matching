@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-304",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-304",
+    "dedupe_key": "2024|spinaway|2024-01-01|seed",
+    "source_url": "https://spinaway.com.au/",
+    "source_payload": {
+      "deal_number": 304,
+      "csv_investee": "Spinaway",
+      "normalized_investee": "Spinaway",
+      "csv_date": "2024-01-01",
+      "normalized_date": "2024-01-01 database placeholder",
+      "csv_round": "Seed",
+      "normalized_round": "Unverified seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Paloma Ventures",
+      "normalized_investors": "Paloma Ventures (unverified for this event)",
+      "verification": "needs_review",
+      "correction_or_issue": "The operating site is parked and no primary financing announcement or reliable close date was found. Do not treat 1 January as a confirmed closing date or update Paloma from this record.",
+      "primary_source": "https://spinaway.com.au/",
+      "secondary_source": "https://paloma.vc/"
+    },
+    "investee_name_raw": "Spinaway",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://spinaway.com.au/",
+    "org_industries_raw": "Consumer Services",
+    "round_type_raw": "Unverified seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-01-01",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Paloma Ventures (unverified for this event)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://spinaway.com.au/",
+    "verification_notes": "The operating site is parked and no primary financing announcement or reliable close date was found. Do not treat 1 January as a confirmed closing date or update Paloma from this record.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:spinaway"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:eff335e8f1316e920465",
+      "source:url:332c72a9ee0fa728fde7"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "The operating site is parked and no primary financing announcement or reliable close date was found. Do not treat 1 January as a confirmed closing date or update Paloma from this record.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

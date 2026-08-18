@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:vuemotion",
+  "operation": "upsert",
+  "data": {
+    "name": "VueMotion",
+    "website_url": "https://www.vuemotion.ai/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "sports-tech-health-ai",
+    "sector_secondary": null,
+    "use_case_primary": "computer-vision-biomechanics-platform-delivering-smartphone-based-movement-analysis-for-sport-health-and-aged-care",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "saas-usage-fees",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Computer-vision biomechanics platform delivering smartphone-based movement analysis for sport, health and aged care.",
+    "source_urls": [
+      "https://www.vuemotion.ai/",
+      "https://www.unsw.edu.au/research/partner-with-us/investment-portfolio/vuemotion",
+      "https://app.dealroom.co/companies/vuemotion"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:bridgit",
+  "operation": "upsert",
+  "data": {
+    "name": "Bridgit",
+    "website_url": "https://bridgit.com.au/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "fintech-proptech-lending",
+    "sector_secondary": null,
+    "use_case_primary": "digital-non-bank-lender-providing-short-term-residential-bridging-finance-to-homeowners",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "lending-platform",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Digital non-bank lender providing short-term residential bridging finance to homeowners.",
+    "source_urls": [
+      "https://bridgit.com.au/",
+      "https://www.oifventures.com.au/insights/sydney-start-up-bridgit-has-raised-14-6m-as-it-takes-on-the-wealth-transfer-market",
+      "https://www.itnews.com.au/news/fintech-bridgit-raises-146m-in-series-a-round-608683"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

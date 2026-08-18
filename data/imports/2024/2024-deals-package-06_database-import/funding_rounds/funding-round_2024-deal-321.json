@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-321",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-321",
+    "dedupe_key": "2024|mushroom-material|2024-08-07|seed",
+    "source_url": "https://www.linkedin.com/posts/shaun-seaman_mushroommaterial-sustainability-biomaterials-activity-7226435759602331650-_grX",
+    "source_payload": {
+      "deal_number": 321,
+      "csv_investee": "Mushroom Material",
+      "normalized_investee": "Mushroom Material",
+      "csv_date": "2024-08-07",
+      "normalized_date": "2024-08-07",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "NZD 8,500,000",
+      "normalized_amount": "NZD 8,500,000",
+      "csv_investors": "Black Kite Capital; Icehouse Ventures; K1W1; SEEDS Capital; Wavemaker Ventures",
+      "normalized_investors": "Wavemaker Partners and SEEDS Capital (co-leads); Icehouse Ventures; K1W1; Black Kite Capital",
+      "verification": "verified",
+      "correction_or_issue": "Founder and contemporaneous reporting confirm the amount and full syndicate; normalize Wavemaker Ventures to Wavemaker Partners.",
+      "primary_source": "https://www.linkedin.com/posts/shaun-seaman_mushroommaterial-sustainability-biomaterials-activity-7226435759602331650-_grX",
+      "secondary_source": "https://www.nbr.co.nz/tech/material-startup-mushroom-material-raises-8m-in-seed-round/"
+    },
+    "investee_name_raw": "Mushroom Material",
+    "org_location_raw": "Auckland, New Zealand / Singapore HQ",
+    "org_website_raw": "https://www.mushroommaterial.com/",
+    "org_industries_raw": "Climate Tech / Advanced Materials",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-08-07",
+    "money_raised_raw": "NZD 8,500,000",
+    "amount": 8500000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Wavemaker Partners and SEEDS Capital (co-leads); Icehouse Ventures; K1W1; Black Kite Capital",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.linkedin.com/posts/shaun-seaman_mushroommaterial-sustainability-biomaterials-activity-7226435759602331650-_grX",
+    "verification_notes": "Founder and contemporaneous reporting confirm the amount and full syndicate; normalize Wavemaker Ventures to Wavemaker Partners.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:mushroom-material"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:c8a7ef0ce5c52e8ec22b",
+      "source:url:e87b82b34799691b9246"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

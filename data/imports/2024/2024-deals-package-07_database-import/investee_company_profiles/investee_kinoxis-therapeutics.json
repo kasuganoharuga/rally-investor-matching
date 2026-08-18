@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:kinoxis-therapeutics",
+  "operation": "upsert",
+  "data": {
+    "name": "Kinoxis Therapeutics",
+    "website_url": "http://www.kinoxistherapeutics.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Victoria",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "biotech-cns-therapeutics",
+    "sector_secondary": null,
+    "use_case_primary": "clinical-stage-biotechnology-company-developing-oxytocin-pathway-therapeutics-for-neurological-and-psychiatric-disorders",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "drug-development-licensing",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Clinical-stage biotechnology company developing oxytocin-pathway therapeutics for neurological and psychiatric disorders.",
+    "source_urls": [
+      "http://www.kinoxistherapeutics.com/",
+      "https://kinoxistherapeutics.com/kinoxis-secures-14-5m-in-funding-and-announces-expansion-of-clinical-programs-to-target-agitation-and-aggression-in-dementia-patients/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

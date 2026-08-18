@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-218",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-218",
+    "dedupe_key": "2024|healthbridge-ai|2024-cyberport-program-entry|program_or_grant",
+    "source_url": "https://app.dealroom.co/companies/healthbridge_ai",
+    "source_payload": {
+      "deal_number": 218,
+      "csv_investee": "HealthBridge AI",
+      "normalized_investee": "HealthBridge AI",
+      "csv_date": "2024-02-06",
+      "normalized_date": "2024 Cyberport program entry",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Government-backed entrepreneurship program",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Cyberport Hong Kong",
+      "normalized_investors": "Cyberport Hong Kong (program)",
+      "verification": "verified_program",
+      "correction_or_issue": "Public profiles support participation in a Cyberport entrepreneurship program, but not a conventional equity round or a disclosed cheque.",
+      "primary_source": "https://app.dealroom.co/companies/healthbridge_ai",
+      "secondary_source": "https://www.cyberport.hk/en/digital_tech/healthcare/"
+    },
+    "investee_name_raw": "HealthBridge AI",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.healthbridgeai.com/",
+    "org_industries_raw": "Healthtech / Generative AI",
+    "round_type_raw": "Government-backed entrepreneurship program",
+    "round_stage": "program_or_grant",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Cyberport Hong Kong (program)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "verified_program",
+    "verification_source_url": "https://app.dealroom.co/companies/healthbridge_ai",
+    "verification_notes": "Public profiles support participation in a Cyberport entrepreneurship program, but not a conventional equity round or a disclosed cheque.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:healthbridge-ai"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:9737c81bd811daaa597a",
+      "source:url:9a423e6d67ee7273f982"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-246",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-246",
+    "dedupe_key": "2024|fugu-carbon|2024-07-08|seed",
+    "source_url": "https://www.investible.com/blog/investment-notes-fugu-carbon",
+    "source_payload": {
+      "deal_number": 246,
+      "csv_investee": "Fugu Carbon",
+      "normalized_investee": "Fugu Carbon",
+      "csv_date": "2024-07-08",
+      "normalized_date": "2024-07-08",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "AUD 1,650,000",
+      "csv_investors": "Counteract; Electrifi Ventures; Investible; Jelix Ventures",
+      "normalized_investors": "Investible Climate Tech Fund (lead); Counteract VC; Jelix Ventures; Electrifi Ventures",
+      "verification": "corrected",
+      "correction_or_issue": "Investible's official investment note confirms the syndicate; independent reporting supplies the A$1.65m round amount.",
+      "primary_source": "https://www.investible.com/blog/investment-notes-fugu-carbon",
+      "secondary_source": "https://www.fssustainability.com.au/carbon-removal-attracts-venture-capitalists"
+    },
+    "investee_name_raw": "Fugu Carbon",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://fugu.energy/",
+    "org_industries_raw": "Climate Tech / Carbon Removal",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-07-08",
+    "money_raised_raw": "AUD 1,650,000",
+    "amount": 1650000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Investible Climate Tech Fund (lead); Counteract VC; Jelix Ventures; Electrifi Ventures",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.investible.com/blog/investment-notes-fugu-carbon",
+    "verification_notes": "Investible's official investment note confirms the syndicate; independent reporting supplies the A$1.65m round amount.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:fugu-carbon"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:61f97e52e4e3a350f9ae",
+      "source:url:c4de09dd493d92d2af55"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

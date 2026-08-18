@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investors",
+  "record_key": "investor:emo-capital",
+  "operation": "upsert",
+  "data": {
+    "canonical_name": "EMO Capital",
+    "aliases": [],
+    "investor_type": "other",
+    "investor_subtype": "Web3 investor",
+    "eligibility_mode": "research_package_confirmed",
+    "classification_confidence": "medium",
+    "classification_evidence_urls": [
+      "https://emo.capital/"
+    ],
+    "classified_at": "2026-08-14",
+    "website_url": "https://emo.capital/",
+    "linkedin_url": null,
+    "hq_country": null,
+    "hq_state": null,
+    "hq_city": null,
+    "offices": [],
+    "status": "active",
+    "merged_into_id": null,
+    "review_status": "needs_more_data",
+    "last_reviewed_at": "2026-08-14",
+    "last_reviewed_by": "codex-2024-additional-supplement",
+    "identity_resolution": "new_investor",
+    "matched_existing_record_key": null,
+    "identity_match_method": "no_prior_match",
+    "identity_match_source": null,
+    "website_kind": "official_website"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Investor headquarters country could not be normalized from the research package."
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-051",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-051",
+    "dedupe_key": "2024|ajust|2024-11-29|seed",
+    "source_url": "https://www.overnightsuccess.vc/p/aussie-startup-vc-summary-30th-november-2024",
+    "source_payload": {
+      "deal_number": 51,
+      "csv_investee": "Ajust",
+      "normalized_investee": "Ajust",
+      "csv_date": "2024-11-29",
+      "normalized_date": "2024-11-29",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "USD 2,000,000",
+      "normalized_amount": "Part of AUD 2,700,000 cumulative pre-seed + seed",
+      "csv_investors": "Carthona Capital",
+      "normalized_investors": "Carthona Capital; angel investors including Simon Baume",
+      "verification": "corrected",
+      "correction_or_issue": "Public source reports A$2.7m cumulative, not a standalone US$2m round.",
+      "primary_source": "https://www.overnightsuccess.vc/p/aussie-startup-vc-summary-30th-november-2024",
+      "secondary_source": "https://www.ajust.com.au/"
+    },
+    "investee_name_raw": "Ajust",
+    "org_location_raw": "Australia",
+    "org_website_raw": "https://www.ajust.com.au/",
+    "org_industries_raw": "Consumer / Regtech / AI",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-11-29",
+    "money_raised_raw": "Part of AUD 2,700,000 cumulative pre-seed + seed",
+    "amount": 2700000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Carthona Capital; angel investors including Simon Baume",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.overnightsuccess.vc/p/aussie-startup-vc-summary-30th-november-2024",
+    "verification_notes": "Public source reports A$2.7m cumulative, not a standalone US$2m round. Exact day records the visible publication date of the public financing or cohort report; it is not represented as an unreported legal closing date.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day",
+    "date_basis": "public_announcement_publication_date",
+    "date_derivation_method": "visible_source_publication_date",
+    "supplemental_verification_urls": [
+      "https://www.overnightsuccess.vc/p/aussie-startup-vc-summary-30th-november-2024"
+    ]
+  },
+  "refs": {
+    "investee_company_key": "company:research:ajust"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:25323740e133211cee87",
+      "source:url:4e957106a8237cb250ab"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

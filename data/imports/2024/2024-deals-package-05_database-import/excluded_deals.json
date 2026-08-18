@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-05_database-import",
+  "policy": "Duplicate, outside-window, out-of-scope, and explicitly rejected financing rows do not create funding-round upserts, but remain fully auditable here.",
+  "counts": {
+    "source_deals": 60,
+    "imported": 55,
+    "excluded": 5
+  },
+  "excluded_deals": [
+    {
+      "deal_number": 242,
+      "investee": "Briefcase",
+      "verification": "rejected_2024_financing",
+      "reason": "Carthona lists Briefcase as a portfolio company and earlier reporting confirms backing, but neither establishes a new 2024 seed round.",
+      "source_excel_row": 3,
+      "primary_source": "https://www.carthonacapital.com/",
+      "secondary_source": "https://www.thewealthadvisor.com/article/tailor-made-portfolio-trend-takes-etfs"
+    },
+    {
+      "deal_number": 247,
+      "investee": "Borne",
+      "verification": "rejected_2024_financing",
+      "reason": "Startmate's company profile and feature place Borne in the Winter 2023 accelerator. The CSV's August 2024 seed record appears re-dated.",
+      "source_excel_row": 8,
+      "primary_source": "https://www.startmate.com/portfolio-companies/borne",
+      "secondary_source": "https://www.startmate.com/writing/building-a-village-how-borne-is-transforming-postpartum-care-for-modern-mothers"
+    },
+    {
+      "deal_number": 253,
+      "investee": "Energy Decarb",
+      "verification": "rejected_2024_financing",
+      "reason": "Energy Decarb describes itself as part of the St Baker Energy Group. This corporate relationship is not evidence of a separately closed January 2024 seed round.",
+      "source_excel_row": 14,
+      "primary_source": "https://energydecarb.com/about/",
+      "secondary_source": "https://www.stbcapitalpartners.com.au/bios"
+    },
+    {
+      "deal_number": 273,
+      "investee": "Huddled",
+      "verification": "rejected_2024_financing",
+      "reason": "Antler's job board states Huddled was backed in 2023. The 2024 investor memo discusses an existing portfolio company seeking follow-on capital, not a new A$240k close.",
+      "source_excel_row": 34,
+      "primary_source": "https://careers.antler.co/companies/huddled/jobs/41414731-student-advisory-board-member",
+      "secondary_source": "https://www.startupdaily.net/partner-content/antler-australia/antler-investor-memo-huddled-helps-university-students-connect-and-build-communities/"
+    },
+    {
+      "deal_number": 300,
+      "investee": "ANDFOODS / Saber Foods Limited",
+      "verification": "rejected_2024_financing",
+      "reason": "Massey/Riddet evidence says the company launched in October 2023 after attracting NZ$2.7m. March 2024 coverage is announcement timing, not a new 2024 close.",
+      "source_excel_row": 61,
+      "primary_source": "https://riddet.ac.nz/?catid=8&id=585&view=article",
+      "secondary_source": "https://www.rnz.co.nz/news/country/512554/scientists-making-dairy-free-cream-milk-powder-from-seeds"
+    }
+  ]
+}

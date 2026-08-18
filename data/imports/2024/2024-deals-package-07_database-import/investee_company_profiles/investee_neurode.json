@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:neurode",
+  "operation": "upsert",
+  "data": {
+    "name": "Neurode",
+    "website_url": "https://www.neurodelabs.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "neurotech-medical-devices",
+    "sector_secondary": null,
+    "use_case_primary": "neurotechnology-company-developing-a-wearable-headband-that-monitors-and-treats-adhd-symptoms-using-non-invasive-stimula",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "hardware-subscription",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Neurotechnology company developing a wearable headband that monitors and treats ADHD symptoms using non-invasive stimulation and sensing.",
+    "source_urls": [
+      "https://www.neurodelabs.com/",
+      "https://www.wsgr.com/print/v2/content/49032779/Wilson-Sonsini-Advises-Neurode-on-pre-Seed-Financing.pdf",
+      "https://www.trymatchbox.com/startups/72bd1963-387f-45ab-8242-d706d599d5bc"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

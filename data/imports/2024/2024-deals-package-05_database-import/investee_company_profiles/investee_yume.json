@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:yume",
+  "operation": "upsert",
+  "data": {
+    "name": "Yume",
+    "website_url": "https://yumefood.com.au/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Victoria",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "climate-tech-food-waste",
+    "sector_secondary": null,
+    "use_case_primary": "b2b-marketplace-and-workflow-platform-redistributing-surplus-packaged-food-from-manufacturers-to-buyers-and-charities",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-marketplace-saas",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "B2B marketplace and workflow platform redistributing surplus packaged food from manufacturers to buyers and charities.",
+    "source_urls": [
+      "https://yumefood.com.au/",
+      "https://techcrunch.com/2024/01/29/yume/",
+      "https://www.marketscreener.com/quote/stock/VEOLIA-ENVIRONNEMENT-4726/news/The-Yume-APP-Pty-Ltd-announced-that-it-has-received-AUD-2-million-in-funding-f-45833300/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

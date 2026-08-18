@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-359",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-359",
+    "dedupe_key": "2024|keeyu|2024-startmate-record-exact-date-unverified|program_or_grant",
+    "source_url": "https://app.dealroom.co/companies/keeyu_1",
+    "source_payload": {
+      "deal_number": 359,
+      "csv_investee": "Keeyu",
+      "normalized_investee": "Keeyu",
+      "csv_date": "2024-02-08",
+      "normalized_date": "2024 Startmate record; exact date unverified",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Startmate accelerator / database-only date",
+      "csv_amount": "AUD 800,000",
+      "normalized_amount": "Amount not verified; Startmate relationship confirmed",
+      "csv_investors": "Aussie Angels; Michael Laps; Paul Greenberg; Southern Angels; Startmate; Sydney Angels",
+      "normalized_investors": "Startmate (2024 relationship); other listed investors relate to a later 2025 raise",
+      "verification": "corrected",
+      "correction_or_issue": "The CSV appears to blend a 2024 Startmate record with investors disclosed for Keeyu's 2025 A$2.3m raise. Do not attach the later syndicate to 2024.",
+      "primary_source": "https://app.dealroom.co/companies/keeyu_1",
+      "secondary_source": "https://www.startmate.com/portfolio"
+    },
+    "investee_name_raw": "Keeyu",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "http://www.keeyu.com",
+    "org_industries_raw": "Retail Tech / Enterprise AI",
+    "round_type_raw": "Startmate accelerator / database-only date",
+    "round_stage": "program_or_grant",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "Amount not verified; Startmate relationship confirmed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Startmate (2024 relationship); other listed investors relate to a later 2025 raise",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://app.dealroom.co/companies/keeyu_1",
+    "verification_notes": "The CSV appears to blend a 2024 Startmate record with investors disclosed for Keeyu's 2025 A$2.3m raise. Do not attach the later syndicate to 2024.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "cross_year_conflict_do_not_structure",
+    "amount_structuring_note": "The record blends a 2024 accelerator relationship with investors from a later 2025 raise; no 2024 amount is structured.",
+    "date_precision": "unknown",
+    "supplemental_verification_urls": []
+  },
+  "refs": {
+    "investee_company_key": "company:research:keeyu"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:44b172832a3a8a101241",
+      "source:url:bc4f1ced55ba6c1ac9b4"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

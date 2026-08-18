@@ -1,0 +1,244 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-06_database-import",
+  "counts": {
+    "source_investors": 153,
+    "excluded": 26
+  },
+  "excluded_investors": [
+    {
+      "source_name": "Access Capital Ventures",
+      "canonical_investor": "Access Capital Ventures",
+      "action": "do_not_create",
+      "related_deals": "AirRobe (historical)",
+      "website": null,
+      "reason": "Previously processed; AirRobe's cited A$1.28m round occurred in 2020.",
+      "source_excel_row": 84
+    },
+    {
+      "source_name": "AirAngels; Mark Ritson",
+      "canonical_investor": "AirAngels; Mark Ritson",
+      "action": "do_not_create",
+      "related_deals": "Tracksuit",
+      "website": null,
+      "reason": "Not attached to this Series A in the primary release.",
+      "source_excel_row": 85
+    },
+    {
+      "source_name": "Angel Investors Marlborough; Enterprise Angels; NZVC",
+      "canonical_investor": "Angel Investors Marlborough; Enterprise Angels; NZVC",
+      "action": "do_not_create",
+      "related_deals": "Emerge",
+      "website": null,
+      "reason": "CSV names not attached to this close by the strongest reviewed source.",
+      "source_excel_row": 86
+    },
+    {
+      "source_name": "Big Idea Ventures",
+      "canonical_investor": "Big Idea Ventures",
+      "action": "do_not_create",
+      "related_deals": "The Leaf Protein Co",
+      "website": "https://bigideaventures.com/",
+      "reason": "Previously processed; source says supported, not clearly a cheque in this close.",
+      "source_excel_row": 87
+    },
+    {
+      "source_name": "Callaghan Innovation",
+      "canonical_investor": "Callaghan Innovation",
+      "action": "do_not_create",
+      "related_deals": "DNAiTECH; Metrovate",
+      "website": "https://www.callaghaninnovation.govt.nz/",
+      "reason": "NZ$750k is a repayable grant, not equity; record separately from investor creation. | Program support; do not create as conventional investor.",
+      "source_excel_row": 88
+    },
+    {
+      "source_name": "Development Bank of Wales",
+      "canonical_investor": "Development Bank of Wales",
+      "action": "do_not_create",
+      "related_deals": "Validient",
+      "website": "https://developmentbank.wales/",
+      "reason": "Previously processed, but this UK deal is outside ANZ scope.",
+      "source_excel_row": 89
+    },
+    {
+      "source_name": "Enterprise Angels",
+      "canonical_investor": "Enterprise Angels",
+      "action": "do_not_create",
+      "related_deals": "Kara Technologies",
+      "website": "https://www.enterpriseangels.co.nz/",
+      "reason": "Previously processed; company shareholding supports relationship, but event-level participation is not explicit.",
+      "source_excel_row": 90
+    },
+    {
+      "source_name": "Aussie Angels; Michael Laps; Paul Greenberg; Southern Angels; Sydney Angels",
+      "canonical_investor": "Later 2025 Keeyu syndicate",
+      "action": "do_not_create",
+      "related_deals": "Keeyu",
+      "website": null,
+      "reason": "These names belong to the later 2025 raise and must not be ingested against the 2024 row.",
+      "source_excel_row": 91
+    },
+    {
+      "source_name": "Saniel Ventures",
+      "canonical_investor": "Saniel Ventures",
+      "action": "do_not_create",
+      "related_deals": "Honey Insurance",
+      "website": "https://saniel.vc/",
+      "reason": "Previously processed; not named in strongest Series A sources.",
+      "source_excel_row": 92
+    },
+    {
+      "source_name": "Stephen Tam",
+      "canonical_investor": "Stephen Tam",
+      "action": "do_not_create",
+      "related_deals": "AU Beauty Bazaar",
+      "website": null,
+      "reason": "Public evidence identifies him as the founder, not an external investor.",
+      "source_excel_row": 93
+    },
+    {
+      "source_name": "Tidal Ventures",
+      "canonical_investor": "Tidal Ventures",
+      "action": "do_not_create",
+      "related_deals": "AirRobe (historical)",
+      "website": "https://www.tidalventures.com/",
+      "reason": "Existing directory record; no 2024 AirRobe deal confirmed.",
+      "source_excel_row": 94
+    },
+    {
+      "source_name": "Wesley Clover",
+      "canonical_investor": "Wesley Clover",
+      "action": "do_not_create",
+      "related_deals": "Validient",
+      "website": "https://www.wesleyclover.com/",
+      "reason": "Investment is verified, but only via an out-of-scope UK deal.",
+      "source_excel_row": 95
+    },
+    {
+      "source_name": "Wollemi",
+      "canonical_investor": "Wollemi Capital",
+      "action": "do_not_create",
+      "related_deals": "ExoFlare",
+      "website": "https://www.wollemi.com/",
+      "reason": "Existing directory record, but strongest event source reviewed did not name it.",
+      "source_excel_row": 96
+    },
+    {
+      "source_name": "Apeirogon Group",
+      "canonical_investor": "Apeirogon Group",
+      "action": "hold_unresolved",
+      "related_deals": "Entrend",
+      "website": null,
+      "reason": "No reliable public confirmation found.",
+      "source_excel_row": 97
+    },
+    {
+      "source_name": "Atto Accelerator",
+      "canonical_investor": "Atto Accelerator",
+      "action": "hold_unresolved",
+      "related_deals": "AirRobe (historical)",
+      "website": null,
+      "reason": "Do not create from a recycled 2020 financing record without event-level confirmation.",
+      "source_excel_row": 98
+    },
+    {
+      "source_name": "Blacknut; Square Enix Group",
+      "canonical_investor": "Blacknut; Square Enix Group",
+      "action": "hold_unresolved",
+      "related_deals": "Radian Arc",
+      "website": null,
+      "reason": "Named in CSV but not in the strongest reviewed Series B sources.",
+      "source_excel_row": 99
+    },
+    {
+      "source_name": "Boston",
+      "canonical_investor": "Boston (entity unresolved)",
+      "action": "hold_unresolved",
+      "related_deals": "Radian Arc",
+      "website": null,
+      "reason": "Official announcement uses only 'Boston'; legal investor identity is insufficient for creation.",
+      "source_excel_row": 100
+    },
+    {
+      "source_name": "Capital 49",
+      "canonical_investor": "Capital 49",
+      "action": "hold_unresolved",
+      "related_deals": "Lorikeet",
+      "website": null,
+      "reason": "CSV names the investor, but public company release reviewed does not name it individually.",
+      "source_excel_row": 101
+    },
+    {
+      "source_name": "CDP Venture Capital",
+      "canonical_investor": "CDP Venture Capital",
+      "action": "hold_unresolved",
+      "related_deals": "ShopSensei",
+      "website": "https://www.cdpventurecapital.it/",
+      "reason": "Database trace only; no reliable event confirmation found.",
+      "source_excel_row": 102
+    },
+    {
+      "source_name": "Futureverse",
+      "canonical_investor": "Futureverse",
+      "action": "hold_unresolved",
+      "related_deals": "Nucanon",
+      "website": "https://www.futureverse.com/",
+      "reason": "Founder post names it, but strongest event report does not; retain hold.",
+      "source_excel_row": 103
+    },
+    {
+      "source_name": "HTX / HTX Ventures",
+      "canonical_investor": "HTX Ventures",
+      "action": "hold_unresolved",
+      "related_deals": "Lombard",
+      "website": "https://www.htx.com/",
+      "reason": "CSV names HTX twice, but the strongest reviewed sources did not establish participation; do not create yet.",
+      "source_excel_row": 104
+    },
+    {
+      "source_name": "Liz Greive",
+      "canonical_investor": "Liz Greive",
+      "action": "hold_unresolved",
+      "related_deals": "Stickybeak",
+      "website": null,
+      "reason": "Official case study refers only to high-net-worth investors; do not create separately from the CSV.",
+      "source_excel_row": 105
+    },
+    {
+      "source_name": "Paloma Ventures",
+      "canonical_investor": "Paloma Ventures",
+      "action": "hold_unresolved",
+      "related_deals": "Spinaway",
+      "website": "https://paloma.vc/",
+      "reason": "Previously processed, but this particular Spinaway event lacks adequate proof and should not update the record.",
+      "source_excel_row": 106
+    },
+    {
+      "source_name": "Quantix Capital",
+      "canonical_investor": "Quantix Capital",
+      "action": "hold_unresolved",
+      "related_deals": "MTMS Network",
+      "website": null,
+      "reason": "Only a specialist database supports the transaction; no primary announcement found.",
+      "source_excel_row": 107
+    },
+    {
+      "source_name": "Lorikeet individuals",
+      "canonical_investor": "Technology executives and angels",
+      "action": "hold_unresolved",
+      "related_deals": "Lorikeet",
+      "website": null,
+      "reason": "Retain names in deal record; do not create 11 separate profiles without stronger event-level sources.",
+      "source_excel_row": 108
+    },
+    {
+      "source_name": "UNSW Founders",
+      "canonical_investor": "UNSW Founders 10x",
+      "action": "hold_unresolved",
+      "related_deals": "Biomedical Performance Technologies",
+      "website": "https://unswfounders.com/",
+      "reason": "Previously processed; cohort relationship verified but A$20k equity amount is not.",
+      "source_excel_row": 109
+    }
+  ]
+}

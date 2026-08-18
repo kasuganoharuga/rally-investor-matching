@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investors",
+  "record_key": "investor:huljich-family-trust-nominees-limited",
+  "operation": "upsert",
+  "data": {
+    "canonical_name": "Huljich Family Trust Nominees Limited",
+    "aliases": [
+      "Huljich family"
+    ],
+    "investor_type": "family_office",
+    "investor_subtype": "family_office",
+    "eligibility_mode": "supplemental_public_evidence",
+    "classification_confidence": "medium",
+    "classification_evidence_urls": [
+      "https://www.nzherald.co.nz/business/timelapse-meets-ai-as-timescapes-rakes-in-series-a-millions/TJNV2KA4VBGQRJRCYI2XOWRYYM/",
+      "https://oversightsolutions.co.nz/profile/TIMESCAPES-LIMITED"
+    ],
+    "classified_at": "2026-08-14",
+    "website_url": null,
+    "linkedin_url": null,
+    "hq_country": "NZ",
+    "hq_state": null,
+    "hq_city": null,
+    "offices": [],
+    "status": "active",
+    "merged_into_id": null,
+    "review_status": "needs_more_data",
+    "last_reviewed_at": "2026-08-14",
+    "last_reviewed_by": "codex-2024-investor-dedupe-update",
+    "identity_resolution": "new_investor",
+    "matched_existing_record_key": null,
+    "identity_match_method": "no_prior_match",
+    "identity_match_source": null
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-supplement:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:4039d2e364f940e3adad",
+      "source:url:86531ed3e8aa0a7a16a7"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "No official standalone website was found; identity and deal participation are supported by public reporting/registry evidence."
+    ]
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-069",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-069",
+    "dedupe_key": "2024|baymatob-oli|2024-exact-date-undisclosed|series_a",
+    "source_url": "https://clareventures.nz/portfolio/",
+    "source_payload": {
+      "deal_number": 69,
+      "csv_investee": "Oli",
+      "normalized_investee": "Baymatob / Oli",
+      "csv_date": "2024-01-01",
+      "normalized_date": "2024 (exact date undisclosed)",
+      "csv_round": "Series A",
+      "normalized_round": "Series A2",
+      "csv_amount": "AUD 1,800,000",
+      "normalized_amount": "Unverified",
+      "csv_investors": "Clare Ventures",
+      "normalized_investors": "Clare Ventures",
+      "verification": "partial",
+      "correction_or_issue": "Clare Ventures confirms Series A2 participation in 2024; Jan 1 and amount remain uncorroborated.",
+      "primary_source": "https://clareventures.nz/portfolio/",
+      "secondary_source": "https://www.baymatob.com/index.php/news-room/aus-ai-awards-2024"
+    },
+    "investee_name_raw": "Baymatob / Oli",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.baymatob.com/",
+    "org_industries_raw": "Medtech / Maternal Health / AI",
+    "round_type_raw": "Series A2",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": null,
+    "money_raised_raw": "Unverified",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Clare Ventures",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://clareventures.nz/portfolio/",
+    "verification_notes": "Clare Ventures confirms Series A2 participation in 2024; Jan 1 and amount remain uncorroborated.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown",
+    "amount_disclosure_status": "amount_unverified_participation_only",
+    "amount_structuring_note": "Investor participation is corroborated, but the A$1.8m amount and exact date are not.",
+    "supplemental_verification_urls": []
+  },
+  "refs": {
+    "investee_company_key": "company:research:baymatob-oli"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:3d350f4200a3b3fb4332",
+      "source:url:387da0213da0b3aec589"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Clare Ventures confirms Series A2 participation in 2024; Jan 1 and amount remain uncorroborated.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

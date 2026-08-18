@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:kashcade",
+  "operation": "upsert",
+  "data": {
+    "name": "Kashcade",
+    "website_url": "https://www.kashcade.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "fintech-lending",
+    "sector_secondary": null,
+    "use_case_primary": "non-bank-lender-providing-fast-working-capital-and-r-and-d-tax-incentive-financing-to-australian-startups-and-smes",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "lending-platform",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Non-bank lender providing fast working-capital and R&D tax-incentive financing to Australian startups and SMEs.",
+    "source_urls": [
+      "https://www.kashcade.com/",
+      "https://www.startupdaily.net/topic/funding/startup-lender-kashcade-banks-1-million-raise-ahead-of-rolling-out-rd-tax-incentive-loans/",
+      "https://www.linkedin.com/company/kashcade/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

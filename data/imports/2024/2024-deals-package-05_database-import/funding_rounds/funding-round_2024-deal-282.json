@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-282",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-282",
+    "dedupe_key": "2024|ilala-metals|2024-02-database-entry|seed",
+    "source_url": "https://app.dealroom.co/companies/ilala_metals",
+    "source_payload": {
+      "deal_number": 282,
+      "csv_investee": "Ilala Metals",
+      "normalized_investee": "Ilala Metals",
+      "csv_date": "2024-02-01",
+      "normalized_date": "2024-02 database entry",
+      "csv_round": "Seed",
+      "normalized_round": "Private mining-company seed / pre-IPO capital",
+      "csv_amount": "AUD 850,000",
+      "normalized_amount": "AUD 850,000 (database-only)",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Undisclosed",
+      "verification": "partial",
+      "correction_or_issue": "The company and its pre-IPO mining strategy are identifiable, but no primary financing announcement, investor identity or close documentation was found for the A$850k entry.",
+      "primary_source": "https://app.dealroom.co/companies/ilala_metals",
+      "secondary_source": "https://ilalametals.com/"
+    },
+    "investee_name_raw": "Ilala Metals",
+    "org_location_raw": "Perth, WA, Australia",
+    "org_website_raw": "https://ilalametals.com/",
+    "org_industries_raw": "Mining / Critical Minerals",
+    "round_type_raw": "Private mining-company seed / pre-IPO capital",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": null,
+    "money_raised_raw": "AUD 850,000 (database-only)",
+    "amount": 850000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://app.dealroom.co/companies/ilala_metals",
+    "verification_notes": "The company and its pre-IPO mining strategy are identifiable, but no primary financing announcement, investor identity or close documentation was found for the A$850k entry.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:ilala-metals"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:f735489d6487dd548654",
+      "source:url:bebaa937196e21adcd4a"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "The company and its pre-IPO mining strategy are identifiable, but no primary financing announcement, investor identity or close documentation was found for the A$850k entry.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

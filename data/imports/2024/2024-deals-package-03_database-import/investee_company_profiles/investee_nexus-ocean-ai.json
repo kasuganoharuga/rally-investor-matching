@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:nexus-ocean-ai",
+  "operation": "upsert",
+  "data": {
+    "name": "Nexus Ocean AI",
+    "website_url": "https://nexusocean.ai/",
+    "crunchbase_uuid": null,
+    "hq_country": "SG",
+    "hq_state": null,
+    "hq_city": null,
+    "is_anz": false,
+    "sector_primary": "maritime-tech-ai",
+    "sector_secondary": null,
+    "use_case_primary": "generative-ai-assistants-and-maritime-language-models-that-automate-shipping-workflows-and-knowledge-work",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-saas",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "ai_related",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Generative-AI assistants and maritime language models that automate shipping workflows and knowledge work.",
+    "source_urls": [
+      "https://nexusocean.ai/",
+      "https://smartmaritimenetwork.com/2024/08/16/nexus-ocean-ai-gets-400k-in-new-funding-from-tradeworks-vc/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-018",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-018",
+    "dedupe_key": "2024|loopit|2024-05-07|series_a",
+    "source_url": "https://www.loopit.co/en-za/blog/loopit-raises-3-95m-to-fuel-automotive-industrys-shift-towards-flexible-car-subscriptions",
+    "source_payload": {
+      "deal_number": 18,
+      "csv_investee": "Loopit",
+      "normalized_investee": "Loopit",
+      "csv_date": "2024-05-07",
+      "normalized_date": "2024-05-07",
+      "csv_round": "Seed",
+      "normalized_round": "Pre-Series A",
+      "csv_amount": "AUD 3,950,000",
+      "normalized_amount": "AUD 3,950,000",
+      "csv_investors": "AEROCORP; BetterLabs Ventures; Common Sense Ventures; LUXEM Ventures; Tidal Ventures; Upswell Ventures",
+      "normalized_investors": "AeroCorp; BetterLabs; Common Sense Ventures; LUXEM Ventures; Tidal Ventures; Upswell Ventures",
+      "verification": "corrected",
+      "correction_or_issue": "Official investee source explicitly labels the round Pre-Series A.",
+      "primary_source": "https://www.loopit.co/en-za/blog/loopit-raises-3-95m-to-fuel-automotive-industrys-shift-towards-flexible-car-subscriptions",
+      "secondary_source": "https://www.loopit.co/en-us/investors"
+    },
+    "investee_name_raw": "Loopit",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.loopit.co",
+    "org_industries_raw": "Mobility / Automotive SaaS",
+    "round_type_raw": "Pre-Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-05-07",
+    "money_raised_raw": "AUD 3,950,000",
+    "amount": 3950000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "AeroCorp; BetterLabs; Common Sense Ventures; LUXEM Ventures; Tidal Ventures; Upswell Ventures",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.loopit.co/en-za/blog/loopit-raises-3-95m-to-fuel-automotive-industrys-shift-towards-flexible-car-subscriptions",
+    "verification_notes": "Official investee source explicitly labels the round Pre-Series A.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:loopit"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:8bd9264c819ae47a6ac0",
+      "source:url:5e050c36352187c6a546"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

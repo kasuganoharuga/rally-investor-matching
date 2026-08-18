@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-323",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-323",
+    "dedupe_key": "2024|flk-it-over|2024-03-14|seed",
+    "source_url": "https://cfotech.com.au/story/australian-proptech-flk-it-over-raises-2-5m-to-fuel-growth",
+    "source_payload": {
+      "deal_number": 323,
+      "csv_investee": "FLK It Over",
+      "normalized_investee": "FLK It Over",
+      "csv_date": "2024-03-15",
+      "normalized_date": "2024-03-14 announcement",
+      "csv_round": "Seed",
+      "normalized_round": "Second capital raise / seed",
+      "csv_amount": "USD 2,500,000",
+      "normalized_amount": "AUD 2,500,000",
+      "csv_investors": "David Southon",
+      "normalized_investors": "David Southon; Bilgola Capital; Tech Labs Capital",
+      "verification": "corrected",
+      "correction_or_issue": "Australian reporting confirms A$2.5m, not US$2.5m, and identifies additional investors omitted from the CSV.",
+      "primary_source": "https://cfotech.com.au/story/australian-proptech-flk-it-over-raises-2-5m-to-fuel-growth",
+      "secondary_source": "https://app.dealroom.co/companies/flk_it_over"
+    },
+    "investee_name_raw": "FLK It Over",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://flkitover.com/",
+    "org_industries_raw": "Proptech / Workflow SaaS",
+    "round_type_raw": "Second capital raise / seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-03-14",
+    "money_raised_raw": "AUD 2,500,000",
+    "amount": 2500000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "David Southon; Bilgola Capital; Tech Labs Capital",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://cfotech.com.au/story/australian-proptech-flk-it-over-raises-2-5m-to-fuel-growth",
+    "verification_notes": "Australian reporting confirms A$2.5m, not US$2.5m, and identifies additional investors omitted from the CSV.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:flk-it-over"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:d493db8f8336edfd3b71",
+      "source:url:53b7bd83b1a5974c314e"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

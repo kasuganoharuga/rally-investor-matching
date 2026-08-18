@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:shards-tech-shards-protocol",
+  "operation": "upsert",
+  "data": {
+    "name": "Shards.Tech / Shards Protocol",
+    "website_url": "https://shards.tech/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Queensland",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "web3-gaming-infrastructure",
+    "sector_secondary": null,
+    "use_case_primary": "web3-infrastructure-project-that-evolved-from-a-gaming-guild-sdk-into-an-on-chain-reputation-and-rewards-layer",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "protocol-token-ecosystem",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Web3 infrastructure project that evolved from a gaming guild SDK into an on-chain reputation and rewards layer.",
+    "source_urls": [
+      "https://shards.tech/",
+      "https://venturebeat.com/games/shards-protocol-raises-2m-for-web3-reputation-and-rewards-system/",
+      "https://www.cbinsights.com/company/shardstech"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

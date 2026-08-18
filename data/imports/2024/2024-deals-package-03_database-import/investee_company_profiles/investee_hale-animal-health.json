@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:hale-animal-health",
+  "operation": "upsert",
+  "data": {
+    "name": "Hale Animal Health",
+    "website_url": "https://haleanimal.co.nz/",
+    "crunchbase_uuid": null,
+    "hq_country": "NZ",
+    "hq_state": null,
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "animal-health-pharmaceuticals",
+    "sector_secondary": null,
+    "use_case_primary": "develops-novel-veterinary-pharmaceuticals-including-cannabinoid-based-medicines-for-companion-animals",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "biotech-therapeutics",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Develops novel veterinary pharmaceuticals, including cannabinoid-based medicines for companion animals.",
+    "source_urls": [
+      "https://haleanimal.co.nz/",
+      "https://globalpetindustry.com/news/new-zealand-pet-cannabis-start-up-closes-seed-round/",
+      "https://www.companyhub.nz/companyDetails.cfm?nzbn=9429048115315"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

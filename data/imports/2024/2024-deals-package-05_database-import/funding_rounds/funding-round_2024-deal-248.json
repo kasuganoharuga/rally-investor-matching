@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-248",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-248",
+    "dedupe_key": "2024|preplocal|2024-11-20|seed",
+    "source_url": "https://medium.com/m8-ventures/m8-ventures-backs-preplocal-f39df240a995",
+    "source_payload": {
+      "deal_number": 248,
+      "csv_investee": "Preplocal",
+      "normalized_investee": "Preplocal",
+      "csv_date": "2024-11-20",
+      "normalized_date": "2024-11-20",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed; A$200k is cumulative/database total, not proven as this round",
+      "csv_investors": "Colopl Next; M8 Ventures; Skalata",
+      "normalized_investors": "M8 Ventures; Skalata Ventures; Colopl Next",
+      "verification": "corrected",
+      "correction_or_issue": "M8's investment note confirms the seed syndicate but does not disclose the round amount. The CSV's A$200k total must not be treated as the seed cheque.",
+      "primary_source": "https://medium.com/m8-ventures/m8-ventures-backs-preplocal-f39df240a995",
+      "secondary_source": "https://www.cbinsights.com/company/preplocal/financials"
+    },
+    "investee_name_raw": "Preplocal",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://preplocal.com/",
+    "org_industries_raw": "Foodtech / Logistics",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-11-20",
+    "money_raised_raw": "Undisclosed; A$200k is cumulative/database total, not proven as this round",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "M8 Ventures; Skalata Ventures; Colopl Next",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://medium.com/m8-ventures/m8-ventures-backs-preplocal-f39df240a995",
+    "verification_notes": "M8's investment note confirms the seed syndicate but does not disclose the round amount. The CSV's A$200k total must not be treated as the seed cheque.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:preplocal"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:4d4b72b011d8e21d8e29",
+      "source:url:99e60cf43f743ae150cf"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

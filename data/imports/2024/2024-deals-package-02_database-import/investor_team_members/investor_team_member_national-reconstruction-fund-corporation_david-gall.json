@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_team_members",
+  "record_key": "investor_team_member:national-reconstruction-fund-corporation:david-gall",
+  "operation": "upsert",
+  "data": {
+    "contact_id": null,
+    "first_name": "David",
+    "last_name": "Gall",
+    "role_title": "Chief Executive Officer",
+    "seniority": "other",
+    "linkedin_url": "https://au.linkedin.com/in/davidgallcro",
+    "claimed_focus": [
+      "chief_executive",
+      "investment_leadership"
+    ],
+    "bio_summary": "CEO leading NRFC strategic investments; 35+ years in banking, investment strategy and risk management.",
+    "source_url": "https://www.nrf.gov.au/who-we-are/our-executive",
+    "retrieved_at": "2026-07-16",
+    "is_active": true
+  },
+  "refs": {
+    "investor_key": "investor:national-reconstruction-fund-corporation",
+    "contact_key": null
+  },
+  "provenance": {
+    "collection_run_key": "collection:research:2026-07-24",
+    "source_keys": [
+      "research_source:national-reconstruction-fund-corporation:nrfc_src_003"
+    ]
+  },
+  "review": {
+    "status": "unreviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-256",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-256",
+    "dedupe_key": "2024|aglow|2024-08-13|seed",
+    "source_url": "https://www.linkedin.com/posts/jo-blundell-21461a13_subscription-pampering-startup-aglow-raises-activity-7229287611788369921-hG6c",
+    "source_payload": {
+      "deal_number": 256,
+      "csv_investee": "aglow",
+      "normalized_investee": "aglow",
+      "csv_date": "2024-08-12",
+      "normalized_date": "2024-08-13 announcement",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "AUD 1,250,000",
+      "normalized_amount": "AUD 1,250,000",
+      "csv_investors": "Brand Fund; Icehouse Ventures; Peter Haig; Ryan Baker",
+      "normalized_investors": "Brand Fund by Previously Unavailable and Icehouse Ventures (lead); Peter Haig; Ryan Baker",
+      "verification": "verified",
+      "correction_or_issue": "Founder and press coverage confirm the A$1.25m round, lead structure and two individual investors.",
+      "primary_source": "https://www.linkedin.com/posts/jo-blundell-21461a13_subscription-pampering-startup-aglow-raises-activity-7229287611788369921-hG6c",
+      "secondary_source": "https://www.startupdaily.net/topic/funding/subscription-pampering-startup-aglow-raises-1-25-million-from-tyro-timely-founders/"
+    },
+    "investee_name_raw": "aglow",
+    "org_location_raw": "Sydney, NSW, Australia / New Zealand",
+    "org_website_raw": "https://www.getaglow.co/",
+    "org_industries_raw": "Beauty Tech / Fintech",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-08-13",
+    "money_raised_raw": "AUD 1,250,000",
+    "amount": 1250000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Brand Fund by Previously Unavailable and Icehouse Ventures (lead); Peter Haig; Ryan Baker",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.linkedin.com/posts/jo-blundell-21461a13_subscription-pampering-startup-aglow-raises-activity-7229287611788369921-hG6c",
+    "verification_notes": "Founder and press coverage confirm the A$1.25m round, lead structure and two individual investors.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:aglow"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:b7d486084516daa7de34",
+      "source:url:b179d3614fda265d0d7f"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

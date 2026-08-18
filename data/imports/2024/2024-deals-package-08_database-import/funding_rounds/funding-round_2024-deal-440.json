@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-440",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-440",
+    "dedupe_key": "2024|flowstate|2024-h1-exact-close-date-undisclosed|seed",
+    "source_url": "https://stabmag.com/features/the-origin-story-of-flowstate-the-surfer-owned-tech-startup-born-in-chlorine/",
+    "source_payload": {
+      "deal_number": 440,
+      "csv_investee": "Flowstate",
+      "normalized_investee": "Flowstate",
+      "csv_date": "2024-01-01",
+      "normalized_date": "2024 H1; exact close date undisclosed",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "AUD 1,200,000",
+      "normalized_amount": "AUD 1,200,000",
+      "csv_investors": null,
+      "normalized_investors": "Undisclosed investors",
+      "verification": "partial",
+      "correction_or_issue": "Later company/investor reporting corroborates a prior A$1.2m seed, but not a 1 January close or investor names.",
+      "primary_source": "https://stabmag.com/features/the-origin-story-of-flowstate-the-surfer-owned-tech-startup-born-in-chlorine/",
+      "secondary_source": "https://app.dealroom.co/companies/flowstate_zone"
+    },
+    "investee_name_raw": "Flowstate",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://flowstate.zone/",
+    "org_industries_raw": "Sports Tech / Computer Vision",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": null,
+    "money_raised_raw": "AUD 1,200,000",
+    "amount": 1200000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed investors",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-08_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://stabmag.com/features/the-origin-story-of-flowstate-the-surfer-owned-tech-startup-born-in-chlorine/",
+    "verification_notes": "Later company/investor reporting corroborates a prior A$1.2m seed, but not a 1 January close or investor names.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:flowstate"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": [
+      "source:url:76655898ca068ac2bad5",
+      "source:url:3e9c4d1dc4931c44db34"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Later company/investor reporting corroborates a prior A$1.2m seed, but not a 1 January close or investor names.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

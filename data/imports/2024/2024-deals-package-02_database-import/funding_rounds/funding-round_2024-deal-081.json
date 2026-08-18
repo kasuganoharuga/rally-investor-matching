@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-081",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-081",
+    "dedupe_key": "2024|8seats|2024-12-27|seed",
+    "source_url": "https://www.startupdaily.net/topic/funding/former-woolies-boss-backs-2m-seed-round-for-workplace-messaging-startup/",
+    "source_payload": {
+      "deal_number": 81,
+      "csv_investee": "8seats",
+      "normalized_investee": "8seats",
+      "csv_date": "2024-12-18",
+      "normalized_date": "2024-12-27 announcement",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "AUD 2,000,000",
+      "normalized_amount": "AUD 2,000,000",
+      "csv_investors": "Antony Karp; Black Nova VC; Brad Banducci; Greg Miller; Ian Gardiner; Michael Priddis; Paul Bradbury",
+      "normalized_investors": "Black Nova VC; Tony Karp; Brad Banducci; Greg Miller; Ian Gardiner; Michael Priddis; Paul Bradbury",
+      "verification": "verified",
+      "correction_or_issue": "Amount and participants confirmed; public announcement is nine days after the CSV date.",
+      "primary_source": "https://www.startupdaily.net/topic/funding/former-woolies-boss-backs-2m-seed-round-for-workplace-messaging-startup/",
+      "secondary_source": "https://www.8seats.com/"
+    },
+    "investee_name_raw": "8seats",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.8seats.com/",
+    "org_industries_raw": "Enterprise SaaS / Collaboration",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-12-27",
+    "money_raised_raw": "AUD 2,000,000",
+    "amount": 2000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Black Nova VC; Tony Karp; Brad Banducci; Greg Miller; Ian Gardiner; Michael Priddis; Paul Bradbury",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.startupdaily.net/topic/funding/former-woolies-boss-backs-2m-seed-round-for-workplace-messaging-startup/",
+    "verification_notes": "Amount and participants confirmed; public announcement is nine days after the CSV date.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:8seats"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:0faa401b719d71833493",
+      "source:url:7cc39a7ec3f78a2550f0"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

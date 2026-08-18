@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-01_database-import",
+  "supplemented_at": "2026-08-14T00:00:00+09:30",
+  "status": "completed_with_public_evidence_limits",
+  "change_count": 6,
+  "changes": [
+    {
+      "type": "investor_website",
+      "record_key": "investor:77-partners",
+      "value": "https://www.77partners.vc/",
+      "evidence_url": "https://www.77partners.vc/"
+    },
+    {
+      "type": "investor_website",
+      "record_key": "investor:co-ventures",
+      "value": "https://www.coventures.vc/",
+      "evidence_url": "https://www.coventures.vc/"
+    },
+    {
+      "type": "investee_website",
+      "record_key": "company:research:10six-games",
+      "value": "https://www.10sixgames.com/",
+      "evidence_url": "https://www.10sixgames.com/privacy-policy"
+    },
+    {
+      "type": "investee_website",
+      "record_key": "company:research:brownee",
+      "value": "https://www.brownee.io/",
+      "evidence_url": "https://www.brownee.io/intro"
+    },
+    {
+      "type": "investee_website",
+      "record_key": "company:research:celosia-therapeutics",
+      "value": "https://celosiatx.com/",
+      "evidence_url": "https://celosiatx.com/team"
+    },
+    {
+      "type": "resolved_investor_relation",
+      "deal_number": 51,
+      "investor_key": "investor:simon-baume",
+      "evidence_urls": [
+        "https://www.ajust.com.au/about",
+        "https://www.overnightsuccess.vc/p/aussie-startup-vc-summary-30th-november-2024"
+      ]
+    }
+  ],
+  "remaining_limits": {
+    "investee_websites_missing": 0,
+    "investor_websites_missing": 12,
+    "round_exact_dates_missing": 9,
+    "round_structured_amounts_missing": 14,
+    "unresolved_mentions": 17
+  }
+}

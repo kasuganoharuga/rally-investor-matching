@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-077",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-077",
+    "dedupe_key": "2024|vault-cloud|2024-12-20|series_b",
+    "source_url": "https://www.nrf.gov.au/news-and-media-releases/nrfc-bolster-sovereign-data-security-through-225-million-investment-vault-cloud",
+    "source_payload": {
+      "deal_number": 77,
+      "csv_investee": "Vault Cloud",
+      "normalized_investee": "Vault Cloud",
+      "csv_date": "2024-12-19",
+      "normalized_date": "2024-12-20 announcement",
+      "csv_round": "Series B",
+      "normalized_round": "Series B",
+      "csv_amount": "USD 22,500,000",
+      "normalized_amount": "AUD 22,500,000",
+      "csv_investors": "National Reconstruction Fund Corporation",
+      "normalized_investors": "National Reconstruction Fund Corporation",
+      "verification": "corrected",
+      "correction_or_issue": "Official NRFC release confirms A$22.5m, not US$22.5m; additional private capital was expected.",
+      "primary_source": "https://www.nrf.gov.au/news-and-media-releases/nrfc-bolster-sovereign-data-security-through-225-million-investment-vault-cloud",
+      "secondary_source": "https://globaltradealert.org/state-act/89783-australia-national-reconstruction-fund-corporation-nrfc-invests-aud-225-million-in-vault-cloud"
+    },
+    "investee_name_raw": "Vault Cloud",
+    "org_location_raw": "Canberra, ACT, Australia",
+    "org_website_raw": "https://vaultcloud.com.au/",
+    "org_industries_raw": "Cloud Infrastructure / Cybersecurity",
+    "round_type_raw": "Series B",
+    "round_stage": "series_b",
+    "funding_stage_raw": "Series B",
+    "announced_date": "2024-12-20",
+    "money_raised_raw": "AUD 22,500,000",
+    "amount": 22500000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "National Reconstruction Fund Corporation",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.nrf.gov.au/news-and-media-releases/nrfc-bolster-sovereign-data-security-through-225-million-investment-vault-cloud",
+    "verification_notes": "Official NRFC release confirms A$22.5m, not US$22.5m; additional private capital was expected.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:vault-cloud"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:cbf27cb8277793cc509d",
+      "source:url:7560cba9ba67d95805b9"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

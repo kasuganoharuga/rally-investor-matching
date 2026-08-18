@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-03_database-import",
+  "policy": "Duplicate, outside-window, out-of-scope, and explicitly rejected financing rows do not create funding-round upserts, but remain fully auditable here.",
+  "counts": {
+    "source_deals": 60,
+    "imported": 52,
+    "excluded": 8
+  },
+  "excluded_deals": [
+    {
+      "deal_number": 128,
+      "investee": "Huddled",
+      "verification": "rejected_2024_financing",
+      "reason": "Antler-backed company is verified, but company materials place the first funding in 2023; 2024 coverage is an investor profile, not a new round.",
+      "source_excel_row": 9,
+      "primary_source": "https://www.startupdaily.net/partner-content/antler-australia/antler-investor-memo-huddled-helps-university-students-connect-and-build-communities/",
+      "secondary_source": "https://careers.antler.co/companies/huddled/jobs/41414731-student-advisory-board-member"
+    },
+    {
+      "deal_number": 129,
+      "investee": "Boa",
+      "verification": "rejected_2024_financing",
+      "reason": "Black Nova officially confirms Boa as a portfolio company, but no 2024 financing or Jan-1 close was corroborated.",
+      "source_excel_row": 10,
+      "primary_source": "https://blacknova.vc/early-portfolio/boa-app/",
+      "secondary_source": "https://blacknova.vc/"
+    },
+    {
+      "deal_number": 136,
+      "investee": "SubOne",
+      "verification": "rejected_financing",
+      "reason": "Australian Business Register shows SubOne is a business name of MIT Ventures Pty Ltd; the CSV investor relationship is an entity-name confusion.",
+      "source_excel_row": 17,
+      "primary_source": "https://abr.business.gov.au/ABN/View/65604234942",
+      "secondary_source": "https://app.dealroom.co/companies/subone"
+    },
+    {
+      "deal_number": 146,
+      "investee": "ShaBAAS Pay",
+      "verification": "rejected_financing",
+      "reason": "Startupbootcamp's official alumni profile labels the company bootstrapped; do not create a seed financing event.",
+      "source_excel_row": 27,
+      "primary_source": "https://www.startupbootcamp.com.au/alumni/shabaas",
+      "secondary_source": "https://abr.business.gov.au/ABN/View/74653591550"
+    },
+    {
+      "deal_number": 151,
+      "investee": "ListAssist",
+      "verification": "rejected_2024_financing",
+      "reason": "Company and investor identities are plausible, but no 2024 financing announcement or genuine January 1 close was found; database status also indicates M&A.",
+      "source_excel_row": 32,
+      "primary_source": "https://listassist.ai/",
+      "secondary_source": "https://www.crunchbase.com/organization/listassist"
+    },
+    {
+      "deal_number": 165,
+      "investee": "2Censor",
+      "verification": "rejected_2024_financing",
+      "reason": "Company activity and 2024 industry recognition are verified, but no financing close, investor or support for the A$5m pre-money valuation was found.",
+      "source_excel_row": 46,
+      "primary_source": "https://2censor.com/in-the-media/",
+      "secondary_source": "https://2censor.com/"
+    },
+    {
+      "deal_number": 175,
+      "investee": "Neopharma Technologies",
+      "verification": "rejected_2024_financing",
+      "reason": "A company-issued November release announced the launch of a Series A raise, not a completed financing. The database entry does not disclose amount or investors.",
+      "source_excel_row": 56,
+      "primary_source": "https://markets.financialcontent.com/stocks/article/globeprwire-2024-11-5-neopharma-technologies-launches-series-a-funding-round-to-transform-the-rapid-diagnostics-industry",
+      "secondary_source": "https://www.cbinsights.com/company/neopharma-technologies/financials"
+    },
+    {
+      "deal_number": 179,
+      "investee": "CYQIQ",
+      "verification": "rejected_2024_financing",
+      "reason": "The US$200k SkyDeck investment and company relationship are valid, but the founder announcement predates 2024; exclude as a 2024 close.",
+      "source_excel_row": 60,
+      "primary_source": "https://www.linkedin.com/posts/richard-hruby_cyqiq-skydeck-saas-activity-7060019988266438656-JSLv",
+      "secondary_source": "https://skydeck.berkeley.edu/invest/"
+    }
+  ]
+}

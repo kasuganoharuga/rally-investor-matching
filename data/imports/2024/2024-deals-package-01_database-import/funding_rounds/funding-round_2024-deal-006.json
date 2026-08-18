@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-006",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-006",
+    "dedupe_key": "2024|titlespace|2024-09-01|seed",
+    "source_url": "https://titlespace.com.au/",
+    "source_payload": {
+      "deal_number": 6,
+      "csv_investee": "Titlespace",
+      "normalized_investee": "Titlespace",
+      "csv_date": "2024-09-01",
+      "normalized_date": "2024-09-01",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "AUD 1,000,000",
+      "normalized_amount": "AUD 1,000,000 (single-source)",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Undisclosed",
+      "verification": "needs_review",
+      "correction_or_issue": "Operating company confirmed; no independent public financing announcement found.",
+      "primary_source": "https://titlespace.com.au/",
+      "secondary_source": "https://ae.linkedin.com/company/titlespace"
+    },
+    "investee_name_raw": "Titlespace",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://titlespace.com.au",
+    "org_industries_raw": "Legaltech / Proptech",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-09-01",
+    "money_raised_raw": "AUD 1,000,000 (single-source)",
+    "amount": 1000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://titlespace.com.au/",
+    "verification_notes": "Operating company confirmed; no independent public financing announcement found. Public company funding profile corroborates an approximately A$1m 2024 round but lists 1 October rather than 1 September; the exact date remains unresolved.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day",
+    "secondary_source_status": "corroborated_with_date_conflict",
+    "supplemental_verification_urls": [
+      "https://ae.linkedin.com/company/titlespace"
+    ]
+  },
+  "refs": {
+    "investee_company_key": "company:research:titlespace"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:7c36554620b0f0b372a4"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Operating company confirmed; no independent public financing announcement found."
+    ]
+  }
+}

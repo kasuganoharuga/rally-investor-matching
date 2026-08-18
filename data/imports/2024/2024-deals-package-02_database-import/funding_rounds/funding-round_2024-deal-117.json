@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-117",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-117",
+    "dedupe_key": "2024|bike-matrix|2024-08-19|seed",
+    "source_url": "https://www.bikematrix.io/post/bike-matrix-announces-successful-2m-capital-raise",
+    "source_payload": {
+      "deal_number": 117,
+      "csv_investee": "Bike Matrix",
+      "normalized_investee": "Bike Matrix",
+      "csv_date": "2024-08-12",
+      "normalized_date": "2024-08-19",
+      "csv_round": "Seed",
+      "normalized_round": "Seed capital raise",
+      "csv_amount": "NZD 2,000,000",
+      "normalized_amount": "NZD 2,000,000",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Undisclosed industry investors",
+      "verification": "verified",
+      "correction_or_issue": "Company announcement and industry reporting confirm NZ$2m; investor names remain undisclosed.",
+      "primary_source": "https://www.bikematrix.io/post/bike-matrix-announces-successful-2m-capital-raise",
+      "secondary_source": "https://app.dealroom.co/news/feed/bike-matrix-secures-nz-2m-industry-investment"
+    },
+    "investee_name_raw": "Bike Matrix",
+    "org_location_raw": "Rotorua, New Zealand",
+    "org_website_raw": "https://www.bikematrix.io/",
+    "org_industries_raw": "Cycling Tech / Data SaaS",
+    "round_type_raw": "Seed capital raise",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-08-19",
+    "money_raised_raw": "NZD 2,000,000",
+    "amount": 2000000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed industry investors",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.bikematrix.io/post/bike-matrix-announces-successful-2m-capital-raise",
+    "verification_notes": "Company announcement and industry reporting confirm NZ$2m; investor names remain undisclosed. Company announcement and contemporaneous industry report verify the NZ$2m raise.",
+    "verification_checked_at": "2026-08-14",
+    "supplemental_verification_urls": [
+      "https://www.bikematrix.io/post/bike-matrix-announces-successful-2m-capital-raise",
+      "https://www.velobiz.de/news/clevere-idee-erhaelt-eine-finanzspritze-veloQXJ0aWNsZS8zMTQxOQbiz"
+    ],
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:bike-matrix"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:53a80c36744c5005d5b0",
+      "source:url:ea1e00a1830b76962c20"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-312",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-312",
+    "dedupe_key": "2024|blocktexx-pty-ltd|2024-02-20|series_b",
+    "source_url": "https://www.blocktexx.com/news/lhz5113dkmy8rcfmgxvj0z2ymzp50c",
+    "source_payload": {
+      "deal_number": 312,
+      "csv_investee": "BlockTexx",
+      "normalized_investee": "BlockTexx Pty Ltd",
+      "csv_date": "2024-02-20",
+      "normalized_date": "2024-02-20",
+      "csv_round": "Series B",
+      "normalized_round": "Series B",
+      "csv_amount": "AUD 7,000,000",
+      "normalized_amount": "AUD 7,000,000",
+      "csv_investors": "Artesian Clean Energy Seed Fund; Fashion For Good; Michael Gregg; Sue Gregg",
+      "normalized_investors": "Artesian Investments; Fashion for Good; Mike and Sue Gregg",
+      "verification": "verified",
+      "correction_or_issue": "BlockTexx's official announcement confirms the A$7m Series B and all participants. Mike Gregg is already represented through Shearwater Capital in the directory workflow.",
+      "primary_source": "https://www.blocktexx.com/news/lhz5113dkmy8rcfmgxvj0z2ymzp50c",
+      "secondary_source": "https://app.dealroom.co/companies/blocktexx"
+    },
+    "investee_name_raw": "BlockTexx Pty Ltd",
+    "org_location_raw": "Loganholme, QLD, Australia",
+    "org_website_raw": "https://www.blocktexx.com/",
+    "org_industries_raw": "Climate Tech / Recycling",
+    "round_type_raw": "Series B",
+    "round_stage": "series_b",
+    "funding_stage_raw": "Series B",
+    "announced_date": "2024-02-20",
+    "money_raised_raw": "AUD 7,000,000",
+    "amount": 7000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Artesian Investments; Fashion for Good; Mike and Sue Gregg",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.blocktexx.com/news/lhz5113dkmy8rcfmgxvj0z2ymzp50c",
+    "verification_notes": "BlockTexx's official announcement confirms the A$7m Series B and all participants. Mike Gregg is already represented through Shearwater Capital in the directory workflow.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:blocktexx"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:f2bec0e45dc8878dc633",
+      "source:url:ea733aca259becff2971"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

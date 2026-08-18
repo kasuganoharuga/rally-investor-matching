@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-298",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-298",
+    "dedupe_key": "2024|miruku-limited|2024-02-19|series_a",
+    "source_url": "https://www.motioncapital.co.nz/media/miruku-investment-notes",
+    "source_payload": {
+      "deal_number": 298,
+      "csv_investee": "Miruku",
+      "normalized_investee": "Miruku Limited",
+      "csv_date": "2024-02-18",
+      "normalized_date": "2024-02-19 announcement",
+      "csv_round": "Seed",
+      "normalized_round": "Pre-Series A",
+      "csv_amount": "NZD 8,000,000",
+      "normalized_amount": "NZD 8,000,000",
+      "csv_investors": "Cultivate Ventures; Icehouse Ventures; Motion Capital; Movac; New Zealand Growth Capital Partners; NZVC",
+      "normalized_investors": "Motion Capital (lead, NZD 1.5m); Movac; Icehouse Ventures; Aspire NZ Seed Fund; Cultivate Ventures; NZVC",
+      "verification": "corrected",
+      "correction_or_issue": "Motion Capital's investment note and NBR confirm an NZ$8m pre-Series A, not a conventional seed, and disclose the full syndicate and lead cheque.",
+      "primary_source": "https://www.motioncapital.co.nz/media/miruku-investment-notes",
+      "secondary_source": "https://www.nbr.co.nz/business/molecular-farming-startup-miruku-secures-8m-in-cap-raise/"
+    },
+    "investee_name_raw": "Miruku Limited",
+    "org_location_raw": "Palmerston North, New Zealand",
+    "org_website_raw": "https://www.miruku.com/",
+    "org_industries_raw": "Foodtech / Synthetic Biology",
+    "round_type_raw": "Pre-Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-02-19",
+    "money_raised_raw": "NZD 8,000,000",
+    "amount": 8000000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Motion Capital (lead, NZD 1.5m); Movac; Icehouse Ventures; Aspire NZ Seed Fund; Cultivate Ventures; NZVC",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.motioncapital.co.nz/media/miruku-investment-notes",
+    "verification_notes": "Motion Capital's investment note and NBR confirm an NZ$8m pre-Series A, not a conventional seed, and disclose the full syndicate and lead cheque.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:miruku"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:90066af3913d1be31cd7",
+      "source:url:9f7e63b43ded1cbb2737"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

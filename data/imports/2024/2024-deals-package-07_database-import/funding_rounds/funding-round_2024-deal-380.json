@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-380",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-380",
+    "dedupe_key": "2024|preve|2024-08-05|program_or_grant",
+    "source_url": "https://www.linkedin.com/posts/caelum-trott_very-excited-and-honoured-to-be-a-part-of-activity-7226086585488793600-j26b",
+    "source_payload": {
+      "deal_number": 380,
+      "csv_investee": "PREVE",
+      "normalized_investee": "PREVE",
+      "csv_date": "2024-08-02",
+      "normalized_date": "2024-08-05",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Startmate accelerator SAFE",
+      "csv_amount": "AUD 120,000",
+      "normalized_amount": "AUD 120,000 at standard program terms",
+      "csv_investors": "Startmate",
+      "normalized_investors": "Startmate",
+      "verification": "verified_program",
+      "correction_or_issue": "Startmate and the founder confirm Winter 2024 cohort participation; standard terms support the amount.",
+      "primary_source": "https://www.linkedin.com/posts/caelum-trott_very-excited-and-honoured-to-be-a-part-of-activity-7226086585488793600-j26b",
+      "secondary_source": "https://www.startmate.com/writing/startmate-accelerator-frequent-questions-and-misconceptions"
+    },
+    "investee_name_raw": "PREVE",
+    "org_location_raw": "Byron Bay, NSW, Australia",
+    "org_website_raw": "https://preve.co/",
+    "org_industries_raw": "Digital Health / Practice SaaS",
+    "round_type_raw": "Startmate accelerator SAFE",
+    "round_stage": "program_or_grant",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-08-05",
+    "money_raised_raw": "AUD 120,000 at standard program terms",
+    "amount": 120000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Startmate",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "verified_program",
+    "verification_source_url": "https://www.linkedin.com/posts/caelum-trott_very-excited-and-honoured-to-be-a-part-of-activity-7226086585488793600-j26b",
+    "verification_notes": "Startmate and the founder confirm Winter 2024 cohort participation; standard terms support the amount. Exact day records the publication date of the public investment or cohort announcement; it is not represented as an inferred legal closing date.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day",
+    "date_basis": "public_announcement_publication_date",
+    "date_derivation_method": "linkedin_activity_id_timestamp",
+    "supplemental_verification_urls": [
+      "https://www.linkedin.com/posts/caelum-trott_very-excited-and-honoured-to-be-a-part-of-activity-7226086585488793600-j26b"
+    ]
+  },
+  "refs": {
+    "investee_company_key": "company:research:preve"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:a0b431406b1a2e8fb4be",
+      "source:url:cd9b2e396acf956e524d"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

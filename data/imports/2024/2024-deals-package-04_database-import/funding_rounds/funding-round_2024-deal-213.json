@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-213",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-213",
+    "dedupe_key": "2024|migrova|2024-04-01|seed",
+    "source_url": "https://www.crunchbase.com/funding_round/migrova-seed--c1058961",
+    "source_payload": {
+      "deal_number": 213,
+      "csv_investee": "Migrova",
+      "normalized_investee": "Migrova",
+      "csv_date": "2024-04-01",
+      "normalized_date": "2024-04-01 (database date)",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "AUD 100,000",
+      "normalized_amount": "AUD 100,000 (database-only)",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Undisclosed",
+      "verification": "needs_review",
+      "correction_or_issue": "No investor or independent financing announcement was located; retain the A$100k entry only as database-led.",
+      "primary_source": "https://www.crunchbase.com/funding_round/migrova-seed--c1058961",
+      "secondary_source": "https://migrova.com/"
+    },
+    "investee_name_raw": "Migrova",
+    "org_location_raw": "Adelaide, SA, Australia",
+    "org_website_raw": "https://migrova.com/",
+    "org_industries_raw": "Migration Tech / Marketplace",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-04-01",
+    "money_raised_raw": "AUD 100,000 (database-only)",
+    "amount": 100000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://www.crunchbase.com/funding_round/migrova-seed--c1058961",
+    "verification_notes": "No investor or independent financing announcement was located; retain the A$100k entry only as database-led.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:migrova"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:ae3e32d2554444d50c27",
+      "source:url:3b2b444ff1c85f38becc"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "No investor or independent financing announcement was located; retain the A$100k entry only as database-led."
+    ]
+  }
+}

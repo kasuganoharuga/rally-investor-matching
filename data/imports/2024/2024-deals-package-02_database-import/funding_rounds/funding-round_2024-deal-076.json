@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-076",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-076",
+    "dedupe_key": "2024|goodwork-ai|2024-12-10|seed",
+    "source_url": "https://www.capitalbrief.com/briefing/goodworkai-raises-4m-in-round-led-by-square-peg-87e67078-1f5c-44a5-bc3b-fb44f7a51694/",
+    "source_payload": {
+      "deal_number": 76,
+      "csv_investee": "GoodWork.ai",
+      "normalized_investee": "GoodWork.ai",
+      "csv_date": "2024-12-09",
+      "normalized_date": "2024-12-10 publication",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "AUD 4,000,000",
+      "normalized_amount": "AUD 4,000,000",
+      "csv_investors": "Square Peg Capital",
+      "normalized_investors": "Square Peg",
+      "verification": "verified",
+      "correction_or_issue": "Multiple Australian sources confirm amount, stage and lead.",
+      "primary_source": "https://www.capitalbrief.com/briefing/goodworkai-raises-4m-in-round-led-by-square-peg-87e67078-1f5c-44a5-bc3b-fb44f7a51694/",
+      "secondary_source": "https://www.startupdaily.net/topic/funding/ai-retail-sales-analytics-startup-raises-4-million-seed-round/"
+    },
+    "investee_name_raw": "GoodWork.ai",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.goodwork.ai/",
+    "org_industries_raw": "Retail Tech / Enterprise AI",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-12-10",
+    "money_raised_raw": "AUD 4,000,000",
+    "amount": 4000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Square Peg",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.capitalbrief.com/briefing/goodworkai-raises-4m-in-round-led-by-square-peg-87e67078-1f5c-44a5-bc3b-fb44f7a51694/",
+    "verification_notes": "Multiple Australian sources confirm amount, stage and lead.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:goodwork-ai"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:97f85d9d229053beee29",
+      "source:url:293f49e8d0f916cbedce"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

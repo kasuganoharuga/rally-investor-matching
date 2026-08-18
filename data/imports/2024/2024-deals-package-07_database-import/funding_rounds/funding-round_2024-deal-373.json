@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-373",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-373",
+    "dedupe_key": "2024|tendl|2024-08-05|program_or_grant",
+    "source_url": "https://www.linkedin.com/posts/startmate_official-announcement-winter24-accelerator-activity-7226015699192725505-aoEY",
+    "source_payload": {
+      "deal_number": 373,
+      "csv_investee": "Tendl",
+      "normalized_investee": "Tendl",
+      "csv_date": "2024-08-02",
+      "normalized_date": "2024-08-05",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Startmate accelerator SAFE",
+      "csv_amount": "AUD 120,000",
+      "normalized_amount": "AUD 120,000 at standard program terms",
+      "csv_investors": "Startmate",
+      "normalized_investors": "Startmate",
+      "verification": "verified_program",
+      "correction_or_issue": "Startmate officially lists Tendl in Winter 2024 and publishes its standard A$120k SAFE terms.",
+      "primary_source": "https://www.linkedin.com/posts/startmate_official-announcement-winter24-accelerator-activity-7226015699192725505-aoEY",
+      "secondary_source": "https://www.startmate.com/writing/startmate-accelerator-frequent-questions-and-misconceptions"
+    },
+    "investee_name_raw": "Tendl",
+    "org_location_raw": "Toowoomba, QLD, Australia",
+    "org_website_raw": "https://www.tendl.ai/",
+    "org_industries_raw": "Enterprise AI / Tender Software",
+    "round_type_raw": "Startmate accelerator SAFE",
+    "round_stage": "program_or_grant",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-08-05",
+    "money_raised_raw": "AUD 120,000 at standard program terms",
+    "amount": 120000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Startmate",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "verified_program",
+    "verification_source_url": "https://www.linkedin.com/posts/startmate_official-announcement-winter24-accelerator-activity-7226015699192725505-aoEY",
+    "verification_notes": "Startmate officially lists Tendl in Winter 2024 and publishes its standard A$120k SAFE terms. Exact day records the publication date of the public investment or cohort announcement; it is not represented as an inferred legal closing date.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day",
+    "date_basis": "public_announcement_publication_date",
+    "date_derivation_method": "linkedin_activity_id_timestamp",
+    "supplemental_verification_urls": [
+      "https://www.linkedin.com/posts/startmate_official-announcement-winter24-accelerator-activity-7226015699192725505-aoEY"
+    ]
+  },
+  "refs": {
+    "investee_company_key": "company:research:tendl"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:a01b77da2a99a05b40bd",
+      "source:url:cd9b2e396acf956e524d"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

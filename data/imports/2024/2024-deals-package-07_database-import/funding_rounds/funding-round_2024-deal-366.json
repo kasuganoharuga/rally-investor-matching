@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-366",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-366",
+    "dedupe_key": "2024|marama-labs|2024-01-22|seed",
+    "source_url": "https://www.maramalabs.com/news/wellington-deep-tech-startup-marama-labs-raises-funds-for-growth",
+    "source_payload": {
+      "deal_number": 366,
+      "csv_investee": "Marama Labs",
+      "normalized_investee": "Marama Labs",
+      "csv_date": "2024-01-22",
+      "normalized_date": "2024-01-22",
+      "csv_round": "Seed",
+      "normalized_round": "Seed-plus",
+      "csv_amount": "EUR 1,750,000",
+      "normalized_amount": "EUR 1,750,000",
+      "csv_investors": "The Yield Lab Europe; DeepIE; Icehouse; NZGCP; NZVC; Quidnet; Radar",
+      "normalized_investors": "The Yield Lab Europe (lead); Aspire NZ Seed Fund / NZGCP; Icehouse Ventures; Quidnet Ventures; DeepIE; Radar Ventures; NZVC; angels",
+      "verification": "verified",
+      "correction_or_issue": "Company release confirms the oversubscribed seed-plus round and full institutional syndicate.",
+      "primary_source": "https://www.maramalabs.com/news/wellington-deep-tech-startup-marama-labs-raises-funds-for-growth",
+      "secondary_source": "https://theyieldlab.eu/portfolio-items/"
+    },
+    "investee_name_raw": "Marama Labs",
+    "org_location_raw": "Wellington, New Zealand / Dublin, Ireland",
+    "org_website_raw": "https://maramalabs.com/",
+    "org_industries_raw": "Deep Tech / Scientific Instruments",
+    "round_type_raw": "Seed-plus",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-01-22",
+    "money_raised_raw": "EUR 1,750,000",
+    "amount": 1750000,
+    "currency": "EUR",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "The Yield Lab Europe (lead); Aspire NZ Seed Fund / NZGCP; Icehouse Ventures; Quidnet Ventures; DeepIE; Radar Ventures; NZVC; angels",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.maramalabs.com/news/wellington-deep-tech-startup-marama-labs-raises-funds-for-growth",
+    "verification_notes": "Company release confirms the oversubscribed seed-plus round and full institutional syndicate.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:marama-labs"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:a4750c3cf2ad8d58e028",
+      "source:url:a2736487ccc14ab38fe8"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

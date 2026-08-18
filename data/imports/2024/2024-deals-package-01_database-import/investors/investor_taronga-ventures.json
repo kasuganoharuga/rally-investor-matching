@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investors",
+  "record_key": "investor:taronga-ventures",
+  "operation": "upsert",
+  "data": {
+    "canonical_name": "Taronga Ventures",
+    "aliases": [],
+    "investor_type": "vc_fund",
+    "website_url": "https://tarongagroup.com/realtech-ventures/",
+    "linkedin_url": "https://www.linkedin.com/company/taronga-ventures",
+    "hq_country": "AU",
+    "hq_state": null,
+    "hq_city": null,
+    "offices": [],
+    "status": "active",
+    "merged_into_id": null,
+    "review_status": "needs_more_data",
+    "last_reviewed_at": "2026-08-14",
+    "last_reviewed_by": "codex-2024-investor-dedupe-update",
+    "investor_subtype": "VC",
+    "classification_confidence": "high",
+    "classification_source": "inherited from previously completed detailed classification",
+    "eligibility_mode": "research_package_confirmed",
+    "classification_evidence_urls": [
+      "https://tarongagroup.com/realtech-ventures/",
+      "https://www.tarongaventures.com/"
+    ],
+    "classified_at": "2026-08-14",
+    "identity_resolution": "existing_investor_update",
+    "matched_existing_record_key": "investor:taronga-ventures",
+    "identity_match_method": "exact_existing_key",
+    "identity_match_source": "normalized_master"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "research_source:taronga-ventures:taronga-ventures_src_001",
+      "research_source:taronga-ventures:taronga-ventures_src_profile_website",
+      "research_source:taronga-ventures:taronga-ventures_src_profile_linkedin",
+      "research_source:taronga-ventures:taronga-ventures_src_deal_2025q4"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Research collection status: partial",
+      "team_and_person_level_evidence_not_material_or_not_public",
+      "recent_portfolio_coverage_partial"
+    ]
+  }
+}

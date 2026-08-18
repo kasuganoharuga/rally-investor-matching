@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-254",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-254",
+    "dedupe_key": "2024|hate-and-extremism-insights-aotearoa-heia|2023-2024-public-contracts-and-grants|program_or_grant",
+    "source_url": "https://www.dpmc.govt.nz/sites/default/files/2024-01/dpmc-roia-oia-2023-24-0296.pdf",
+    "source_payload": {
+      "deal_number": 254,
+      "csv_investee": "Hate & Extremism Insights Aotearoa",
+      "normalized_investee": "Hate & Extremism Insights Aotearoa (HEIA)",
+      "csv_date": "2024-01-01",
+      "normalized_date": "2023-2024 public contracts and grants",
+      "csv_round": "Seed",
+      "normalized_round": "Government research contracts / grant support",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "NZD 284,304 DPMC contract ceiling; separate NZD 50,000 grant",
+      "csv_investors": "Uniservices",
+      "normalized_investors": "DPMC / InternetNZ grant support; University of Auckland / UniServices relationship",
+      "verification": "corrected_scope",
+      "correction_or_issue": "Public evidence shows research contracting and grant funding, not a conventional seed investment. UniServices should not be linked as the investor for an unnamed January round.",
+      "primary_source": "https://www.dpmc.govt.nz/sites/default/files/2024-01/dpmc-roia-oia-2023-24-0296.pdf",
+      "secondary_source": "https://www.dpmc.govt.nz/our-programmes/national-security/counter-terrorism/preventing-and-countering-violent-extremism-fund"
+    },
+    "investee_name_raw": "Hate & Extremism Insights Aotearoa (HEIA)",
+    "org_location_raw": "Auckland, New Zealand",
+    "org_website_raw": "https://www.heiaglobal.com/",
+    "org_industries_raw": "Civic Tech / Research",
+    "round_type_raw": "Government research contracts / grant support",
+    "round_stage": "program_or_grant",
+    "funding_stage_raw": "Seed",
+    "announced_date": null,
+    "money_raised_raw": "NZD 284,304 DPMC contract ceiling; separate NZD 50,000 grant",
+    "amount": 284304,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "DPMC / InternetNZ grant support; University of Auckland / UniServices relationship",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "corrected_scope",
+    "verification_source_url": "https://www.dpmc.govt.nz/sites/default/files/2024-01/dpmc-roia-oia-2023-24-0296.pdf",
+    "verification_notes": "Public evidence shows research contracting and grant funding, not a conventional seed investment. UniServices should not be linked as the investor for an unnamed January round.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:hate-and-extremism-insights-aotearoa"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:f0c3acba791c7cde8381",
+      "source:url:426a335babc76d462f8c"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

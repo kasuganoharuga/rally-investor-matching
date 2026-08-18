@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:profitpeak",
+  "operation": "upsert",
+  "data": {
+    "name": "ProfitPeak",
+    "website_url": "https://www.profitpeak.io/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "ecommerce-saas-analytics",
+    "sector_secondary": null,
+    "use_case_primary": "real-time-ecommerce-profitability-analytics-and-marketing-optimisation-software",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-saas",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Real-time ecommerce profitability analytics and marketing optimisation software.",
+    "source_urls": [
+      "https://www.profitpeak.io/",
+      "https://medium.com/black-sheep-capital/our-investment-in-profit-peak-3b3fab907d50"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

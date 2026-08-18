@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-181",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-181",
+    "dedupe_key": "2024|upstock|2024-02-07|seed",
+    "source_url": "https://oversightsolutions.co.nz/profile/UPSTOCK-LIMITED",
+    "source_payload": {
+      "deal_number": 181,
+      "csv_investee": "Upstock",
+      "normalized_investee": "Upstock",
+      "csv_date": "2024-02-07",
+      "normalized_date": "2024-02-07 (database date)",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "NZD 3,400,000",
+      "normalized_amount": "NZD 3,400,000 (database-led)",
+      "csv_investors": "AngelHQ; Icehouse Ventures; K1W1; NZVC; Possible Ventures",
+      "normalized_investors": "Possible Ventures (lead); AngelHQ; Icehouse Ventures; K1W1; NZVC",
+      "verification": "partial",
+      "correction_or_issue": "Shareholding and company material confirm the investor set, but the exact 2024 NZ$3.4m close was not independently announced in sources reviewed.",
+      "primary_source": "https://oversightsolutions.co.nz/profile/UPSTOCK-LIMITED",
+      "secondary_source": "https://www.upstock.app/stories/hopso-grocery-software-upstock-attracts-oversubscribed-capital-raise-expands-globally"
+    },
+    "investee_name_raw": "Upstock",
+    "org_location_raw": "Wellington, New Zealand",
+    "org_website_raw": "https://www.upstock.app/",
+    "org_industries_raw": "Hospitality Tech / Supply Chain",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-02-07",
+    "money_raised_raw": "NZD 3,400,000 (database-led)",
+    "amount": 3400000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Possible Ventures (lead); AngelHQ; Icehouse Ventures; K1W1; NZVC",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://oversightsolutions.co.nz/profile/UPSTOCK-LIMITED",
+    "verification_notes": "Shareholding and company material confirm the investor set, but the exact 2024 NZ$3.4m close was not independently announced in sources reviewed.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:upstock"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:215113732ca8b130d364",
+      "source:url:490752edcb76ab9a0318"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Shareholding and company material confirm the investor set, but the exact 2024 NZ$3.4m close was not independently announced in sources reviewed."
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:easykind",
+  "operation": "upsert",
+  "data": {
+    "name": "easykind",
+    "website_url": "https://easykind.com.au",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Victoria",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "healthtech-telehealth",
+    "sector_secondary": null,
+    "use_case_primary": "telehealth-led-alternative-healthcare-provider",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2c-healthcare-services",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Telehealth-led alternative healthcare provider.",
+    "source_urls": [
+      "https://easykind.com.au",
+      "https://www.vcbacked.co/company/easykind",
+      "https://easykind.com.au/",
+      "https://easykind.com.au/about/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

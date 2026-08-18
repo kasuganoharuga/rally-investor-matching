@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-073",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-073",
+    "dedupe_key": "2024|my-mirror|2024-11-29|unknown",
+    "source_url": "https://www.mymirror.com.au/about",
+    "source_payload": {
+      "deal_number": 73,
+      "csv_investee": "My Mirror",
+      "normalized_investee": "My Mirror",
+      "csv_date": "2024-12-01",
+      "normalized_date": "2024-11-29",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "USD 4,000,000",
+      "normalized_amount": "AUD 4,000,000",
+      "csv_investors": "Purpose Ventures; Roger Allen",
+      "normalized_investors": "Purpose Ventures (lead); Roger Allen",
+      "verification": "needs_review",
+      "correction_or_issue": "Operating telehealth company confirmed; no independent US$4m round or participant evidence found.",
+      "primary_source": "https://www.mymirror.com.au/about",
+      "secondary_source": "https://www.capitalbrief.com/briefing/health-tech-startup-my-mirror-secures-4-million-in-funding-a25feebf-8b2d-4318-a839-af85b5de52ac/"
+    },
+    "investee_name_raw": "My Mirror",
+    "org_location_raw": "Nedlands, WA, Australia",
+    "org_website_raw": "https://www.mymirror.com.au/",
+    "org_industries_raw": "Digital Health / Mental Health",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-11-29",
+    "money_raised_raw": "AUD 4,000,000",
+    "amount": 4000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Purpose Ventures (lead); Roger Allen",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.mymirror.com.au/about",
+    "verification_notes": "Operating telehealth company confirmed; no independent US$4m round or participant evidence found. Two independent reports confirm a A$4m raise led by Purpose Ventures with Roger Allen participating; prior USD/unverified treatment was incorrect. Two independent reports confirm a A$4m raise led by Purpose Ventures with Roger Allen participating; prior USD/unverified treatment was incorrect. Two independent reports confirm a A$4m raise led by Purpose Ventures with Roger Allen participating; prior USD/unverified treatment was incorrect.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day",
+    "secondary_source_status": "corroborated_and_corrected",
+    "supplemental_verification_urls": [
+      "https://www.capitalbrief.com/briefing/health-tech-startup-my-mirror-secures-4-million-in-funding-a25feebf-8b2d-4318-a839-af85b5de52ac/",
+      "https://www.startupdaily.net/topic/funding/telehealth-psychology-platform-my-mirror-raises-4-million/"
+    ]
+  },
+  "refs": {
+    "investee_company_key": "company:research:my-mirror"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:1723f340b1f91f89576e"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Operating telehealth company confirmed; no independent US$4m round or participant evidence found.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

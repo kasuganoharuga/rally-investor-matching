@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:vaultescrow-ve-finance",
+  "operation": "upsert",
+  "data": {
+    "name": "VaultEscrow / VE.Finance",
+    "website_url": "https://www.ve.finance/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Victoria",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "web3-defi",
+    "sector_secondary": null,
+    "use_case_primary": "multi-chain-digital-asset-staking-platform-offering-automated-and-flexible-yield-strategies",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "crypto-protocol-staking-service",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Multi-chain digital-asset staking platform offering automated and flexible yield strategies.",
+    "source_urls": [
+      "https://www.ve.finance/",
+      "https://www.accessnewswire.com/newsroom/en/publishing-and-media/vaultescrow-secures-8-million-in-seed-funding-ushering-in-a-new-era-of-defi-inn-839794",
+      "https://www.vcbacked.co/company/vaultescrow"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

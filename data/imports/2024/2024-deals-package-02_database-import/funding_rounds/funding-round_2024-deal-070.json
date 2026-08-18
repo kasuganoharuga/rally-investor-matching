@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-070",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-070",
+    "dedupe_key": "2024|ranqx|2024-02-07|pre_seed",
+    "source_url": "https://www.ranqx.com/",
+    "source_payload": {
+      "deal_number": 70,
+      "csv_investee": "Ranqx",
+      "normalized_investee": "Ranqx",
+      "csv_date": "2024-02-07",
+      "normalized_date": "2024-02-07 (dataset-only)",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-Seed",
+      "csv_amount": "USD 100,000",
+      "normalized_amount": "USD 100,000",
+      "csv_investors": "Curql; Reseda Group",
+      "normalized_investors": "Curql; Reseda Group",
+      "verification": "needs_review",
+      "correction_or_issue": "Company and investors exist, but no independent transaction announcement was found.",
+      "primary_source": "https://www.ranqx.com/",
+      "secondary_source": "https://www.cubroadcast.com/news/curql-collective-forms-first-fintech-accelerator-cohort"
+    },
+    "investee_name_raw": "Ranqx",
+    "org_location_raw": "Auckland, New Zealand",
+    "org_website_raw": "https://www.ranqx.com/",
+    "org_industries_raw": "Fintech / Credit Analytics",
+    "round_type_raw": "Pre-Seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-02-07",
+    "money_raised_raw": "USD 100,000",
+    "amount": 100000,
+    "currency": "USD",
+    "amount_usd": 100000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Curql; Reseda Group",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.ranqx.com/",
+    "verification_notes": "Company and investors exist, but no independent transaction announcement was found. Contemporaneous credit-union industry report confirms the US$100k investment and cohort relationship. Contemporaneous credit-union industry report confirms the US$100k investment and cohort relationship. Contemporaneous credit-union industry report confirms the US$100k investment and cohort relationship.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day",
+    "secondary_source_status": "corroborated",
+    "supplemental_verification_urls": [
+      "https://www.cubroadcast.com/news/curql-collective-forms-first-fintech-accelerator-cohort"
+    ]
+  },
+  "refs": {
+    "investee_company_key": "company:research:ranqx"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:e2543bed8abb52aa065f"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Company and investors exist, but no independent transaction announcement was found."
+    ]
+  }
+}

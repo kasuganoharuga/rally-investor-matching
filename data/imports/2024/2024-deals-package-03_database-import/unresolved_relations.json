@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-03_database-import",
+  "counts": {
+    "created_relations": 89,
+    "unresolved_or_unnamed": 27,
+    "excluded_by_investor_policy": 2
+  },
+  "unresolved_relations": [
+    {
+      "deal_number": 126,
+      "token": "No investor confirmed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 127,
+      "token": "ARENA (non-dilutive/support)",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 127,
+      "token": "Climate Salad partnership",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 130,
+      "token": "others",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 134,
+      "token": "Existing investors (lead)",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 134,
+      "token": "other investors",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 135,
+      "token": "Undisclosed investors",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 140,
+      "token": "No investor confirmed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 142,
+      "token": "Amalia Grochal is the announcing principal",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 147,
+      "token": "undisclosed investors",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 148,
+      "token": "No investor independently confirmed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 149,
+      "token": "other angels",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 153,
+      "token": "Callaghan Innovation program support",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 154,
+      "token": "Undisclosed HNW individuals and family funds",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 157,
+      "token": "other VCs and strategic angels",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 160,
+      "token": "No investor confirmed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 161,
+      "token": "Undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 162,
+      "token": "Undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 163,
+      "token": "other investors",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 164,
+      "token": "Artesian (investor relationship)",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 167,
+      "token": "Brinc (database relationship only)",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 168,
+      "token": "undisclosed angels and operators",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 169,
+      "token": "Undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 171,
+      "token": "Scale Investors and Australian Medical Angels (existing relationships)",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 172,
+      "token": "angels",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 173,
+      "token": "No investor confirmed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 178,
+      "token": "Undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    }
+  ],
+  "excluded_relations": [
+    {
+      "deal_number": 142,
+      "token": "MIRAI (backer)",
+      "canonical_investor": "MIRAI / Amalia Grochal",
+      "action": "hold_unresolved",
+      "reason": "Announcement attributes backing to MIRAI, not clearly to the individual; exact entity and terms require resolution."
+    },
+    {
+      "deal_number": 173,
+      "token": "Touchscape is a service provider",
+      "canonical_investor": "Touchscape",
+      "action": "do_not_create",
+      "reason": "Public case study establishes a service relationship, not investment."
+    }
+  ],
+  "resolved_by_supplement": []
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-245",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-245",
+    "dedupe_key": "2024|symphony-infrastructure-partners|2024-07-18|unknown",
+    "source_url": "https://www.blackstone.com/news/press/blackstone-announces-investment-in-symphony-infrastructure-partners-australias-leading-energy-transition-infrastructure-services-platform/",
+    "source_payload": {
+      "deal_number": 245,
+      "csv_investee": "Symphony",
+      "normalized_investee": "Symphony Infrastructure Partners",
+      "csv_date": "2024-07-16",
+      "normalized_date": "2024-07-18 official announcement",
+      "csv_round": "Series A",
+      "normalized_round": "Structured equity investment",
+      "csv_amount": "AUD 300,000,000",
+      "normalized_amount": "AUD 300,000,000",
+      "csv_investors": "Blackstone",
+      "normalized_investors": "Blackstone Tactical Opportunities funds",
+      "verification": "corrected",
+      "correction_or_issue": "Blackstone officially announced structured equity rather than a conventional Series A; the announcement date is 18 July 2024.",
+      "primary_source": "https://www.blackstone.com/news/press/blackstone-announces-investment-in-symphony-infrastructure-partners-australias-leading-energy-transition-infrastructure-services-platform/",
+      "secondary_source": "https://www.marketscreener.com/quote/stock/BLACKSTONE-INC-60951400/news/Symphony-Infrastructure-Partners-Pty-Ltd-announced-that-it-has-received-AUD-300-million-in-funding-f-47426113/"
+    },
+    "investee_name_raw": "Symphony Infrastructure Partners",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://symphonyinfra.com.au/",
+    "org_industries_raw": "Energy Infrastructure",
+    "round_type_raw": "Structured equity investment",
+    "round_stage": "unknown",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-07-18",
+    "money_raised_raw": "AUD 300,000,000",
+    "amount": 300000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Blackstone Tactical Opportunities funds",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.blackstone.com/news/press/blackstone-announces-investment-in-symphony-infrastructure-partners-australias-leading-energy-transition-infrastructure-services-platform/",
+    "verification_notes": "Blackstone officially announced structured equity rather than a conventional Series A; the announcement date is 18 July 2024.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:symphony-infrastructure-partners"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:ca7580624744039484a3",
+      "source:url:942005b4d9d3f69b8c5d"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

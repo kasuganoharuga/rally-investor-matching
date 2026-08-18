@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-095",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-095",
+    "dedupe_key": "2024|vivalab|2024-10-01|unknown",
+    "source_url": "https://www.vivalab.health/about-us",
+    "source_payload": {
+      "deal_number": 95,
+      "csv_investee": "vivaLAB",
+      "normalized_investee": "vivaLAB",
+      "csv_date": "2024-10-01",
+      "normalized_date": "2024-10-01 (dataset-only)",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Unverified founder financing",
+      "csv_amount": "AUD 1,597,248",
+      "normalized_amount": "Unverified",
+      "csv_investors": "Andrew O'Brien",
+      "normalized_investors": "No external investor confirmed",
+      "verification": "needs_review",
+      "correction_or_issue": "Andrew O'Brien is vivaLAB co-founder and executive chair, not evidence of an external investor. No independent round source found.",
+      "primary_source": "https://www.vivalab.health/about-us",
+      "secondary_source": null
+    },
+    "investee_name_raw": "vivaLAB",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.vivalab.health/",
+    "org_industries_raw": "Healthtech / Multi-omics",
+    "round_type_raw": "Unverified founder financing",
+    "round_stage": "unknown",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-10-01",
+    "money_raised_raw": "Unverified",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "No external investor confirmed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://www.vivalab.health/about-us",
+    "verification_notes": "Andrew O'Brien is vivaLAB co-founder and executive chair, not evidence of an external investor. No independent round source found.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "no_verified_2024_financing",
+    "amount_structuring_note": "External records verify the company and an earlier 2022 seed record, but not the claimed 2024 founder financing.",
+    "date_precision": "day",
+    "supplemental_verification_urls": [
+      "https://app.dealroom.co/companies/vivalab",
+      "https://abr.business.gov.au/AbnHistory/View?id=19645588530"
+    ]
+  },
+  "refs": {
+    "investee_company_key": "company:research:vivalab"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:0d2a8ff44f12d77ecf96"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Andrew O'Brien is vivaLAB co-founder and executive chair, not evidence of an external investor. No independent round source found.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

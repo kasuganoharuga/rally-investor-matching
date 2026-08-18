@@ -1,0 +1,2 @@
+# Audited import manifests contain SHA256 hashes of their payload files.
+data/imports/2024/** text eol=lf

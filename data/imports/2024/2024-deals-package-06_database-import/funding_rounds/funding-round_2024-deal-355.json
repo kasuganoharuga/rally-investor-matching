@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-355",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-355",
+    "dedupe_key": "2024|humii|2024-05-24|pre_seed",
+    "source_url": "https://www.skalata.vc/investment-notes/humii",
+    "source_payload": {
+      "deal_number": 355,
+      "csv_investee": "humii",
+      "normalized_investee": "humii",
+      "csv_date": "2024-05-24",
+      "normalized_date": "2024-05-24",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-seed",
+      "csv_amount": "USD 300,000",
+      "normalized_amount": "AUD 300,000 (approximately USD 198.6k)",
+      "csv_investors": "Skalata",
+      "normalized_investors": "Skalata Ventures",
+      "verification": "corrected",
+      "correction_or_issue": "Skalata's official investment note and funding database evidence support A$300k; the CSV incorrectly labels the amount as USD.",
+      "primary_source": "https://www.skalata.vc/investment-notes/humii",
+      "secondary_source": "https://www.thecompanycheck.com/company/b/humii/t6b39vtviz3cw7ivd"
+    },
+    "investee_name_raw": "humii",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.humii.co/",
+    "org_industries_raw": "Retail Analytics / Customer Experience",
+    "round_type_raw": "Pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-05-24",
+    "money_raised_raw": "AUD 300,000 (approximately USD 198.6k)",
+    "amount": 300000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Skalata Ventures",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.skalata.vc/investment-notes/humii",
+    "verification_notes": "Skalata's official investment note and funding database evidence support A$300k; the CSV incorrectly labels the amount as USD.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:humii"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:fad46b880881cedd661f",
+      "source:url:4e2fe4b4c019b69dfbe4"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

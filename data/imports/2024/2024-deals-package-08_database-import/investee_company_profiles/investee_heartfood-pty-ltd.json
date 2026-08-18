@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:heartfood-pty-ltd",
+  "operation": "upsert",
+  "data": {
+    "name": "Heartfood Pty Ltd",
+    "website_url": "https://heartfood.com.au/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Tasmania",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "food-and-beverage-hospitality",
+    "sector_secondary": null,
+    "use_case_primary": "hobart-plant-based-food-and-hospitality-business-public-information-on-the-supplied-financing-is-limited",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "restaurant-food-retail",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Hobart plant-based food and hospitality business; public information on the supplied financing is limited.",
+    "source_urls": [
+      "https://heartfood.com.au/",
+      "https://heartfood.com.au",
+      "https://abr.business.gov.au/ABN/View/29149469223"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

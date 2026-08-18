@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:diraq",
+  "operation": "upsert",
+  "data": {
+    "name": "Diraq",
+    "website_url": "https://diraq.com",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "quantum-semiconductors-deeptech",
+    "sector_secondary": null,
+    "use_case_primary": "fault-tolerant-quantum-computing-using-silicon-quantum-dots-and-cmos-compatible-processes",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-deeptech-hardware",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Fault-tolerant quantum computing using silicon quantum dots and CMOS-compatible processes.",
+    "source_urls": [
+      "https://diraq.com",
+      "https://tarongagroup.com/news-articles/diraq-adds-leading-deeptech-and-venture-investors-to-usd-22-million-investment-round/",
+      "https://uniseed.com/wp-content/uploads/2024/06/Diraq_Series-A2-Close-Release_Press-Pack_20240625.pdf",
+      "https://diraq.com/",
+      "https://www.insidequantumtechnology.com/news-archive/diraq-lands-15m-funding-extension-led-by-quantonation/",
+      "https://0e190a550a8c4c8c4b93-fcd009c875a5577fd4fe2f5b7e3bf4eb.ssl.cf2.rackcdn.com/EINPresswire-688069410-diraq-secures-usd-15-million-in-series-a-2-funding-to-advance-fault-tolerant-quantum-computing-development-2.pdf"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-05_database-import",
+  "counts": {
+    "source_investors": 85,
+    "excluded": 9
+  },
+  "excluded_investors": [
+    {
+      "source_name": "Development Bank of Wales",
+      "canonical_investor": "Development Bank of Wales",
+      "action": "do_not_create",
+      "related_deals": "Llusern Scientific",
+      "website": "https://developmentbank.wales/",
+      "reason": "Previously resolved, but this UK transaction is outside ANZ scope and the CSV amount is incorrect.",
+      "source_excel_row": 36
+    },
+    {
+      "source_name": "FJ Labs",
+      "canonical_investor": "FJ Labs",
+      "action": "do_not_create",
+      "related_deals": "Arena (entity mismatch)",
+      "website": "https://www.fjlabs.com/",
+      "reason": "FJ Labs' Arena Magazine entry is a different US travel/lifestyle company; do not link it to the Australian publication.",
+      "source_excel_row": 37
+    },
+    {
+      "source_name": "SFC Capital",
+      "canonical_investor": "SFC Capital",
+      "action": "do_not_create",
+      "related_deals": "Llusern Scientific",
+      "website": "https://sfccapital.com/",
+      "reason": "Not confirmed in the official Llusern 2024 announcement and transaction is out of scope.",
+      "source_excel_row": 38
+    },
+    {
+      "source_name": "808 Ventures",
+      "canonical_investor": "808 Ventures",
+      "action": "hold_unresolved",
+      "related_deals": "Elevate Money",
+      "website": null,
+      "reason": "Investor identity and portfolio relationship are plausible, but no primary 2024 deal evidence was found.",
+      "source_excel_row": 39
+    },
+    {
+      "source_name": "Bridgewater",
+      "canonical_investor": "Bridgewater-linked program support",
+      "action": "hold_unresolved",
+      "related_deals": "InnerSteps",
+      "website": null,
+      "reason": "Secondary data suggests support, but no reliable evidence of direct equity investment; do not create as investor.",
+      "source_excel_row": 40
+    },
+    {
+      "source_name": "Larsen Ventures",
+      "canonical_investor": "Larsen Ventures",
+      "action": "hold_unresolved",
+      "related_deals": "IPEX",
+      "website": null,
+      "reason": "No primary 2024 deal proof and no prior record found; hold before creation.",
+      "source_excel_row": 41
+    },
+    {
+      "source_name": "Phase One Ventures",
+      "canonical_investor": "Phase One Ventures",
+      "action": "hold_unresolved",
+      "related_deals": "HealthNow",
+      "website": null,
+      "reason": "Identity is plausible, but direct participation in the June HealthNow close was not verified; do not create yet.",
+      "source_excel_row": 42
+    },
+    {
+      "source_name": "Aussie Capital; Metavest Capital; Seedthrift Ventures; ZBS CAPITAL",
+      "canonical_investor": "SIDUS HEROES claimed broader investor set",
+      "action": "hold_unresolved",
+      "related_deals": "SIDUS HEROES",
+      "website": null,
+      "reason": "These investors were not independently proven for the June 2024 round and may belong to earlier financings.",
+      "source_excel_row": 43
+    },
+    {
+      "source_name": "SINOFY",
+      "canonical_investor": "SINOFY",
+      "action": "hold_unresolved",
+      "related_deals": "2400.tech",
+      "website": null,
+      "reason": "No independent deal proof or prior record found; do not create yet.",
+      "source_excel_row": 44
+    }
+  ]
+}

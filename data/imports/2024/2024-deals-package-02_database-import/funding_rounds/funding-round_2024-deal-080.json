@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-080",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-080",
+    "dedupe_key": "2024|zeligate|2024-10-02|seed",
+    "source_url": "https://www.businessnewsaustralia.com/articles/brisbane-startup-zeligate-raises--5-5m-to-grow-its-ai-workforce-platform-for-businesses.html",
+    "source_payload": {
+      "deal_number": 80,
+      "csv_investee": "Zeligate.ai",
+      "normalized_investee": "Zeligate",
+      "csv_date": "2024-10-02",
+      "normalized_date": "2024-10-02",
+      "csv_round": "Seed",
+      "normalized_round": "Two 2024 seed tranches",
+      "csv_amount": "AUD 4,300,000",
+      "normalized_amount": "AUD 3,000,000 first seed + AUD 2,500,000 second seed (A$5.5m total)",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Undisclosed",
+      "verification": "corrected",
+      "correction_or_issue": "Public reporting contradicts the single A$4.3m row and reports two tranches totalling A$5.5m.",
+      "primary_source": "https://www.businessnewsaustralia.com/articles/brisbane-startup-zeligate-raises--5-5m-to-grow-its-ai-workforce-platform-for-businesses.html",
+      "secondary_source": "https://app.dealroom.co/companies/zelibot"
+    },
+    "investee_name_raw": "Zeligate",
+    "org_location_raw": "Gold Coast, QLD, Australia",
+    "org_website_raw": "https://www.zeligate.ai/",
+    "org_industries_raw": "Enterprise AI / HR Tech",
+    "round_type_raw": "Two 2024 seed tranches",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-10-02",
+    "money_raised_raw": "AUD 3,000,000 first seed + AUD 2,500,000 second seed (A$5.5m total)",
+    "amount": 3000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.businessnewsaustralia.com/articles/brisbane-startup-zeligate-raises--5-5m-to-grow-its-ai-workforce-platform-for-businesses.html",
+    "verification_notes": "Public reporting contradicts the single A$4.3m row and reports two tranches totalling A$5.5m.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:zeligate"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:4e3e487237d0fea39338",
+      "source:url:377cb84b60008ed76966"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

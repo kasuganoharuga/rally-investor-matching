@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-009",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-009",
+    "dedupe_key": "2024|easykind|2024-09-01|seed",
+    "source_url": "https://easykind.com.au",
+    "source_payload": {
+      "deal_number": 9,
+      "csv_investee": "easykind",
+      "normalized_investee": "easykind",
+      "csv_date": "2024-09-01",
+      "normalized_date": "2024-09-01",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "AUD 1,000,000",
+      "normalized_amount": "AUD 1,000,000 (database corroboration)",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Undisclosed",
+      "verification": "partial",
+      "correction_or_issue": "Company and amount/date are database-corroborated; investor names remain undisclosed.",
+      "primary_source": "https://easykind.com.au",
+      "secondary_source": "https://www.vcbacked.co/company/easykind"
+    },
+    "investee_name_raw": "easykind",
+    "org_location_raw": "Richmond, VIC, Australia",
+    "org_website_raw": "https://easykind.com.au",
+    "org_industries_raw": "Healthtech / Telehealth",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-09-01",
+    "money_raised_raw": "AUD 1,000,000 (database corroboration)",
+    "amount": 1000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://easykind.com.au",
+    "verification_notes": "Company and amount/date are database-corroborated; investor names remain undisclosed.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:easykind"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:5e791ca28c350ea3edfc",
+      "source:url:a485548d15fb247b7b95"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Company and amount/date are database-corroborated; investor names remain undisclosed."
+    ]
+  }
+}

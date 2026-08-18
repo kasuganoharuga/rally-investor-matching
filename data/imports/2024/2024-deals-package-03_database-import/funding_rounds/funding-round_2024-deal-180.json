@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-180",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-180",
+    "dedupe_key": "2024|carbon-friendly|2024-10-23|program_or_grant",
+    "source_url": "https://www.prnewswire.com/apac/news-releases/sparklabs-cultiv8-showcases-2024-participants-302283121.html",
+    "source_payload": {
+      "deal_number": 180,
+      "csv_investee": "Carbon Friendly",
+      "normalized_investee": "Carbon Friendly",
+      "csv_date": "2024-05-20",
+      "normalized_date": "2024-10-23",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Accelerator participation / possible investment",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed; program offers up to AUD 100,000",
+      "csv_investors": "SparkLabs Cultiv8",
+      "normalized_investors": "SparkLabs Cultiv8",
+      "verification": "partial",
+      "correction_or_issue": "Official showcase confirms the 2024 cohort and program offers flexible investment up to A$100k, but company-specific amount and terms are undisclosed.",
+      "primary_source": "https://www.prnewswire.com/apac/news-releases/sparklabs-cultiv8-showcases-2024-participants-302283121.html",
+      "secondary_source": "https://spark-lab08.webflow.io/programs"
+    },
+    "investee_name_raw": "Carbon Friendly",
+    "org_location_raw": "Brisbane, QLD, Australia",
+    "org_website_raw": "https://carbonfriendly.io/",
+    "org_industries_raw": "Climate Tech / Agtech / Carbon",
+    "round_type_raw": "Accelerator participation / possible investment",
+    "round_stage": "program_or_grant",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-10-23",
+    "money_raised_raw": "Undisclosed; program offers up to AUD 100,000",
+    "amount": 100000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "SparkLabs Cultiv8",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://www.prnewswire.com/apac/news-releases/sparklabs-cultiv8-showcases-2024-participants-302283121.html",
+    "verification_notes": "Official showcase confirms the 2024 cohort and program offers flexible investment up to A$100k, but company-specific amount and terms are undisclosed. Exact day records the visible publication date of the public financing or cohort report; it is not represented as an unreported legal closing date.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day",
+    "date_basis": "public_announcement_publication_date",
+    "date_derivation_method": "visible_source_publication_date",
+    "supplemental_verification_urls": [
+      "https://www.prnewswire.com/apac/news-releases/sparklabs-cultiv8-showcases-2024-participants-302283121.html"
+    ]
+  },
+  "refs": {
+    "investee_company_key": "company:research:carbon-friendly"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:7bb11f266acf20c3acb6",
+      "source:url:d035a5ab4ab97ea10bb9"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Official showcase confirms the 2024 cohort and program offers flexible investment up to A$100k, but company-specific amount and terms are undisclosed.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

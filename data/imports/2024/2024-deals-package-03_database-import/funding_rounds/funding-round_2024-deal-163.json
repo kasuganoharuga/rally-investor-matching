@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-163",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-163",
+    "dedupe_key": "2024|basis|2024-07-16|series_a",
+    "source_url": "https://www.nbr.co.nz/tech/gd1-injects-capital-into-nz-energy-startup/",
+    "source_payload": {
+      "deal_number": 163,
+      "csv_investee": "Basis",
+      "normalized_investee": "Basis",
+      "csv_date": "2024-07-16",
+      "normalized_date": "2024-07-16",
+      "csv_round": "Series A",
+      "normalized_round": "Series A",
+      "csv_amount": "NZD 26,250,000",
+      "normalized_amount": "NZD 26,250,000 / USD 16,000,000",
+      "csv_investors": "GD1; Icehouse Ventures; Outset Ventures",
+      "normalized_investors": "GD1 (lead); Icehouse Ventures; Movac; ACC Investments; K1W1; other investors",
+      "verification": "corrected",
+      "correction_or_issue": "Amount and lead are verified. Public reporting expands the investor set; Outset is a known backer but was not specifically confirmed in the Series A sources reviewed.",
+      "primary_source": "https://www.nbr.co.nz/tech/gd1-injects-capital-into-nz-energy-startup/",
+      "secondary_source": "https://www.icehouseventures.co.nz/companies/basis"
+    },
+    "investee_name_raw": "Basis",
+    "org_location_raw": "Auckland, New Zealand",
+    "org_website_raw": "https://www.wearebasis.com/",
+    "org_industries_raw": "Climate Tech / Energy Hardware",
+    "round_type_raw": "Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-07-16",
+    "money_raised_raw": "NZD 26,250,000 / USD 16,000,000",
+    "amount": 26250000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "GD1 (lead); Icehouse Ventures; Movac; ACC Investments; K1W1; other investors",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.nbr.co.nz/tech/gd1-injects-capital-into-nz-energy-startup/",
+    "verification_notes": "Amount and lead are verified. Public reporting expands the investor set; Outset is a known backer but was not specifically confirmed in the Series A sources reviewed.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:basis"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:759fab74362cf7a3b567",
+      "source:url:0d6af36d09abc4b2f343"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

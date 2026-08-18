@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:tability",
+  "operation": "upsert",
+  "data": {
+    "name": "Tability",
+    "website_url": "https://tability.io/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "enterprise-saas-productivity-ai",
+    "sector_secondary": null,
+    "use_case_primary": "ai-powered-goal-okr-and-kpi-tracking-software-for-distributed-teams-and-workplace-accountability",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-saas",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "ai_related",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "AI-powered goal, OKR and KPI tracking software for distributed teams and workplace accountability.",
+    "source_urls": [
+      "https://tability.io/",
+      "https://www.investible.com/blog-category/investment-notes",
+      "https://www.linkedin.com/posts/nicholasjwooi_investment-notes-tability-activity-7178564793518186496-f61t"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-04_database-import",
+  "counts": {
+    "created_relations": 53,
+    "unresolved_or_unnamed": 19,
+    "excluded_by_investor_policy": 8
+  },
+  "unresolved_relations": [
+    {
+      "deal_number": 184,
+      "token": "Undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 185,
+      "token": "Undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 203,
+      "token": "UNSW / TRaCE support",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 208,
+      "token": "Undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 209,
+      "token": "Undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 210,
+      "token": "Undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 213,
+      "token": "Undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 214,
+      "token": "Paloma / venture studio relationship (database-only for exact round)",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 215,
+      "token": "2024 investor undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 215,
+      "token": "Antler, 1in100, OIF and Utiliti are prior backers",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 216,
+      "token": "other investors undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 217,
+      "token": "Private investors / undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 223,
+      "token": "2024 investor undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 224,
+      "token": "2024 investor undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 224,
+      "token": "Mandalay, Scale and Flying Fox are prior backers",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 225,
+      "token": "other investors",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 226,
+      "token": "NATO DIANA support program",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 236,
+      "token": "Undisclosed private investors",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 238,
+      "token": "Undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    }
+  ],
+  "excluded_relations": [
+    {
+      "deal_number": 191,
+      "token": "Futureverse (program partners)",
+      "canonical_investor": "Futureverse",
+      "action": "do_not_create",
+      "reason": "Program sponsor/technology ecosystem; not independently shown as the investing entity."
+    },
+    {
+      "deal_number": 195,
+      "token": "Star Beta",
+      "canonical_investor": "Star Beta",
+      "action": "hold_unresolved",
+      "reason": "Only funding-directory evidence supports the exact 2024 round; hold new creation."
+    },
+    {
+      "deal_number": 196,
+      "token": "Sora Ventures (database-only)",
+      "canonical_investor": "Sora Ventures",
+      "action": "hold_unresolved",
+      "reason": "Firm identity is valid, but company-specific participation is only database-led."
+    },
+    {
+      "deal_number": 198,
+      "token": "Kentof Family Investments (database-only)",
+      "canonical_investor": "Kentof Family Investments",
+      "action": "hold_unresolved",
+      "reason": "Investor identity and 2024 Earnr relationship were not independently corroborated."
+    },
+    {
+      "deal_number": 219,
+      "token": "Loyal VC (database-only)",
+      "canonical_investor": "Loyal VC",
+      "action": "hold_unresolved",
+      "reason": "Investor identity is valid, but the Cellr January 2024 participation is supported only by Dealroom."
+    },
+    {
+      "deal_number": 223,
+      "token": "Wolf Capital Ventures is historical",
+      "canonical_investor": "Wolf Capital Ventures",
+      "action": "hold_unresolved",
+      "reason": "Investor is tied to carbonTRACK's 2015 seed, not proven in the 2024 Series B entry."
+    },
+    {
+      "deal_number": 233,
+      "token": "FB10x adVentures (database-only)",
+      "canonical_investor": "FB10x adVentures",
+      "action": "hold_unresolved",
+      "reason": "Identity and exact 2024 VOLI financing were not independently corroborated."
+    },
+    {
+      "deal_number": 239,
+      "token": "Sequoia Capital (database/social-profile claim only)",
+      "canonical_investor": "Sequoia Capital",
+      "action": "hold_unresolved",
+      "reason": "Only the company's social funding profile names Sequoia; no Sequoia or independent announcement found."
+    }
+  ],
+  "resolved_by_supplement": [
+    {
+      "deal_number": 206,
+      "token": "Huljich family",
+      "normalized_token": "Huljich family",
+      "disposition": "resolved_from_supplemental_evidence",
+      "candidates": [],
+      "resolved_at": "2026-08-14"
+    },
+    {
+      "deal_number": 206,
+      "token": "Bhatnagar family",
+      "normalized_token": "Bhatnagar family",
+      "disposition": "resolved_from_supplemental_evidence",
+      "candidates": [],
+      "resolved_at": "2026-08-14"
+    },
+    {
+      "deal_number": 206,
+      "token": "Bruce Gordon",
+      "normalized_token": "Bruce Gordon",
+      "disposition": "resolved_from_supplemental_evidence",
+      "candidates": [],
+      "resolved_at": "2026-08-14"
+    }
+  ]
+}

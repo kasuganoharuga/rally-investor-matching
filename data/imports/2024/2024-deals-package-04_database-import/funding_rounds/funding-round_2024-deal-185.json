@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-185",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-185",
+    "dedupe_key": "2024|eco2metrix|2024-06-24|pre_seed",
+    "source_url": "https://www.crunchbase.com/funding_round/eco2metrix-pre-seed--18ec8d13",
+    "source_payload": {
+      "deal_number": 185,
+      "csv_investee": "eCo2metrix",
+      "normalized_investee": "eCo2metrix",
+      "csv_date": "2024-06-24",
+      "normalized_date": "2024-06-24 (database date)",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-Seed",
+      "csv_amount": "USD 350,000",
+      "normalized_amount": "USD 350,000 (database-only)",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Undisclosed",
+      "verification": "needs_review",
+      "correction_or_issue": "Company identity is valid, but amount, investor and round terms remain supported only by the supplied funding database.",
+      "primary_source": "https://www.crunchbase.com/funding_round/eco2metrix-pre-seed--18ec8d13",
+      "secondary_source": "https://www.eco2metrix.com/"
+    },
+    "investee_name_raw": "eCo2metrix",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.eco2metrix.com/",
+    "org_industries_raw": "Climate SaaS / Tourism Tech",
+    "round_type_raw": "Pre-Seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-06-24",
+    "money_raised_raw": "USD 350,000 (database-only)",
+    "amount": 350000,
+    "currency": "USD",
+    "amount_usd": 350000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://www.crunchbase.com/funding_round/eco2metrix-pre-seed--18ec8d13",
+    "verification_notes": "Company identity is valid, but amount, investor and round terms remain supported only by the supplied funding database.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:eco2metrix"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:fe4f4215b55958659007",
+      "source:url:34ac69de9b20b978a341"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Company identity is valid, but amount, investor and round terms remain supported only by the supplied funding database."
+    ]
+  }
+}

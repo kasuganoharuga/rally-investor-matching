@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-410",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-410",
+    "dedupe_key": "2024|azen-protocol|2024-06-28|seed",
+    "source_url": "https://alphagrowth.io/azen/company",
+    "source_payload": {
+      "deal_number": 410,
+      "csv_investee": "aZen Protocol",
+      "normalized_investee": "aZen Protocol",
+      "csv_date": "2024-06-28",
+      "normalized_date": "2024-06-28 database record",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Waterdrip Capital; Rootz Labs",
+      "normalized_investors": "Rootz Labs; Mindfulness Capital (database attribution); Waterdrip belongs to a 2025 round",
+      "verification": "corrected_misdated_investor",
+      "correction_or_issue": "Waterdrip is linked to the later 2025 US$1.2m raise, not this 2024 event.",
+      "primary_source": "https://alphagrowth.io/azen/company",
+      "secondary_source": "https://defillama.com/raises/rootz-labs"
+    },
+    "investee_name_raw": "aZen Protocol",
+    "org_location_raw": "Auckland, New Zealand / global",
+    "org_website_raw": "https://azenprotocol.io/",
+    "org_industries_raw": "Web3 / DePIN",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-06-28",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Rootz Labs; Mindfulness Capital (database attribution); Waterdrip belongs to a 2025 round",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "corrected_misdated_investor",
+    "verification_source_url": "https://alphagrowth.io/azen/company",
+    "verification_notes": "Waterdrip is linked to the later 2025 US$1.2m raise, not this 2024 event.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:azen-protocol"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:67ab4673bd465a884814",
+      "source:url:3046eda17aedf9b29a1f"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

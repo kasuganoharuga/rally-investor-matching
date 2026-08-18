@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-320",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-320",
+    "dedupe_key": "2024|redactive-software-pty-ltd|2024-07-03|seed",
+    "source_url": "https://www.capitalbrief.com/briefing/redactive-ai-secures-115m-led-by-blackbird-felicis-8d35c495-c421-4e21-9f4c-e61906d78e0e/",
+    "source_payload": {
+      "deal_number": 320,
+      "csv_investee": "Redactive",
+      "normalized_investee": "Redactive Software Pty Ltd",
+      "csv_date": "2024-07-03",
+      "normalized_date": "2024-07-03",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "AUD 11,500,000",
+      "normalized_amount": "AUD 11,500,000 / USD 7,500,000",
+      "csv_investors": "Atlassian Ventures; Blackbird; Felicis; Zapier",
+      "normalized_investors": "Blackbird Ventures and Felicis Ventures (co-leads); Atlassian Ventures; Zapier",
+      "verification": "verified",
+      "correction_or_issue": "Australian and US reporting agree on the seed syndicate and equivalent A$11.5m / US$7.5m amounts.",
+      "primary_source": "https://www.capitalbrief.com/briefing/redactive-ai-secures-115m-led-by-blackbird-felicis-8d35c495-c421-4e21-9f4c-e61906d78e0e/",
+      "secondary_source": "https://www.axios.com/2024/07/02/exclusive-redactive-ai-75m-felicis-blackbird"
+    },
+    "investee_name_raw": "Redactive Software Pty Ltd",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://redactive.ai/",
+    "org_industries_raw": "Enterprise AI / Security",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-07-03",
+    "money_raised_raw": "AUD 11,500,000 / USD 7,500,000",
+    "amount": 11500000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Blackbird Ventures and Felicis Ventures (co-leads); Atlassian Ventures; Zapier",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.capitalbrief.com/briefing/redactive-ai-secures-115m-led-by-blackbird-felicis-8d35c495-c421-4e21-9f4c-e61906d78e0e/",
+    "verification_notes": "Australian and US reporting agree on the seed syndicate and equivalent A$11.5m / US$7.5m amounts.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:redactive"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:6d840194bb9f66b2e3f2",
+      "source:url:171f598e8bc6013cdcfa"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

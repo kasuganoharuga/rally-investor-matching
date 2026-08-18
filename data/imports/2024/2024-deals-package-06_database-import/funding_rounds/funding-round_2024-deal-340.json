@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-340",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-340",
+    "dedupe_key": "2024|earthodic|2024-10-28|seed",
+    "source_url": "https://www.earthodic.com/earthodic-expands-their-bio-based-coating-operations-into-the-us-following-an-oversubscribed-seed-fundraise/",
+    "source_payload": {
+      "deal_number": 340,
+      "csv_investee": "Earthodic",
+      "normalized_investee": "Earthodic",
+      "csv_date": "2024-10-29",
+      "normalized_date": "2024-10-28",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "AUD 6,000,000",
+      "normalized_amount": "USD 4,000,000 (approximately AUD 6,000,000)",
+      "csv_investors": "Branch Venture Group; Circulate Capital; Closed Loop Partners; FTW Ventures; Investible; QIC; RedStick Ventures; Significant Ventures; Tenacious Ventures; UniQuest",
+      "normalized_investors": "FTW Ventures (lead); Circulate Capital; QIC; UniQuest Fund; Significant Ventures; Branch Venture Group; RedStick Ventures; Tenacious Ventures; Investible; Closed Loop Partners",
+      "verification": "corrected",
+      "correction_or_issue": "Earthodic's announcement confirms US$4m and the complete new/existing fund syndicate; normalize the date and retain A$6m only as an approximate conversion.",
+      "primary_source": "https://www.earthodic.com/earthodic-expands-their-bio-based-coating-operations-into-the-us-following-an-oversubscribed-seed-fundraise/",
+      "secondary_source": "https://www.ftw.vc/companies"
+    },
+    "investee_name_raw": "Earthodic",
+    "org_location_raw": "Brisbane, QLD, Australia / Delaware, USA",
+    "org_website_raw": "https://www.earthodic.com/",
+    "org_industries_raw": "Climate Tech / Packaging Materials",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-10-28",
+    "money_raised_raw": "USD 4,000,000 (approximately AUD 6,000,000)",
+    "amount": 4000000,
+    "currency": "USD",
+    "amount_usd": 4000000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "FTW Ventures (lead); Circulate Capital; QIC; UniQuest Fund; Significant Ventures; Branch Venture Group; RedStick Ventures; Tenacious Ventures; Investible; Closed Loop Partners",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.earthodic.com/earthodic-expands-their-bio-based-coating-operations-into-the-us-following-an-oversubscribed-seed-fundraise/",
+    "verification_notes": "Earthodic's announcement confirms US$4m and the complete new/existing fund syndicate; normalize the date and retain A$6m only as an approximate conversion.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:earthodic"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:89fc63985a88d837b946",
+      "source:url:c4fd318718098bf3b0fd"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

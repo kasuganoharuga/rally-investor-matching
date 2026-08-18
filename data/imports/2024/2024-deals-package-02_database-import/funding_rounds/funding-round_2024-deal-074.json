@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-074",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-074",
+    "dedupe_key": "2024|nexxis|2024-06-02|unknown",
+    "source_url": "https://www.nexxis.com.au/",
+    "source_payload": {
+      "deal_number": 74,
+      "csv_investee": "Nexxis",
+      "normalized_investee": "Nexxis",
+      "csv_date": "2024-06-02",
+      "normalized_date": "2024-06-02 (dataset-only)",
+      "csv_round": "Series A",
+      "normalized_round": "Unverified financing",
+      "csv_amount": "USD 180,000",
+      "normalized_amount": "Unverified",
+      "csv_investors": "Catalystrix Ventures",
+      "normalized_investors": "No external investor confirmed",
+      "verification": "needs_review",
+      "correction_or_issue": "Industrial inspection-equipment company verified; financing and investor remain dataset-only.",
+      "primary_source": "https://www.nexxis.com.au/",
+      "secondary_source": null
+    },
+    "investee_name_raw": "Nexxis",
+    "org_location_raw": "O'Connor, WA, Australia",
+    "org_website_raw": "https://www.nexxis.com.au/",
+    "org_industries_raw": "Industrial Tech / Robotics",
+    "round_type_raw": "Unverified financing",
+    "round_stage": "unknown",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-06-02",
+    "money_raised_raw": "Unverified",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "No external investor confirmed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://www.nexxis.com.au/",
+    "verification_notes": "Industrial inspection-equipment company verified; financing and investor remain dataset-only.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "no_verified_financing_event",
+    "amount_structuring_note": "Government profile verifies the operating robotics company, not the claimed financing.",
+    "date_precision": "day",
+    "supplemental_verification_urls": [
+      "https://www.wa.gov.au/government/publications/land-forces-2024-quad-chart-nexxis-technology"
+    ]
+  },
+  "refs": {
+    "investee_company_key": "company:research:nexxis"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:772fe0d8c37b9dda592f"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Industrial inspection-equipment company verified; financing and investor remain dataset-only.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

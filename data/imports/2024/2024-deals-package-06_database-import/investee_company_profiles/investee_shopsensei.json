@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:shopsensei",
+  "operation": "upsert",
+  "data": {
+    "name": "ShopSensei",
+    "website_url": "https://shopsensei.site/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Queensland",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "retail-tech-ai",
+    "sector_secondary": null,
+    "use_case_primary": "ai-shopping-assistant-offering-personalised-product-discovery-visual-search-style-guidance-and-deal-recommendations",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "consumer-discovery-platform",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "ai_related",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "AI shopping assistant offering personalised product discovery, visual search, style guidance and deal recommendations.",
+    "source_urls": [
+      "https://shopsensei.site/",
+      "https://www.cdpventurecapital.it/en/",
+      "https://teaserclub.com/investors/cdp-venture-capital"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

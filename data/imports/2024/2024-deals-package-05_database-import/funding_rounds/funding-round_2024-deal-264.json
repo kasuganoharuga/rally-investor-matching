@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-264",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-264",
+    "dedupe_key": "2024|plaza|2024-antler-portfolio-program-relationship|pre_seed",
+    "source_url": "https://careers.antler.co/companies/plaza-2-e86cb8bb-1186-48d3-8365-bc5bf2703aaf",
+    "source_payload": {
+      "deal_number": 264,
+      "csv_investee": "Plaza",
+      "normalized_investee": "Plaza",
+      "csv_date": "2024-11-13",
+      "normalized_date": "2024 Antler portfolio / program relationship",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Antler pre-seed investment",
+      "csv_amount": "USD 200,000",
+      "normalized_amount": "Amount/currency not corroborated; Antler Australia standard terms differed",
+      "csv_investors": "Antler",
+      "normalized_investors": "Antler Australia",
+      "verification": "partial",
+      "correction_or_issue": "Antler's portfolio material confirms Plaza as a 2024 company, but no deal-specific US$200k announcement was located. Preserve the relationship while flagging amount and date.",
+      "primary_source": "https://careers.antler.co/companies/plaza-2-e86cb8bb-1186-48d3-8365-bc5bf2703aaf",
+      "secondary_source": "https://www.antler.co/blog/antler-co-antler-vc-funding-for-startups-and-founders"
+    },
+    "investee_name_raw": "Plaza",
+    "org_location_raw": "Australia",
+    "org_website_raw": null,
+    "org_industries_raw": "Technology",
+    "round_type_raw": "Antler pre-seed investment",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "Amount/currency not corroborated; Antler Australia standard terms differed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Antler Australia",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://careers.antler.co/companies/plaza-2-e86cb8bb-1186-48d3-8365-bc5bf2703aaf",
+    "verification_notes": "Antler's portfolio material confirms Plaza as a 2024 company, but no deal-specific US$200k announcement was located. Preserve the relationship while flagging amount and date.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "program_support_not_verified_as_round_amount",
+    "amount_structuring_note": "Program terms or support were not converted into a company-specific financing amount.",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:plaza"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:1e7c2e41036db3451298",
+      "source:url:976b340617c27b49accb"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Antler's portfolio material confirms Plaza as a 2024 company, but no deal-specific US$200k announcement was located. Preserve the relationship while flagging amount and date.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

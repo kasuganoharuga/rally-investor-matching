@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-215",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-215",
+    "dedupe_key": "2024|quantflo|2024-database-entry-exact-close-unverified|seed",
+    "source_url": "https://app.dealroom.co/companies/quantflo",
+    "source_payload": {
+      "deal_number": 215,
+      "csv_investee": "Quantflo",
+      "normalized_investee": "Quantflo",
+      "csv_date": "2024-01-01",
+      "normalized_date": "2024 database entry; exact close unverified",
+      "csv_round": "Seed",
+      "normalized_round": "Seed / prior investor relationships",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "1in100 Ventures",
+      "normalized_investors": "2024 investor undisclosed; Antler, 1in100, OIF and Utiliti are prior backers",
+      "verification": "partial",
+      "correction_or_issue": "Dealroom separates a January 2024 unnamed round from Quantflo's earlier A$190k Antler round. Do not attribute the prior investor set to this exact 2024 event.",
+      "primary_source": "https://app.dealroom.co/companies/quantflo",
+      "secondary_source": "https://www.quantflo.com/"
+    },
+    "investee_name_raw": "Quantflo",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.quantflo.com/",
+    "org_industries_raw": "Fintech / Investment Analytics / AI",
+    "round_type_raw": "Seed / prior investor relationships",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": null,
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "2024 investor undisclosed; Antler, 1in100, OIF and Utiliti are prior backers",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://app.dealroom.co/companies/quantflo",
+    "verification_notes": "Dealroom separates a January 2024 unnamed round from Quantflo's earlier A$190k Antler round. Do not attribute the prior investor set to this exact 2024 event.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:quantflo"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:6c266a4442fdf4ef83a1",
+      "source:url:b1e9bdf30108421fef41"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Dealroom separates a January 2024 unnamed round from Quantflo's earlier A$190k Antler round. Do not attribute the prior investor set to this exact 2024 event.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

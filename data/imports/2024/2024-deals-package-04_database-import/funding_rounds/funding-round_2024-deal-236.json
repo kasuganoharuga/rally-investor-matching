@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-236",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-236",
+    "dedupe_key": "2024|xcoub|2024-12-16|series_a",
+    "source_url": "https://www.finsmes.com/2024/12/xcoub-raises-7m-in-series-a-funding.html",
+    "source_payload": {
+      "deal_number": 236,
+      "csv_investee": "Xcoub",
+      "normalized_investee": "Xcoub",
+      "csv_date": "2024-06-03",
+      "normalized_date": "2024-12-16 Series A announcement",
+      "csv_round": "Series A",
+      "normalized_round": "Series A",
+      "csv_amount": "USD 7,500,000",
+      "normalized_amount": "USD 7,000,000",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Undisclosed private investors",
+      "verification": "corrected",
+      "correction_or_issue": "Public reporting places the Series A in December 2024 at US$7m, not June at US$7.5m. A separate US$3m seed announcement appeared on 10 December.",
+      "primary_source": "https://www.finsmes.com/2024/12/xcoub-raises-7m-in-series-a-funding.html",
+      "secondary_source": "https://www.gaebler.com/Funded-Company-593BBC4E-16FB-4C98-B47D-309C46A9C0C0-Xcoub"
+    },
+    "investee_name_raw": "Xcoub",
+    "org_location_raw": "Wellington, New Zealand / global",
+    "org_website_raw": "https://xcoub.com/",
+    "org_industries_raw": "Web3 / DeFi",
+    "round_type_raw": "Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-12-16",
+    "money_raised_raw": "USD 7,000,000",
+    "amount": 7000000,
+    "currency": "USD",
+    "amount_usd": 7000000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed private investors",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.finsmes.com/2024/12/xcoub-raises-7m-in-series-a-funding.html",
+    "verification_notes": "Public reporting places the Series A in December 2024 at US$7m, not June at US$7.5m. A separate US$3m seed announcement appeared on 10 December.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:xcoub"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:798297568f396da0dab3",
+      "source:url:07859ded56225c57f14c"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

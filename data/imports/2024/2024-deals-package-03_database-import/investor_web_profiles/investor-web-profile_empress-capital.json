@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_web_profiles",
+  "record_key": "investor_web_profile:empress-capital:2026-08-14",
+  "operation": "upsert",
+  "data": {
+    "source_urls": [
+      "https://empresscapital.vc/",
+      "https://www.crunchbase.com/funding_round/mary-technology-seed--0e75ea43",
+      "https://www.linkedin.com/company/empresscapitalvc",
+      "https://www.linkedin.com/posts/keeyu-app_keeyu-just-raised-23m-to-fix-one-of-e-commerce-activity-7394112408304156672-0_7q"
+    ],
+    "retrieved_at": "2026-08-14",
+    "website_status": "verified_public_profile",
+    "raw_content_hash": null,
+    "raw_content_ref": null,
+    "extraction_model": "codex-2024-investor-dedupe-update",
+    "extraction_version": "1.0.0",
+    "confidence": "medium",
+    "claimed_thesis": "Technology",
+    "claimed_stages": [
+      "Early stage"
+    ],
+    "claimed_sectors": [
+      "Technology"
+    ],
+    "claimed_geographies": [
+      "Australia"
+    ],
+    "claimed_business_models": [],
+    "claimed_cheque_min": null,
+    "claimed_cheque_max": null,
+    "claimed_cheque_currency": null,
+    "contact_emails": [],
+    "application_url": null,
+    "contact_notes": "Confirmed Tability participant; not found in directory.",
+    "is_current": true,
+    "superseded_at": null
+  },
+  "refs": {
+    "investor_key": "investor:empress-capital"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:c4d1f972b165095b6f52",
+      "research_source:empress-capital:empress-capital_src_001",
+      "research_source:empress-capital:empress-capital_src_profile_website",
+      "research_source:empress-capital:empress-capital_src_profile_linkedin",
+      "research_source:empress-capital:empress-capital_src_deal_2025q4"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Research collection status: partial",
+      "team_and_person_level_evidence_not_material_or_not_public",
+      "recent_portfolio_coverage_partial"
+    ]
+  }
+}

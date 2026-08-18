@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-084",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-084",
+    "dedupe_key": "2024|bioora|2024-11-22|series_a",
+    "source_url": "https://www.nbr.co.nz/tech/cancer-treatment-company-bioora-secures-4m-funding-to-scale-up/",
+    "source_payload": {
+      "deal_number": 84,
+      "csv_investee": "BioOra",
+      "normalized_investee": "BioOra",
+      "csv_date": "2024-11-22",
+      "normalized_date": "2024-11-22",
+      "csv_round": "Seed",
+      "normalized_round": "Pre-Series A",
+      "csv_amount": "NZD 4,000,000",
+      "normalized_amount": "NZD 4,000,000",
+      "csv_investors": "Angel Investors Marlborough",
+      "normalized_investors": "Bridgewest Ventures; Mainland Angel Investors; Angel Investors Marlborough; Booster Innovation Fund",
+      "verification": "partial",
+      "correction_or_issue": "NBR confirms NZ$4m pre-Series A. Public ownership and investor announcements support the investor set, but exact allocations beyond Booster's NZ$400k are incomplete.",
+      "primary_source": "https://www.nbr.co.nz/tech/cancer-treatment-company-bioora-secures-4m-funding-to-scale-up/",
+      "secondary_source": "https://www.nzx.com/announcements/443761"
+    },
+    "investee_name_raw": "BioOra",
+    "org_location_raw": "Auckland, New Zealand",
+    "org_website_raw": "https://bioora.com/",
+    "org_industries_raw": "Biotech / Cell Therapy",
+    "round_type_raw": "Pre-Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-11-22",
+    "money_raised_raw": "NZD 4,000,000",
+    "amount": 4000000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Bridgewest Ventures; Mainland Angel Investors; Angel Investors Marlborough; Booster Innovation Fund",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://www.nbr.co.nz/tech/cancer-treatment-company-bioora-secures-4m-funding-to-scale-up/",
+    "verification_notes": "NBR confirms NZ$4m pre-Series A. Public ownership and investor announcements support the investor set, but exact allocations beyond Booster's NZ$400k are incomplete.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:bioora"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:86dc2fba96210dd4492e",
+      "source:url:91808b2bcbbe9bf672b9"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "NBR confirms NZ$4m pre-Series A. Public ownership and investor announcements support the investor set, but exact allocations beyond Booster's NZ$400k are incomplete."
+    ]
+  }
+}

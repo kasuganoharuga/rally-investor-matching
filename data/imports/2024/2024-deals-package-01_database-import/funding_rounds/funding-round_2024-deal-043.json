@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-043",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-043",
+    "dedupe_key": "2024|accoil|2024-12-11|seed",
+    "source_url": "https://www.innovationaus.com/ex-atlassians-raise-2m-for-saas-data-startup/",
+    "source_payload": {
+      "deal_number": 43,
+      "csv_investee": "Accoil",
+      "normalized_investee": "Accoil",
+      "csv_date": "2024-12-12",
+      "normalized_date": "2024-12-11",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "AUD 2,000,000",
+      "normalized_amount": "AUD 2,000,000",
+      "csv_investors": "Atlassian Ventures; QIC",
+      "normalized_investors": "Atlassian Ventures; QIC Ventures",
+      "verification": "verified",
+      "correction_or_issue": "Primary reporting confirms both cornerstone investors; date corrected by one day.",
+      "primary_source": "https://www.innovationaus.com/ex-atlassians-raise-2m-for-saas-data-startup/",
+      "secondary_source": "https://www.accoil.com/"
+    },
+    "investee_name_raw": "Accoil",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.accoil.com/",
+    "org_industries_raw": "Enterprise Software / Data",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-12-11",
+    "money_raised_raw": "AUD 2,000,000",
+    "amount": 2000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Atlassian Ventures; QIC Ventures",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.innovationaus.com/ex-atlassians-raise-2m-for-saas-data-startup/",
+    "verification_notes": "Primary reporting confirms both cornerstone investors; date corrected by one day.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:accoil"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:efe66a96605f43a78892",
+      "source:url:db803e16710b26a9e4de"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

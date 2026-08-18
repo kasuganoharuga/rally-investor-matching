@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-408",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-408",
+    "dedupe_key": "2024|matchfy|unresolved|unknown",
+    "source_url": "https://www.lvlup.vc/portfolio-company-database/matchfy",
+    "source_payload": {
+      "deal_number": 408,
+      "csv_investee": "Matchfy",
+      "normalized_investee": "Matchfy",
+      "csv_date": "2024-07-23",
+      "normalized_date": "Unresolved",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Unverified financing",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "LvlUp Ventures",
+      "normalized_investors": "Investor attribution held",
+      "verification": "needs_review_entity_mismatch",
+      "correction_or_issue": "LvlUp's Matchfy portfolio page describes a music-marketing business, while the supplied company is a sports-fan platform. Do not create or update the investor from this row.",
+      "primary_source": "https://www.lvlup.vc/portfolio-company-database/matchfy",
+      "secondary_source": "https://www.matchfy.co/"
+    },
+    "investee_name_raw": "Matchfy",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.matchfy.co/",
+    "org_industries_raw": "Sports Tech / Community",
+    "round_type_raw": "Unverified financing",
+    "round_stage": "unknown",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Investor attribution held",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "needs_review_entity_mismatch",
+    "verification_source_url": "https://www.lvlup.vc/portfolio-company-database/matchfy",
+    "verification_notes": "LvlUp's Matchfy portfolio page describes a music-marketing business, while the supplied company is a sports-fan platform. Do not create or update the investor from this row.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:matchfy"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:d9907f792300c5be2ac1",
+      "source:url:c202024b95463bd1f73d"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "LvlUp's Matchfy portfolio page describes a music-marketing business, while the supplied company is a sports-fan platform. Do not create or update the investor from this row.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

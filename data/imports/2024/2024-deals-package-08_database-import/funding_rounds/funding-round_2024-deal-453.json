@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-453",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-453",
+    "dedupe_key": "2024|balo|2024-09-26|pre_seed",
+    "source_url": "https://www.startupdaily.net/partner-content/antler-australia/antler-investor-memo-series-balo-help-desk-for-enterprise-software-users/",
+    "source_payload": {
+      "deal_number": 453,
+      "csv_investee": "Balo",
+      "normalized_investee": "Balo",
+      "csv_date": "2024-04-10",
+      "normalized_date": "2024-09-26",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Antler pre-seed",
+      "csv_amount": "AUD 225,000",
+      "normalized_amount": "AUD 225,000 for 12%",
+      "csv_investors": "Antler",
+      "normalized_investors": "Antler Australia",
+      "verification": "verified",
+      "correction_or_issue": "Cohort reporting confirms Balo and standard A$225k terms; Antler is the current investor.",
+      "primary_source": "https://www.startupdaily.net/partner-content/antler-australia/antler-investor-memo-series-balo-help-desk-for-enterprise-software-users/",
+      "secondary_source": "https://www.overnightsuccess.vc/p/aussie-startup-vc-summary-2nd-november/"
+    },
+    "investee_name_raw": "Balo",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://getbalo.com/",
+    "org_industries_raw": "Enterprise Software / Future of Work",
+    "round_type_raw": "Antler pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-09-26",
+    "money_raised_raw": "AUD 225,000 for 12%",
+    "amount": 225000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Antler Australia",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-08_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.startupdaily.net/partner-content/antler-australia/antler-investor-memo-series-balo-help-desk-for-enterprise-software-users/",
+    "verification_notes": "Cohort reporting confirms Balo and standard A$225k terms; Antler is the current investor. Exact day records the visible publication date of the public financing or cohort report; it is not represented as an unreported legal closing date.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day",
+    "date_basis": "public_announcement_publication_date",
+    "date_derivation_method": "visible_source_publication_date",
+    "supplemental_verification_urls": [
+      "https://www.startupdaily.net/partner-content/antler-australia/antler-investor-memo-series-balo-help-desk-for-enterprise-software-users/"
+    ]
+  },
+  "refs": {
+    "investee_company_key": "company:research:balo"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": [
+      "source:url:9d3d6c4d4d564daab0c1",
+      "source:url:90310921772ea04cab03"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

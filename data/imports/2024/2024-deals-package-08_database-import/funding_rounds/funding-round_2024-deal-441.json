@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-441",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-441",
+    "dedupe_key": "2024|wemoney|2024-05-20|growth",
+    "source_url": "https://www.capitalbrief.com/newsletter/mo-money-for-wemoney-451df67c-2e72-4e87-9c90-b10eab9717f9/",
+    "source_payload": {
+      "deal_number": 441,
+      "csv_investee": "WeMoney",
+      "normalized_investee": "WeMoney",
+      "csv_date": "2024-05-21",
+      "normalized_date": "2024-05-20/21",
+      "csv_round": "Seed",
+      "normalized_round": "Existing-investor growth round",
+      "csv_amount": "AUD 3,000,000",
+      "normalized_amount": "AUD 3,000,000",
+      "csv_investors": null,
+      "normalized_investors": "Existing investors; Tim Poskitt attributed by database only",
+      "verification": "verified_undisclosed_syndicate",
+      "correction_or_issue": "Contemporaneous reporting confirms the amount and that existing investors funded the round, but does not disclose a complete syndicate.",
+      "primary_source": "https://www.capitalbrief.com/newsletter/mo-money-for-wemoney-451df67c-2e72-4e87-9c90-b10eab9717f9/",
+      "secondary_source": "https://www.fintech.global/2024/05/24/financial-wellness-platform-wemoney-secures-3m-plans-10m-fundraise/"
+    },
+    "investee_name_raw": "WeMoney",
+    "org_location_raw": "Perth-founded / Sydney operations, Australia",
+    "org_website_raw": "https://www.wemoney.com.au/",
+    "org_industries_raw": "Fintech / Open Banking",
+    "round_type_raw": "Existing-investor growth round",
+    "round_stage": "growth",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-05-20",
+    "money_raised_raw": "AUD 3,000,000",
+    "amount": 3000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Existing investors; Tim Poskitt attributed by database only",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-08_database-import",
+    "verification_status": "verified_undisclosed_syndicate",
+    "verification_source_url": "https://www.capitalbrief.com/newsletter/mo-money-for-wemoney-451df67c-2e72-4e87-9c90-b10eab9717f9/",
+    "verification_notes": "Contemporaneous reporting confirms the amount and that existing investors funded the round, but does not disclose a complete syndicate.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:wemoney"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": [
+      "source:url:9c649800698eebc88e2b",
+      "source:url:240e8bfe97d05dbecbdd"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-352",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-352",
+    "dedupe_key": "2024|supplyscope|2024-05|pre_seed",
+    "source_url": "https://www.skalata.vc/investment-notes/supplyscope",
+    "source_payload": {
+      "deal_number": 352,
+      "csv_investee": "SupplyScope",
+      "normalized_investee": "SupplyScope",
+      "csv_date": "2024-05-09",
+      "normalized_date": "2024-05",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-seed",
+      "csv_amount": "USD 300,000",
+      "normalized_amount": "AUD 300,000",
+      "csv_investors": "Skalata",
+      "normalized_investors": "Skalata Ventures",
+      "verification": "corrected",
+      "correction_or_issue": "Skalata's official note confirms the investment; Australian reporting/database evidence identifies A$300k, so the CSV currency is corrected.",
+      "primary_source": "https://www.skalata.vc/investment-notes/supplyscope",
+      "secondary_source": "https://app.dealroom.co/news/feed/supplyscope-secures-300k-from-skalata"
+    },
+    "investee_name_raw": "SupplyScope",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://supplyscope.io/",
+    "org_industries_raw": "Supply Chain SaaS / Compliance",
+    "round_type_raw": "Pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "AUD 300,000",
+    "amount": 300000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Skalata Ventures",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.skalata.vc/investment-notes/supplyscope",
+    "verification_notes": "Skalata's official note confirms the investment; Australian reporting/database evidence identifies A$300k, so the CSV currency is corrected.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:supplyscope"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:41fbafa391a659928c0b",
+      "source:url:4389374b0d1cc5124c34"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

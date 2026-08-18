@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-286",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-286",
+    "dedupe_key": "2024|carewindow|2024-remarkable-global-cohort|program_or_grant",
+    "source_url": "https://www.remarkable.org/blog-posts/2024-remarkable-accelerator-global-cohort",
+    "source_payload": {
+      "deal_number": 286,
+      "csv_investee": "CareWindow",
+      "normalized_investee": "CareWindow",
+      "csv_date": "2024-08-05",
+      "normalized_date": "2024 Remarkable Global cohort",
+      "csv_round": "Seed",
+      "normalized_round": "Remarkable accelerator investment",
+      "csv_amount": "AUD 100,000",
+      "normalized_amount": "AUD 100,000 for 6% equity",
+      "csv_investors": "Remarkable",
+      "normalized_investors": "Remarkable / Cerebral Palsy Alliance",
+      "verification": "verified_program",
+      "correction_or_issue": "CareWindow is a 2024 Remarkable cohort company and the accelerator's published terms state A$100k for 6% equity.",
+      "primary_source": "https://www.remarkable.org/blog-posts/2024-remarkable-accelerator-global-cohort",
+      "secondary_source": "https://www.carewindow.com.au/request-a-quote"
+    },
+    "investee_name_raw": "CareWindow",
+    "org_location_raw": "Adelaide, SA, Australia",
+    "org_website_raw": "https://www.carewindow.com.au/",
+    "org_industries_raw": "Aged Care / Disability Tech",
+    "round_type_raw": "Remarkable accelerator investment",
+    "round_stage": "program_or_grant",
+    "funding_stage_raw": "Seed",
+    "announced_date": null,
+    "money_raised_raw": "AUD 100,000 for 6% equity",
+    "amount": 100000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Remarkable / Cerebral Palsy Alliance",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "verified_program",
+    "verification_source_url": "https://www.remarkable.org/blog-posts/2024-remarkable-accelerator-global-cohort",
+    "verification_notes": "CareWindow is a 2024 Remarkable cohort company and the accelerator's published terms state A$100k for 6% equity.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:carewindow"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:3c2bcfe4e3d06be8009e",
+      "source:url:9be26a2bc0f5f6d64b0d"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

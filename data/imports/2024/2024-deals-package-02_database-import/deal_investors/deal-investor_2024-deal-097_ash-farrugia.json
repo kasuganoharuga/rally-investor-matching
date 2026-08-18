@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "table": "deal_investors",
+  "record_key": "deal_investor:research-package:2024-deal-097:ash-farrugia",
+  "operation": "upsert",
+  "data": {
+    "raw_name": "Ash Farrugia",
+    "role": "participant",
+    "participation_status": "confirmed",
+    "resolution": "resolved",
+    "resolution_confidence": "high",
+    "identity_resolution": "new_investor"
+  },
+  "refs": {
+    "deal_key": "funding_round:research-package:2024-deal-097",
+    "investor_key": "investor:ash-farrugia",
+    "raw_investor_candidate_key": "raw_investor_candidate:ash-farrugia"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

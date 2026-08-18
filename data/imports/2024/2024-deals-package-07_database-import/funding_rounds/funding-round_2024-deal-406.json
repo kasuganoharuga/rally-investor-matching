@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-406",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-406",
+    "dedupe_key": "2024|neo-bionica|2024-05-16|seed",
+    "source_url": "https://www.breakthroughvictoria.com/stories/neo-bionica-media-release/",
+    "source_payload": {
+      "deal_number": 406,
+      "csv_investee": "Neo-Bionica",
+      "normalized_investee": "Neo-Bionica",
+      "csv_date": "2024-05-16",
+      "normalized_date": "2024-05-16",
+      "csv_round": "Seed",
+      "normalized_round": "Seed / strategic investment",
+      "csv_amount": "USD 5,000,000",
+      "normalized_amount": "AUD 5,000,000",
+      "csv_investors": "Breakthrough Victoria",
+      "normalized_investors": "Breakthrough Victoria",
+      "verification": "corrected",
+      "correction_or_issue": "Official investor release confirms A$5m; CSV currency is wrong.",
+      "primary_source": "https://www.breakthroughvictoria.com/stories/neo-bionica-media-release/",
+      "secondary_source": "https://neo-bionica.com/"
+    },
+    "investee_name_raw": "Neo-Bionica",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://neo-bionica.com/",
+    "org_industries_raw": "Medtech / Neurotechnology",
+    "round_type_raw": "Seed / strategic investment",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-05-16",
+    "money_raised_raw": "AUD 5,000,000",
+    "amount": 5000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Breakthrough Victoria",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.breakthroughvictoria.com/stories/neo-bionica-media-release/",
+    "verification_notes": "Official investor release confirms A$5m; CSV currency is wrong.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:neo-bionica"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:874cb6b989798b92fa5e",
+      "source:url:ff438e4f3036ed8e91a1"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

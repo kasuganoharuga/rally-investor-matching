@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-061",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-061",
+    "dedupe_key": "2024|knowby|2024-04-29|seed",
+    "source_url": "https://www.knowby.co/",
+    "source_payload": {
+      "deal_number": 61,
+      "csv_investee": "Knowby",
+      "normalized_investee": "Knowby",
+      "csv_date": "2024-04-29",
+      "normalized_date": "2024-04-29",
+      "csv_round": "Seed",
+      "normalized_round": "Seed / unverified financing",
+      "csv_amount": "AUD 800,000",
+      "normalized_amount": "Unverified",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Undisclosed",
+      "verification": "needs_review",
+      "correction_or_issue": "Company and product verified; no independent round announcement found.",
+      "primary_source": "https://www.knowby.co/",
+      "secondary_source": null
+    },
+    "investee_name_raw": "Knowby",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.knowby.co/",
+    "org_industries_raw": "Enterprise SaaS / Training",
+    "round_type_raw": "Seed / unverified financing",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-04-29",
+    "money_raised_raw": "Unverified",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://www.knowby.co/",
+    "verification_notes": "Company and product verified; no independent round announcement found.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day",
+    "amount_disclosure_status": "dataset_only_amount_unverified",
+    "amount_structuring_note": "Registry evidence confirms the company only; the A$800k round remains dataset-only.",
+    "supplemental_verification_urls": [
+      "https://abr.business.gov.au/ABN/View?abn=19634269131"
+    ]
+  },
+  "refs": {
+    "investee_company_key": "company:research:knowby"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:ac8eb2ff4e0a1e6dc3ab"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Company and product verified; no independent round announcement found."
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:truyu",
+  "operation": "upsert",
+  "data": {
+    "name": "Truyu",
+    "website_url": "https://www.truyu.com.au/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "cybersecurity-identity",
+    "sector_secondary": null,
+    "use_case_primary": "digital-identity-protection-pilot-that-alerts-consumers-to-identity-checks-misuse-and-data-breach-exposure",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "consumer-fintech-service",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Digital identity-protection pilot that alerts consumers to identity checks, misuse and data-breach exposure.",
+    "source_urls": [
+      "https://www.truyu.com.au/",
+      "https://www.truyu.com.au/about",
+      "https://x15ventures.com.au/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

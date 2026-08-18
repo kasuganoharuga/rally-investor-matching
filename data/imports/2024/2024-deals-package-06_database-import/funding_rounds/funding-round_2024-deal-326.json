@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-326",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-326",
+    "dedupe_key": "2024|stickybeak|2024-09-20|unknown",
+    "source_url": "https://www.nzgcp.co.nz/portfolio/case-study/stickybeak",
+    "source_payload": {
+      "deal_number": 326,
+      "csv_investee": "Stickybeak",
+      "normalized_investee": "Stickybeak",
+      "csv_date": "2024-09-20",
+      "normalized_date": "2024-09-20",
+      "csv_round": "Seed",
+      "normalized_round": "Capital raise",
+      "csv_amount": "USD 1,200,000",
+      "normalized_amount": "NZD 1,200,000",
+      "csv_investors": "Brisbane Angels; Hoku Group; Liz Greive; NZGCP; NZVC",
+      "normalized_investors": "Hoku Group; NZVC; Brisbane Angels; Aspire NZ Seed Fund; high-net-worth investors",
+      "verification": "corrected",
+      "correction_or_issue": "NZGCP's official case study confirms a NZ$1.2m raise and co-investors. The CSV currency is wrong and Liz Greive is not separately confirmed by the strongest source.",
+      "primary_source": "https://www.nzgcp.co.nz/portfolio/case-study/stickybeak",
+      "secondary_source": "https://www.stickybeak.co/in-the-press"
+    },
+    "investee_name_raw": "Stickybeak",
+    "org_location_raw": "Auckland, New Zealand",
+    "org_website_raw": "https://www.stickybeak.co/",
+    "org_industries_raw": "Market Research / SaaS",
+    "round_type_raw": "Capital raise",
+    "round_stage": "unknown",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-09-20",
+    "money_raised_raw": "NZD 1,200,000",
+    "amount": 1200000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Hoku Group; NZVC; Brisbane Angels; Aspire NZ Seed Fund; high-net-worth investors",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.nzgcp.co.nz/portfolio/case-study/stickybeak",
+    "verification_notes": "NZGCP's official case study confirms a NZ$1.2m raise and co-investors. The CSV currency is wrong and Liz Greive is not separately confirmed by the strongest source.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:stickybeak"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:e044cec4b4f1c0a6d594",
+      "source:url:b48e8a47e7dfd07647f1"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

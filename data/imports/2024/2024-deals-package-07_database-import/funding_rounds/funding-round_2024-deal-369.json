@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-369",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-369",
+    "dedupe_key": "2024|sayamigo-ai|2024-12|pre_seed",
+    "source_url": "https://www.linkedin.com/posts/hightablevc_here-are-some-australian-startups-that-secured-activity-7282037912366399488-8PnA",
+    "source_payload": {
+      "deal_number": 369,
+      "csv_investee": "Sayamigo.ai",
+      "normalized_investee": "Sayamigo.ai",
+      "csv_date": "2024-12-03",
+      "normalized_date": "2024-12",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": null,
+      "normalized_investors": "Undisclosed",
+      "verification": "partial",
+      "correction_or_issue": "A December Australian funding roundup corroborates an undisclosed pre-seed, but no investor or stronger event announcement was found.",
+      "primary_source": "https://www.linkedin.com/posts/hightablevc_here-are-some-australian-startups-that-secured-activity-7282037912366399488-8PnA",
+      "secondary_source": "https://sayamigo.ai/"
+    },
+    "investee_name_raw": "Sayamigo.ai",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://sayamigo.ai/",
+    "org_industries_raw": "Enterprise AI / Collaboration",
+    "round_type_raw": "Pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://www.linkedin.com/posts/hightablevc_here-are-some-australian-startups-that-secured-activity-7282037912366399488-8PnA",
+    "verification_notes": "A December Australian funding roundup corroborates an undisclosed pre-seed, but no investor or stronger event announcement was found.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:sayamigo-ai"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:da879ab7a2752c3cefa0",
+      "source:url:0d79fb8f007f157307be"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "A December Australian funding roundup corroborates an undisclosed pre-seed, but no investor or stronger event announcement was found.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

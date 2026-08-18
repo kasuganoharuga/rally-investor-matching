@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investors",
+  "record_key": "investor:punakaiki-fund",
+  "operation": "upsert",
+  "data": {
+    "canonical_name": "Punakaiki Fund",
+    "aliases": [],
+    "investor_type": "vc_fund",
+    "website_url": "https://punakaikifund.co.nz/",
+    "linkedin_url": "https://www.linkedin.com/company/punakaiki-fund",
+    "hq_country": "NZ",
+    "hq_state": null,
+    "hq_city": null,
+    "offices": [],
+    "status": "active",
+    "merged_into_id": null,
+    "review_status": "reviewed",
+    "last_reviewed_at": "2026-08-14",
+    "last_reviewed_by": "codex-2024-investor-dedupe-update",
+    "investor_subtype": "Listed venture fund",
+    "classification_confidence": "high",
+    "classification_source": "inherited from previously completed detailed classification",
+    "eligibility_mode": "research_package_confirmed",
+    "classification_evidence_urls": [
+      "https://punakaikifund.co.nz/"
+    ],
+    "classified_at": "2026-08-14",
+    "identity_resolution": "existing_investor_update",
+    "matched_existing_record_key": "investor:punakaiki-fund",
+    "identity_match_method": "exact_existing_key",
+    "identity_match_source": "normalized_master"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "research_source:punakaiki-fund:punakaiki-fund_src_001",
+      "research_source:punakaiki-fund:punakaiki-fund_src_profile_website",
+      "research_source:punakaiki-fund:punakaiki-fund_src_profile_linkedin"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Research collection status: partial",
+      "team_and_person_level_evidence_not_material_or_not_public",
+      "recent_portfolio_coverage_partial"
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:earthodic",
+  "operation": "upsert",
+  "data": {
+    "name": "Earthodic",
+    "website_url": "https://www.earthodic.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Queensland",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "climate-tech-packaging-materials",
+    "sector_secondary": null,
+    "use_case_primary": "climate-tech-company-producing-recyclable-bio-based-barrier-coatings-for-paper-packaging-using-lignin",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "coating-technology-and-materials",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Climate-tech company producing recyclable bio-based barrier coatings for paper packaging using lignin.",
+    "source_urls": [
+      "https://www.earthodic.com/",
+      "https://www.earthodic.com/earthodic-expands-their-bio-based-coating-operations-into-the-us-following-an-oversubscribed-seed-fundraise/",
+      "https://www.ftw.vc/companies"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

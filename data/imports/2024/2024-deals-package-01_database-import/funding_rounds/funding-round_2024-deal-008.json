@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-008",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-008",
+    "dedupe_key": "2024|lsl-plus|2024-02-07|seed",
+    "source_url": "https://www.lslplus.com",
+    "source_payload": {
+      "deal_number": 8,
+      "csv_investee": "LSL Plus",
+      "normalized_investee": "LSL Plus",
+      "csv_date": "2024-02-07",
+      "normalized_date": "2024-02-07",
+      "csv_round": "Seed",
+      "normalized_round": "Seed / strategic",
+      "csv_amount": "AUD 50,000",
+      "normalized_amount": "AUD 50,000 (single-source)",
+      "csv_investors": "Higher Ed Services",
+      "normalized_investors": "Higher Ed Services",
+      "verification": "needs_review",
+      "correction_or_issue": "HES is a Universities Australia-owned nonprofit strategic operator, not a conventional VC.",
+      "primary_source": "https://www.lslplus.com",
+      "secondary_source": "https://www.hes.edu.au/whatwedo"
+    },
+    "investee_name_raw": "LSL Plus",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.lslplus.com",
+    "org_industries_raw": "Regtech / HRtech",
+    "round_type_raw": "Seed / strategic",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-02-07",
+    "money_raised_raw": "AUD 50,000 (single-source)",
+    "amount": 50000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Higher Ed Services",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://www.lslplus.com",
+    "verification_notes": "HES is a Universities Australia-owned nonprofit strategic operator, not a conventional VC.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:lsl-plus"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:73646850fb09e199c867",
+      "source:url:0b244ac830169ed1709d"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "HES is a Universities Australia-owned nonprofit strategic operator, not a conventional VC."
+    ]
+  }
+}

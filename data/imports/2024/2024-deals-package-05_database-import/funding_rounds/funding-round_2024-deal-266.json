@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-266",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-266",
+    "dedupe_key": "2024|watchful-limited|2024-12-03|unknown",
+    "source_url": "https://www.nzherald.co.nz/business/ai-security-startup-watchful-founded-by-ex-policeman-joshua-parsons-raises-46m/EN64N44KV5HHXMZHT5EJLJPXPM/",
+    "source_payload": {
+      "deal_number": 266,
+      "csv_investee": "Watchful",
+      "normalized_investee": "Watchful Limited",
+      "csv_date": "2024-12-03",
+      "normalized_date": "2024-12-03",
+      "csv_round": "Seed",
+      "normalized_round": "First institutional VC raise",
+      "csv_amount": "NZD 4,600,000",
+      "normalized_amount": "NZD 4,600,000 plus separate NZD 400,000 Callaghan grant",
+      "csv_investors": "Blackbird Ventures; Icehouse Ventures",
+      "normalized_investors": "Icehouse Ventures (lead); Blackbird; K1W1; Callaghan Innovation grant support",
+      "verification": "corrected",
+      "correction_or_issue": "NZ Herald confirms the NZ$4.6m raise led by Icehouse with Blackbird support and notes K1W1 ownership. The NZ$400k Callaghan grant is non-dilutive and separated from the round.",
+      "primary_source": "https://www.nzherald.co.nz/business/ai-security-startup-watchful-founded-by-ex-policeman-joshua-parsons-raises-46m/EN64N44KV5HHXMZHT5EJLJPXPM/",
+      "secondary_source": "https://www.linkedin.com/posts/icehouse-ventures_former-kiwi-cop-raises-46m-for-his-ai-start-up-activity-7269898703417556992-2Qic"
+    },
+    "investee_name_raw": "Watchful Limited",
+    "org_location_raw": "New Zealand",
+    "org_website_raw": "https://watchful.co.nz/",
+    "org_industries_raw": "Security Tech / AI",
+    "round_type_raw": "First institutional VC raise",
+    "round_stage": "unknown",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-12-03",
+    "money_raised_raw": "NZD 4,600,000 plus separate NZD 400,000 Callaghan grant",
+    "amount": 4600000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Icehouse Ventures (lead); Blackbird; K1W1; Callaghan Innovation grant support",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.nzherald.co.nz/business/ai-security-startup-watchful-founded-by-ex-policeman-joshua-parsons-raises-46m/EN64N44KV5HHXMZHT5EJLJPXPM/",
+    "verification_notes": "NZ Herald confirms the NZ$4.6m raise led by Icehouse with Blackbird support and notes K1W1 ownership. The NZ$400k Callaghan grant is non-dilutive and separated from the round.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:watchful"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:54c3e28c9c00d8d6d310",
+      "source:url:e8e9d5fee6d56d642ac7"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investors",
+  "record_key": "investor:angel-investors-marlborough",
+  "operation": "upsert",
+  "data": {
+    "canonical_name": "Angel Investors Marlborough",
+    "aliases": [],
+    "investor_type": "angel_group",
+    "investor_subtype": "Angel group",
+    "eligibility_mode": "research_package_confirmed",
+    "classification_confidence": "high",
+    "classification_evidence_urls": [
+      "https://www.angelinvestorsmarlborough.co.nz/",
+      "https://www.linkedin.com/company/angelinvestorsmarlborough"
+    ],
+    "classified_at": "2026-08-14",
+    "website_url": "https://www.angelinvestorsmarlborough.co.nz/",
+    "linkedin_url": "https://www.linkedin.com/company/angelinvestorsmarlborough",
+    "hq_country": "NZ",
+    "hq_state": "Marlborough",
+    "hq_city": "Blenheim",
+    "offices": [],
+    "status": "active",
+    "merged_into_id": null,
+    "review_status": "needs_more_data",
+    "last_reviewed_at": "2026-08-14",
+    "last_reviewed_by": "codex-2024-investor-dedupe-update",
+    "identity_resolution": "existing_investor_update",
+    "matched_existing_record_key": "investor:angel-investors-marlborough",
+    "identity_match_method": "exact_existing_key",
+    "identity_match_source": "historical_import:recent-deal2026-7-30_deals-121-180_delta_identity-audited-v3_team-audited"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:2b64a5c2a19585b331bf"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

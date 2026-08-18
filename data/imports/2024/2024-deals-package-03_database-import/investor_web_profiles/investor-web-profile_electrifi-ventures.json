@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_web_profiles",
+  "record_key": "investor_web_profile:electrifi-ventures:2026-08-14",
+  "operation": "upsert",
+  "data": {
+    "source_urls": [
+      "https://www.electrifi.ventures/",
+      "https://www.crunchbase.com/funding_round/clt-toolbox-seed--a050e4c2",
+      "https://www.investible.com/blog/investment-notes-hachiko-lr1ab"
+    ],
+    "retrieved_at": "2026-08-14",
+    "website_status": "verified_public_profile",
+    "raw_content_hash": null,
+    "raw_content_ref": null,
+    "extraction_model": "codex-2024-investor-dedupe-update",
+    "extraction_version": "1.0.0",
+    "confidence": "medium",
+    "claimed_thesis": "Climate tech",
+    "claimed_stages": [
+      "Pre-seed to pre-Series B"
+    ],
+    "claimed_sectors": [
+      "Climate tech"
+    ],
+    "claimed_geographies": [
+      "Australia"
+    ],
+    "claimed_business_models": [],
+    "claimed_cheque_min": null,
+    "claimed_cheque_max": null,
+    "claimed_cheque_currency": null,
+    "contact_emails": [],
+    "application_url": null,
+    "contact_notes": "Company announcement confirms investment.",
+    "is_current": true,
+    "superseded_at": null
+  },
+  "refs": {
+    "investor_key": "investor:electrifi-ventures"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:583f2f1952e3971ad987",
+      "research_source:electrifi-ventures:electrifi-ventures_src_001",
+      "research_source:electrifi-ventures:electrifi-ventures_src_deal_2025q4"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Research collection status: partial",
+      "team_and_person_level_evidence_not_material_or_not_public",
+      "recent_portfolio_coverage_partial",
+      "official_website_not_verified",
+      "linkedin_company_url_not_verified"
+    ]
+  }
+}

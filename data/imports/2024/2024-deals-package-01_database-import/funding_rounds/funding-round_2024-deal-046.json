@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-046",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-046",
+    "dedupe_key": "2024|caruso|2024-12-11|seed",
+    "source_url": "https://www.smartcompany.com.au/startupsmart/balmain-backs-caruso-3-2-million-raise-global-expansion/",
+    "source_payload": {
+      "deal_number": 46,
+      "csv_investee": "Caruso",
+      "normalized_investee": "Caruso",
+      "csv_date": "2024-12-11",
+      "normalized_date": "2024-12-11",
+      "csv_round": "Seed",
+      "normalized_round": "Seed / equity round",
+      "csv_amount": "USD 1,800,000",
+      "normalized_amount": "AUD 3,200,000",
+      "csv_investors": "Balmain",
+      "normalized_investors": "Balmain",
+      "verification": "corrected",
+      "correction_or_issue": "Australian reporting gives A$3.2m, not US$1.8m.",
+      "primary_source": "https://www.smartcompany.com.au/startupsmart/balmain-backs-caruso-3-2-million-raise-global-expansion/",
+      "secondary_source": "https://www.getcaruso.com/en-us/company/about-us"
+    },
+    "investee_name_raw": "Caruso",
+    "org_location_raw": "Auckland, New Zealand / Sydney",
+    "org_website_raw": "https://www.getcaruso.com/",
+    "org_industries_raw": "Fintech / Fund Administration",
+    "round_type_raw": "Seed / equity round",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-12-11",
+    "money_raised_raw": "AUD 3,200,000",
+    "amount": 3200000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Balmain",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.smartcompany.com.au/startupsmart/balmain-backs-caruso-3-2-million-raise-global-expansion/",
+    "verification_notes": "Australian reporting gives A$3.2m, not US$1.8m. Official Caruso announcement confirms A$3.2m strategic funding on 11 December 2024.",
+    "verification_checked_at": "2026-08-14",
+    "supplemental_verification_urls": [
+      "https://www.getcaruso.com/en-us/resources/blog/balmain-invests-3m-in-caruso"
+    ],
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:caruso"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:2e4537cb8721c62c95f1",
+      "source:url:eea1d83b1999e0d65757"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

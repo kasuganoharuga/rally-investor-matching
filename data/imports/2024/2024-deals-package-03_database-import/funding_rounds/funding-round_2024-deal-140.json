@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-140",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-140",
+    "dedupe_key": "2024|ingenum|2024-03-database-only|seed",
+    "source_url": "https://ingenum.co.nz/",
+    "source_payload": {
+      "deal_number": 140,
+      "csv_investee": "ingenum",
+      "normalized_investee": "ingenum",
+      "csv_date": "2024-03-30",
+      "normalized_date": "2024-03 (database-only)",
+      "csv_round": "Seed",
+      "normalized_round": "Unverified seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed (database total NZD 145,889 not tied to this round)",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "No investor confirmed",
+      "verification": "needs_review",
+      "correction_or_issue": "Company profile is verified, but no authoritative 2024 round announcement, amount or investor was found.",
+      "primary_source": "https://ingenum.co.nz/",
+      "secondary_source": "https://app.dealroom.co/companies/ingenum_1"
+    },
+    "investee_name_raw": "ingenum",
+    "org_location_raw": "Dunedin, New Zealand",
+    "org_website_raw": "https://ingenum.co.nz/",
+    "org_industries_raw": "Animal Health / Data Science",
+    "round_type_raw": "Unverified seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": null,
+    "money_raised_raw": "Undisclosed (database total NZD 145,889 not tied to this round)",
+    "amount": 145889,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "No investor confirmed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://ingenum.co.nz/",
+    "verification_notes": "Company profile is verified, but no authoritative 2024 round announcement, amount or investor was found.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:ingenum"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:51f7bd3d8131ca8fce00",
+      "source:url:e70e3ede94d47101d151"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Company profile is verified, but no authoritative 2024 round announcement, amount or investor was found.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

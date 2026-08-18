@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-001",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-001",
+    "dedupe_key": "2024|q-ctrl|2024-10-08|series_b",
+    "source_url": "https://q-ctrl.com/blog/q-ctrl-sets-global-quantum-technology-fundraising-record-increasing-series-b-to-usd-113m-led-by-gp-bullhound",
+    "source_payload": {
+      "deal_number": 1,
+      "csv_investee": "Q-CTRL",
+      "normalized_investee": "Q-CTRL",
+      "csv_date": "2024-10-08",
+      "normalized_date": "2024-10-08",
+      "csv_round": "Series B",
+      "normalized_round": "Series B-2",
+      "csv_amount": "USD 59,000,000",
+      "normalized_amount": "USD 59,000,000",
+      "csv_investors": "GP Bullhound (lead); Alpha Edison; Alumni Ventures; DCVC; ICM Partners; John Eales; Lockheed Martin Ventures; Main Sequence Ventures; NTT Finance; Salesforce Ventures; Salus Ventures; TISI",
+      "normalized_investors": "GP Bullhound (lead); Alpha Edison; Alumni Ventures; DCVC; ICM/Allectus; John Eales; Lockheed Martin Ventures; Main Sequence; Morpheus Ventures; NTT Finance; Salesforce Ventures; Salus Group; TISI",
+      "verification": "verified",
+      "correction_or_issue": "Official release confirms round and adds Morpheus Ventures; normalize ICM Partners to ICM/Allectus and Salus naming.",
+      "primary_source": "https://q-ctrl.com/blog/q-ctrl-sets-global-quantum-technology-fundraising-record-increasing-series-b-to-usd-113m-led-by-gp-bullhound",
+      "secondary_source": "https://www.cbinsights.com/company/q-ctrl/financials"
+    },
+    "investee_name_raw": "Q-CTRL",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://q-ctrl.com",
+    "org_industries_raw": "Quantum / Deeptech / AI",
+    "round_type_raw": "Series B-2",
+    "round_stage": "series_b",
+    "funding_stage_raw": "Series B",
+    "announced_date": "2024-10-08",
+    "money_raised_raw": "USD 59,000,000",
+    "amount": 59000000,
+    "currency": "USD",
+    "amount_usd": 59000000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "GP Bullhound (lead); Alpha Edison; Alumni Ventures; DCVC; ICM/Allectus; John Eales; Lockheed Martin Ventures; Main Sequence; Morpheus Ventures; NTT Finance; Salesforce Ventures; Salus Group; TISI",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://q-ctrl.com/blog/q-ctrl-sets-global-quantum-technology-fundraising-record-increasing-series-b-to-usd-113m-led-by-gp-bullhound",
+    "verification_notes": "Official release confirms round and adds Morpheus Ventures; normalize ICM Partners to ICM/Allectus and Salus naming. Independent funding database corroborates the 8 October 2024 US$59m Series B extension. Independent funding database corroborates the 8 October 2024 US$59m Series B extension. Independent funding database corroborates the 8 October 2024 US$59m Series B extension.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day",
+    "secondary_source_status": "corroborated",
+    "supplemental_verification_urls": [
+      "https://www.cbinsights.com/company/q-ctrl/financials"
+    ]
+  },
+  "refs": {
+    "investee_company_key": "company:research:q-ctrl"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:9ff6e51053917cb5b605"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

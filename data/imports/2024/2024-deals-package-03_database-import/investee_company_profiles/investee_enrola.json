@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:enrola",
+  "operation": "upsert",
+  "data": {
+    "name": "Enrola",
+    "website_url": "https://getenrola.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Queensland",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "edtech-ai-sales-automation",
+    "sector_secondary": null,
+    "use_case_primary": "in-2024-an-education-course-discovery-and-comparison-platform-the-company-later-repositioned-toward-ai-sales-agents",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "marketplace-evolving-to-b2b-saas",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "ai_related",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "In 2024, an education-course discovery and comparison platform; the company later repositioned toward AI sales agents.",
+    "source_urls": [
+      "https://getenrola.com/",
+      "https://www.linkedin.com/pulse/last-week-australian-startups-87-7th-october-2024-haris-qureshi-zvkjc",
+      "https://www.startupdaily.net/partner-content/antler-australia/antler-investor-memo-series-enrola-helps-students-find-right-educational-courses/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

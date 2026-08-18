@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-318",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-318",
+    "dedupe_key": "2024|sandfly-security|2024-03-25|seed",
+    "source_url": "https://sandflysecurity.com/blog/sandfly-security-receives-seed-funding",
+    "source_payload": {
+      "deal_number": 318,
+      "csv_investee": "Sandfly Security",
+      "normalized_investee": "Sandfly Security",
+      "csv_date": "2024-03-24",
+      "normalized_date": "2024-03-25 announcement",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Alt Ventures; Gula Tech Adventures; Sorenson Capital",
+      "normalized_investors": "Gula Tech Adventures; Sorenson Capital; Alt Ventures New Zealand",
+      "verification": "verified",
+      "correction_or_issue": "The company's own release confirms the undisclosed seed funding and identifies the three investors; date normalized to the company announcement.",
+      "primary_source": "https://sandflysecurity.com/blog/sandfly-security-receives-seed-funding",
+      "secondary_source": "https://sandflysecurity.com/about-us/our-company"
+    },
+    "investee_name_raw": "Sandfly Security",
+    "org_location_raw": "Christchurch, New Zealand",
+    "org_website_raw": "https://sandflysecurity.com/",
+    "org_industries_raw": "Cybersecurity",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-03-25",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Gula Tech Adventures; Sorenson Capital; Alt Ventures New Zealand",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://sandflysecurity.com/blog/sandfly-security-receives-seed-funding",
+    "verification_notes": "The company's own release confirms the undisclosed seed funding and identifies the three investors; date normalized to the company announcement.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:sandfly-security"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:a0bbbe0bc872ebef2504",
+      "source:url:8a5fcfeb92740597fb00"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

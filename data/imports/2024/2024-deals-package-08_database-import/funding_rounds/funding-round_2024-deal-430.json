@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-430",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-430",
+    "dedupe_key": "2024|verida|2024-06-21|seed",
+    "source_url": "https://www.theblock.co/post/301318/verida-raises-5-million-to-protect-user-data-amid-rise-in-generative-ai",
+    "source_payload": {
+      "deal_number": 430,
+      "csv_investee": "Verida",
+      "normalized_investee": "Verida",
+      "csv_date": "2024-06-21",
+      "normalized_date": "2024-06-21",
+      "csv_round": "Seed",
+      "normalized_round": "Seed / token-linked financing",
+      "csv_amount": "USD 5,000,000",
+      "normalized_amount": "USD 5,000,000 at USD 50m valuation",
+      "csv_investors": "Amesten Capital; Bison Capital; ChaiTech Ventures; Evan Cheng; Gate Labs; Hash CIB; O-DE Capital Partners; Simurg Labs",
+      "normalized_investors": "O-DE Capital Partners; ChaiTech Ventures; Simurg Labs; Gate Labs; HASH CIB; Bison Capital; Amesten Capital; Evan Cheng",
+      "verification": "verified",
+      "correction_or_issue": "Contemporaneous reporting confirms amount, valuation and all eight participants; part included community token pre-sales.",
+      "primary_source": "https://www.theblock.co/post/301318/verida-raises-5-million-to-protect-user-data-amid-rise-in-generative-ai",
+      "secondary_source": "https://www.gate.com/pt-br/crypto-calendar/fundraising-information/110605"
+    },
+    "investee_name_raw": "Verida",
+    "org_location_raw": "Sydney, NSW, Australia / global",
+    "org_website_raw": "https://verida.ai/",
+    "org_industries_raw": "Web3 / Data Infrastructure / Privacy",
+    "round_type_raw": "Seed / token-linked financing",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-06-21",
+    "money_raised_raw": "USD 5,000,000 at USD 50m valuation",
+    "amount": 5000000,
+    "currency": "USD",
+    "amount_usd": 5000000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "O-DE Capital Partners; ChaiTech Ventures; Simurg Labs; Gate Labs; HASH CIB; Bison Capital; Amesten Capital; Evan Cheng",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-08_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.theblock.co/post/301318/verida-raises-5-million-to-protect-user-data-amid-rise-in-generative-ai",
+    "verification_notes": "Contemporaneous reporting confirms amount, valuation and all eight participants; part included community token pre-sales.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:verida"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": [
+      "source:url:7910b2e90e8031128155",
+      "source:url:b0a0898da6c2baa46746"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

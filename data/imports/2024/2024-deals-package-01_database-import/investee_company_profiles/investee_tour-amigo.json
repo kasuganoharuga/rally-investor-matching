@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:tour-amigo",
+  "operation": "upsert",
+  "data": {
+    "name": "Tour Amigo",
+    "website_url": "https://touramigo.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": null,
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "traveltech-saas",
+    "sector_secondary": null,
+    "use_case_primary": "booking-inventory-and-operations-software-for-multi-day-tour-operators",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-saas",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Booking, inventory and operations software for multi-day tour operators.",
+    "source_urls": [
+      "https://touramigo.com/",
+      "https://wavemaker.vc/tour-amigo-secures-us2m-seed-capital-to-accelerate-software-development-and-expand-global-operations-2/",
+      "https://www.allenandgledhill.com/sg/perspectives/articles/28908/subscription-of-seed-preference-shares-in-tour-amigo-pte-ltd-led-by-wavemaker-pacific-5-lp"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

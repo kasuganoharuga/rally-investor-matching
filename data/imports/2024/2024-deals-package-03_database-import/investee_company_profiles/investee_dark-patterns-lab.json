@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:dark-patterns-lab",
+  "operation": "upsert",
+  "data": {
+    "name": "Dark Patterns Lab",
+    "website_url": "https://www.darkpatternslab.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Victoria",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "legal-tech-regtech",
+    "sector_secondary": null,
+    "use_case_primary": "regtech-platform-helping-lawyers-and-digital-teams-identify-and-manage-manipulative-interface-design-compliance-risks",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-saas",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Regtech platform helping lawyers and digital teams identify and manage manipulative interface-design compliance risks.",
+    "source_urls": [
+      "https://www.darkpatternslab.com/",
+      "https://www.linkedin.com/posts/melbourne-accelerator-program_maplaunch-startups-highperformance-activity-7194105954471141376-b8hM",
+      "https://www.themap.co/accelerator"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

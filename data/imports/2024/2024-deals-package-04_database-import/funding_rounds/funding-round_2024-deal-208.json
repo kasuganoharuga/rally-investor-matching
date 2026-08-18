@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-208",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-208",
+    "dedupe_key": "2024|vintage-properties-investments-llc|2024-01-31|unknown",
+    "source_url": "https://www.secinfo.com/$/SEC/Registrant.asp?CIK=2010056",
+    "source_payload": {
+      "deal_number": 208,
+      "csv_investee": "Vintage Properties Investments",
+      "normalized_investee": "Vintage Properties Investments, LLC",
+      "csv_date": "2024-01-31",
+      "normalized_date": "2024-01-31 US Form D",
+      "csv_round": "Seed",
+      "normalized_round": "US exempt offering; not an Australian startup deal",
+      "csv_amount": "USD 200,000",
+      "normalized_amount": "USD 200,000",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Undisclosed",
+      "verification": "rejected_anz_scope",
+      "correction_or_issue": "The matching filing belongs to a Virginia US issuer. The CSV's Smithfield NSW location appears to be an entity collision, so this should not enter the ANZ deal set.",
+      "primary_source": "https://www.secinfo.com/$/SEC/Registrant.asp?CIK=2010056",
+      "secondary_source": "https://www.crunchbase.com/funding_round/vintage-properties-investments-seed--b5a05b5d"
+    },
+    "investee_name_raw": "Vintage Properties Investments, LLC",
+    "org_location_raw": "Virginia, USA",
+    "org_website_raw": null,
+    "org_industries_raw": "Property / Hospitality Investment",
+    "round_type_raw": "US exempt offering; not an Australian startup deal",
+    "round_stage": "unknown",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-01-31",
+    "money_raised_raw": "USD 200,000",
+    "amount": 200000,
+    "currency": "USD",
+    "amount_usd": 200000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "rejected_anz_scope",
+    "verification_source_url": "https://www.secinfo.com/$/SEC/Registrant.asp?CIK=2010056",
+    "verification_notes": "The matching filing belongs to a Virginia US issuer. The CSV's Smithfield NSW location appears to be an entity collision, so this should not enter the ANZ deal set.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:vintage-properties-investments-llc"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:70ab2d16b5705ff7908a",
+      "source:url:6e9d6de26fbc364304d2"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

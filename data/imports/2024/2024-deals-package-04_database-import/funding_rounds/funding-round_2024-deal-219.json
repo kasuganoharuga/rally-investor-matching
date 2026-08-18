@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-219",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-219",
+    "dedupe_key": "2024|cellr|2024-01-database-date|seed",
+    "source_url": "https://app.dealroom.co/companies/cellr",
+    "source_payload": {
+      "deal_number": 219,
+      "csv_investee": "Cellr",
+      "normalized_investee": "Cellr",
+      "csv_date": "2024-01-01",
+      "normalized_date": "2024-01 (database date)",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Loyal VC (database-only)",
+      "verification": "needs_review",
+      "correction_or_issue": "Dealroom identifies Loyal VC in a January 2024 seed entry, but no primary company or investor announcement was located.",
+      "primary_source": "https://app.dealroom.co/companies/cellr",
+      "secondary_source": "https://www.cellr.co/"
+    },
+    "investee_name_raw": "Cellr",
+    "org_location_raw": "Perth, WA, Australia",
+    "org_website_raw": "https://www.cellr.co/",
+    "org_industries_raw": "Connected Products / SaaS",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": null,
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Loyal VC (database-only)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://app.dealroom.co/companies/cellr",
+    "verification_notes": "Dealroom identifies Loyal VC in a January 2024 seed entry, but no primary company or investor announcement was located.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:cellr"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:3be504b4ebc151e3f105",
+      "source:url:e07f944a59797c860614"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Dealroom identifies Loyal VC in a January 2024 seed entry, but no primary company or investor announcement was located.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

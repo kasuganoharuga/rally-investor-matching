@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:spatialgpt",
+  "operation": "upsert",
+  "data": {
+    "name": "SpatialGPT",
+    "website_url": "https://spatialgpt.ai/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Victoria",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "spatial-computing-generative-ai",
+    "sector_secondary": null,
+    "use_case_primary": "generative-ai-and-spatial-computing-company-for-architecture-construction-and-other-physical-environments",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-software",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "ai_related",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Generative-AI and spatial-computing company for architecture, construction and other physical environments.",
+    "source_urls": [
+      "https://spatialgpt.ai/",
+      "https://www.aap.com.au/aapreleases/cision20240521ae19318/",
+      "https://www.cbinsights.com/company/spatialgpt/financials"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

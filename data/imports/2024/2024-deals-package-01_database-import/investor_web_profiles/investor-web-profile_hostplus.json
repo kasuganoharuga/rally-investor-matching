@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_web_profiles",
+  "record_key": "investor_web_profile:hostplus:2026-08-14",
+  "operation": "upsert",
+  "data": {
+    "source_urls": [
+      "https://hostplus.com.au/",
+      "https://au.linkedin.com/company/hostplus",
+      "https://www.startupdaily.net/topic/funding/mine-drone-mapping-scaleup-emesent-raises-15-million/",
+      "https://hostplus.com.au/members/our-products-and-services/investment-options/how-we-invest",
+      "https://www.monash.edu/news/articles/monash-spinout-rage-biotech-secures-%2429-million-to-advance-next-generation-rna-therapeutics"
+    ],
+    "retrieved_at": "2026-08-14",
+    "website_status": "verified_public_profile",
+    "raw_content_hash": null,
+    "raw_content_ref": null,
+    "extraction_model": "codex-2024-investor-dedupe-update",
+    "extraction_version": "1.0.0",
+    "confidence": "medium",
+    "claimed_thesis": "Broad institutional portfolio",
+    "claimed_stages": [
+      "Institutional"
+    ],
+    "claimed_sectors": [
+      "Broad institutional portfolio"
+    ],
+    "claimed_geographies": [
+      "Australia"
+    ],
+    "claimed_business_models": [],
+    "claimed_cheque_min": null,
+    "claimed_cheque_max": null,
+    "claimed_cheque_currency": null,
+    "contact_emails": [],
+    "application_url": null,
+    "contact_notes": "Deal participation confirmed; not a direct founder-access VC.",
+    "is_current": true,
+    "superseded_at": null
+  },
+  "refs": {
+    "investor_key": "investor:hostplus"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "research_source:hostplus:hp_src_001",
+      "research_source:hostplus:hp_src_002",
+      "research_source:hostplus:hp_src_003",
+      "research_source:hostplus:hp_src_004",
+      "research_source:hostplus:hostplus_src_deal_2025q4"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Research collection status: partial",
+      "missing_deal_specific_cheque",
+      "portfolio_details_partial",
+      "recent_deals_partial",
+      "deal_database_blocked",
+      "person_linkedin_not_resolved"
+    ]
+  }
+}

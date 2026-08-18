@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:constantinople",
+  "operation": "upsert",
+  "data": {
+    "name": "Constantinople",
+    "website_url": "https://www.cxnpl.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "fintech-banking-infrastructure",
+    "sector_secondary": null,
+    "use_case_primary": "full-stack-technology-and-operations-platform-enabling-banks-to-launch-and-run-retail-and-business-banking",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-saas-operations",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Full-stack technology and operations platform enabling banks to launch and run retail and business banking.",
+    "source_urls": [
+      "https://www.cxnpl.com/",
+      "https://www.marketscreener.com/quote/stock/PROSUS-N-V-66148584/news/Prosus-N-Ventures-leads-USD-50m-Series-A-investment-in-Australia-based-banking-platform-Constantin-46348029/",
+      "https://www.cbinsights.com/company/constantinople/financials"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

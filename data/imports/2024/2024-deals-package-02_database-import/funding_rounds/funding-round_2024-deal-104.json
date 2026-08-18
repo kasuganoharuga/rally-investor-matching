@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-104",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-104",
+    "dedupe_key": "2024|rise|2024-09-16|seed",
+    "source_url": "https://www.theblock.co/amp/post/316493/rise-the-gigagas-layer-2-announces-its-3-2m-seed-round",
+    "source_payload": {
+      "deal_number": 104,
+      "csv_investee": "RISE Labs",
+      "normalized_investee": "RISE",
+      "csv_date": "2024-09-16",
+      "normalized_date": "2024-09-16",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "USD 3,200,000",
+      "normalized_amount": "USD 3,200,000",
+      "csv_investors": "Anthony Sassano; DCF GOD; Digital Asset Capital Management; ether.fi; Finality Capital Partners; MH Ventures; Orange DAO; P2 Ventures; Public Works; Sam Kazemian; Sandeep Nailwal; Scott Moore; Stani Kulechov; Trung Nguyen; Victor Tran; Vitalik Buterin",
+      "normalized_investors": "Finality Capital (lead); Orange DAO; DACM; ether.fi Ventures; P2 Ventures; MH Ventures; Public Works; Vitalik Buterin; Stani Kulechov; Anthony Sassano; DCF God; other Web3 founders",
+      "verification": "verified",
+      "correction_or_issue": "Published company announcement confirms amount, lead, institutional participants and named headline angels; several additional CSV angels are retained in source data but not independently enumerated.",
+      "primary_source": "https://www.theblock.co/amp/post/316493/rise-the-gigagas-layer-2-announces-its-3-2m-seed-round",
+      "secondary_source": "https://www.risechain.com/"
+    },
+    "investee_name_raw": "RISE",
+    "org_location_raw": "Sydney, NSW, Australia / global",
+    "org_website_raw": "https://www.risechain.com/",
+    "org_industries_raw": "Blockchain Infrastructure",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-09-16",
+    "money_raised_raw": "USD 3,200,000",
+    "amount": 3200000,
+    "currency": "USD",
+    "amount_usd": 3200000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Finality Capital (lead); Orange DAO; DACM; ether.fi Ventures; P2 Ventures; MH Ventures; Public Works; Vitalik Buterin; Stani Kulechov; Anthony Sassano; DCF God; other Web3 founders",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.theblock.co/amp/post/316493/rise-the-gigagas-layer-2-announces-its-3-2m-seed-round",
+    "verification_notes": "Published company announcement confirms amount, lead, institutional participants and named headline angels; several additional CSV angels are retained in source data but not independently enumerated.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:rise"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:cced93c03c350520180c",
+      "source:url:6c79498781ade0eab0a3"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

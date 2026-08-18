@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:justfund",
+  "operation": "upsert",
+  "data": {
+    "name": "JustFund",
+    "website_url": "https://www.justfund.com.au/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "fintech-legal-finance",
+    "sector_secondary": null,
+    "use_case_primary": "social-lender-providing-flexible-credit-lines-for-legal-costs-in-australian-family-law-and-separation-matters",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "specialty-lending",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Social lender providing flexible credit lines for legal costs in Australian family-law and separation matters.",
+    "source_urls": [
+      "https://www.justfund.com.au/",
+      "https://australianfintech.com.au/fintech-startup-justfund-accelerates-growth-with-86-million-capital-raise/",
+      "https://app.dealroom.co/companies/just_fund"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

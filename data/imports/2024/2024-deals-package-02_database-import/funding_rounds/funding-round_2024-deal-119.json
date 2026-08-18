@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-119",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-119",
+    "dedupe_key": "2024|switchboard|2024-06-12|seed",
+    "source_url": "https://www.ten13.vc/post/h1-2024-in-review-100m-invested",
+    "source_payload": {
+      "deal_number": 119,
+      "csv_investee": "Switchboard",
+      "normalized_investee": "Switchboard",
+      "csv_date": "2024-06-12",
+      "normalized_date": "2024-06-12",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "AUD 1,500,000",
+      "normalized_amount": "AUD 1,500,000",
+      "csv_investors": "AfterWork Ventures; Archangel Ventures; Everywhere Ventures; Investible; Skalata; Startmate; TEN13; The Fund",
+      "normalized_investors": "Investible; Skalata Ventures; Archangel Ventures; AfterWork Ventures; Startmate; TEN13; Everywhere Ventures",
+      "verification": "verified",
+      "correction_or_issue": "TEN13 and AfterWork confirm the A$1.5m round and core investors; The Fund is not consistently confirmed.",
+      "primary_source": "https://www.ten13.vc/post/h1-2024-in-review-100m-invested",
+      "secondary_source": "https://reading.afterwork.vc/p/investment-notes-switchboard"
+    },
+    "investee_name_raw": "Switchboard",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.switchboardcloud.com/",
+    "org_industries_raw": "Supply-chain SaaS / Integration",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-06-12",
+    "money_raised_raw": "AUD 1,500,000",
+    "amount": 1500000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Investible; Skalata Ventures; Archangel Ventures; AfterWork Ventures; Startmate; TEN13; Everywhere Ventures",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.ten13.vc/post/h1-2024-in-review-100m-invested",
+    "verification_notes": "TEN13 and AfterWork confirm the A$1.5m round and core investors; The Fund is not consistently confirmed.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:switchboard"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:2a056751cd2e4a2b85e4",
+      "source:url:a3c1377c9c25d77eb17e"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

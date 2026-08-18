@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-407",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-407",
+    "dedupe_key": "2024|yeyro-ring|2024-antler-portfolio-may-database-record|pre_seed",
+    "source_url": "https://www.antler.co/portfolio",
+    "source_payload": {
+      "deal_number": 407,
+      "csv_investee": "Yeyro Ring",
+      "normalized_investee": "Yeyro Ring",
+      "csv_date": "2024-05-17",
+      "normalized_date": "2024 Antler portfolio / May database record",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Antler pre-seed",
+      "csv_amount": "AUD 225,000",
+      "normalized_amount": "AUD 225,000 (program/database corroborated)",
+      "csv_investors": "Antler",
+      "normalized_investors": "Antler Australia",
+      "verification": "verified_program",
+      "correction_or_issue": "Official portfolio confirms the 2024 relationship; amount aligns with the documented Antler program and database record.",
+      "primary_source": "https://www.antler.co/portfolio",
+      "secondary_source": "https://www.yeyroring.com/"
+    },
+    "investee_name_raw": "Yeyro Ring",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.yeyroring.com/",
+    "org_industries_raw": "Wearables / Consumer Health",
+    "round_type_raw": "Antler pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "AUD 225,000 (program/database corroborated)",
+    "amount": 225000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Antler Australia",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "verified_program",
+    "verification_source_url": "https://www.antler.co/portfolio",
+    "verification_notes": "Official portfolio confirms the 2024 relationship; amount aligns with the documented Antler program and database record.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:yeyro-ring"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:ed4c86f315279b15a444",
+      "source:url:90246737db6a8be29f62"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

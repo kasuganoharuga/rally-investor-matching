@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_team_members",
+  "record_key": "investor_team_member:k1w1:robbie-tindall",
+  "operation": "upsert",
+  "data": {
+    "contact_id": null,
+    "first_name": "Robbie",
+    "last_name": "Tindall",
+    "role_title": "Director",
+    "seniority": "other",
+    "linkedin_url": "https://nz.linkedin.com/in/robbie-tindall-a7862960",
+    "claimed_focus": [
+      "early_stage",
+      "New Zealand"
+    ],
+    "bio_summary": "Director at K1W1 Ltd in Auckland.",
+    "source_url": "https://www.cbinsights.com/investor/k1w1",
+    "retrieved_at": "2026-07-16",
+    "is_active": true
+  },
+  "refs": {
+    "investor_key": "investor:k1w1",
+    "contact_key": null
+  },
+  "provenance": {
+    "collection_run_key": "collection:research:2026-07-24",
+    "source_keys": [
+      "research_source:k1w1:k1_src_001"
+    ]
+  },
+  "review": {
+    "status": "unreviewed",
+    "issues": []
+  }
+}

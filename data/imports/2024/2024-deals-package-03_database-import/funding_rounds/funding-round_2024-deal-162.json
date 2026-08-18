@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-162",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-162",
+    "dedupe_key": "2024|aurabox|2024-06-01|pre_seed",
+    "source_url": "https://www.vcbacked.co/company/aurabox",
+    "source_payload": {
+      "deal_number": 162,
+      "csv_investee": "Aurabox",
+      "normalized_investee": "Aurabox",
+      "csv_date": "2024-06-01",
+      "normalized_date": "2024-06-01 (database date)",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-Seed",
+      "csv_amount": "AUD 400,000",
+      "normalized_amount": "AUD 400,000 (database-only)",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Undisclosed",
+      "verification": "partial",
+      "correction_or_issue": "Funding database supports the amount and stage; official government material confirms the company and prior commercialisation support, not this equity round.",
+      "primary_source": "https://www.vcbacked.co/company/aurabox",
+      "secondary_source": "https://www.industry.gov.au/sites/default/files/2024-08/senate-order-13-2023-24-financial-year.pdf"
+    },
+    "investee_name_raw": "Aurabox",
+    "org_location_raw": "Canberra, ACT, Australia",
+    "org_website_raw": "https://aurabox.cloud",
+    "org_industries_raw": "Digital Health / Medical Imaging",
+    "round_type_raw": "Pre-Seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-06-01",
+    "money_raised_raw": "AUD 400,000 (database-only)",
+    "amount": 400000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://www.vcbacked.co/company/aurabox",
+    "verification_notes": "Funding database supports the amount and stage; official government material confirms the company and prior commercialisation support, not this equity round.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:aurabox"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:97ed5fa6494411cdea0b",
+      "source:url:8ca9b63a05c34741e01d"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Funding database supports the amount and stage; official government material confirms the company and prior commercialisation support, not this equity round."
+    ]
+  }
+}

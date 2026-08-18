@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-022",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-022",
+    "dedupe_key": "2024|pairtree-intelligence|2024-02-15|strategic",
+    "source_url": "https://www.marketscreener.com/quote/stock/COMMONWEALTH-BANK-OF-AUST-6492243/news/Pairtree-Intelligence-Pty-Ltd-announced-that-it-has-received-AUD-0-25-million-in-funding-from-Common-47367024/",
+    "source_payload": {
+      "deal_number": 22,
+      "csv_investee": "Pairtree Intelligence",
+      "normalized_investee": "Pairtree Intelligence",
+      "csv_date": "2024-01-01",
+      "normalized_date": "2024-02-15",
+      "csv_round": "Seed",
+      "normalized_round": "Strategic investment",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "AUD 250,000",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Commonwealth Bank of Australia",
+      "verification": "corrected",
+      "correction_or_issue": "Replace placeholder date and missing investor/amount with corroborated CBA transaction.",
+      "primary_source": "https://www.marketscreener.com/quote/stock/COMMONWEALTH-BANK-OF-AUST-6492243/news/Pairtree-Intelligence-Pty-Ltd-announced-that-it-has-received-AUD-0-25-million-in-funding-from-Common-47367024/",
+      "secondary_source": "https://pairtree.co/"
+    },
+    "investee_name_raw": "Pairtree Intelligence",
+    "org_location_raw": "Sydney/Orange, NSW, Australia",
+    "org_website_raw": "https://pairtree.co/",
+    "org_industries_raw": "Agtech / Data Infrastructure",
+    "round_type_raw": "Strategic investment",
+    "round_stage": "strategic",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-02-15",
+    "money_raised_raw": "AUD 250,000",
+    "amount": 250000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Commonwealth Bank of Australia",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.marketscreener.com/quote/stock/COMMONWEALTH-BANK-OF-AUST-6492243/news/Pairtree-Intelligence-Pty-Ltd-announced-that-it-has-received-AUD-0-25-million-in-funding-from-Common-47367024/",
+    "verification_notes": "Replace placeholder date and missing investor/amount with corroborated CBA transaction.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:pairtree-intelligence"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:5ece7f1f05c87dcb67e3",
+      "source:url:16c7f4fba200d8cb5123"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-120",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-120",
+    "dedupe_key": "2024|constantinople|2024-04-02|series_a",
+    "source_url": "https://www.marketscreener.com/quote/stock/PROSUS-N-V-66148584/news/Prosus-N-Ventures-leads-USD-50m-Series-A-investment-in-Australia-based-banking-platform-Constantin-46348029/",
+    "source_payload": {
+      "deal_number": 120,
+      "csv_investee": "Constantinople",
+      "normalized_investee": "Constantinople",
+      "csv_date": "2024-04-01",
+      "normalized_date": "2024-04-02 announcement",
+      "csv_round": "Series A",
+      "normalized_round": "Series A",
+      "csv_amount": "AUD 50,000,000",
+      "normalized_amount": "AUD 50,000,000",
+      "csv_investors": "Airtree Ventures; Great Southern Bank; Prosus Ventures; Square Peg Capital",
+      "normalized_investors": "Prosus Ventures (lead); Square Peg; AirTree Ventures; Great Southern Bank",
+      "verification": "verified",
+      "correction_or_issue": "Official investor release confirms A$50m and all four participants.",
+      "primary_source": "https://www.marketscreener.com/quote/stock/PROSUS-N-V-66148584/news/Prosus-N-Ventures-leads-USD-50m-Series-A-investment-in-Australia-based-banking-platform-Constantin-46348029/",
+      "secondary_source": "https://www.cbinsights.com/company/constantinople/financials"
+    },
+    "investee_name_raw": "Constantinople",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.cxnpl.com/",
+    "org_industries_raw": "Fintech / Banking Infrastructure",
+    "round_type_raw": "Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-04-02",
+    "money_raised_raw": "AUD 50,000,000",
+    "amount": 50000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Prosus Ventures (lead); Square Peg; AirTree Ventures; Great Southern Bank",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.marketscreener.com/quote/stock/PROSUS-N-V-66148584/news/Prosus-N-Ventures-leads-USD-50m-Series-A-investment-in-Australia-based-banking-platform-Constantin-46348029/",
+    "verification_notes": "Official investor release confirms A$50m and all four participants.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:constantinople"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:93dfd00af4a2e4ed1497",
+      "source:url:9735e60609e5a74759b0"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

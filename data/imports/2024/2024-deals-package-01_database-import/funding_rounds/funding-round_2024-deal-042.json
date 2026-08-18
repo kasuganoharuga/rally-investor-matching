@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-042",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-042",
+    "dedupe_key": "2024|edexia|2024-11-exact-close-date-undisclosed|pre_seed",
+    "source_url": "https://www.ycombinator.com/companies/edexia",
+    "source_payload": {
+      "deal_number": 42,
+      "csv_investee": "Edexia",
+      "normalized_investee": "Edexia",
+      "csv_date": "2024-11-01",
+      "normalized_date": "2024-11 (exact close date undisclosed)",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-Seed",
+      "csv_amount": "USD 600,000",
+      "normalized_amount": "USD 600,000",
+      "csv_investors": "77 Partners; Pioneer Fund; Rethink Education; Y Combinator",
+      "normalized_investors": "77 Partners; Pioneer Fund; Y Combinator",
+      "verification": "partial",
+      "correction_or_issue": "YC and database corroborate amount and three investors; Rethink Education not independently confirmed.",
+      "primary_source": "https://www.ycombinator.com/companies/edexia",
+      "secondary_source": "https://www.vcbacked.co/company/edexia"
+    },
+    "investee_name_raw": "Edexia",
+    "org_location_raw": "Brisbane, QLD, Australia",
+    "org_website_raw": "https://www.edexia.ai/",
+    "org_industries_raw": "Edtech / AI",
+    "round_type_raw": "Pre-Seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "USD 600,000",
+    "amount": 600000,
+    "currency": "USD",
+    "amount_usd": 600000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "77 Partners; Pioneer Fund; Y Combinator",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://www.ycombinator.com/companies/edexia",
+    "verification_notes": "YC and database corroborate amount and three investors; Rethink Education not independently confirmed.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:edexia"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:8bad23a5ae70096d4957",
+      "source:url:bd1d1460910da71aedbb"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "YC and database corroborate amount and three investors; Rethink Education not independently confirmed.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-257",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-257",
+    "dedupe_key": "2024|recant-ai|2024-08-02|program_or_grant",
+    "source_url": "https://www.crunchbase.com/organization/recant-ai",
+    "source_payload": {
+      "deal_number": 257,
+      "csv_investee": "Recant.ai",
+      "normalized_investee": "Recant.ai",
+      "csv_date": "2024-08-02",
+      "normalized_date": "2024-08-02",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Startmate convertible note / accelerator investment",
+      "csv_amount": "AUD 120,000",
+      "normalized_amount": "AUD 120,000",
+      "csv_investors": "Startmate",
+      "normalized_investors": "Startmate",
+      "verification": "partial",
+      "correction_or_issue": "Funding profiles identify Startmate and A$120k, consistent with 2024 program terms, but no company financing announcement was located.",
+      "primary_source": "https://www.crunchbase.com/organization/recant-ai",
+      "secondary_source": "https://www.cbinsights.com/company/recantai"
+    },
+    "investee_name_raw": "Recant.ai",
+    "org_location_raw": "Perth, WA, Australia",
+    "org_website_raw": "https://recant.ai/",
+    "org_industries_raw": "AI Safety / Content Moderation",
+    "round_type_raw": "Startmate convertible note / accelerator investment",
+    "round_stage": "program_or_grant",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-08-02",
+    "money_raised_raw": "AUD 120,000",
+    "amount": 120000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Startmate",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://www.crunchbase.com/organization/recant-ai",
+    "verification_notes": "Funding profiles identify Startmate and A$120k, consistent with 2024 program terms, but no company financing announcement was located.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:recant-ai"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:9d54185afe79fad16db0",
+      "source:url:b29a60324acb42a98872"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Funding profiles identify Startmate and A$120k, consistent with 2024 program terms, but no company financing announcement was located."
+    ]
+  }
+}

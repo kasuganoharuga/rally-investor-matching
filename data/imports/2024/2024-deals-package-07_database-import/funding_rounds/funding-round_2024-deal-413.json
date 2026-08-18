@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-413",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-413",
+    "dedupe_key": "2024|respiraq|2024-04-23|seed",
+    "source_url": "https://www.nbr.co.nz/tech/perseverance-pays-off-for-med-tech-startup-respiraq",
+    "source_payload": {
+      "deal_number": 413,
+      "csv_investee": "RespirAq",
+      "normalized_investee": "RespirAq",
+      "csv_date": "2024-04-23",
+      "normalized_date": "2024-04-23",
+      "csv_round": "Seed",
+      "normalized_round": "Seed first close",
+      "csv_amount": "NZD 3,000,000",
+      "normalized_amount": "NZD 3,000,000",
+      "csv_investors": "Movac",
+      "normalized_investors": "Movac Emerge Fund 4 (lead)",
+      "verification": "verified",
+      "correction_or_issue": "Contemporaneous reporting confirms the NZ$3m first close led by Movac.",
+      "primary_source": "https://www.nbr.co.nz/tech/perseverance-pays-off-for-med-tech-startup-respiraq",
+      "secondary_source": "https://www.respiraq.com/"
+    },
+    "investee_name_raw": "RespirAq",
+    "org_location_raw": "Auckland, New Zealand",
+    "org_website_raw": "https://www.respiraq.com/",
+    "org_industries_raw": "Medtech / Respiratory Monitoring",
+    "round_type_raw": "Seed first close",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-04-23",
+    "money_raised_raw": "NZD 3,000,000",
+    "amount": 3000000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Movac Emerge Fund 4 (lead)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.nbr.co.nz/tech/perseverance-pays-off-for-med-tech-startup-respiraq",
+    "verification_notes": "Contemporaneous reporting confirms the NZ$3m first close led by Movac.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:respiraq"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:0fd6fde8b4c31bbdc9b3",
+      "source:url:e8096e1a86adf0ad29d9"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

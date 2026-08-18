@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:roundtable",
+  "operation": "upsert",
+  "data": {
+    "name": "RoundTable",
+    "website_url": "https://www.itsroundtable.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "creator-economy-consumer-tech",
+    "sector_secondary": null,
+    "use_case_primary": "creator-economy-platform-enabling-paid-live-camera-on-interactions-between-creators-and-superfans",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "marketplace-transaction-fees",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Creator-economy platform enabling paid live, camera-on interactions between creators and superfans.",
+    "source_urls": [
+      "https://www.itsroundtable.com/",
+      "https://www.linkedin.com/posts/ronanmason_tldr-funding-secured-launching-a-new-startup-activity-7260068416307232769-gj0R",
+      "https://www.itsroundtable.com/blog/4_board_of_creators/index.html"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

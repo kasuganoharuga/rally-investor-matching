@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-211",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-211",
+    "dedupe_key": "2024|samsara-eco|2024-06-26|series_a",
+    "source_url": "https://www.samsaraeco.eco/news/samsara-eco-raises-100m-to-recycle-plastics",
+    "source_payload": {
+      "deal_number": 211,
+      "csv_investee": "Samsara Eco",
+      "normalized_investee": "Samsara Eco",
+      "csv_date": "2024-06-26",
+      "normalized_date": "2024-06-26",
+      "csv_round": "Series A",
+      "normalized_round": "Series A+",
+      "csv_amount": "AUD 100,000,000",
+      "normalized_amount": "AUD 100,000,000",
+      "csv_investors": "Main Sequence; Temasek; DCVC; Greycroft; Hitachi Ventures; lululemon; Titanium Ventures; Wollemi",
+      "normalized_investors": "Temasek and Main Sequence (co-leads); Wollemi Capital; lululemon; Hitachi Ventures; Titanium Ventures; DCVC; Greycroft",
+      "verification": "verified",
+      "correction_or_issue": "Company and CEFC releases confirm the A$100m Series A+ and the full named investor set.",
+      "primary_source": "https://www.samsaraeco.eco/news/samsara-eco-raises-100m-to-recycle-plastics",
+      "secondary_source": "https://www.cefc.com.au/media/media-release/cefc-backed-samsara-eco-raises-100-million-in-series-aplus-round/"
+    },
+    "investee_name_raw": "Samsara Eco",
+    "org_location_raw": "Canberra / Sydney, Australia",
+    "org_website_raw": "https://www.samsaraeco.eco/",
+    "org_industries_raw": "Climate Tech / Recycling / Deeptech",
+    "round_type_raw": "Series A+",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-06-26",
+    "money_raised_raw": "AUD 100,000,000",
+    "amount": 100000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Temasek and Main Sequence (co-leads); Wollemi Capital; lululemon; Hitachi Ventures; Titanium Ventures; DCVC; Greycroft",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.samsaraeco.eco/news/samsara-eco-raises-100m-to-recycle-plastics",
+    "verification_notes": "Company and CEFC releases confirm the A$100m Series A+ and the full named investor set.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:samsara-eco"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:512c99c7759fa22bd24d",
+      "source:url:f3edbce2630092cd5285"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

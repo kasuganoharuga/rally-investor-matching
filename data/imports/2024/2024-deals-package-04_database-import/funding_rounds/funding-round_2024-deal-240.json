@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-240",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-240",
+    "dedupe_key": "2024|luminoma-diagnostics|2024-08-09|seed",
+    "source_url": "https://www.crunchbase.com/organization/pacific-channel/investor_summary/overview_timeline",
+    "source_payload": {
+      "deal_number": 240,
+      "csv_investee": "Luminoma",
+      "normalized_investee": "Luminoma Diagnostics",
+      "csv_date": "2024-01-01",
+      "normalized_date": "2024-08-09 funding database activity",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "NZD 3,900,000",
+      "normalized_amount": "NZD 3,900,000",
+      "csv_investors": "AngelHQ; Bridgewest Ventures; Pacific Channel; University of Auckland Inventors Fund",
+      "normalized_investors": "AngelHQ; Bridgewest Ventures NZ; Pacific Channel; University of Auckland Inventors' Fund / UniServices",
+      "verification": "corrected",
+      "correction_or_issue": "Funding databases confirm the NZ$3.9m round and four-investor set, but January 1 is a placeholder; Pacific Channel activity places the event in August.",
+      "primary_source": "https://www.crunchbase.com/organization/pacific-channel/investor_summary/overview_timeline",
+      "secondary_source": "https://www.nzgcp.co.nz/assets/Media/NZGCP-Annual-Report-2024.pdf"
+    },
+    "investee_name_raw": "Luminoma Diagnostics",
+    "org_location_raw": "Auckland, New Zealand",
+    "org_website_raw": "https://www.luminomadx.com/",
+    "org_industries_raw": "Medtech / Diagnostics",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-08-09",
+    "money_raised_raw": "NZD 3,900,000",
+    "amount": 3900000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "AngelHQ; Bridgewest Ventures NZ; Pacific Channel; University of Auckland Inventors' Fund / UniServices",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.crunchbase.com/organization/pacific-channel/investor_summary/overview_timeline",
+    "verification_notes": "Funding databases confirm the NZ$3.9m round and four-investor set, but January 1 is a placeholder; Pacific Channel activity places the event in August.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:luminoma-diagnostics"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:d1822d7d691dac906f6d",
+      "source:url:ef194a26a28a644c4a18"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

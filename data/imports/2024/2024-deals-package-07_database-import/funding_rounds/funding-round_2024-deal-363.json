@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-363",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-363",
+    "dedupe_key": "2024|kiraa-ai|2024-07-database-record-only|pre_seed",
+    "source_url": "https://www.kiraa.ai/investors",
+    "source_payload": {
+      "deal_number": 363,
+      "csv_investee": "Kiraa",
+      "normalized_investee": "Kiraa.ai",
+      "csv_date": "2024-07-01",
+      "normalized_date": "2024-07 (database record only)",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-seed / database-only",
+      "csv_amount": "AUD 501,199",
+      "normalized_amount": "Unverified",
+      "csv_investors": null,
+      "normalized_investors": "Undisclosed / no verified investor",
+      "verification": "needs_review",
+      "correction_or_issue": "Current company pages discuss a later community raise, but no reliable public evidence was found for the 2024 amount, date or investors.",
+      "primary_source": "https://www.kiraa.ai/investors",
+      "secondary_source": "https://www.kiraa.ai/crowdfund"
+    },
+    "investee_name_raw": "Kiraa.ai",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.kiraa.ai/",
+    "org_industries_raw": "Enterprise AI / Data Infrastructure",
+    "round_type_raw": "Pre-seed / database-only",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "Unverified",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed / no verified investor",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://www.kiraa.ai/investors",
+    "verification_notes": "Current company pages discuss a later community raise, but no reliable public evidence was found for the 2024 amount, date or investors.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown",
+    "amount_disclosure_status": "later_raise_pages_do_not_verify_2024_amount",
+    "amount_structuring_note": "Current company pages describe a later community raise and do not verify the supplied 2024 amount.",
+    "supplemental_verification_urls": []
+  },
+  "refs": {
+    "investee_company_key": "company:research:kiraa"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:a788a3f143509780b459",
+      "source:url:84027d9893f349b80165"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Current company pages discuss a later community raise, but no reliable public evidence was found for the 2024 amount, date or investors.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

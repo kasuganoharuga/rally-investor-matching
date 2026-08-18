@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-08_database-import",
+  "updated_at": "2026-08-14T00:00:00+09:30",
+  "status": "completed",
+  "identity_summary": {
+    "upserts": 23,
+    "existing_investor_updates": 9,
+    "net_new_investors": 14,
+    "confirmed_aliases_canonicalized": 2
+  },
+  "matches": [
+    {
+      "package": 8,
+      "source_key": "investor:agrizeronz",
+      "canonical_key": "investor:agrizeronz",
+      "source_name": "AgriZeroNZ",
+      "canonical_name": "AgriZeroNZ",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 8,
+      "source_key": "investor:altium-capital",
+      "canonical_key": "investor:altium-capital",
+      "source_name": "Alium Capital Management",
+      "canonical_name": "Alium Capital Management",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-121-180_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 8,
+      "source_key": "investor:day-one-ventures",
+      "canonical_key": "investor:day-one-ventures",
+      "source_name": "Day One Ventures",
+      "canonical_name": "Day One Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-181-230_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 8,
+      "source_key": "investor:dolby-family-ventures",
+      "canonical_key": "investor:dolby-family-ventures",
+      "source_name": "Dolby Family Ventures",
+      "canonical_name": "Dolby Family Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-181-230_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 8,
+      "source_key": "investor:horizons-ventures",
+      "canonical_key": "investor:horizons-ventures",
+      "source_name": "Horizons Ventures",
+      "canonical_name": "Horizons Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 8,
+      "source_key": "investor:jekara-group",
+      "canonical_key": "investor:jekara-group",
+      "source_name": "Jekara Group",
+      "canonical_name": "Jekara Group",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 8,
+      "source_key": "investor:proto-axiom",
+      "canonical_key": "investor:proto-axiom",
+      "source_name": "Proto Axiom",
+      "canonical_name": "Proto Axiom",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 8,
+      "source_key": "investor:sosv",
+      "canonical_key": "investor:sosv",
+      "source_name": "SOSV",
+      "canonical_name": "SOSV",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 8,
+      "source_key": "investor:stellar-ventures",
+      "canonical_key": "investor:stellar-ventures",
+      "source_name": "Stellar Ventures",
+      "canonical_name": "Stellar Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-181-230_delta_identity-audited-v3_team-audited"
+    }
+  ],
+  "accelerator_programs": [
+    {
+      "investor_key": "investor:proto-axiom",
+      "package": 8,
+      "program_key": "program:proto-axiom:primary",
+      "reused_prior_program": true
+    },
+    {
+      "investor_key": "investor:sosv",
+      "package": 8,
+      "program_key": "program:sosv:primary",
+      "reused_prior_program": true
+    }
+  ],
+  "manual_review_candidates": [],
+  "reviewed_distinct_candidates": [
+    {
+      "package": 8,
+      "source_key": "investor:evan-cheng",
+      "source_name": "Evan Cheng",
+      "candidate_key": "investor:mysten-labs",
+      "candidate_name": "Mysten Labs",
+      "signal": "same_website_domain",
+      "disposition": "reviewed_distinct_no_merge",
+      "relationship_type": "person_employer_affiliation"
+    }
+  ]
+}

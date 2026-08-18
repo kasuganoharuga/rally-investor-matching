@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investors",
+  "record_key": "investor:77-partners",
+  "operation": "upsert",
+  "data": {
+    "canonical_name": "77 Partners",
+    "aliases": [],
+    "investor_type": "vc_fund",
+    "investor_subtype": "VC",
+    "eligibility_mode": "research_package_confirmed",
+    "classification_confidence": "high",
+    "classification_evidence_urls": [
+      "https://www.77partners.vc/",
+      "https://www.linkedin.com/company/77partners"
+    ],
+    "classified_at": "2026-08-14",
+    "website_url": "https://www.77partners.vc/",
+    "linkedin_url": "https://www.linkedin.com/company/77partners",
+    "hq_country": "AU",
+    "hq_state": "Queensland",
+    "hq_city": "Brisbane",
+    "offices": [],
+    "status": "active",
+    "merged_into_id": null,
+    "review_status": "needs_more_data",
+    "last_reviewed_at": "2026-08-14",
+    "last_reviewed_by": "codex-2024-investor-dedupe-update",
+    "identity_resolution": "existing_investor_update",
+    "matched_existing_record_key": "investor:77-partners",
+    "identity_match_method": "exact_existing_key",
+    "identity_match_source": "historical_import:recent-deal2026-7-30_deals-061-120_delta_identity-audited-v3_team-audited"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:fce40cf7e9870c11a9bb"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

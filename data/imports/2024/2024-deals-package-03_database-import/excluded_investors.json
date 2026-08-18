@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-03_database-import",
+  "counts": {
+    "source_investors": 86,
+    "excluded": 10
+  },
+  "excluded_investors": [
+    {
+      "source_name": "Australian Renewable Energy Agency",
+      "canonical_investor": "ARENA",
+      "action": "do_not_create",
+      "related_deals": "MGA Thermal",
+      "website": "https://arena.gov.au/",
+      "reason": "Government support provider, not a private investor record.",
+      "source_excel_row": 53
+    },
+    {
+      "source_name": "Callaghan Innovation",
+      "canonical_investor": "Callaghan Innovation",
+      "action": "do_not_create",
+      "related_deals": "TheiaNova",
+      "website": "https://www.callaghaninnovation.govt.nz/",
+      "reason": "Program/grant provider rather than a private investor record.",
+      "source_excel_row": 54
+    },
+    {
+      "source_name": "MIT Ventures",
+      "canonical_investor": "MIT Ventures Pty Ltd",
+      "action": "do_not_create",
+      "related_deals": "SubOne",
+      "website": null,
+      "reason": "ABR proves it owns the SubOne business name; it is not an external investor.",
+      "source_excel_row": 55
+    },
+    {
+      "source_name": "Startupbootcamp Australia",
+      "canonical_investor": "Startupbootcamp Australia",
+      "action": "do_not_create",
+      "related_deals": "ShaBAAS Pay",
+      "website": "https://www.startupbootcamp.com.au/",
+      "reason": "Official profile says bootstrapped; program relationship only.",
+      "source_excel_row": 56
+    },
+    {
+      "source_name": "touchscape",
+      "canonical_investor": "Touchscape",
+      "action": "do_not_create",
+      "related_deals": "MindMate",
+      "website": "https://www.touchscape.com.au/",
+      "reason": "Public case study establishes a service relationship, not investment.",
+      "source_excel_row": 57
+    },
+    {
+      "source_name": "Brinc",
+      "canonical_investor": "Brinc",
+      "action": "hold_unresolved",
+      "related_deals": "Myth",
+      "website": "https://www.brinc.io/",
+      "reason": "Investor identity is valid, but Myth-specific 2024 financing was not corroborated sufficiently.",
+      "source_excel_row": 58
+    },
+    {
+      "source_name": "Amalia Irena Grochal",
+      "canonical_investor": "MIRAI / Amalia Grochal",
+      "action": "hold_unresolved",
+      "related_deals": "BITLiquidity",
+      "website": null,
+      "reason": "Announcement attributes backing to MIRAI, not clearly to the individual; exact entity and terms require resolution.",
+      "source_excel_row": 59
+    },
+    {
+      "source_name": "Binance; Bixin; DFG; Jsquare; LD Capital; Mapleblock; Mirana; Shima; Spartan; ViaBTC",
+      "canonical_investor": "PrismaStake claimed investor set",
+      "action": "hold_unresolved",
+      "related_deals": "PrismaStake",
+      "website": null,
+      "reason": "Self-issued contradictory release names no investors; do not create or update from this row.",
+      "source_excel_row": 60
+    },
+    {
+      "source_name": "Protagonist Capital",
+      "canonical_investor": "Protagonist Capital",
+      "action": "hold_unresolved",
+      "related_deals": "Outread",
+      "website": "https://www.protagonist.com/",
+      "reason": "CSV-only for this round; reviewed public report does not confirm.",
+      "source_excel_row": 61
+    },
+    {
+      "source_name": "Sasha Baranikov",
+      "canonical_investor": "Sasha Baranikov",
+      "action": "hold_unresolved",
+      "related_deals": "Outread",
+      "website": null,
+      "reason": "CSV-only; not independently corroborated for this round.",
+      "source_excel_row": 62
+    }
+  ]
+}

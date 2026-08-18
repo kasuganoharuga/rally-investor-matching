@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "table": "deal_investors",
+  "record_key": "deal_investor:research-package:2024-deal-459:climate-venture-capital-fund",
+  "operation": "upsert",
+  "data": {
+    "raw_name": "Climate Venture Capital Fund",
+    "role": "participant",
+    "participation_status": "confirmed",
+    "resolution": "resolved",
+    "resolution_confidence": "high",
+    "identity_resolution": "existing_investor_deduped"
+  },
+  "refs": {
+    "deal_key": "funding_round:research-package:2024-deal-459",
+    "investor_key": "investor:climate-venture-capital-fund",
+    "raw_investor_candidate_key": "raw_investor_candidate:climate-venture-capital-fund"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

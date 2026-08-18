@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:radian-arc",
+  "operation": "upsert",
+  "data": {
+    "name": "Radian Arc",
+    "website_url": "https://radianarc.io/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Western Australia",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "cloud-infrastructure-gaming",
+    "sector_secondary": null,
+    "use_case_primary": "infrastructure-as-a-service-platform-enabling-telcos-to-deliver-distributed-cloud-gaming-and-ai-workloads",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-infrastructure-as-a-service",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "ai_related",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Infrastructure-as-a-service platform enabling telcos to deliver distributed cloud gaming and AI workloads.",
+    "source_urls": [
+      "https://radianarc.io/",
+      "https://radianarc.io/radian-arc-secures-9-million-in-series-b-funding-fueling-growth-in-cloud-gaming-and-ai-infrastructure/",
+      "https://newsfile.futunn.com/public/NN-PersistNoticeAttachment/7781/20240605/ASX-2924-02814198-6A1210431.PDF"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

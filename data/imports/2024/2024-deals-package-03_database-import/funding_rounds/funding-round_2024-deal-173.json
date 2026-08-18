@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-173",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-173",
+    "dedupe_key": "2024|mindmate-ai|2024-05-06-database-date|seed",
+    "source_url": "https://app.dealroom.co/companies/mindmate_2",
+    "source_payload": {
+      "deal_number": 173,
+      "csv_investee": "MindMate",
+      "normalized_investee": "MindMate AI",
+      "csv_date": "2024-05-30",
+      "normalized_date": "2024-05/06 (database date)",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Unverified seed",
+      "csv_amount": "AUD 170,000",
+      "normalized_amount": "AUD 170,000 (database-only)",
+      "csv_investors": "touchscape",
+      "normalized_investors": "No investor confirmed; Touchscape is a service provider",
+      "verification": "needs_review",
+      "correction_or_issue": "Database supports A$170k, but Touchscape's own case study describes design/development work and does not establish an investment.",
+      "primary_source": "https://app.dealroom.co/companies/mindmate_2",
+      "secondary_source": "https://www.touchscape.com.au/mindmate"
+    },
+    "investee_name_raw": "MindMate AI",
+    "org_location_raw": "Gold Coast, QLD, Australia",
+    "org_website_raw": "https://www.mindmate.ai/",
+    "org_industries_raw": "Enterprise AI / Infrastructure",
+    "round_type_raw": "Unverified seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "AUD 170,000 (database-only)",
+    "amount": 170000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "No investor confirmed; Touchscape is a service provider",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://app.dealroom.co/companies/mindmate_2",
+    "verification_notes": "Database supports A$170k, but Touchscape's own case study describes design/development work and does not establish an investment.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:mindmate-ai"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:22eb1004135dce9d68a3",
+      "source:url:30e1e8d6629f7f7ce869"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Database supports A$170k, but Touchscape's own case study describes design/development work and does not establish an investment.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

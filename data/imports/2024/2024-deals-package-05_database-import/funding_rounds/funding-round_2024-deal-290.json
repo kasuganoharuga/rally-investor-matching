@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-290",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-290",
+    "dedupe_key": "2024|trackgood|undated-placeholder-2024-database-record|pre_seed",
+    "source_url": "https://www.crunchbase.com/funding_round/trackgood-pre-seed--f539a2ef",
+    "source_payload": {
+      "deal_number": 290,
+      "csv_investee": "Trackgood",
+      "normalized_investee": "Trackgood",
+      "csv_date": "2024-01-01",
+      "normalized_date": "Undated/placeholder 2024 database record",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Unverified pre-seed",
+      "csv_amount": "NZD 315,000",
+      "normalized_amount": "NZD 315,000 (database-only)",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Undisclosed",
+      "verification": "needs_review",
+      "correction_or_issue": "The supply-chain platform is identifiable, but no primary close announcement, investor list or genuine 1 January date was found.",
+      "primary_source": "https://www.crunchbase.com/funding_round/trackgood-pre-seed--f539a2ef",
+      "secondary_source": "https://trackgood.io/"
+    },
+    "investee_name_raw": "Trackgood",
+    "org_location_raw": "Wellington, New Zealand",
+    "org_website_raw": "https://trackgood.io/",
+    "org_industries_raw": "Supply Chain / Sustainability",
+    "round_type_raw": "Unverified pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "NZD 315,000 (database-only)",
+    "amount": 315000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://www.crunchbase.com/funding_round/trackgood-pre-seed--f539a2ef",
+    "verification_notes": "The supply-chain platform is identifiable, but no primary close announcement, investor list or genuine 1 January date was found.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:trackgood"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:2373223bbfc664571035",
+      "source:url:c1da9123ac6158399eb4"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "The supply-chain platform is identifiable, but no primary close announcement, investor list or genuine 1 January date was found.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

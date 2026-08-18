@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-08_database-import",
+  "supplemented_at": "2026-08-14T00:00:00+09:30",
+  "status": "completed_with_public_evidence_limits",
+  "change_count": 11,
+  "changes": [
+    {
+      "type": "investor_website",
+      "record_key": "investor:amesten-capital",
+      "value": "https://amesten.capital/",
+      "evidence_url": "https://amesten.capital/"
+    },
+    {
+      "type": "investor_website",
+      "record_key": "investor:bison-capital",
+      "value": "https://www.bisoncapital.com.au/",
+      "evidence_url": "https://www.bisoncapital.com.au/"
+    },
+    {
+      "type": "investor_website",
+      "record_key": "investor:chaitech-ventures",
+      "value": "https://www.chaitech.vip/",
+      "evidence_url": "https://www.chaitech.vip/"
+    },
+    {
+      "type": "investor_website",
+      "record_key": "investor:evan-cheng",
+      "value": "https://www.mystenlabs.com/about",
+      "evidence_url": "https://www.mystenlabs.com/about"
+    },
+    {
+      "type": "investor_website",
+      "record_key": "investor:hash-cib",
+      "value": "https://hashcib.com/",
+      "evidence_url": "https://hashcib.com/"
+    },
+    {
+      "type": "investor_website",
+      "record_key": "investor:justus-hammer",
+      "value": "https://www.madpaws.com.au/",
+      "evidence_url": "https://announcements.asx.com.au/asxpdf/20210923/pdf/450t0gr1f3bf3x.pdf"
+    },
+    {
+      "type": "investor_website",
+      "record_key": "investor:matt-leibowitz",
+      "value": "https://hellostake.com/au/newsroom/article/matt-leibowitz-returns-to-lead-stake-further-accelerating-its-impact-for-australian-investors",
+      "evidence_url": "https://hellostake.com/au/newsroom/article/matt-leibowitz-returns-to-lead-stake-further-accelerating-its-impact-for-australian-investors"
+    },
+    {
+      "type": "investor_website",
+      "record_key": "investor:o-de-capital-partners",
+      "value": "https://o-decapital.com/",
+      "evidence_url": "https://o-decapital.com/"
+    },
+    {
+      "type": "investor_website",
+      "record_key": "investor:simurg-labs",
+      "value": "https://www.simurglabs.com/",
+      "evidence_url": "https://www.linkedin.com/company/simurglabs"
+    },
+    {
+      "type": "investor_website",
+      "record_key": "investor:the-austin-group",
+      "value": "https://www.austingroup.com.au/",
+      "evidence_url": "https://www.austingroup.com.au/about-us"
+    },
+    {
+      "type": "investor_website",
+      "record_key": "investor:the-march-group",
+      "value": "https://www.marchgp.com/",
+      "evidence_url": "https://www.marchgp.com/"
+    }
+  ],
+  "remaining_limits": {
+    "investee_websites_missing": 0,
+    "investor_websites_missing": 1,
+    "round_exact_dates_missing": 17,
+    "round_structured_amounts_missing": 4,
+    "unresolved_mentions": 14
+  }
+}

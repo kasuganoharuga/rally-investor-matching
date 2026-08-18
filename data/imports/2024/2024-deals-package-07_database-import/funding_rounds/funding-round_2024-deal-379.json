@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-379",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-379",
+    "dedupe_key": "2024|paperlab|2024-antler-residency-investment-later-announced|pre_seed",
+    "source_url": "https://www.antler.co/blog/antler-australia-12th-residency-eight-new-ai-first-startup-investments",
+    "source_payload": {
+      "deal_number": 379,
+      "csv_investee": "PaperLabs",
+      "normalized_investee": "PaperLab",
+      "csv_date": "2024-11-21",
+      "normalized_date": "2024 Antler residency; investment later announced",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Antler pre-seed / residency investment",
+      "csv_amount": "AUD 225,000",
+      "normalized_amount": "AUD 225,000 at Antler standard terms",
+      "csv_investors": "Antler",
+      "normalized_investors": "Antler Australia",
+      "verification": "verified_program_timing_caveat",
+      "correction_or_issue": "Antler officially lists PaperLab among its residency investments, but the later portfolio announcement does not independently prove the CSV close date.",
+      "primary_source": "https://www.antler.co/blog/antler-australia-12th-residency-eight-new-ai-first-startup-investments",
+      "secondary_source": "https://www.paperlab.ai/"
+    },
+    "investee_name_raw": "PaperLab",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.paperlab.ai/",
+    "org_industries_raw": "Research Tech / Generative AI",
+    "round_type_raw": "Antler pre-seed / residency investment",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "AUD 225,000 at Antler standard terms",
+    "amount": 225000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Antler Australia",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "verified_program_timing_caveat",
+    "verification_source_url": "https://www.antler.co/blog/antler-australia-12th-residency-eight-new-ai-first-startup-investments",
+    "verification_notes": "Antler officially lists PaperLab among its residency investments, but the later portfolio announcement does not independently prove the CSV close date.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:paperlab"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:42d17fa4aef7303ecc25",
+      "source:url:fc791015da2f1cf2b717"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

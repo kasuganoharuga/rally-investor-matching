@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:cuttable",
+  "operation": "upsert",
+  "data": {
+    "name": "Cuttable",
+    "website_url": "https://www.cuttable.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Victoria",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "adtech-generative-ai",
+    "sector_secondary": null,
+    "use_case_primary": "ai-powered-advertising-platform-automating-strategy-creative-generation-and-campaign-production-at-scale",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-saas-agency-platform",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "ai_related",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "AI-powered advertising platform automating strategy, creative generation and campaign production at scale.",
+    "source_urls": [
+      "https://www.cuttable.com/",
+      "https://www.capitalbrief.com/briefing/ai-led-advertising-startup-cuttable-closes-55m-seed-round-14f4f287-510d-46cc-958b-77dabb64ba32/",
+      "https://www.squarepeg.vc/news"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

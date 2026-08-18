@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "table": "deal_investors",
+  "record_key": "deal_investor:research-package:2024-deal-303:ana-future-creation-fund-global-brain",
+  "operation": "upsert",
+  "data": {
+    "raw_name": "ANA Future Creation Fund",
+    "role": "participant",
+    "participation_status": "confirmed",
+    "resolution": "resolved",
+    "resolution_confidence": "medium",
+    "identity_resolution": "new_investor"
+  },
+  "refs": {
+    "deal_key": "funding_round:research-package:2024-deal-303",
+    "investor_key": "investor:ana-future-creation-fund-global-brain",
+    "raw_investor_candidate_key": "raw_investor_candidate:ana-future-creation-fund"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Deal evidence remains incomplete; investor relation is preserved for review."
+    ]
+  }
+}

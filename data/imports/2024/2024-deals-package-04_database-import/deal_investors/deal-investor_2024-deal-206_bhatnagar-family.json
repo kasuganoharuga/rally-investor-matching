@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "table": "deal_investors",
+  "record_key": "deal_investor:research-package:2024-deal-206:bhatnagar-family",
+  "operation": "upsert",
+  "data": {
+    "raw_name": "Bhatnagar family",
+    "role": "participant",
+    "participation_status": "confirmed",
+    "resolution": "resolved_from_supplemental_evidence",
+    "resolution_confidence": "medium",
+    "identity_resolution": "supplemental_investor"
+  },
+  "refs": {
+    "deal_key": "funding_round:research-package:2024-deal-206",
+    "investor_key": "investor:bhatnagar-family",
+    "raw_investor_candidate_key": "raw_investor_candidate:bhatnagar-family"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-supplement:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:4039d2e364f940e3adad",
+      "source:url:86531ed3e8aa0a7a16a7"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Participation is reported, but the public source groups the investment under a family name or advisory identity."
+    ]
+  }
+}
