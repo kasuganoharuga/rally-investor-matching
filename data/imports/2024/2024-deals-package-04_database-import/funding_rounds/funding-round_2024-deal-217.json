@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-217",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-217",
+    "dedupe_key": "2024|vaultescrow-ve-finance|2024-03-06|seed",
+    "source_url": "https://www.accessnewswire.com/newsroom/en/publishing-and-media/vaultescrow-secures-8-million-in-seed-funding-ushering-in-a-new-era-of-defi-inn-839794",
+    "source_payload": {
+      "deal_number": 217,
+      "csv_investee": "VaultEscrow",
+      "normalized_investee": "VaultEscrow / VE.Finance",
+      "csv_date": "2024-03-06",
+      "normalized_date": "2024-03-06",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "USD 8,000,000",
+      "normalized_amount": "USD 8,000,000",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Private investors / undisclosed",
+      "verification": "verified_secondary",
+      "correction_or_issue": "The company-issued release and funding databases consistently report an US$8m seed close, but no investors are named and independent diligence is limited.",
+      "primary_source": "https://www.accessnewswire.com/newsroom/en/publishing-and-media/vaultescrow-secures-8-million-in-seed-funding-ushering-in-a-new-era-of-defi-inn-839794",
+      "secondary_source": "https://www.vcbacked.co/company/vaultescrow"
+    },
+    "investee_name_raw": "VaultEscrow / VE.Finance",
+    "org_location_raw": "Melbourne, VIC, Australia / global",
+    "org_website_raw": "https://www.ve.finance/",
+    "org_industries_raw": "Web3 / DeFi",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-03-06",
+    "money_raised_raw": "USD 8,000,000",
+    "amount": 8000000,
+    "currency": "USD",
+    "amount_usd": 8000000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Private investors / undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "verified_secondary",
+    "verification_source_url": "https://www.accessnewswire.com/newsroom/en/publishing-and-media/vaultescrow-secures-8-million-in-seed-funding-ushering-in-a-new-era-of-defi-inn-839794",
+    "verification_notes": "The company-issued release and funding databases consistently report an US$8m seed close, but no investors are named and independent diligence is limited.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:vaultescrow-ve-finance"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:f5f7cf7dde3169c88981",
+      "source:url:58ad72fe76a3dc4a9f06"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investors",
+  "record_key": "investor:the-spartan-group",
+  "operation": "upsert",
+  "data": {
+    "canonical_name": "The Spartan Group",
+    "aliases": [
+      "Spartan Capital"
+    ],
+    "investor_type": "investment_firm",
+    "investor_subtype": "Crypto investor",
+    "eligibility_mode": "research_package_confirmed",
+    "classification_confidence": "high",
+    "classification_evidence_urls": [
+      "https://www.spartangroup.io/",
+      "https://www.linkedin.com/company/spartangroup"
+    ],
+    "classified_at": "2026-08-14",
+    "website_url": "https://www.spartangroup.io/",
+    "linkedin_url": "https://www.linkedin.com/company/spartangroup",
+    "hq_country": "SG",
+    "hq_state": null,
+    "hq_city": "Singapore",
+    "offices": [],
+    "status": "active",
+    "merged_into_id": null,
+    "review_status": "needs_more_data",
+    "last_reviewed_at": "2026-08-14",
+    "last_reviewed_by": "codex-2024-investor-dedupe-update",
+    "identity_resolution": "existing_investor_update",
+    "matched_existing_record_key": "investor:the-spartan-group",
+    "identity_match_method": "exact_existing_key",
+    "identity_match_source": "historical_import:recent-deal2026-7-30_deals-121-180_delta_identity-audited-v3_team-audited"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Headquarters state/region was not disclosed by the verified sources."
+    ]
+  }
+}

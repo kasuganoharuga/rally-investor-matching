@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-078",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-078",
+    "dedupe_key": "2024|safewill|2024-11-25|series_b",
+    "source_url": "https://www.businessnewsaustralia.com/articles/digital-estate-planning-platform-safewill-secures--17m-from-series-b-raise-to-expand-its-scope.html",
+    "source_payload": {
+      "deal_number": 78,
+      "csv_investee": "Safewill",
+      "normalized_investee": "Safewill",
+      "csv_date": "2024-11-25",
+      "normalized_date": "2024-11-25",
+      "csv_round": "Series B",
+      "normalized_round": "Series B",
+      "csv_amount": "AUD 17,000,000",
+      "normalized_amount": "AUD 17,000,000",
+      "csv_investors": "King River; Reinventure; Carthona; Flying Fox; Alex Vynokur; Chris Cuffe; Geoff Lloyd; Ilan Israelstam; Larry Diamond",
+      "normalized_investors": "King River Capital and Reinventure (co-leads); Alex Vynokur; Ilan Israelstam; Chris Cuffe; Geoff Lloyd; Larry Diamond",
+      "verification": "verified",
+      "correction_or_issue": "Official-quality coverage confirms amount, leads and named strategic angels; Carthona/Flying Fox are not confirmed for this round.",
+      "primary_source": "https://www.businessnewsaustralia.com/articles/digital-estate-planning-platform-safewill-secures--17m-from-series-b-raise-to-expand-its-scope.html",
+      "secondary_source": "https://kingriver.co/news-categoriess/portfolio-news/"
+    },
+    "investee_name_raw": "Safewill",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://safewill.com/",
+    "org_industries_raw": "Legaltech / Fintech",
+    "round_type_raw": "Series B",
+    "round_stage": "series_b",
+    "funding_stage_raw": "Series B",
+    "announced_date": "2024-11-25",
+    "money_raised_raw": "AUD 17,000,000",
+    "amount": 17000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "King River Capital and Reinventure (co-leads); Alex Vynokur; Ilan Israelstam; Chris Cuffe; Geoff Lloyd; Larry Diamond",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.businessnewsaustralia.com/articles/digital-estate-planning-platform-safewill-secures--17m-from-series-b-raise-to-expand-its-scope.html",
+    "verification_notes": "Official-quality coverage confirms amount, leads and named strategic angels; Carthona/Flying Fox are not confirmed for this round.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:safewill"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:75d634fe6b0343f305ef",
+      "source:url:0573c3711227044c0ccb"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

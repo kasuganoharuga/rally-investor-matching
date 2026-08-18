@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-155",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-155",
+    "dedupe_key": "2024|umps-health|2024-12-06|series_a",
+    "source_url": "https://www.breakthroughvictoria.com/media-releases/umps-health/",
+    "source_payload": {
+      "deal_number": 155,
+      "csv_investee": "Umps Health",
+      "normalized_investee": "Umps Health",
+      "csv_date": "2024-12-06",
+      "normalized_date": "2024-12-06",
+      "csv_round": "Series A",
+      "normalized_round": "Series A preference shares",
+      "csv_amount": "USD 4,000,000",
+      "normalized_amount": "AUD 4,000,000 total; Breakthrough Victoria AUD 2,000,000",
+      "csv_investors": "Agnes Health; Breakthrough Victoria; Cerebral Palsy Alliance; InterValley Ventures; Sprint Ventures; The 5Point Foundation",
+      "normalized_investors": "Breakthrough Victoria; InterValley Ventures; Sprint Ventures; Cerebral Palsy Alliance; 5Point Foundation; Agnes Investments",
+      "verification": "corrected",
+      "correction_or_issue": "Official sources confirm an A$4m Series A and A$2m BV investment; CSV currency corrected and Agnes identity normalized.",
+      "primary_source": "https://www.breakthroughvictoria.com/media-releases/umps-health/",
+      "secondary_source": "https://assets.breakthroughvictoria.com/assets/Breakthrough-Victoria-2025-Annual-Report.pdf"
+    },
+    "investee_name_raw": "Umps Health",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.umps.com/",
+    "org_industries_raw": "Aged Care Tech / AI",
+    "round_type_raw": "Series A preference shares",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-12-06",
+    "money_raised_raw": "AUD 4,000,000 total; Breakthrough Victoria AUD 2,000,000",
+    "amount": 4000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Breakthrough Victoria; InterValley Ventures; Sprint Ventures; Cerebral Palsy Alliance; 5Point Foundation; Agnes Investments",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.breakthroughvictoria.com/media-releases/umps-health/",
+    "verification_notes": "Official sources confirm an A$4m Series A and A$2m BV investment; CSV currency corrected and Agnes identity normalized.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:umps-health"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:26a015706c05d0a71726",
+      "source:url:ce80c7ed812997815943"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

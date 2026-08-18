@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investors",
+  "record_key": "investor:bridgewest-group",
+  "operation": "upsert",
+  "data": {
+    "canonical_name": "Bridgewest Group",
+    "aliases": [],
+    "investor_type": "vc_fund",
+    "investor_subtype": "Diversified investment group",
+    "eligibility_mode": "research_package_confirmed",
+    "classification_confidence": "high",
+    "classification_evidence_urls": [
+      "https://bridgewestgroup.com/",
+      "https://www.linkedin.com/company/bridgewest-group",
+      "https://www.bridgewestgroup.com/"
+    ],
+    "classified_at": "2026-08-14",
+    "website_url": "https://www.bridgewestgroup.com/",
+    "linkedin_url": "https://www.linkedin.com/company/bridgewest-group",
+    "hq_country": "US",
+    "hq_state": "Florida",
+    "hq_city": "Coral Gables",
+    "offices": [],
+    "status": "active",
+    "merged_into_id": null,
+    "review_status": "reviewed",
+    "last_reviewed_at": "2026-08-14",
+    "last_reviewed_by": "codex-2024-investor-dedupe-update",
+    "identity_resolution": "existing_investor_update",
+    "matched_existing_record_key": "investor:bridgewest-group",
+    "identity_match_method": "exact_existing_key",
+    "identity_match_source": "historical_import:recent-deal2026-7-30_deals-061-120_delta_identity-audited-v3_team-audited"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

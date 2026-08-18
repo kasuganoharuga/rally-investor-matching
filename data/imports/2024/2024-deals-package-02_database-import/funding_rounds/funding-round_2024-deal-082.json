@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-082",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-082",
+    "dedupe_key": "2024|hyprfire|2024-12-20|seed",
+    "source_url": "https://www.fundwa.com.au/fundwaportfolio",
+    "source_payload": {
+      "deal_number": 82,
+      "csv_investee": "Hyprfire",
+      "normalized_investee": "Hyprfire",
+      "csv_date": "2024-11-20",
+      "normalized_date": "2024-12-20 database date",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Fund WA",
+      "normalized_investors": "Fund WA",
+      "verification": "partial",
+      "correction_or_issue": "Fund WA portfolio and LinkedIn funding panel confirm the relationship; amount remains undisclosed and date conflicts with CSV.",
+      "primary_source": "https://www.fundwa.com.au/fundwaportfolio",
+      "secondary_source": "https://au.linkedin.com/company/hyprfire"
+    },
+    "investee_name_raw": "Hyprfire",
+    "org_location_raw": "Perth, WA, Australia",
+    "org_website_raw": "https://www.hyprfire.com/",
+    "org_industries_raw": "Cybersecurity / Network Detection",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-12-20",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Fund WA",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://www.fundwa.com.au/fundwaportfolio",
+    "verification_notes": "Fund WA portfolio and LinkedIn funding panel confirm the relationship; amount remains undisclosed and date conflicts with CSV.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:hyprfire"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:ce5147eb1a61ab4aada0",
+      "source:url:28e06a9847e00103fe84"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Fund WA portfolio and LinkedIn funding panel confirm the relationship; amount remains undisclosed and date conflicts with CSV.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

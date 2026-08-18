@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-351",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-351",
+    "dedupe_key": "2024|entrend|2024-08-database-record-only|seed",
+    "source_url": "https://entrend.io/",
+    "source_payload": {
+      "deal_number": 351,
+      "csv_investee": "Entrend",
+      "normalized_investee": "Entrend",
+      "csv_date": "2024-08-16",
+      "normalized_date": "2024-08 (database record only)",
+      "csv_round": "Seed",
+      "normalized_round": "Seed / database-only",
+      "csv_amount": "USD 100,000",
+      "normalized_amount": "Unverified",
+      "csv_investors": "Apeirogon Group",
+      "normalized_investors": "Apeirogon Group (database attribution only)",
+      "verification": "needs_review",
+      "correction_or_issue": "No primary or reliable contemporaneous public confirmation of the amount, close date or investor was found. Hold the relationship.",
+      "primary_source": "https://entrend.io/",
+      "secondary_source": "https://www.linkedin.com/company/entrend/"
+    },
+    "investee_name_raw": "Entrend",
+    "org_location_raw": "Adelaide, SA, Australia (database location)",
+    "org_website_raw": "https://entrend.io/",
+    "org_industries_raw": "Data / Market Intelligence",
+    "round_type_raw": "Seed / database-only",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": null,
+    "money_raised_raw": "Unverified",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Apeirogon Group (database attribution only)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://entrend.io/",
+    "verification_notes": "No primary or reliable contemporaneous public confirmation of the amount, close date or investor was found. Hold the relationship.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown",
+    "amount_disclosure_status": "no_reliable_amount_or_event_source",
+    "amount_structuring_note": "No reliable contemporaneous evidence verifies the US$100k amount, close date or investor.",
+    "supplemental_verification_urls": []
+  },
+  "refs": {
+    "investee_company_key": "company:research:entrend"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:17e6968706a089037f88",
+      "source:url:2c998c944fbbfa2d97cf"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "No primary or reliable contemporaneous public confirmation of the amount, close date or investor was found. Hold the relationship.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

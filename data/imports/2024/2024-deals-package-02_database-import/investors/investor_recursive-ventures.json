@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investors",
+  "record_key": "investor:recursive-ventures",
+  "operation": "upsert",
+  "data": {
+    "canonical_name": "Recursive Ventures",
+    "aliases": [],
+    "investor_type": "vc_fund",
+    "website_url": "http://www.recursiveventures.com/",
+    "linkedin_url": "https://www.linkedin.com/company/recursive-ventures",
+    "hq_country": "US",
+    "hq_state": null,
+    "hq_city": "US",
+    "offices": [],
+    "status": "active",
+    "merged_into_id": null,
+    "review_status": "needs_more_data",
+    "last_reviewed_at": "2026-08-14",
+    "last_reviewed_by": "codex-2024-investor-dedupe-update",
+    "investor_subtype": "VC",
+    "classification_confidence": "high",
+    "classification_source": "inherited from previously completed detailed classification",
+    "eligibility_mode": "research_package_confirmed",
+    "classification_evidence_urls": [
+      "http://www.recursiveventures.com/"
+    ],
+    "classified_at": "2026-08-14",
+    "identity_resolution": "existing_investor_update",
+    "matched_existing_record_key": "investor:recursive-ventures",
+    "identity_match_method": "exact_existing_key",
+    "identity_match_source": "normalized_master"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:0e8866d6fcab5df8c13d",
+      "research_source:recursive-ventures:recursive-ventures_src_official",
+      "research_source:recursive-ventures:recursive-ventures_src_linkedin",
+      "research_source:recursive-ventures:recursive-ventures_src_deal"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Research collection status: partial",
+      "crunchbase_profile_not_verified",
+      "identity_or_transaction_conflict"
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_programs",
+  "record_key": "program:startmate:primary",
+  "operation": "upsert",
+  "data": {
+    "name": "Startmate Accelerator",
+    "program_type": "accelerator",
+    "status": "upcoming",
+    "application_url": "https://www.startmate.com/accelerator/program",
+    "eligibility_mode": "conditional",
+    "eligibility_rules": [
+      {
+        "key": "founder_commitment",
+        "operator": "any_founder",
+        "value": {
+          "full_time": true
+        },
+        "requirement": "hard"
+      },
+      {
+        "key": "selection",
+        "operator": "competitive_review",
+        "value": true,
+        "requirement": "hard"
+      }
+    ],
+    "eligibility_rules_status": "verified",
+    "source_url": "https://www.startmate.com/writing/frequently-asked-questions-startmate-accelerator",
+    "evidence_source_urls": [
+      "https://www.crunchbase.com/funding_round/arlula-seed--943c0e83",
+      "https://www.startmate.com/",
+      "https://www.linkedin.com/company/startmate",
+      "https://www.linkedin.com/posts/keeyu-app_keeyu-just-raised-23m-to-fix-one-of-e-commerce-activity-7394112408304156672-0_7q"
+    ],
+    "last_verified_at": "2026-08-14",
+    "review_notes": "Hard criteria transcribed from the cited official program page."
+  },
+  "refs": {
+    "investor_key": "investor:startmate"
+  },
+  "provenance": {
+    "source": "matching_enrichment",
+    "source_keys": [
+      "https://www.crunchbase.com/funding_round/arlula-seed--943c0e83",
+      "https://www.startmate.com/",
+      "https://www.linkedin.com/company/startmate",
+      "https://www.linkedin.com/posts/keeyu-app_keeyu-just-raised-23m-to-fix-one-of-e-commerce-activity-7394112408304156672-0_7q"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

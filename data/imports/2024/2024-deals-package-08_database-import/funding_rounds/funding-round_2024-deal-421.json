@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-421",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-421",
+    "dedupe_key": "2024|givewrap|2024-10-31|unknown",
+    "source_url": "https://www.linkedin.com/posts/michelle-tirtabudi-737820120_unswdemoday-activity-7257631623225966592-jncF",
+    "source_payload": {
+      "deal_number": 421,
+      "csv_investee": "Givewrap",
+      "normalized_investee": "Givewrap",
+      "csv_date": "2024-08-01",
+      "normalized_date": "2024-10-31",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "UNSW Founders 10x investment",
+      "csv_amount": "AUD 20,000",
+      "normalized_amount": "AUD 110,000 program package (A$100k seed investment + A$10k partner component reported)",
+      "csv_investors": "UNSW Founders",
+      "normalized_investors": "UNSW Founders 10x Accelerator",
+      "verification": "corrected_program",
+      "correction_or_issue": "Founder and program evidence confirm the 2024 cohort; CSV uses older A$20k terms.",
+      "primary_source": "https://www.linkedin.com/posts/michelle-tirtabudi-737820120_unswdemoday-activity-7257631623225966592-jncF",
+      "secondary_source": "https://www.inside.unsw.edu.au/innovation-and-engagement/six-startups-receive-110k-investment-unsw-founders-program"
+    },
+    "investee_name_raw": "Givewrap",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://givewrap.org/",
+    "org_industries_raw": "Consumer / Social Enterprise",
+    "round_type_raw": "UNSW Founders 10x investment",
+    "round_stage": "unknown",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-10-31",
+    "money_raised_raw": "AUD 110,000 program package (A$100k seed investment + A$10k partner component reported)",
+    "amount": 110000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "UNSW Founders 10x Accelerator",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-08_database-import",
+    "verification_status": "corrected_program",
+    "verification_source_url": "https://www.linkedin.com/posts/michelle-tirtabudi-737820120_unswdemoday-activity-7257631623225966592-jncF",
+    "verification_notes": "Founder and program evidence confirm the 2024 cohort; CSV uses older A$20k terms. Exact day records the publication date of the public investment or cohort announcement; it is not represented as an inferred legal closing date.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day",
+    "date_basis": "public_announcement_publication_date",
+    "date_derivation_method": "linkedin_activity_id_timestamp",
+    "supplemental_verification_urls": [
+      "https://www.linkedin.com/posts/michelle-tirtabudi-737820120_unswdemoday-activity-7257631623225966592-jncF"
+    ]
+  },
+  "refs": {
+    "investee_company_key": "company:research:givewrap"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": [
+      "source:url:2ad87ba3ccb788680677",
+      "source:url:2060dbd0fb8796e6fd5f"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

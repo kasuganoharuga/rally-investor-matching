@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-085",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-085",
+    "dedupe_key": "2024|metakosmos|2024-08-19|pre_seed",
+    "source_url": "https://www.prlog.org/13034329-space-tech-startup-metakosmos-closes-pre-seed-round-to-propel-next-milestone-development.html",
+    "source_payload": {
+      "deal_number": 85,
+      "csv_investee": "Metakosmos",
+      "normalized_investee": "Metakosmos",
+      "csv_date": "2024-08-19",
+      "normalized_date": "2024-08-19",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-Seed",
+      "csv_amount": "AUD 2,000,000",
+      "normalized_amount": "AUD 2,000,000",
+      "csv_investors": "Alzadhar Al-Sanai",
+      "normalized_investors": "Alzadhar Al-Sanai",
+      "verification": "verified",
+      "correction_or_issue": "Company release confirms the amount, stage and Saudi technology-group investor.",
+      "primary_source": "https://www.prlog.org/13034329-space-tech-startup-metakosmos-closes-pre-seed-round-to-propel-next-milestone-development.html",
+      "secondary_source": "https://metakosmos.com/"
+    },
+    "investee_name_raw": "Metakosmos",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://metakosmos.com/",
+    "org_industries_raw": "Space Tech / Wearables",
+    "round_type_raw": "Pre-Seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-08-19",
+    "money_raised_raw": "AUD 2,000,000",
+    "amount": 2000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Alzadhar Al-Sanai",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.prlog.org/13034329-space-tech-startup-metakosmos-closes-pre-seed-round-to-propel-next-milestone-development.html",
+    "verification_notes": "Company release confirms the amount, stage and Saudi technology-group investor.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:metakosmos"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:017dea0269fab0e8c2a2",
+      "source:url:1d5e81e00eb916c965e0"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

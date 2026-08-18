@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investors",
+  "record_key": "investor:qic-ventures",
+  "operation": "upsert",
+  "data": {
+    "canonical_name": "QIC Ventures",
+    "aliases": [
+      "QIC"
+    ],
+    "investor_type": "vc_fund",
+    "website_url": "https://www.qic.com/",
+    "linkedin_url": "https://www.linkedin.com/company/qic",
+    "hq_country": "AU",
+    "hq_state": "Queensland",
+    "hq_city": "Brisbane",
+    "offices": [],
+    "status": "active",
+    "merged_into_id": null,
+    "review_status": "reviewed",
+    "last_reviewed_at": "2026-08-14",
+    "last_reviewed_by": "codex-2024-investor-dedupe-update",
+    "investor_subtype": "Institutional VC",
+    "classification_confidence": "high",
+    "classification_source": "inherited from previously completed detailed classification",
+    "eligibility_mode": "research_package_confirmed",
+    "classification_evidence_urls": [
+      "https://www.qic.com/",
+      "https://www.qic.com/Investment-Capabilities/Private-Equity/QIC-Ventures"
+    ],
+    "classified_at": "2026-08-14",
+    "identity_resolution": "existing_investor_update",
+    "matched_existing_record_key": "investor:qic-ventures",
+    "identity_match_method": "exact_existing_key",
+    "identity_match_source": "normalized_master"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "research_source:qic-ventures:qic_src_001",
+      "research_source:qic-ventures:qic_src_002",
+      "research_source:qic-ventures:qic_src_003",
+      "research_source:qic-ventures:qic_src_004"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Research collection status: partial",
+      "missing_deal_specific_cheque",
+      "portfolio_details_partial",
+      "recent_deals_partial",
+      "deal_database_blocked",
+      "person_linkedin_not_resolved"
+    ]
+  }
+}

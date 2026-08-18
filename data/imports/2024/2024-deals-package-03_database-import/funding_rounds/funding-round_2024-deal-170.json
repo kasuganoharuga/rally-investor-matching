@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-170",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-170",
+    "dedupe_key": "2024|dark-patterns-lab|2024-05-08|program_or_grant",
+    "source_url": "https://www.linkedin.com/posts/melbourne-accelerator-program_maplaunch-startups-highperformance-activity-7194105954471141376-b8hM",
+    "source_payload": {
+      "deal_number": 170,
+      "csv_investee": "Dark Patterns Lab",
+      "normalized_investee": "Dark Patterns Lab",
+      "csv_date": "2024-05-24",
+      "normalized_date": "2024-05-08",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Accelerator equity-free funding",
+      "csv_amount": "AUD 20,000",
+      "normalized_amount": "AUD 20,000 equity-free",
+      "csv_investors": "Melbourne Accelerator Program",
+      "normalized_investors": "Melbourne Accelerator Program (MAP)",
+      "verification": "verified_program",
+      "correction_or_issue": "Official MAP sources confirm the 2024 cohort and A$20k equity-free support; this is not a venture equity round.",
+      "primary_source": "https://www.linkedin.com/posts/melbourne-accelerator-program_maplaunch-startups-highperformance-activity-7194105954471141376-b8hM",
+      "secondary_source": "https://www.themap.co/accelerator"
+    },
+    "investee_name_raw": "Dark Patterns Lab",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.darkpatternslab.com/",
+    "org_industries_raw": "Legal Tech / Regtech",
+    "round_type_raw": "Accelerator equity-free funding",
+    "round_stage": "program_or_grant",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-05-08",
+    "money_raised_raw": "AUD 20,000 equity-free",
+    "amount": 20000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Melbourne Accelerator Program (MAP)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "verified_program",
+    "verification_source_url": "https://www.linkedin.com/posts/melbourne-accelerator-program_maplaunch-startups-highperformance-activity-7194105954471141376-b8hM",
+    "verification_notes": "Official MAP sources confirm the 2024 cohort and A$20k equity-free support; this is not a venture equity round. Exact day records the publication date of the public investment or cohort announcement; it is not represented as an inferred legal closing date.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day",
+    "date_basis": "public_announcement_publication_date",
+    "date_derivation_method": "linkedin_activity_id_timestamp",
+    "supplemental_verification_urls": [
+      "https://www.linkedin.com/posts/melbourne-accelerator-program_maplaunch-startups-highperformance-activity-7194105954471141376-b8hM"
+    ]
+  },
+  "refs": {
+    "investee_company_key": "company:research:dark-patterns-lab"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:2df962c8673e01407b4e",
+      "source:url:06c7e21e14c333ea6600"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:vault-cloud",
+  "operation": "upsert",
+  "data": {
+    "name": "Vault Cloud",
+    "website_url": "https://vaultcloud.com.au/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Australian Capital Territory",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "cloud-infrastructure-cybersecurity",
+    "sector_secondary": null,
+    "use_case_primary": "sovereign-hyperscale-cloud-for-government-defence-and-critical-infrastructure-workloads",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-infrastructure",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Sovereign hyperscale cloud for government, defence and critical infrastructure workloads.",
+    "source_urls": [
+      "https://vaultcloud.com.au/",
+      "https://www.nrf.gov.au/news-and-media-releases/nrfc-bolster-sovereign-data-security-through-225-million-investment-vault-cloud",
+      "https://globaltradealert.org/state-act/89783-australia-national-reconstruction-fund-corporation-nrfc-invests-aud-225-million-in-vault-cloud"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

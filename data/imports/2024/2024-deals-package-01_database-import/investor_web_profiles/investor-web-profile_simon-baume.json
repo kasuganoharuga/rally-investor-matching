@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_web_profiles",
+  "record_key": "investor_web_profile:simon-baume:2026-08-14",
+  "operation": "upsert",
+  "data": {
+    "source_urls": [
+      "https://www.ajust.com.au/about",
+      "https://www.overnightsuccess.vc/p/aussie-startup-vc-summary-30th-november-2024"
+    ],
+    "retrieved_at": "2026-08-14",
+    "website_status": "verified_public_profile",
+    "raw_content_hash": null,
+    "raw_content_ref": null,
+    "extraction_model": "codex-2024-evidence-supplement",
+    "extraction_version": "1.0.0",
+    "confidence": "low",
+    "claimed_thesis": "Private early-stage investing; no public general investment thesis was identified. Observed activity includes Ajust.",
+    "claimed_stages": [
+      "early_stage"
+    ],
+    "claimed_sectors": [
+      "consumer technology",
+      "software"
+    ],
+    "claimed_geographies": [
+      "Australia"
+    ],
+    "claimed_business_models": [],
+    "claimed_cheque_min": null,
+    "claimed_cheque_max": null,
+    "claimed_cheque_currency": null,
+    "contact_emails": [],
+    "application_url": null,
+    "contact_notes": "Supplemented to resolve a named investor relation. Profile fields are limited to observed deal activity and must not be interpreted as a broad mandate. Profile fields are limited to observed deal activity and must not be interpreted as a broad mandate. Profile fields are limited to observed deal activity and must not be interpreted as a broad mandate.",
+    "is_current": true,
+    "superseded_at": null,
+    "profile_scope_status": "deal_observed_only"
+  },
+  "refs": {
+    "investor_key": "investor:simon-baume"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-supplement:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:0113ac141418af36a4dd",
+      "source:url:25323740e133211cee87"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

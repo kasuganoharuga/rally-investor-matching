@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-262",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-262",
+    "dedupe_key": "2024|audc-pty-ltd-audd|2024-01-24|pre_seed",
+    "source_url": "https://www.novatti.com/wp-content/uploads/2024/01/AUDD-self-funding-as-pre-seed-round-increased-to-meet-investor-demand.pdf",
+    "source_payload": {
+      "deal_number": 262,
+      "csv_investee": "AUDC",
+      "normalized_investee": "AUDC Pty Ltd / AUDD",
+      "csv_date": "2024-01-24",
+      "normalized_date": "2024-01-24",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-seed equity financing",
+      "csv_amount": "AUD 600,000",
+      "normalized_amount": "AUD 600,000 at AUD 2,400,000 pre-money",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Industry investors and management; identities undisclosed",
+      "verification": "verified",
+      "correction_or_issue": "Novatti's ASX announcement confirms the close, amount, valuation and that demand increased the round. Novatti retained 80% ownership after the raise.",
+      "primary_source": "https://www.novatti.com/wp-content/uploads/2024/01/AUDD-self-funding-as-pre-seed-round-increased-to-meet-investor-demand.pdf",
+      "secondary_source": "https://australianfintech.com.au/audd-self-funding-as-pre-seed-round-increased-to-meet-investor-demand-novatti/"
+    },
+    "investee_name_raw": "AUDC Pty Ltd / AUDD",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://audd.digital/",
+    "org_industries_raw": "Fintech / Digital Assets",
+    "round_type_raw": "Pre-seed equity financing",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-01-24",
+    "money_raised_raw": "AUD 600,000 at AUD 2,400,000 pre-money",
+    "amount": 600000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Industry investors and management; identities undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.novatti.com/wp-content/uploads/2024/01/AUDD-self-funding-as-pre-seed-round-increased-to-meet-investor-demand.pdf",
+    "verification_notes": "Novatti's ASX announcement confirms the close, amount, valuation and that demand increased the round. Novatti retained 80% ownership after the raise.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:audc-audd"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:78eff1487412d55fe322",
+      "source:url:1246a7fa161ddfcead1d"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investors",
+  "record_key": "investor:hatcher",
+  "operation": "upsert",
+  "data": {
+    "canonical_name": "Hatcher+",
+    "aliases": [],
+    "investor_type": "vc_fund",
+    "website_url": "https://hatcher.com/",
+    "linkedin_url": null,
+    "hq_country": "SG",
+    "hq_state": null,
+    "hq_city": null,
+    "offices": [],
+    "status": "active",
+    "merged_into_id": null,
+    "review_status": "needs_more_data",
+    "last_reviewed_at": "2026-08-14",
+    "last_reviewed_by": "codex-2024-investor-dedupe-update",
+    "investor_subtype": "Venture platform / investor",
+    "classification_confidence": "high",
+    "classification_source": "current research entity_type_raw mapping",
+    "eligibility_mode": "research_package_confirmed",
+    "classification_evidence_urls": [
+      "https://hatcher.com/",
+      "https://h1.hatcher.com/"
+    ],
+    "classified_at": "2026-08-14",
+    "identity_resolution": "existing_investor_update",
+    "matched_existing_record_key": "investor:hatcher",
+    "identity_match_method": "exact_existing_key",
+    "identity_match_source": "normalized_master"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "research_source:hatcher:hatcher_src_official",
+      "research_source:hatcher:hatcher_src_deal_round-crunchbase-inaam-pre-seed-ef389434"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Research collection status: sparse",
+      "linkedin_company_url_not_verified",
+      "crunchbase_profile_not_verified",
+      "team_and_person_profiles_not_fully_verified",
+      "cheque_size_not_publicly_verified"
+    ]
+  }
+}

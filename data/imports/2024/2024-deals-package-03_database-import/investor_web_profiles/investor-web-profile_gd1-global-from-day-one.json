@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_web_profiles",
+  "record_key": "investor_web_profile:gd1-global-from-day-one:2026-08-14",
+  "operation": "upsert",
+  "data": {
+    "source_urls": [
+      "https://www.gd1.vc/",
+      "https://www.linkedin.com/company/global-from-day-one",
+      "https://www.dawnaerospace.com/latest-news/dawn-aerospace-closes-us25-million-series-b",
+      "https://www.crunchbase.com/organization/gd1-global-from-day-one"
+    ],
+    "retrieved_at": "2026-08-14",
+    "website_status": "verified_public_profile",
+    "raw_content_hash": null,
+    "raw_content_ref": null,
+    "extraction_model": "codex-2024-investor-dedupe-update",
+    "extraction_version": "1.0.0",
+    "confidence": "medium",
+    "claimed_thesis": "Technology",
+    "claimed_stages": [
+      "Seed / Series A"
+    ],
+    "claimed_sectors": [
+      "Technology"
+    ],
+    "claimed_geographies": [
+      "New Zealand"
+    ],
+    "claimed_business_models": [],
+    "claimed_cheque_min": null,
+    "claimed_cheque_max": null,
+    "claimed_cheque_currency": null,
+    "contact_emails": [],
+    "application_url": "https://www.gd1.vc/",
+    "contact_notes": "Confirmed Series A lead; not found in directory.",
+    "is_current": true,
+    "superseded_at": null
+  },
+  "refs": {
+    "investor_key": "investor:gd1-global-from-day-one"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "research_source:gd1-global-from-day-one:gd1_global_from_day_one_src_001",
+      "research_source:gd1-global-from-day-one:gd1_global_from_day_one_src_002",
+      "research_source:gd1-global-from-day-one:gd1_global_from_day_one_src_003",
+      "research_source:gd1-global-from-day-one:gd1_global_from_day_one_src_004"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Research collection status: partial",
+      "crunchbase_content_blocked",
+      "recent_deal_history_not_exhaustive",
+      "deal_specific_cheque_not_disclosed",
+      "team_coverage_partial"
+    ]
+  }
+}

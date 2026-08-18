@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-071",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-071",
+    "dedupe_key": "2024|farmbot-monitoring-solutions|2024-06-11|growth",
+    "source_url": "https://www.businessnewsaustralia.com/articles/sydney-agtech-farmbot-raises--4-6m-for-faster-roll-out-of-water-monitoring-saas.html",
+    "source_payload": {
+      "deal_number": 71,
+      "csv_investee": "Farmbot",
+      "normalized_investee": "Farmbot Monitoring Solutions",
+      "csv_date": "2024-06-10",
+      "normalized_date": "2024-06-11 announcement",
+      "csv_round": "Series B",
+      "normalized_round": "Growth funding / bridge",
+      "csv_amount": "AUD 4,600,000",
+      "normalized_amount": "AUD 4,600,000",
+      "csv_investors": "Andrew Coppin; Macdoch Ventures",
+      "normalized_investors": "Telstra; Macdoch Ventures; US ranching investors and executives",
+      "verification": "corrected",
+      "correction_or_issue": "Official coverage identifies Andrew Coppin as co-founder, not investor, and adds Telstra plus unnamed US investors.",
+      "primary_source": "https://www.businessnewsaustralia.com/articles/sydney-agtech-farmbot-raises--4-6m-for-faster-roll-out-of-water-monitoring-saas.html",
+      "secondary_source": "https://www.cbinsights.com/company/farmbot-sensors/financials"
+    },
+    "investee_name_raw": "Farmbot Monitoring Solutions",
+    "org_location_raw": "North Sydney, NSW, Australia",
+    "org_website_raw": "https://farmbot.com.au/",
+    "org_industries_raw": "Agtech / IoT",
+    "round_type_raw": "Growth funding / bridge",
+    "round_stage": "growth",
+    "funding_stage_raw": "Series B",
+    "announced_date": "2024-06-11",
+    "money_raised_raw": "AUD 4,600,000",
+    "amount": 4600000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Telstra; Macdoch Ventures; US ranching investors and executives",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.businessnewsaustralia.com/articles/sydney-agtech-farmbot-raises--4-6m-for-faster-roll-out-of-water-monitoring-saas.html",
+    "verification_notes": "Official coverage identifies Andrew Coppin as co-founder, not investor, and adds Telstra plus unnamed US investors.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:farmbot"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:89e3cb6c2323fbb402f6",
+      "source:url:6a16c639a6c0165fdaf5"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

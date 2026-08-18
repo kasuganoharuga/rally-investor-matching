@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-271",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-271",
+    "dedupe_key": "2024|mary-technology-pty-ltd|2024-09-19|pre_seed",
+    "source_url": "https://www.linkedin.com/posts/yashvarma_ai-legaltech-startup-mary-technology-raises-activity-7244881676277874689-Y_gl",
+    "source_payload": {
+      "deal_number": 271,
+      "csv_investee": "Mary Technology",
+      "normalized_investee": "Mary Technology Pty Ltd",
+      "csv_date": "2024-09-26",
+      "normalized_date": "2024-09-19 to 2024-09-26 reporting",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-seed",
+      "csv_amount": "USD 1,350,000",
+      "normalized_amount": "USD 1,350,000",
+      "csv_investors": "Empress Capital; Everywhere Ventures; Mark Kalajzich; Martin Lam; Sam Nickless; Sydney Angels",
+      "normalized_investors": "Empress Capital (lead); Sydney Angels; Everywhere Ventures; Mark Kalajzich; Martin Lam; Sam Nickless",
+      "verification": "verified",
+      "correction_or_issue": "Empress publicly confirmed it led the pre-seed with Sydney Angels; funding databases and contemporary reporting corroborate the US$1.35m round and named participants.",
+      "primary_source": "https://www.linkedin.com/posts/yashvarma_ai-legaltech-startup-mary-technology-raises-activity-7244881676277874689-Y_gl",
+      "secondary_source": "https://www.cbinsights.com/company/mary-technology/financials"
+    },
+    "investee_name_raw": "Mary Technology Pty Ltd",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.marytechnology.com/",
+    "org_industries_raw": "Legaltech / AI",
+    "round_type_raw": "Pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-09-19",
+    "money_raised_raw": "USD 1,350,000",
+    "amount": 1350000,
+    "currency": "USD",
+    "amount_usd": 1350000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Empress Capital (lead); Sydney Angels; Everywhere Ventures; Mark Kalajzich; Martin Lam; Sam Nickless",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.linkedin.com/posts/yashvarma_ai-legaltech-startup-mary-technology-raises-activity-7244881676277874689-Y_gl",
+    "verification_notes": "Empress publicly confirmed it led the pre-seed with Sydney Angels; funding databases and contemporary reporting corroborate the US$1.35m round and named participants.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:mary-technology"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:8fe7b195ba97d420ccc4",
+      "source:url:5e403dfa7adba0b41095"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

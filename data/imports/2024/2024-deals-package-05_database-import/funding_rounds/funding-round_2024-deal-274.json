@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-274",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-274",
+    "dedupe_key": "2024|exploretech|no-primary-financing-announcement-located|pre_seed",
+    "source_url": "https://techboard.com.au/australian-startup-funding-in-review-2024/",
+    "source_payload": {
+      "deal_number": 274,
+      "csv_investee": "ExploreTech",
+      "normalized_investee": "ExploreTech",
+      "csv_date": "2024-10-01",
+      "normalized_date": "No primary financing announcement located",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Unverified pre-seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Undisclosed",
+      "verification": "needs_review",
+      "correction_or_issue": "A matching operating startup could not be confidently resolved from public evidence. Do not create investor or financing links until the legal entity or official site is confirmed.",
+      "primary_source": "https://techboard.com.au/australian-startup-funding-in-review-2024/",
+      "secondary_source": "https://2024.australianstartupfunding.com/State-of-Australian-Startup-Funding-2024-Final-.pdf"
+    },
+    "investee_name_raw": "ExploreTech",
+    "org_location_raw": "Australia; exact entity unresolved",
+    "org_website_raw": null,
+    "org_industries_raw": "Unknown",
+    "round_type_raw": "Unverified pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://techboard.com.au/australian-startup-funding-in-review-2024/",
+    "verification_notes": "A matching operating startup could not be confidently resolved from public evidence. Do not create investor or financing links until the legal entity or official site is confirmed.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:exploretech"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:de0055a45a6fd6d98f1e",
+      "source:url:ad56dedcb7bc5f59b87b"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "A matching operating startup could not be confidently resolved from public evidence. Do not create investor or financing links until the legal entity or official site is confirmed.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

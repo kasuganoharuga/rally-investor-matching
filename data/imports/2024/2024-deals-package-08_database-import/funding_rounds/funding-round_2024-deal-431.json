@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-431",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-431",
+    "dedupe_key": "2024|nucanon-stori|2024-02-12|unknown",
+    "source_url": "https://outlierventures.io/article/outlier-ventures-and-futureverse-announce-the-first-cohort-for-the-futureverse-base-camp-accelerator-program/",
+    "source_payload": {
+      "deal_number": 431,
+      "csv_investee": "Nucanon",
+      "normalized_investee": "Nucanon / Stori",
+      "csv_date": "2024-02-12",
+      "normalized_date": "2024-02-12 cohort announcement",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Futureverse Base Camp investment",
+      "csv_amount": "USD 100,000",
+      "normalized_amount": "Up to USD 100,000 program investment/stipend",
+      "csv_investors": "Born Ready Ventures; Futureverse; Outlier Ventures",
+      "normalized_investors": "Born Ready Ventures (investment provider); Outlier Ventures and Futureverse (program partners/support)",
+      "verification": "corrected_roles",
+      "correction_or_issue": "Distinct accelerator event from Deal 348's later A$500k round; direct investment provider is Born Ready.",
+      "primary_source": "https://outlierventures.io/article/outlier-ventures-and-futureverse-announce-the-first-cohort-for-the-futureverse-base-camp-accelerator-program/",
+      "secondary_source": "https://outlierventures.io/base-camp/futureverse-base-camp/"
+    },
+    "investee_name_raw": "Nucanon / Stori",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.nucanon.com/",
+    "org_industries_raw": "Gaming / Generative AI",
+    "round_type_raw": "Futureverse Base Camp investment",
+    "round_stage": "unknown",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-02-12",
+    "money_raised_raw": "Up to USD 100,000 program investment/stipend",
+    "amount": 100000,
+    "currency": "USD",
+    "amount_usd": 100000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Born Ready Ventures (investment provider); Outlier Ventures and Futureverse (program partners/support)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-08_database-import",
+    "verification_status": "corrected_roles",
+    "verification_source_url": "https://outlierventures.io/article/outlier-ventures-and-futureverse-announce-the-first-cohort-for-the-futureverse-base-camp-accelerator-program/",
+    "verification_notes": "Distinct accelerator event from Deal 348's later A$500k round; direct investment provider is Born Ready.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:nucanon"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": [
+      "source:url:2cab1815198eaa190fa7",
+      "source:url:c32dbe568ea833a6d475"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

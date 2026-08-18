@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-103",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-103",
+    "dedupe_key": "2024|raindrop|2024-11-21|seed",
+    "source_url": "https://raindropme.com/",
+    "source_payload": {
+      "deal_number": 103,
+      "csv_investee": "Raindrop",
+      "normalized_investee": "Raindrop",
+      "csv_date": "2024-11-21",
+      "normalized_date": "2024-11-21 (database-led)",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Kentof Family Investments",
+      "normalized_investors": "Kentof Family Investments",
+      "verification": "partial",
+      "correction_or_issue": "Company and investor relationship are corroborated by investor databases; no authoritative round announcement or amount found.",
+      "primary_source": "https://raindropme.com/",
+      "secondary_source": "https://shizune.co/investors/edtech-vc-funds-switzerland"
+    },
+    "investee_name_raw": "Raindrop",
+    "org_location_raw": "Darwin, NT, Australia",
+    "org_website_raw": "https://raindropme.com/",
+    "org_industries_raw": "Insurtech / AI",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-11-21",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Kentof Family Investments",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://raindropme.com/",
+    "verification_notes": "Company and investor relationship are corroborated by investor databases; no authoritative round announcement or amount found.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:raindrop"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:4685b3066d13f9144469",
+      "source:url:d6572ec23739fcaa4f10"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Company and investor relationship are corroborated by investor databases; no authoritative round announcement or amount found.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

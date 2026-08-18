@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-346",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-346",
+    "dedupe_key": "2024|data-zoo|2024-05-14|series_a",
+    "source_url": "https://www.prnewswire.com/news-releases/data-zoo-secures-22-7-million-in-series-a-funding-from-ellerston-jaade-to-fuel-global-expansion-302144371.html",
+    "source_payload": {
+      "deal_number": 346,
+      "csv_investee": "Data Zoo",
+      "normalized_investee": "Data Zoo",
+      "csv_date": "2024-05-14",
+      "normalized_date": "2024-05-14",
+      "csv_round": "Series A",
+      "normalized_round": "Series A",
+      "csv_amount": "AUD 35,000,000",
+      "normalized_amount": "AUD 35,000,000 (approximately USD 22.7m)",
+      "csv_investors": "Ellerston Capital",
+      "normalized_investors": "Ellerston JAADE / Ellerston Capital",
+      "verification": "verified",
+      "correction_or_issue": "Company-supplied release and Ellerston material confirm the amount, stage and sole named investor.",
+      "primary_source": "https://www.prnewswire.com/news-releases/data-zoo-secures-22-7-million-in-series-a-funding-from-ellerston-jaade-to-fuel-global-expansion-302144371.html",
+      "secondary_source": "https://ellerstoncapital.com/wp-content/uploads/2024/05/JAADE-Flyer-May-2024-Final.pdf"
+    },
+    "investee_name_raw": "Data Zoo",
+    "org_location_raw": "Sydney, NSW, Australia / Jersey City, USA",
+    "org_website_raw": "https://www.datazoo.com/",
+    "org_industries_raw": "Regtech / Identity Verification",
+    "round_type_raw": "Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-05-14",
+    "money_raised_raw": "AUD 35,000,000 (approximately USD 22.7m)",
+    "amount": 35000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Ellerston JAADE / Ellerston Capital",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.prnewswire.com/news-releases/data-zoo-secures-22-7-million-in-series-a-funding-from-ellerston-jaade-to-fuel-global-expansion-302144371.html",
+    "verification_notes": "Company-supplied release and Ellerston material confirm the amount, stage and sole named investor.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:data-zoo"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:e3605a22c05cdc984b55",
+      "source:url:3d6268007f1cd8512b9a"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

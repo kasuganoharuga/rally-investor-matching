@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:anni",
+  "operation": "upsert",
+  "data": {
+    "name": "Anni",
+    "website_url": "https://askanni.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Western Australia",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "healthtech-wellness",
+    "sector_secondary": null,
+    "use_case_primary": "on-demand-health-and-wellbeing-advice-marketplace-combining-ai-matching-with-qualified-human-experts",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "marketplace-advice-as-a-service",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "ai_related",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "On-demand health and wellbeing advice marketplace combining AI matching with qualified human experts.",
+    "source_urls": [
+      "https://askanni.com/",
+      "https://askanni.com/news/smartcompany-march2024",
+      "https://app.dealroom.co/companies/anni_"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

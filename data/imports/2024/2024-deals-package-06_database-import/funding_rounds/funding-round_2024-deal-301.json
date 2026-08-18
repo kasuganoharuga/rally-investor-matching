@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-301",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-301",
+    "dedupe_key": "2024|delphinus-lab|2024-02-26|unknown",
+    "source_url": "https://okxventures.medium.com/okx-ventures-invests-in-pre-a-round-for-trustless-computation-provider-delphinus-lab-3df641ebda1f",
+    "source_payload": {
+      "deal_number": 301,
+      "csv_investee": "Delphinus lab",
+      "normalized_investee": "Delphinus Lab",
+      "csv_date": "2024-02-26",
+      "normalized_date": "2024-02-26",
+      "csv_round": "Seed",
+      "normalized_round": "Pre-A",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "OKX Ventures",
+      "normalized_investors": "OKX Ventures",
+      "verification": "corrected",
+      "correction_or_issue": "OKX Ventures confirms participation in a Pre-A round; the amount was not disclosed. Correct the CSV round label from Seed to Pre-A.",
+      "primary_source": "https://okxventures.medium.com/okx-ventures-invests-in-pre-a-round-for-trustless-computation-provider-delphinus-lab-3df641ebda1f",
+      "secondary_source": "https://delphinuslab.com/"
+    },
+    "investee_name_raw": "Delphinus Lab",
+    "org_location_raw": "Distributed / blockchain ecosystem",
+    "org_website_raw": "https://delphinuslab.com/",
+    "org_industries_raw": "Web3 / Cryptography",
+    "round_type_raw": "Pre-A",
+    "round_stage": "unknown",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-02-26",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "OKX Ventures",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://okxventures.medium.com/okx-ventures-invests-in-pre-a-round-for-trustless-computation-provider-delphinus-lab-3df641ebda1f",
+    "verification_notes": "OKX Ventures confirms participation in a Pre-A round; the amount was not disclosed. Correct the CSV round label from Seed to Pre-A.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:delphinus-lab"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:7f9523065ea0bc45604e",
+      "source:url:9883a458ac5254c5e83c"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

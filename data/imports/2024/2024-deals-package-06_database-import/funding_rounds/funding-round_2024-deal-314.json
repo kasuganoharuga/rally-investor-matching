@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-314",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-314",
+    "dedupe_key": "2024|jupiter-ionics-pty-ltd|2024-03-04|series_a",
+    "source_url": "https://jupiterionics.com/multimillion-dollar-capital-raise-for-green-ammonia-advance/",
+    "source_payload": {
+      "deal_number": 314,
+      "csv_investee": "Jupiter Ionics",
+      "normalized_investee": "Jupiter Ionics Pty Ltd",
+      "csv_date": "2024-03-04",
+      "normalized_date": "2024-03-04",
+      "csv_round": "Series A",
+      "normalized_round": "Series A / capital raise",
+      "csv_amount": "AUD 9,000,000",
+      "normalized_amount": "AUD 9,000,000",
+      "csv_investors": "Breakthrough Victoria; CIMIC; JCVC; Monash Investment Holdings; Olabella; Tenacious Ventures; Wesfarmers Chemicals Energy & Fertilisers",
+      "normalized_investors": "Wesfarmers Chemicals, Energy & Fertilisers; CIMIC Group; Breakthrough Victoria; Tenacious Ventures; Monash Investment Holdings; JCVC; Olabella",
+      "verification": "verified",
+      "correction_or_issue": "The company confirms A$9m and names three new strategic investors plus four original investors. Dealroom classifies the round as Series A.",
+      "primary_source": "https://jupiterionics.com/multimillion-dollar-capital-raise-for-green-ammonia-advance/",
+      "secondary_source": "https://app.dealroom.co/companies/jupiter_ionics"
+    },
+    "investee_name_raw": "Jupiter Ionics Pty Ltd",
+    "org_location_raw": "Clayton, VIC, Australia",
+    "org_website_raw": "https://jupiterionics.com/",
+    "org_industries_raw": "Climate Tech / Chemicals",
+    "round_type_raw": "Series A / capital raise",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-03-04",
+    "money_raised_raw": "AUD 9,000,000",
+    "amount": 9000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Wesfarmers Chemicals, Energy & Fertilisers; CIMIC Group; Breakthrough Victoria; Tenacious Ventures; Monash Investment Holdings; JCVC; Olabella",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://jupiterionics.com/multimillion-dollar-capital-raise-for-green-ammonia-advance/",
+    "verification_notes": "The company confirms A$9m and names three new strategic investors plus four original investors. Dealroom classifies the round as Series A.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:jupiter-ionics"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:c77a40e4b378a4ca7720",
+      "source:url:bf3034f5e4f129e577d8"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

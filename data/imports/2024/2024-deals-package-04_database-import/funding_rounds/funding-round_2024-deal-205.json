@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-205",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-205",
+    "dedupe_key": "2024|go-locum|2024-07-18|seed",
+    "source_url": "https://www.smartcompany.com.au/technology/nt-startup-go-locum-raise-350000-remote-medical-staffing-platform/",
+    "source_payload": {
+      "deal_number": 205,
+      "csv_investee": "Go Locum",
+      "normalized_investee": "Go Locum",
+      "csv_date": "2024-07-18",
+      "normalized_date": "2024-07-18",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "AUD 350,000",
+      "normalized_amount": "AUD 350,000",
+      "csv_investors": "Paspalis",
+      "normalized_investors": "Paspalis Innovation Investment Fund (lead)",
+      "verification": "verified",
+      "correction_or_issue": "Independent reporting and NT government material confirm the A$350k seed round and Paspalis as investor.",
+      "primary_source": "https://www.smartcompany.com.au/technology/nt-startup-go-locum-raise-350000-remote-medical-staffing-platform/",
+      "secondary_source": "https://dtbar.nt.gov.au/__data/assets/pdf_file/0004/1566247/dtbar-annual-report-2024-25.pdf"
+    },
+    "investee_name_raw": "Go Locum",
+    "org_location_raw": "Darwin, NT / Sydney, Australia",
+    "org_website_raw": "https://golocum.com.au/",
+    "org_industries_raw": "Healthtech / Recruitment",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-07-18",
+    "money_raised_raw": "AUD 350,000",
+    "amount": 350000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Paspalis Innovation Investment Fund (lead)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.smartcompany.com.au/technology/nt-startup-go-locum-raise-350000-remote-medical-staffing-platform/",
+    "verification_notes": "Independent reporting and NT government material confirm the A$350k seed round and Paspalis as investor.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:go-locum"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:f73917a16e30e3ce69fd",
+      "source:url:51bdb65f02002fd8a060"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

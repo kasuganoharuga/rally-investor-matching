@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-158",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-158",
+    "dedupe_key": "2024|alkira-bio|2024-07-04|seed",
+    "source_url": "https://www.linkedin.com/posts/alkirabio_alkira-bio-is-excited-to-announce-that-we-activity-7214451990146240512-SOt-",
+    "source_payload": {
+      "deal_number": 158,
+      "csv_investee": "Alkira Bio",
+      "normalized_investee": "Alkira Bio",
+      "csv_date": "2024-07-04",
+      "normalized_date": "2024-07-04",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Curie.Bio",
+      "normalized_investors": "Curie.Bio",
+      "verification": "verified",
+      "correction_or_issue": "Company and Florey reporting confirm an undisclosed Curie.Bio seed investment.",
+      "primary_source": "https://www.linkedin.com/posts/alkirabio_alkira-bio-is-excited-to-announce-that-we-activity-7214451990146240512-SOt-",
+      "secondary_source": "https://www.biotechdaily.com.au/wp/wp-content/uploads/2024/07/BD-Biotech-Daily-Jul-8.pdf"
+    },
+    "investee_name_raw": "Alkira Bio",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://alkira.bio/",
+    "org_industries_raw": "Biotech / Drug Discovery",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-07-04",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Curie.Bio",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.linkedin.com/posts/alkirabio_alkira-bio-is-excited-to-announce-that-we-activity-7214451990146240512-SOt-",
+    "verification_notes": "Company and Florey reporting confirm an undisclosed Curie.Bio seed investment. Exact day records the publication date of the public investment or cohort announcement; it is not represented as an inferred legal closing date.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day",
+    "date_basis": "public_announcement_publication_date",
+    "date_derivation_method": "linkedin_activity_id_timestamp",
+    "supplemental_verification_urls": [
+      "https://www.linkedin.com/posts/alkirabio_alkira-bio-is-excited-to-announce-that-we-activity-7214451990146240512-SOt-"
+    ]
+  },
+  "refs": {
+    "investee_company_key": "company:research:alkira-bio"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:60f8ad9c91a7ab784dc1",
+      "source:url:3422085f22bd771f94b9"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

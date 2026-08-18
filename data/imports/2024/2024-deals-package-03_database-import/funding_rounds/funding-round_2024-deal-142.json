@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-142",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-142",
+    "dedupe_key": "2024|bitliquidity|2024-04-09|strategic",
+    "source_url": "https://www.linkedin.com/posts/amalia-grochal_mirai-is-now-backing-bitliquidity-an-aggregator-activity-7183560890405842944-6lxI",
+    "source_payload": {
+      "deal_number": 142,
+      "csv_investee": "BITLiquidity",
+      "normalized_investee": "BITLiquidity",
+      "csv_date": "2024-04-10",
+      "normalized_date": "2024-04-09",
+      "csv_round": "Seed",
+      "normalized_round": "Strategic early-stage backing",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Amalia Irena Grochal",
+      "normalized_investors": "MIRAI (backer); Amalia Grochal is the announcing principal",
+      "verification": "corrected",
+      "correction_or_issue": "The public announcement says MIRAI backed BITLiquidity; it does not establish Amalia Grochal personally as the investor or disclose amount/terms.",
+      "primary_source": "https://www.linkedin.com/posts/amalia-grochal_mirai-is-now-backing-bitliquidity-an-aggregator-activity-7183560890405842944-6lxI",
+      "secondary_source": "https://bitliquidity.io/"
+    },
+    "investee_name_raw": "BITLiquidity",
+    "org_location_raw": "Australia / global",
+    "org_website_raw": "https://bitliquidity.io/",
+    "org_industries_raw": "Web3 / Liquidity Infrastructure",
+    "round_type_raw": "Strategic early-stage backing",
+    "round_stage": "strategic",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-04-09",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "MIRAI (backer); Amalia Grochal is the announcing principal",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.linkedin.com/posts/amalia-grochal_mirai-is-now-backing-bitliquidity-an-aggregator-activity-7183560890405842944-6lxI",
+    "verification_notes": "The public announcement says MIRAI backed BITLiquidity; it does not establish Amalia Grochal personally as the investor or disclose amount/terms. Exact day records the publication date of the public investment or cohort announcement; it is not represented as an inferred legal closing date.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day",
+    "date_basis": "public_announcement_publication_date",
+    "date_derivation_method": "linkedin_activity_id_timestamp",
+    "supplemental_verification_urls": [
+      "https://www.linkedin.com/posts/amalia-grochal_mirai-is-now-backing-bitliquidity-an-aggregator-activity-7183560890405842944-6lxI"
+    ]
+  },
+  "refs": {
+    "investee_company_key": "company:research:bitliquidity"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:1ef49c30902412ea5b24",
+      "source:url:681495f842eec89cbc8b"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-123",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-123",
+    "dedupe_key": "2024|viewa|2024-investment-note-exact-date-undisclosed|pre_seed",
+    "source_url": "https://www.skalata.vc/investment-notes/viewa",
+    "source_payload": {
+      "deal_number": 123,
+      "csv_investee": "Viewa",
+      "normalized_investee": "Viewa",
+      "csv_date": "2024-11-14",
+      "normalized_date": "2024 (investment note; exact date undisclosed)",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Skalata pre-seed investment",
+      "csv_amount": "USD 300,000",
+      "normalized_amount": "Undisclosed; Skalata standard A$50k-A$300k",
+      "csv_investors": "Skalata",
+      "normalized_investors": "Skalata Ventures",
+      "verification": "partial",
+      "correction_or_issue": "Skalata officially confirms the investment but does not disclose Viewa's cheque; its public standard range is A$50k-A$300k.",
+      "primary_source": "https://www.skalata.vc/investment-notes/viewa",
+      "secondary_source": "https://www.skalata.vc/founders/get-investment"
+    },
+    "investee_name_raw": "Viewa",
+    "org_location_raw": "Australia",
+    "org_website_raw": "https://www.skalata.vc/investment-notes/viewa",
+    "org_industries_raw": "Retail Tech / 3D / AI",
+    "round_type_raw": "Skalata pre-seed investment",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "Undisclosed; Skalata standard A$50k-A$300k",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Skalata Ventures",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://www.skalata.vc/investment-notes/viewa",
+    "verification_notes": "Skalata officially confirms the investment but does not disclose Viewa's cheque; its public standard range is A$50k-A$300k.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:viewa"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:7a5575d9aa0b4386a010",
+      "source:url:17ae31aa2e7e361131b8"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Skalata officially confirms the investment but does not disclose Viewa's cheque; its public standard range is A$50k-A$300k.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

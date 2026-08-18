@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-317",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-317",
+    "dedupe_key": "2024|proto-axiom|2024-08-13|series_b",
+    "source_url": "https://www.prnewswire.com/apac/news-releases/australian-biotech-incubator-proto-axiom-announces-20m-series-b-first-close-302220533.html",
+    "source_payload": {
+      "deal_number": 317,
+      "csv_investee": "Proto Axiom",
+      "normalized_investee": "Proto Axiom",
+      "csv_date": "2024-08-12",
+      "normalized_date": "2024-08-13 announcement",
+      "csv_round": "Series B",
+      "normalized_round": "Series B first close",
+      "csv_amount": "USD 20,000,000",
+      "normalized_amount": "AUD 20,000,000 first close of targeted AUD 30,000,000",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Major private and institutional investors not named",
+      "verification": "corrected",
+      "correction_or_issue": "Proto Axiom's announcement confirms a A$20m first close at a A$90m valuation. The CSV currency is wrong and its date is one day early; prior Series A investors should not be attributed to this round.",
+      "primary_source": "https://www.prnewswire.com/apac/news-releases/australian-biotech-incubator-proto-axiom-announces-20m-series-b-first-close-302220533.html",
+      "secondary_source": "https://www.protoaxiom.com/"
+    },
+    "investee_name_raw": "Proto Axiom",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.protoaxiom.com/",
+    "org_industries_raw": "Biotech / Venture Building",
+    "round_type_raw": "Series B first close",
+    "round_stage": "series_b",
+    "funding_stage_raw": "Series B",
+    "announced_date": "2024-08-13",
+    "money_raised_raw": "AUD 20,000,000 first close of targeted AUD 30,000,000",
+    "amount": 20000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Major private and institutional investors not named",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.prnewswire.com/apac/news-releases/australian-biotech-incubator-proto-axiom-announces-20m-series-b-first-close-302220533.html",
+    "verification_notes": "Proto Axiom's announcement confirms a A$20m first close at a A$90m valuation. The CSV currency is wrong and its date is one day early; prior Series A investors should not be attributed to this round.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:proto-axiom"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:a0a876138bb4f95b416b",
+      "source:url:f321c3f590d47bc4ce1d"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

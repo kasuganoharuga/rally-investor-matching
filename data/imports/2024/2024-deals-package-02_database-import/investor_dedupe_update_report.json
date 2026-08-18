@@ -1,0 +1,293 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-02_database-import",
+  "updated_at": "2026-08-14T00:00:00+09:30",
+  "status": "completed",
+  "identity_summary": {
+    "upserts": 81,
+    "existing_investor_updates": 28,
+    "net_new_investors": 53,
+    "confirmed_aliases_canonicalized": 4
+  },
+  "matches": [
+    {
+      "package": 2,
+      "source_key": "investor:afterwork-ventures",
+      "canonical_key": "investor:afterwork-ventures",
+      "source_name": "AfterWork Ventures",
+      "canonical_name": "AfterWork Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-001-060_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 2,
+      "source_key": "investor:agfunder",
+      "canonical_key": "investor:agfunder",
+      "source_name": "AgFunder",
+      "canonical_name": "AgFunder",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-181-230_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 2,
+      "source_key": "investor:angel-investors-marlborough",
+      "canonical_key": "investor:angel-investors-marlborough",
+      "source_name": "Angel Investors Marlborough",
+      "canonical_name": "Angel Investors Marlborough",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-121-180_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 2,
+      "source_key": "investor:bridgewest-ventures",
+      "canonical_key": "investor:bridgewest-ventures",
+      "source_name": "Bridgewest Ventures",
+      "canonical_name": "Bridgewest Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-001-060_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 2,
+      "source_key": "investor:clare-ventures",
+      "canonical_key": "investor:clare-ventures",
+      "source_name": "Clare Ventures",
+      "canonical_name": "Clare Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 2,
+      "source_key": "investor:dcf-god",
+      "canonical_key": "investor:dcf-god",
+      "source_name": "DCF GOD",
+      "canonical_name": "DCF GOD",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-121-180_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 2,
+      "source_key": "investor:digital-asset-capital-management",
+      "canonical_key": "investor:digital-asset-capital-management",
+      "source_name": "Digital Asset Capital Management",
+      "canonical_name": "Digital Asset Capital Management",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 2,
+      "source_key": "investor:finality-capital-partners",
+      "canonical_key": "investor:finality-capital-partners",
+      "source_name": "Finality Capital Partners",
+      "canonical_name": "Finality Capital Partners",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-121-180_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 2,
+      "source_key": "investor:fund-wa",
+      "canonical_key": "investor:fund-wa",
+      "source_name": "Fund WA",
+      "canonical_name": "Fund WA",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 2,
+      "source_key": "investor:gravel-road-ventures",
+      "canonical_key": "investor:gravel-road-ventures",
+      "source_name": "Gravel Road Ventures",
+      "canonical_name": "Gravel Road Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 2,
+      "source_key": "investor:larry-diamond",
+      "canonical_key": "investor:larry-diamond",
+      "source_name": "Larry Diamond",
+      "canonical_name": "Larry Diamond",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 2,
+      "source_key": "investor:macquarie-capital",
+      "canonical_key": "investor:macquarie-capital",
+      "source_name": "Macquarie Capital",
+      "canonical_name": "Macquarie Capital",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 2,
+      "source_key": "investor:mh-ventures",
+      "canonical_key": "investor:mh-ventures",
+      "source_name": "MH Ventures",
+      "canonical_name": "MH Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-181-230_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 2,
+      "source_key": "investor:national-reconstruction-fund-corporation",
+      "canonical_key": "investor:national-reconstruction-fund-corporation",
+      "source_name": "National Reconstruction Fund Corporation",
+      "canonical_name": "National Reconstruction Fund Corporation",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 2,
+      "source_key": "investor:orange-dao",
+      "canonical_key": "investor:orange-dao",
+      "source_name": "Orange DAO",
+      "canonical_name": "Orange DAO",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-181-230_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 2,
+      "source_key": "investor:paspalis",
+      "canonical_key": "investor:paspalis",
+      "source_name": "Paspalis",
+      "canonical_name": "Paspalis",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 2,
+      "source_key": "investor:prosus-ventures",
+      "canonical_key": "investor:prosus-ventures",
+      "source_name": "Prosus Ventures",
+      "canonical_name": "Prosus Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-061-120_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 2,
+      "source_key": "investor:public-works",
+      "canonical_key": "investor:public-works",
+      "source_name": "Public Works",
+      "canonical_name": "Public Works",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-181-230_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 2,
+      "source_key": "investor:purpose-ventures",
+      "canonical_key": "investor:purpose-ventures",
+      "source_name": "Purpose Ventures",
+      "canonical_name": "Purpose Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 2,
+      "source_key": "investor:radar-ventures",
+      "canonical_key": "investor:radar-ventures",
+      "source_name": "Radar Ventures",
+      "canonical_name": "Radar Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 2,
+      "source_key": "investor:recursive-ventures",
+      "canonical_key": "investor:recursive-ventures",
+      "source_name": "Recursive Ventures",
+      "canonical_name": "Recursive Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 2,
+      "source_key": "investor:reinventure",
+      "canonical_key": "investor:reinventure",
+      "source_name": "Reinventure",
+      "canonical_name": "Reinventure",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 2,
+      "source_key": "investor:saniel-ventures",
+      "canonical_key": "investor:saniel-ventures",
+      "source_name": "Saniel Ventures",
+      "canonical_name": "Saniel Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 2,
+      "source_key": "investor:shearwater-capital",
+      "canonical_key": "investor:shearwater-capital",
+      "source_name": "Shearwater Capital",
+      "canonical_name": "Shearwater Capital",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 2,
+      "source_key": "investor:stani-kulechov",
+      "canonical_key": "investor:stani-kulechov",
+      "source_name": "Stani Kulechov",
+      "canonical_name": "Stani Kulechov",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-121-180_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 2,
+      "source_key": "investor:tin-alley-ventures",
+      "canonical_key": "investor:tin-alley-ventures",
+      "source_name": "Tin Alley Ventures",
+      "canonical_name": "Tin Alley Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-001-060_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 2,
+      "source_key": "investor:university-of-melbourne-genesis-pre-seed-fund",
+      "canonical_key": "investor:university-of-melbourne-genesis-pre-seed-fund",
+      "source_name": "University of Melbourne Genesis Pre-Seed Fund",
+      "canonical_name": "University of Melbourne Genesis Pre-Seed Fund",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 2,
+      "source_key": "investor:vitalik-buterin",
+      "canonical_key": "investor:vitalik-buterin",
+      "source_name": "Vitalik Buterin",
+      "canonical_name": "Vitalik Buterin",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-121-180_delta_identity-audited-v3_team-audited"
+    }
+  ],
+  "accelerator_programs": [
+    {
+      "investor_key": "investor:innovategpt-group",
+      "package": 2,
+      "program_key": "program:innovategpt-group:primary",
+      "reused_prior_program": false
+    },
+    {
+      "investor_key": "investor:melbourne-accelerator-program-map",
+      "package": 2,
+      "program_key": "program:melbourne-accelerator-program-map:primary",
+      "reused_prior_program": false
+    }
+  ],
+  "manual_review_candidates": [],
+  "reviewed_distinct_candidates": [
+    {
+      "package": 2,
+      "source_key": "investor:ether-fi-ventures",
+      "source_name": "ether.fi Ventures",
+      "candidate_key": "investor:ether-fi",
+      "candidate_name": "ether.fi",
+      "signal": "same_website_domain",
+      "disposition": "reviewed_distinct_no_merge",
+      "relationship_type": "venture_arm_of_operating_company"
+    }
+  ]
+}

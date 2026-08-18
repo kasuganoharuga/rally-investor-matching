@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:imitation-machines",
+  "operation": "upsert",
+  "data": {
+    "name": "Imitation Machines",
+    "website_url": "https://imitationmachines.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "robotics-physical-ai",
+    "sector_secondary": null,
+    "use_case_primary": "hardware-agnostic-ai-platform-teaching-robots-complex-behaviours-through-human-demonstrations-rather-than-manual-program",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "imitation-learning-software",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "ai_related",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Hardware-agnostic AI platform teaching robots complex behaviours through human demonstrations rather than manual programming.",
+    "source_urls": [
+      "https://imitationmachines.com/",
+      "https://www.linkedin.com/posts/imitationmachines_imitationlearning-robotics-vc-activity-7294595607816548352-PiHk",
+      "https://app.dealroom.co/companies/imitation_machines"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

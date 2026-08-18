@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_team_members",
+  "record_key": "investor_team_member:recursive-ventures:itamar-novick",
+  "operation": "upsert",
+  "data": {
+    "contact_id": null,
+    "first_name": "Itamar",
+    "last_name": "Novick",
+    "role_title": "Managing Partner",
+    "seniority": "partner",
+    "linkedin_url": "https://www.linkedin.com/in/itamarnovick",
+    "claimed_focus": [
+      "venture_capital"
+    ],
+    "bio_summary": "Public investment-relevant person associated with Recursive Ventures.",
+    "source_url": "http://www.recursiveventures.com/",
+    "retrieved_at": "2026-07-22",
+    "is_active": true
+  },
+  "refs": {
+    "investor_key": "investor:recursive-ventures",
+    "contact_key": null
+  },
+  "provenance": {
+    "collection_run_key": "collection:research:2026-07-24",
+    "source_keys": [
+      "research_source:recursive-ventures:recursive-ventures_src_official"
+    ]
+  },
+  "review": {
+    "status": "unreviewed",
+    "issues": []
+  }
+}

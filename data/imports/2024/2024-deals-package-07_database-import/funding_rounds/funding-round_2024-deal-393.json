@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-393",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-393",
+    "dedupe_key": "2024|deeligence|2024-04-18|pre_seed",
+    "source_url": "https://launchvic.org/case-studies/the-legaltech-startup-revolutionising-due-diligence-with-ai/",
+    "source_payload": {
+      "deal_number": 393,
+      "csv_investee": "Deeligence",
+      "normalized_investee": "Deeligence",
+      "csv_date": "2024-04-26",
+      "normalized_date": "2024-04-18/23 reporting",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-seed",
+      "csv_amount": "AUD 1,000,000",
+      "normalized_amount": "AUD 1,000,000",
+      "csv_investors": "LaunchVic",
+      "normalized_investors": "LaunchVic Alice Anderson Fund; other undisclosed investors",
+      "verification": "corrected_investor",
+      "correction_or_issue": "Use the specific Alice Anderson Fund record rather than generic LaunchVic; exact full syndicate was not disclosed.",
+      "primary_source": "https://launchvic.org/case-studies/the-legaltech-startup-revolutionising-due-diligence-with-ai/",
+      "secondary_source": "https://www.smartcompany.com.au/startupsmart/nine-anz-startups-raised-60-3-million-this-week/"
+    },
+    "investee_name_raw": "Deeligence",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.deeligence.com/",
+    "org_industries_raw": "Legal Tech / Enterprise AI",
+    "round_type_raw": "Pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-04-18",
+    "money_raised_raw": "AUD 1,000,000",
+    "amount": 1000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "LaunchVic Alice Anderson Fund; other undisclosed investors",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "corrected_investor",
+    "verification_source_url": "https://launchvic.org/case-studies/the-legaltech-startup-revolutionising-due-diligence-with-ai/",
+    "verification_notes": "Use the specific Alice Anderson Fund record rather than generic LaunchVic; exact full syndicate was not disclosed.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:deeligence"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:cbb111f862e21b8f767d",
+      "source:url:c21a0bcfffce7207ebe8"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

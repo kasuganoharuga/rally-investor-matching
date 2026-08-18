@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:symphony-infrastructure-partners",
+  "operation": "upsert",
+  "data": {
+    "name": "Symphony Infrastructure Partners",
+    "website_url": "https://symphonyinfra.com.au/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "energy-infrastructure",
+    "sector_secondary": null,
+    "use_case_primary": "builds-operates-and-owns-specialised-services-supporting-australia-s-energy-transition-infrastructure",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "infrastructure-services-platform",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Builds, operates and owns specialised services supporting Australia's energy transition infrastructure.",
+    "source_urls": [
+      "https://symphonyinfra.com.au/",
+      "https://www.blackstone.com/news/press/blackstone-announces-investment-in-symphony-infrastructure-partners-australias-leading-energy-transition-infrastructure-services-platform/",
+      "https://www.marketscreener.com/quote/stock/BLACKSTONE-INC-60951400/news/Symphony-Infrastructure-Partners-Pty-Ltd-announced-that-it-has-received-AUD-300-million-in-funding-f-47426113/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

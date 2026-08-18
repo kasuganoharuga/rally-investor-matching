@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:eco2metrix",
+  "operation": "upsert",
+  "data": {
+    "name": "eCo2metrix",
+    "website_url": "https://www.eco2metrix.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Victoria",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "climate-saas-tourism-tech",
+    "sector_secondary": null,
+    "use_case_primary": "sustainability-data-and-reporting-software-designed-for-tourism-operators-and-destinations",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-saas",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Sustainability-data and reporting software designed for tourism operators and destinations.",
+    "source_urls": [
+      "https://www.eco2metrix.com/",
+      "https://www.crunchbase.com/funding_round/eco2metrix-pre-seed--18ec8d13"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

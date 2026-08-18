@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-159",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-159",
+    "dedupe_key": "2024|hatch|2024-02-19|seed",
+    "source_url": "https://hatch.team/blog/post/seed-round-funding-announcement",
+    "source_payload": {
+      "deal_number": 159,
+      "csv_investee": "Hatch",
+      "normalized_investee": "Hatch",
+      "csv_date": "2024-02-18",
+      "normalized_date": "2024-02-19 announcement; round closed Dec 2023",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "AUD 7,000,000",
+      "normalized_amount": "AUD 7,000,000",
+      "csv_investors": "Rampersand (lead); Ahmed Fahour; Alberts Impact Ventures; Aura Ventures; Common Sense Ventures; Investible; Jelix Ventures",
+      "normalized_investors": "Rampersand (lead); Alberts Impact Ventures; Aura Ventures; Investible; Jelix Ventures; Common Sense Ventures; Ahmed Fahour",
+      "verification": "corrected",
+      "correction_or_issue": "Company announced the round in February 2024, while Jelix says it participated in December 2023; retain announcement-date inclusion with close-timing caveat.",
+      "primary_source": "https://hatch.team/blog/post/seed-round-funding-announcement",
+      "secondary_source": "https://www.jelix.vc/notes/investment-notes-hatch"
+    },
+    "investee_name_raw": "Hatch",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://hatch.team/",
+    "org_industries_raw": "HR Tech / Marketplace",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-02-19",
+    "money_raised_raw": "AUD 7,000,000",
+    "amount": 7000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Rampersand (lead); Alberts Impact Ventures; Aura Ventures; Investible; Jelix Ventures; Common Sense Ventures; Ahmed Fahour",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://hatch.team/blog/post/seed-round-funding-announcement",
+    "verification_notes": "Company announced the round in February 2024, while Jelix says it participated in December 2023; retain announcement-date inclusion with close-timing caveat.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:hatch"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:12fefe112e1466efa53d",
+      "source:url:19519129548a30439ae8"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

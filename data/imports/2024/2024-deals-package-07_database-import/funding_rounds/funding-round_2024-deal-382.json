@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-382",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-382",
+    "dedupe_key": "2024|1breadcrumb|2024-06-28|growth",
+    "source_url": "https://www.capitalbrief.com/article/five-v-backs-worker-safety-startup-1breadcrumb-in-4m-funding-round-b43044f9-da9c-4084-b34a-da30fb6e2171/",
+    "source_payload": {
+      "deal_number": 382,
+      "csv_investee": "Breadcrumb",
+      "normalized_investee": "1Breadcrumb",
+      "csv_date": "2024-06-28",
+      "normalized_date": "2024-06-28",
+      "csv_round": "Seed",
+      "normalized_round": "Growth / institutional venture round",
+      "csv_amount": "AUD 4,000,000",
+      "normalized_amount": "AUD 4,000,000",
+      "csv_investors": "Five V Capital",
+      "normalized_investors": "Five V Capital (lead; first institutional investor)",
+      "verification": "verified",
+      "correction_or_issue": "Contemporaneous reporting and Five V confirm the A$4m round and lead role.",
+      "primary_source": "https://www.capitalbrief.com/article/five-v-backs-worker-safety-startup-1breadcrumb-in-4m-funding-round-b43044f9-da9c-4084-b34a-da30fb6e2171/",
+      "secondary_source": "https://www.linkedin.com/posts/fivevcapital_the-five-v-capitals-venture-capital-team-activity-7212227678412627970-KVI7"
+    },
+    "investee_name_raw": "1Breadcrumb",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.breadcrumb.co/",
+    "org_industries_raw": "Contech / Workforce Safety",
+    "round_type_raw": "Growth / institutional venture round",
+    "round_stage": "growth",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-06-28",
+    "money_raised_raw": "AUD 4,000,000",
+    "amount": 4000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Five V Capital (lead; first institutional investor)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.capitalbrief.com/article/five-v-backs-worker-safety-startup-1breadcrumb-in-4m-funding-round-b43044f9-da9c-4084-b34a-da30fb6e2171/",
+    "verification_notes": "Contemporaneous reporting and Five V confirm the A$4m round and lead role.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:1breadcrumb"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:787dafbe9fc4a7e4e98e",
+      "source:url:8680f2edb3837d4cadf7"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

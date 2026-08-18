@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-281",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-281",
+    "dedupe_key": "2024|zello-studio|2024-08-02|program_or_grant",
+    "source_url": "https://www.linkedin.com/posts/startmate_demo-day-the-day-that-changes-hearts-activity-7257526717265641474-Lk5L",
+    "source_payload": {
+      "deal_number": 281,
+      "csv_investee": "Zello",
+      "normalized_investee": "Zello Studio",
+      "csv_date": "2024-08-02",
+      "normalized_date": "2024-08-02 / Winter 2024 cohort",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Startmate accelerator SAFE",
+      "csv_amount": "AUD 120,000",
+      "normalized_amount": "AUD 120,000 at standard program terms",
+      "csv_investors": "Startmate",
+      "normalized_investors": "Startmate",
+      "verification": "verified_program",
+      "correction_or_issue": "Startmate identifies Zello in its Winter 2024 cohort and standard terms support the A$120k investment. Funding databases classify the instrument as a convertible note/SAFE.",
+      "primary_source": "https://www.linkedin.com/posts/startmate_demo-day-the-day-that-changes-hearts-activity-7257526717265641474-Lk5L",
+      "secondary_source": "https://www.cbinsights.com/company/zello-2/financials"
+    },
+    "investee_name_raw": "Zello Studio",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.zellostudio.co/",
+    "org_industries_raw": "Retail Tech / Fashion",
+    "round_type_raw": "Startmate accelerator SAFE",
+    "round_stage": "program_or_grant",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-08-02",
+    "money_raised_raw": "AUD 120,000 at standard program terms",
+    "amount": 120000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Startmate",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "verified_program",
+    "verification_source_url": "https://www.linkedin.com/posts/startmate_demo-day-the-day-that-changes-hearts-activity-7257526717265641474-Lk5L",
+    "verification_notes": "Startmate identifies Zello in its Winter 2024 cohort and standard terms support the A$120k investment. Funding databases classify the instrument as a convertible note/SAFE.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:zello-studio"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:fffaca9034518bb34033",
+      "source:url:79fdf7c58ad95d17690d"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

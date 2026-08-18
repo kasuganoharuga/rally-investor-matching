@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investors",
+  "record_key": "investor:sparklabs-cultiv8",
+  "operation": "upsert",
+  "data": {
+    "canonical_name": "SparkLabs Cultiv8",
+    "aliases": [],
+    "investor_type": "accelerator",
+    "investor_subtype": "Agri-food accelerator / VC",
+    "eligibility_mode": "research_package_confirmed",
+    "classification_confidence": "high",
+    "classification_evidence_urls": [
+      "https://www.sparklabscultiv8.com/",
+      "https://www.linkedin.com/company/sparklabs-cultiv8",
+      "https://sparklabscultiv8.com/"
+    ],
+    "classified_at": "2026-08-14",
+    "website_url": "https://sparklabscultiv8.com/",
+    "linkedin_url": "https://www.linkedin.com/company/sparklabs-cultiv8",
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": "Orange",
+    "offices": [],
+    "status": "active",
+    "merged_into_id": null,
+    "review_status": "reviewed",
+    "last_reviewed_at": "2026-08-14",
+    "last_reviewed_by": "codex-2024-investor-dedupe-update",
+    "identity_resolution": "existing_investor_update",
+    "matched_existing_record_key": "investor:sparklabs-cultiv8",
+    "identity_match_method": "exact_existing_key",
+    "identity_match_source": "historical_import:recent-deal2026-7-30_deals-001-060_delta_identity-audited-v3_team-audited"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

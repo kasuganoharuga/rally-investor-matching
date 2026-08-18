@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_web_profiles",
+  "record_key": "investor_web_profile:clinton-capital-partners:2026-08-14",
+  "operation": "upsert",
+  "data": {
+    "source_urls": [
+      "https://www.clintoncapitalpartners.com.au/",
+      "https://au.linkedin.com/company/clinton-capital-partners"
+    ],
+    "retrieved_at": "2026-08-14",
+    "website_status": "verified_public_profile",
+    "raw_content_hash": null,
+    "raw_content_ref": null,
+    "extraction_model": "codex-2024-investor-dedupe-update",
+    "extraction_version": "1.0.0",
+    "confidence": "medium",
+    "claimed_thesis": "Technology",
+    "claimed_stages": [
+      "Capital raising"
+    ],
+    "claimed_sectors": [
+      "Technology"
+    ],
+    "claimed_geographies": [
+      "Australia"
+    ],
+    "claimed_business_models": [],
+    "claimed_cheque_min": null,
+    "claimed_cheque_max": null,
+    "claimed_cheque_currency": null,
+    "contact_emails": [],
+    "application_url": null,
+    "contact_notes": "Official transaction page confirms adviser/arranger role; underlying family-office investors are undisclosed.",
+    "is_current": true,
+    "superseded_at": null
+  },
+  "refs": {
+    "investor_key": "investor:clinton-capital-partners"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "research_source:clinton-capital-partners:clinton-capital-partners_src_official",
+      "research_source:clinton-capital-partners:clinton-capital-partners_src_linkedin",
+      "research_source:clinton-capital-partners:clinton-capital-partners_src_deal"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Research collection status: partial",
+      "crunchbase_profile_not_verified",
+      "identity_or_transaction_conflict"
+    ]
+  }
+}

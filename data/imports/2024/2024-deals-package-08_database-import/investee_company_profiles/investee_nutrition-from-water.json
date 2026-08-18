@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:nutrition-from-water",
+  "operation": "upsert",
+  "data": {
+    "name": "Nutrition from Water",
+    "website_url": "https://www.nutritionfromwater.com/",
+    "crunchbase_uuid": null,
+    "hq_country": null,
+    "hq_state": null,
+    "hq_city": null,
+    "is_anz": false,
+    "sector_primary": "food-tech-industrial-biotech",
+    "sector_secondary": null,
+    "use_case_primary": "microalgae-biotechnology-company-producing-protein-rich-low-impact-food-ingredients-from-aquatic-biomass",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "ingredients-manufacturing",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Microalgae biotechnology company producing protein-rich, low-impact food ingredients from aquatic biomass.",
+    "source_urls": [
+      "https://www.nutritionfromwater.com/",
+      "https://sosv.com/company/nutrition-from-water/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "medium"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Investee headquarters country could not be normalized from the research package."
+    ]
+  }
+}

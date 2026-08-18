@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_external_ids",
+  "record_key": "investor_external_id:crunchbase:reinventure-group",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "crunchbase",
+    "external_id": "reinventure-group",
+    "external_url": "https://www.crunchbase.com/organization/reinventure-group",
+    "first_seen_at": "2026-07-22",
+    "last_seen_at": "2026-07-22"
+  },
+  "refs": {
+    "investor_key": "investor:reinventure"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research:2026-07-24",
+    "source_keys": [
+      "research_source:reinventure:reinventure_src_crunchbase"
+    ]
+  },
+  "review": {
+    "status": "unreviewed",
+    "issues": []
+  }
+}

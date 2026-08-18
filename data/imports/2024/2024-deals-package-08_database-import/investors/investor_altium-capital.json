@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investors",
+  "record_key": "investor:altium-capital",
+  "operation": "upsert",
+  "data": {
+    "canonical_name": "Alium Capital Management",
+    "aliases": [
+      "Altium Capital",
+      "Alium Capital"
+    ],
+    "investor_type": "vc_fund",
+    "investor_subtype": "Investment manager / VC",
+    "eligibility_mode": "research_package_confirmed",
+    "classification_confidence": "high",
+    "classification_evidence_urls": [
+      "https://aliumcap.com/",
+      "https://www.linkedin.com/company/alium-capital",
+      "https://www.aliumcap.com/"
+    ],
+    "classified_at": "2026-08-14",
+    "website_url": "https://www.aliumcap.com/",
+    "linkedin_url": "https://www.linkedin.com/company/alium-capital",
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": "Sydney",
+    "offices": [],
+    "status": "active",
+    "merged_into_id": null,
+    "review_status": "reviewed",
+    "last_reviewed_at": "2026-08-14",
+    "last_reviewed_by": "codex-2024-investor-dedupe-update",
+    "identity_resolution": "existing_investor_update",
+    "matched_existing_record_key": "investor:altium-capital",
+    "identity_match_method": "exact_existing_key",
+    "identity_match_source": "historical_import:recent-deal2026-7-30_deals-121-180_delta_identity-audited-v3_team-audited"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-153",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-153",
+    "dedupe_key": "2024|theianova|ownership-program-relationship-exact-2024-close-unverified|seed",
+    "source_url": "https://www.companyhub.nz/companyDetails.cfm?nzbn=9429050817085",
+    "source_payload": {
+      "deal_number": 153,
+      "csv_investee": "TheiaNova",
+      "normalized_investee": "TheiaNova",
+      "csv_date": "2024-02-03",
+      "normalized_date": "Ownership/program relationship; exact 2024 close unverified",
+      "csv_round": "Seed",
+      "normalized_round": "Deeptech incubation / seed backing",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Bridgewest Ventures; Callaghan Innovation; Uniservices",
+      "normalized_investors": "Bridgewest Ventures; Auckland UniServices; Callaghan Innovation program support",
+      "verification": "partial",
+      "correction_or_issue": "Company ownership confirms Bridgewest nominee and UniServices stakes; Callaghan supports the incubator model, but no exact 2024 seed close was located.",
+      "primary_source": "https://www.companyhub.nz/companyDetails.cfm?nzbn=9429050817085",
+      "secondary_source": "https://www.callaghaninnovation.govt.nz/our-providers/bridgewest-ventures-nz/"
+    },
+    "investee_name_raw": "TheiaNova",
+    "org_location_raw": "Auckland, New Zealand",
+    "org_website_raw": "https://www.theianova.com/",
+    "org_industries_raw": "Medtech / Ophthalmology",
+    "round_type_raw": "Deeptech incubation / seed backing",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": null,
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Bridgewest Ventures; Auckland UniServices; Callaghan Innovation program support",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://www.companyhub.nz/companyDetails.cfm?nzbn=9429050817085",
+    "verification_notes": "Company ownership confirms Bridgewest nominee and UniServices stakes; Callaghan supports the incubator model, but no exact 2024 seed close was located.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:theianova"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:a61432a8edc4bcb7093b",
+      "source:url:a213a0aefde18d4fbb7a"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Company ownership confirms Bridgewest nominee and UniServices stakes; Callaghan supports the incubator model, but no exact 2024 seed close was located.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

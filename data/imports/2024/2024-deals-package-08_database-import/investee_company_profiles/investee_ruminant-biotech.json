@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:ruminant-biotech",
+  "operation": "upsert",
+  "data": {
+    "name": "Ruminant BioTech",
+    "website_url": "https://ruminantbiotech.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "NZ",
+    "hq_state": null,
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "agtech-climate-biotech",
+    "sector_secondary": null,
+    "use_case_primary": "agritech-company-developing-a-slow-release-rumen-bolus-that-delivers-methane-inhibitors-to-pasture-fed-cattle-over-exten",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "animal-health-product-carbon-outcomes",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Agritech company developing a slow-release rumen bolus that delivers methane inhibitors to pasture-fed cattle over extended periods.",
+    "source_urls": [
+      "https://ruminantbiotech.com/",
+      "https://www.carbonnews.co.nz/news/32410/agrizeronz-invests-extra-4m-in-kiwi-company-developing-methane-inhibiting-bolus",
+      "https://www.treasury.govt.nz/sites/default/files/2025-06/oia-20250229.pdf"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

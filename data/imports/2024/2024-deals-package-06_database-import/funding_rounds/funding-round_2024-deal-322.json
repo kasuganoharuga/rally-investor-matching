@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-322",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-322",
+    "dedupe_key": "2024|hola-health-pack-a-pill-pty-ltd|2024-03-18|series_a",
+    "source_url": "https://medium.com/m8-ventures/announcing-hola-healths-aud4-5m-pre-series-a-led-by-m8-ventures-b903c8b8eb5b",
+    "source_payload": {
+      "deal_number": 322,
+      "csv_investee": "Hola Health",
+      "normalized_investee": "Hola Health / Pack A Pill Pty Ltd",
+      "csv_date": "2024-03-19",
+      "normalized_date": "2024-03-18 announcement",
+      "csv_round": "Seed",
+      "normalized_round": "Pre-Series A",
+      "csv_amount": "AUD 4,500,000",
+      "normalized_amount": "AUD 4,500,000",
+      "csv_investors": "Fund WA; M8 Ventures",
+      "normalized_investors": "M8 Ventures (lead); FundWA; existing angels",
+      "verification": "corrected",
+      "correction_or_issue": "M8's investment note classifies the round as Pre-Series A and confirms A$4.5m; the CSV stage is corrected.",
+      "primary_source": "https://medium.com/m8-ventures/announcing-hola-healths-aud4-5m-pre-series-a-led-by-m8-ventures-b903c8b8eb5b",
+      "secondary_source": "https://www.overnightsuccess.vc/p/23rd-mar-2023"
+    },
+    "investee_name_raw": "Hola Health / Pack A Pill Pty Ltd",
+    "org_location_raw": "Perth, WA, Australia",
+    "org_website_raw": "https://hola.health/",
+    "org_industries_raw": "Digital Health / Telehealth",
+    "round_type_raw": "Pre-Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-03-18",
+    "money_raised_raw": "AUD 4,500,000",
+    "amount": 4500000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "M8 Ventures (lead); FundWA; existing angels",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://medium.com/m8-ventures/announcing-hola-healths-aud4-5m-pre-series-a-led-by-m8-ventures-b903c8b8eb5b",
+    "verification_notes": "M8's investment note classifies the round as Pre-Series A and confirms A$4.5m; the CSV stage is corrected.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:hola-health"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:15eb4886dc6f06284b06",
+      "source:url:3b7fb699cd0dbc689765"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

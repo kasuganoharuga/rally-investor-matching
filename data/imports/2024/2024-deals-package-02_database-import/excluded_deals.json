@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-02_database-import",
+  "policy": "Duplicate, outside-window, out-of-scope, and explicitly rejected financing rows do not create funding-round upserts, but remain fully auditable here.",
+  "counts": {
+    "source_deals": 60,
+    "imported": 57,
+    "excluded": 3
+  },
+  "excluded_deals": [
+    {
+      "deal_number": 62,
+      "investee": "Snapcash",
+      "verification": "rejected_financing",
+      "reason": "Official accelerator profile labels Snapcash bootstrapped; do not create a financing event.",
+      "source_excel_row": 3,
+      "primary_source": "https://www.startupbootcamp.com.au/alumni/snapcash",
+      "secondary_source": "https://www.startupbootcamp.com.au/selection-days/ft24"
+    },
+    {
+      "deal_number": 100,
+      "investee": "Amicii",
+      "verification": "rejected_financing",
+      "reason": "Official FI announcement confirms portfolio/cohort status, not a disclosed seed financing event.",
+      "source_excel_row": 41,
+      "primary_source": "https://fi.co/insight/founder-institute-australia-produces-9-new-technology-companies",
+      "secondary_source": "https://amicii.io/"
+    },
+    {
+      "deal_number": 112,
+      "investee": "TechDojo / TalentDojo",
+      "verification": "rejected_financing",
+      "reason": "Official FI announcement lists TechDojo as a portfolio graduate, not a disclosed seed financing.",
+      "source_excel_row": 53,
+      "primary_source": "https://fi.co/insight/founder-institute-australia-produces-9-new-technology-companies",
+      "secondary_source": "https://techdojo.pro/"
+    }
+  ]
+}

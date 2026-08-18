@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-425",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-425",
+    "dedupe_key": "2024|cauldron|2024-03-19|series_a",
+    "source_url": "https://www.cauldronferm.com/post/cauldron-raises-9-5m-aud-series-a-to-scale-its-continuous-hyper-fermentation-technology",
+    "source_payload": {
+      "deal_number": 425,
+      "csv_investee": "Cauldron Ferm",
+      "normalized_investee": "Cauldron",
+      "csv_date": "2024-03-18",
+      "normalized_date": "2024-03-19 announcement",
+      "csv_round": "Series A",
+      "normalized_round": "Series A",
+      "csv_amount": "AUD 9,500,000",
+      "normalized_amount": "AUD 9,500,000",
+      "csv_investors": "Horizons Ventures; IQT; Main Sequence Ventures; SOSV",
+      "normalized_investors": "Horizons Ventures (lead); SOSV; In-Q-Tel; Main Sequence",
+      "verification": "verified",
+      "correction_or_issue": "Official company announcement confirms amount, stage and syndicate.",
+      "primary_source": "https://www.cauldronferm.com/post/cauldron-raises-9-5m-aud-series-a-to-scale-its-continuous-hyper-fermentation-technology",
+      "secondary_source": "https://sub11.com.au/2024/03/19/cauldron-ferm-closes-series-a-24625m-usd-2495m-aud-round/"
+    },
+    "investee_name_raw": "Cauldron",
+    "org_location_raw": "Orange, NSW, Australia",
+    "org_website_raw": "https://www.cauldronferm.com/",
+    "org_industries_raw": "Industrial Biotech / Climate Tech",
+    "round_type_raw": "Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-03-19",
+    "money_raised_raw": "AUD 9,500,000",
+    "amount": 9500000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Horizons Ventures (lead); SOSV; In-Q-Tel; Main Sequence",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-08_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.cauldronferm.com/post/cauldron-raises-9-5m-aud-series-a-to-scale-its-continuous-hyper-fermentation-technology",
+    "verification_notes": "Official company announcement confirms amount, stage and syndicate.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:cauldron"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": [
+      "source:url:4a33dd4eafa57611a390",
+      "source:url:8aea200f52fcec4d9975"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

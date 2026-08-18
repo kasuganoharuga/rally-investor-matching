@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-368",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-368",
+    "dedupe_key": "2024|mys-tyler|2024-11-database-record-only|pre_seed",
+    "source_url": "http://www.mys-tyler.com",
+    "source_payload": {
+      "deal_number": 368,
+      "csv_investee": "Mys Tyler",
+      "normalized_investee": "Mys Tyler",
+      "csv_date": "2024-11-01",
+      "normalized_date": "2024-11 (database record only)",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-seed / database-only",
+      "csv_amount": "AUD 512,000",
+      "normalized_amount": "Unverified",
+      "csv_investors": "Goodwater Capital",
+      "normalized_investors": "Goodwater Capital (database attribution only)",
+      "verification": "needs_review",
+      "correction_or_issue": "Company and investor identity are valid, but no reliable public event source was found for the exact amount or close date.",
+      "primary_source": "http://www.mys-tyler.com",
+      "secondary_source": "https://www.goodwatercap.com/"
+    },
+    "investee_name_raw": "Mys Tyler",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "http://www.mys-tyler.com",
+    "org_industries_raw": "Fashion Tech / Social Commerce",
+    "round_type_raw": "Pre-seed / database-only",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "Unverified",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Goodwater Capital (database attribution only)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "http://www.mys-tyler.com",
+    "verification_notes": "Company and investor identity are valid, but no reliable public event source was found for the exact amount or close date.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown",
+    "amount_disclosure_status": "amount_unverified_company_and_investor_only",
+    "amount_structuring_note": "Company and investor identities are valid, but the A$512k event amount is not independently verified.",
+    "supplemental_verification_urls": []
+  },
+  "refs": {
+    "investee_company_key": "company:research:mys-tyler"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:deddd9e013fbfd13a807",
+      "source:url:15e27bd7891a4b11076d"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Company and investor identity are valid, but no reliable public event source was found for the exact amount or close date.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

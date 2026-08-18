@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:slice",
+  "operation": "upsert",
+  "data": {
+    "name": "Slice",
+    "website_url": "https://www.slicegroup.co/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "travel-fintech-payments",
+    "sector_secondary": null,
+    "use_case_primary": "travel-payment-platform-allowing-consumers-to-lock-in-trips-with-a-deposit-and-pay-by-instalments-before-travel",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "merchant-and-consumer-payment-services",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Travel payment platform allowing consumers to lock in trips with a deposit and pay by instalments before travel.",
+    "source_urls": [
+      "https://www.slicegroup.co/",
+      "https://www.hsfkramer.com/news/2024-08/hsf-advises-slice-on-its-series-seed-capital-raise",
+      "https://www.businessnewsaustralia.com/articles/-we-bet-the-farm---how-slice-founders-dug-deep--beat-the-odds-and-secured--17-5m.html"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

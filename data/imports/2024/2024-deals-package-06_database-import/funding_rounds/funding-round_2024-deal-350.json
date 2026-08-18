@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-350",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-350",
+    "dedupe_key": "2024|natural-extraction-technologies-ne-tech|2024-08-05|program_or_grant",
+    "source_url": "https://www.linkedin.com/posts/startmate_official-announcement-winter24-accelerator-activity-7226015699192725505-aoEY",
+    "source_payload": {
+      "deal_number": 350,
+      "csv_investee": "NE Tech",
+      "normalized_investee": "Natural Extraction Technologies / NE Tech",
+      "csv_date": "2024-08-02",
+      "normalized_date": "2024-08-05",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Startmate accelerator SAFE",
+      "csv_amount": "AUD 120,000",
+      "normalized_amount": "AUD 120,000 at standard program terms",
+      "csv_investors": "Startmate",
+      "normalized_investors": "Startmate",
+      "verification": "verified_program",
+      "correction_or_issue": "Startmate officially lists NE Tech in Winter 2024; amount reflects the program's standard accelerator investment terms.",
+      "primary_source": "https://www.linkedin.com/posts/startmate_official-announcement-winter24-accelerator-activity-7226015699192725505-aoEY",
+      "secondary_source": "https://naturalextech.com/"
+    },
+    "investee_name_raw": "Natural Extraction Technologies / NE Tech",
+    "org_location_raw": "Christchurch, New Zealand",
+    "org_website_raw": "https://naturalextech.com/",
+    "org_industries_raw": "Climate Tech / Industrial Processing",
+    "round_type_raw": "Startmate accelerator SAFE",
+    "round_stage": "program_or_grant",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-08-05",
+    "money_raised_raw": "AUD 120,000 at standard program terms",
+    "amount": 120000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Startmate",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "verified_program",
+    "verification_source_url": "https://www.linkedin.com/posts/startmate_official-announcement-winter24-accelerator-activity-7226015699192725505-aoEY",
+    "verification_notes": "Startmate officially lists NE Tech in Winter 2024; amount reflects the program's standard accelerator investment terms. Exact day records the publication date of the public investment or cohort announcement; it is not represented as an inferred legal closing date.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day",
+    "date_basis": "public_announcement_publication_date",
+    "date_derivation_method": "linkedin_activity_id_timestamp",
+    "supplemental_verification_urls": [
+      "https://www.linkedin.com/posts/startmate_official-announcement-winter24-accelerator-activity-7226015699192725505-aoEY"
+    ]
+  },
+  "refs": {
+    "investee_company_key": "company:research:ne-tech"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:a01b77da2a99a05b40bd",
+      "source:url:d8d68ad39ea7bea111b1"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

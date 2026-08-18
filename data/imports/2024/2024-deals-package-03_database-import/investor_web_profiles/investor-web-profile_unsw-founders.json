@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_web_profiles",
+  "record_key": "investor_web_profile:unsw-founders:2026-08-14",
+  "operation": "upsert",
+  "data": {
+    "source_urls": [
+      "https://unswfounders.com/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "website_status": "verified_public_profile",
+    "raw_content_hash": null,
+    "raw_content_ref": null,
+    "extraction_model": "codex-2024-investor-dedupe-update",
+    "extraction_version": "1.0.0",
+    "confidence": "medium",
+    "claimed_thesis": "University-affiliated startups",
+    "claimed_stages": [
+      "Pre-seed"
+    ],
+    "claimed_sectors": [
+      "University-affiliated startups"
+    ],
+    "claimed_geographies": [
+      "Sydney, Australia"
+    ],
+    "claimed_business_models": [],
+    "claimed_cheque_min": null,
+    "claimed_cheque_max": null,
+    "claimed_cheque_currency": null,
+    "contact_emails": [],
+    "application_url": null,
+    "contact_notes": "Official cohort and A$110k program investment. | Created in Group 08; 2024 event timing remains conflicted.",
+    "is_current": true,
+    "superseded_at": null
+  },
+  "refs": {
+    "investor_key": "investor:unsw-founders"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

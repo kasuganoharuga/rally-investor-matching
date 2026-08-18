@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-302",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-302",
+    "dedupe_key": "2024|teiny|2024-09-02|unknown",
+    "source_url": "https://climatevcfund.com/climate-vc-fund-backs-teiny-nutritionally-complete-oat-milk-powder/",
+    "source_payload": {
+      "deal_number": 302,
+      "csv_investee": "Teiny",
+      "normalized_investee": "Teiny",
+      "csv_date": "2024-09-02",
+      "normalized_date": "2024-09-02",
+      "csv_round": "Seed",
+      "normalized_round": "Early-stage equity round",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Climate Venture Capital Fund",
+      "normalized_investors": "Climate Venture Capital Fund; friends and family",
+      "verification": "verified",
+      "correction_or_issue": "Climate VC Fund says it was the largest investor in Teiny's early-stage round; the amount and full friends-and-family syndicate were not disclosed.",
+      "primary_source": "https://climatevcfund.com/climate-vc-fund-backs-teiny-nutritionally-complete-oat-milk-powder/",
+      "secondary_source": "https://climatevcfund.com/portfolio/teiny/"
+    },
+    "investee_name_raw": "Teiny",
+    "org_location_raw": "Christchurch, New Zealand",
+    "org_website_raw": "https://www.teiny.co.nz/",
+    "org_industries_raw": "Foodtech / Climate",
+    "round_type_raw": "Early-stage equity round",
+    "round_stage": "unknown",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-09-02",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Climate Venture Capital Fund; friends and family",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://climatevcfund.com/climate-vc-fund-backs-teiny-nutritionally-complete-oat-milk-powder/",
+    "verification_notes": "Climate VC Fund says it was the largest investor in Teiny's early-stage round; the amount and full friends-and-family syndicate were not disclosed.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:teiny"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:ac308cbefc2674023bd9",
+      "source:url:2b1abb00d4d79d16d083"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-332",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-332",
+    "dedupe_key": "2024|lorikeet-formerly-optech|2024-10-03|seed",
+    "source_url": "https://www.prnewswire.com/news-releases/lorikeet-secures-5-million-in-funding-to-empower-cx-teams-with-first-ai-agent-that-offers-human-quality-support-at-scale-302266748.html",
+    "source_payload": {
+      "deal_number": 332,
+      "csv_investee": "Lorikeet",
+      "normalized_investee": "Lorikeet (formerly Optech)",
+      "csv_date": "2024-10-03",
+      "normalized_date": "2024-10-03",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "USD 5,000,000",
+      "normalized_amount": "USD 5,000,000",
+      "csv_investors": "Bob van Winden; Capital 49; Claire Hughes Johnson; Cosmin Nicolescu; Cristina Cordova; Jamie Cuffe; Kalyani Iyer; Keith Walewski; Kenneth Auchenberg; Kristin Thayer; Skip Capital; Snir Kodesh; Square Peg Capital; Tara Seshan",
+      "normalized_investors": "Square Peg Capital (lead); Skip Capital; Capital 49; technology executives and angels",
+      "verification": "partial",
+      "correction_or_issue": "The company confirms US$5m and Square Peg. The institutional and individual names in the CSV are retained as reported, but most were not individually named in the public company release.",
+      "primary_source": "https://www.prnewswire.com/news-releases/lorikeet-secures-5-million-in-funding-to-empower-cx-teams-with-first-ai-agent-that-offers-human-quality-support-at-scale-302266748.html",
+      "secondary_source": "https://www.prnewswire.com/apac/news-releases/lorikeet-secures-9-million-in-additional-funding-as-market-demand-surges-for-its-ai-customer-support-agents-302368163.html"
+    },
+    "investee_name_raw": "Lorikeet (formerly Optech)",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.lorikeetcx.ai/",
+    "org_industries_raw": "Enterprise AI / Customer Support",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-10-03",
+    "money_raised_raw": "USD 5,000,000",
+    "amount": 5000000,
+    "currency": "USD",
+    "amount_usd": 5000000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Square Peg Capital (lead); Skip Capital; Capital 49; technology executives and angels",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://www.prnewswire.com/news-releases/lorikeet-secures-5-million-in-funding-to-empower-cx-teams-with-first-ai-agent-that-offers-human-quality-support-at-scale-302266748.html",
+    "verification_notes": "The company confirms US$5m and Square Peg. The institutional and individual names in the CSV are retained as reported, but most were not individually named in the public company release.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:lorikeet"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:476d5c8bc45d6ddbecb3",
+      "source:url:193d00a920246044c2a9"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "The company confirms US$5m and Square Peg. The institutional and individual names in the CSV are retained as reported, but most were not individually named in the public company release."
+    ]
+  }
+}

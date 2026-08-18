@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-378",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-378",
+    "dedupe_key": "2024|vertus-energy|2024-06-27|seed",
+    "source_url": "https://www.amadeuscapital.com/vertus-energy-secures-e8-75m-seed-funding-to-drive-delivery-of-european-renewable-energy-agenda/",
+    "source_payload": {
+      "deal_number": 378,
+      "csv_investee": "Vertus Energy",
+      "normalized_investee": "Vertus Energy",
+      "csv_date": "2024-06-27",
+      "normalized_date": "2024-06-27",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "EUR 8,750,000",
+      "normalized_amount": "EUR 8,750,000",
+      "csv_investors": "Energy Capital Ventures; Amadeus APEX; Aussie Angels; Blackbird; Icehouse; NOAB; Outset Ventures; Startmate",
+      "normalized_investors": "Energy Capital Ventures (lead); Blackbird; Amadeus APEX Technology Fund; Aussie Angels; Icehouse Ventures; Outset Ventures; Startmate; NOAB Ventures",
+      "verification": "verified",
+      "correction_or_issue": "Investor and company releases confirm amount, lead and new/existing syndicate.",
+      "primary_source": "https://www.amadeuscapital.com/vertus-energy-secures-e8-75m-seed-funding-to-drive-delivery-of-european-renewable-energy-agenda/",
+      "secondary_source": "https://www.vertusenergy.com/articles"
+    },
+    "investee_name_raw": "Vertus Energy",
+    "org_location_raw": "Auckland-founded / Vienna and UK operations",
+    "org_website_raw": "https://www.vertusenergy.com/",
+    "org_industries_raw": "Climate Tech / Industrial Biotech",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-06-27",
+    "money_raised_raw": "EUR 8,750,000",
+    "amount": 8750000,
+    "currency": "EUR",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Energy Capital Ventures (lead); Blackbird; Amadeus APEX Technology Fund; Aussie Angels; Icehouse Ventures; Outset Ventures; Startmate; NOAB Ventures",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.amadeuscapital.com/vertus-energy-secures-e8-75m-seed-funding-to-drive-delivery-of-european-renewable-energy-agenda/",
+    "verification_notes": "Investor and company releases confirm amount, lead and new/existing syndicate.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:vertus-energy"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:2c390870575d88376e16",
+      "source:url:60e5bc2489bffa69b27e"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

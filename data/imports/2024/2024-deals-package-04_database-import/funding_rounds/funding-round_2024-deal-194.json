@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-194",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-194",
+    "dedupe_key": "2024|throughline|2024-portfolio-database-relationship-exact-date-unverified|unknown",
+    "source_url": "https://www.alberts.co/impact-ventures/",
+    "source_payload": {
+      "deal_number": 194,
+      "csv_investee": "ThroughLine",
+      "normalized_investee": "Throughline",
+      "csv_date": "2024-01-01",
+      "normalized_date": "2024 portfolio/database relationship; exact date unverified",
+      "csv_round": "Seed",
+      "normalized_round": "Venture investment",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Alberts Impact Ventures",
+      "normalized_investors": "Alberts Impact Capital",
+      "verification": "partial",
+      "correction_or_issue": "Alberts officially lists Throughline in its portfolio and funding databases place a venture round in 2024, but amount and exact date remain undisclosed.",
+      "primary_source": "https://www.alberts.co/impact-ventures/",
+      "secondary_source": "https://teaserclub.com/investors/53e94a5b-d4fd-4502-97ca-9ec280c65132"
+    },
+    "investee_name_raw": "Throughline",
+    "org_location_raw": "Auckland, New Zealand / global",
+    "org_website_raw": "https://www.throughlinecare.com/",
+    "org_industries_raw": "Digital Health / Mental Health",
+    "round_type_raw": "Venture investment",
+    "round_stage": "unknown",
+    "funding_stage_raw": "Seed",
+    "announced_date": null,
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Alberts Impact Capital",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://www.alberts.co/impact-ventures/",
+    "verification_notes": "Alberts officially lists Throughline in its portfolio and funding databases place a venture round in 2024, but amount and exact date remain undisclosed.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:throughline"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:d023decfddb9481cbae0",
+      "source:url:8f684d15a64d71774123"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Alberts officially lists Throughline in its portfolio and funding databases place a venture round in 2024, but amount and exact date remain undisclosed.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

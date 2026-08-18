@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-293",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-293",
+    "dedupe_key": "2024|packaged|2024-01-01|seed",
+    "source_url": "https://www.crunchbase.com/organization/packaged-9803",
+    "source_payload": {
+      "deal_number": 293,
+      "csv_investee": "Packaged",
+      "normalized_investee": "Packaged",
+      "csv_date": "2024-01-01",
+      "normalized_date": "2024-01-01 database placeholder",
+      "csv_round": "Seed",
+      "normalized_round": "Unverified seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Utiliti Group",
+      "normalized_investors": "Utiliti Group (database-only)",
+      "verification": "partial",
+      "correction_or_issue": "Crunchbase identifies the company, investor and an undisclosed seed entry, but no primary announcement establishes a genuine 1 January close.",
+      "primary_source": "https://www.crunchbase.com/organization/packaged-9803",
+      "secondary_source": "https://packaged.com.au/"
+    },
+    "investee_name_raw": "Packaged",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://packaged.com.au/",
+    "org_industries_raw": "Climate Tech / Packaging",
+    "round_type_raw": "Unverified seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-01-01",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Utiliti Group (database-only)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://www.crunchbase.com/organization/packaged-9803",
+    "verification_notes": "Crunchbase identifies the company, investor and an undisclosed seed entry, but no primary announcement establishes a genuine 1 January close.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:packaged"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:30abde1883cbd264820e",
+      "source:url:f9a81ffe86db4a15e787"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Crunchbase identifies the company, investor and an undisclosed seed entry, but no primary announcement establishes a genuine 1 January close.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

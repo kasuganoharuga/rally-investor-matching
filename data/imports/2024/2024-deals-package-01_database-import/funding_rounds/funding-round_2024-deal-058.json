@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-058",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-058",
+    "dedupe_key": "2024|lyngo-ai|2024-exact-close-date-undisclosed|pre_seed",
+    "source_url": "https://au.linkedin.com/company/lyngo-ai",
+    "source_payload": {
+      "deal_number": 58,
+      "csv_investee": "Lyngo",
+      "normalized_investee": "Lyngo AI",
+      "csv_date": "2024-11-18",
+      "normalized_date": "2024 (exact close date undisclosed)",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-Seed",
+      "csv_amount": "AUD 999,999",
+      "normalized_amount": "AUD 225,000",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Antler Australia",
+      "verification": "corrected",
+      "correction_or_issue": "Founder and funding roundup confirm Antler; CSV amount replaced with A$225k.",
+      "primary_source": "https://au.linkedin.com/company/lyngo-ai",
+      "secondary_source": "https://www.linkedin.com/pulse/week-australian-startups-91-3rd-november-2024-haris-qureshi-yau7c"
+    },
+    "investee_name_raw": "Lyngo AI",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.lyngo.ai/",
+    "org_industries_raw": "Healthtech / Voice AI",
+    "round_type_raw": "Pre-Seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "AUD 225,000",
+    "amount": 225000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Antler Australia",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://au.linkedin.com/company/lyngo-ai",
+    "verification_notes": "Founder and funding roundup confirm Antler; CSV amount replaced with A$225k.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:lyngo-ai"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:1babd39041bb840fcf64",
+      "source:url:3da2162632d75e8927ea"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

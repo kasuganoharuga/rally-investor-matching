@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-329",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-329",
+    "dedupe_key": "2024|audd-audc-pty-ltd|2024-01-24|pre_seed",
+    "source_url": "https://www.novatti.com/wp-content/uploads/2024/01/AUDD-self-funding-as-pre-seed-round-increased-to-meet-investor-demand.pdf",
+    "source_payload": {
+      "deal_number": 329,
+      "csv_investee": "AUDC",
+      "normalized_investee": "AUDD / AUDC Pty Ltd",
+      "csv_date": "2024-09-01",
+      "normalized_date": "2024-01-24",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-seed",
+      "csv_amount": "AUD 250,000",
+      "normalized_amount": "AUD 600,000",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Private investors and management (not named)",
+      "verification": "corrected",
+      "correction_or_issue": "Novatti's ASX announcement confirms A$600k at a A$2.4m pre-money valuation in January 2024. The CSV amount and September date are incorrect.",
+      "primary_source": "https://www.novatti.com/wp-content/uploads/2024/01/AUDD-self-funding-as-pre-seed-round-increased-to-meet-investor-demand.pdf",
+      "secondary_source": "https://www.novatti.com/wp-content/uploads/2024/02/NOV-Report-Feb-2024_v1.0.pdf"
+    },
+    "investee_name_raw": "AUDD / AUDC Pty Ltd",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.audd.digital/",
+    "org_industries_raw": "Fintech / Digital Assets",
+    "round_type_raw": "Pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-01-24",
+    "money_raised_raw": "AUD 600,000",
+    "amount": 600000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Private investors and management (not named)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.novatti.com/wp-content/uploads/2024/01/AUDD-self-funding-as-pre-seed-round-increased-to-meet-investor-demand.pdf",
+    "verification_notes": "Novatti's ASX announcement confirms A$600k at a A$2.4m pre-money valuation in January 2024. The CSV amount and September date are incorrect.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:audd"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:78eff1487412d55fe322",
+      "source:url:e777e377cc5c4e6c2f00"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

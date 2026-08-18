@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-416",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-416",
+    "dedupe_key": "2024|starboard-maritime-intelligence|2024-04-04|seed",
+    "source_url": "https://m.scoop.co.nz/stories/SC2404/S00004/new-zealand-tech-helping-to-protect-our-oceans-secures-investment.htm",
+    "source_payload": {
+      "deal_number": 416,
+      "csv_investee": "Starboard Maritime Intelligence",
+      "normalized_investee": "Starboard Maritime Intelligence",
+      "csv_date": "2024-04-04",
+      "normalized_date": "2024-04-04",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "NZD 5,000,000",
+      "normalized_amount": "NZD 5,000,000",
+      "csv_investors": "Altered Capital; Icehouse; Invest South; SeaAhead; Soul Capital; Whakatupu Aotearoa Foundation",
+      "normalized_investors": "Altered Capital (lead); Icehouse Ventures; Invest South; SeaAhead; Soul Capital; Whakatupu Aotearoa Foundation",
+      "verification": "verified",
+      "correction_or_issue": "Company release confirms amount and complete named syndicate.",
+      "primary_source": "https://m.scoop.co.nz/stories/SC2404/S00004/new-zealand-tech-helping-to-protect-our-oceans-secures-investment.htm",
+      "secondary_source": "https://starboard.nz/"
+    },
+    "investee_name_raw": "Starboard Maritime Intelligence",
+    "org_location_raw": "Wellington, New Zealand",
+    "org_website_raw": "https://starboard.nz/",
+    "org_industries_raw": "Maritime Tech / Data Intelligence",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-04-04",
+    "money_raised_raw": "NZD 5,000,000",
+    "amount": 5000000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Altered Capital (lead); Icehouse Ventures; Invest South; SeaAhead; Soul Capital; Whakatupu Aotearoa Foundation",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://m.scoop.co.nz/stories/SC2404/S00004/new-zealand-tech-helping-to-protect-our-oceans-secures-investment.htm",
+    "verification_notes": "Company release confirms amount and complete named syndicate.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:starboard-maritime-intelligence"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:40c77b8b09e079d23ee3",
+      "source:url:6128006c5245be2debba"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

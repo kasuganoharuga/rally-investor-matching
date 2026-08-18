@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-367",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-367",
+    "dedupe_key": "2024|auric-essentials-auric|2025-03-21|pre_seed",
+    "source_url": "https://www.auric.au/post/auric-essentials-secures-investment-from-antler-joining-an-elite-global-portfolio",
+    "source_payload": {
+      "deal_number": 367,
+      "csv_investee": "Auric Essentials",
+      "normalized_investee": "Auric Essentials / Auric",
+      "csv_date": "2024-10-16",
+      "normalized_date": "2024 Antler cohort; funding announced 2025-03-21",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Antler residency / pre-seed",
+      "csv_amount": "AUD 225,000",
+      "normalized_amount": "Antler investment confirmed; amount follows standard terms",
+      "csv_investors": "Antler Australia",
+      "normalized_investors": "Antler Australia",
+      "verification": "verified_program_timing_caveat",
+      "correction_or_issue": "Founder joined Antler Cohort 12 in July 2024, but the company announced that it was officially funded in March 2025. Retain the cohort relationship and do not overstate the 2024 close date.",
+      "primary_source": "https://www.auric.au/post/auric-essentials-secures-investment-from-antler-joining-an-elite-global-portfolio",
+      "secondary_source": "https://www.antler.co/blog/antler-australia-12th-residency-eight-new-ai-first-startup-investments"
+    },
+    "investee_name_raw": "Auric Essentials / Auric",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.auric.au/",
+    "org_industries_raw": "Wellness Tech / IoT / AI",
+    "round_type_raw": "Antler residency / pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2025-03-21",
+    "money_raised_raw": "Antler investment confirmed; amount follows standard terms",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Antler Australia",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "verified_program_timing_caveat",
+    "verification_source_url": "https://www.auric.au/post/auric-essentials-secures-investment-from-antler-joining-an-elite-global-portfolio",
+    "verification_notes": "Founder joined Antler Cohort 12 in July 2024, but the company announced that it was officially funded in March 2025. Retain the cohort relationship and do not overstate the 2024 close date.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "program_support_not_verified_as_round_amount",
+    "amount_structuring_note": "Program terms or support were not converted into a company-specific financing amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:auric-essentials"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:245cb8988a51d29c22f0",
+      "source:url:42d17fa4aef7303ecc25"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

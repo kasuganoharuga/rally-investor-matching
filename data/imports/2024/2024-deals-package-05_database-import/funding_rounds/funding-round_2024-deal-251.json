@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-251",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-251",
+    "dedupe_key": "2024|inspiring-holdings|2024-08-15|seed",
+    "source_url": "https://www.fundwa.com.au/fundwaportfolio",
+    "source_payload": {
+      "deal_number": 251,
+      "csv_investee": "Inspiring Holdings",
+      "normalized_investee": "Inspiring Holdings",
+      "csv_date": "2024-07-15",
+      "normalized_date": "2024-08-15 funding profile",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Fund WA",
+      "normalized_investors": "Fund WA",
+      "verification": "partial",
+      "correction_or_issue": "FundWA lists Inspiring Holdings in its portfolio and the company profile records an August 2024 seed, but amount and exact close terms are undisclosed.",
+      "primary_source": "https://www.fundwa.com.au/fundwaportfolio",
+      "secondary_source": "https://au.linkedin.com/company/inspiring-holdings-pty-ltd"
+    },
+    "investee_name_raw": "Inspiring Holdings",
+    "org_location_raw": "Nedlands, WA, Australia",
+    "org_website_raw": "https://www.irdd.com.au/",
+    "org_industries_raw": "Medtech / Respiratory",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-08-15",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Fund WA",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://www.fundwa.com.au/fundwaportfolio",
+    "verification_notes": "FundWA lists Inspiring Holdings in its portfolio and the company profile records an August 2024 seed, but amount and exact close terms are undisclosed.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:inspiring-holdings"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:ce5147eb1a61ab4aada0",
+      "source:url:bd1ae26123f3601d1383"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "FundWA lists Inspiring Holdings in its portfolio and the company profile records an August 2024 seed, but amount and exact close terms are undisclosed.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

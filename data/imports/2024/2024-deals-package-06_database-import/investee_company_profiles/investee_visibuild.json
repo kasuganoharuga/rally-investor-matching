@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:visibuild",
+  "operation": "upsert",
+  "data": {
+    "name": "Visibuild",
+    "website_url": "https://visibuild.com.au/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Victoria",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "contech-project-software",
+    "sector_secondary": null,
+    "use_case_primary": "construction-quality-management-platform-providing-real-time-site-visibility-inspections-defect-tracking-and-compliance-",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-saas",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Construction quality-management platform providing real-time site visibility, inspections, defect tracking and compliance workflows.",
+    "source_urls": [
+      "https://visibuild.com.au/",
+      "https://www.businessnewsaustralia.com/articles/construction-tech-visibuild-raises--6-6m-in-debut-capital-raise-backed-by-skip-capital.html"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

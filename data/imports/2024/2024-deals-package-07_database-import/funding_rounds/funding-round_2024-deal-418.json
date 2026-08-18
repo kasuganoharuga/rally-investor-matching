@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-418",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-418",
+    "dedupe_key": "2024|inform-ag|2024-08-27|series_a",
+    "source_url": "https://www.smartcompany.com.au/startupsmart/queensland-agtech-inform-ag-harvests-7-million-series-a/",
+    "source_payload": {
+      "deal_number": 418,
+      "csv_investee": "Inform Ag",
+      "normalized_investee": "Inform Ag",
+      "csv_date": "2024-08-27",
+      "normalized_date": "2024-08-27",
+      "csv_round": "Series A",
+      "normalized_round": "Series A equity plus convertible facility",
+      "csv_amount": "AUD 5,000,000",
+      "normalized_amount": "AUD 7,000,000 package: AUD 5m equity + AUD 2m convertible debt",
+      "csv_investors": "Rural Funds Group",
+      "normalized_investors": "Rural Funds Group (lead / sole disclosed institutional investor)",
+      "verification": "corrected_structure",
+      "correction_or_issue": "Reporting describes A$7m total funding; A$5m was equity and A$2m a convertible facility.",
+      "primary_source": "https://www.smartcompany.com.au/startupsmart/queensland-agtech-inform-ag-harvests-7-million-series-a/",
+      "secondary_source": "https://www.informag.com.au/"
+    },
+    "investee_name_raw": "Inform Ag",
+    "org_location_raw": "Mildura, VIC, Australia",
+    "org_website_raw": "https://www.informag.com.au/",
+    "org_industries_raw": "Agtech / Farm Management SaaS",
+    "round_type_raw": "Series A equity plus convertible facility",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-08-27",
+    "money_raised_raw": "AUD 7,000,000 package: AUD 5m equity + AUD 2m convertible debt",
+    "amount": 7000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Rural Funds Group (lead / sole disclosed institutional investor)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "corrected_structure",
+    "verification_source_url": "https://www.smartcompany.com.au/startupsmart/queensland-agtech-inform-ag-harvests-7-million-series-a/",
+    "verification_notes": "Reporting describes A$7m total funding; A$5m was equity and A$2m a convertible facility.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:inform-ag"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:0b2ad8b83b5ebec92b0a",
+      "source:url:9f254ac93f9ef6d75a8c"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

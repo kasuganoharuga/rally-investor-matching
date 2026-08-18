@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-184",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-184",
+    "dedupe_key": "2024|siteforge|2024-01-30|pre_seed",
+    "source_url": "https://www.crunchbase.com/funding_round/siteforge-pre-seed--51d88b19",
+    "source_payload": {
+      "deal_number": 184,
+      "csv_investee": "SiteForge",
+      "normalized_investee": "SiteForge",
+      "csv_date": "2024-01-30",
+      "normalized_date": "2024-01-30 (database date)",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-Seed",
+      "csv_amount": "USD 10,000",
+      "normalized_amount": "USD 10,000 (database-only)",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Undisclosed",
+      "verification": "needs_review",
+      "correction_or_issue": "No investor, primary financing announcement or independent evidence for the US$10k event was located.",
+      "primary_source": "https://www.crunchbase.com/funding_round/siteforge-pre-seed--51d88b19",
+      "secondary_source": "https://siteforge.io/"
+    },
+    "investee_name_raw": "SiteForge",
+    "org_location_raw": "Adelaide, SA, Australia",
+    "org_website_raw": "https://siteforge.io/",
+    "org_industries_raw": "Generative AI / Web Design",
+    "round_type_raw": "Pre-Seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-01-30",
+    "money_raised_raw": "USD 10,000 (database-only)",
+    "amount": 10000,
+    "currency": "USD",
+    "amount_usd": 10000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://www.crunchbase.com/funding_round/siteforge-pre-seed--51d88b19",
+    "verification_notes": "No investor, primary financing announcement or independent evidence for the US$10k event was located.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:siteforge"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:816116d92b7446747eaa",
+      "source:url:31b16301a657ef5a4e70"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "No investor, primary financing announcement or independent evidence for the US$10k event was located."
+    ]
+  }
+}

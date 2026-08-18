@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investors",
+  "record_key": "investor:mh-ventures",
+  "operation": "upsert",
+  "data": {
+    "canonical_name": "MH Ventures",
+    "aliases": [],
+    "investor_type": "vc_fund",
+    "investor_subtype": "Crypto VC",
+    "eligibility_mode": "research_package_confirmed",
+    "classification_confidence": "high",
+    "classification_evidence_urls": [
+      "https://mhventures.io/",
+      "https://www.linkedin.com/company/mhventure"
+    ],
+    "classified_at": "2026-08-14",
+    "website_url": "https://mhventures.io/",
+    "linkedin_url": "https://www.linkedin.com/company/mhventure",
+    "hq_country": "KY",
+    "hq_state": "Grand Cayman",
+    "hq_city": "George Town",
+    "offices": [],
+    "status": "active",
+    "merged_into_id": null,
+    "review_status": "needs_more_data",
+    "last_reviewed_at": "2026-08-14",
+    "last_reviewed_by": "codex-2024-investor-dedupe-update",
+    "identity_resolution": "existing_investor_update",
+    "matched_existing_record_key": "investor:mh-ventures",
+    "identity_match_method": "exact_existing_key",
+    "identity_match_source": "historical_import:recent-deal2026-7-30_deals-181-230_delta_identity-audited-v3_team-audited"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

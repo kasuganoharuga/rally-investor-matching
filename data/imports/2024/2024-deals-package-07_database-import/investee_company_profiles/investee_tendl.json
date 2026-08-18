@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:tendl",
+  "operation": "upsert",
+  "data": {
+    "name": "Tendl",
+    "website_url": "https://www.tendl.ai/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Queensland",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "enterprise-ai-tender-software",
+    "sector_secondary": null,
+    "use_case_primary": "ai-tender-management-platform-helping-organisations-discover-opportunities-and-prepare-higher-quality-submissions",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-saas",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "ai_related",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "AI tender-management platform helping organisations discover opportunities and prepare higher-quality submissions.",
+    "source_urls": [
+      "https://www.tendl.ai/",
+      "https://www.linkedin.com/posts/startmate_official-announcement-winter24-accelerator-activity-7226015699192725505-aoEY",
+      "https://www.startmate.com/writing/startmate-accelerator-frequent-questions-and-misconceptions"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

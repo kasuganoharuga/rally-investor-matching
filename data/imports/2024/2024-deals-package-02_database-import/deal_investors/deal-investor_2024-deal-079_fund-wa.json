@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "table": "deal_investors",
+  "record_key": "deal_investor:research-package:2024-deal-079:fund-wa",
+  "operation": "upsert",
+  "data": {
+    "raw_name": "Fund WA (identity unresolved)",
+    "role": "participant",
+    "participation_status": "confirmed",
+    "resolution": "resolved",
+    "resolution_confidence": "medium",
+    "identity_resolution": "existing_investor_deduped"
+  },
+  "refs": {
+    "deal_key": "funding_round:research-package:2024-deal-079",
+    "investor_key": "investor:fund-wa",
+    "raw_investor_candidate_key": "raw_investor_candidate:fund-wa-identity-unresolved"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Deal evidence remains incomplete; investor relation is preserved for review."
+    ]
+  }
+}

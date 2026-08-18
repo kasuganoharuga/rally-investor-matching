@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:projectworks",
+  "operation": "upsert",
+  "data": {
+    "name": "Projectworks",
+    "website_url": "https://projectworks.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "US",
+    "hq_state": null,
+    "hq_city": null,
+    "is_anz": false,
+    "sector_primary": "b2b-saas-professional-services-automation",
+    "sector_secondary": null,
+    "use_case_primary": "project-intelligence-and-professional-services-automation-platform-for-consulting-engineering-architecture-and-software-",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "subscription-saas",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Project intelligence and professional-services automation platform for consulting, engineering, architecture and software firms.",
+    "source_urls": [
+      "https://projectworks.com/",
+      "https://channellife.co.nz/story/nz-start-up-projectworks-valued-at-nzd-100-million",
+      "https://punakaikifund.co.nz/reports/Punakaiki-Fund-FY2025-Annual-Report.pdf"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

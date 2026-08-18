@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-028",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-028",
+    "dedupe_key": "2024|carbonaught|2024-09-06|unknown",
+    "source_url": "https://www.carbonaught.io/blog/carbonaught-joins-startmate-summer24-cohort",
+    "source_payload": {
+      "deal_number": 28,
+      "csv_investee": "Carbonaught",
+      "normalized_investee": "Carbonaught",
+      "csv_date": "2024-02-08",
+      "normalized_date": "2024-02 / 2024-09-06",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Two separate early-stage events",
+      "csv_amount": "USD 1,000,000",
+      "normalized_amount": "AUD 300,000 Startmate cohort; Better Bite amount undisclosed",
+      "csv_investors": "Better Bite Ventures (lead); Startmate",
+      "normalized_investors": "Startmate (Feb cohort); Better Bite Ventures (separate Sep investment)",
+      "verification": "corrected",
+      "correction_or_issue": "CSV appears to combine separate 2024 events and overstates/changes currency; retain as a flagged composite, not one US$1m round.",
+      "primary_source": "https://www.carbonaught.io/blog/carbonaught-joins-startmate-summer24-cohort",
+      "secondary_source": "https://www.betterbite.vc/post/new-investment-carbonaught"
+    },
+    "investee_name_raw": "Carbonaught",
+    "org_location_raw": "Brisbane, QLD, Australia",
+    "org_website_raw": "https://www.carbonaught.io",
+    "org_industries_raw": "Climate / Agtech / Carbon Removal",
+    "round_type_raw": "Two separate early-stage events",
+    "round_stage": "unknown",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-09-06",
+    "money_raised_raw": "AUD 300,000 Startmate cohort; Better Bite amount undisclosed",
+    "amount": 300000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Startmate (Feb cohort); Better Bite Ventures (separate Sep investment)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.carbonaught.io/blog/carbonaught-joins-startmate-summer24-cohort",
+    "verification_notes": "CSV appears to combine separate 2024 events and overstates/changes currency; retain as a flagged composite, not one US$1m round.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:carbonaught"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:8c813b6a2d6bbaf05e80",
+      "source:url:6a281d64c08b5d38b77d"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

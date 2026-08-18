@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:atelier",
+  "operation": "upsert",
+  "data": {
+    "name": "Atelier",
+    "website_url": "https://atelier.co/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "manufacturing-tech-beauty",
+    "sector_secondary": null,
+    "use_case_primary": "cloud-manufacturing-and-supply-chain-platform-for-beauty-health-and-wellness-brands",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-marketplace-saas",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Cloud manufacturing and supply-chain platform for beauty, health and wellness brands.",
+    "source_urls": [
+      "https://atelier.co/",
+      "https://www.startupdaily.net/topic/funding/macquarie-glams-up-makeup-maker-with-10-million-series-a/",
+      "https://www.linkedin.com/posts/macquariegroup_macquarie-capitals-venture-capital-team-activity-7256405598739513344-Hv5y"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

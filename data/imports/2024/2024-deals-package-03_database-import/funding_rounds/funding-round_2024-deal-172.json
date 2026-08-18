@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-172",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-172",
+    "dedupe_key": "2024|tability|2024-03-26|seed",
+    "source_url": "https://www.investible.com/blog-category/investment-notes",
+    "source_payload": {
+      "deal_number": 172,
+      "csv_investee": "Tability",
+      "normalized_investee": "Tability",
+      "csv_date": "2024-03-26",
+      "normalized_date": "2024-03-26",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Empress Capital; Investible; Jelix Ventures; Right Click Capital; Skalata",
+      "normalized_investors": "Investible (lead); Right Click Capital; Skalata Ventures; Empress Capital; Jelix Ventures; angels",
+      "verification": "verified",
+      "correction_or_issue": "Investible's investment note and announcement confirm the stage, lead and institutional participants; amount remains undisclosed.",
+      "primary_source": "https://www.investible.com/blog-category/investment-notes",
+      "secondary_source": "https://www.linkedin.com/posts/nicholasjwooi_investment-notes-tability-activity-7178564793518186496-f61t"
+    },
+    "investee_name_raw": "Tability",
+    "org_location_raw": "Sydney, NSW, Australia / global",
+    "org_website_raw": "https://tability.io/",
+    "org_industries_raw": "Enterprise SaaS / Productivity / AI",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-03-26",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Investible (lead); Right Click Capital; Skalata Ventures; Empress Capital; Jelix Ventures; angels",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.investible.com/blog-category/investment-notes",
+    "verification_notes": "Investible's investment note and announcement confirm the stage, lead and institutional participants; amount remains undisclosed.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:tability"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:da7cea8d0be543f66414",
+      "source:url:f41d2d28f6291791269d"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

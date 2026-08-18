@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:10six-games",
+  "operation": "upsert",
+  "data": {
+    "name": "10six Games",
+    "website_url": "https://www.10sixgames.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "GB",
+    "hq_state": null,
+    "hq_city": null,
+    "is_anz": false,
+    "sector_primary": "gaming-generative-ai",
+    "sector_secondary": null,
+    "use_case_primary": "generative-ai-game-studio-founded-by-games-industry-veterans",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "game-studio",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "ai_related",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Generative-AI game studio founded by games-industry veterans.",
+    "source_urls": [
+      "https://developmentbank.wales/news-and-events/game-industry-veterans-secure-angel-backing-genai-game-innovation",
+      "https://find-and-update.company-information.service.gov.uk/company/16006090",
+      "https://www.10sixgames.com/privacy-policy",
+      "https://www.10sixgames.com/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-supplement",
+    "extraction_version": "1.0.0",
+    "confidence": "medium"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:006868d9ce71e2533cd6"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

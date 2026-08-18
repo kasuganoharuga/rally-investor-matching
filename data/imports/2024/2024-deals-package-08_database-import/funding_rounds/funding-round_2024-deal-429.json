@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-429",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-429",
+    "dedupe_key": "2024|alt-leather|2024-01-29|seed",
+    "source_url": "https://worldbiomarketinsights.com/alt-leather-raises-1-1-m-in-seed-funding-for-biobased-materials/",
+    "source_payload": {
+      "deal_number": 429,
+      "csv_investee": "Alt.Leather",
+      "normalized_investee": "Alt.Leather",
+      "csv_date": "2024-01-29",
+      "normalized_date": "2024-01-29 / 2024-02-16 reporting",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "AUD 1,100,000",
+      "normalized_amount": "AUD 1,100,000",
+      "csv_investors": "Austin Group; FB10x adVentures; LaunchVic; Startmate; Wollemi",
+      "normalized_investors": "Wollemi Capital (lead); LaunchVic Alice Anderson Fund; Startmate; The Austin Group",
+      "verification": "corrected_syndicate",
+      "correction_or_issue": "A$1.1m and four core investors are corroborated; FB10x was not named in the strongest event source.",
+      "primary_source": "https://worldbiomarketinsights.com/alt-leather-raises-1-1-m-in-seed-funding-for-biobased-materials/",
+      "secondary_source": "https://i3connect.com/company/alt-leather"
+    },
+    "investee_name_raw": "Alt.Leather",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://alt-leather.com/",
+    "org_industries_raw": "Advanced Materials / Climate Tech",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-01-29",
+    "money_raised_raw": "AUD 1,100,000",
+    "amount": 1100000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Wollemi Capital (lead); LaunchVic Alice Anderson Fund; Startmate; The Austin Group",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-08_database-import",
+    "verification_status": "corrected_syndicate",
+    "verification_source_url": "https://worldbiomarketinsights.com/alt-leather-raises-1-1-m-in-seed-funding-for-biobased-materials/",
+    "verification_notes": "A$1.1m and four core investors are corroborated; FB10x was not named in the strongest event source.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:alt-leather"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": [
+      "source:url:4c58d79ff5ea0e50d6e8",
+      "source:url:022319350cb51b9dd234"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

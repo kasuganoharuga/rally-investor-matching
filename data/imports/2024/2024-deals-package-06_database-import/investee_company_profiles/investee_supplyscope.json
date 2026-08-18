@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:supplyscope",
+  "operation": "upsert",
+  "data": {
+    "name": "SupplyScope",
+    "website_url": "https://supplyscope.io/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "supply-chain-saas-compliance",
+    "sector_secondary": null,
+    "use_case_primary": "product-lifecycle-and-quality-management-platform-connecting-brands-with-manufacturers-testing-compliance-documents-and-",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-saas",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Product lifecycle and quality-management platform connecting brands with manufacturers, testing, compliance documents and payments.",
+    "source_urls": [
+      "https://supplyscope.io/",
+      "https://www.skalata.vc/investment-notes/supplyscope",
+      "https://app.dealroom.co/news/feed/supplyscope-secures-300k-from-skalata"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

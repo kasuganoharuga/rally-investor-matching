@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-06_database-import",
+  "supplemented_at": "2026-08-14T00:00:00+09:30",
+  "status": "completed_with_public_evidence_limits",
+  "change_count": 2,
+  "changes": [
+    {
+      "type": "investor_website",
+      "record_key": "investor:nuance-capital",
+      "value": "https://www.nuance.vc/",
+      "evidence_url": "https://www.nuance.vc/"
+    },
+    {
+      "type": "investor_website",
+      "record_key": "investor:tech-labs-capital",
+      "value": "https://techlabscapital.com/",
+      "evidence_url": "https://techlabscapital.com/"
+    }
+  ],
+  "remaining_limits": {
+    "investee_websites_missing": 0,
+    "investor_websites_missing": 24,
+    "round_exact_dates_missing": 14,
+    "round_structured_amounts_missing": 7,
+    "unresolved_mentions": 22
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-125",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-125",
+    "dedupe_key": "2024|carbonhq|2024-02-05|pre_seed",
+    "source_url": "https://www.investible.com/company/carbonhq",
+    "source_payload": {
+      "deal_number": 125,
+      "csv_investee": "CarbonHQ",
+      "normalized_investee": "CarbonHQ",
+      "csv_date": "2024-02-06",
+      "normalized_date": "2024-02-05 / 2024-02-06 report",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-Seed",
+      "csv_amount": "AUD 600,000",
+      "normalized_amount": "AUD 600,000 (approximately USD 380k)",
+      "csv_investors": "Galileo Ventures; Investible",
+      "normalized_investors": "Galileo Ventures; Investible",
+      "verification": "verified_secondary",
+      "correction_or_issue": "Investible confirms the company and stage; funding database corroborates approximately US$380k and both investors.",
+      "primary_source": "https://www.investible.com/company/carbonhq",
+      "secondary_source": "https://www.cbinsights.com/company/carbonhq/financials"
+    },
+    "investee_name_raw": "CarbonHQ",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://carbonhq.earth/",
+    "org_industries_raw": "Climate Tech / Carbon Markets",
+    "round_type_raw": "Pre-Seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-02-05",
+    "money_raised_raw": "AUD 600,000 (approximately USD 380k)",
+    "amount": 600000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Galileo Ventures; Investible",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "verified_secondary",
+    "verification_source_url": "https://www.investible.com/company/carbonhq",
+    "verification_notes": "Investible confirms the company and stage; funding database corroborates approximately US$380k and both investors.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:carbonhq"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:3967e85586d647b7317d",
+      "source:url:1f362600d47f2406e322"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

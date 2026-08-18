@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investors",
+  "record_key": "investor:paul-greenberg",
+  "operation": "upsert",
+  "data": {
+    "canonical_name": "Paul Greenberg",
+    "aliases": [],
+    "investor_type": "angel",
+    "website_url": null,
+    "linkedin_url": null,
+    "hq_country": "AU",
+    "hq_state": null,
+    "hq_city": "AU",
+    "offices": [],
+    "status": "active",
+    "merged_into_id": null,
+    "review_status": "needs_more_data",
+    "last_reviewed_at": "2026-08-14",
+    "last_reviewed_by": "codex-2024-investor-dedupe-update",
+    "investor_subtype": "Angel",
+    "classification_confidence": "medium",
+    "classification_source": "current research evidence with explicit classification repair",
+    "eligibility_mode": "research_package_confirmed",
+    "classification_evidence_urls": [],
+    "classified_at": "2026-08-14",
+    "identity_resolution": "existing_investor_update",
+    "matched_existing_record_key": "investor:paul-greenberg",
+    "identity_match_method": "exact_existing_key",
+    "identity_match_source": "normalized_master"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "research_source:paul-greenberg:paul-greenberg_src_linkedin",
+      "research_source:paul-greenberg:paul-greenberg_src_deal"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Official investor website is missing from the research package.",
+      "Research collection status: partial",
+      "official_website_not_verified",
+      "crunchbase_profile_not_verified",
+      "identity_or_transaction_conflict"
+    ]
+  }
+}

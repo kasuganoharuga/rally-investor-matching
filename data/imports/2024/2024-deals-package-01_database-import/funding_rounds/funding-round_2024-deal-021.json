@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-021",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-021",
+    "dedupe_key": "2024|kdh-advanced-research|2024-08-02|seed",
+    "source_url": "https://kdh-ar.com/about-us",
+    "source_payload": {
+      "deal_number": 21,
+      "csv_investee": "KDH Advanced Research",
+      "normalized_investee": "KDH Advanced Research",
+      "csv_date": "2024-07-02",
+      "normalized_date": "2024-08-02",
+      "csv_round": "Seed",
+      "normalized_round": "Founder/self-funded seed (unverified financing)",
+      "csv_amount": "USD 500,000",
+      "normalized_amount": "USD 500,000 (database-only)",
+      "csv_investors": "Jeremy Lu (lead)",
+      "normalized_investors": "No external investor confirmed",
+      "verification": "rejected_investor",
+      "correction_or_issue": "Jeremy Lu is KDH co-founder/CEO/COO; do not create him as an external investor from this deal.",
+      "primary_source": "https://kdh-ar.com/about-us",
+      "secondary_source": "https://au.linkedin.com/company/kdh-ar-corporation"
+    },
+    "investee_name_raw": "KDH Advanced Research",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://kdh-ar.com",
+    "org_industries_raw": "AR / Photonics / Advanced Manufacturing",
+    "round_type_raw": "Founder/self-funded seed (unverified financing)",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-08-02",
+    "money_raised_raw": "USD 500,000 (database-only)",
+    "amount": 500000,
+    "currency": "USD",
+    "amount_usd": 500000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "No external investor confirmed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "rejected_investor",
+    "verification_source_url": "https://kdh-ar.com/about-us",
+    "verification_notes": "Jeremy Lu is KDH co-founder/CEO/COO; do not create him as an external investor from this deal.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:kdh-advanced-research"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:1faac1df76e3a12c9fb2",
+      "source:url:2f74da37bebd447aaee3"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

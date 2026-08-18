@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-02_database-import",
+  "supplemented_at": "2026-08-14T00:00:00+09:30",
+  "status": "completed_with_public_evidence_limits",
+  "change_count": 4,
+  "changes": [
+    {
+      "type": "investor_website",
+      "record_key": "investor:angel-investors-marlborough",
+      "value": "https://www.angelinvestorsmarlborough.co.nz/",
+      "evidence_url": "https://www.angelinvestorsmarlborough.co.nz/"
+    },
+    {
+      "type": "investor_website",
+      "record_key": "investor:public-works",
+      "value": "https://publicworks.fm/",
+      "evidence_url": "https://publicworks.fm/"
+    },
+    {
+      "type": "investor_website",
+      "record_key": "investor:radar-ventures",
+      "value": "https://www.radarventures.com/",
+      "evidence_url": "https://www.radarventures.com/"
+    },
+    {
+      "type": "investor_website",
+      "record_key": "investor:recursive-ventures",
+      "value": "http://www.recursiveventures.com/",
+      "evidence_url": "http://www.recursiveventures.com/"
+    }
+  ],
+  "remaining_limits": {
+    "investee_websites_missing": 0,
+    "investor_websites_missing": 35,
+    "round_exact_dates_missing": 9,
+    "round_structured_amounts_missing": 17,
+    "unresolved_mentions": 18
+  }
+}

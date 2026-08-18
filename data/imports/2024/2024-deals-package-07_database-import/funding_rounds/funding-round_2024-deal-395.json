@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-395",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-395",
+    "dedupe_key": "2024|jooules|2024-05-17|pre_seed",
+    "source_url": "https://www.startupdaily.net/topic/funding/kiwi-alt-protein-startup-jooules-chows-down-on-nz1-million-seed-raise/",
+    "source_payload": {
+      "deal_number": 395,
+      "csv_investee": "Jooules",
+      "normalized_investee": "Jooules",
+      "csv_date": "2024-05-01",
+      "normalized_date": "2024-05-17 reporting",
+      "csv_round": "Seed",
+      "normalized_round": "Pre-seed / Deep Tech Incubator investment",
+      "csv_amount": "NZD 1,000,000",
+      "normalized_amount": "NZD 1,000,000",
+      "csv_investors": "Callaghan Innovation; Finistere; Fonterra; OurCrowd; Sprout",
+      "normalized_investors": "Sprout Agritech LP (direct investor); Callaghan Innovation program support; Finistere, Fonterra and OurCrowd are Sprout fund partners / LPs",
+      "verification": "corrected_roles",
+      "correction_or_issue": "The NZ$1m investment is from Sprout Agritech LP. Other named organisations support the fund or incubator and should not all be treated as direct cap-table investors.",
+      "primary_source": "https://www.startupdaily.net/topic/funding/kiwi-alt-protein-startup-jooules-chows-down-on-nz1-million-seed-raise/",
+      "secondary_source": "https://futurealternative.com.au/qa-with-co2-based-protein-start-up-jooules/"
+    },
+    "investee_name_raw": "Jooules",
+    "org_location_raw": "Wellington, New Zealand",
+    "org_website_raw": "https://www.jooules.com/",
+    "org_industries_raw": "Food Tech / Industrial Biotech / Climate",
+    "round_type_raw": "Pre-seed / Deep Tech Incubator investment",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-05-17",
+    "money_raised_raw": "NZD 1,000,000",
+    "amount": 1000000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Sprout Agritech LP (direct investor); Callaghan Innovation program support; Finistere, Fonterra and OurCrowd are Sprout fund partners / LPs",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "corrected_roles",
+    "verification_source_url": "https://www.startupdaily.net/topic/funding/kiwi-alt-protein-startup-jooules-chows-down-on-nz1-million-seed-raise/",
+    "verification_notes": "The NZ$1m investment is from Sprout Agritech LP. Other named organisations support the fund or incubator and should not all be treated as direct cap-table investors.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:jooules"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:da60642c4b419afc1c09",
+      "source:url:0ef835f8a4439f0f993b"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

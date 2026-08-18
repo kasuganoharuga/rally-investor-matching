@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:paypipe",
+  "operation": "upsert",
+  "data": {
+    "name": "Paypipe",
+    "website_url": "https://paypipe.io/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "fintech-future-of-work",
+    "sector_secondary": null,
+    "use_case_primary": "payment-workflow-product-designed-to-reduce-client-ghosting-and-payment-risk-for-freelancers",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "saas-payments",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Payment workflow product designed to reduce client ghosting and payment risk for freelancers.",
+    "source_urls": [
+      "https://paypipe.io/",
+      "https://www.reddit.com/r/Entrepreneur/comments/1h0sfux/how_im_tackling_client_ghosting_and_payment_issues/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

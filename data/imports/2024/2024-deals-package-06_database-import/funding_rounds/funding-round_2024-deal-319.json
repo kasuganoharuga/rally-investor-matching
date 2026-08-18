@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-319",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-319",
+    "dedupe_key": "2024|kasu|2024-01-12|seed",
+    "source_url": "https://medium.com/morningstar-ventures/kasu-raises-3m-in-a-seed-round-co-led-by-woodstock-faculty-group-and-morningstar-ventures-d286829a35e0",
+    "source_payload": {
+      "deal_number": 319,
+      "csv_investee": "Kasu",
+      "normalized_investee": "KASU",
+      "csv_date": "2024-01-10",
+      "normalized_date": "2024-01-12 announcement",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "USD 3,000,000",
+      "normalized_amount": "USD 3,000,000",
+      "csv_investors": "Andromeda Capital; Asteroid Capital; Cypher Capital; Faculty Group; Matterblock; Morningstar Ventures; NxGen.xyz; Optic Capital; Rarestone Ventures; Woodstock Fund",
+      "normalized_investors": "Woodstock Fund; Faculty Group; Morningstar Ventures (co-leads); Cypher Capital; Matterblock; Andromeda Capital; NxGen; Rarestone Ventures; Asteroid Capital; Optic Capital",
+      "verification": "verified",
+      "correction_or_issue": "Morningstar Ventures confirms the US$3m seed, the three co-leads and all other participants. KASU is a joint venture of Faculty Group and Adelaide-based Apxium.",
+      "primary_source": "https://medium.com/morningstar-ventures/kasu-raises-3m-in-a-seed-round-co-led-by-woodstock-faculty-group-and-morningstar-ventures-d286829a35e0",
+      "secondary_source": "https://kasu.finance/"
+    },
+    "investee_name_raw": "KASU",
+    "org_location_raw": "Adelaide, SA, Australia / Web3",
+    "org_website_raw": "https://kasu.finance/",
+    "org_industries_raw": "Web3 / Private Credit",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-01-12",
+    "money_raised_raw": "USD 3,000,000",
+    "amount": 3000000,
+    "currency": "USD",
+    "amount_usd": 3000000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Woodstock Fund; Faculty Group; Morningstar Ventures (co-leads); Cypher Capital; Matterblock; Andromeda Capital; NxGen; Rarestone Ventures; Asteroid Capital; Optic Capital",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://medium.com/morningstar-ventures/kasu-raises-3m-in-a-seed-round-co-led-by-woodstock-faculty-group-and-morningstar-ventures-d286829a35e0",
+    "verification_notes": "Morningstar Ventures confirms the US$3m seed, the three co-leads and all other participants. KASU is a joint venture of Faculty Group and Adelaide-based Apxium.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:kasu"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:2a06c24e76a1cd58bf84",
+      "source:url:3e039b54f534c2538fb5"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

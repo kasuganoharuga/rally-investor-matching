@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-101",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-101",
+    "dedupe_key": "2024|buildpass|2024-10-24|seed",
+    "source_url": "https://www.buildpass.ai/blog/raise-announcement-seed",
+    "source_payload": {
+      "deal_number": 101,
+      "csv_investee": "BuildPass",
+      "normalized_investee": "BuildPass",
+      "csv_date": "2024-10-24",
+      "normalized_date": "2024-10-24",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "USD 7,500,000",
+      "normalized_amount": "AUD 7,500,000",
+      "csv_investors": "Carthona Capital; Horizon; Massive Tech Ventures; Preston-Werner Ventures; Recursive Ventures; Saniel Ventures",
+      "normalized_investors": "Carthona Capital (lead); Horizon VC; Saniel Ventures; Recursive Ventures; Preston-Werner Ventures; Massive Tech Ventures",
+      "verification": "corrected",
+      "correction_or_issue": "Company release confirms $7.5m in an Australian context; normalize to AUD and retain all six named investors.",
+      "primary_source": "https://www.buildpass.ai/blog/raise-announcement-seed",
+      "secondary_source": "https://www.thesaasnews.com/news/buildpass-raises-7-5-million-in-seed-round/"
+    },
+    "investee_name_raw": "BuildPass",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.buildpass.ai/",
+    "org_industries_raw": "Contech / AI / SaaS",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-10-24",
+    "money_raised_raw": "AUD 7,500,000",
+    "amount": 7500000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Carthona Capital (lead); Horizon VC; Saniel Ventures; Recursive Ventures; Preston-Werner Ventures; Massive Tech Ventures",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.buildpass.ai/blog/raise-announcement-seed",
+    "verification_notes": "Company release confirms $7.5m in an Australian context; normalize to AUD and retain all six named investors.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:buildpass"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:f577c75af751d64b9910",
+      "source:url:a5c60cfec0589ae3c209"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-094",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-094",
+    "dedupe_key": "2024|bindimaps|2024-12-23|seed",
+    "source_url": "https://m8.ventures/portfolio",
+    "source_payload": {
+      "deal_number": 94,
+      "csv_investee": "BindiMaps",
+      "normalized_investee": "BindiMaps",
+      "csv_date": "2024-11-20",
+      "normalized_date": "2024 seed allocation; public post 2024-12-23",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "M8 Ventures",
+      "normalized_investors": "M8 Ventures",
+      "verification": "verified",
+      "correction_or_issue": "M8 portfolio and founder post confirm an investment allocation in BindiMaps' seed round; amount remains undisclosed.",
+      "primary_source": "https://m8.ventures/portfolio",
+      "secondary_source": "https://medium.com/m8-ventures/all?year=2024"
+    },
+    "investee_name_raw": "BindiMaps",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://bindimaps.com/",
+    "org_industries_raw": "Accessibility Tech / Mapping",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-12-23",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "M8 Ventures",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://m8.ventures/portfolio",
+    "verification_notes": "M8 portfolio and founder post confirm an investment allocation in BindiMaps' seed round; amount remains undisclosed.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:bindimaps"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:3985b509faeff8960dfd",
+      "source:url:128f089c32d852752e16"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

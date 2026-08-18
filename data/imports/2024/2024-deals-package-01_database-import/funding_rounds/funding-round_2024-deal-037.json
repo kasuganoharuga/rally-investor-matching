@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-037",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-037",
+    "dedupe_key": "2024|theodore-thdr-group|2024-02-12|program_or_grant",
+    "source_url": "https://thdr.co/about-us",
+    "source_payload": {
+      "deal_number": 37,
+      "csv_investee": "THDR Group",
+      "normalized_investee": "THEODORE / THDR Group",
+      "csv_date": "2024-02-12",
+      "normalized_date": "2024-02-12",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "REACH accelerator",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "REACH",
+      "normalized_investors": "REACH Australia / Second Century Ventures ecosystem",
+      "verification": "partial",
+      "correction_or_issue": "Company and REACH relationship plausible; exact financing terms are not independently disclosed.",
+      "primary_source": "https://thdr.co/about-us",
+      "secondary_source": "https://reachanz.com/"
+    },
+    "investee_name_raw": "THEODORE / THDR Group",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://thdr.co/",
+    "org_industries_raw": "Fashiontech / Retail / AI",
+    "round_type_raw": "REACH accelerator",
+    "round_stage": "program_or_grant",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-02-12",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "REACH Australia / Second Century Ventures ecosystem",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://thdr.co/about-us",
+    "verification_notes": "Company and REACH relationship plausible; exact financing terms are not independently disclosed.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:theodore"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:383d188e557e1f716aa9",
+      "source:url:09b0ccccedd9e5a86c41"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Company and REACH relationship plausible; exact financing terms are not independently disclosed.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

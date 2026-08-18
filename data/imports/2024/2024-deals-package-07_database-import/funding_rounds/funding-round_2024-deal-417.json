@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-417",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-417",
+    "dedupe_key": "2024|nanobubble-agritech|2024-05-01|seed",
+    "source_url": "https://www.enterpriseangels.co.nz/project/nanobubble-agritech/",
+    "source_payload": {
+      "deal_number": 417,
+      "csv_investee": "Nanobubble Agritech",
+      "normalized_investee": "Nanobubble Agritech",
+      "csv_date": "2024-05-01",
+      "normalized_date": "2024-05-01 database / official portfolio confirmation",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Enterprise Angels; Pacific Channel",
+      "normalized_investors": "Enterprise Angels; Pacific Channel",
+      "verification": "partial",
+      "correction_or_issue": "Both investor relationships are official; the exact amount is undisclosed and Pacific Channel's announcement predates the database round date.",
+      "primary_source": "https://www.enterpriseangels.co.nz/project/nanobubble-agritech/",
+      "secondary_source": "https://www.pacificchannel.com/stories/nanobubble-agritech"
+    },
+    "investee_name_raw": "Nanobubble Agritech",
+    "org_location_raw": "New Plymouth, New Zealand",
+    "org_website_raw": "https://www.nanobubbleagritech.com/",
+    "org_industries_raw": "Agtech / Water Tech",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-05-01",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Enterprise Angels; Pacific Channel",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://www.enterpriseangels.co.nz/project/nanobubble-agritech/",
+    "verification_notes": "Both investor relationships are official; the exact amount is undisclosed and Pacific Channel's announcement predates the database round date.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:nanobubble-agritech"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:5b4e95405dd32cf8efcd",
+      "source:url:12b284313fa117acfb43"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Both investor relationships are official; the exact amount is undisclosed and Pacific Channel's announcement predates the database round date.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

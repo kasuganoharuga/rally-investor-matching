@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-414",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-414",
+    "dedupe_key": "2024|ocean-intelligence|2024-oio-cohort|program_or_grant",
+    "source_url": "https://www.ocean-impact.org/accelerator-program-2024",
+    "source_payload": {
+      "deal_number": 414,
+      "csv_investee": "Ocean Intelligence",
+      "normalized_investee": "Ocean Intelligence",
+      "csv_date": "2024-09-14",
+      "normalized_date": "2024 OIO cohort",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Accelerator equity investment",
+      "csv_amount": "USD 100,000",
+      "normalized_amount": "AUD 100,000 approximate guaranteed investment",
+      "csv_investors": "Ocean Impact Organisation",
+      "normalized_investors": "Ocean Impact Organisation",
+      "verification": "corrected_program",
+      "correction_or_issue": "Official 2024 program terms specify about A$100k, not US$100k; company is in the official cohort.",
+      "primary_source": "https://www.ocean-impact.org/accelerator-program-2024",
+      "secondary_source": "https://www.ocean-impact.org/accelerator-program-2024-cohort/"
+    },
+    "investee_name_raw": "Ocean Intelligence",
+    "org_location_raw": "Nelson, New Zealand",
+    "org_website_raw": "https://oceanintelligence.io/",
+    "org_industries_raw": "Blue Economy / Ocean Data",
+    "round_type_raw": "Accelerator equity investment",
+    "round_stage": "program_or_grant",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "AUD 100,000 approximate guaranteed investment",
+    "amount": 100000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Ocean Impact Organisation",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "corrected_program",
+    "verification_source_url": "https://www.ocean-impact.org/accelerator-program-2024",
+    "verification_notes": "Official 2024 program terms specify about A$100k, not US$100k; company is in the official cohort.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:ocean-intelligence"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:ad6af6b4a32354d1fe5d",
+      "source:url:a56427f9037f3d4da505"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

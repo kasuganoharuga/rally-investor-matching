@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-171",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-171",
+    "dedupe_key": "2024|graphics-et-al|2024-02-08|program_or_grant",
+    "source_url": "https://www.forbes.com.au/news/entrepreneurs/startmate-at-sunrise-demo-day-introduces-10-promising-startups/",
+    "source_payload": {
+      "deal_number": 171,
+      "csv_investee": "Graphics et al.",
+      "normalized_investee": "Graphics et al.",
+      "csv_date": "2024-02-08",
+      "normalized_date": "2024-02-08 / 2024-02-09",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Startmate accelerator / convertible note",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "AUD 120,000 program investment / approximately USD 80,000",
+      "csv_investors": "Australian Medical Angels; Scale Investors; Startmate",
+      "normalized_investors": "Startmate (2024 round); Scale Investors and Australian Medical Angels (existing relationships)",
+      "verification": "corrected",
+      "correction_or_issue": "Startmate cohort terms and funding data support the 2024 note. Scale and Medical Angels are known backers, but were not proven as participants in this exact note.",
+      "primary_source": "https://www.forbes.com.au/news/entrepreneurs/startmate-at-sunrise-demo-day-introduces-10-promising-startups/",
+      "secondary_source": "https://www.cbinsights.com/company/graphic-et-al/financials"
+    },
+    "investee_name_raw": "Graphics et al.",
+    "org_location_raw": "Brisbane, QLD, Australia",
+    "org_website_raw": "https://graphicsetal.com/",
+    "org_industries_raw": "Healthtech / Visual Communication",
+    "round_type_raw": "Startmate accelerator / convertible note",
+    "round_stage": "program_or_grant",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-02-08",
+    "money_raised_raw": "AUD 120,000 program investment / approximately USD 80,000",
+    "amount": 120000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Startmate (2024 round); Scale Investors and Australian Medical Angels (existing relationships)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.forbes.com.au/news/entrepreneurs/startmate-at-sunrise-demo-day-introduces-10-promising-startups/",
+    "verification_notes": "Startmate cohort terms and funding data support the 2024 note. Scale and Medical Angels are known backers, but were not proven as participants in this exact note.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:graphics-et-al"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:720a80291d7637c7f862",
+      "source:url:cfd926201201846c5ea4"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

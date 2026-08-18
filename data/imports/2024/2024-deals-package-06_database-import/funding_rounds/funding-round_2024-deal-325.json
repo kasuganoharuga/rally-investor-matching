@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-325",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-325",
+    "dedupe_key": "2024|hurtec|2024-winter-cohort|program_or_grant",
+    "source_url": "https://www.startmate.com/writing/meet-our-winter-24-accelerator",
+    "source_payload": {
+      "deal_number": 325,
+      "csv_investee": "Hurtec",
+      "normalized_investee": "Hurtec",
+      "csv_date": "2024-08-02",
+      "normalized_date": "2024 Winter cohort",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Startmate accelerator SAFE",
+      "csv_amount": "AUD 120,000",
+      "normalized_amount": "AUD 120,000 at program terms",
+      "csv_investors": "Startmate",
+      "normalized_investors": "Startmate",
+      "verification": "verified_program",
+      "correction_or_issue": "Startmate officially lists Hurtec in Winter 2024 and publishes A$120k standard accelerator terms.",
+      "primary_source": "https://www.startmate.com/writing/meet-our-winter-24-accelerator",
+      "secondary_source": "https://www.startmate.com/writing/startmate-accelerator-frequent-questions-and-misconceptions"
+    },
+    "investee_name_raw": "Hurtec",
+    "org_location_raw": "Nerang, QLD, Australia",
+    "org_website_raw": "https://hurtec.com.au/",
+    "org_industries_raw": "Emergency Tech / Hardware",
+    "round_type_raw": "Startmate accelerator SAFE",
+    "round_stage": "program_or_grant",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "AUD 120,000 at program terms",
+    "amount": 120000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Startmate",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "verified_program",
+    "verification_source_url": "https://www.startmate.com/writing/meet-our-winter-24-accelerator",
+    "verification_notes": "Startmate officially lists Hurtec in Winter 2024 and publishes A$120k standard accelerator terms.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:hurtec"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:6e3f7252e17a09dd7261",
+      "source:url:cd9b2e396acf956e524d"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

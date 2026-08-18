@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_team_members",
+  "record_key": "investor_team_member:qic-ventures:nicholas-guest",
+  "operation": "upsert",
+  "data": {
+    "contact_id": null,
+    "first_name": "Nicholas",
+    "last_name": "Guest",
+    "role_title": "QIC Ventures investment team",
+    "seniority": "other",
+    "linkedin_url": null,
+    "claimed_focus": [
+      "investment_team"
+    ],
+    "bio_summary": "Named publicly among QIC Ventures team members supporting Queensland startup investments.",
+    "source_url": "https://www.qic.com/Investment-Capabilities/Private-Equity/QIC-Ventures",
+    "retrieved_at": "2026-07-16",
+    "is_active": true
+  },
+  "refs": {
+    "investor_key": "investor:qic-ventures",
+    "contact_key": null
+  },
+  "provenance": {
+    "collection_run_key": "collection:research:2026-07-24",
+    "source_keys": [
+      "research_source:qic-ventures:qic_src_001"
+    ]
+  },
+  "review": {
+    "status": "unreviewed",
+    "issues": []
+  }
+}

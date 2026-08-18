@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-032",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-032",
+    "dedupe_key": "2024|eventflo|2024-05-03|seed",
+    "source_url": "https://eventflo.io/",
+    "source_payload": {
+      "deal_number": 32,
+      "csv_investee": "eventflo",
+      "normalized_investee": "eventflo",
+      "csv_date": "2024-05-03",
+      "normalized_date": "2024-05-03",
+      "csv_round": "Seed",
+      "normalized_round": "Seed / unverified financing",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Undisclosed",
+      "verification": "needs_review",
+      "correction_or_issue": "Current operating company confirmed; financing is not independently corroborated and Australian business registration timing needs review.",
+      "primary_source": "https://eventflo.io/",
+      "secondary_source": "https://abr.business.gov.au/ABN/View?id=69679812054"
+    },
+    "investee_name_raw": "eventflo",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://eventflo.io/",
+    "org_industries_raw": "Eventtech / SaaS",
+    "round_type_raw": "Seed / unverified financing",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-05-03",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://eventflo.io/",
+    "verification_notes": "Current operating company confirmed; financing is not independently corroborated and Australian business registration timing needs review.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:eventflo"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:1dbdd3af9e081937c534",
+      "source:url:0bb843146e94cf9a95a5"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Current operating company confirmed; financing is not independently corroborated and Australian business registration timing needs review.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

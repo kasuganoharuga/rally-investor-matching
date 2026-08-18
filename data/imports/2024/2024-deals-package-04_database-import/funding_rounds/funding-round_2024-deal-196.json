@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-196",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-196",
+    "dedupe_key": "2024|swell-network|2024-01-30|series_a",
+    "source_url": "https://wellfound.com/company/swell-network/funding",
+    "source_payload": {
+      "deal_number": 196,
+      "csv_investee": "Swell",
+      "normalized_investee": "Swell Network",
+      "csv_date": "2024-01-30",
+      "normalized_date": "2024-01-30 (database date)",
+      "csv_round": "Series A",
+      "normalized_round": "Series A",
+      "csv_amount": "USD 12,000,000",
+      "normalized_amount": "USD 12,000,000",
+      "csv_investors": "Sora Ventures",
+      "normalized_investors": "Sora Ventures (database-only)",
+      "verification": "needs_review",
+      "correction_or_issue": "Funding databases support a US$12m Series A, but no primary company announcement or independently verified investor syndicate was located.",
+      "primary_source": "https://wellfound.com/company/swell-network/funding",
+      "secondary_source": "https://www.swellnetwork.io/"
+    },
+    "investee_name_raw": "Swell Network",
+    "org_location_raw": "Sydney, NSW, Australia / global",
+    "org_website_raw": "https://www.swellnetwork.io/",
+    "org_industries_raw": "Web3 / DeFi / Infrastructure",
+    "round_type_raw": "Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-01-30",
+    "money_raised_raw": "USD 12,000,000",
+    "amount": 12000000,
+    "currency": "USD",
+    "amount_usd": 12000000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Sora Ventures (database-only)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://wellfound.com/company/swell-network/funding",
+    "verification_notes": "Funding databases support a US$12m Series A, but no primary company announcement or independently verified investor syndicate was located.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:swell-network"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:dbd22d4b8c812a7ffca7",
+      "source:url:6233ca18e00cf953a94a"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Funding databases support a US$12m Series A, but no primary company announcement or independently verified investor syndicate was located."
+    ]
+  }
+}

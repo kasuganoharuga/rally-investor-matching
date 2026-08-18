@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-305",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-305",
+    "dedupe_key": "2024|lombard-finance|2024-07-02|seed",
+    "source_url": "https://www.theblock.co/post/303000/polychain-capital-leads-16-million-seed-round-for-bitcoin-restaking-protocol-lombard",
+    "source_payload": {
+      "deal_number": 305,
+      "csv_investee": "Lombard",
+      "normalized_investee": "Lombard Finance",
+      "csv_date": "2024-07-02",
+      "normalized_date": "2024-07-02",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "AUD 16,000,000",
+      "normalized_amount": "USD 16,000,000",
+      "csv_investors": "BabylonChain; Bitget; Bybit; dao5; Foresight Ventures; Franklin Templeton; HTX; HTX Ventures; Mantle Network; Mirana; Nomad Capital; OKX; OKX Ventures; Polychain; Robot Ventures",
+      "normalized_investors": "Polychain Capital (lead); BabylonChain; dao5; Franklin Templeton; Foresight Ventures; Mantle EcoFund; Mirana Ventures; Nomad Capital; OKX Ventures; Robot Ventures; Bitget; Bybit",
+      "verification": "corrected",
+      "correction_or_issue": "Contemporaneous reporting confirms a US$16m seed round, not A$16m. HTX/HTX Ventures were not supported by the strongest reviewed sources and remain held out.",
+      "primary_source": "https://www.theblock.co/post/303000/polychain-capital-leads-16-million-seed-round-for-bitcoin-restaking-protocol-lombard",
+      "secondary_source": "https://cryptonews.com/news/polychain-lombard-16m-funding-round-scale-bitcoin-yield-solutions/"
+    },
+    "investee_name_raw": "Lombard Finance",
+    "org_location_raw": "Global / location not independently verified",
+    "org_website_raw": "https://www.lombard.finance/",
+    "org_industries_raw": "Web3 / DeFi",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-07-02",
+    "money_raised_raw": "USD 16,000,000",
+    "amount": 16000000,
+    "currency": "USD",
+    "amount_usd": 16000000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Polychain Capital (lead); BabylonChain; dao5; Franklin Templeton; Foresight Ventures; Mantle EcoFund; Mirana Ventures; Nomad Capital; OKX Ventures; Robot Ventures; Bitget; Bybit",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.theblock.co/post/303000/polychain-capital-leads-16-million-seed-round-for-bitcoin-restaking-protocol-lombard",
+    "verification_notes": "Contemporaneous reporting confirms a US$16m seed round, not A$16m. HTX/HTX Ventures were not supported by the strongest reviewed sources and remain held out.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:lombard-finance"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:c026e845e9667734ba3c",
+      "source:url:b11ce3fb9ca1c2e00746"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

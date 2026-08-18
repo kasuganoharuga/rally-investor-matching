@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_web_profiles",
+  "record_key": "investor_web_profile:paul-greenberg:2026-08-14",
+  "operation": "upsert",
+  "data": {
+    "source_urls": [
+      "https://au.linkedin.com/in/paulgreenberghq",
+      "https://www.linkedin.com/posts/paulgreenberghq_pleased-to-advise-that-jam-pad-investments-activity-7150311131213926400-_Xn8"
+    ],
+    "retrieved_at": "2026-08-14",
+    "website_status": "not_verified",
+    "raw_content_hash": null,
+    "raw_content_ref": null,
+    "extraction_model": "codex-2024-investor-dedupe-update",
+    "extraction_version": "1.0.0",
+    "confidence": "medium",
+    "claimed_thesis": "Ecommerce / consumer",
+    "claimed_stages": [
+      "Angel"
+    ],
+    "claimed_sectors": [
+      "Ecommerce / consumer"
+    ],
+    "claimed_geographies": [
+      "Australia"
+    ],
+    "claimed_business_models": [],
+    "claimed_cheque_min": null,
+    "claimed_cheque_max": null,
+    "claimed_cheque_currency": null,
+    "contact_emails": [],
+    "application_url": null,
+    "contact_notes": "Company and press sources confirm participation.",
+    "is_current": true,
+    "superseded_at": null
+  },
+  "refs": {
+    "investor_key": "investor:paul-greenberg"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "research_source:paul-greenberg:paul-greenberg_src_linkedin",
+      "research_source:paul-greenberg:paul-greenberg_src_deal"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Research collection status: partial",
+      "official_website_not_verified",
+      "crunchbase_profile_not_verified",
+      "identity_or_transaction_conflict"
+    ]
+  }
+}

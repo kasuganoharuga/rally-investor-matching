@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-276",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-276",
+    "dedupe_key": "2024|recime|2024-07-02|seed",
+    "source_url": "https://www.capitalbrief.com/briefing/cooking-app-recime-raises-15m-in-seed-round-led-by-even-capital-c46f07d0-5d14-4d13-b10c-817eae74cad6/",
+    "source_payload": {
+      "deal_number": 276,
+      "csv_investee": "ReciMe",
+      "normalized_investee": "ReciMe",
+      "csv_date": "2024-07-02",
+      "normalized_date": "2024-07-02",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "AUD 1,500,000",
+      "normalized_amount": "AUD 1,500,000",
+      "csv_investors": "Brisbane Angels; Deborah Liu; Even Capital; Karl von Randow; Marissa Mayer; Paul Greenberg",
+      "normalized_investors": "Even Capital (lead); Marissa Mayer; Deborah Liu; Karl von Randow; Paul Greenberg; additional angels",
+      "verification": "verified",
+      "correction_or_issue": "Contemporary reporting based on the company release confirms the amount, lead and named angels. Brisbane Angels was not consistently named in the strongest sources and is held as unconfirmed for this round.",
+      "primary_source": "https://www.capitalbrief.com/briefing/cooking-app-recime-raises-15m-in-seed-round-led-by-even-capital-c46f07d0-5d14-4d13-b10c-817eae74cad6/",
+      "secondary_source": "https://www.linkedin.com/posts/christine-nguyen-196127141_like-them-apples-marissa-mayer-backs-cooking-activity-7213708677352968192-wYHE"
+    },
+    "investee_name_raw": "ReciMe",
+    "org_location_raw": "Australia / New York, USA",
+    "org_website_raw": "https://recime.app/",
+    "org_industries_raw": "Consumer Tech / Food",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-07-02",
+    "money_raised_raw": "AUD 1,500,000",
+    "amount": 1500000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Even Capital (lead); Marissa Mayer; Deborah Liu; Karl von Randow; Paul Greenberg; additional angels",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.capitalbrief.com/briefing/cooking-app-recime-raises-15m-in-seed-round-led-by-even-capital-c46f07d0-5d14-4d13-b10c-817eae74cad6/",
+    "verification_notes": "Contemporary reporting based on the company release confirms the amount, lead and named angels. Brisbane Angels was not consistently named in the strongest sources and is held as unconfirmed for this round.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:recime"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:41bca0df7201f4e6decd",
+      "source:url:9ec055d84c22443d00dd"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

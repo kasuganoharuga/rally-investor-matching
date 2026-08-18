@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-137",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-137",
+    "dedupe_key": "2024|kiwifibre|2024-11-18|seed",
+    "source_url": "https://www.nbr.co.nz/entrepreneurs/agnition-ventures-backs-harakeke-composite-maker-kiwifibre/",
+    "source_payload": {
+      "deal_number": 137,
+      "csv_investee": "KiwiFibre",
+      "normalized_investee": "KiwiFibre",
+      "csv_date": "2024-11-18",
+      "normalized_date": "2024-11-18",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "NZD 3,200,000",
+      "normalized_amount": "NZD 3,300,000",
+      "csv_investors": "Agnition Ventures; Icehouse Ventures; NZVC",
+      "normalized_investors": "Agnition Ventures (lead); Icehouse Ventures; NZVC",
+      "verification": "verified_secondary",
+      "correction_or_issue": "Agnition lead and November timing are reported; a regional ecosystem source gives NZ$3.3m, correcting the CSV amount slightly.",
+      "primary_source": "https://www.nbr.co.nz/entrepreneurs/agnition-ventures-backs-harakeke-composite-maker-kiwifibre/",
+      "secondary_source": "https://www.christchurchnz.com/business/invest/kiwifibre"
+    },
+    "investee_name_raw": "KiwiFibre",
+    "org_location_raw": "Christchurch, New Zealand",
+    "org_website_raw": "https://kiwifibre.com/",
+    "org_industries_raw": "Advanced Materials / Climate",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-11-18",
+    "money_raised_raw": "NZD 3,300,000",
+    "amount": 3300000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Agnition Ventures (lead); Icehouse Ventures; NZVC",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "verified_secondary",
+    "verification_source_url": "https://www.nbr.co.nz/entrepreneurs/agnition-ventures-backs-harakeke-composite-maker-kiwifibre/",
+    "verification_notes": "Agnition lead and November timing are reported; a regional ecosystem source gives NZ$3.3m, correcting the CSV amount slightly.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:kiwifibre"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:1d5c8d52c0e16bdfea98",
+      "source:url:4504578b31f1a479e79e"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-284",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-284",
+    "dedupe_key": "2024|2400-tech|2024-07-10|pre_seed",
+    "source_url": "https://www.crunchbase.com/funding_round/2400-tech-pre-seed--42080dda",
+    "source_payload": {
+      "deal_number": 284,
+      "csv_investee": "2400.tech",
+      "normalized_investee": "2400.tech",
+      "csv_date": "2024-07-10",
+      "normalized_date": "2024-07-10 database entry",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Unverified micro pre-seed",
+      "csv_amount": "USD 10,000",
+      "normalized_amount": "USD 10,000 (database-only)",
+      "csv_investors": "SINOFY",
+      "normalized_investors": "SINOFY (unverified)",
+      "verification": "needs_review",
+      "correction_or_issue": "The company website and database entry are identifiable, but no independent announcement or primary proof of SINOFY's US$10k investment was located.",
+      "primary_source": "https://www.crunchbase.com/funding_round/2400-tech-pre-seed--42080dda",
+      "secondary_source": "https://2400.tech/"
+    },
+    "investee_name_raw": "2400.tech",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://2400.tech/",
+    "org_industries_raw": "Media / Technology",
+    "round_type_raw": "Unverified micro pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-07-10",
+    "money_raised_raw": "USD 10,000 (database-only)",
+    "amount": 10000,
+    "currency": "USD",
+    "amount_usd": 10000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "SINOFY (unverified)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://www.crunchbase.com/funding_round/2400-tech-pre-seed--42080dda",
+    "verification_notes": "The company website and database entry are identifiable, but no independent announcement or primary proof of SINOFY's US$10k investment was located.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:2400-tech"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:7958fdbc70b4c1b70c10",
+      "source:url:a17ee01b8dd3f08a8cf4"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "The company website and database entry are identifiable, but no independent announcement or primary proof of SINOFY's US$10k investment was located."
+    ]
+  }
+}

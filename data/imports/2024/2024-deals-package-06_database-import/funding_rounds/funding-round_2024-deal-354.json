@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-354",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-354",
+    "dedupe_key": "2024|metrovate|2024-05-21|seed",
+    "source_url": "https://metrovate.com/news-%26-events/f/metrovate-raises-1-million-nzd-from-sprout-agritech-lp",
+    "source_payload": {
+      "deal_number": 354,
+      "csv_investee": "Metrovate",
+      "normalized_investee": "Metrovate",
+      "csv_date": "2024-05-14",
+      "normalized_date": "2024-05-21 announcement",
+      "csv_round": "Seed",
+      "normalized_round": "Deep Tech Incubator package / seed",
+      "csv_amount": "NZD 1,000,000",
+      "normalized_amount": "NZD 1,000,000 package",
+      "csv_investors": "Sprout; Callaghan Innovation; Finistere; Fonterra; OurCrowd",
+      "normalized_investors": "Sprout Agritech; Finistere Ventures; Fonterra; OurCrowd; Callaghan Innovation program support",
+      "verification": "verified_program",
+      "correction_or_issue": "Company release confirms the NZ$1m package and partner group. Callaghan is government program support and should not be treated as a conventional VC.",
+      "primary_source": "https://metrovate.com/news-%26-events/f/metrovate-raises-1-million-nzd-from-sprout-agritech-lp",
+      "secondary_source": "https://www.marketscreener.com/quote/stock/FONTERRA-CO-OPERATIVE-GRO-20702460/news/Metrovate-announced-that-it-has-received-1-million-in-funding-46852798/"
+    },
+    "investee_name_raw": "Metrovate",
+    "org_location_raw": "Auckland, New Zealand",
+    "org_website_raw": "https://metrovate.com/",
+    "org_industries_raw": "Agritech / Biotechnology",
+    "round_type_raw": "Deep Tech Incubator package / seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-05-21",
+    "money_raised_raw": "NZD 1,000,000 package",
+    "amount": 1000000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Sprout Agritech; Finistere Ventures; Fonterra; OurCrowd; Callaghan Innovation program support",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "verified_program",
+    "verification_source_url": "https://metrovate.com/news-%26-events/f/metrovate-raises-1-million-nzd-from-sprout-agritech-lp",
+    "verification_notes": "Company release confirms the NZ$1m package and partner group. Callaghan is government program support and should not be treated as a conventional VC.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:metrovate"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:db67b02db2b5aa12d31b",
+      "source:url:9020294824636b064eaf"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

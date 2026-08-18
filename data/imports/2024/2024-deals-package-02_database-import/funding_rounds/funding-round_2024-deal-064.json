@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-064",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-064",
+    "dedupe_key": "2024|sitemate|2024-12-23|series_a",
+    "source_url": "https://www.businesswire.com/news/home/20241223818233/en/Sitemate-Raises-%2418M-Series-A-Brings-Atlassian-Style-Product-Suite-for-the-Built-World-to-Life",
+    "source_payload": {
+      "deal_number": 64,
+      "csv_investee": "Sitemate",
+      "normalized_investee": "Sitemate",
+      "csv_date": "2024-12-23",
+      "normalized_date": "2024-12-23",
+      "csv_round": "Series A",
+      "normalized_round": "Series A",
+      "csv_amount": "USD 18,000,000",
+      "normalized_amount": "USD 18,000,000",
+      "csv_investors": "Blackbird; Marbruck; OIF Ventures; Shearwater Capital",
+      "normalized_investors": "Blackbird (lead); Shearwater Capital; Marbruck",
+      "verification": "verified",
+      "correction_or_issue": "Official release confirms amount and three participants; OIF is not named in the company release.",
+      "primary_source": "https://www.businesswire.com/news/home/20241223818233/en/Sitemate-Raises-%2418M-Series-A-Brings-Atlassian-Style-Product-Suite-for-the-Built-World-to-Life",
+      "secondary_source": "https://www.cbinsights.com/company/sitemate/financials"
+    },
+    "investee_name_raw": "Sitemate",
+    "org_location_raw": "Sydney, NSW, Australia / global",
+    "org_website_raw": "https://sitemate.com/",
+    "org_industries_raw": "Contech / SaaS",
+    "round_type_raw": "Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-12-23",
+    "money_raised_raw": "USD 18,000,000",
+    "amount": 18000000,
+    "currency": "USD",
+    "amount_usd": 18000000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Blackbird (lead); Shearwater Capital; Marbruck",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.businesswire.com/news/home/20241223818233/en/Sitemate-Raises-%2418M-Series-A-Brings-Atlassian-Style-Product-Suite-for-the-Built-World-to-Life",
+    "verification_notes": "Official release confirms amount and three participants; OIF is not named in the company release.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:sitemate"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:7ede736b6f09b7fd6406",
+      "source:url:277c57fbbc1b7823dadb"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

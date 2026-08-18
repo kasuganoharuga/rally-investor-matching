@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-360",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-360",
+    "dedupe_key": "2024|singh-academy|2024-07-database-record-only|pre_seed",
+    "source_url": "http://drsinghonline.com",
+    "source_payload": {
+      "deal_number": 360,
+      "csv_investee": "Singh Academy",
+      "normalized_investee": "Singh Academy",
+      "csv_date": "2024-07-13",
+      "normalized_date": "2024-07 (database record only)",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-seed / database-only",
+      "csv_amount": "USD 100,000",
+      "normalized_amount": "Unverified",
+      "csv_investors": null,
+      "normalized_investors": "Undisclosed / no verified investor",
+      "verification": "needs_review",
+      "correction_or_issue": "Company website is identifiable, but no reliable public evidence was found for the amount, close date or investor. Retain as an unresolved source row only.",
+      "primary_source": "http://drsinghonline.com",
+      "secondary_source": "https://www.linkedin.com/company/singh-academy/"
+    },
+    "investee_name_raw": "Singh Academy",
+    "org_location_raw": "Melbourne, VIC, Australia (database location)",
+    "org_website_raw": "http://drsinghonline.com",
+    "org_industries_raw": "Edtech / Online Education",
+    "round_type_raw": "Pre-seed / database-only",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "Unverified",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed / no verified investor",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "http://drsinghonline.com",
+    "verification_notes": "Company website is identifiable, but no reliable public evidence was found for the amount, close date or investor. Retain as an unresolved source row only.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown",
+    "amount_disclosure_status": "no_reliable_amount_or_event_source",
+    "amount_structuring_note": "The company is identifiable, but no reliable evidence verifies the US$100k amount, close date or investor.",
+    "supplemental_verification_urls": []
+  },
+  "refs": {
+    "investee_company_key": "company:research:singh-academy"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:47361700aebf30289bae",
+      "source:url:d7c0fda6b57a8d188c43"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Company website is identifiable, but no reliable public evidence was found for the amount, close date or investor. Retain as an unresolved source row only.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

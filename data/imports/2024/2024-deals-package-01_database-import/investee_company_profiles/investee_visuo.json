@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:visuo",
+  "operation": "upsert",
+  "data": {
+    "name": "Visuo",
+    "website_url": "https://visuopro.com",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "martech-video-ai",
+    "sector_secondary": null,
+    "use_case_primary": "ai-personalised-video-for-customer-acquisition-engagement-and-retention",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-saas",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "ai_related",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "AI-personalised video for customer acquisition, engagement and retention.",
+    "source_urls": [
+      "https://visuopro.com",
+      "https://www.techstars.com/blog/program-news/techstars-tech-central-sydney-accelerator-powered-by-the-nsw-government-2024"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

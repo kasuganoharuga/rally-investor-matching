@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-195",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-195",
+    "dedupe_key": "2024|mozaic-finance|2024-01-04|series_a",
+    "source_url": "https://alphagrowth.io/recent-crypto-finance-banking-funding-rounds",
+    "source_payload": {
+      "deal_number": 195,
+      "csv_investee": "Mozaic",
+      "normalized_investee": "Mozaic Finance",
+      "csv_date": "2024-01-04",
+      "normalized_date": "2024-01-04 (database date)",
+      "csv_round": "Series A",
+      "normalized_round": "Series A / strategic crypto funding",
+      "csv_amount": "USD 800,000",
+      "normalized_amount": "USD 800,000",
+      "csv_investors": "Star Beta",
+      "normalized_investors": "Star Beta",
+      "verification": "needs_review",
+      "correction_or_issue": "Crypto funding directories corroborate amount, date and investor, but no primary round announcement was found.",
+      "primary_source": "https://alphagrowth.io/recent-crypto-finance-banking-funding-rounds",
+      "secondary_source": "https://mozaic.finance/"
+    },
+    "investee_name_raw": "Mozaic Finance",
+    "org_location_raw": "Sydney, NSW, Australia / global",
+    "org_website_raw": "https://mozaic.finance/",
+    "org_industries_raw": "Web3 / DeFi / AI",
+    "round_type_raw": "Series A / strategic crypto funding",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-01-04",
+    "money_raised_raw": "USD 800,000",
+    "amount": 800000,
+    "currency": "USD",
+    "amount_usd": 800000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Star Beta",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://alphagrowth.io/recent-crypto-finance-banking-funding-rounds",
+    "verification_notes": "Crypto funding directories corroborate amount, date and investor, but no primary round announcement was found.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:mozaic-finance"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:1b454eded75d965b933b",
+      "source:url:208060ddf560ebd6d57c"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Crypto funding directories corroborate amount, date and investor, but no primary round announcement was found."
+    ]
+  }
+}

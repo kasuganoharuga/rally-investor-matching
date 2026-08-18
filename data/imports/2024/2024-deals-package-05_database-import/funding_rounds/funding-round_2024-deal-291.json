@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-291",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-291",
+    "dedupe_key": "2024|yume-the-yume-app-pty-ltd|2024-01-29|seed",
+    "source_url": "https://techcrunch.com/2024/01/29/yume/",
+    "source_payload": {
+      "deal_number": 291,
+      "csv_investee": "Yume Food Australia",
+      "normalized_investee": "Yume / The Yume App Pty Ltd",
+      "csv_date": "2024-01-29",
+      "normalized_date": "2024-01-29",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "AUD 2,000,000",
+      "normalized_amount": "AUD 2,000,000",
+      "csv_investors": "Goodrich Group; Investible; LaunchVic; pitzy folk; Veolia France",
+      "normalized_investors": "Investible Climate Tech Fund / Early Stage Fund 2 / Club Investible; LaunchVic; Goodrich Group; Veolia; Pitzy Folk",
+      "verification": "verified",
+      "correction_or_issue": "TechCrunch and deal reporting confirm A$2m, Investible's lead vehicles and all named new/returning participants.",
+      "primary_source": "https://techcrunch.com/2024/01/29/yume/",
+      "secondary_source": "https://www.marketscreener.com/quote/stock/VEOLIA-ENVIRONNEMENT-4726/news/The-Yume-APP-Pty-Ltd-announced-that-it-has-received-AUD-2-million-in-funding-f-45833300/"
+    },
+    "investee_name_raw": "Yume / The Yume App Pty Ltd",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://yumefood.com.au/",
+    "org_industries_raw": "Climate Tech / Food Waste",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-01-29",
+    "money_raised_raw": "AUD 2,000,000",
+    "amount": 2000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Investible Climate Tech Fund / Early Stage Fund 2 / Club Investible; LaunchVic; Goodrich Group; Veolia; Pitzy Folk",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://techcrunch.com/2024/01/29/yume/",
+    "verification_notes": "TechCrunch and deal reporting confirm A$2m, Investible's lead vehicles and all named new/returning participants.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:yume"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:c554b32c39013c579660",
+      "source:url:0ed129d35ed0b7ebc9f1"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

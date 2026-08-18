@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-097",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-097",
+    "dedupe_key": "2024|subble|2024-06-03|pre_seed",
+    "source_url": "https://www.startupdaily.net/topic/funding/subscriptions-management-startup-subble-kicks-off-1-million-pre-seed/",
+    "source_payload": {
+      "deal_number": 97,
+      "csv_investee": "Subble",
+      "normalized_investee": "Subble",
+      "csv_date": "2024-06-04",
+      "normalized_date": "2024-06-03 announcement",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-Seed",
+      "csv_amount": "AUD 1,000,000",
+      "normalized_amount": "AUD 1,000,000",
+      "csv_investors": "Ash Farrugia; Hezi Leibovich; Jordan Walsh; Leon Hayes",
+      "normalized_investors": "Jordan Walsh; Leon Hayes; Ash Farrugia; Hezi Leibovich",
+      "verification": "verified",
+      "correction_or_issue": "Startup Daily confirms A$1m and Walsh/Hayes; secondary database adds Farrugia and Leibovich.",
+      "primary_source": "https://www.startupdaily.net/topic/funding/subscriptions-management-startup-subble-kicks-off-1-million-pre-seed/",
+      "secondary_source": "https://www.vcbacked.co/company/subble"
+    },
+    "investee_name_raw": "Subble",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://subble.com.au/",
+    "org_industries_raw": "Enterprise SaaS / FinOps",
+    "round_type_raw": "Pre-Seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-06-03",
+    "money_raised_raw": "AUD 1,000,000",
+    "amount": 1000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Jordan Walsh; Leon Hayes; Ash Farrugia; Hezi Leibovich",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.startupdaily.net/topic/funding/subscriptions-management-startup-subble-kicks-off-1-million-pre-seed/",
+    "verification_notes": "Startup Daily confirms A$1m and Walsh/Hayes; secondary database adds Farrugia and Leibovich.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:subble"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:b44d68b6a02f1ced6ed1",
+      "source:url:5fa30f5c9dad8e505302"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

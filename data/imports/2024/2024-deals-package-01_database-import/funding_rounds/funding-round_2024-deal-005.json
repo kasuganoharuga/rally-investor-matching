@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-005",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-005",
+    "dedupe_key": "2024|devramp|2024-12-16|pre_seed",
+    "source_url": "https://devramp.io/",
+    "source_payload": {
+      "deal_number": 5,
+      "csv_investee": "Devramp",
+      "normalized_investee": "Devramp",
+      "csv_date": "2024-12-16",
+      "normalized_date": "2024-12-16",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-Seed",
+      "csv_amount": "USD 1,580,000",
+      "normalized_amount": "USD 1,580,000 (single-source)",
+      "csv_investors": "Icehouse Ventures",
+      "normalized_investors": "Icehouse Ventures",
+      "verification": "needs_review",
+      "correction_or_issue": "Investee and fund identity are valid; exact event remains supported only by supplied dataset.",
+      "primary_source": "https://devramp.io/",
+      "secondary_source": "https://www.icehouseventures.co.nz/"
+    },
+    "investee_name_raw": "Devramp",
+    "org_location_raw": "Auckland, New Zealand",
+    "org_website_raw": "https://devramp.io/",
+    "org_industries_raw": "Developer Tools / AI",
+    "round_type_raw": "Pre-Seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-12-16",
+    "money_raised_raw": "USD 1,580,000 (single-source)",
+    "amount": 1580000,
+    "currency": "USD",
+    "amount_usd": 1580000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Icehouse Ventures",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://devramp.io/",
+    "verification_notes": "Investee and fund identity are valid; exact event remains supported only by supplied dataset.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:devramp"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:ce025ac51b2e5ea1eaca",
+      "source:url:dc0ae6ff80680d829ef6"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Investee and fund identity are valid; exact event remains supported only by supplied dataset."
+    ]
+  }
+}

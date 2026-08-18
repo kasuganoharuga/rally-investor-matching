@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-017",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-017",
+    "dedupe_key": "2024|bella-sales|2024-02-22|pre_seed",
+    "source_url": "https://bellasales.io/",
+    "source_payload": {
+      "deal_number": 17,
+      "csv_investee": "Bella",
+      "normalized_investee": "Bella Sales",
+      "csv_date": "2024-02-22",
+      "normalized_date": "2024-02-22",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-Seed / Antler program",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Antler",
+      "normalized_investors": "Antler Australia",
+      "verification": "partial",
+      "correction_or_issue": "Official company site says backed by Antler; exact event date/amount not independently confirmed.",
+      "primary_source": "https://bellasales.io/",
+      "secondary_source": "https://www.antler.co/location/australia"
+    },
+    "investee_name_raw": "Bella Sales",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://bellasales.io/",
+    "org_industries_raw": "AI / Sales Enablement",
+    "round_type_raw": "Pre-Seed / Antler program",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-02-22",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Antler Australia",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://bellasales.io/",
+    "verification_notes": "Official company site says backed by Antler; exact event date/amount not independently confirmed.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:bella-sales"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:20f5fdb74a807161785f",
+      "source:url:56703572ac02509b76dd"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Official company site says backed by Antler; exact event date/amount not independently confirmed.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

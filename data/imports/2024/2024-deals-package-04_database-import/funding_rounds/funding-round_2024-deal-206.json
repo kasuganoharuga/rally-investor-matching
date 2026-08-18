@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-206",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-206",
+    "dedupe_key": "2024|timescapes|2024-11-08|series_a",
+    "source_url": "https://www.nzherald.co.nz/business/timelapse-meets-ai-as-timescapes-rakes-in-series-a-millions/TJNV2KA4VBGQRJRCYI2XOWRYYM/",
+    "source_payload": {
+      "deal_number": 206,
+      "csv_investee": "Timescapes",
+      "normalized_investee": "Timescapes",
+      "csv_date": "2024-11-08",
+      "normalized_date": "2024-11 (exact close date undisclosed)",
+      "csv_round": "Series A",
+      "normalized_round": "Series A",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed; reported as high single-digit millions",
+      "csv_investors": "Icehouse Ventures",
+      "normalized_investors": "Icehouse Ventures (lead); Huljich family; Bhatnagar family; Bruce Gordon",
+      "verification": "verified",
+      "correction_or_issue": "Reporting confirms a 2024 Series A led by Icehouse Ventures and identifies additional backers; the exact amount was not publicly disclosed.",
+      "primary_source": "https://www.nzherald.co.nz/business/timelapse-meets-ai-as-timescapes-rakes-in-series-a-millions/TJNV2KA4VBGQRJRCYI2XOWRYYM/",
+      "secondary_source": "https://app.dealroom.co/companies/timescapes_1_1"
+    },
+    "investee_name_raw": "Timescapes",
+    "org_location_raw": "Auckland, New Zealand",
+    "org_website_raw": "https://www.timescapes.co.nz/",
+    "org_industries_raw": "Construction Tech / Computer Vision",
+    "round_type_raw": "Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-11-08",
+    "money_raised_raw": "Undisclosed; reported as high single-digit millions",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Icehouse Ventures (lead); Huljich family; Bhatnagar family; Bruce Gordon",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.nzherald.co.nz/business/timelapse-meets-ai-as-timescapes-rakes-in-series-a-millions/TJNV2KA4VBGQRJRCYI2XOWRYYM/",
+    "verification_notes": "Reporting confirms a 2024 Series A led by Icehouse Ventures and identifies additional backers; the exact amount was not publicly disclosed. Exact round date supplemented from CB Insights' dated funding-round record.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:timescapes"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:4039d2e364f940e3adad",
+      "source:url:adce23398d85393a2bc9",
+      "source:url:54b4144890945d935dc2"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

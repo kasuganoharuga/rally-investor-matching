@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-041",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-041",
+    "dedupe_key": "2024|boom-power|2024-06-26|pre_seed",
+    "source_url": "https://www.boompower.com.au/",
+    "source_payload": {
+      "deal_number": 41,
+      "csv_investee": "BOOM! Power",
+      "normalized_investee": "BOOM! Power",
+      "csv_date": "2024-06-26",
+      "normalized_date": "2024-06-26",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-Seed",
+      "csv_amount": "AUD 320,000",
+      "normalized_amount": "Unverified",
+      "csv_investors": "Boundless (lead)",
+      "normalized_investors": "Boundless",
+      "verification": "needs_review",
+      "correction_or_issue": "Company verified, but no independent public round announcement found.",
+      "primary_source": "https://www.boompower.com.au/",
+      "secondary_source": "https://boundless.earth/"
+    },
+    "investee_name_raw": "BOOM! Power",
+    "org_location_raw": "Australia",
+    "org_website_raw": "https://www.boompower.com.au/",
+    "org_industries_raw": "Climate / Energy Software",
+    "round_type_raw": "Pre-Seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-06-26",
+    "money_raised_raw": "Unverified",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Boundless",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://www.boompower.com.au/",
+    "verification_notes": "Company verified, but no independent public round announcement found.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day",
+    "amount_disclosure_status": "dataset_only_amount_unverified",
+    "amount_structuring_note": "Company and investor identities are visible, but no independent source substantiates the A$320k round.",
+    "supplemental_verification_urls": []
+  },
+  "refs": {
+    "investee_company_key": "company:research:boom-power"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:e75a5af185211355b11d",
+      "source:url:8e867fa50ea25603d3f3"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Company verified, but no independent public round announcement found."
+    ]
+  }
+}

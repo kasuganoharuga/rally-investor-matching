@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-135",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-135",
+    "dedupe_key": "2024|bitstaker|2024-09-09|unknown",
+    "source_url": "https://www.digitaljournal.com/pr/news/accesswire/bitstaker-raises-6-million-series-1213706898.html",
+    "source_payload": {
+      "deal_number": 135,
+      "csv_investee": "Bitstaker",
+      "normalized_investee": "Bitstaker",
+      "csv_date": "2024-09-11",
+      "normalized_date": "2024-09-09 / 2024-09-11 conflicting reports",
+      "csv_round": "Series A",
+      "normalized_round": "Unverified funding round",
+      "csv_amount": "USD 6,000,000",
+      "normalized_amount": "USD 4,000,000-6,000,000 (conflicting)",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Undisclosed investors",
+      "verification": "needs_review",
+      "correction_or_issue": "A self-issued release claims US$6m Series A while a funding database reports US$4m Seed; no named investor or independent primary evidence.",
+      "primary_source": "https://www.digitaljournal.com/pr/news/accesswire/bitstaker-raises-6-million-series-1213706898.html",
+      "secondary_source": "https://www.cbinsights.com/company/bitstaker/financials"
+    },
+    "investee_name_raw": "Bitstaker",
+    "org_location_raw": "Melbourne, VIC, Australia (claimed)",
+    "org_website_raw": "https://bitstaker.io/",
+    "org_industries_raw": "Web3 / DeFi",
+    "round_type_raw": "Unverified funding round",
+    "round_stage": "unknown",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-09-09",
+    "money_raised_raw": "USD 4,000,000-6,000,000 (conflicting)",
+    "amount": 4000000,
+    "currency": "USD",
+    "amount_usd": 4000000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed investors",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://www.digitaljournal.com/pr/news/accesswire/bitstaker-raises-6-million-series-1213706898.html",
+    "verification_notes": "A self-issued release claims US$6m Series A while a funding database reports US$4m Seed; no named investor or independent primary evidence.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:bitstaker"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:66f3f90c28e59438f545",
+      "source:url:e2ef459902f630855ff4"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "A self-issued release claims US$6m Series A while a funding database reports US$4m Seed; no named investor or independent primary evidence."
+    ]
+  }
+}

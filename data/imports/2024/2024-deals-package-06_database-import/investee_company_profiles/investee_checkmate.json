@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:checkmate",
+  "operation": "upsert",
+  "data": {
+    "name": "Checkmate",
+    "website_url": "https://www.checkmate.tech/",
+    "crunchbase_uuid": null,
+    "hq_country": "NZ",
+    "hq_state": null,
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "hr-tech-screening",
+    "sector_secondary": null,
+    "use_case_primary": "pre-employment-screening-platform-combining-reference-checks-background-checks-compliance-onboarding-and-ai-assisted-wor",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-saas",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "ai_related",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Pre-employment screening platform combining reference checks, background checks, compliance, onboarding and AI-assisted workflows.",
+    "source_urls": [
+      "https://www.checkmate.tech/",
+      "https://www.prnewswire.com/apac/news-releases/checkmate-secures-nzd-2-7-million-in-seed-funding-to-transform-pre-employment-screening-302245824.html",
+      "https://www.nbr.co.nz/investment/checkmate-secures-2-7m-from-vc-firm-wavemaker-partners/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-249",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-249",
+    "dedupe_key": "2024|totex-energy|2024-08-02|program_or_grant",
+    "source_url": "https://www.crunchbase.com/funding_round/totex-926a-pre-seed--0b13d9db",
+    "source_payload": {
+      "deal_number": 249,
+      "csv_investee": "TOTEX",
+      "normalized_investee": "TOTEX Energy",
+      "csv_date": "2024-08-02",
+      "normalized_date": "2024-08-02 database date",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Startmate accelerator investment",
+      "csv_amount": "AUD 120,000",
+      "normalized_amount": "AUD 120,000 (database/program terms)",
+      "csv_investors": "Startmate",
+      "normalized_investors": "Startmate",
+      "verification": "partial",
+      "correction_or_issue": "Company identity is confirmed, but the exact 2024 investment remains supported mainly by funding-database and standard Startmate program terms.",
+      "primary_source": "https://www.crunchbase.com/funding_round/totex-926a-pre-seed--0b13d9db",
+      "secondary_source": "https://www.totexenergy.com/"
+    },
+    "investee_name_raw": "TOTEX Energy",
+    "org_location_raw": "Boronia, VIC, Australia / Dallas, USA",
+    "org_website_raw": "https://www.totexenergy.com/",
+    "org_industries_raw": "Energy Tech / HVAC",
+    "round_type_raw": "Startmate accelerator investment",
+    "round_stage": "program_or_grant",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-08-02",
+    "money_raised_raw": "AUD 120,000 (database/program terms)",
+    "amount": 120000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Startmate",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://www.crunchbase.com/funding_round/totex-926a-pre-seed--0b13d9db",
+    "verification_notes": "Company identity is confirmed, but the exact 2024 investment remains supported mainly by funding-database and standard Startmate program terms.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:totex-energy"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:c3672ad7b5d075fa0225",
+      "source:url:29e7061ead0ed48497cb"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Company identity is confirmed, but the exact 2024 investment remains supported mainly by funding-database and standard Startmate program terms."
+    ]
+  }
+}

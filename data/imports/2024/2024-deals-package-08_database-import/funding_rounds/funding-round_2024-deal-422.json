@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-422",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-422",
+    "dedupe_key": "2024|vuemotion|2024-08-support-program-record|program_or_grant",
+    "source_url": "https://www.unsw.edu.au/research/partner-with-us/investment-portfolio/vuemotion",
+    "source_payload": {
+      "deal_number": 422,
+      "csv_investee": "VueMotion Labs",
+      "normalized_investee": "VueMotion",
+      "csv_date": "2024-08-01",
+      "normalized_date": "2024-08 support-program record",
+      "csv_round": "Seed",
+      "normalized_round": "UNSW Founders support program",
+      "csv_amount": "AUD 10,000",
+      "normalized_amount": "AUD 20,000 support-program amount (database-led)",
+      "csv_investors": "UNSW Founders",
+      "normalized_investors": "UNSW Founders / Health 10x relationship",
+      "verification": "corrected_program",
+      "correction_or_issue": "UNSW verifies the company and affiliation; database evidence reports A$20k, not A$10k.",
+      "primary_source": "https://www.unsw.edu.au/research/partner-with-us/investment-portfolio/vuemotion",
+      "secondary_source": "https://app.dealroom.co/companies/vuemotion"
+    },
+    "investee_name_raw": "VueMotion",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.vuemotion.ai/",
+    "org_industries_raw": "Sports Tech / Health AI",
+    "round_type_raw": "UNSW Founders support program",
+    "round_stage": "program_or_grant",
+    "funding_stage_raw": "Seed",
+    "announced_date": null,
+    "money_raised_raw": "AUD 20,000 support-program amount (database-led)",
+    "amount": 20000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "UNSW Founders / Health 10x relationship",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-08_database-import",
+    "verification_status": "corrected_program",
+    "verification_source_url": "https://www.unsw.edu.au/research/partner-with-us/investment-portfolio/vuemotion",
+    "verification_notes": "UNSW verifies the company and affiliation; database evidence reports A$20k, not A$10k.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:vuemotion"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": [
+      "source:url:c4a0edeec5436964a121",
+      "source:url:28dec66d260401b20f4f"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-403",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-403",
+    "dedupe_key": "2024|xefco|2024-04-30|seed",
+    "source_url": "https://www.cefc.com.au/media/media-release/cefc-and-virescent-ventures-back-australian-technology-to-reduce-textile-sector-emissions/",
+    "source_payload": {
+      "deal_number": 403,
+      "csv_investee": "Xefco",
+      "normalized_investee": "Xefco",
+      "csv_date": "2024-04-30",
+      "normalized_date": "2024-04-30",
+      "csv_round": "Seed",
+      "normalized_round": "Seed extension",
+      "csv_amount": "AUD 10,500,000",
+      "normalized_amount": "AUD 10,500,000",
+      "csv_investors": "Breakthrough Victoria; Investible; Main Sequence; Pacific Channel; Virescent; Voyagers",
+      "normalized_investors": "Main Sequence; Virescent Ventures / CEFC; Breakthrough Victoria; Investible; Voyagers Climate-Tech Fund",
+      "verification": "corrected_syndicate",
+      "correction_or_issue": "Official sources confirm the amount and listed investors; Pacific Channel was not attached to this extension in the strongest sources.",
+      "primary_source": "https://www.cefc.com.au/media/media-release/cefc-and-virescent-ventures-back-australian-technology-to-reduce-textile-sector-emissions/",
+      "secondary_source": "https://www.breakthroughvictoria.com/portfolio/xefco/"
+    },
+    "investee_name_raw": "Xefco",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.xefco.com/",
+    "org_industries_raw": "Advanced Materials / Climate Tech",
+    "round_type_raw": "Seed extension",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-04-30",
+    "money_raised_raw": "AUD 10,500,000",
+    "amount": 10500000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Main Sequence; Virescent Ventures / CEFC; Breakthrough Victoria; Investible; Voyagers Climate-Tech Fund",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "corrected_syndicate",
+    "verification_source_url": "https://www.cefc.com.au/media/media-release/cefc-and-virescent-ventures-back-australian-technology-to-reduce-textile-sector-emissions/",
+    "verification_notes": "Official sources confirm the amount and listed investors; Pacific Channel was not attached to this extension in the strongest sources.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:xefco"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:a9e9a11c757190e78bd0",
+      "source:url:03720bb69bcbe2e87574"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

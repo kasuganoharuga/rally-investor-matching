@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-353",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-353",
+    "dedupe_key": "2024|whyhive|2024-08-26|pre_seed",
+    "source_url": "https://www.whyhive.com/blog/whyhive-pre-seed-announcement",
+    "source_payload": {
+      "deal_number": 353,
+      "csv_investee": "WhyHive",
+      "normalized_investee": "WhyHive",
+      "csv_date": "2024-08-26",
+      "normalized_date": "2024-08-26",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-seed",
+      "csv_amount": "AUD 600,000",
+      "normalized_amount": "AUD 600,000",
+      "csv_investors": "Skalata; Alex Zaccaria; Dominic Pym; Jon Williams",
+      "normalized_investors": "Skalata Ventures (lead); Alex Zaccaria; Dom Pym; Jon Williams; other undisclosed investors",
+      "verification": "verified",
+      "correction_or_issue": "The company announcement confirms the oversubscribed A$600k round and all four named investors.",
+      "primary_source": "https://www.whyhive.com/blog/whyhive-pre-seed-announcement",
+      "secondary_source": "https://www.thesaasnews.com/news/whyhive-secures-600k-in-pre-seed-funding"
+    },
+    "investee_name_raw": "WhyHive",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.whyhive.com/",
+    "org_industries_raw": "Analytics / AI",
+    "round_type_raw": "Pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-08-26",
+    "money_raised_raw": "AUD 600,000",
+    "amount": 600000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Skalata Ventures (lead); Alex Zaccaria; Dom Pym; Jon Williams; other undisclosed investors",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.whyhive.com/blog/whyhive-pre-seed-announcement",
+    "verification_notes": "The company announcement confirms the oversubscribed A$600k round and all four named investors.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:whyhive"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:9129ea3ae7e324e17f1c",
+      "source:url:0396a31d23c0ecd6d53a"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

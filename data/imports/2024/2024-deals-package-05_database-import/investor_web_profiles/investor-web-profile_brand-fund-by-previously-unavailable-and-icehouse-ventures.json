@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_web_profiles",
+  "record_key": "investor_web_profile:brand-fund-by-previously-unavailable-and-icehouse-ventures:2026-08-14",
+  "operation": "upsert",
+  "data": {
+    "source_urls": [
+      "https://previously.co/brand-fund-1"
+    ],
+    "retrieved_at": "2026-08-14",
+    "website_status": "verified_public_profile",
+    "raw_content_hash": null,
+    "raw_content_ref": null,
+    "extraction_model": "codex-2024-investor-dedupe-update",
+    "extraction_version": "1.0.0",
+    "confidence": "high",
+    "claimed_thesis": "Companies where brand is central to growth and category leadership.",
+    "claimed_stages": [
+      "seed",
+      "post_product_market_fit"
+    ],
+    "claimed_sectors": [
+      "consumer",
+      "brand-led technology"
+    ],
+    "claimed_geographies": [
+      "New Zealand"
+    ],
+    "claimed_business_models": [],
+    "claimed_cheque_min": null,
+    "claimed_cheque_max": null,
+    "claimed_cheque_currency": null,
+    "contact_emails": [],
+    "application_url": null,
+    "contact_notes": "Founder and reporting confirm the lead role; create one canonical joint-fund entity. | Created in Group 13; update rather than duplicate.",
+    "is_current": true,
+    "superseded_at": null
+  },
+  "refs": {
+    "investor_key": "investor:brand-fund-by-previously-unavailable-and-icehouse-ventures"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

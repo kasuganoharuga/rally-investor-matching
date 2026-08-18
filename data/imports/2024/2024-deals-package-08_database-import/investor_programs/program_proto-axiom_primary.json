@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_programs",
+  "record_key": "program:proto-axiom:primary",
+  "operation": "upsert",
+  "data": {
+    "name": "Proto Axiom",
+    "program_type": "accelerator",
+    "status": "unknown",
+    "application_url": null,
+    "eligibility_mode": "conditional",
+    "eligibility_rules": [],
+    "eligibility_rules_status": "unknown_after_existing_official_source_review",
+    "source_url": "https://www.protoaxiom.com/",
+    "evidence_source_urls": [
+      "https://www.crunchbase.com/funding_round/amazing-gut-7b61-grant--2ac87c37",
+      "https://www.protoaxiom.com/",
+      "https://www.linkedin.com/company/proto-axiom/"
+    ],
+    "last_verified_at": "2026-08-14",
+    "review_notes": "The entity has a conditional public mandate or selection process, but no sufficiently specific current hard criteria were captured in existing official-source evidence; matching must return eligibility_unknown rather than eligible."
+  },
+  "refs": {
+    "investor_key": "investor:proto-axiom"
+  },
+  "provenance": {
+    "source": "matching_enrichment",
+    "source_keys": [
+      "https://www.crunchbase.com/funding_round/amazing-gut-7b61-grant--2ac87c37",
+      "https://www.protoaxiom.com/",
+      "https://www.linkedin.com/company/proto-axiom/"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Current explicit eligibility rules require manual verification."
+    ]
+  }
+}

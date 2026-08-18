@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-150",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-150",
+    "dedupe_key": "2024|learna|2024-02-09|convertible",
+    "source_url": "https://www.startmate.com/portfolio-companies/learna",
+    "source_payload": {
+      "deal_number": 150,
+      "csv_investee": "Learna",
+      "normalized_investee": "Learna",
+      "csv_date": "2024-02-08",
+      "normalized_date": "2024-02-09",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Convertible note / Startmate investment",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "USD 80,000 (database-led)",
+      "csv_investors": "Startmate",
+      "normalized_investors": "Startmate",
+      "verification": "verified_secondary",
+      "correction_or_issue": "Startmate portfolio confirms the company; funding database identifies an US$80k convertible note.",
+      "primary_source": "https://www.startmate.com/portfolio-companies/learna",
+      "secondary_source": "https://www.cbinsights.com/company/learna/financials"
+    },
+    "investee_name_raw": "Learna",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.learna-app.com/",
+    "org_industries_raw": "Edtech / HR Tech",
+    "round_type_raw": "Convertible note / Startmate investment",
+    "round_stage": "convertible",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-02-09",
+    "money_raised_raw": "USD 80,000 (database-led)",
+    "amount": 80000,
+    "currency": "USD",
+    "amount_usd": 80000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Startmate",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "verified_secondary",
+    "verification_source_url": "https://www.startmate.com/portfolio-companies/learna",
+    "verification_notes": "Startmate portfolio confirms the company; funding database identifies an US$80k convertible note.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:learna"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:31dcf8d0582733946d96",
+      "source:url:68822b4061cbe0f219a3"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

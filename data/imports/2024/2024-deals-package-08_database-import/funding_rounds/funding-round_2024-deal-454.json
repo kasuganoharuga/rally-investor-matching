@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-454",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-454",
+    "dedupe_key": "2024|arclaim-finance|no-verified-2024-financing-first-public-raise-2025-07|unknown",
+    "source_url": "https://www.globenewswire.com/news-release/2025/07/07/3111237/0/en/arclaim-secures-3-million-in-series-a-funding-to-transform-defi-staking-total-value-locked-reaches-150m.html",
+    "source_payload": {
+      "deal_number": 454,
+      "csv_investee": "Arclaim",
+      "normalized_investee": "Arclaim Finance",
+      "csv_date": "2024-02-13",
+      "normalized_date": "No verified 2024 financing; first public raise 2025-07",
+      "csv_round": "Seed",
+      "normalized_round": "Unverified financing",
+      "csv_amount": "USD 500,000",
+      "normalized_amount": "No verified 2024 amount",
+      "csv_investors": null,
+      "normalized_investors": "Undisclosed / no verified investor",
+      "verification": "needs_review_high_risk",
+      "correction_or_issue": "No reliable 2024 funding evidence was found. The first public financing claim is a self-issued 2025 release, and independent consumer reports raise material trust concerns.",
+      "primary_source": "https://www.globenewswire.com/news-release/2025/07/07/3111237/0/en/arclaim-secures-3-million-in-series-a-funding-to-transform-defi-staking-total-value-locked-reaches-150m.html",
+      "secondary_source": "https://www.trustpilot.com/review/arclaim.com"
+    },
+    "investee_name_raw": "Arclaim Finance",
+    "org_location_raw": "Wellington claimed, New Zealand",
+    "org_website_raw": "https://arclaim.com/",
+    "org_industries_raw": "Web3 / DeFi",
+    "round_type_raw": "Unverified financing",
+    "round_stage": "unknown",
+    "funding_stage_raw": "Seed",
+    "announced_date": null,
+    "money_raised_raw": "No verified 2024 amount",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed / no verified investor",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-08_database-import",
+    "verification_status": "needs_review_high_risk",
+    "verification_source_url": "https://www.globenewswire.com/news-release/2025/07/07/3111237/0/en/arclaim-secures-3-million-in-series-a-funding-to-transform-defi-staking-total-value-locked-reaches-150m.html",
+    "verification_notes": "No reliable 2024 funding evidence was found. The first public financing claim is a self-issued 2025 release, and independent consumer reports raise material trust concerns.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "no_verified_2024_financing",
+    "amount_structuring_note": "No reliable 2024 financing was found; the first public financing claim is self-issued in 2025.",
+    "date_precision": "unknown",
+    "supplemental_verification_urls": []
+  },
+  "refs": {
+    "investee_company_key": "company:research:arclaim-finance"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": [
+      "source:url:0b3f584f78d125db969a",
+      "source:url:ef739e32c09fd0e4f0ff"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "No reliable 2024 funding evidence was found. The first public financing claim is a self-issued 2025 release, and independent consumer reports raise material trust concerns.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

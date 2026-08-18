@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-277",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-277",
+    "dedupe_key": "2024|healthnow-extraordinary|2024-06-20|seed",
+    "source_url": "https://www.nbr.co.nz/tech/health-allowance-platform-healthnow-raises-3-4m-seed-round/",
+    "source_payload": {
+      "deal_number": 277,
+      "csv_investee": "HealthNow",
+      "normalized_investee": "HealthNow / Extraordinary",
+      "csv_date": "2024-06-20",
+      "normalized_date": "2024-06-20",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "NZD 3,400,000",
+      "normalized_amount": "NZD 3,400,000",
+      "csv_investors": "Angel Investors Marlborough; Brand Fund; Enterprise Angels; Icehouse Ventures; NZ Fintech Fund; NZVC; Phase One Ventures",
+      "normalized_investors": "Icehouse Ventures, Brand Fund 1 and NZ Fintech Fund (co-leads); Enterprise Angels / EA Fund 4; other prior or round investors not fully public",
+      "verification": "corrected",
+      "correction_or_issue": "NBR identifies the three leads and amount. Enterprise Angels confirms EA Fund 4 invested in July. The remaining CSV names are retained but not all were proven as participants in the June close.",
+      "primary_source": "https://www.nbr.co.nz/tech/health-allowance-platform-healthnow-raises-3-4m-seed-round/",
+      "secondary_source": "https://www.enterpriseangels.co.nz/project/extraordinary/"
+    },
+    "investee_name_raw": "HealthNow / Extraordinary",
+    "org_location_raw": "New Zealand",
+    "org_website_raw": "https://www.extraordinary.co.nz/",
+    "org_industries_raw": "Fintech / Employee Benefits",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-06-20",
+    "money_raised_raw": "NZD 3,400,000",
+    "amount": 3400000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Icehouse Ventures, Brand Fund 1 and NZ Fintech Fund (co-leads); Enterprise Angels / EA Fund 4; other prior or round investors not fully public",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.nbr.co.nz/tech/health-allowance-platform-healthnow-raises-3-4m-seed-round/",
+    "verification_notes": "NBR identifies the three leads and amount. Enterprise Angels confirms EA Fund 4 invested in July. The remaining CSV names are retained but not all were proven as participants in the June close.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:healthnow"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:583076785ef0fbd5a01a",
+      "source:url:6abdacede31598ef8250"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

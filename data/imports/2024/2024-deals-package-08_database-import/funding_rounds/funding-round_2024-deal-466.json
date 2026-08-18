@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-466",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-466",
+    "dedupe_key": "2024|dazhboards-pty-ltd|2024-04-database-record|seed",
+    "source_url": "https://app.dealroom.co/companies/dazhboards",
+    "source_payload": {
+      "deal_number": 466,
+      "csv_investee": "Dazhboards",
+      "normalized_investee": "Dazhboards Pty Ltd",
+      "csv_date": "2024-04-01",
+      "normalized_date": "2024-04 database record",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Seed / database-recorded financing",
+      "csv_amount": "AUD 400,000",
+      "normalized_amount": "AUD 400,000",
+      "csv_investors": null,
+      "normalized_investors": "Undisclosed",
+      "verification": "partial_database_only",
+      "correction_or_issue": "Dealroom records an A$400k April 2024 seed and the company confirms its 2024 launch and operating profile. No primary financing announcement or investor identity was located.",
+      "primary_source": "https://app.dealroom.co/companies/dazhboards",
+      "secondary_source": "https://dazhboards.ai/about"
+    },
+    "investee_name_raw": "Dazhboards Pty Ltd",
+    "org_location_raw": "South Melbourne, VIC, Australia",
+    "org_website_raw": "https://dazhboards.ai/",
+    "org_industries_raw": "Travel Tech / Enterprise AI",
+    "round_type_raw": "Seed / database-recorded financing",
+    "round_stage": "seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "AUD 400,000",
+    "amount": 400000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-08_database-import",
+    "verification_status": "partial_database_only",
+    "verification_source_url": "https://app.dealroom.co/companies/dazhboards",
+    "verification_notes": "Dealroom records an A$400k April 2024 seed and the company confirms its 2024 launch and operating profile. No primary financing announcement or investor identity was located.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:dazhboards-pty-ltd"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": [
+      "source:url:19f124ac44f80149a53e",
+      "source:url:083959f28bda923ac3e3"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Dealroom records an A$400k April 2024 seed and the company confirms its 2024 launch and operating profile. No primary financing announcement or investor identity was located.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

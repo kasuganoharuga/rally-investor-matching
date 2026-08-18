@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-335",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-335",
+    "dedupe_key": "2024|alimetry-limited|2024-10-25|series_a",
+    "source_url": "https://www.gd1.vc/blog/alimetry-investment-notes",
+    "source_payload": {
+      "deal_number": 335,
+      "csv_investee": "Alimetry",
+      "normalized_investee": "Alimetry Limited",
+      "csv_date": "2024-10-28",
+      "normalized_date": "2024-10-25",
+      "csv_round": "Series A",
+      "normalized_round": "Series A expansion",
+      "csv_amount": "USD 18,000,000",
+      "normalized_amount": "NZD 30,000,000",
+      "csv_investors": "American Gastroenterological Association; GD1; Hostplus; Icehouse Ventures; IP Group; K1W1; Movac; Olympus Corporation of the Americas; Olympus Innovation Ventures; Uniservices",
+      "normalized_investors": "GD1 (lead); IP Group; Auckland UniServices; Movac; K1W1; Icehouse Ventures; Olympus Innovation Ventures; Hostplus; others",
+      "verification": "corrected",
+      "correction_or_issue": "GD1's official investment note confirms a NZ$30m Series A expansion, not US$18m, and provides the core syndicate.",
+      "primary_source": "https://www.gd1.vc/blog/alimetry-investment-notes",
+      "secondary_source": "https://alimetry.com/"
+    },
+    "investee_name_raw": "Alimetry Limited",
+    "org_location_raw": "Auckland, New Zealand",
+    "org_website_raw": "https://alimetry.com/",
+    "org_industries_raw": "Medtech / Diagnostics",
+    "round_type_raw": "Series A expansion",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-10-25",
+    "money_raised_raw": "NZD 30,000,000",
+    "amount": 30000000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "GD1 (lead); IP Group; Auckland UniServices; Movac; K1W1; Icehouse Ventures; Olympus Innovation Ventures; Hostplus; others",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.gd1.vc/blog/alimetry-investment-notes",
+    "verification_notes": "GD1's official investment note confirms a NZ$30m Series A expansion, not US$18m, and provides the core syndicate.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:alimetry"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:c29d7f32918dab61b23e",
+      "source:url:cd91aef57d6be48c4fd7"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

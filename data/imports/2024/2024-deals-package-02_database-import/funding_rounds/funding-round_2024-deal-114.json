@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-114",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-114",
+    "dedupe_key": "2024|fairgo-ai|2024-10-20|program_or_grant",
+    "source_url": "https://www.fairgo.ai/blog/fairgo-ai-wraps-up-startmate-with-demo-day",
+    "source_payload": {
+      "deal_number": 114,
+      "csv_investee": "Fairgo.AI",
+      "normalized_investee": "fairgo.ai",
+      "csv_date": "2024-08-02",
+      "normalized_date": "2024-10-20",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Startmate accelerator investment",
+      "csv_amount": "AUD 120,000",
+      "normalized_amount": "AUD 120,000",
+      "csv_investors": "Startmate",
+      "normalized_investors": "Startmate",
+      "verification": "verified_program",
+      "correction_or_issue": "Company confirms Startmate participation and Demo Day; A$120k aligns with Startmate's disclosed standard terms.",
+      "primary_source": "https://www.fairgo.ai/blog/fairgo-ai-wraps-up-startmate-with-demo-day",
+      "secondary_source": "https://www.startmate.com/"
+    },
+    "investee_name_raw": "fairgo.ai",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.fairgo.ai/",
+    "org_industries_raw": "HR Tech / AI",
+    "round_type_raw": "Startmate accelerator investment",
+    "round_stage": "program_or_grant",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-10-20",
+    "money_raised_raw": "AUD 120,000",
+    "amount": 120000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Startmate",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "verified_program",
+    "verification_source_url": "https://www.fairgo.ai/blog/fairgo-ai-wraps-up-startmate-with-demo-day",
+    "verification_notes": "Company confirms Startmate participation and Demo Day; A$120k aligns with Startmate's disclosed standard terms. Exact day records the visible publication date of the public financing or cohort report; it is not represented as an unreported legal closing date.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day",
+    "date_basis": "public_announcement_publication_date",
+    "date_derivation_method": "visible_source_publication_date",
+    "supplemental_verification_urls": [
+      "https://www.fairgo.ai/blog/fairgo-ai-wraps-up-startmate-with-demo-day"
+    ]
+  },
+  "refs": {
+    "investee_company_key": "company:research:fairgo-ai"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:8c2faebff0516256e255",
+      "source:url:43940cb70a73d5675393"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-324",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-324",
+    "dedupe_key": "2024|doohly|2024-03-15|pre_seed",
+    "source_url": "https://www.overnightsuccess.vc/p/23rd-mar-2023",
+    "source_payload": {
+      "deal_number": 324,
+      "csv_investee": "Doohly",
+      "normalized_investee": "Doohly",
+      "csv_date": "2024-03-15",
+      "normalized_date": "2024-03-15 reporting",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-seed",
+      "csv_amount": "AUD 500,000",
+      "normalized_amount": "AUD 500,000",
+      "csv_investors": "Archangel Ventures; Brisbane Angels; Skalata",
+      "normalized_investors": "Skalata Ventures (lead); Archangel Ventures; Brisbane Angels / angels",
+      "verification": "verified",
+      "correction_or_issue": "Contemporaneous ecosystem reporting confirms the A$500k pre-seed. A later June A$500k follow-on involved the same existing investor group and is a separate event.",
+      "primary_source": "https://www.overnightsuccess.vc/p/23rd-mar-2023",
+      "secondary_source": "https://startupscaleup.com.au/doohly-set-to-drive-innovation-in-dooh/"
+    },
+    "investee_name_raw": "Doohly",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://dooh.ly/",
+    "org_industries_raw": "Adtech / Digital Signage",
+    "round_type_raw": "Pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-03-15",
+    "money_raised_raw": "AUD 500,000",
+    "amount": 500000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Skalata Ventures (lead); Archangel Ventures; Brisbane Angels / angels",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.overnightsuccess.vc/p/23rd-mar-2023",
+    "verification_notes": "Contemporaneous ecosystem reporting confirms the A$500k pre-seed. A later June A$500k follow-on involved the same existing investor group and is a separate event.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:doohly"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:3b7fb699cd0dbc689765",
+      "source:url:da59fe750f657a78c5c4"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

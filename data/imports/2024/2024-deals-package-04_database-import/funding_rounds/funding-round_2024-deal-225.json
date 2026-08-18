@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-225",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-225",
+    "dedupe_key": "2024|insitugen|2024-04-28|seed",
+    "source_url": "https://www.tbkcapital.co.nz/property-investment-opportunity-sapco-management-ltd-8-gilmer-terrace/",
+    "source_payload": {
+      "deal_number": 225,
+      "csv_investee": "InsituGen",
+      "normalized_investee": "InsituGen",
+      "csv_date": "2024-04-28",
+      "normalized_date": "2024-04-28 capital raise launch",
+      "csv_round": "Seed",
+      "normalized_round": "Seed / capital raise",
+      "csv_amount": "NZD 500,000",
+      "normalized_amount": "NZD 4,000,000 target; NZD 2,000,000 committed; Pacific Channel NZD 500,000",
+      "csv_investors": "Angel Investors Marlborough; Pacific Channel; TBK Capital",
+      "normalized_investors": "Pacific Channel (lead); Angel Investors Marlborough; TBK/WGC syndication; other investors",
+      "verification": "corrected",
+      "correction_or_issue": "The CSV captures only Pacific Channel's NZ$500k tranche. The disclosed round target was NZ$4m with NZ$2m already committed.",
+      "primary_source": "https://www.tbkcapital.co.nz/property-investment-opportunity-sapco-management-ltd-8-gilmer-terrace/",
+      "secondary_source": "https://oversightsolutions.co.nz/profile/INSITUGEN-LIMITED"
+    },
+    "investee_name_raw": "InsituGen",
+    "org_location_raw": "Dunedin, New Zealand",
+    "org_website_raw": "https://www.insitugen.com/",
+    "org_industries_raw": "Biotech / Diagnostics",
+    "round_type_raw": "Seed / capital raise",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-04-28",
+    "money_raised_raw": "NZD 4,000,000 target; NZD 2,000,000 committed; Pacific Channel NZD 500,000",
+    "amount": 4000000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Pacific Channel (lead); Angel Investors Marlborough; TBK/WGC syndication; other investors",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.tbkcapital.co.nz/property-investment-opportunity-sapco-management-ltd-8-gilmer-terrace/",
+    "verification_notes": "The CSV captures only Pacific Channel's NZ$500k tranche. The disclosed round target was NZ$4m with NZ$2m already committed.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:insitugen"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:f0cecfc0162ab9098f82",
+      "source:url:9255c87d4d8dce44e62f"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

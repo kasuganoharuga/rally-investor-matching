@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-138",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-138",
+    "dedupe_key": "2024|cleanery|2024-05-exact-date-undisclosed|seed",
+    "source_url": "https://www.soul.capital/portfolio/cleanery",
+    "source_payload": {
+      "deal_number": 138,
+      "csv_investee": "Cleanery",
+      "normalized_investee": "Cleanery",
+      "csv_date": "2024-05-01",
+      "normalized_date": "2024-05 (exact date undisclosed)",
+      "csv_round": "Seed",
+      "normalized_round": "Seed equity investment",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Soul Capital",
+      "normalized_investors": "Soul Capital / Te Pae ki te Rangi",
+      "verification": "verified",
+      "correction_or_issue": "Soul Capital's official portfolio page confirms a May 2024 seed equity investment; amount is undisclosed.",
+      "primary_source": "https://www.soul.capital/portfolio/cleanery",
+      "secondary_source": "https://www.cleanery.co.nz/"
+    },
+    "investee_name_raw": "Cleanery",
+    "org_location_raw": "Auckland, New Zealand",
+    "org_website_raw": "https://www.cleanery.co.nz/",
+    "org_industries_raw": "Consumer Climate / FMCG",
+    "round_type_raw": "Seed equity investment",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": null,
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Soul Capital / Te Pae ki te Rangi",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.soul.capital/portfolio/cleanery",
+    "verification_notes": "Soul Capital's official portfolio page confirms a May 2024 seed equity investment; amount is undisclosed.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:cleanery"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:5a4de3f7786597591268",
+      "source:url:fe397bb85a83f2f5c1c5"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

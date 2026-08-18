@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-292",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-292",
+    "dedupe_key": "2024|maxme|2024-06-21|seed",
+    "source_url": "https://www.overnightsuccess.vc/p/22nd-june-2024",
+    "source_payload": {
+      "deal_number": 292,
+      "csv_investee": "Maxme",
+      "normalized_investee": "Maxme",
+      "csv_date": "2024-06-20",
+      "normalized_date": "2024-06-21",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "USD 400,000",
+      "normalized_amount": "AUD 400,000",
+      "csv_investors": "LaunchVic",
+      "normalized_investors": "LaunchVic Alice Anderson Fund",
+      "verification": "corrected",
+      "correction_or_issue": "Contemporary Australian ecosystem reporting confirms A$400k with participation from LaunchVic's Alice Anderson Fund, not a generic US$400k LaunchVic cheque.",
+      "primary_source": "https://www.overnightsuccess.vc/p/22nd-june-2024",
+      "secondary_source": "https://assets.launchvic.org/app/uploads/2024/10/28154732/LV06-Annual-Report-2023-2024-V6.pdf"
+    },
+    "investee_name_raw": "Maxme",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://maxme.com.au/",
+    "org_industries_raw": "Edtech / HR Tech",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-06-21",
+    "money_raised_raw": "AUD 400,000",
+    "amount": 400000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "LaunchVic Alice Anderson Fund",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.overnightsuccess.vc/p/22nd-june-2024",
+    "verification_notes": "Contemporary Australian ecosystem reporting confirms A$400k with participation from LaunchVic's Alice Anderson Fund, not a generic US$400k LaunchVic cheque. Exact day records the visible publication date of the public financing or cohort report; it is not represented as an unreported legal closing date.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day",
+    "date_basis": "public_announcement_publication_date",
+    "date_derivation_method": "visible_source_publication_date",
+    "supplemental_verification_urls": [
+      "https://www.overnightsuccess.vc/p/22nd-june-2024"
+    ]
+  },
+  "refs": {
+    "investee_company_key": "company:research:maxme"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:9c3bd2a701122bdd633c",
+      "source:url:5d13786cd7f688618f86"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

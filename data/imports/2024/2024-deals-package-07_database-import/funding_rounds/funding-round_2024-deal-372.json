@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-372",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-372",
+    "dedupe_key": "2024|spoony|2024-antler-portfolio-year|pre_seed",
+    "source_url": "https://www.antler.co/portfolio",
+    "source_payload": {
+      "deal_number": 372,
+      "csv_investee": "Spoony",
+      "normalized_investee": "Spoony",
+      "csv_date": "2024-08-14",
+      "normalized_date": "2024 Antler portfolio year",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Antler pre-seed / residency investment",
+      "csv_amount": "AUD 225,000",
+      "normalized_amount": "AUD 225,000 at standard terms",
+      "csv_investors": "Antler",
+      "normalized_investors": "Antler Australia",
+      "verification": "verified_program",
+      "correction_or_issue": "Antler portfolio evidence and standard Australian investment terms support the program investment.",
+      "primary_source": "https://www.antler.co/portfolio",
+      "secondary_source": "https://spoony.app/"
+    },
+    "investee_name_raw": "Spoony",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://spoony.app/",
+    "org_industries_raw": "Digital Health / Social Platform",
+    "round_type_raw": "Antler pre-seed / residency investment",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "AUD 225,000 at standard terms",
+    "amount": 225000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Antler Australia",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "verified_program",
+    "verification_source_url": "https://www.antler.co/portfolio",
+    "verification_notes": "Antler portfolio evidence and standard Australian investment terms support the program investment.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:spoony"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:ed4c86f315279b15a444",
+      "source:url:670a2cfca80a66e9d6dc"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

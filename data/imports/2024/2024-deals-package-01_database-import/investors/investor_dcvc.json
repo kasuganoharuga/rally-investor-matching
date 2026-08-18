@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investors",
+  "record_key": "investor:dcvc",
+  "operation": "upsert",
+  "data": {
+    "canonical_name": "DCVC",
+    "aliases": [],
+    "investor_type": "vc_fund",
+    "website_url": "https://www.dcvc.com/",
+    "linkedin_url": null,
+    "hq_country": "US",
+    "hq_state": null,
+    "hq_city": null,
+    "offices": [],
+    "status": "active",
+    "merged_into_id": null,
+    "review_status": "reviewed",
+    "last_reviewed_at": "2026-08-14",
+    "last_reviewed_by": "codex-2024-investor-dedupe-update",
+    "investor_subtype": "Deeptech VC",
+    "classification_confidence": "high",
+    "classification_source": "inherited from previously completed detailed classification",
+    "eligibility_mode": "research_package_confirmed",
+    "classification_evidence_urls": [
+      "https://www.dcvc.com/"
+    ],
+    "classified_at": "2026-08-14",
+    "identity_resolution": "existing_investor_update",
+    "matched_existing_record_key": "investor:dcvc",
+    "identity_match_method": "exact_existing_key",
+    "identity_match_source": "normalized_master"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "research_source:dcvc:dcvc_src_001",
+      "research_source:dcvc:dcvc_src_002"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Research collection status: ",
+      "halter_allocation_undisclosed"
+    ]
+  }
+}

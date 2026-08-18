@@ -1,0 +1,168 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-03_database-import",
+  "updated_at": "2026-08-14T00:00:00+09:30",
+  "status": "completed",
+  "identity_summary": {
+    "upserts": 38,
+    "existing_investor_updates": 14,
+    "net_new_investors": 24,
+    "confirmed_aliases_canonicalized": 3
+  },
+  "matches": [
+    {
+      "package": 3,
+      "source_key": "investor:agnition-ventures",
+      "canonical_key": "investor:agnition-ventures",
+      "source_name": "Agnition Ventures",
+      "canonical_name": "Agnition Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 3,
+      "source_key": "investor:black-sheep-capital",
+      "canonical_key": "investor:black-sheep-capital",
+      "source_name": "Black Sheep Capital",
+      "canonical_name": "Black Sheep Capital",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 3,
+      "source_key": "investor:electrifi-ventures",
+      "canonical_key": "investor:electrifi-ventures",
+      "source_name": "Electrifi Ventures",
+      "canonical_name": "Electrifi Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 3,
+      "source_key": "investor:empress-capital",
+      "canonical_key": "investor:empress-capital",
+      "source_name": "Empress Capital",
+      "canonical_name": "Empress Capital",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 3,
+      "source_key": "investor:gd1-global-from-day-one",
+      "canonical_key": "investor:gd1-global-from-day-one",
+      "source_name": "GD1 (Global From Day One)",
+      "canonical_name": "GD1 (Global From Day One)",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 3,
+      "source_key": "investor:intervalley-ventures",
+      "canonical_key": "investor:intervalley-ventures",
+      "source_name": "InterValley Ventures",
+      "canonical_name": "InterValley Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-121-180_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 3,
+      "source_key": "investor:k1w1",
+      "canonical_key": "investor:k1w1",
+      "source_name": "K1W1",
+      "canonical_name": "K1W1",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 3,
+      "source_key": "investor:nz-fintech-fund",
+      "canonical_key": "investor:nz-fintech-fund",
+      "source_name": "NZ Fintech Fund",
+      "canonical_name": "NZ Fintech Fund",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-181-230_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 3,
+      "source_key": "investor:nzvc",
+      "canonical_key": "investor:nzvc",
+      "source_name": "NZVC",
+      "canonical_name": "NZVC",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 3,
+      "source_key": "investor:playground-global",
+      "canonical_key": "investor:playground-global",
+      "source_name": "Playground Global",
+      "canonical_name": "Playground Global",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 3,
+      "source_key": "investor:soul-capital",
+      "canonical_key": "investor:soul-capital",
+      "source_name": "Soul Capital",
+      "canonical_name": "Soul Capital",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 3,
+      "source_key": "investor:sparklabs-cultiv8",
+      "canonical_key": "investor:sparklabs-cultiv8",
+      "source_name": "SparkLabs Cultiv8",
+      "canonical_name": "SparkLabs Cultiv8",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-001-060_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 3,
+      "source_key": "investor:unsw-founders",
+      "canonical_key": "investor:unsw-founders",
+      "source_name": "UNSW Founders",
+      "canonical_name": "UNSW Founders",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-001-060_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 3,
+      "source_key": "investor:vmg-partners",
+      "canonical_key": "investor:vmg-partners",
+      "source_name": "VMG Partners",
+      "canonical_name": "VMG Partners",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-121-180_delta_identity-audited-v3_team-audited"
+    }
+  ],
+  "accelerator_programs": [
+    {
+      "investor_key": "investor:berkeley-skydeck-fund",
+      "package": 3,
+      "program_key": "program:berkeley-skydeck-fund:primary",
+      "reused_prior_program": false
+    },
+    {
+      "investor_key": "investor:outset-ventures",
+      "package": 3,
+      "program_key": "program:outset-ventures:primary",
+      "reused_prior_program": false
+    },
+    {
+      "investor_key": "investor:sparklabs-cultiv8",
+      "package": 3,
+      "program_key": "program:sparklabs-cultiv8:primary",
+      "reused_prior_program": false
+    },
+    {
+      "investor_key": "investor:unsw-founders",
+      "package": 3,
+      "program_key": "program:unsw-founders:primary",
+      "reused_prior_program": false
+    }
+  ],
+  "manual_review_candidates": [],
+  "reviewed_distinct_candidates": []
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-132",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-132",
+    "dedupe_key": "2024|nilo-limited|2024-12-04|series_a",
+    "source_url": "https://www.pacificchannel.com/stories/pacific-channel-co-lead-13m-series-a-investment-alongside-inter-ikea-group-into-nilo-limited",
+    "source_payload": {
+      "deal_number": 132,
+      "csv_investee": "Nilo",
+      "normalized_investee": "NILO Limited",
+      "csv_date": "2024-12-04",
+      "normalized_date": "2024-12-04",
+      "csv_round": "Series A",
+      "normalized_round": "Series A",
+      "csv_amount": "NZD 13,000,000",
+      "normalized_amount": "NZD 13,000,000",
+      "csv_investors": "Inter IKEA; Pacific Channel (leads); Icehouse Ventures; K1W1",
+      "normalized_investors": "Inter IKEA Group; Pacific Channel (co-leads); Icehouse Ventures; K1W1",
+      "verification": "verified",
+      "correction_or_issue": "Pacific Channel's official release confirms amount, co-leads and participating investors.",
+      "primary_source": "https://www.pacificchannel.com/stories/pacific-channel-co-lead-13m-series-a-investment-alongside-inter-ikea-group-into-nilo-limited",
+      "secondary_source": "https://www.icehouseventures.co.nz/"
+    },
+    "investee_name_raw": "NILO Limited",
+    "org_location_raw": "Auckland, New Zealand",
+    "org_website_raw": "https://nilo.world/",
+    "org_industries_raw": "Climate Tech / Advanced Materials",
+    "round_type_raw": "Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-12-04",
+    "money_raised_raw": "NZD 13,000,000",
+    "amount": 13000000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Inter IKEA Group; Pacific Channel (co-leads); Icehouse Ventures; K1W1",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.pacificchannel.com/stories/pacific-channel-co-lead-13m-series-a-investment-alongside-inter-ikea-group-into-nilo-limited",
+    "verification_notes": "Pacific Channel's official release confirms amount, co-leads and participating investors.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:nilo-limited"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:bd32c4f6d202b7c92eae",
+      "source:url:dc0ae6ff80680d829ef6"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

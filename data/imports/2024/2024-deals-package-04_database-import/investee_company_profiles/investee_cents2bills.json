@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:cents2bills",
+  "operation": "upsert",
+  "data": {
+    "name": "Cents2Bills",
+    "website_url": "https://cents2bills.com.au/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Victoria",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "fintech-personal-finance",
+    "sector_secondary": null,
+    "use_case_primary": "consumer-fintech-app-using-savings-rewards-and-bill-payment-workflows-to-reduce-household-utility-payment-stress",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "consumer-app",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Consumer fintech app using savings, rewards and bill-payment workflows to reduce household utility-payment stress.",
+    "source_urls": [
+      "https://cents2bills.com.au/",
+      "https://www.cbinsights.com/company/cents2bills/financials",
+      "https://app.dealroom.co/companies/cents2bills"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-164",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-164",
+    "dedupe_key": "2024|gheorg|2024-03-12|seed",
+    "source_url": "https://www.linkedin.com/company/gheorg",
+    "source_payload": {
+      "deal_number": 164,
+      "csv_investee": "Gheorg",
+      "normalized_investee": "Gheorg",
+      "csv_date": "2024-03-12",
+      "normalized_date": "2024-03-12 / 2024-04-12 database conflict",
+      "csv_round": "Seed",
+      "normalized_round": "Seed / accelerator-linked investment",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Founders 10x; Artesian",
+      "normalized_investors": "UNSW Founders 10x (lead/program); Artesian (investor relationship)",
+      "verification": "partial",
+      "correction_or_issue": "A 2024 seed entry is corroborated by company/database pages, but date conflicts and amount is undisclosed. UNSW materials place Gheorg in its 2023 Health 10x cohort.",
+      "primary_source": "https://www.linkedin.com/company/gheorg",
+      "secondary_source": "https://bouncewatch.com/explore/startup/gheorg"
+    },
+    "investee_name_raw": "Gheorg",
+    "org_location_raw": "Sydney, NSW, Australia / Florida, USA",
+    "org_website_raw": "https://www.gheorg.com/",
+    "org_industries_raw": "Digital Health / Mental Health / AI",
+    "round_type_raw": "Seed / accelerator-linked investment",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-03-12",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "UNSW Founders 10x (lead/program); Artesian (investor relationship)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://www.linkedin.com/company/gheorg",
+    "verification_notes": "A 2024 seed entry is corroborated by company/database pages, but date conflicts and amount is undisclosed. UNSW materials place Gheorg in its 2023 Health 10x cohort.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:gheorg"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:e8a4d0fc0e840a258022",
+      "source:url:5a1483d6e6fdf5f24bdf"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "A 2024 seed entry is corroborated by company/database pages, but date conflicts and amount is undisclosed. UNSW materials place Gheorg in its 2023 Health 10x cohort.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

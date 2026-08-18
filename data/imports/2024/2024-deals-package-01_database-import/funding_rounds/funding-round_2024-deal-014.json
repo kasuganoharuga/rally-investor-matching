@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-014",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-014",
+    "dedupe_key": "2024|lighthouse-now-jude|2024-06-01|pre_seed",
+    "source_url": "https://light-house.co.nz/",
+    "source_payload": {
+      "deal_number": 14,
+      "csv_investee": "Ligthhouse",
+      "normalized_investee": "Lighthouse (now Jude)",
+      "csv_date": "2024-06-01",
+      "normalized_date": "2024-06-01",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-Seed",
+      "csv_amount": "NZD 350,000",
+      "normalized_amount": "NZD 350,000 (database corroboration)",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Undisclosed",
+      "verification": "partial",
+      "correction_or_issue": "Correct misspelling; company has rebranded to Jude. Investor names not publicly confirmed.",
+      "primary_source": "https://light-house.co.nz/",
+      "secondary_source": "https://kindrik.co.nz/case-studies/jude/"
+    },
+    "investee_name_raw": "Lighthouse (now Jude)",
+    "org_location_raw": "Auckland, New Zealand",
+    "org_website_raw": "https://light-house.co.nz/",
+    "org_industries_raw": "Legaltech / Proptech / AI",
+    "round_type_raw": "Pre-Seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-06-01",
+    "money_raised_raw": "NZD 350,000 (database corroboration)",
+    "amount": 350000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://light-house.co.nz/",
+    "verification_notes": "Correct misspelling; company has rebranded to Jude. Investor names not publicly confirmed. Independent case study corroborates the company and fundraising relationship, but not all 2024 terms. Independent case study corroborates the company and fundraising relationship, but not all 2024 terms. Independent case study corroborates the company and fundraising relationship, but not all 2024 terms.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day",
+    "secondary_source_status": "partially_corroborated",
+    "supplemental_verification_urls": [
+      "https://kindrik.co.nz/case-studies/jude/"
+    ]
+  },
+  "refs": {
+    "investee_company_key": "company:research:lighthouse"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:bf7cd067845848a17988"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Correct misspelling; company has rebranded to Jude. Investor names not publicly confirmed."
+    ]
+  }
+}

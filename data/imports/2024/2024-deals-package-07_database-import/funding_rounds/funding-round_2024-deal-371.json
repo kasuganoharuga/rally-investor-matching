@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-371",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-371",
+    "dedupe_key": "2024|blue-carbon|2024-program-prize-period|program_or_grant",
+    "source_url": "https://www.bluecarbon.cc/company",
+    "source_payload": {
+      "deal_number": 371,
+      "csv_investee": "Blue Carbon",
+      "normalized_investee": "Blue Carbon",
+      "csv_date": "2024-09-14",
+      "normalized_date": "2024 program/prize period",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Accelerator / prize support",
+      "csv_amount": "AUD 100,000",
+      "normalized_amount": "AUD 100,000 KPMG Nature Positive Prize",
+      "csv_investors": "Ocean Impact Organisation",
+      "normalized_investors": "Ocean Impact Organisation program relationship; KPMG prize funding",
+      "verification": "corrected_non_equity",
+      "correction_or_issue": "OIO confirms Blue Carbon as a 2024 accelerator participant, while the company identifies the A$100k as a KPMG Nature Positive Prize. Do not treat the prize as OIO equity investment.",
+      "primary_source": "https://www.bluecarbon.cc/company",
+      "secondary_source": "https://herring-sunfish-pxr4.squarespace.com/accelerator-program-2024-cohort"
+    },
+    "investee_name_raw": "Blue Carbon",
+    "org_location_raw": "Brisbane, QLD, Australia",
+    "org_website_raw": "https://www.bluecarbon.cc/",
+    "org_industries_raw": "Ocean Tech / Climate Tech",
+    "round_type_raw": "Accelerator / prize support",
+    "round_stage": "program_or_grant",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "AUD 100,000 KPMG Nature Positive Prize",
+    "amount": 100000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Ocean Impact Organisation program relationship; KPMG prize funding",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "corrected_non_equity",
+    "verification_source_url": "https://www.bluecarbon.cc/company",
+    "verification_notes": "OIO confirms Blue Carbon as a 2024 accelerator participant, while the company identifies the A$100k as a KPMG Nature Positive Prize. Do not treat the prize as OIO equity investment.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:blue-carbon"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:917290ebf51e1095da56",
+      "source:url:1a19f6b75faa322d9130"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

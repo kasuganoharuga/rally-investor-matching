@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:dnaitech",
+  "operation": "upsert",
+  "data": {
+    "name": "DNAiTECH",
+    "website_url": "https://www.dnaitech.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "NZ",
+    "hq_state": null,
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "biotech-diagnostics",
+    "sector_secondary": null,
+    "use_case_primary": "biotechnology-company-developing-rapid-point-of-care-dna-diagnostic-chips-for-human-and-animal-diseases-without-a-labora",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "diagnostic-platform-and-consumables",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Biotechnology company developing rapid point-of-care DNA diagnostic chips for human and animal diseases without a laboratory.",
+    "source_urls": [
+      "https://www.dnaitech.com/",
+      "https://m.scoop.co.nz/stories/SC2410/S00044/dnaitech-raises-pre-seed-round-to-launch-world-first-instant-diagnostic-tests-that-dont-need-a-lab.htm",
+      "https://app.dealroom.co/companies/dnaitech_limited"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

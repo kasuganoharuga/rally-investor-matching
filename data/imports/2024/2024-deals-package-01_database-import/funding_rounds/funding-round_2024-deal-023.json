@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-023",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-023",
+    "dedupe_key": "2024|graceview|2024-08-05|seed",
+    "source_url": "https://www.prnewswire.com/news-releases/graceview-raises-1-5m-to-fuel-growth-302214086.html",
+    "source_payload": {
+      "deal_number": 23,
+      "csv_investee": "Graceview",
+      "normalized_investee": "Graceview",
+      "csv_date": "2024-08-05",
+      "normalized_date": "2024-08-05",
+      "csv_round": "Seed",
+      "normalized_round": "Funding round / seed",
+      "csv_amount": "USD 1,500,000",
+      "normalized_amount": "AUD 1,500,000",
+      "csv_investors": "Patrick Linton (lead)",
+      "normalized_investors": "Patrick Linton (lead); consortium of technology founders and investors",
+      "verification": "corrected",
+      "correction_or_issue": "Official release uses $1.5m; Australian legal-industry coverage identifies it as A$1.5m, not US$1.5m.",
+      "primary_source": "https://www.prnewswire.com/news-releases/graceview-raises-1-5m-to-fuel-growth-302214086.html",
+      "secondary_source": "https://www.law360.com/pulse/articles/1866336/legal-ai-regulatory-compliance-tool-gets-investment"
+    },
+    "investee_name_raw": "Graceview",
+    "org_location_raw": "Melbourne, Australia; London; Singapore",
+    "org_website_raw": "https://graceview.ai",
+    "org_industries_raw": "Legaltech / Regtech / AI",
+    "round_type_raw": "Funding round / seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-08-05",
+    "money_raised_raw": "AUD 1,500,000",
+    "amount": 1500000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Patrick Linton (lead); consortium of technology founders and investors",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.prnewswire.com/news-releases/graceview-raises-1-5m-to-fuel-growth-302214086.html",
+    "verification_notes": "Official release uses $1.5m; Australian legal-industry coverage identifies it as A$1.5m, not US$1.5m.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:graceview"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:f0dff8d47e3d78b4f53f",
+      "source:url:da8e467d0c4971da0f34"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

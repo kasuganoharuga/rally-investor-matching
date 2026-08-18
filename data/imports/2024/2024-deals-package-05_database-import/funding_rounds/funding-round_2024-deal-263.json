@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-263",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-263",
+    "dedupe_key": "2024|mars-bioimaging-limited|2024-05-22|series_a",
+    "source_url": "https://www.pacificchannel.com/stories/mars-bioimaging-revolutionising-medical-imaging",
+    "source_payload": {
+      "deal_number": 263,
+      "csv_investee": "Mars Bioimaging",
+      "normalized_investee": "MARS Bioimaging Limited",
+      "csv_date": "2024-05-02",
+      "normalized_date": "2024-05-22 offer launch; close timing not public in 2024",
+      "csv_round": "Series A",
+      "normalized_round": "Series A fundraising launch / staged close",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "NZD 15,000,000 target; 2024 final close not established",
+      "csv_investors": "Pacific Channel",
+      "normalized_investors": "Pacific Channel; other investors not publicly identified for the 2024 offer",
+      "verification": "corrected",
+      "correction_or_issue": "Pacific Channel confirmed its investment thesis on 2 May; NBR reported a NZ$15m Series A offer launch on 22 May. Evidence does not support treating 2 May as a fully closed undisclosed round.",
+      "primary_source": "https://www.pacificchannel.com/stories/mars-bioimaging-revolutionising-medical-imaging",
+      "secondary_source": "https://www.nbr.co.nz/tech/mars-bioimaging-launches-15m-offer-in-tight-investment-market/"
+    },
+    "investee_name_raw": "MARS Bioimaging Limited",
+    "org_location_raw": "Christchurch, New Zealand",
+    "org_website_raw": "https://www.marsbioimaging.com/",
+    "org_industries_raw": "Medtech / Imaging",
+    "round_type_raw": "Series A fundraising launch / staged close",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-05-22",
+    "money_raised_raw": "NZD 15,000,000 target; 2024 final close not established",
+    "amount": 15000000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Pacific Channel; other investors not publicly identified for the 2024 offer",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.pacificchannel.com/stories/mars-bioimaging-revolutionising-medical-imaging",
+    "verification_notes": "Pacific Channel confirmed its investment thesis on 2 May; NBR reported a NZ$15m Series A offer launch on 22 May. Evidence does not support treating 2 May as a fully closed undisclosed round.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:mars-bioimaging"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:bb9a3800404cfd80a4e8",
+      "source:url:301e163f903cc67989d7"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

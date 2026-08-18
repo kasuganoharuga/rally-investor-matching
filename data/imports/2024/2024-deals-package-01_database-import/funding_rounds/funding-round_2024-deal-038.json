@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-038",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-038",
+    "dedupe_key": "2024|jaimee-ai|2024-09-09|program_or_grant",
+    "source_url": "https://www.techstars.com/blog/program-news/techstars-tech-central-sydney-accelerator-powered-by-the-nsw-government-2024",
+    "source_payload": {
+      "deal_number": 38,
+      "csv_investee": "Jaimee",
+      "normalized_investee": "Jaimee.ai",
+      "csv_date": "2024-09-09",
+      "normalized_date": "2024-09-09",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Techstars accelerator",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Techstars",
+      "normalized_investors": "Techstars",
+      "verification": "verified_program",
+      "correction_or_issue": "Techstars officially lists Jaimee in the 2024 Sydney cohort; exact investment amount not disclosed.",
+      "primary_source": "https://www.techstars.com/blog/program-news/techstars-tech-central-sydney-accelerator-powered-by-the-nsw-government-2024",
+      "secondary_source": "https://jaimee.ai/techstars-demo-day-video-transcript"
+    },
+    "investee_name_raw": "Jaimee.ai",
+    "org_location_raw": "Melbourne/Sydney, Australia",
+    "org_website_raw": "https://jaimee.ai/",
+    "org_industries_raw": "Consumer AI / Wellbeing",
+    "round_type_raw": "Techstars accelerator",
+    "round_stage": "program_or_grant",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-09-09",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Techstars",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "verified_program",
+    "verification_source_url": "https://www.techstars.com/blog/program-news/techstars-tech-central-sydney-accelerator-powered-by-the-nsw-government-2024",
+    "verification_notes": "Techstars officially lists Jaimee in the 2024 Sydney cohort; exact investment amount not disclosed.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:jaimee-ai"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:ece2d40234ded7b60343",
+      "source:url:a8ce1233343d673b3082"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-299",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-299",
+    "dedupe_key": "2024|procurepro|2024-01-30|series_a",
+    "source_url": "https://procurepro.co/news/procurepro-raises-6-15-million-airtree-saniel",
+    "source_payload": {
+      "deal_number": 299,
+      "csv_investee": "ProcurePro",
+      "normalized_investee": "ProcurePro",
+      "csv_date": "2024-01-29",
+      "normalized_date": "2024-01-30 announcement",
+      "csv_round": "Seed",
+      "normalized_round": "Series A / first external venture round",
+      "csv_amount": "USD 6,150,000",
+      "normalized_amount": "AUD 6,150,000",
+      "csv_investors": "Airtree Ventures; Saniel Ventures",
+      "normalized_investors": "AirTree Ventures and Saniel Ventures (co-leads)",
+      "verification": "corrected",
+      "correction_or_issue": "The company and Saniel identify the first external venture round as A$6.15m and describe it as Series A. The CSV incorrectly labels the currency USD and stage seed.",
+      "primary_source": "https://procurepro.co/news/procurepro-raises-6-15-million-airtree-saniel",
+      "secondary_source": "https://saniel.vc/media-posts/construction-software-startup-procurepro-builds-6-15-million-series-a-for-uk-expansion/"
+    },
+    "investee_name_raw": "ProcurePro",
+    "org_location_raw": "Brisbane, QLD, Australia",
+    "org_website_raw": "https://procurepro.co/",
+    "org_industries_raw": "Contech / Procurement",
+    "round_type_raw": "Series A / first external venture round",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-01-30",
+    "money_raised_raw": "AUD 6,150,000",
+    "amount": 6150000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "AirTree Ventures and Saniel Ventures (co-leads)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://procurepro.co/news/procurepro-raises-6-15-million-airtree-saniel",
+    "verification_notes": "The company and Saniel identify the first external venture round as A$6.15m and describe it as Series A. The CSV incorrectly labels the currency USD and stage seed.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:procurepro"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:0b48f7793247ca8b56fc",
+      "source:url:3d5aad3c7279e9d6e55d"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

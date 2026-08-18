@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-106",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-106",
+    "dedupe_key": "2024|matrak|2024-04-26|series_a",
+    "source_url": "https://matrak.com/blog/matrak-raises-from-gm-press-release/",
+    "source_payload": {
+      "deal_number": 106,
+      "csv_investee": "Matrak Industries",
+      "normalized_investee": "Matrak",
+      "csv_date": "2024-04-28",
+      "normalized_date": "2024-04-26 close / 2024-04-28 post",
+      "csv_round": "Series A",
+      "normalized_round": "Series A",
+      "csv_amount": "AUD 2,900,000",
+      "normalized_amount": "AUD 2,900,000",
+      "csv_investors": "G&M Capital; OIF Ventures; Simon Yencken",
+      "normalized_investors": "G&M Capital (lead); OIF Ventures; Simon Yencken; other existing investors",
+      "verification": "verified",
+      "correction_or_issue": "Company announcement confirms amount, lead and named co-investors.",
+      "primary_source": "https://matrak.com/blog/matrak-raises-from-gm-press-release/",
+      "secondary_source": "https://app.dealroom.co/companies/matrak_industries"
+    },
+    "investee_name_raw": "Matrak",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://matrak.com/",
+    "org_industries_raw": "Contech / Supply Chain",
+    "round_type_raw": "Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-04-26",
+    "money_raised_raw": "AUD 2,900,000",
+    "amount": 2900000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "G&M Capital (lead); OIF Ventures; Simon Yencken; other existing investors",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://matrak.com/blog/matrak-raises-from-gm-press-release/",
+    "verification_notes": "Company announcement confirms amount, lead and named co-investors.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:matrak"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:6c586c2dbeec79e67d31",
+      "source:url:2b5859689bf9687bf3de"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

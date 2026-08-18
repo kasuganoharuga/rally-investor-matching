@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-147",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-147",
+    "dedupe_key": "2024|corametix|2024-database-led-exact-date-uncertain|seed",
+    "source_url": "https://corametix.com/",
+    "source_payload": {
+      "deal_number": 147,
+      "csv_investee": "Corametix",
+      "normalized_investee": "CoraMetix",
+      "csv_date": "2024-06-15",
+      "normalized_date": "2024 (database-led; exact date uncertain)",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Approximately AUD 500,000 / USD 330,000 (database-led)",
+      "csv_investors": "Fund WA",
+      "normalized_investors": "Fund WA; undisclosed investors",
+      "verification": "partial",
+      "correction_or_issue": "Company and investor relationship is corroborated by databases; amount is approximate and no primary round announcement was found.",
+      "primary_source": "https://corametix.com/",
+      "secondary_source": "https://fastercapital.com/data/company/corametix-68f458b030bd464620e19807"
+    },
+    "investee_name_raw": "CoraMetix",
+    "org_location_raw": "Perth, WA, Australia",
+    "org_website_raw": "https://corametix.com/",
+    "org_industries_raw": "Medtech / Medical Devices",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": null,
+    "money_raised_raw": "Approximately AUD 500,000 / USD 330,000 (database-led)",
+    "amount": 500000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Fund WA; undisclosed investors",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://corametix.com/",
+    "verification_notes": "Company and investor relationship is corroborated by databases; amount is approximate and no primary round announcement was found.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:corametix"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:fe904233f900eedd83ad",
+      "source:url:020f443636a8087c5cb1"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Company and investor relationship is corroborated by databases; amount is approximate and no primary round announcement was found.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

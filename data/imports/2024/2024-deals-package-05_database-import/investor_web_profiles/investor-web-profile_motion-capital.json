@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_web_profiles",
+  "record_key": "investor_web_profile:motion-capital:2026-08-14",
+  "operation": "upsert",
+  "data": {
+    "source_urls": [
+      "https://www.motioncapital.co.nz/",
+      "https://www.linkedin.com/company/motion-nz",
+      "https://www.linkedin.com/posts/motion-nz_industrial-battery-storage-software-platform-activity-7402100739159834624-3_AB"
+    ],
+    "retrieved_at": "2026-08-14",
+    "website_status": "verified_public_profile",
+    "raw_content_hash": null,
+    "raw_content_ref": null,
+    "extraction_model": "codex-2024-investor-dedupe-update",
+    "extraction_version": "1.0.0",
+    "confidence": "medium",
+    "claimed_thesis": "Decarbonisation",
+    "claimed_stages": [
+      "Seed / pre-Series A"
+    ],
+    "claimed_sectors": [
+      "Decarbonisation"
+    ],
+    "claimed_geographies": [
+      "New Zealand"
+    ],
+    "claimed_business_models": [],
+    "claimed_cheque_min": null,
+    "claimed_cheque_max": null,
+    "claimed_cheque_currency": null,
+    "contact_emails": [],
+    "application_url": null,
+    "contact_notes": "Official investment note confirms NZ$1.5m lead cheque; not found in base or prior packages.",
+    "is_current": true,
+    "superseded_at": null
+  },
+  "refs": {
+    "investor_key": "investor:motion-capital"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "research_source:motion-capital:motion-capital_src_official",
+      "research_source:motion-capital:motion-capital_src_linkedin",
+      "research_source:motion-capital:motion-capital_src_deal"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Research collection status: partial",
+      "crunchbase_profile_not_verified",
+      "public_investment_team_not_verified",
+      "identity_or_transaction_conflict"
+    ]
+  }
+}

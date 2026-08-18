@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "table": "deal_investors",
+  "record_key": "deal_investor:research-package:2024-deal-245:blackstone-tactical-opportunities",
+  "operation": "upsert",
+  "data": {
+    "raw_name": "Blackstone Tactical Opportunities funds",
+    "role": "participant",
+    "participation_status": "confirmed",
+    "resolution": "resolved",
+    "resolution_confidence": "medium",
+    "identity_resolution": "new_investor"
+  },
+  "refs": {
+    "deal_key": "funding_round:research-package:2024-deal-245",
+    "investor_key": "investor:blackstone-tactical-opportunities",
+    "raw_investor_candidate_key": "raw_investor_candidate:blackstone-tactical-opportunities-funds"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

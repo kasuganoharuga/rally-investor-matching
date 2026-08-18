@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-04_database-import",
+  "updated_at": "2026-08-14T00:00:00+09:30",
+  "status": "completed",
+  "identity_summary": {
+    "upserts": 26,
+    "existing_investor_updates": 2,
+    "net_new_investors": 24,
+    "confirmed_aliases_canonicalized": 0
+  },
+  "matches": [
+    {
+      "package": 4,
+      "source_key": "investor:bailador-technology-investments",
+      "canonical_key": "investor:bailador-technology-investments",
+      "source_name": "Bailador Technology Investments",
+      "canonical_name": "Bailador Technology Investments",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-061-120_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 4,
+      "source_key": "investor:hitachi-ventures",
+      "canonical_key": "investor:hitachi-ventures",
+      "source_name": "Hitachi Ventures",
+      "canonical_name": "Hitachi Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-181-230_delta_identity-audited-v3_team-audited"
+    }
+  ],
+  "accelerator_programs": [
+    {
+      "investor_key": "investor:born-ready-ventures",
+      "package": 4,
+      "program_key": "program:born-ready-ventures:primary",
+      "reused_prior_program": false
+    },
+    {
+      "investor_key": "investor:nato-defence-innovation-accelerator-for-the-north-atlantic",
+      "package": 4,
+      "program_key": "program:nato-defence-innovation-accelerator-for-the-north-atlantic:primary",
+      "reused_prior_program": false
+    },
+    {
+      "investor_key": "investor:ocean-impact-organisation-oio",
+      "package": 4,
+      "program_key": "program:ocean-impact-organisation-oio:primary",
+      "reused_prior_program": false
+    },
+    {
+      "investor_key": "investor:outlier-ventures",
+      "package": 4,
+      "program_key": "program:outlier-ventures:primary",
+      "reused_prior_program": false
+    }
+  ],
+  "manual_review_candidates": [],
+  "reviewed_distinct_candidates": []
+}

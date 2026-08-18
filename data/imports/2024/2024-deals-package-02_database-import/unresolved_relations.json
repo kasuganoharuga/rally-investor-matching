@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-02_database-import",
+  "counts": {
+    "created_relations": 131,
+    "unresolved_or_unnamed": 18,
+    "excluded_by_investor_policy": 0
+  },
+  "unresolved_relations": [
+    {
+      "deal_number": 61,
+      "token": "Undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 63,
+      "token": "other crypto investors",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 66,
+      "token": "No external investor confirmed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 71,
+      "token": "US ranching investors and executives",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 73,
+      "token": "No external investor confirmed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 74,
+      "token": "No external investor confirmed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 80,
+      "token": "Undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 83,
+      "token": "undisclosed investors",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 88,
+      "token": "new and existing shareholders not named",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 95,
+      "token": "No external investor confirmed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 102,
+      "token": "undisclosed investors",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 104,
+      "token": "other Web3 founders",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 106,
+      "token": "other existing investors",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 108,
+      "token": "other angels",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 109,
+      "token": "No external investor confirmed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 111,
+      "token": "strategic investors",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 113,
+      "token": "Undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 117,
+      "token": "Undisclosed industry investors",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    }
+  ],
+  "excluded_relations": [],
+  "resolved_by_supplement": []
+}

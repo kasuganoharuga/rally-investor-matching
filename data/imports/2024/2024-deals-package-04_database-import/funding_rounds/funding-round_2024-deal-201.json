@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-201",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-201",
+    "dedupe_key": "2024|noa-the-brand|2024-02-08|program_or_grant",
+    "source_url": "https://app.dealroom.co/companies/noa_the_brand",
+    "source_payload": {
+      "deal_number": 201,
+      "csv_investee": "NOA The Brand",
+      "normalized_investee": "NOA The Brand",
+      "csv_date": "2024-02-08",
+      "normalized_date": "2024-02-08 (database date)",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Startmate accelerator investment",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed; standard cohort terms may apply",
+      "csv_investors": "Startmate",
+      "normalized_investors": "Startmate",
+      "verification": "partial",
+      "correction_or_issue": "Startmate participation is corroborated by ecosystem data, but no primary company financing announcement or deal-specific amount was located.",
+      "primary_source": "https://app.dealroom.co/companies/noa_the_brand",
+      "secondary_source": "https://www.noathebrand.com/"
+    },
+    "investee_name_raw": "NOA The Brand",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.noathebrand.com/",
+    "org_industries_raw": "Industrial IoT / Electronics",
+    "round_type_raw": "Startmate accelerator investment",
+    "round_stage": "program_or_grant",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-02-08",
+    "money_raised_raw": "Undisclosed; standard cohort terms may apply",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Startmate",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://app.dealroom.co/companies/noa_the_brand",
+    "verification_notes": "Startmate participation is corroborated by ecosystem data, but no primary company financing announcement or deal-specific amount was located.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:noa-the-brand"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:1595ba1095546ae57a03",
+      "source:url:a4345029ef7d8fb0851c"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Startmate participation is corroborated by ecosystem data, but no primary company financing announcement or deal-specific amount was located.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

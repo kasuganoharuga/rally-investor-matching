@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-307",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-307",
+    "dedupe_key": "2024|au-beauty-bazaar|2024-10-database-entry|unknown",
+    "source_url": "https://aubeautybazaar.com/",
+    "source_payload": {
+      "deal_number": 307,
+      "csv_investee": "AU Beauty Bazaar",
+      "normalized_investee": "AU Beauty Bazaar",
+      "csv_date": "2024-10-01",
+      "normalized_date": "2024-10 database entry",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Unverified founder-linked entry",
+      "csv_amount": "USD 50,000",
+      "normalized_amount": "Unverified",
+      "csv_investors": "Stephen Tam",
+      "normalized_investors": "No external investor confirmed; Stephen Tam is the founder",
+      "verification": "rejected_investor_identity",
+      "correction_or_issue": "Public profiles identify Stephen Tam as AU Beauty Bazaar's founder, not an independent investor. No external proof supports the US$50k financing entry.",
+      "primary_source": "https://aubeautybazaar.com/",
+      "secondary_source": "https://au.linkedin.com/in/stephenhtam"
+    },
+    "investee_name_raw": "AU Beauty Bazaar",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://aubeautybazaar.com/",
+    "org_industries_raw": "Beauty / Ecommerce",
+    "round_type_raw": "Unverified founder-linked entry",
+    "round_stage": "unknown",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "Unverified",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "No external investor confirmed; Stephen Tam is the founder",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "rejected_investor_identity",
+    "verification_source_url": "https://aubeautybazaar.com/",
+    "verification_notes": "Public profiles identify Stephen Tam as AU Beauty Bazaar's founder, not an independent investor. No external proof supports the US$50k financing entry.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown",
+    "amount_disclosure_status": "founder_misclassified_no_verified_external_financing",
+    "amount_structuring_note": "The named person is the founder, and no external proof supports the US$50k financing entry.",
+    "supplemental_verification_urls": []
+  },
+  "refs": {
+    "investee_company_key": "company:research:au-beauty-bazaar"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:5b817d0737603d435948",
+      "source:url:146774152c84833ba102"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

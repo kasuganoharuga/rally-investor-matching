@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-381",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-381",
+    "dedupe_key": "2024|projectworks|2024-10-23|series_a",
+    "source_url": "https://channellife.co.nz/story/nz-start-up-projectworks-valued-at-nzd-100-million",
+    "source_payload": {
+      "deal_number": 381,
+      "csv_investee": "Projectworks",
+      "normalized_investee": "Projectworks",
+      "csv_date": "2024-10-15",
+      "normalized_date": "2024-10-23 reporting",
+      "csv_round": "Series A",
+      "normalized_round": "Series A",
+      "csv_amount": "NZD 8,200,000",
+      "normalized_amount": "USD 5,000,000 (about NZD 8.2m)",
+      "csv_investors": "Bridgewest Group; Mark Orttung; Punakaiki Fund",
+      "normalized_investors": "Bridgewest Group (lead); Punakaiki Fund; founders / existing shareholders",
+      "verification": "corrected",
+      "correction_or_issue": "Amount is confirmed as US$5m. Mark Orttung is the CEO, not a verified investor, and is removed from the syndicate.",
+      "primary_source": "https://channellife.co.nz/story/nz-start-up-projectworks-valued-at-nzd-100-million",
+      "secondary_source": "https://punakaikifund.co.nz/reports/Punakaiki-Fund-FY2025-Annual-Report.pdf"
+    },
+    "investee_name_raw": "Projectworks",
+    "org_location_raw": "Wellington-founded; US-domiciled",
+    "org_website_raw": "https://projectworks.com/",
+    "org_industries_raw": "B2B SaaS / Professional Services Automation",
+    "round_type_raw": "Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-10-23",
+    "money_raised_raw": "USD 5,000,000 (about NZD 8.2m)",
+    "amount": 5000000,
+    "currency": "USD",
+    "amount_usd": 5000000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Bridgewest Group (lead); Punakaiki Fund; founders / existing shareholders",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://channellife.co.nz/story/nz-start-up-projectworks-valued-at-nzd-100-million",
+    "verification_notes": "Amount is confirmed as US$5m. Mark Orttung is the CEO, not a verified investor, and is removed from the syndicate.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:projectworks"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:9bc8c27fb02286a314c8",
+      "source:url:838713f427a801309734"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

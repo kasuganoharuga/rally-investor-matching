@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_web_profiles",
+  "record_key": "investor_web_profile:recursive-ventures:2026-08-14",
+  "operation": "upsert",
+  "data": {
+    "source_urls": [
+      "http://www.recursiveventures.com/",
+      "https://www.linkedin.com/company/recursive-ventures",
+      "https://www.cbinsights.com/company/buildpass/financials"
+    ],
+    "retrieved_at": "2026-08-14",
+    "website_status": "verified_public_profile",
+    "raw_content_hash": null,
+    "raw_content_ref": null,
+    "extraction_model": "codex-2024-investor-dedupe-update",
+    "extraction_version": "1.0.0",
+    "confidence": "medium",
+    "claimed_thesis": "Technology",
+    "claimed_stages": [
+      "Pre-seed / seed"
+    ],
+    "claimed_sectors": [
+      "Technology"
+    ],
+    "claimed_geographies": [
+      "USA"
+    ],
+    "claimed_business_models": [],
+    "claimed_cheque_min": null,
+    "claimed_cheque_max": null,
+    "claimed_cheque_currency": null,
+    "contact_emails": [],
+    "application_url": null,
+    "contact_notes": "Company release confirms participation.",
+    "is_current": true,
+    "superseded_at": null
+  },
+  "refs": {
+    "investor_key": "investor:recursive-ventures"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:0e8866d6fcab5df8c13d",
+      "research_source:recursive-ventures:recursive-ventures_src_official",
+      "research_source:recursive-ventures:recursive-ventures_src_linkedin",
+      "research_source:recursive-ventures:recursive-ventures_src_deal"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Research collection status: partial",
+      "crunchbase_profile_not_verified",
+      "identity_or_transaction_conflict"
+    ]
+  }
+}

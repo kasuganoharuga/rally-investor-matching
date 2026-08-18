@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-02_database-import",
+  "counts": {
+    "source_investors": 122,
+    "excluded": 11
+  },
+  "excluded_investors": [
+    {
+      "source_name": "Andrew Coppin",
+      "canonical_investor": "Andrew Coppin",
+      "action": "do_not_create",
+      "related_deals": "Farmbot",
+      "website": "https://farmbot.com.au/",
+      "reason": "Official coverage identifies him as co-founder.",
+      "source_excel_row": 91
+    },
+    {
+      "source_name": "Andrew O'Brien",
+      "canonical_investor": "Andrew O'Brien",
+      "action": "do_not_create",
+      "related_deals": "vivaLAB",
+      "website": "https://www.vivalab.health/about-us",
+      "reason": "Company identifies him as co-founder and executive chair; not sufficient evidence of external investment.",
+      "source_excel_row": 92
+    },
+    {
+      "source_name": "Founder Institute Australia New Zealand",
+      "canonical_investor": "Founder Institute Australia & New Zealand",
+      "action": "do_not_create",
+      "related_deals": "Amicii; TalentDojo",
+      "website": "https://fi.co/",
+      "reason": "Program/cohort relationship only; no disclosed financing event. | Program relationship only; no financing disclosed.",
+      "source_excel_row": 93
+    },
+    {
+      "source_name": "Startupbootcamp Australia",
+      "canonical_investor": "Startupbootcamp Australia",
+      "action": "do_not_create",
+      "related_deals": "Snapcash",
+      "website": "https://www.startupbootcamp.com.au/",
+      "reason": "Program relationship only; company profile says bootstrapped.",
+      "source_excel_row": 94
+    },
+    {
+      "source_name": "Sam Kazemian; Sandeep Nailwal; Scott Moore; Trung Nguyen; Victor Tran",
+      "canonical_investor": "Additional RISE Web3 founders",
+      "action": "hold_unresolved",
+      "related_deals": "RISE",
+      "website": null,
+      "reason": "CSV names these angels, but the reviewed announcement does not enumerate them individually.",
+      "source_excel_row": 95
+    },
+    {
+      "source_name": "Agnition Ventures",
+      "canonical_investor": "Agnition Ventures",
+      "action": "hold_unresolved",
+      "related_deals": "Invest Inya Farmer",
+      "website": "https://agnition.ventures/",
+      "reason": "Portfolio relationship confirmed, but not the stronger public Series A participant list.",
+      "source_excel_row": 96
+    },
+    {
+      "source_name": "Carthona; Flying Fox",
+      "canonical_investor": "Carthona Capital / Flying Fox Ventures",
+      "action": "hold_unresolved",
+      "related_deals": "Safewill",
+      "website": null,
+      "reason": "CSV names them, but stronger 2024 reporting does not confirm round participation.",
+      "source_excel_row": 97
+    },
+    {
+      "source_name": "Catalystrix Ventures",
+      "canonical_investor": "Catalystrix Ventures",
+      "action": "hold_unresolved",
+      "related_deals": "Nexxis",
+      "website": null,
+      "reason": "No independent transaction or firm identity confirmation found.",
+      "source_excel_row": 98
+    },
+    {
+      "source_name": "Purpose Ventures; Roger Allen",
+      "canonical_investor": "Purpose Ventures / Roger Allen",
+      "action": "hold_unresolved",
+      "related_deals": "My Mirror",
+      "website": null,
+      "reason": "No independent evidence for the supplied round.",
+      "source_excel_row": 99
+    },
+    {
+      "source_name": "SpringCapital Investment",
+      "canonical_investor": "SpringCapital Investment",
+      "action": "hold_unresolved",
+      "related_deals": "Veyor",
+      "website": null,
+      "reason": "CSV-only participant; stronger reporting does not confirm it.",
+      "source_excel_row": 100
+    },
+    {
+      "source_name": "The Fund",
+      "canonical_investor": "The Fund",
+      "action": "hold_unresolved",
+      "related_deals": "Switchboard",
+      "website": null,
+      "reason": "Some secondary sources list it, but reviewed investor notes do not consistently confirm it.",
+      "source_excel_row": 101
+    }
+  ]
+}

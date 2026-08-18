@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-409",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-409",
+    "dedupe_key": "2024|pearler-ai|2024-02-database-company-profile|seed",
+    "source_url": "https://www.linkedin.com/company/pearler-app/",
+    "source_payload": {
+      "deal_number": 409,
+      "csv_investee": "Pearler.AI",
+      "normalized_investee": "Pearler.AI",
+      "csv_date": "2024-01-01",
+      "normalized_date": "2024-02 database/company profile",
+      "csv_round": "Seed",
+      "normalized_round": "Seed / program-linked financing",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Boab AI",
+      "normalized_investors": "Boab AI (unverified attribution)",
+      "verification": "needs_review",
+      "correction_or_issue": "The Adelaide RFP/tender AI company is identifiable, but no reliable public source was found tying a specific cheque or close to Boab AI.",
+      "primary_source": "https://www.linkedin.com/company/pearler-app/",
+      "secondary_source": "https://www.pearler.ai/"
+    },
+    "investee_name_raw": "Pearler.AI",
+    "org_location_raw": "Adelaide, SA, Australia",
+    "org_website_raw": "https://www.pearler.ai/",
+    "org_industries_raw": "Enterprise AI / Procurement",
+    "round_type_raw": "Seed / program-linked financing",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": null,
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Boab AI (unverified attribution)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://www.linkedin.com/company/pearler-app/",
+    "verification_notes": "The Adelaide RFP/tender AI company is identifiable, but no reliable public source was found tying a specific cheque or close to Boab AI.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:pearler-ai"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:6a318e4b506ea6871dca",
+      "source:url:669476605322c4ca7aef"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "The Adelaide RFP/tender AI company is identifiable, but no reliable public source was found tying a specific cheque or close to Boab AI.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-224",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-224",
+    "dedupe_key": "2024|agscent|2024-04-16|series_a",
+    "source_url": "https://www.crunchbase.com/organization/agscent/company_financials",
+    "source_payload": {
+      "deal_number": 224,
+      "csv_investee": "Agscent",
+      "normalized_investee": "Agscent",
+      "csv_date": "2024-04-16",
+      "normalized_date": "2024-04-16 database entry; conflicts with prior rounds",
+      "csv_round": "Series A",
+      "normalized_round": "Unverified follow-on / database Series A",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "2024 investor undisclosed; Mandalay, Scale and Flying Fox are prior backers",
+      "verification": "needs_review",
+      "correction_or_issue": "Database records conflict, including earlier 2023 Series A entries. No primary 2024 financing announcement or amount was found.",
+      "primary_source": "https://www.crunchbase.com/organization/agscent/company_financials",
+      "secondary_source": "https://agscent.com/company/"
+    },
+    "investee_name_raw": "Agscent",
+    "org_location_raw": "Queanbeyan region, NSW, Australia",
+    "org_website_raw": "https://agscent.com/",
+    "org_industries_raw": "Agtech / Diagnostics",
+    "round_type_raw": "Unverified follow-on / database Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-04-16",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "2024 investor undisclosed; Mandalay, Scale and Flying Fox are prior backers",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://www.crunchbase.com/organization/agscent/company_financials",
+    "verification_notes": "Database records conflict, including earlier 2023 Series A entries. No primary 2024 financing announcement or amount was found.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:agscent"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:257b84b925caeb091f33",
+      "source:url:a0199d2a98d0bcc32942"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Database records conflict, including earlier 2023 Series A entries. No primary 2024 financing announcement or amount was found.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

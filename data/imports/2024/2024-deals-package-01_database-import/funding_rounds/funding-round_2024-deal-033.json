@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-033",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-033",
+    "dedupe_key": "2024|diraq|2024-06-24|series_a",
+    "source_url": "https://tarongagroup.com/news-articles/diraq-adds-leading-deeptech-and-venture-investors-to-usd-22-million-investment-round/",
+    "source_payload": {
+      "deal_number": 33,
+      "csv_investee": "Diraq",
+      "normalized_investee": "Diraq",
+      "csv_date": "2024-06-24",
+      "normalized_date": "2024-06-24",
+      "csv_round": "Series A",
+      "normalized_round": "Series A2 extension",
+      "csv_amount": "AUD 10,500,000",
+      "normalized_amount": "USD 22,000,000 total Series A2 round",
+      "csv_investors": "Main Sequence Ventures (lead); CoAct Capital; Taronga Ventures; Uniseed; UniSuper; UNSW Sydney",
+      "normalized_investors": "Quantonation (lead); Main Sequence; Taronga Ventures; Uniseed; UniSuper; Co:Act Capital; UNSW Sydney",
+      "verification": "corrected",
+      "correction_or_issue": "Official release names Quantonation as lead and describes a US$22m total Series A2; CSV appears to capture only an extension tranche.",
+      "primary_source": "https://tarongagroup.com/news-articles/diraq-adds-leading-deeptech-and-venture-investors-to-usd-22-million-investment-round/",
+      "secondary_source": "https://uniseed.com/wp-content/uploads/2024/06/Diraq_Series-A2-Close-Release_Press-Pack_20240625.pdf"
+    },
+    "investee_name_raw": "Diraq",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://diraq.com",
+    "org_industries_raw": "Quantum / Semiconductors / Deeptech",
+    "round_type_raw": "Series A2 extension",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-06-24",
+    "money_raised_raw": "USD 22,000,000 total Series A2 round",
+    "amount": 22000000,
+    "currency": "USD",
+    "amount_usd": 22000000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Quantonation (lead); Main Sequence; Taronga Ventures; Uniseed; UniSuper; Co:Act Capital; UNSW Sydney",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://tarongagroup.com/news-articles/diraq-adds-leading-deeptech-and-venture-investors-to-usd-22-million-investment-round/",
+    "verification_notes": "Official release names Quantonation as lead and describes a US$22m total Series A2; CSV appears to capture only an extension tranche.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:diraq"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:223c4dadbfd05cec20db",
+      "source:url:1e2381e89d7f9bba28b7"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

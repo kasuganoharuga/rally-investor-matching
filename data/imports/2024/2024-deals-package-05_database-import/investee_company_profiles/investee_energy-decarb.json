@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:energy-decarb",
+  "operation": "upsert",
+  "data": {
+    "name": "Energy Decarb",
+    "website_url": "https://energydecarb.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Queensland",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "renewable-energy-services",
+    "sector_secondary": null,
+    "use_case_primary": "designs-implements-and-manages-commercial-renewable-energy-storage-and-ev-charging-systems",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "epc-asset-management",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Designs, implements and manages commercial renewable-energy, storage and EV-charging systems.",
+    "source_urls": [
+      "https://energydecarb.com/",
+      "https://energydecarb.com/about/",
+      "https://www.stbcapitalpartners.com.au/bios"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

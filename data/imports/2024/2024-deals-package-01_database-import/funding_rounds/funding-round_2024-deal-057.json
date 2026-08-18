@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-057",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-057",
+    "dedupe_key": "2024|green-gravity|2024-10-15|series_a",
+    "source_url": "https://greengravity.com/wp-content/uploads/2024/10/20241015-Media-Release_Green-Gravity_Capital-Raise.pdf",
+    "source_payload": {
+      "deal_number": 57,
+      "csv_investee": "Green Gravity",
+      "normalized_investee": "Green Gravity",
+      "csv_date": "2024-10-15",
+      "normalized_date": "2024-10-15",
+      "csv_round": "Series A",
+      "normalized_round": "Series A",
+      "csv_amount": "AUD 9,000,000",
+      "normalized_amount": "AUD 9,000,000",
+      "csv_investors": "BlueScopeX; HMC Capital; M2P Engineering; Pacific Channel; Sumitomo",
+      "normalized_investors": "HMC Capital; BlueScopeX; Pacific Channel; Sumisho Coal Australia Holdings",
+      "verification": "verified",
+      "correction_or_issue": "Official release confirms four investors; M2P is described as delivery partner, not investor.",
+      "primary_source": "https://greengravity.com/wp-content/uploads/2024/10/20241015-Media-Release_Green-Gravity_Capital-Raise.pdf",
+      "secondary_source": "https://greenreview.com.au/business_insight/green-gravity-closes-series-a-capital-raise/"
+    },
+    "investee_name_raw": "Green Gravity",
+    "org_location_raw": "Wollongong, NSW, Australia",
+    "org_website_raw": "https://greengravity.com/",
+    "org_industries_raw": "Climate / Energy Storage",
+    "round_type_raw": "Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-10-15",
+    "money_raised_raw": "AUD 9,000,000",
+    "amount": 9000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "HMC Capital; BlueScopeX; Pacific Channel; Sumisho Coal Australia Holdings",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://greengravity.com/wp-content/uploads/2024/10/20241015-Media-Release_Green-Gravity_Capital-Raise.pdf",
+    "verification_notes": "Official release confirms four investors; M2P is described as delivery partner, not investor.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:green-gravity"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:263207cca2132413311c",
+      "source:url:119e2597e83c7f8c5bee"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

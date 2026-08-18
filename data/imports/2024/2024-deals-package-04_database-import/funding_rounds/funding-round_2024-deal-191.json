@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-191",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-191",
+    "dedupe_key": "2024|gymvibe-lifelike-digital|2024-02-12|program_or_grant",
+    "source_url": "https://outlierventures.io/article/outlier-ventures-and-futureverse-announce-the-first-cohort-for-the-futureverse-base-camp-accelerator-program/",
+    "source_payload": {
+      "deal_number": 191,
+      "csv_investee": "GymVibe",
+      "normalized_investee": "GymVibe / Lifelike Digital",
+      "csv_date": "2024-02-12",
+      "normalized_date": "2024-02-12 cohort announcement",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Futureverse Base Camp accelerator investment/support",
+      "csv_amount": "USD 100,000",
+      "normalized_amount": "Up to USD 100,000 program stipend/investment",
+      "csv_investors": "Futureverse; Outlier Ventures",
+      "normalized_investors": "Born Ready (capital); Outlier Ventures and Futureverse (program partners)",
+      "verification": "verified_program",
+      "correction_or_issue": "Official cohort and terms confirm investment/support, but company-specific cash timing and final amount are not separately disclosed.",
+      "primary_source": "https://outlierventures.io/article/outlier-ventures-and-futureverse-announce-the-first-cohort-for-the-futureverse-base-camp-accelerator-program/",
+      "secondary_source": "https://outlierventures.io/base-camp/futureverse-base-camp/"
+    },
+    "investee_name_raw": "GymVibe / Lifelike Digital",
+    "org_location_raw": "Auckland, New Zealand",
+    "org_website_raw": "https://lifelikedigital.com/",
+    "org_industries_raw": "Fitness Tech / AI / XR",
+    "round_type_raw": "Futureverse Base Camp accelerator investment/support",
+    "round_stage": "program_or_grant",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-02-12",
+    "money_raised_raw": "Up to USD 100,000 program stipend/investment",
+    "amount": 100000,
+    "currency": "USD",
+    "amount_usd": 100000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Born Ready (capital); Outlier Ventures and Futureverse (program partners)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "verified_program",
+    "verification_source_url": "https://outlierventures.io/article/outlier-ventures-and-futureverse-announce-the-first-cohort-for-the-futureverse-base-camp-accelerator-program/",
+    "verification_notes": "Official cohort and terms confirm investment/support, but company-specific cash timing and final amount are not separately disclosed.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:gymvibe"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:2cab1815198eaa190fa7",
+      "source:url:c32dbe568ea833a6d475"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

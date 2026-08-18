@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:logrium",
+  "operation": "upsert",
+  "data": {
+    "name": "Logrium",
+    "website_url": "https://www.logrium.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "web3-automation",
+    "sector_secondary": null,
+    "use_case_primary": "blockchain-and-automation-platform-offering-ai-assisted-support-and-web3-task-management-capabilities",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "software-platform",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "ai_related",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Blockchain and automation platform offering AI-assisted support and Web3 task-management capabilities.",
+    "source_urls": [
+      "https://www.logrium.com/",
+      "https://www.linkedin.com/company/logrium/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:delphinus-lab",
+  "operation": "upsert",
+  "data": {
+    "name": "Delphinus Lab",
+    "website_url": "https://delphinuslab.com/",
+    "crunchbase_uuid": null,
+    "hq_country": null,
+    "hq_state": null,
+    "hq_city": null,
+    "is_anz": false,
+    "sector_primary": "web3-cryptography",
+    "sector_secondary": null,
+    "use_case_primary": "zero-knowledge-proof-and-verifiable-computation-infrastructure-for-privacy-preserving-applications",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "developer-infrastructure-protocol",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Zero-knowledge proof and verifiable-computation infrastructure for privacy-preserving applications.",
+    "source_urls": [
+      "https://delphinuslab.com/",
+      "https://okxventures.medium.com/okx-ventures-invests-in-pre-a-round-for-trustless-computation-provider-delphinus-lab-3df641ebda1f"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "medium"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Investee headquarters country could not be normalized from the research package."
+    ]
+  }
+}

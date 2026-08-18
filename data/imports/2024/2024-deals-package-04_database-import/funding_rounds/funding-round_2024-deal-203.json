@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-203",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-203",
+    "dedupe_key": "2024|decarice|2024-08-15|pre_seed",
+    "source_url": "https://www.unsw.edu.au/research/partner-with-us/investment-portfolio/decarice",
+    "source_payload": {
+      "deal_number": 203,
+      "csv_investee": "Decarice",
+      "normalized_investee": "DeCarice",
+      "csv_date": "2024-08-15",
+      "normalized_date": "2024-08-15 Investible announcement",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-Seed SAFE financing",
+      "csv_amount": "AUD 20,000",
+      "normalized_amount": "AUD 1,290,000 cumulative pre-seed SAFEs; exact 2024 tranche undisclosed",
+      "csv_investors": "Investible; UNSW Founders",
+      "normalized_investors": "Investible Climate Tech Fund; UNSW / TRaCE support",
+      "verification": "corrected",
+      "correction_or_issue": "The CSV A$20k materially understates the company record. UNSW reports A$1.29m raised in pre-seed SAFEs, while Investible confirms its 2024 investment without disclosing its tranche.",
+      "primary_source": "https://www.unsw.edu.au/research/partner-with-us/investment-portfolio/decarice",
+      "secondary_source": "https://www.startupdaily.net/topic/funding/investible-backs-unsw-hybrid-hydrogen-startup-transforming-diesel-fuel/"
+    },
+    "investee_name_raw": "DeCarice",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.decarice.com.au/",
+    "org_industries_raw": "Climate Tech / Clean Mobility",
+    "round_type_raw": "Pre-Seed SAFE financing",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-08-15",
+    "money_raised_raw": "AUD 1,290,000 cumulative pre-seed SAFEs; exact 2024 tranche undisclosed",
+    "amount": 1290000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Investible Climate Tech Fund; UNSW / TRaCE support",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.unsw.edu.au/research/partner-with-us/investment-portfolio/decarice",
+    "verification_notes": "The CSV A$20k materially understates the company record. UNSW reports A$1.29m raised in pre-seed SAFEs, while Investible confirms its 2024 investment without disclosing its tranche.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:decarice"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:4481e9152d9104231870",
+      "source:url:641bbd49a5d61515d6ea"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

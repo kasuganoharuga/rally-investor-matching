@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "table": "deal_investors",
+  "record_key": "deal_investor:research-package:2024-deal-206:bruce-patrick-gordon",
+  "operation": "upsert",
+  "data": {
+    "raw_name": "Bruce Gordon",
+    "role": "participant",
+    "participation_status": "confirmed",
+    "resolution": "resolved_from_supplemental_evidence",
+    "resolution_confidence": "high",
+    "identity_resolution": "supplemental_investor"
+  },
+  "refs": {
+    "deal_key": "funding_round:research-package:2024-deal-206",
+    "investor_key": "investor:bruce-patrick-gordon",
+    "raw_investor_candidate_key": "raw_investor_candidate:bruce-patrick-gordon"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-supplement:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:4039d2e364f940e3adad",
+      "source:url:d1ee84c253a1a553e08a"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

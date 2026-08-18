@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-285",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-285",
+    "dedupe_key": "2024|loveheart-ai|2024-08-19|seed",
+    "source_url": "https://www.oifventures.com.au/insights/edtech-loveheart-ai-schools-up-on-2-3-million-seed-round",
+    "source_payload": {
+      "deal_number": 285,
+      "csv_investee": "LoveHeart",
+      "normalized_investee": "LoveHeart AI",
+      "csv_date": "2024-08-19",
+      "normalized_date": "2024-08-19",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "USD 2,300,000",
+      "normalized_amount": "AUD 2,300,000",
+      "csv_investors": "OIF Ventures; Skalata",
+      "normalized_investors": "OIF Ventures; Skalata Ventures",
+      "verification": "corrected",
+      "correction_or_issue": "OIF's official portfolio news confirms a $2.3m Australian round backed by OIF and Skalata. Contemporary Australian reporting uses A$, so the CSV's USD label is corrected.",
+      "primary_source": "https://www.oifventures.com.au/insights/edtech-loveheart-ai-schools-up-on-2-3-million-seed-round",
+      "secondary_source": "https://www.trysignalbase.com/news/funding/celebrating-success-loveheart-ai-secures-2.3m-in-seed-round-funding!"
+    },
+    "investee_name_raw": "LoveHeart AI",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.loveheart.ai/",
+    "org_industries_raw": "Edtech / Childcare AI",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-08-19",
+    "money_raised_raw": "AUD 2,300,000",
+    "amount": 2300000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "OIF Ventures; Skalata Ventures",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.oifventures.com.au/insights/edtech-loveheart-ai-schools-up-on-2-3-million-seed-round",
+    "verification_notes": "OIF's official portfolio news confirms a $2.3m Australian round backed by OIF and Skalata. Contemporary Australian reporting uses A$, so the CSV's USD label is corrected.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:loveheart-ai"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:8832d6cbe4cf6aee092a",
+      "source:url:9fb19d27970c10d7a2ac"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

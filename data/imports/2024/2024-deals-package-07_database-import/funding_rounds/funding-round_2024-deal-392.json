@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-392",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-392",
+    "dedupe_key": "2024|linkby|2024-06-17|series_a",
+    "source_url": "https://www.oifventures.com.au/insights/this-ex-young-rich-lister-built-a-top-media-company-now-hes-trying-tech",
+    "source_payload": {
+      "deal_number": 392,
+      "csv_investee": "LinkBy",
+      "normalized_investee": "Linkby",
+      "csv_date": "2024-06-17",
+      "normalized_date": "2024-06-17",
+      "csv_round": "Series A",
+      "normalized_round": "Series A",
+      "csv_amount": "AUD 4,000,000",
+      "normalized_amount": "AUD 4,000,000",
+      "csv_investors": "OIF Ventures; Perennial Partners",
+      "normalized_investors": "Perennial Private Investments (lead); OIF Ventures",
+      "verification": "verified",
+      "correction_or_issue": "OIF and contemporaneous reporting confirm the amount, stage, lead and follow-on investor.",
+      "primary_source": "https://www.oifventures.com.au/insights/this-ex-young-rich-lister-built-a-top-media-company-now-hes-trying-tech",
+      "secondary_source": "https://www.mediaweek.com.au/linkby-raises-4m-in-series-a-round/"
+    },
+    "investee_name_raw": "Linkby",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://linkby.com/",
+    "org_industries_raw": "Adtech / Marketplace",
+    "round_type_raw": "Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-06-17",
+    "money_raised_raw": "AUD 4,000,000",
+    "amount": 4000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Perennial Private Investments (lead); OIF Ventures",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.oifventures.com.au/insights/this-ex-young-rich-lister-built-a-top-media-company-now-hes-trying-tech",
+    "verification_notes": "OIF and contemporaneous reporting confirm the amount, stage, lead and follow-on investor.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:linkby"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:51b56c58212387456078",
+      "source:url:da97e80b19dea9a5c368"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investors",
+  "record_key": "investor:orange-dao",
+  "operation": "upsert",
+  "data": {
+    "canonical_name": "Orange DAO",
+    "aliases": [],
+    "investor_type": "vc_fund",
+    "investor_subtype": "DAO / venture collective",
+    "eligibility_mode": "research_package_confirmed",
+    "classification_confidence": "high",
+    "classification_evidence_urls": [
+      "https://www.orangedao.xyz/",
+      "https://www.linkedin.com/company/orange-dao"
+    ],
+    "classified_at": "2026-08-14",
+    "website_url": "https://www.orangedao.xyz/",
+    "linkedin_url": "https://www.linkedin.com/company/orange-dao",
+    "hq_country": null,
+    "hq_state": null,
+    "hq_city": null,
+    "offices": [],
+    "status": "active",
+    "merged_into_id": null,
+    "review_status": "needs_more_data",
+    "last_reviewed_at": "2026-08-14",
+    "last_reviewed_by": "codex-2024-investor-dedupe-update",
+    "identity_resolution": "existing_investor_update",
+    "matched_existing_record_key": "investor:orange-dao",
+    "identity_match_method": "exact_existing_key",
+    "identity_match_source": "historical_import:recent-deal2026-7-30_deals-181-230_delta_identity-audited-v3_team-audited"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Investor headquarters country could not be normalized from the research package.",
+      "Headquarters country was not disclosed by the verified sources or the identity remained ambiguous.",
+      "Headquarters state/region was not disclosed by the verified sources.",
+      "Headquarters city was not disclosed by the verified sources."
+    ]
+  }
+}

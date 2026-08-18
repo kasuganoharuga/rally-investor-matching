@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-377",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-377",
+    "dedupe_key": "2024|vxt|2024-04-12|series_a",
+    "source_url": "https://www.gd1.vc/portfolio/vxt",
+    "source_payload": {
+      "deal_number": 377,
+      "csv_investee": "VXT",
+      "normalized_investee": "VXT",
+      "csv_date": "2024-04-12",
+      "normalized_date": "2024-04-12",
+      "csv_round": "Seed",
+      "normalized_round": "Pre-Series A",
+      "csv_amount": "NZD 1,800,000",
+      "normalized_amount": "NZD 1,800,000",
+      "csv_investors": "GD1; J. Stein; Phase One Ventures; Startmate",
+      "normalized_investors": "GD1 (lead); Phase One Ventures; Startmate; J. Stein",
+      "verification": "corrected",
+      "correction_or_issue": "The financing is described as Pre-Series A rather than seed; amount and core investor set are corroborated.",
+      "primary_source": "https://www.gd1.vc/portfolio/vxt",
+      "secondary_source": "https://itbrief.co.nz/story/vxt-s-new-ai-platform-revolutionises-communication-for-law-firms"
+    },
+    "investee_name_raw": "VXT",
+    "org_location_raw": "Christchurch, New Zealand",
+    "org_website_raw": "https://www.vxt.ai/",
+    "org_industries_raw": "Legal Tech / Communications SaaS",
+    "round_type_raw": "Pre-Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-04-12",
+    "money_raised_raw": "NZD 1,800,000",
+    "amount": 1800000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "GD1 (lead); Phase One Ventures; Startmate; J. Stein",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.gd1.vc/portfolio/vxt",
+    "verification_notes": "The financing is described as Pre-Series A rather than seed; amount and core investor set are corroborated. Contemporaneous funding report confirms the NZ$1.8m pre-Series A announcement.",
+    "verification_checked_at": "2026-08-14",
+    "supplemental_verification_urls": [
+      "https://www.startupdaily.net/topic/funding/kiwi-legal-tech-startup-vxt-banks-1-65-million-in-pre-series-a/"
+    ],
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:vxt"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:05db6d426655f72e25e8",
+      "source:url:f3099ef41add6494d23c"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

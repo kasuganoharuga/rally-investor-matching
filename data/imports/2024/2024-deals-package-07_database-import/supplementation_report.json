@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-07_database-import",
+  "supplemented_at": "2026-08-14T00:00:00+09:30",
+  "status": "completed_with_public_evidence_limits",
+  "change_count": 3,
+  "changes": [
+    {
+      "type": "investor_website",
+      "record_key": "investor:avicella-capital",
+      "value": "https://www.avicellacapital.com/",
+      "evidence_url": "https://www.avicellacapital.com/"
+    },
+    {
+      "type": "investor_website",
+      "record_key": "investor:metagrove-ventures",
+      "value": "https://metagrove.vc/",
+      "evidence_url": "https://metagrove.vc/"
+    },
+    {
+      "type": "investor_website",
+      "record_key": "investor:phase-one-ventures",
+      "value": "https://www.phaseone.ventures/",
+      "evidence_url": "https://www.phaseone.ventures/"
+    }
+  ],
+  "remaining_limits": {
+    "investee_websites_missing": 0,
+    "investor_websites_missing": 10,
+    "round_exact_dates_missing": 24,
+    "round_structured_amounts_missing": 10,
+    "unresolved_mentions": 24
+  }
+}

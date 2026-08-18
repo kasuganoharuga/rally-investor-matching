@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-036",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-036",
+    "dedupe_key": "2024|getmee|2024-01-12|unknown",
+    "source_url": "https://getmee.ai/investors-centre/",
+    "source_payload": {
+      "deal_number": 36,
+      "csv_investee": "Getmee",
+      "normalized_investee": "Getmee",
+      "csv_date": "2024-09-01",
+      "normalized_date": "2024-01-12",
+      "csv_round": "Seed",
+      "normalized_round": "Bridge round",
+      "csv_amount": "AUD 800,000",
+      "normalized_amount": "Undisclosed; total funding reached about AUD 2.5m",
+      "csv_investors": "Access Capital Ventures (lead); Ala Mobedi; Jeremy Glaros",
+      "normalized_investors": "Access Capital Ventures (lead); individual backers listed by company, but round-level participation beyond ACV not confirmed",
+      "verification": "corrected",
+      "correction_or_issue": "Public evidence points to a January bridge round; CSV date, round and amount are not supported.",
+      "primary_source": "https://getmee.ai/investors-centre/",
+      "secondary_source": "https://www.cbinsights.com/company/get-mee/financials"
+    },
+    "investee_name_raw": "Getmee",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://getmee.ai",
+    "org_industries_raw": "Edtech / Future of Work / AI",
+    "round_type_raw": "Bridge round",
+    "round_stage": "unknown",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-01-12",
+    "money_raised_raw": "Undisclosed; total funding reached about AUD 2.5m",
+    "amount": 2500000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Access Capital Ventures (lead); individual backers listed by company, but round-level participation beyond ACV not confirmed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://getmee.ai/investors-centre/",
+    "verification_notes": "Public evidence points to a January bridge round; CSV date, round and amount are not supported.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:getmee"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:50af15a800e2727ec3b9",
+      "source:url:c0f5748e7ab60fbaca8d"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

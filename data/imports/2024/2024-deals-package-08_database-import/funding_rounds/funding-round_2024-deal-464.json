@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-464",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-464",
+    "dedupe_key": "2024|rosemary-health-pty-ltd-trading-as-roserx|no-verified-2024-financing-date|unknown",
+    "source_url": "https://www.roserx.ai/",
+    "source_payload": {
+      "deal_number": 464,
+      "csv_investee": "RoseRx",
+      "normalized_investee": "Rosemary Health Pty Ltd trading as RoseRx",
+      "csv_date": "2024-09-04",
+      "normalized_date": "No verified 2024 financing date",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Unverified financing",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": null,
+      "normalized_investors": "Undisclosed",
+      "verification": "needs_review",
+      "correction_or_issue": "The operating company, legal entity and product are verified, but no reliable public source located confirms a September 2024 pre-seed close, amount or investor. Do not create an investor from this row.",
+      "primary_source": "https://www.roserx.ai/",
+      "secondary_source": "https://www.linkedin.com/company/roserx"
+    },
+    "investee_name_raw": "Rosemary Health Pty Ltd trading as RoseRx",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.roserx.ai/",
+    "org_industries_raw": "Healthtech / Enterprise AI",
+    "round_type_raw": "Unverified financing",
+    "round_stage": "unknown",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-08_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://www.roserx.ai/",
+    "verification_notes": "The operating company, legal entity and product are verified, but no reliable public source located confirms a September 2024 pre-seed close, amount or investor. Do not create an investor from this row.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:rosemary-health-pty-ltd-trading-as-roserx"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": [
+      "source:url:ddd3b9a4b68eafe0c8ce",
+      "source:url:47e518e1f30aaddd61b8"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "The operating company, legal entity and product are verified, but no reliable public source located confirms a September 2024 pre-seed close, amount or investor. Do not create an investor from this row.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-157",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-157",
+    "dedupe_key": "2024|profitpeak|2024-06-27|pre_seed",
+    "source_url": "https://medium.com/black-sheep-capital/our-investment-in-profit-peak-3b3fab907d50",
+    "source_payload": {
+      "deal_number": 157,
+      "csv_investee": "ProfitPeak",
+      "normalized_investee": "ProfitPeak",
+      "csv_date": "2024-06-27",
+      "normalized_date": "2024-06-27",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-Seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Macdoch Ventures (lead); Black Sheep Capital",
+      "normalized_investors": "Macdoch Ventures (lead); Black Sheep Capital; other VCs and strategic angels",
+      "verification": "verified",
+      "correction_or_issue": "Black Sheep's investment note confirms stage, date, lead and its participation; amount remains undisclosed.",
+      "primary_source": "https://medium.com/black-sheep-capital/our-investment-in-profit-peak-3b3fab907d50",
+      "secondary_source": "https://www.profitpeak.io/"
+    },
+    "investee_name_raw": "ProfitPeak",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.profitpeak.io/",
+    "org_industries_raw": "Ecommerce SaaS / Analytics",
+    "round_type_raw": "Pre-Seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-06-27",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Macdoch Ventures (lead); Black Sheep Capital; other VCs and strategic angels",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://medium.com/black-sheep-capital/our-investment-in-profit-peak-3b3fab907d50",
+    "verification_notes": "Black Sheep's investment note confirms stage, date, lead and its participation; amount remains undisclosed.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:profitpeak"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:c558559b41b9d9484f83",
+      "source:url:cae62295fe677088caa2"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

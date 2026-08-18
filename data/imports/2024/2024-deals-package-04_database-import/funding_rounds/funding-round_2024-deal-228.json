@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-228",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-228",
+    "dedupe_key": "2024|nexobot|2024-08-09|pre_seed",
+    "source_url": "https://www.preqin.com/data/profile/asset/nexobot-pty-ltd-/710565",
+    "source_payload": {
+      "deal_number": 228,
+      "csv_investee": "Nexobot",
+      "normalized_investee": "Nexobot",
+      "csv_date": "2024-09-08",
+      "normalized_date": "2024-08-09 database / 2024-11 public profile",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-Seed / Seed",
+      "csv_amount": "AUD 400,000",
+      "normalized_amount": "AUD 400,000",
+      "csv_investors": "Antler",
+      "normalized_investors": "Antler Australia; Skalata Ventures",
+      "verification": "corrected",
+      "correction_or_issue": "The A$400k round is corroborated, but the public investor set includes Skalata and the source dates differ from the CSV.",
+      "primary_source": "https://www.preqin.com/data/profile/asset/nexobot-pty-ltd-/710565",
+      "secondary_source": "https://app.dealroom.co/companies/nexobot"
+    },
+    "investee_name_raw": "Nexobot",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://nexobot.com.au/",
+    "org_industries_raw": "Robotics / Logistics",
+    "round_type_raw": "Pre-Seed / Seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-08-09",
+    "money_raised_raw": "AUD 400,000",
+    "amount": 400000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Antler Australia; Skalata Ventures",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.preqin.com/data/profile/asset/nexobot-pty-ltd-/710565",
+    "verification_notes": "The A$400k round is corroborated, but the public investor set includes Skalata and the source dates differ from the CSV.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:nexobot"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:c38394c84686e9cb9324",
+      "source:url:2b2806ad38b31e497f73"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

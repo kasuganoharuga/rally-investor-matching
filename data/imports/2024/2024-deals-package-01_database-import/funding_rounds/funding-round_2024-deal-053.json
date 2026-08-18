@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-053",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-053",
+    "dedupe_key": "2024|pactify|2024-08-01|pre_seed",
+    "source_url": "https://www.startupdaily.net/partner-content/antler-australia/antler-investor-memo-series-pactify-makes-it-easier-to-manage-and-empower-creators/",
+    "source_payload": {
+      "deal_number": 53,
+      "csv_investee": "Pactify",
+      "normalized_investee": "Pactify",
+      "csv_date": "2024-07-02",
+      "normalized_date": "2024-08-01",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-Seed",
+      "csv_amount": "AUD 225,000",
+      "normalized_amount": "AUD 225,000",
+      "csv_investors": "Antler",
+      "normalized_investors": "Antler Australia",
+      "verification": "verified",
+      "correction_or_issue": "Antler memo and weekly funding summary corroborate the standard A$225k investment.",
+      "primary_source": "https://www.startupdaily.net/partner-content/antler-australia/antler-investor-memo-series-pactify-makes-it-easier-to-manage-and-empower-creators/",
+      "secondary_source": "https://www.overnightsuccess.vc/p/6-july-2024"
+    },
+    "investee_name_raw": "Pactify",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.pactifyai.com/",
+    "org_industries_raw": "Legaltech / Creator Economy",
+    "round_type_raw": "Pre-Seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-08-01",
+    "money_raised_raw": "AUD 225,000",
+    "amount": 225000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Antler Australia",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.startupdaily.net/partner-content/antler-australia/antler-investor-memo-series-pactify-makes-it-easier-to-manage-and-empower-creators/",
+    "verification_notes": "Antler memo and weekly funding summary corroborate the standard A$225k investment. Exact day records the visible publication date of the public financing or cohort report; it is not represented as an unreported legal closing date.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day",
+    "date_basis": "public_announcement_publication_date",
+    "date_derivation_method": "visible_source_publication_date",
+    "supplemental_verification_urls": [
+      "https://www.startupdaily.net/partner-content/antler-australia/antler-investor-memo-series-pactify-makes-it-easier-to-manage-and-empower-creators/"
+    ]
+  },
+  "refs": {
+    "investee_company_key": "company:research:pactify"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:af31feedf79e37a99e34",
+      "source:url:a7784a35d4e4115fc3b0"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

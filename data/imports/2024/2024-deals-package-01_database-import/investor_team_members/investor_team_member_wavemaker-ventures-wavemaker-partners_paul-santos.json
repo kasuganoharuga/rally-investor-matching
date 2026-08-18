@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_team_members",
+  "record_key": "investor_team_member:wavemaker-ventures-wavemaker-partners:paul-santos",
+  "operation": "upsert",
+  "data": {
+    "contact_id": null,
+    "first_name": "Paul",
+    "last_name": "Santos",
+    "role_title": "Founding Partner",
+    "seniority": "partner",
+    "linkedin_url": null,
+    "claimed_focus": [],
+    "bio_summary": "Co-founder and Managing Partner leading Wavemaker Ventures early-stage fund.",
+    "source_url": "https://wavemaker.vc/team/",
+    "retrieved_at": "2026-07-16",
+    "is_active": true
+  },
+  "refs": {
+    "investor_key": "investor:wavemaker-ventures-wavemaker-partners",
+    "contact_key": null
+  },
+  "provenance": {
+    "collection_run_key": "collection:research:2026-07-24",
+    "source_keys": [
+      "research_source:wavemaker-ventures:wm_src_004"
+    ]
+  },
+  "review": {
+    "status": "unreviewed",
+    "issues": []
+  }
+}

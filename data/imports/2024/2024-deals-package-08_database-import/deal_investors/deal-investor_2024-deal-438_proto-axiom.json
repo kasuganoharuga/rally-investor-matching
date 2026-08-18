@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "table": "deal_investors",
+  "record_key": "deal_investor:research-package:2024-deal-438:proto-axiom",
+  "operation": "upsert",
+  "data": {
+    "raw_name": "Proto Axiom (lead)",
+    "role": "lead",
+    "participation_status": "confirmed",
+    "resolution": "resolved",
+    "resolution_confidence": "high",
+    "identity_resolution": "existing_investor_deduped"
+  },
+  "refs": {
+    "deal_key": "funding_round:research-package:2024-deal-438",
+    "investor_key": "investor:proto-axiom",
+    "raw_investor_candidate_key": "raw_investor_candidate:proto-axiom-lead"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

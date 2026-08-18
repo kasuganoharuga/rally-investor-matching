@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-024",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-024",
+    "dedupe_key": "2024|pointlabs|2024-08-01|unknown",
+    "source_url": "https://www.pointlabs.ai/",
+    "source_payload": {
+      "deal_number": 24,
+      "csv_investee": "Pointlabs Technologies",
+      "normalized_investee": "PointLabs",
+      "csv_date": "2024-08-01",
+      "normalized_date": "2024-08-01",
+      "csv_round": "Seed",
+      "normalized_round": "Parent-company funding / unverified financing",
+      "csv_amount": "USD 1,000,000",
+      "normalized_amount": "Unverified",
+      "csv_investors": "MyPiazza Pty Ltd",
+      "normalized_investors": "No external investor confirmed",
+      "verification": "rejected_investor",
+      "correction_or_issue": "PointLabs states it is wholly owned by MyPiazza; parent ownership must not be treated as an independent VC deal without evidence.",
+      "primary_source": "https://www.pointlabs.ai/",
+      "secondary_source": null
+    },
+    "investee_name_raw": "PointLabs",
+    "org_location_raw": "Melbourne, Australia / international operations",
+    "org_website_raw": "https://www.pointlabs.ai/",
+    "org_industries_raw": "Martech / Loyalty / AI",
+    "round_type_raw": "Parent-company funding / unverified financing",
+    "round_stage": "unknown",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-08-01",
+    "money_raised_raw": "Unverified",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "No external investor confirmed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "rejected_investor",
+    "verification_source_url": "https://www.pointlabs.ai/",
+    "verification_notes": "PointLabs states it is wholly owned by MyPiazza; parent ownership must not be treated as an independent VC deal without evidence.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "parent_ownership_not_external_round",
+    "amount_structuring_note": "Wholly owned parent relationship is not evidence of an external financing round.",
+    "date_precision": "day",
+    "supplemental_verification_urls": [
+      "https://www.pointlabs.ai/"
+    ]
+  },
+  "refs": {
+    "investee_company_key": "company:research:pointlabs"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:56e848af751c33f5fe4b"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

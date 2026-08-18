@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-387",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-387",
+    "dedupe_key": "2024|conry-tech|2024-12-11|pre_seed",
+    "source_url": "https://www.startupdaily.net/topic/funding/air-conditioning-emissions-reduction-startup-conry-tech-raises-pre-seed/",
+    "source_payload": {
+      "deal_number": 387,
+      "csv_investee": "Conry Tech",
+      "normalized_investee": "Conry Tech",
+      "csv_date": "2024-12-10",
+      "normalized_date": "2024-12-11 reporting",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-seed",
+      "csv_amount": "USD 1,600,000",
+      "normalized_amount": "AUD 1,600,000",
+      "csv_investors": "Bandera Capital; Pacific Channel",
+      "normalized_investors": "Bandera Capital (lead); Pacific Channel",
+      "verification": "corrected",
+      "correction_or_issue": "Australian reporting confirms a A$1.6m pre-seed; the CSV currency is wrong.",
+      "primary_source": "https://www.startupdaily.net/topic/funding/air-conditioning-emissions-reduction-startup-conry-tech-raises-pre-seed/",
+      "secondary_source": "https://www.pacificchannel.com/portfolio"
+    },
+    "investee_name_raw": "Conry Tech",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.conrytech.com/",
+    "org_industries_raw": "Climate Tech / HVAC",
+    "round_type_raw": "Pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-12-11",
+    "money_raised_raw": "AUD 1,600,000",
+    "amount": 1600000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Bandera Capital (lead); Pacific Channel",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.startupdaily.net/topic/funding/air-conditioning-emissions-reduction-startup-conry-tech-raises-pre-seed/",
+    "verification_notes": "Australian reporting confirms a A$1.6m pre-seed; the CSV currency is wrong.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:conry-tech"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:d883902189b4586c446d",
+      "source:url:ba8b86d3ea15a5ade83c"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

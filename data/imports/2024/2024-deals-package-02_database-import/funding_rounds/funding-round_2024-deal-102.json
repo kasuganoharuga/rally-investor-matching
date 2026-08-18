@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-102",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-102",
+    "dedupe_key": "2024|invest-inya-farmer|2024-05-08|series_a",
+    "source_url": "https://www.cbinsights.com/company/invest-inya-farmer/financials",
+    "source_payload": {
+      "deal_number": 102,
+      "csv_investee": "IIF",
+      "normalized_investee": "Invest Inya Farmer",
+      "csv_date": "2024-05-08",
+      "normalized_date": "2024-05-08",
+      "csv_round": "Series A",
+      "normalized_round": "Series A",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "AUD 1,800,000",
+      "csv_investors": "Agnition Ventures",
+      "normalized_investors": "AgFunder; Investible; undisclosed investors",
+      "verification": "corrected",
+      "correction_or_issue": "Database reporting gives A$1.8m and identifies AgFunder/Investible; Agnition is a portfolio backer but not confirmed in this round.",
+      "primary_source": "https://www.cbinsights.com/company/invest-inya-farmer/financials",
+      "secondary_source": "https://agnition.ventures/"
+    },
+    "investee_name_raw": "Invest Inya Farmer",
+    "org_location_raw": "Mansfield, VIC, Australia",
+    "org_website_raw": "https://iif.today/",
+    "org_industries_raw": "Agrifintech / Marketplace",
+    "round_type_raw": "Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-05-08",
+    "money_raised_raw": "AUD 1,800,000",
+    "amount": 1800000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "AgFunder; Investible; undisclosed investors",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.cbinsights.com/company/invest-inya-farmer/financials",
+    "verification_notes": "Database reporting gives A$1.8m and identifies AgFunder/Investible; Agnition is a portfolio backer but not confirmed in this round.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:invest-inya-farmer"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:50f5fb31106ee09def9f",
+      "source:url:8cca1a9a8e428e9191ec"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

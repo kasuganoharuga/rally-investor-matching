@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-166",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-166",
+    "dedupe_key": "2024|clean-slate-clinic|2024-05-24|seed",
+    "source_url": "https://app.dealroom.co/companies/clean_state_clinic",
+    "source_payload": {
+      "deal_number": 166,
+      "csv_investee": "Clean Slate Clinic",
+      "normalized_investee": "Clean Slate Clinic",
+      "csv_date": "2024-05-24",
+      "normalized_date": "2024-05-24",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "AUD 1,600,000",
+      "normalized_amount": "AUD 1,600,000",
+      "csv_investors": "Australian Medical Angels; Chum Darvall; Kristy Chong; Roger Allen; Scale Investors; The Snow Foundation",
+      "normalized_investors": "Australian Medical Angels; Scale Investors; The Snow Foundation; Roger Allen; Kristy Chong; Chum Darvall",
+      "verification": "verified",
+      "correction_or_issue": "Funding database and independent annual-report evidence corroborate the 2024 seed raise and named backers; amount normalized to AUD.",
+      "primary_source": "https://app.dealroom.co/companies/clean_state_clinic",
+      "secondary_source": "https://www.johnmonash.com/static/uploads/files/gsjmf-23-34-digital-annual-report-wfkglpotkwwd.pdf"
+    },
+    "investee_name_raw": "Clean Slate Clinic",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.cleanslateclinic.com/",
+    "org_industries_raw": "Digital Health / Telehealth",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-05-24",
+    "money_raised_raw": "AUD 1,600,000",
+    "amount": 1600000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Australian Medical Angels; Scale Investors; The Snow Foundation; Roger Allen; Kristy Chong; Chum Darvall",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://app.dealroom.co/companies/clean_state_clinic",
+    "verification_notes": "Funding database and independent annual-report evidence corroborate the 2024 seed raise and named backers; amount normalized to AUD.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:clean-slate-clinic"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:5c937e39374464ad08d9",
+      "source:url:db954bd28a8c8af245b0"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

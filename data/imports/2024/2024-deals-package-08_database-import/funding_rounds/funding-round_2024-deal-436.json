@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-436",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-436",
+    "dedupe_key": "2024|preplocal-prep|2024-04-17|pre_seed",
+    "source_url": "https://www.overnightsuccess.vc/p/10th-feb-2024",
+    "source_payload": {
+      "deal_number": 436,
+      "csv_investee": "Preplocal",
+      "normalized_investee": "Preplocal / Prep",
+      "csv_date": "2024-04-17",
+      "normalized_date": "2024-04-17/18",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-seed",
+      "csv_amount": "AUD 200,000",
+      "normalized_amount": "AUD 200,000",
+      "csv_investors": "Skalata",
+      "normalized_investors": "Skalata Ventures",
+      "verification": "verified_secondary",
+      "correction_or_issue": "Funding databases and ecosystem reporting corroborate A$200k and Skalata; distinct from Deal 248's November seed.",
+      "primary_source": "https://www.overnightsuccess.vc/p/10th-feb-2024",
+      "secondary_source": "https://app.dealroom.co/companies/prep_1"
+    },
+    "investee_name_raw": "Preplocal / Prep",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://preplocal.com/",
+    "org_industries_raw": "Food Tech / Supply Chain",
+    "round_type_raw": "Pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-04-17",
+    "money_raised_raw": "AUD 200,000",
+    "amount": 200000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Skalata Ventures",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-08_database-import",
+    "verification_status": "verified_secondary",
+    "verification_source_url": "https://www.overnightsuccess.vc/p/10th-feb-2024",
+    "verification_notes": "Funding databases and ecosystem reporting corroborate A$200k and Skalata; distinct from Deal 248's November seed.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:preplocal"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": [
+      "source:url:0059941ea75903c40262",
+      "source:url:cfe525576c7c0db62cfb"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

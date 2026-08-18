@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_team_members",
+  "record_key": "investor_team_member:five-v-capital:adrian-mackenzie",
+  "operation": "upsert",
+  "data": {
+    "contact_id": null,
+    "first_name": "Adrian",
+    "last_name": "MacKenzie",
+    "role_title": null,
+    "seniority": "other",
+    "linkedin_url": null,
+    "claimed_focus": [
+      "private_equity"
+    ],
+    "bio_summary": null,
+    "source_url": "https://www.fivevcapital.com/",
+    "retrieved_at": null,
+    "is_active": true
+  },
+  "refs": {
+    "investor_key": "investor:five-v-capital",
+    "contact_key": null
+  },
+  "provenance": {
+    "collection_run_key": "collection:research:2026-07-24",
+    "source_keys": [
+      "research_source:five-v-capital:fvc_src_002"
+    ]
+  },
+  "review": {
+    "status": "unreviewed",
+    "issues": []
+  }
+}

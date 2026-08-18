@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-059",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-059",
+    "dedupe_key": "2024|axify-ai|2024-10-09|unknown",
+    "source_url": "https://newshub.medianet.com.au/2024/10/australias-axify-ai-successfully-raises-1m-in-capital-to-fuel-growth-and-innovation/70859/",
+    "source_payload": {
+      "deal_number": 59,
+      "csv_investee": "Axify.ai",
+      "normalized_investee": "Axify.ai",
+      "csv_date": "2024-10-17",
+      "normalized_date": "2024-10-09 announcement",
+      "csv_round": "Seed",
+      "normalized_round": "First capital raise",
+      "csv_amount": "AUD 1,000,000",
+      "normalized_amount": "AUD 1,000,000",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Undisclosed",
+      "verification": "verified_amount",
+      "correction_or_issue": "Company release confirms amount and first raise; investors not publicly named.",
+      "primary_source": "https://newshub.medianet.com.au/2024/10/australias-axify-ai-successfully-raises-1m-in-capital-to-fuel-growth-and-innovation/70859/",
+      "secondary_source": "https://www.nationaltribune.com.au/australia-s-axifyai-successfully-raises-1m-in-capital-to-fuel-growth-and-innovation/"
+    },
+    "investee_name_raw": "Axify.ai",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://axify.ai/",
+    "org_industries_raw": "Enterprise AI / Hospitality Tech",
+    "round_type_raw": "First capital raise",
+    "round_stage": "unknown",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-10-09",
+    "money_raised_raw": "AUD 1,000,000",
+    "amount": 1000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "verified_amount",
+    "verification_source_url": "https://newshub.medianet.com.au/2024/10/australias-axify-ai-successfully-raises-1m-in-capital-to-fuel-growth-and-innovation/70859/",
+    "verification_notes": "Company release confirms amount and first raise; investors not publicly named.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:axify-ai"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:cb668dc7feb469850858",
+      "source:url:f433ac820bfd8ee69d22"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

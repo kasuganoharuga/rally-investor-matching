@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:preve",
+  "operation": "upsert",
+  "data": {
+    "name": "PREVE",
+    "website_url": "https://preve.co/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "digital-health-practice-saas",
+    "sector_secondary": null,
+    "use_case_primary": "ai-enabled-physiotherapy-membership-and-patient-retention-platform-supporting-treatment-plans-communication-and-clinic-w",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-saas",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "ai_related",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "AI-enabled physiotherapy membership and patient-retention platform supporting treatment plans, communication and clinic workflows.",
+    "source_urls": [
+      "https://preve.co/",
+      "https://www.linkedin.com/posts/caelum-trott_very-excited-and-honoured-to-be-a-part-of-activity-7226086585488793600-j26b",
+      "https://www.startmate.com/writing/startmate-accelerator-frequent-questions-and-misconceptions"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

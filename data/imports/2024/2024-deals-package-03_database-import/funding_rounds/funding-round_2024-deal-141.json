@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-141",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-141",
+    "dedupe_key": "2024|nexus-ocean-ai|2024-08-15|unknown",
+    "source_url": "https://smartmaritimenetwork.com/2024/08/16/nexus-ocean-ai-gets-400k-in-new-funding-from-tradeworks-vc/",
+    "source_payload": {
+      "deal_number": 141,
+      "csv_investee": "Nexus Ocean AI",
+      "normalized_investee": "Nexus Ocean AI",
+      "csv_date": "2024-08-15",
+      "normalized_date": "2024-08-15 / 2024-08-16 report",
+      "csv_round": "Seed",
+      "normalized_round": "Early-stage investment",
+      "csv_amount": "USD 400,000",
+      "normalized_amount": "USD 400,000",
+      "csv_investors": "Tradeworks.vc",
+      "normalized_investors": "Tradeworks.vc",
+      "verification": "verified",
+      "correction_or_issue": "Maritime trade reporting confirms amount and sole named investor; company is described as Singapore-based, correcting the CSV NSW location.",
+      "primary_source": "https://smartmaritimenetwork.com/2024/08/16/nexus-ocean-ai-gets-400k-in-new-funding-from-tradeworks-vc/",
+      "secondary_source": "https://nexusocean.ai/"
+    },
+    "investee_name_raw": "Nexus Ocean AI",
+    "org_location_raw": "Singapore / maritime markets",
+    "org_website_raw": "https://nexusocean.ai/",
+    "org_industries_raw": "Maritime Tech / AI",
+    "round_type_raw": "Early-stage investment",
+    "round_stage": "unknown",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-08-15",
+    "money_raised_raw": "USD 400,000",
+    "amount": 400000,
+    "currency": "USD",
+    "amount_usd": 400000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Tradeworks.vc",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://smartmaritimenetwork.com/2024/08/16/nexus-ocean-ai-gets-400k-in-new-funding-from-tradeworks-vc/",
+    "verification_notes": "Maritime trade reporting confirms amount and sole named investor; company is described as Singapore-based, correcting the CSV NSW location.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:nexus-ocean-ai"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:9e732822af5d50638a87",
+      "source:url:676384b03e5b4f77cdff"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

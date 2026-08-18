@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-390",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-390",
+    "dedupe_key": "2024|sonder|2024-01-25|series_b",
+    "source_url": "https://saniel.vc/media-posts/seek-blackbird-backed-wellness-start-up-sonder-banks-16m/",
+    "source_payload": {
+      "deal_number": 390,
+      "csv_investee": "Sonder",
+      "normalized_investee": "Sonder",
+      "csv_date": "2024-01-25",
+      "normalized_date": "2024-01-25",
+      "csv_round": "Series B",
+      "normalized_round": "Series B extension",
+      "csv_amount": "AUD 16,000,000",
+      "normalized_amount": "AUD 16,000,000",
+      "csv_investors": "Amalfi Capital; Blackbird; Cicada Innovations; Saniel Ventures; Scott Bailey; Seek Investments",
+      "normalized_investors": "Blackbird; SEEK Growth Fund; Saniel Ventures",
+      "verification": "corrected_syndicate",
+      "correction_or_issue": "The A$16m extension is corroborated. Stronger sources support Blackbird, SEEK and Saniel; Amalfi, Cicada and Scott Bailey are not attached to this close.",
+      "primary_source": "https://saniel.vc/media-posts/seek-blackbird-backed-wellness-start-up-sonder-banks-16m/",
+      "secondary_source": "https://www.forbes.com.au/covers/entrepreneurs/quick-takes-three-entrepreneurs-were-watching-right-now/"
+    },
+    "investee_name_raw": "Sonder",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.sonder.io/",
+    "org_industries_raw": "Digital Health / Workforce Wellbeing",
+    "round_type_raw": "Series B extension",
+    "round_stage": "series_b",
+    "funding_stage_raw": "Series B",
+    "announced_date": "2024-01-25",
+    "money_raised_raw": "AUD 16,000,000",
+    "amount": 16000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Blackbird; SEEK Growth Fund; Saniel Ventures",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "corrected_syndicate",
+    "verification_source_url": "https://saniel.vc/media-posts/seek-blackbird-backed-wellness-start-up-sonder-banks-16m/",
+    "verification_notes": "The A$16m extension is corroborated. Stronger sources support Blackbird, SEEK and Saniel; Amalfi, Cicada and Scott Bailey are not attached to this close.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:sonder"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:631a611dd34205c398eb",
+      "source:url:2b30ebe4e1d4a9671e5b"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

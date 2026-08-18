@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-068",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-068",
+    "dedupe_key": "2024|atelier-e-xd-pty-ltd|2024-10-11|series_a",
+    "source_url": "https://www.startupdaily.net/topic/funding/macquarie-glams-up-makeup-maker-with-10-million-series-a/",
+    "source_payload": {
+      "deal_number": 68,
+      "csv_investee": "Atelier",
+      "normalized_investee": "Atelier (E XD Pty Ltd)",
+      "csv_date": "2024-10-11",
+      "normalized_date": "2024-10-11",
+      "csv_round": "Series A",
+      "normalized_round": "Series A",
+      "csv_amount": "AUD 10,000,000",
+      "normalized_amount": "AUD 10,000,000",
+      "csv_investors": "Macquarie Capital; Archangel; Daniel Attia; Geoff Tarrant",
+      "normalized_investors": "Macquarie Capital (lead); Archangel Ventures; Daniel Attia; Geoff Tarrant",
+      "verification": "verified",
+      "correction_or_issue": "Australian reporting and Macquarie confirm amount and lead; co-investors independently reported.",
+      "primary_source": "https://www.startupdaily.net/topic/funding/macquarie-glams-up-makeup-maker-with-10-million-series-a/",
+      "secondary_source": "https://www.linkedin.com/posts/macquariegroup_macquarie-capitals-venture-capital-team-activity-7256405598739513344-Hv5y"
+    },
+    "investee_name_raw": "Atelier (E XD Pty Ltd)",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://atelier.co/",
+    "org_industries_raw": "Manufacturing Tech / Beauty",
+    "round_type_raw": "Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-10-11",
+    "money_raised_raw": "AUD 10,000,000",
+    "amount": 10000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Macquarie Capital (lead); Archangel Ventures; Daniel Attia; Geoff Tarrant",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.startupdaily.net/topic/funding/macquarie-glams-up-makeup-maker-with-10-million-series-a/",
+    "verification_notes": "Australian reporting and Macquarie confirm amount and lead; co-investors independently reported.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:atelier"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:d1567af9fd05786172c2",
+      "source:url:8eac0c4e30bc617c4a24"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

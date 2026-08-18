@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_team_members",
+  "record_key": "investor_team_member:nzvc:mark-pavlyukovskyy",
+  "operation": "upsert",
+  "data": {
+    "contact_id": null,
+    "first_name": "Mark",
+    "last_name": "Pavlyukovskyy",
+    "role_title": "General Partner",
+    "seniority": "partner",
+    "linkedin_url": null,
+    "claimed_focus": [
+      "investment_relevant_person"
+    ],
+    "bio_summary": "NZVC publicly celebrated its Dawn Series B participation.",
+    "source_url": "https://www.nzvc.co.nz/",
+    "retrieved_at": "2026-07-16",
+    "is_active": true
+  },
+  "refs": {
+    "investor_key": "investor:nzvc",
+    "contact_key": null
+  },
+  "provenance": {
+    "collection_run_key": "collection:research:2026-07-24",
+    "source_keys": [
+      "research_source:nzvc:nzvc_src_001"
+    ]
+  },
+  "review": {
+    "status": "unreviewed",
+    "issues": []
+  }
+}

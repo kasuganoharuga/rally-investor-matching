@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-231",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-231",
+    "dedupe_key": "2024|frontcover|2024-07-18|pre_seed",
+    "source_url": "https://www.crunchbase.com/funding_round/frontcover-pre-seed--11e35067",
+    "source_payload": {
+      "deal_number": 231,
+      "csv_investee": "Frontcover",
+      "normalized_investee": "Frontcover",
+      "csv_date": "2024-07-18",
+      "normalized_date": "2024-07-18 (database date)",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-Seed",
+      "csv_amount": "AUD 260,000",
+      "normalized_amount": "AUD 260,000 (database-led)",
+      "csv_investors": "Antler",
+      "normalized_investors": "Antler Australia",
+      "verification": "partial",
+      "correction_or_issue": "Antler's relationship is plausible and the funding database provides amount/date, but no primary company-specific investment announcement was found.",
+      "primary_source": "https://www.crunchbase.com/funding_round/frontcover-pre-seed--11e35067",
+      "secondary_source": "https://www.frontcover.io/"
+    },
+    "investee_name_raw": "Frontcover",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.frontcover.io/",
+    "org_industries_raw": "Community SaaS / Membership",
+    "round_type_raw": "Pre-Seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-07-18",
+    "money_raised_raw": "AUD 260,000 (database-led)",
+    "amount": 260000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Antler Australia",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://www.crunchbase.com/funding_round/frontcover-pre-seed--11e35067",
+    "verification_notes": "Antler's relationship is plausible and the funding database provides amount/date, but no primary company-specific investment announcement was found.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:frontcover"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:ea2ab3db71336fdb94ba",
+      "source:url:353b876f746eb325fbe8"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Antler's relationship is plausible and the funding database provides amount/date, but no primary company-specific investment announcement was found."
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:verida",
+  "operation": "upsert",
+  "data": {
+    "name": "Verida",
+    "website_url": "https://verida.ai/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "web3-data-infrastructure-privacy",
+    "sector_secondary": null,
+    "use_case_primary": "decentralised-data-identity-and-storage-network-giving-users-control-over-private-personal-data-and-credentials",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "protocol-token-network",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Decentralised data, identity and storage network giving users control over private personal data and credentials.",
+    "source_urls": [
+      "https://verida.ai/",
+      "https://www.theblock.co/post/301318/verida-raises-5-million-to-protect-user-data-amid-rise-in-generative-ai",
+      "https://www.gate.com/pt-br/crypto-calendar/fundraising-information/110605"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

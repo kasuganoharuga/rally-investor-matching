@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-448",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-448",
+    "dedupe_key": "2024|esper-satellite-imagery|2024-03-04|pre_seed",
+    "source_url": "https://techcrunch.com/2024/03/04/espers-first-hyperspectral-demonstrator-satellite-lifts-off-on-spacex-rocket/",
+    "source_payload": {
+      "deal_number": 448,
+      "csv_investee": "Esper Satellite Imagery",
+      "normalized_investee": "Esper Satellite Imagery",
+      "csv_date": "2024-03-04",
+      "normalized_date": "2024-03-04",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-seed",
+      "csv_amount": "AUD 1,000,000",
+      "normalized_amount": "AUD 1,000,000",
+      "csv_investors": "Day One Ventures; Dolby Family Ventures; Stellar Ventures; Syntax Ventures",
+      "normalized_investors": "Day One Ventures; Dolby Family Ventures; Stellar Ventures",
+      "verification": "verified_core_syndicate",
+      "correction_or_issue": "Contemporaneous reporting confirms A$1m and three named investors. Syntax Ventures was not named in the strongest source and is held for review.",
+      "primary_source": "https://techcrunch.com/2024/03/04/espers-first-hyperspectral-demonstrator-satellite-lifts-off-on-spacex-rocket/",
+      "secondary_source": "https://www.arraylabs.io/updates/12"
+    },
+    "investee_name_raw": "Esper Satellite Imagery",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://espersatellites.co/",
+    "org_industries_raw": "Space Tech / Remote Sensing",
+    "round_type_raw": "Pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-03-04",
+    "money_raised_raw": "AUD 1,000,000",
+    "amount": 1000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Day One Ventures; Dolby Family Ventures; Stellar Ventures",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-08_database-import",
+    "verification_status": "verified_core_syndicate",
+    "verification_source_url": "https://techcrunch.com/2024/03/04/espers-first-hyperspectral-demonstrator-satellite-lifts-off-on-spacex-rocket/",
+    "verification_notes": "Contemporaneous reporting confirms A$1m and three named investors. Syntax Ventures was not named in the strongest source and is held for review.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:esper-satellite-imagery"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": [
+      "source:url:f7738154fca733cd7aef",
+      "source:url:a9945842d67809185def"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

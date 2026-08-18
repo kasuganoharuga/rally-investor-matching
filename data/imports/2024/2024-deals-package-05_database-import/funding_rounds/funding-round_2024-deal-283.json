@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-283",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-283",
+    "dedupe_key": "2024|okkular-io|conflicting-2023-2024-accelerator-and-funding-records|seed",
+    "source_url": "https://app.dealroom.co/companies/okkular",
+    "source_payload": {
+      "deal_number": 283,
+      "csv_investee": "Okkular",
+      "normalized_investee": "Okkular.io",
+      "csv_date": "2024-10-09",
+      "normalized_date": "Conflicting 2023/2024 accelerator and funding records",
+      "csv_round": "Seed",
+      "normalized_round": "Unresolved seed / accelerator record",
+      "csv_amount": "USD 120,000",
+      "normalized_amount": "USD 120,000 reported; exact investor set and close date conflict",
+      "csv_investors": "Brisbane Angels; Sydney Angels; Techstars",
+      "normalized_investors": "Techstars relationship; Brisbane Angels and Sydney Angels are historical backers",
+      "verification": "needs_review",
+      "correction_or_issue": "Dealroom places Techstars in 2023 and the angel investments in 2020/2022, while other databases report a US$120k 2024 seed with different investors. Do not attach all three CSV investors to one 2024 round.",
+      "primary_source": "https://app.dealroom.co/companies/okkular",
+      "secondary_source": "https://startupintros.com/orgs/okkular"
+    },
+    "investee_name_raw": "Okkular.io",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://okkular.io/",
+    "org_industries_raw": "Retail Tech / AI",
+    "round_type_raw": "Unresolved seed / accelerator record",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": null,
+    "money_raised_raw": "USD 120,000 reported; exact investor set and close date conflict",
+    "amount": 120000,
+    "currency": "USD",
+    "amount_usd": 120000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Techstars relationship; Brisbane Angels and Sydney Angels are historical backers",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://app.dealroom.co/companies/okkular",
+    "verification_notes": "Dealroom places Techstars in 2023 and the angel investments in 2020/2022, while other databases report a US$120k 2024 seed with different investors. Do not attach all three CSV investors to one 2024 round.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:okkular-io"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:ed2f225e2e24dffbb5bc",
+      "source:url:9eed5e496876a9d286fa"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Dealroom places Techstars in 2023 and the angel investments in 2020/2022, while other databases report a US$120k 2024 seed with different investors. Do not attach all three CSV investors to one 2024 round.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

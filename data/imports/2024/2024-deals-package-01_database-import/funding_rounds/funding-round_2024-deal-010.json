@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-010",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-010",
+    "dedupe_key": "2024|clutch-glue|2024-10-28|pre_seed",
+    "source_url": "https://clutchglue.com",
+    "source_payload": {
+      "deal_number": 10,
+      "csv_investee": "Clutch Glue",
+      "normalized_investee": "Clutch Glue",
+      "csv_date": "2024-12-10",
+      "normalized_date": "2024-10-28",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-Seed",
+      "csv_amount": "USD 2,000,000",
+      "normalized_amount": "AUD 2,000,000",
+      "csv_investors": "Blackbird Ventures; Startmate",
+      "normalized_investors": "Blackbird; Startmate",
+      "verification": "needs_review",
+      "correction_or_issue": "Investee confirmed; no independent deal announcement found.",
+      "primary_source": "https://clutchglue.com",
+      "secondary_source": "https://www.smartcompany.com.au/shark-tank-australia/shark-tank-clutch-glue-capital-raise-annabel-hay/"
+    },
+    "investee_name_raw": "Clutch Glue",
+    "org_location_raw": "Bondi, NSW, Australia",
+    "org_website_raw": "https://clutchglue.com",
+    "org_industries_raw": "Consumer / Fashion",
+    "round_type_raw": "Pre-Seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-10-28",
+    "money_raised_raw": "AUD 2,000,000",
+    "amount": 2000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Blackbird; Startmate",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://clutchglue.com",
+    "verification_notes": "Investee confirmed; no independent deal announcement found. SmartCompany and lead investor Blackbird corroborate a A$2m pre-seed round; the prior USD currency label was incorrect. SmartCompany and lead investor Blackbird corroborate a A$2m pre-seed round; the prior USD currency label was incorrect. SmartCompany and lead investor Blackbird corroborate a A$2m pre-seed round; the prior USD currency label was incorrect.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day",
+    "secondary_source_status": "corroborated_and_currency_corrected",
+    "supplemental_verification_urls": [
+      "https://www.smartcompany.com.au/shark-tank-australia/shark-tank-clutch-glue-capital-raise-annabel-hay/",
+      "https://www.blackbird.vc/blog/investment-notes-clutch"
+    ]
+  },
+  "refs": {
+    "investee_company_key": "company:research:clutch-glue"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:d0de00f435327b723861"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Investee confirmed; no independent deal announcement found."
+    ]
+  }
+}

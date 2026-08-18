@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_web_profiles",
+  "record_key": "investor_web_profile:invest-south:2026-08-14",
+  "operation": "upsert",
+  "data": {
+    "source_urls": [
+      "https://www.investsouth.co.nz/",
+      "https://nzprivatecapital.co.nz/members/invest-south/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "website_status": "verified_public_profile",
+    "raw_content_hash": null,
+    "raw_content_ref": null,
+    "extraction_model": "codex-2024-investor-dedupe-update",
+    "extraction_version": "1.0.0",
+    "confidence": "high",
+    "claimed_thesis": "Growth and succession capital for businesses connected to southern New Zealand.",
+    "claimed_stages": [
+      "growth"
+    ],
+    "claimed_sectors": [
+      "sector_agnostic"
+    ],
+    "claimed_geographies": [
+      "Southland",
+      "Fiordland",
+      "Queenstown Lakes"
+    ],
+    "claimed_business_models": [],
+    "claimed_cheque_min": null,
+    "claimed_cheque_max": 4250000,
+    "claimed_cheque_currency": "NZD",
+    "contact_emails": [],
+    "application_url": null,
+    "contact_notes": "Official company release confirms participation.",
+    "is_current": true,
+    "superseded_at": null
+  },
+  "refs": {
+    "investor_key": "investor:invest-south"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

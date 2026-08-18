@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-328",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-328",
+    "dedupe_key": "2024|everbility|2024-summer-cohort|program_or_grant",
+    "source_url": "https://www.forbes.com.au/news/entrepreneurs/startmate-at-sunrise-demo-day-introduces-10-promising-startups/",
+    "source_payload": {
+      "deal_number": 328,
+      "csv_investee": "Everbility",
+      "normalized_investee": "Everbility",
+      "csv_date": "2024-02-08",
+      "normalized_date": "2024 Summer cohort",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Startmate accelerator SAFE",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "AUD 120,000 at program terms",
+      "csv_investors": "Startmate",
+      "normalized_investors": "Startmate",
+      "verification": "verified_program",
+      "correction_or_issue": "Startmate's 2024 cohort coverage confirms Everbility and the standard A$120k accelerator investment; the database's US$80k convertible-note figure is the FX equivalent.",
+      "primary_source": "https://www.forbes.com.au/news/entrepreneurs/startmate-at-sunrise-demo-day-introduces-10-promising-startups/",
+      "secondary_source": "https://www.cbinsights.com/company/everbility/financials"
+    },
+    "investee_name_raw": "Everbility",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.everbility.com/",
+    "org_industries_raw": "Digital Health / AI",
+    "round_type_raw": "Startmate accelerator SAFE",
+    "round_stage": "program_or_grant",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "AUD 120,000 at program terms",
+    "amount": 120000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Startmate",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "verified_program",
+    "verification_source_url": "https://www.forbes.com.au/news/entrepreneurs/startmate-at-sunrise-demo-day-introduces-10-promising-startups/",
+    "verification_notes": "Startmate's 2024 cohort coverage confirms Everbility and the standard A$120k accelerator investment; the database's US$80k convertible-note figure is the FX equivalent.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:everbility"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:720a80291d7637c7f862",
+      "source:url:a82e022cf80c60c5283b"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

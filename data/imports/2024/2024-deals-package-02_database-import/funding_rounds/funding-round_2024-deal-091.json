@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-091",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-091",
+    "dedupe_key": "2024|1wheel|2024-11-25|pre_seed",
+    "source_url": "https://www.newsfilecorp.com/release/229782/1Wheel-Launches-Innovative-Platform-to-Revolutionise-Private-Car-Sales",
+    "source_payload": {
+      "deal_number": 91,
+      "csv_investee": "1Wheel",
+      "normalized_investee": "1Wheel",
+      "csv_date": "2024-11-25",
+      "normalized_date": "2024-11-25",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-Seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "RBO Group",
+      "normalized_investors": "RBO Group venture arm",
+      "verification": "verified",
+      "correction_or_issue": "Company release confirms pre-seed funding from RBO Group's venture arm; amount is undisclosed.",
+      "primary_source": "https://www.newsfilecorp.com/release/229782/1Wheel-Launches-Innovative-Platform-to-Revolutionise-Private-Car-Sales",
+      "secondary_source": "https://www.linkedin.com/company/1wheel"
+    },
+    "investee_name_raw": "1Wheel",
+    "org_location_raw": "Perth, WA, Australia",
+    "org_website_raw": "https://1wheel.com.au/",
+    "org_industries_raw": "Automotive Marketplace / SaaS",
+    "round_type_raw": "Pre-Seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-11-25",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "RBO Group venture arm",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.newsfilecorp.com/release/229782/1Wheel-Launches-Innovative-Platform-to-Revolutionise-Private-Car-Sales",
+    "verification_notes": "Company release confirms pre-seed funding from RBO Group's venture arm; amount is undisclosed.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:1wheel"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:0dc682a533a71d224d8b",
+      "source:url:a7dccde338adb4ffb666"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

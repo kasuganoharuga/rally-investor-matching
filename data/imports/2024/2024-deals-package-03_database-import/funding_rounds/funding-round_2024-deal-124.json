@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-124",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-124",
+    "dedupe_key": "2024|zitcha|2024-09-30|series_a",
+    "source_url": "https://www.oifventures.com.au/insights/retail-advertising-startup-zitcha-bags-15-million-series-a-for-us-push",
+    "source_payload": {
+      "deal_number": 124,
+      "csv_investee": "Zitcha",
+      "normalized_investee": "Zitcha",
+      "csv_date": "2024-09-30",
+      "normalized_date": "2024-09-30 / 2024-10-01 report",
+      "csv_round": "Series A",
+      "normalized_round": "Series A",
+      "csv_amount": "AUD 15,000,000",
+      "normalized_amount": "AUD 15,000,000",
+      "csv_investors": "VMG Partners (lead); OIF Ventures",
+      "normalized_investors": "VMG Technology / VMG Partners (lead); OIF Ventures",
+      "verification": "verified",
+      "correction_or_issue": "OIF and VMG reporting confirm the amount, lead and returning investor.",
+      "primary_source": "https://www.oifventures.com.au/insights/retail-advertising-startup-zitcha-bags-15-million-series-a-for-us-push",
+      "secondary_source": "https://www.vmgpartners.com/news"
+    },
+    "investee_name_raw": "Zitcha",
+    "org_location_raw": "Melbourne, VIC, Australia / USA",
+    "org_website_raw": "https://www.zitcha.com/",
+    "org_industries_raw": "Adtech / Retail Media",
+    "round_type_raw": "Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-09-30",
+    "money_raised_raw": "AUD 15,000,000",
+    "amount": 15000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "VMG Technology / VMG Partners (lead); OIF Ventures",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.oifventures.com.au/insights/retail-advertising-startup-zitcha-bags-15-million-series-a-for-us-push",
+    "verification_notes": "OIF and VMG reporting confirm the amount, lead and returning investor.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:zitcha"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:cbeba698054385252ea2",
+      "source:url:7de4e4ae796f131057e7"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

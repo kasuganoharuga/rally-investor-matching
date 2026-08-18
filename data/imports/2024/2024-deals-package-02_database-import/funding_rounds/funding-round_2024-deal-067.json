@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-067",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-067",
+    "dedupe_key": "2024|marama-labs|2024-09-24|seed",
+    "source_url": "https://www.enterprise-ireland.com/en/news/irish-life-sciences-start-up-marama-labs-secures-280-000-in-funding-from-enterprise-ireland-to-support-expansion",
+    "source_payload": {
+      "deal_number": 67,
+      "csv_investee": "Marama Labs",
+      "normalized_investee": "Marama Labs",
+      "csv_date": "2024-12-19",
+      "normalized_date": "2024-09-24 top-up announcement",
+      "csv_round": "Seed",
+      "normalized_round": "Seed-plus extension begun Q4 2023",
+      "csv_amount": "EUR 2,000,000",
+      "normalized_amount": "EUR 2,000,000 total round; EUR 280,000 Enterprise Ireland top-up",
+      "csv_investors": "Yield Lab Europe; DeepIE; Icehouse; NZGCP; Radar; Angel Investors Marlborough",
+      "normalized_investors": "The Yield Lab Europe (lead); Enterprise Ireland; Icehouse Ventures; NZGCP; Radar Ventures; DeepIE; Angel Investors Marlborough",
+      "verification": "corrected",
+      "correction_or_issue": "CSV misdates the total round; official source says Q4 2023 seed-plus with a Sep 2024 top-up to €2m.",
+      "primary_source": "https://www.enterprise-ireland.com/en/news/irish-life-sciences-start-up-marama-labs-secures-280-000-in-funding-from-enterprise-ireland-to-support-expansion",
+      "secondary_source": "https://www.owler.com/company/maramalabs/funding"
+    },
+    "investee_name_raw": "Marama Labs",
+    "org_location_raw": "Wellington, New Zealand / Dublin",
+    "org_website_raw": "https://maramalabs.com/",
+    "org_industries_raw": "Scientific Instruments / Deeptech",
+    "round_type_raw": "Seed-plus extension begun Q4 2023",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-09-24",
+    "money_raised_raw": "EUR 2,000,000 total round; EUR 280,000 Enterprise Ireland top-up",
+    "amount": 2000000,
+    "currency": "EUR",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "The Yield Lab Europe (lead); Enterprise Ireland; Icehouse Ventures; NZGCP; Radar Ventures; DeepIE; Angel Investors Marlborough",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.enterprise-ireland.com/en/news/irish-life-sciences-start-up-marama-labs-secures-280-000-in-funding-from-enterprise-ireland-to-support-expansion",
+    "verification_notes": "CSV misdates the total round; official source says Q4 2023 seed-plus with a Sep 2024 top-up to €2m.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:marama-labs"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:4ea658f3cfb69cecec1f",
+      "source:url:ccfe3b39628f788003f0"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

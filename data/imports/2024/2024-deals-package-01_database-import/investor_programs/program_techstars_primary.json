@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_programs",
+  "record_key": "program:techstars:primary",
+  "operation": "upsert",
+  "data": {
+    "name": "Techstars",
+    "program_type": "accelerator",
+    "status": "unknown",
+    "application_url": null,
+    "eligibility_mode": "conditional",
+    "eligibility_rules": [],
+    "eligibility_rules_status": "unknown_after_existing_official_source_review",
+    "source_url": "https://www.crunchbase.com/funding_round/shutterspeed-pre-seed--3a22fad8",
+    "evidence_source_urls": [
+      "https://www.crunchbase.com/funding_round/shutterspeed-pre-seed--3a22fad8",
+      "https://www.enterpriseangels.co.nz/project/dispute-buddy/"
+    ],
+    "last_verified_at": "2026-08-14",
+    "review_notes": "The entity has a conditional public mandate or selection process, but no sufficiently specific current hard criteria were captured in existing official-source evidence; matching must return eligibility_unknown rather than eligible."
+  },
+  "refs": {
+    "investor_key": "investor:techstars"
+  },
+  "provenance": {
+    "source": "matching_enrichment",
+    "source_keys": [
+      "https://www.crunchbase.com/funding_round/shutterspeed-pre-seed--3a22fad8",
+      "https://www.enterpriseangels.co.nz/project/dispute-buddy/"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Current explicit eligibility rules require manual verification."
+    ]
+  }
+}

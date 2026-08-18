@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-434",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-434",
+    "dedupe_key": "2024|imitation-machines|2024-12|pre_seed",
+    "source_url": "https://www.linkedin.com/posts/imitationmachines_imitationlearning-robotics-vc-activity-7294595607816548352-PiHk",
+    "source_payload": {
+      "deal_number": 434,
+      "csv_investee": "Imitation Machines",
+      "normalized_investee": "Imitation Machines",
+      "csv_date": "2024-12-04",
+      "normalized_date": "2024-12",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Antler pre-seed",
+      "csv_amount": "AUD 225,000",
+      "normalized_amount": "AUD 225,000",
+      "csv_investors": "Antler",
+      "normalized_investors": "Antler Australia",
+      "verification": "verified_secondary",
+      "correction_or_issue": "Company confirms Antler equity backing; database evidence supplies amount and timing.",
+      "primary_source": "https://www.linkedin.com/posts/imitationmachines_imitationlearning-robotics-vc-activity-7294595607816548352-PiHk",
+      "secondary_source": "https://app.dealroom.co/companies/imitation_machines"
+    },
+    "investee_name_raw": "Imitation Machines",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://imitationmachines.com/",
+    "org_industries_raw": "Robotics / Physical AI",
+    "round_type_raw": "Antler pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "AUD 225,000",
+    "amount": 225000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Antler Australia",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-08_database-import",
+    "verification_status": "verified_secondary",
+    "verification_source_url": "https://www.linkedin.com/posts/imitationmachines_imitationlearning-robotics-vc-activity-7294595607816548352-PiHk",
+    "verification_notes": "Company confirms Antler equity backing; database evidence supplies amount and timing.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:imitation-machines"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": [
+      "source:url:27f15f79bfa01483be8b",
+      "source:url:f6b1e433b1ade999674c"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

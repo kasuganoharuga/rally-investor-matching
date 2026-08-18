@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-029",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-029",
+    "dedupe_key": "2024|zigtal|2024-05-25|seed",
+    "source_url": "https://www.zigtal.com/",
+    "source_payload": {
+      "deal_number": 29,
+      "csv_investee": "Zigtal",
+      "normalized_investee": "Zigtal",
+      "csv_date": "2024-05-25",
+      "normalized_date": "2024-05-25",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "AUD 200,000",
+      "normalized_amount": "AUD 200,000 (database corroboration)",
+      "csv_investors": "Ferose V R (lead); Rakesh Roushan; Sudhir Gupta",
+      "normalized_investors": "Ferose V R; Rakesh Roushan; Sudhir Gupta",
+      "verification": "partial",
+      "correction_or_issue": "Investor names and month are corroborated; exact amount/date still database-led.",
+      "primary_source": "https://www.zigtal.com/",
+      "secondary_source": "https://www.vcbacked.co/company/zigtal"
+    },
+    "investee_name_raw": "Zigtal",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.zigtal.com/",
+    "org_industries_raw": "HRtech / Skills Intelligence",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-05-25",
+    "money_raised_raw": "AUD 200,000 (database corroboration)",
+    "amount": 200000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Ferose V R; Rakesh Roushan; Sudhir Gupta",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://www.zigtal.com/",
+    "verification_notes": "Investor names and month are corroborated; exact amount/date still database-led.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:zigtal"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:89b0e7313cd939c7f7df",
+      "source:url:46c11dd13dc08c1fd183"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Investor names and month are corroborated; exact amount/date still database-led."
+    ]
+  }
+}

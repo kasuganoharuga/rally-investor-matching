@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-011",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-011",
+    "dedupe_key": "2024|terra-grow|2024-04-18|seed",
+    "source_url": "https://www.startupbootcamp.com.au/alumni/terra-grow",
+    "source_payload": {
+      "deal_number": 11,
+      "csv_investee": "Terragrow",
+      "normalized_investee": "Terra Grow",
+      "csv_date": "2024-04-18",
+      "normalized_date": "2024-04-18",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Bell Capital",
+      "normalized_investors": "Bell Capital; Hatcher+",
+      "verification": "partial",
+      "correction_or_issue": "Startupbootcamp confirms both backers but not exact date/round; CSV omits Hatcher+.",
+      "primary_source": "https://www.startupbootcamp.com.au/alumni/terra-grow",
+      "secondary_source": "https://www.terra-grow.com/"
+    },
+    "investee_name_raw": "Terra Grow",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.terra-grow.com/",
+    "org_industries_raw": "Agtech / Cleantech / Hardware",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-04-18",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Bell Capital; Hatcher+",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://www.startupbootcamp.com.au/alumni/terra-grow",
+    "verification_notes": "Startupbootcamp confirms both backers but not exact date/round; CSV omits Hatcher+.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:terra-grow"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:177ad933f7878a83da96",
+      "source:url:11dc516093e17059da35"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Startupbootcamp confirms both backers but not exact date/round; CSV omits Hatcher+.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

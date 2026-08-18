@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-210",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-210",
+    "dedupe_key": "2024|uliaa|2024-06-21|seed",
+    "source_url": "https://www.crunchbase.com/funding_round/uliaa-seed--62bdf599",
+    "source_payload": {
+      "deal_number": 210,
+      "csv_investee": "Uliaa",
+      "normalized_investee": "Uliaa",
+      "csv_date": "2024-06-21",
+      "normalized_date": "2024-06-21 (database date)",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "AUD 806,000",
+      "normalized_amount": "AUD 806,000 (database-only)",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Undisclosed",
+      "verification": "needs_review",
+      "correction_or_issue": "The company is identifiable, but amount, valuation and date remain supported only by the supplied funding database.",
+      "primary_source": "https://www.crunchbase.com/funding_round/uliaa-seed--62bdf599",
+      "secondary_source": "https://uliaa.com/"
+    },
+    "investee_name_raw": "Uliaa",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://uliaa.com/",
+    "org_industries_raw": "Fintech / Wealthtech",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-06-21",
+    "money_raised_raw": "AUD 806,000 (database-only)",
+    "amount": 806000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://www.crunchbase.com/funding_round/uliaa-seed--62bdf599",
+    "verification_notes": "The company is identifiable, but amount, valuation and date remain supported only by the supplied funding database.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:uliaa"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:be44d32010c192de1fd2",
+      "source:url:d35928d90fdd843d7269"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "The company is identifiable, but amount, valuation and date remain supported only by the supplied funding database."
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-063",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-063",
+    "dedupe_key": "2024|pexx|2024-07-16|seed",
+    "source_url": "https://www.prnewswire.com/apac/zh/news-releases/pexx--450--302198921.html",
+    "source_payload": {
+      "deal_number": 63,
+      "csv_investee": "PEXX",
+      "normalized_investee": "PEXX",
+      "csv_date": "2024-07-16",
+      "normalized_date": "2024-07-16",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "USD 4,500,000",
+      "normalized_amount": "USD 4,500,000",
+      "csv_investors": "TNB Aura; Antler; EMO Capital",
+      "normalized_investors": "TNB Aura (lead); Antler; EMO Capital; other crypto investors",
+      "verification": "verified",
+      "correction_or_issue": "Company announcement confirms amount and core investors; TNB later described the round as over US$4m.",
+      "primary_source": "https://www.prnewswire.com/apac/zh/news-releases/pexx--450--302198921.html",
+      "secondary_source": "https://www.tnbaura.vc/insights/tnb-aura-leads-us4m-investment-in-pexx-to-power-cross-border-usd-solutions"
+    },
+    "investee_name_raw": "PEXX",
+    "org_location_raw": "Sydney/Singapore",
+    "org_website_raw": "https://pexx.com/",
+    "org_industries_raw": "Fintech / Crypto / Payments",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-07-16",
+    "money_raised_raw": "USD 4,500,000",
+    "amount": 4500000,
+    "currency": "USD",
+    "amount_usd": 4500000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "TNB Aura (lead); Antler; EMO Capital; other crypto investors",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.prnewswire.com/apac/zh/news-releases/pexx--450--302198921.html",
+    "verification_notes": "Company announcement confirms amount and core investors; TNB later described the round as over US$4m.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:pexx"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:e05965552f1b88ad1dc7",
+      "source:url:0df7bdaac00465e749e8"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

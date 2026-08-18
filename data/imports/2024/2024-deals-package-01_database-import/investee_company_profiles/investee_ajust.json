@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:ajust",
+  "operation": "upsert",
+  "data": {
+    "name": "Ajust",
+    "website_url": "https://www.ajust.com.au/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "consumer-regtech-ai",
+    "sector_secondary": null,
+    "use_case_primary": "consumer-complaint-and-resolution-platform-that-helps-customers-resolve-issues-with-businesses",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2c-platform",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Consumer complaint and resolution platform that helps customers resolve issues with businesses.",
+    "source_urls": [
+      "https://www.ajust.com.au/",
+      "https://www.overnightsuccess.vc/p/aussie-startup-vc-summary-30th-november-2024",
+      "https://www.capitalbrief.com/briefing/ai-startup-ajust-secures-2m-for-its-consumer-complaint-platform-c3a00f1d-e722-4318-bc72-b2e4e60fb8e4/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

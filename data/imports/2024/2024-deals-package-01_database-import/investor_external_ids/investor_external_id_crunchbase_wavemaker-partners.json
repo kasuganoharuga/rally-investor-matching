@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_external_ids",
+  "record_key": "investor_external_id:crunchbase:wavemaker-partners",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "crunchbase",
+    "external_id": "wavemaker-partners",
+    "external_url": "https://www.crunchbase.com/organization/wavemaker-partners",
+    "first_seen_at": "2026-07-16",
+    "last_seen_at": "2026-07-16"
+  },
+  "refs": {
+    "investor_key": "investor:wavemaker-ventures-wavemaker-partners"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research:2026-07-24",
+    "source_keys": [
+      "research_source:wavemaker-ventures:wm_src_006"
+    ]
+  },
+  "review": {
+    "status": "unreviewed",
+    "issues": []
+  }
+}

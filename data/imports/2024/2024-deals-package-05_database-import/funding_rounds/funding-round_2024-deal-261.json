@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-261",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-261",
+    "dedupe_key": "2024|bell-resources-limited|2024-07-pre-ipo-offer-document-november-close-not-corroborated|unknown",
+    "source_url": "https://bellresources.com/wp-content/uploads/2024/07/ENGLISH-Bell-Teaser-202407_Final.pdf",
+    "source_payload": {
+      "deal_number": 261,
+      "csv_investee": "Bell Resources",
+      "normalized_investee": "Bell Resources Limited",
+      "csv_date": "2024-11-28",
+      "normalized_date": "2024-07 pre-IPO offer document; November close not corroborated",
+      "csv_round": "Seed",
+      "normalized_round": "Pre-IPO capital raise / listing preparation",
+      "csv_amount": "AUD 225,000",
+      "normalized_amount": "Target and final proceeds not established",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Undisclosed wholesale / pre-IPO investors",
+      "verification": "corrected_scope",
+      "correction_or_issue": "An official July 2024 teaser confirms a pre-IPO capital raise and intended ASX listing, but not a A$225k November seed close. Treat as corporate capital markets, not a standard startup seed.",
+      "primary_source": "https://bellresources.com/wp-content/uploads/2024/07/ENGLISH-Bell-Teaser-202407_Final.pdf",
+      "secondary_source": "https://abr.business.gov.au/"
+    },
+    "investee_name_raw": "Bell Resources Limited",
+    "org_location_raw": "Australia",
+    "org_website_raw": "https://bellresources.com/",
+    "org_industries_raw": "EV Infrastructure / Energy",
+    "round_type_raw": "Pre-IPO capital raise / listing preparation",
+    "round_stage": "unknown",
+    "funding_stage_raw": "Seed",
+    "announced_date": null,
+    "money_raised_raw": "Target and final proceeds not established",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed wholesale / pre-IPO investors",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "corrected_scope",
+    "verification_source_url": "https://bellresources.com/wp-content/uploads/2024/07/ENGLISH-Bell-Teaser-202407_Final.pdf",
+    "verification_notes": "An official July 2024 teaser confirms a pre-IPO capital raise and intended ASX listing, but not a A$225k November seed close. Treat as corporate capital markets, not a standard startup seed.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "capital_raise_target_not_final_close",
+    "amount_structuring_note": "Official offer material establishes a proposed pre-IPO raise, not final proceeds or a A$225k seed close.",
+    "date_precision": "unknown",
+    "supplemental_verification_urls": []
+  },
+  "refs": {
+    "investee_company_key": "company:research:bell-resources"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:fb1b42e1cbc0d138090f",
+      "source:url:5374f93a495178734e09"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

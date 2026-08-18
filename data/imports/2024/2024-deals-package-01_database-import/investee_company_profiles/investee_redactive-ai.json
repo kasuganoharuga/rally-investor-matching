@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:redactive-ai",
+  "operation": "upsert",
+  "data": {
+    "name": "Redactive AI",
+    "website_url": "https://redactive.ai/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "enterprise-ai-security",
+    "sector_secondary": null,
+    "use_case_primary": "secure-generative-ai-platform-for-enterprise-knowledge-and-regulated-environments",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-saas",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "ai_related",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Secure generative-AI platform for enterprise knowledge and regulated environments.",
+    "source_urls": [
+      "https://redactive.ai/",
+      "https://www.axios.com/2024/07/02/exclusive-redactive-ai-75m-felicis-blackbird",
+      "https://www.gaebler.com/VC-Funding-82A61BC3-2C89-4447-B155-6E41094AA7E7-Redactive-AI-07-02-2024"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

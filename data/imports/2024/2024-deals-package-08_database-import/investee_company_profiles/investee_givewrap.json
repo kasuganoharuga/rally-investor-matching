@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:givewrap",
+  "operation": "upsert",
+  "data": {
+    "name": "Givewrap",
+    "website_url": "https://givewrap.org/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "consumer-social-enterprise",
+    "sector_secondary": null,
+    "use_case_primary": "social-enterprise-gift-wrap-brand-donating-part-of-sales-to-charity-through-retail-ecommerce-and-corporate-gifting-chann",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "retail-ecommerce",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Social-enterprise gift-wrap brand donating part of sales to charity through retail, ecommerce and corporate-gifting channels.",
+    "source_urls": [
+      "https://givewrap.org/",
+      "https://www.linkedin.com/posts/michelle-tirtabudi-737820120_unswdemoday-activity-7257631623225966592-jncF",
+      "https://www.inside.unsw.edu.au/innovation-and-engagement/six-startups-receive-110k-investment-unsw-founders-program"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

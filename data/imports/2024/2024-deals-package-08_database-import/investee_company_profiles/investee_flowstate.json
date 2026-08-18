@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:flowstate",
+  "operation": "upsert",
+  "data": {
+    "name": "Flowstate",
+    "website_url": "https://flowstate.zone/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Victoria",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "sports-tech-computer-vision",
+    "sector_secondary": null,
+    "use_case_primary": "ai-video-capture-and-analytics-platform-automatically-filming-action-sports-participants-at-surf-parks-and-other-venues",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-venue-platform-consumer-media",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "ai_related",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "AI video-capture and analytics platform automatically filming action-sports participants at surf parks and other venues.",
+    "source_urls": [
+      "https://flowstate.zone/",
+      "https://stabmag.com/features/the-origin-story-of-flowstate-the-surfer-owned-tech-startup-born-in-chlorine/",
+      "https://app.dealroom.co/companies/flowstate_zone"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

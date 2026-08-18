@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-088",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-088",
+    "dedupe_key": "2024|fresho|2024-11-26|series_b",
+    "source_url": "https://www.globenewswire.com/news-release/2024/11/26/2987536/0/en/Fresho-secures-17M-Series-B-to-transform-fresh-food-wholesale-with-AI-powered-ordering-platform.html",
+    "source_payload": {
+      "deal_number": 88,
+      "csv_investee": "Fresho",
+      "normalized_investee": "Fresho",
+      "csv_date": "2024-11-26",
+      "normalized_date": "2024-11-26",
+      "csv_round": "Series B",
+      "normalized_round": "Series B",
+      "csv_amount": "USD 17,000,000",
+      "normalized_amount": "AUD 17,000,000",
+      "csv_investors": "Geoff Tarrant",
+      "normalized_investors": "Geoff Tarrant (lead); new and existing shareholders not named",
+      "verification": "corrected",
+      "correction_or_issue": "Official release uses $17m in an Australian context; US$11.01m database conversion supports A$17m. Currency corrected.",
+      "primary_source": "https://www.globenewswire.com/news-release/2024/11/26/2987536/0/en/Fresho-secures-17M-Series-B-to-transform-fresh-food-wholesale-with-AI-powered-ordering-platform.html",
+      "secondary_source": "https://www.cbinsights.com/company/fresho/financials"
+    },
+    "investee_name_raw": "Fresho",
+    "org_location_raw": "Melbourne, VIC, Australia / UK",
+    "org_website_raw": "https://www.fresho.com/",
+    "org_industries_raw": "Foodtech / Supply-chain SaaS",
+    "round_type_raw": "Series B",
+    "round_stage": "series_b",
+    "funding_stage_raw": "Series B",
+    "announced_date": "2024-11-26",
+    "money_raised_raw": "AUD 17,000,000",
+    "amount": 17000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Geoff Tarrant (lead); new and existing shareholders not named",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.globenewswire.com/news-release/2024/11/26/2987536/0/en/Fresho-secures-17M-Series-B-to-transform-fresh-food-wholesale-with-AI-powered-ordering-platform.html",
+    "verification_notes": "Official release uses $17m in an Australian context; US$11.01m database conversion supports A$17m. Currency corrected.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:fresho"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:1d9d5b1684450ae57669",
+      "source:url:81d6fb5b5bd8f423625a"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

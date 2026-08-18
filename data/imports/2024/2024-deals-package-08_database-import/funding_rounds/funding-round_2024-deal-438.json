@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-438",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-438",
+    "dedupe_key": "2024|swan-genomics|2024-08-13|seed",
+    "source_url": "https://biopharmaapac.com/news/41/5128/proto-axiom-secures-20m-in-series-b-to-strengthen-australias-biotech-ip-retention.html",
+    "source_payload": {
+      "deal_number": 438,
+      "csv_investee": "SWAN Genomics",
+      "normalized_investee": "SWAN Genomics",
+      "csv_date": "2024-08-13",
+      "normalized_date": "2024-08-13 reporting",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "AUD 2,000,000",
+      "normalized_amount": "AUD 2,000,000",
+      "csv_investors": "Pacific Channel; Proto Axiom",
+      "normalized_investors": "Proto Axiom (lead); Pacific Channel",
+      "verification": "verified_core_syndicate",
+      "correction_or_issue": "Proto Axiom confirms it led and invested A$2m; company lists Pacific Channel as a key investor.",
+      "primary_source": "https://biopharmaapac.com/news/41/5128/proto-axiom-secures-20m-in-series-b-to-strengthen-australias-biotech-ip-retention.html",
+      "secondary_source": "https://www.swangenomics.com/"
+    },
+    "investee_name_raw": "SWAN Genomics",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.swangenomics.com/",
+    "org_industries_raw": "Biotech / Genomics / Deep Tech",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-08-13",
+    "money_raised_raw": "AUD 2,000,000",
+    "amount": 2000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Proto Axiom (lead); Pacific Channel",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-08_database-import",
+    "verification_status": "verified_core_syndicate",
+    "verification_source_url": "https://biopharmaapac.com/news/41/5128/proto-axiom-secures-20m-in-series-b-to-strengthen-australias-biotech-ip-retention.html",
+    "verification_notes": "Proto Axiom confirms it led and invested A$2m; company lists Pacific Channel as a key investor.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:swan-genomics"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": [
+      "source:url:45e58bb7dabc9a608eb4",
+      "source:url:b21e40b09cd2525b29dd"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

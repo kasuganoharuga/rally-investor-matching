@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-370",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-370",
+    "dedupe_key": "2024|allegro-energy|2024-09-09|series_a",
+    "source_url": "https://www.allegro.energy/industries/renewable-developers",
+    "source_payload": {
+      "deal_number": 370,
+      "csv_investee": "Allegro Energy",
+      "normalized_investee": "Allegro Energy",
+      "csv_date": "2024-09-09",
+      "normalized_date": "2024-09-09",
+      "csv_round": "Series A",
+      "normalized_round": "Series A",
+      "csv_amount": "AUD 17,500,000",
+      "normalized_amount": "AUD 17,500,000",
+      "csv_investors": "Grantham Foundation; Impact Ventures Management; Lightbank; Melt Ventures; Origin Energy",
+      "normalized_investors": "Grantham Foundation (lead); Origin Energy; Lightbank; Melt Ventures; Impact Ventures",
+      "verification": "verified",
+      "correction_or_issue": "Company and contemporaneous reporting confirm the amount, lead and syndicate.",
+      "primary_source": "https://www.allegro.energy/industries/renewable-developers",
+      "secondary_source": "https://www.businessnewsaustralia.com/articles/us-venture-capitalist-grantham-foundation-leads--17-5m-series-a-for-power-innovator-allegro-energy.html"
+    },
+    "investee_name_raw": "Allegro Energy",
+    "org_location_raw": "Newcastle, NSW, Australia",
+    "org_website_raw": "https://www.allegro.energy/",
+    "org_industries_raw": "Climate Tech / Energy Storage",
+    "round_type_raw": "Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-09-09",
+    "money_raised_raw": "AUD 17,500,000",
+    "amount": 17500000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Grantham Foundation (lead); Origin Energy; Lightbank; Melt Ventures; Impact Ventures",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.allegro.energy/industries/renewable-developers",
+    "verification_notes": "Company and contemporaneous reporting confirm the amount, lead and syndicate.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:allegro-energy"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:23a03ed1188a4197b37d",
+      "source:url:6b909879ecdffa74694b"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

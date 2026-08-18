@@ -1,0 +1,168 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-05_database-import",
+  "counts": {
+    "created_relations": 87,
+    "unresolved_or_unnamed": 28,
+    "excluded_by_investor_policy": 2
+  },
+  "unresolved_relations": [
+    {
+      "deal_number": 241,
+      "token": "808 Ventures (database portfolio relationship)",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 250,
+      "token": "Undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 252,
+      "token": "EMR strategic relationship",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 254,
+      "token": "DPMC / InternetNZ grant support",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 254,
+      "token": "University of Auckland / UniServices relationship",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 255,
+      "token": "Undisclosed Australian and international family offices",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 260,
+      "token": "other CSV investors not proven for this round",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 261,
+      "token": "Undisclosed wholesale / pre-IPO investors",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 262,
+      "token": "Industry investors and management",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 262,
+      "token": "identities undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 263,
+      "token": "other investors not publicly identified for the 2024 offer",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 266,
+      "token": "Callaghan Innovation grant support",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 267,
+      "token": "Bridgewater-linked program support reported secondarily",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 268,
+      "token": "Creative Destruction Lab program relationship",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 269,
+      "token": "consortium investors not disclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 272,
+      "token": "Undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 274,
+      "token": "Undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 275,
+      "token": "Undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 276,
+      "token": "additional angels",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 277,
+      "token": "other prior or round investors not fully public",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 282,
+      "token": "Undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 283,
+      "token": "Techstars relationship",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 284,
+      "token": "SINOFY (unverified)",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 289,
+      "token": "Undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 290,
+      "token": "Undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 294,
+      "token": "SFC Capital not proven for this event",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 295,
+      "token": "Larsen Ventures (unverified for this round)",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 296,
+      "token": "existing shareholders",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    }
+  ],
+  "excluded_relations": [
+    {
+      "deal_number": 259,
+      "token": "FJ Labs portfolio entry appears to be a different US travel/lifestyle company",
+      "canonical_investor": "FJ Labs",
+      "action": "do_not_create",
+      "reason": "FJ Labs' Arena Magazine entry is a different US travel/lifestyle company; do not link it to the Australian publication."
+    },
+    {
+      "deal_number": 294,
+      "token": "Development Bank of Wales",
+      "canonical_investor": "Development Bank of Wales",
+      "action": "do_not_create",
+      "reason": "Previously resolved, but this UK transaction is outside ANZ scope and the CSV amount is incorrect."
+    }
+  ],
+  "resolved_by_supplement": []
+}

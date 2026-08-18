@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-198",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-198",
+    "dedupe_key": "2024|earnr|2024-02-01|seed",
+    "source_url": "https://www.crunchbase.com/funding_round/earnr-eb33-seed--2af0a7b0",
+    "source_payload": {
+      "deal_number": 198,
+      "csv_investee": "Earnr",
+      "normalized_investee": "Earnr",
+      "csv_date": "2024-02-01",
+      "normalized_date": "2024-02-01 (database date)",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Kentof Family Investments",
+      "normalized_investors": "Kentof Family Investments (database-only)",
+      "verification": "needs_review",
+      "correction_or_issue": "Earnr is an operating regulated non-bank, but no independent 2024 seed announcement or investor confirmation was found.",
+      "primary_source": "https://www.crunchbase.com/funding_round/earnr-eb33-seed--2af0a7b0",
+      "secondary_source": "https://www.earnr.com.au/"
+    },
+    "investee_name_raw": "Earnr",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.earnr.com.au/",
+    "org_industries_raw": "Fintech / Savings",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-02-01",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Kentof Family Investments (database-only)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://www.crunchbase.com/funding_round/earnr-eb33-seed--2af0a7b0",
+    "verification_notes": "Earnr is an operating regulated non-bank, but no independent 2024 seed announcement or investor confirmation was found.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:earnr"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:d1fb35059caad2693a23",
+      "source:url:238e5429cde7ca83182e"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Earnr is an operating regulated non-bank, but no independent 2024 seed announcement or investor confirmation was found.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

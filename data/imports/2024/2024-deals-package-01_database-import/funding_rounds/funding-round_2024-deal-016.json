@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-016",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-016",
+    "dedupe_key": "2024|facecloud-health-data-research|2024-02-01|unknown",
+    "source_url": "https://www.facecloud.ai/about",
+    "source_payload": {
+      "deal_number": 16,
+      "csv_investee": "Health Data Research",
+      "normalized_investee": "FaceCloud / Health Data Research",
+      "csv_date": "2024-02-01",
+      "normalized_date": "2024-02-01",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Founder funding / unverified financing",
+      "csv_amount": "AUD 50,000",
+      "normalized_amount": "Unverified",
+      "csv_investors": "Robert Laidlaw",
+      "normalized_investors": "No external investor confirmed",
+      "verification": "rejected_investor",
+      "correction_or_issue": "Official company page identifies Robert Laidlaw as founder/CEO, so he must not be created as an investor from this row.",
+      "primary_source": "https://www.facecloud.ai/about",
+      "secondary_source": null
+    },
+    "investee_name_raw": "FaceCloud / Health Data Research",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.facecloud.ai/",
+    "org_industries_raw": "Healthtech / Vertical SaaS / AI",
+    "round_type_raw": "Founder funding / unverified financing",
+    "round_stage": "unknown",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-02-01",
+    "money_raised_raw": "Unverified",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "No external investor confirmed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "rejected_investor",
+    "verification_source_url": "https://www.facecloud.ai/about",
+    "verification_notes": "Official company page identifies Robert Laidlaw as founder/CEO, so he must not be created as an investor from this row.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "no_verified_financing_event",
+    "amount_structuring_note": "Public evidence identifies founder funding only; no external financing event or amount was verified.",
+    "date_precision": "day",
+    "supplemental_verification_urls": [
+      "https://www.facecloud.ai/about"
+    ]
+  },
+  "refs": {
+    "investee_company_key": "company:research:facecloud"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:26f29da42a70c7bf8418"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

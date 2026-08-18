@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-092",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-092",
+    "dedupe_key": "2024|mapai|2025-02-26|seed",
+    "source_url": "https://www.unsw.edu.au/research/partner-with-us/investment-portfolio/map-ai",
+    "source_payload": {
+      "deal_number": 92,
+      "csv_investee": "MapAI",
+      "normalized_investee": "MapAI",
+      "csv_date": "2024-11-25",
+      "normalized_date": "2024 funding; announced 2025-02-26",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "USD 1,300,000",
+      "normalized_amount": "AUD 1,300,000",
+      "csv_investors": "FrontierSI; University of New South Wales",
+      "normalized_investors": "FrontierSI; UNSW Sydney",
+      "verification": "corrected",
+      "correction_or_issue": "UNSW confirms A$1.3m seed funding in 2024; MapAI formally announced closure in February 2025. Currency and announcement timing corrected.",
+      "primary_source": "https://www.unsw.edu.au/research/partner-with-us/investment-portfolio/map-ai",
+      "secondary_source": "https://www.mapai.net/news-articles/mapai-secures-1-3-million-in-funding-to-advance-generative-ai-data-analytics"
+    },
+    "investee_name_raw": "MapAI",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.mapai.net/",
+    "org_industries_raw": "Geospatial / Generative AI",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2025-02-26",
+    "money_raised_raw": "AUD 1,300,000",
+    "amount": 1300000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "FrontierSI; UNSW Sydney",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.unsw.edu.au/research/partner-with-us/investment-portfolio/map-ai",
+    "verification_notes": "UNSW confirms A$1.3m seed funding in 2024; MapAI formally announced closure in February 2025. Currency and announcement timing corrected.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:mapai"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:3c4341433a8bcd5f1c95",
+      "source:url:1c258677da3fe11800de"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-237",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-237",
+    "dedupe_key": "2024|brauz|2024-05-07|seed",
+    "source_url": "https://scalarepartners.com/news/brauz",
+    "source_payload": {
+      "deal_number": 237,
+      "csv_investee": "Brauz",
+      "normalized_investee": "Brauz",
+      "csv_date": "2024-05-07",
+      "normalized_date": "2024-05-07",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Scalare Partners",
+      "normalized_investors": "Scalare Partners",
+      "verification": "verified",
+      "correction_or_issue": "Scalare's official investment note and the funding-round record confirm the 2024 seed relationship; amount is undisclosed.",
+      "primary_source": "https://scalarepartners.com/news/brauz",
+      "secondary_source": "https://www.crunchbase.com/funding_round/brauz-seed--ec85348f"
+    },
+    "investee_name_raw": "Brauz",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://brauz.com/",
+    "org_industries_raw": "Retail Tech / Omnichannel",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-05-07",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Scalare Partners",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://scalarepartners.com/news/brauz",
+    "verification_notes": "Scalare's official investment note and the funding-round record confirm the 2024 seed relationship; amount is undisclosed.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:brauz"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:51cb2b3b8287a1e85e9e",
+      "source:url:5f5549b600301362dda0"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

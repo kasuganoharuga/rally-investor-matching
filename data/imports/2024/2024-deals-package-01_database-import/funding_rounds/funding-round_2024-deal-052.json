@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-052",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-052",
+    "dedupe_key": "2024|build-club|2024-10-11|pre_seed",
+    "source_url": "https://www.capitalbrief.com/briefing/build-club-raises-175m-in-pre-seed-led-by-blackbird-airtree-2e44a4d0-c956-4e53-b05a-a9c8fe40e654/",
+    "source_payload": {
+      "deal_number": 52,
+      "csv_investee": "Build Club",
+      "normalized_investee": "Build Club",
+      "csv_date": "2024-10-14",
+      "normalized_date": "2024-10-11",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-Seed",
+      "csv_amount": "AUD 1,800,000",
+      "normalized_amount": "AUD 1,750,000",
+      "csv_investors": "Airtree; Archangel; Blackbird; Co Ventures; Treble",
+      "normalized_investors": "Blackbird and AirTree (co-leads); Co Ventures; Archangel; Startmate",
+      "verification": "corrected",
+      "correction_or_issue": "Amount/date corrected; Startmate added; Treble not independently confirmed.",
+      "primary_source": "https://www.capitalbrief.com/briefing/build-club-raises-175m-in-pre-seed-led-by-blackbird-airtree-2e44a4d0-c956-4e53-b05a-a9c8fe40e654/",
+      "secondary_source": "https://www.airtree.vc/companies/build-club"
+    },
+    "investee_name_raw": "Build Club",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.buildclub.ai/",
+    "org_industries_raw": "Edtech / Developer Tools / AI",
+    "round_type_raw": "Pre-Seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-10-11",
+    "money_raised_raw": "AUD 1,750,000",
+    "amount": 1750000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Blackbird and AirTree (co-leads); Co Ventures; Archangel; Startmate",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.capitalbrief.com/briefing/build-club-raises-175m-in-pre-seed-led-by-blackbird-airtree-2e44a4d0-c956-4e53-b05a-a9c8fe40e654/",
+    "verification_notes": "Amount/date corrected; Startmate added; Treble not independently confirmed.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:build-club"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:5841c1fa5a5ad85975c7",
+      "source:url:157f266da7f67348e73f"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

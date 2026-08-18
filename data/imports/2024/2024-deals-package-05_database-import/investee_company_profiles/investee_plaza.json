@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:plaza",
+  "operation": "upsert",
+  "data": {
+    "name": "Plaza",
+    "website_url": "https://getplaza.ai/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": null,
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "technology",
+    "sector_secondary": null,
+    "use_case_primary": "antler-backed-early-stage-company-public-materials-were-insufficient-to-verify-a-durable-operating-description-and-legal",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "early-stage-software",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Antler-backed early-stage company; public materials were insufficient to verify a durable operating description and legal entity.",
+    "source_urls": [
+      "https://careers.antler.co/companies/plaza-2-e86cb8bb-1186-48d3-8365-bc5bf2703aaf",
+      "https://www.antler.co/blog/antler-co-antler-vc-funding-for-startups-and-founders",
+      "https://getplaza.ai/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-supplement",
+    "extraction_version": "1.0.0",
+    "confidence": "medium"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:1e7c2e41036db3451298"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

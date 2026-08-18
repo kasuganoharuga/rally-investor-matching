@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-268",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-268",
+    "dedupe_key": "2024|captivate-technology-limited|2024-wnt-portfolio-investment-exact-date-amount-undisclosed|seed",
+    "source_url": "https://www.companyhub.nz/companyDetails.cfm?nzbn=9429050545612",
+    "source_payload": {
+      "deal_number": 268,
+      "csv_investee": "Captivate Technology",
+      "normalized_investee": "Captivate Technology Limited",
+      "csv_date": "2024-08-19",
+      "normalized_date": "2024 WNT portfolio investment; exact date/amount undisclosed",
+      "csv_round": "Seed",
+      "normalized_round": "Deep-tech seed / incubator investment",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Creative Destruction Lab; WNT Ventures",
+      "normalized_investors": "WNT Ventures Fund 4; WNT Ventures Fund 3 existing holding; Creative Destruction Lab program relationship",
+      "verification": "partial",
+      "correction_or_issue": "WNT publicly identifies Captivate as a portfolio company and corporate records show Fund 3 and Fund 4 shareholdings. No deal-specific amount was found; CDL is retained as program support, not proven cash investor.",
+      "primary_source": "https://www.companyhub.nz/companyDetails.cfm?nzbn=9429050545612",
+      "secondary_source": "https://nz.linkedin.com/company/wnt-ventures"
+    },
+    "investee_name_raw": "Captivate Technology Limited",
+    "org_location_raw": "New Zealand",
+    "org_website_raw": "https://www.captivatetechnology.com/",
+    "org_industries_raw": "Deep Tech / Sensors",
+    "round_type_raw": "Deep-tech seed / incubator investment",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": null,
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "WNT Ventures Fund 4; WNT Ventures Fund 3 existing holding; Creative Destruction Lab program relationship",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://www.companyhub.nz/companyDetails.cfm?nzbn=9429050545612",
+    "verification_notes": "WNT publicly identifies Captivate as a portfolio company and corporate records show Fund 3 and Fund 4 shareholdings. No deal-specific amount was found; CDL is retained as program support, not proven cash investor.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:captivate-technology"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:313e62783b9a47d377cd",
+      "source:url:5f0ca5c8d9e754ceb754"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "WNT publicly identifies Captivate as a portfolio company and corporate records show Fund 3 and Fund 4 shareholdings. No deal-specific amount was found; CDL is retained as program support, not proven cash investor.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

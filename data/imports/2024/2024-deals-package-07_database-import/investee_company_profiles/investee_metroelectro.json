@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:metroelectro",
+  "operation": "upsert",
+  "data": {
+    "name": "MetroElectro",
+    "website_url": "https://www.metroelectro.com.au/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Victoria",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "climate-tech-distributed-energy",
+    "sector_secondary": null,
+    "use_case_primary": "develops-and-operates-distributed-solar-and-battery-systems-for-commercial-and-industrial-buildings-using-a-service-mode",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "energy-as-a-service",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Develops and operates distributed solar and battery systems for commercial and industrial buildings using a service model.",
+    "source_urls": [
+      "https://www.metroelectro.com.au/",
+      "https://wavemakerpartners.com/metroelectro-secures-au1-04m-of-pre-seed-funding-from-wavemaker-impact-to-develop-mid-sized-renewable-power-plants-to-fast-track-energy-transition/",
+      "https://wavemaker.vc/wp-content/uploads/2024/09/Portfolio-Report_2024_Q2.pdf"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

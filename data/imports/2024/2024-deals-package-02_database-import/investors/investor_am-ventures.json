@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investors",
+  "record_key": "investor:am-ventures",
+  "operation": "upsert",
+  "data": {
+    "canonical_name": "AM Ventures",
+    "aliases": [],
+    "investor_type": "vc_fund",
+    "investor_subtype": "VC",
+    "eligibility_mode": "research_package_confirmed",
+    "classification_confidence": "high",
+    "classification_evidence_urls": [
+      "https://amventures.com/"
+    ],
+    "classified_at": "2026-08-14",
+    "website_url": "https://amventures.com/",
+    "linkedin_url": null,
+    "hq_country": null,
+    "hq_state": null,
+    "hq_city": null,
+    "offices": [],
+    "status": "active",
+    "merged_into_id": null,
+    "review_status": "needs_more_data",
+    "last_reviewed_at": "2026-08-14",
+    "last_reviewed_by": "codex-2024-investor-dedupe-update",
+    "identity_resolution": "new_investor",
+    "matched_existing_record_key": null,
+    "identity_match_method": "no_prior_match",
+    "identity_match_source": null
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Investor headquarters country could not be normalized from the research package."
+    ]
+  }
+}

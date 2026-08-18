@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-347",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-347",
+    "dedupe_key": "2024|tracksuit|2024-02-28|series_a",
+    "source_url": "https://www.gotracksuit.com/blog/posts/raise-announcement-series-a",
+    "source_payload": {
+      "deal_number": 347,
+      "csv_investee": "Tracksuit",
+      "normalized_investee": "Tracksuit",
+      "csv_date": "2024-02-27",
+      "normalized_date": "2024-02-28 announcement",
+      "csv_round": "Series A",
+      "normalized_round": "Series A",
+      "csv_amount": "USD 13,500,000",
+      "normalized_amount": "USD 13,500,000",
+      "csv_investors": "Altos; Footwork; AirAngels; Ascential; Blackbird; Bree Johnson; Icehouse; Lenny Rachitsky; Mark Ritson; Shasta; Timothy Brown",
+      "normalized_investors": "Altos Ventures and Footwork (co-leads); Blackbird; Icehouse Ventures; Ascential; Shasta Ventures; Bree Johnson; Lenny Rachitsky; Tim Brown",
+      "verification": "verified_core_syndicate",
+      "correction_or_issue": "Company announcement confirms the amount, co-leads, four existing institutions and three named angels. AirAngels and Mark Ritson are not attached to this Series A in the primary release.",
+      "primary_source": "https://www.gotracksuit.com/blog/posts/raise-announcement-series-a",
+      "secondary_source": "https://www.nbr.co.nz/tech/tracksuit-stoked-with-22m-series-a-round/"
+    },
+    "investee_name_raw": "Tracksuit",
+    "org_location_raw": "Auckland, New Zealand",
+    "org_website_raw": "https://www.gotracksuit.com/",
+    "org_industries_raw": "Martech / Market Research",
+    "round_type_raw": "Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-02-28",
+    "money_raised_raw": "USD 13,500,000",
+    "amount": 13500000,
+    "currency": "USD",
+    "amount_usd": 13500000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Altos Ventures and Footwork (co-leads); Blackbird; Icehouse Ventures; Ascential; Shasta Ventures; Bree Johnson; Lenny Rachitsky; Tim Brown",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "verified_core_syndicate",
+    "verification_source_url": "https://www.gotracksuit.com/blog/posts/raise-announcement-series-a",
+    "verification_notes": "Company announcement confirms the amount, co-leads, four existing institutions and three named angels. AirAngels and Mark Ritson are not attached to this Series A in the primary release.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:tracksuit"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:0a517785ca3061947e95",
+      "source:url:c9cda8df51100d825479"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

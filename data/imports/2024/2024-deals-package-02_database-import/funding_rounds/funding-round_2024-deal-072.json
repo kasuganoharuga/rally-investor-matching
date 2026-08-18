@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-072",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-072",
+    "dedupe_key": "2024|kismet-healthcare|2024-03-05|seed",
+    "source_url": "https://www.gunder.com/print/v2/content/9399/prosus-leads-dollar82m-seed-funding-of-kismet.pdf?lang=en",
+    "source_payload": {
+      "deal_number": 72,
+      "csv_investee": "Kismet",
+      "normalized_investee": "Kismet Healthcare",
+      "csv_date": "2024-03-04",
+      "normalized_date": "2024-03-05 announcement",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "AUD 12,500,000",
+      "normalized_amount": "AUD 12,600,000 / USD 8,200,000",
+      "csv_investors": "AirTree; Prosus Ventures",
+      "normalized_investors": "Prosus Ventures (lead); AirTree Ventures",
+      "verification": "corrected",
+      "correction_or_issue": "Legal adviser confirms US$8.2m; Australian coverage reports approximately A$12.6m.",
+      "primary_source": "https://www.gunder.com/print/v2/content/9399/prosus-leads-dollar82m-seed-funding-of-kismet.pdf?lang=en",
+      "secondary_source": "https://www.overnightsuccess.vc/p/9th-mar-2024"
+    },
+    "investee_name_raw": "Kismet Healthcare",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.kismet.healthcare/",
+    "org_industries_raw": "Healthtech / Marketplace",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-03-05",
+    "money_raised_raw": "AUD 12,600,000 / USD 8,200,000",
+    "amount": 12600000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Prosus Ventures (lead); AirTree Ventures",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.gunder.com/print/v2/content/9399/prosus-leads-dollar82m-seed-funding-of-kismet.pdf?lang=en",
+    "verification_notes": "Legal adviser confirms US$8.2m; Australian coverage reports approximately A$12.6m.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:kismet-healthcare"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:e858cee53894e7ff3f9f",
+      "source:url:a8aa48c2a0f5b0fb230e"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

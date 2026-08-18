@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-226",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-226",
+    "dedupe_key": "2024|spacelis-space-technologies|2024-02-2024-03-public-profiles|pre_seed",
+    "source_url": "https://app.dealroom.co/companies/spacelis",
+    "source_payload": {
+      "deal_number": 226,
+      "csv_investee": "Spacelis",
+      "normalized_investee": "SPACELIS Space Technologies",
+      "csv_date": "2024-02-17",
+      "normalized_date": "2024-02 / 2024-03 public profiles",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-Seed plus accelerator support",
+      "csv_amount": "USD 30,000",
+      "normalized_amount": "USD 30,000 pre-seed; separate USD 100,000 DIANA support program",
+      "csv_investors": "Turkey Development Fund",
+      "normalized_investors": "Turkish Development Fund; NATO DIANA support program",
+      "verification": "corrected_scope",
+      "correction_or_issue": "Funding is corroborated, but the operating company is registered in Turkey and the Australian link is founder/research origin. Treat as a global entity, not a standard ANZ investee.",
+      "primary_source": "https://app.dealroom.co/companies/spacelis",
+      "secondary_source": "https://www.linkedin.com/company/spacelis/"
+    },
+    "investee_name_raw": "SPACELIS Space Technologies",
+    "org_location_raw": "Turkey / Adelaide research origin",
+    "org_website_raw": "https://spacelis.com/",
+    "org_industries_raw": "Space Tech / Advanced Materials",
+    "round_type_raw": "Pre-Seed plus accelerator support",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "USD 30,000 pre-seed; separate USD 100,000 DIANA support program",
+    "amount": 30000,
+    "currency": "USD",
+    "amount_usd": 30000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Turkish Development Fund; NATO DIANA support program",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "corrected_scope",
+    "verification_source_url": "https://app.dealroom.co/companies/spacelis",
+    "verification_notes": "Funding is corroborated, but the operating company is registered in Turkey and the Australian link is founder/research origin. Treat as a global entity, not a standard ANZ investee.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:spacelis-space-technologies"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:d4ccfc503a981d569eca",
+      "source:url:e5c2eea8f97bf72820a4"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

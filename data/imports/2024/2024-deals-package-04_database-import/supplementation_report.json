@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-04_database-import",
+  "supplemented_at": "2026-08-14T00:00:00+09:30",
+  "status": "completed_with_public_evidence_limits",
+  "change_count": 4,
+  "changes": [
+    {
+      "type": "round_exact_date",
+      "record_key": "funding_round:research-package:2024-deal-206",
+      "value": "2024-11-08",
+      "evidence_url": "https://www.cbinsights.com/company/timescapes/financials"
+    },
+    {
+      "type": "resolved_investor_relation",
+      "deal_number": 206,
+      "investor_key": "investor:huljich-family-trust-nominees-limited",
+      "evidence_urls": [
+        "https://www.nzherald.co.nz/business/timelapse-meets-ai-as-timescapes-rakes-in-series-a-millions/TJNV2KA4VBGQRJRCYI2XOWRYYM/",
+        "https://oversightsolutions.co.nz/profile/TIMESCAPES-LIMITED"
+      ]
+    },
+    {
+      "type": "resolved_investor_relation",
+      "deal_number": 206,
+      "investor_key": "investor:bhatnagar-family",
+      "evidence_urls": [
+        "https://www.nzherald.co.nz/business/timelapse-meets-ai-as-timescapes-rakes-in-series-a-millions/TJNV2KA4VBGQRJRCYI2XOWRYYM/",
+        "https://oversightsolutions.co.nz/profile/TIMESCAPES-LIMITED"
+      ]
+    },
+    {
+      "type": "resolved_investor_relation",
+      "deal_number": 206,
+      "investor_key": "investor:bruce-patrick-gordon",
+      "evidence_urls": [
+        "https://www.nzherald.co.nz/business/timelapse-meets-ai-as-timescapes-rakes-in-series-a-millions/TJNV2KA4VBGQRJRCYI2XOWRYYM/",
+        "https://www.companyhub.nz/companyDetails.cfm?nzbn=9429042441342"
+      ]
+    }
+  ],
+  "remaining_limits": {
+    "investee_websites_missing": 1,
+    "investor_websites_missing": 7,
+    "round_exact_dates_missing": 14,
+    "round_structured_amounts_missing": 18,
+    "unresolved_mentions": 19
+  }
+}

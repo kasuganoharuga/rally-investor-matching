@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-412",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-412",
+    "dedupe_key": "2024|ampro-innovations|2024-database-record-only|series_b",
+    "source_url": "https://www.amproinnovations.com/",
+    "source_payload": {
+      "deal_number": 412,
+      "csv_investee": "AmPro Innovations",
+      "normalized_investee": "AmPro Innovations",
+      "csv_date": "2024-07-18",
+      "normalized_date": "2024 database record only",
+      "csv_round": "Series B",
+      "normalized_round": "Unverified Series B",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "China National Building Materials United Investment",
+      "normalized_investors": "CNBM United Investment (unverified event attribution)",
+      "verification": "needs_review",
+      "correction_or_issue": "Company identity is valid, but no reliable public source was found for the 2024 round, date or investor participation.",
+      "primary_source": "https://www.amproinnovations.com/",
+      "secondary_source": null
+    },
+    "investee_name_raw": "AmPro Innovations",
+    "org_location_raw": "Notting Hill, VIC, Australia",
+    "org_website_raw": "https://www.amproinnovations.com/",
+    "org_industries_raw": "Industrial Tech / Advanced Materials",
+    "round_type_raw": "Unverified Series B",
+    "round_stage": "series_b",
+    "funding_stage_raw": "Series B",
+    "announced_date": null,
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "CNBM United Investment (unverified event attribution)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://www.amproinnovations.com/",
+    "verification_notes": "Company identity is valid, but no reliable public source was found for the 2024 round, date or investor participation.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "no_verified_2024_financing",
+    "amount_structuring_note": "Registry and company-database checks confirm the company; the database reports no known external funding and does not corroborate the claimed 2024 Series B.",
+    "date_precision": "unknown",
+    "supplemental_verification_urls": [
+      "https://spacetech.dealroom.co/companies/ampro_innovations",
+      "https://abr.business.gov.au/ABN/View/69618243548"
+    ]
+  },
+  "refs": {
+    "investee_company_key": "company:research:ampro-innovations"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:71ddcc4e37739e0914b3"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Company identity is valid, but no reliable public source was found for the 2024 round, date or investor participation.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

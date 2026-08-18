@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-148",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-148",
+    "dedupe_key": "2024|prismastake|2024-04-02|seed",
+    "source_url": "https://www.globenewswire.com/news-release/2024/04/02/2856517/0/en/PrismaStake-s-6-Million-Funding-Accelerates-DeFi-Staking-Innovation.html",
+    "source_payload": {
+      "deal_number": 148,
+      "csv_investee": "PrismaStake",
+      "normalized_investee": "PrismaStake",
+      "csv_date": "2024-04-01",
+      "normalized_date": "2024-04-02 release",
+      "csv_round": "Seed",
+      "normalized_round": "Unverified seed",
+      "csv_amount": "USD 6,000,000",
+      "normalized_amount": "USD 6,000,000 claimed; release also inconsistently states USD 8,000,000",
+      "csv_investors": "Binance; Bixin Ventures; DFG; Jsquare; LD Capital; Mapleblock Capital; Mirana; Shima Capital; Spartan; ViaBTC Capital",
+      "normalized_investors": "No investor independently confirmed",
+      "verification": "needs_review",
+      "correction_or_issue": "Self-issued release contradicts itself on amount and names no investors; the CSV investor list is not corroborated sufficiently for creation.",
+      "primary_source": "https://www.globenewswire.com/news-release/2024/04/02/2856517/0/en/PrismaStake-s-6-Million-Funding-Accelerates-DeFi-Staking-Innovation.html",
+      "secondary_source": "https://2024.australianstartupfunding.com/State-of-Australian-Startup-Funding-2024-Final-.pdf"
+    },
+    "investee_name_raw": "PrismaStake",
+    "org_location_raw": "Melbourne, VIC, Australia (claimed)",
+    "org_website_raw": "https://prismastake.finance/",
+    "org_industries_raw": "Web3 / DeFi",
+    "round_type_raw": "Unverified seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-04-02",
+    "money_raised_raw": "USD 6,000,000 claimed; release also inconsistently states USD 8,000,000",
+    "amount": 6000000,
+    "currency": "USD",
+    "amount_usd": 6000000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "No investor independently confirmed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://www.globenewswire.com/news-release/2024/04/02/2856517/0/en/PrismaStake-s-6-Million-Funding-Accelerates-DeFi-Staking-Innovation.html",
+    "verification_notes": "Self-issued release contradicts itself on amount and names no investors; the CSV investor list is not corroborated sufficiently for creation.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:prismastake"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:bfaada8669c9d7b22dfd",
+      "source:url:ad56dedcb7bc5f59b87b"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Self-issued release contradicts itself on amount and names no investors; the CSV investor list is not corroborated sufficiently for creation."
+    ]
+  }
+}

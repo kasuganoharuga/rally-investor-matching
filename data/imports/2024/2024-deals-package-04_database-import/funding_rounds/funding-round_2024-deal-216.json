@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-216",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-216",
+    "dedupe_key": "2024|ftn-motion|2024-05-27|seed",
+    "source_url": "https://business.scoop.co.nz/2024/05/27/tech-heavy-hitters-join-ftn-motion/",
+    "source_payload": {
+      "deal_number": 216,
+      "csv_investee": "FTN Motion",
+      "normalized_investee": "FTN Motion",
+      "csv_date": "2024-05-28",
+      "normalized_date": "2024-05-27 announcement",
+      "csv_round": "Seed",
+      "normalized_round": "Seed / expansion capital",
+      "csv_amount": "NZD 2,600,000",
+      "normalized_amount": "NZD 2,600,000",
+      "csv_investors": "Roland Krueger",
+      "normalized_investors": "Roland Krueger; other investors undisclosed",
+      "verification": "verified",
+      "correction_or_issue": "Company-issued reporting confirms the NZ$2.6m raise and identifies former Dyson CEO Roland Krueger as a new shareholder and adviser.",
+      "primary_source": "https://business.scoop.co.nz/2024/05/27/tech-heavy-hitters-join-ftn-motion/",
+      "secondary_source": "https://app.dealroom.co/companies/ftn_motion"
+    },
+    "investee_name_raw": "FTN Motion",
+    "org_location_raw": "Hamilton, New Zealand",
+    "org_website_raw": "https://www.ftnmotion.com/",
+    "org_industries_raw": "Electric Mobility / Manufacturing",
+    "round_type_raw": "Seed / expansion capital",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-05-27",
+    "money_raised_raw": "NZD 2,600,000",
+    "amount": 2600000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Roland Krueger; other investors undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://business.scoop.co.nz/2024/05/27/tech-heavy-hitters-join-ftn-motion/",
+    "verification_notes": "Company-issued reporting confirms the NZ$2.6m raise and identifies former Dyson CEO Roland Krueger as a new shareholder and adviser.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:ftn-motion"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:36bd5656a4be304f1915",
+      "source:url:1952711b50479bd1256e"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-432",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-432",
+    "dedupe_key": "2024|nutrition-from-water-newfish|2024-database-portfolio-relationship|seed",
+    "source_url": "https://sosv.com/company/nutrition-from-water/",
+    "source_payload": {
+      "deal_number": 432,
+      "csv_investee": "Nutrition from Water",
+      "normalized_investee": "Nutrition from Water / NewFish",
+      "csv_date": "2024-04-24",
+      "normalized_date": "2024 database / portfolio relationship",
+      "csv_round": "Seed",
+      "normalized_round": "Seed / IndieBio program-linked",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Outset Ventures; SOSV; IndieBio",
+      "normalized_investors": "SOSV / IndieBio; Outset Ventures",
+      "verification": "partial",
+      "correction_or_issue": "SOSV officially lists the company and program; amount and exact close terms are not public.",
+      "primary_source": "https://sosv.com/company/nutrition-from-water/",
+      "secondary_source": "https://www.nutritionfromwater.com/"
+    },
+    "investee_name_raw": "Nutrition from Water / NewFish",
+    "org_location_raw": "Auckland-founded / global",
+    "org_website_raw": "https://www.nutritionfromwater.com/",
+    "org_industries_raw": "Food Tech / Industrial Biotech",
+    "round_type_raw": "Seed / IndieBio program-linked",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": null,
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "SOSV / IndieBio; Outset Ventures",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-08_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://sosv.com/company/nutrition-from-water/",
+    "verification_notes": "SOSV officially lists the company and program; amount and exact close terms are not public.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:nutrition-from-water"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": [
+      "source:url:1785b6f4750d6189a890",
+      "source:url:777ebb22f5a22970523e"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "SOSV officially lists the company and program; amount and exact close terms are not public.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

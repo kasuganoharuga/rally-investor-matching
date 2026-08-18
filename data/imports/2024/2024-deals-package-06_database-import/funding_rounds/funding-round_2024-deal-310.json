@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-310",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-310",
+    "dedupe_key": "2024|investorhub|2024-07-29|series_a",
+    "source_url": "https://www.startupdaily.net/topic/funding/retail-shareholder-communications-platform-investorhub-tops-up-long-running-series-a-with-another-4-million/",
+    "source_payload": {
+      "deal_number": 310,
+      "csv_investee": "InvestorHub",
+      "normalized_investee": "InvestorHub",
+      "csv_date": "2024-07-29",
+      "normalized_date": "2024-07-29",
+      "csv_round": "Series A",
+      "normalized_round": "Series A extension",
+      "csv_amount": "USD 5,000,000",
+      "normalized_amount": "AUD 4,000,000 extension; up to AUD 9,000,000 total Series A",
+      "csv_investors": "Archangel Ventures; EVP; Flying Fox Ventures",
+      "normalized_investors": "EVP (lead); Archangel Ventures; Flying Fox Ventures",
+      "verification": "corrected",
+      "correction_or_issue": "The 2024 event was a A$4m extension led by EVP, bringing the long-running Series A to up to A$9m. The CSV's US$5m amount conflates the earlier raise/authorization.",
+      "primary_source": "https://www.startupdaily.net/topic/funding/retail-shareholder-communications-platform-investorhub-tops-up-long-running-series-a-with-another-4-million/",
+      "secondary_source": "https://assets.launchvic.org/app/uploads/2024/10/28154732/LV06-Annual-Report-2023-2024-V6.pdf"
+    },
+    "investee_name_raw": "InvestorHub",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.investorhub.com/",
+    "org_industries_raw": "Fintech / Investor Relations",
+    "round_type_raw": "Series A extension",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-07-29",
+    "money_raised_raw": "AUD 4,000,000 extension; up to AUD 9,000,000 total Series A",
+    "amount": 4000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "EVP (lead); Archangel Ventures; Flying Fox Ventures",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.startupdaily.net/topic/funding/retail-shareholder-communications-platform-investorhub-tops-up-long-running-series-a-with-another-4-million/",
+    "verification_notes": "The 2024 event was a A$4m extension led by EVP, bringing the long-running Series A to up to A$9m. The CSV's US$5m amount conflates the earlier raise/authorization.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:investorhub"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:a0ff551bbf70d36635b0",
+      "source:url:5d13786cd7f688618f86"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

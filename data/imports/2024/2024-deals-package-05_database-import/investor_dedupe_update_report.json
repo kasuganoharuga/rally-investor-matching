@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-05_database-import",
+  "updated_at": "2026-08-14T00:00:00+09:30",
+  "status": "completed",
+  "identity_summary": {
+    "upserts": 36,
+    "existing_investor_updates": 10,
+    "net_new_investors": 26,
+    "confirmed_aliases_canonicalized": 0
+  },
+  "matches": [
+    {
+      "package": 5,
+      "source_key": "investor:callaghan-innovation",
+      "canonical_key": "investor:callaghan-innovation",
+      "source_name": "Callaghan Innovation",
+      "canonical_name": "Callaghan Innovation",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 5,
+      "source_key": "investor:clinton-capital-partners",
+      "canonical_key": "investor:clinton-capital-partners",
+      "source_name": "Clinton Capital Partners",
+      "canonical_name": "Clinton Capital Partners",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 5,
+      "source_key": "investor:cultivate-ventures",
+      "canonical_key": "investor:cultivate-ventures",
+      "source_name": "Cultivate Ventures",
+      "canonical_name": "Cultivate Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 5,
+      "source_key": "investor:dwf-labs",
+      "canonical_key": "investor:dwf-labs",
+      "source_name": "DWF Labs",
+      "canonical_name": "DWF Labs",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-181-230_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 5,
+      "source_key": "investor:european-metal-recycling",
+      "canonical_key": "investor:european-metal-recycling",
+      "source_name": "European Metal Recycling",
+      "canonical_name": "European Metal Recycling",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 5,
+      "source_key": "investor:mig-angels",
+      "canonical_key": "investor:mig-angels",
+      "source_name": "MIG Angels",
+      "canonical_name": "MIG Angels",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-181-230_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 5,
+      "source_key": "investor:motion-capital",
+      "canonical_key": "investor:motion-capital",
+      "source_name": "Motion Capital",
+      "canonical_name": "Motion Capital",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 5,
+      "source_key": "investor:paul-greenberg",
+      "canonical_key": "investor:paul-greenberg",
+      "source_name": "Paul Greenberg",
+      "canonical_name": "Paul Greenberg",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 5,
+      "source_key": "investor:sam-nickless",
+      "canonical_key": "investor:sam-nickless",
+      "source_name": "Sam Nickless",
+      "canonical_name": "Sam Nickless",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-121-180_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 5,
+      "source_key": "investor:utiliti-group",
+      "canonical_key": "investor:utiliti-group",
+      "source_name": "Utiliti Group",
+      "canonical_name": "Utiliti Group",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-121-180_delta_identity-audited-v3_team-audited"
+    }
+  ],
+  "accelerator_programs": [
+    {
+      "investor_key": "investor:creative-destruction-lab",
+      "package": 5,
+      "program_key": "program:creative-destruction-lab:primary",
+      "reused_prior_program": false
+    },
+    {
+      "investor_key": "investor:prtnr",
+      "package": 5,
+      "program_key": "program:prtnr:primary",
+      "reused_prior_program": false
+    },
+    {
+      "investor_key": "investor:remarkable-cerebral-palsy-alliance-accelerator",
+      "package": 5,
+      "program_key": "program:remarkable-cerebral-palsy-alliance-accelerator:primary",
+      "reused_prior_program": false
+    }
+  ],
+  "manual_review_candidates": [],
+  "reviewed_distinct_candidates": [
+    {
+      "package": 5,
+      "source_key": "investor:blackstone-tactical-opportunities",
+      "source_name": "Blackstone Tactical Opportunities",
+      "candidate_key": "investor:blackstone-group",
+      "candidate_name": "Blackstone Group",
+      "signal": "same_website_domain",
+      "disposition": "reviewed_distinct_no_merge",
+      "relationship_type": "investment_strategy_within_parent_group"
+    },
+    {
+      "package": 5,
+      "source_key": "investor:enterprise-angels-ea-fund-4",
+      "source_name": "Enterprise Angels / EA Fund 4",
+      "candidate_key": "investor:enterprise-angels",
+      "candidate_name": "Enterprise Angels",
+      "signal": "same_website_domain",
+      "disposition": "reviewed_distinct_no_merge",
+      "relationship_type": "fund_vehicle_managed_by_operator"
+    }
+  ]
+}

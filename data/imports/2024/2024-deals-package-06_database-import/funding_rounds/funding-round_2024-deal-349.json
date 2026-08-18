@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-349",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-349",
+    "dedupe_key": "2024|visibuild|2024-12-03|seed",
+    "source_url": "https://www.businessnewsaustralia.com/articles/construction-tech-visibuild-raises--6-6m-in-debut-capital-raise-backed-by-skip-capital.html",
+    "source_payload": {
+      "deal_number": 349,
+      "csv_investee": "Visibuild",
+      "normalized_investee": "Visibuild",
+      "csv_date": "2024-12-03",
+      "normalized_date": "2024-12-03",
+      "csv_round": "Seed",
+      "normalized_round": "Seed / debut capital raise",
+      "csv_amount": "AUD 6,600,000",
+      "normalized_amount": "AUD 6,600,000",
+      "csv_investors": "Skip Capital",
+      "normalized_investors": "Skip Capital (lead)",
+      "verification": "verified",
+      "correction_or_issue": "Contemporaneous reporting confirms the debut A$6.6m seed round led by Skip Capital.",
+      "primary_source": "https://www.businessnewsaustralia.com/articles/construction-tech-visibuild-raises--6-6m-in-debut-capital-raise-backed-by-skip-capital.html",
+      "secondary_source": "https://visibuild.com.au/"
+    },
+    "investee_name_raw": "Visibuild",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://visibuild.com.au/",
+    "org_industries_raw": "Contech / Project Software",
+    "round_type_raw": "Seed / debut capital raise",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-12-03",
+    "money_raised_raw": "AUD 6,600,000",
+    "amount": 6600000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Skip Capital (lead)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.businessnewsaustralia.com/articles/construction-tech-visibuild-raises--6-6m-in-debut-capital-raise-backed-by-skip-capital.html",
+    "verification_notes": "Contemporaneous reporting confirms the debut A$6.6m seed round led by Skip Capital.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:visibuild"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:658b73dc9f865d3553e2",
+      "source:url:fda357e6e1ce30873bb9"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

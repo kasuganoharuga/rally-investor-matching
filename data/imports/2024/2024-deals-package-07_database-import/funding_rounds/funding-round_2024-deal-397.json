@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-397",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-397",
+    "dedupe_key": "2024|our-leg-up|2024-startupbootcamp-cohort|program_or_grant",
+    "source_url": "https://www.startupbootcamp.com.au/selection-days/ft24/startups/ourlegup",
+    "source_payload": {
+      "deal_number": 397,
+      "csv_investee": "Our Leg Up",
+      "normalized_investee": "Our Leg Up",
+      "csv_date": "2024-10-16",
+      "normalized_date": "2024 Startupbootcamp cohort",
+      "csv_round": "Seed",
+      "normalized_round": "Accelerator participation",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Startupbootcamp Australia",
+      "normalized_investors": "Startupbootcamp Australia (program only)",
+      "verification": "verified_program",
+      "correction_or_issue": "Official Startupbootcamp material confirms the cohort relationship, but no company-specific financing amount or equity terms were found.",
+      "primary_source": "https://www.startupbootcamp.com.au/selection-days/ft24/startups/ourlegup",
+      "secondary_source": "https://www.startupbootcamp.com.au/blog"
+    },
+    "investee_name_raw": "Our Leg Up",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.ourlegup.com/",
+    "org_industries_raw": "Fintech / Proptech / Lending Infrastructure",
+    "round_type_raw": "Accelerator participation",
+    "round_stage": "program_or_grant",
+    "funding_stage_raw": "Seed",
+    "announced_date": null,
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Startupbootcamp Australia (program only)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "verified_program",
+    "verification_source_url": "https://www.startupbootcamp.com.au/selection-days/ft24/startups/ourlegup",
+    "verification_notes": "Official Startupbootcamp material confirms the cohort relationship, but no company-specific financing amount or equity terms were found.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:our-leg-up"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:e55523db252bce27f3fb",
+      "source:url:5b5aa9da6882ea737300"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:marama-labs",
+  "operation": "upsert",
+  "data": {
+    "name": "Marama Labs",
+    "website_url": "https://maramalabs.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "NZ",
+    "hq_state": null,
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "scientific-instruments-deeptech",
+    "sector_secondary": null,
+    "use_case_primary": "cloudspec-spectroscopy-instruments-for-analysing-highly-scattering-liquid-samples",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-hardware-software",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "CloudSpec spectroscopy instruments for analysing highly scattering liquid samples.",
+    "source_urls": [
+      "https://maramalabs.com/",
+      "https://www.enterprise-ireland.com/en/news/irish-life-sciences-start-up-marama-labs-secures-280-000-in-funding-from-enterprise-ireland-to-support-expansion",
+      "https://www.owler.com/company/maramalabs/funding",
+      "https://www.maramalabs.com/news/wellington-deep-tech-startup-marama-labs-raises-funds-for-growth",
+      "https://theyieldlab.eu/portfolio-items/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

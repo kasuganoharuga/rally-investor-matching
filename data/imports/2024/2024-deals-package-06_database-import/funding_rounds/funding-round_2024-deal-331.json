@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-331",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-331",
+    "dedupe_key": "2024|kara-technologies-limited|2024-11-bridge-pre-series-a-reporting|series_a",
+    "source_url": "https://www.cie.auckland.ac.nz/newsroom/impact-investment-organisation-soul-capital-aims-to-make-our-economy-more-inclusive/",
+    "source_payload": {
+      "deal_number": 331,
+      "csv_investee": "Kara Technologies",
+      "normalized_investee": "Kara Technologies Limited",
+      "csv_date": "2024-09-03",
+      "normalized_date": "2024-11 bridge / pre-Series A reporting",
+      "csv_round": "Seed",
+      "normalized_round": "Pre-Series A / bridge",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "NZD 4,000,000",
+      "csv_investors": "Enterprise Angels; NZVC; Soul Capital",
+      "normalized_investors": "Soul Capital (lead); other participants not fully disclosed",
+      "verification": "corrected",
+      "correction_or_issue": "University ecosystem reporting says Kara recently raised NZ$4m in a Soul Capital-led pre-Series A; Soul records a November 2024 bridge. The CSV date/stage and full syndicate are not fully supported.",
+      "primary_source": "https://www.cie.auckland.ac.nz/newsroom/impact-investment-organisation-soul-capital-aims-to-make-our-economy-more-inclusive/",
+      "secondary_source": "https://www.soul.capital/portfolio/kara"
+    },
+    "investee_name_raw": "Kara Technologies Limited",
+    "org_location_raw": "Auckland, New Zealand",
+    "org_website_raw": "https://kara.tech/",
+    "org_industries_raw": "Accessibility Tech / AI",
+    "round_type_raw": "Pre-Series A / bridge",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Seed",
+    "announced_date": null,
+    "money_raised_raw": "NZD 4,000,000",
+    "amount": 4000000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Soul Capital (lead); other participants not fully disclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.cie.auckland.ac.nz/newsroom/impact-investment-organisation-soul-capital-aims-to-make-our-economy-more-inclusive/",
+    "verification_notes": "University ecosystem reporting says Kara recently raised NZ$4m in a Soul Capital-led pre-Series A; Soul records a November 2024 bridge. The CSV date/stage and full syndicate are not fully supported.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:kara-technologies"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:bb3cc4da13ebf5a5a610",
+      "source:url:bb90496566f5997926e4"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

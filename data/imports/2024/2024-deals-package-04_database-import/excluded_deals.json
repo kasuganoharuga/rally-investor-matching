@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-04_database-import",
+  "policy": "Duplicate, outside-window, out-of-scope, and explicitly rejected financing rows do not create funding-round upserts, but remain fully auditable here.",
+  "counts": {
+    "source_deals": 60,
+    "imported": 49,
+    "excluded": 11
+  },
+  "excluded_deals": [
+    {
+      "deal_number": 182,
+      "investee": "Forever Network / Basketball Forever",
+      "verification": "duplicate_confirmed",
+      "reason": "Same financing as Deal 149 (Forever Network), not a second round. Current sources provide the US$4m first-close date and expanded investor list.",
+      "source_excel_row": 3,
+      "primary_source": "https://www.sportsbusinessjournal.com/Articles/2024/03/20/basketball-forever-startup-raises-series-a-funding-round/",
+      "secondary_source": "https://www.linkedin.com/posts/folklorevc_basketball-forever-raises-4m-in-series-a-activity-7178931469921243136-ZcdL"
+    },
+    {
+      "deal_number": 186,
+      "investee": "ivygo",
+      "verification": "rejected_financing",
+      "reason": "Founder Institute officially identifies ivygo as a portfolio graduate, but neither source establishes that FI invested capital.",
+      "source_excel_row": 7,
+      "primary_source": "https://fi.co/insight/founder-institute-australia-produces-9-new-technology-companies",
+      "secondary_source": "https://ivygo.com.au/?p=1671"
+    },
+    {
+      "deal_number": 187,
+      "investee": "Fluenccy",
+      "verification": "rejected_2024_financing",
+      "reason": "Company's own release dates the A$1.1m pre-seed and planned seed roadshow to 2022; the CSV appears to re-date historical funding.",
+      "source_excel_row": 8,
+      "primary_source": "https://www.fluenccy.com/blog/seed-press-release",
+      "secondary_source": "https://www.fluenccy.com/"
+    },
+    {
+      "deal_number": 189,
+      "investee": "Overlay AI",
+      "verification": "rejected_2024_financing",
+      "reason": "The only verified 2024 funding is a Defence skills grant beginning June 2024; January 1 is a placeholder and no seed investor was found.",
+      "source_excel_row": 10,
+      "primary_source": "https://www.defence.gov.au/sites/default/files/2025-02/Entity_contracts_reporting_-_calendar_year_2024.pdf.pdf",
+      "secondary_source": "https://www.overlay.ai/"
+    },
+    {
+      "deal_number": 192,
+      "investee": "PlatformPi",
+      "verification": "rejected_2024_financing",
+      "reason": "UniServices is a valid university investment platform, but no dated 2024 PlatformPi financing or genuine January 1 close was located.",
+      "source_excel_row": 13,
+      "primary_source": "https://www.uniservices.co.nz/what-we-do/investing-and-partnering",
+      "secondary_source": "https://www.platformpi.com/"
+    },
+    {
+      "deal_number": 197,
+      "investee": "Quillette",
+      "verification": "rejected_2024_financing",
+      "reason": "Funding databases conflict on date and investor identities, and no contemporaneous 2024 announcement was found; do not create this event or its investor links.",
+      "source_excel_row": 18,
+      "primary_source": "https://startupintros.com/orgs/quillette",
+      "secondary_source": "https://quillette.com/"
+    },
+    {
+      "deal_number": 202,
+      "investee": "Truyu",
+      "verification": "rejected_financing",
+      "reason": "Truyu states it was created by x15ventures and is backed by Commonwealth Bank; this is an internal corporate venture relationship, not evidence of a separate equity round.",
+      "source_excel_row": 23,
+      "primary_source": "https://www.truyu.com.au/about",
+      "secondary_source": "https://x15ventures.com.au/"
+    },
+    {
+      "deal_number": 204,
+      "investee": "Sanux",
+      "verification": "rejected_financing",
+      "reason": "The dated Founder Institute portfolio announcement supports accelerator participation, but no seed investment or capital amount was disclosed.",
+      "source_excel_row": 25,
+      "primary_source": "https://fi.co/insight/founder-institute-australia-produces-9-new-technology-companies",
+      "secondary_source": "https://www.sanux.io/"
+    },
+    {
+      "deal_number": 220,
+      "investee": "Powerflow Marine",
+      "verification": "rejected_2024_financing",
+      "reason": "The company identity is valid, but the CSV provides a placeholder date and valuation without a financing amount or investor; no 2024 round was corroborated.",
+      "source_excel_row": 41,
+      "primary_source": "https://www.crunchbase.com/funding_round/powerflow-marine-pre-seed--dacb809f",
+      "secondary_source": "https://powerflowmarine.com/"
+    },
+    {
+      "deal_number": 221,
+      "investee": "Tutero",
+      "verification": "rejected_2024_financing",
+      "reason": "Aura's dated investment note places this syndicate in February 2023. The CSV A$5.1m 2024 event was not corroborated and should not be ingested as a 2024 deal.",
+      "source_excel_row": 42,
+      "primary_source": "https://www.aura.co/news-and-insights/aura-ventures-invests-in-tutero?hs_amp=true",
+      "secondary_source": "https://app.dealroom.co/companies/tutero"
+    },
+    {
+      "deal_number": 232,
+      "investee": "Voltara",
+      "verification": "rejected_2024_financing",
+      "reason": "The CSV supplies an A$90m pre-money valuation without amount or investor. No financing announcement was located; similarly named Voltera/Volteras companies are unrelated.",
+      "source_excel_row": 53,
+      "primary_source": "https://www.crunchbase.com/funding_round/voltara-pre-seed--4233944a",
+      "secondary_source": "https://www.voltara.com.au/"
+    }
+  ]
+}

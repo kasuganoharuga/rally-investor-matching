@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:iion",
+  "operation": "upsert",
+  "data": {
+    "name": "iion",
+    "website_url": "https://www.iion.io/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "adtech-gaming",
+    "sector_secondary": null,
+    "use_case_primary": "advertising-infrastructure-that-lets-brands-and-agencies-plan-buy-and-optimise-campaigns-across-gaming-environments",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-saas-advertising-platform",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Advertising infrastructure that lets brands and agencies plan, buy and optimise campaigns across gaming environments.",
+    "source_urls": [
+      "https://www.iion.io/",
+      "https://www.ten13.vc/post/our-investment-in-iion",
+      "https://pixcapital.vc/news/pixcapital-spurs-innovation-with-iion-investment/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

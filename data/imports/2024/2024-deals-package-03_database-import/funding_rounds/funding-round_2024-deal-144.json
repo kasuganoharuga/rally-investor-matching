@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-144",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-144",
+    "dedupe_key": "2024|bloxx|2024-portfolio-relationship-exact-close-date-undisclosed|unknown",
+    "source_url": "https://www.nzfintech.vc/portfolio",
+    "source_payload": {
+      "deal_number": 144,
+      "csv_investee": "BLOXX",
+      "normalized_investee": "BLOXX",
+      "csv_date": "2024-11-01",
+      "normalized_date": "2024 portfolio relationship; exact close date undisclosed",
+      "csv_round": "Seed",
+      "normalized_round": "Early-stage investment",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "NZ Fintech Fund",
+      "normalized_investors": "New Zealand Fintech Fund",
+      "verification": "partial",
+      "correction_or_issue": "NZ Fintech Fund officially lists BLOXX in its portfolio and November reporting links the two; no amount or exact close date is public.",
+      "primary_source": "https://www.nzfintech.vc/portfolio",
+      "secondary_source": "https://m2now.com/backers-of-bold-the-money-fuelling-nz-fintech/"
+    },
+    "investee_name_raw": "BLOXX",
+    "org_location_raw": "Auckland, New Zealand",
+    "org_website_raw": "https://www.bloxx.co.nz/",
+    "org_industries_raw": "Fintech / Proptech",
+    "round_type_raw": "Early-stage investment",
+    "round_stage": "unknown",
+    "funding_stage_raw": "Seed",
+    "announced_date": null,
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "New Zealand Fintech Fund",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://www.nzfintech.vc/portfolio",
+    "verification_notes": "NZ Fintech Fund officially lists BLOXX in its portfolio and November reporting links the two; no amount or exact close date is public.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:bloxx"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:9d98e95d52c66b79aec1",
+      "source:url:a99564196c069253cbd0"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "NZ Fintech Fund officially lists BLOXX in its portfolio and November reporting links the two; no amount or exact close date is public.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

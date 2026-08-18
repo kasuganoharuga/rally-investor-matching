@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-07_database-import",
+  "policy": "Duplicate, outside-window, out-of-scope, and explicitly rejected financing rows do not create funding-round upserts, but remain fully auditable here.",
+  "counts": {
+    "source_deals": 60,
+    "imported": 57,
+    "excluded": 3
+  },
+  "excluded_deals": [
+    {
+      "deal_number": 365,
+      "investee": "Tenmile",
+      "verification": "out_of_scope_misclassified",
+      "reason": "Tenmile is itself a health-technology investment business associated with Tattarang. The CSV record does not establish a 2024 startup financing by Artesian.",
+      "source_excel_row": 6,
+      "primary_source": "https://www.tenmile.com/",
+      "secondary_source": "https://www.tattarang.com/"
+    },
+    {
+      "deal_number": 383,
+      "investee": "Invest Inya Farmer (IIF)",
+      "verification": "duplicate_corrected",
+      "reason": "This is a duplicate of Deal 102. Stronger evidence supports an A$1.8m Series A on 8 May; Value Create is a broader portfolio attribution, not proven in this close.",
+      "source_excel_row": 24,
+      "primary_source": "https://www.cbinsights.com/company/invest-inya-farmer/financials",
+      "secondary_source": "https://agfunder.com/portfolio/invest-inya-farmer/"
+    },
+    {
+      "deal_number": 389,
+      "investee": "VXT",
+      "verification": "duplicate_rejected",
+      "reason": "VXT's verified 2024 financing is the NZ$1.8m pre-Series A already captured as Deal 377. No evidence supports a separate NZ$1.3m Alpine round.",
+      "source_excel_row": 30,
+      "primary_source": "https://www.gd1.vc/portfolio/vxt",
+      "secondary_source": "https://itbrief.co.nz/story/vxt-s-new-ai-platform-revolutionises-communication-for-law-firms"
+    }
+  ]
+}

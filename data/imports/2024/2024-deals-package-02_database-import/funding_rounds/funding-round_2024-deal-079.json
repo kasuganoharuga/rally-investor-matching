@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-079",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-079",
+    "dedupe_key": "2024|spacedraft|2024-11-exact-date-unverified|seed",
+    "source_url": "https://spacedraft.com/",
+    "source_payload": {
+      "deal_number": 79,
+      "csv_investee": "SpaceDraft",
+      "normalized_investee": "SpaceDraft",
+      "csv_date": "2024-11-24",
+      "normalized_date": "2024-11 (exact date unverified)",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Fund WA",
+      "normalized_investors": "Fund WA (identity unresolved)",
+      "verification": "needs_review",
+      "correction_or_issue": "Company and database event are plausible; no authoritative announcement or exact Fund WA entity was found.",
+      "primary_source": "https://spacedraft.com/",
+      "secondary_source": "https://sales.superagi.com/company/spacedraft"
+    },
+    "investee_name_raw": "SpaceDraft",
+    "org_location_raw": "Perth, WA, Australia",
+    "org_website_raw": "https://spacedraft.com/",
+    "org_industries_raw": "Enterprise Software / Planning",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": null,
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Fund WA (identity unresolved)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://spacedraft.com/",
+    "verification_notes": "Company and database event are plausible; no authoritative announcement or exact Fund WA entity was found.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:spacedraft"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:1723c4c74fc83ac32790",
+      "source:url:93dd5d86cba58e9bb64b"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Company and database event are plausible; no authoritative announcement or exact Fund WA entity was found.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

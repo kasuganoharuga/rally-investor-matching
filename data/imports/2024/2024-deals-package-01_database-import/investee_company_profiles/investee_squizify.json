@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:squizify",
+  "operation": "upsert",
+  "data": {
+    "name": "Squizify",
+    "website_url": "https://squizify.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Queensland",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "foodtech-compliance-iot",
+    "sector_secondary": null,
+    "use_case_primary": "integrated-food-safety-compliance-software-sensors-and-operational-tooling",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-saas-plus-hardware",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Integrated food-safety compliance software, sensors and operational tooling.",
+    "source_urls": [
+      "https://squizify.com/",
+      "https://note.com/corelinevc_japan/n/n7934aacbd039",
+      "https://www.overnightsuccess.vc/p/13th-december-2025"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-049",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-049",
+    "dedupe_key": "2024|relectrify|2024-05-29|series_b",
+    "source_url": "https://www.cefc.com.au/media/media-release/relectrify-builds-on-lead-in-battery-cell-level-control/",
+    "source_payload": {
+      "deal_number": 49,
+      "csv_investee": "Relectrify",
+      "normalized_investee": "Relectrify",
+      "csv_date": "2024-05-29",
+      "normalized_date": "2024-05-29",
+      "csv_round": "Series B",
+      "normalized_round": "Growth funding / Series B",
+      "csv_amount": "USD 17,000,000",
+      "normalized_amount": "AUD 17,000,000",
+      "csv_investors": "At One; CEFC; Creative; Energy Innovation; GS Futures; John Clifford; NOAB; Toyota; Virescent",
+      "normalized_investors": "At One Ventures (lead); CEFC managed by Virescent; Toyota Ventures; Energy Innovation Capital; GS Futures; Creative Ventures; NOAB Ventures; John Clifford",
+      "verification": "corrected",
+      "correction_or_issue": "Official CEFC release confirms A$17m, not US$17m.",
+      "primary_source": "https://www.cefc.com.au/media/media-release/relectrify-builds-on-lead-in-battery-cell-level-control/",
+      "secondary_source": "https://relectrify.com/"
+    },
+    "investee_name_raw": "Relectrify",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://relectrify.com/",
+    "org_industries_raw": "Climate / Battery Technology",
+    "round_type_raw": "Growth funding / Series B",
+    "round_stage": "series_b",
+    "funding_stage_raw": "Series B",
+    "announced_date": "2024-05-29",
+    "money_raised_raw": "AUD 17,000,000",
+    "amount": 17000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "At One Ventures (lead); CEFC managed by Virescent; Toyota Ventures; Energy Innovation Capital; GS Futures; Creative Ventures; NOAB Ventures; John Clifford",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.cefc.com.au/media/media-release/relectrify-builds-on-lead-in-battery-cell-level-control/",
+    "verification_notes": "Official CEFC release confirms A$17m, not US$17m.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:relectrify"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:e4ec12f40446de2ff276",
+      "source:url:070317e5ae18234f57ff"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

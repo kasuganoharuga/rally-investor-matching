@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-439",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-439",
+    "dedupe_key": "2024|mighty-partners-formerly-fundabl|2024-07-24|unknown",
+    "source_url": "https://www.mightypartners.com.au/blog/fundabl-completes-3-2-million-equity-raise",
+    "source_payload": {
+      "deal_number": 439,
+      "csv_investee": "Mighty Partners",
+      "normalized_investee": "Mighty Partners (formerly Fundabl)",
+      "csv_date": "2024-07-24",
+      "normalized_date": "2024-07-24",
+      "csv_round": "Seed",
+      "normalized_round": "Equity raise",
+      "csv_amount": "USD 3,200,000",
+      "normalized_amount": "AUD 3,200,000",
+      "csv_investors": "Matthew Leibowitz",
+      "normalized_investors": "Matt Leibowitz; other investors undisclosed",
+      "verification": "corrected",
+      "correction_or_issue": "Official company announcement confirms A$3.2m equity; reporting names existing investor Matt Leibowitz among participants.",
+      "primary_source": "https://www.mightypartners.com.au/blog/fundabl-completes-3-2-million-equity-raise",
+      "secondary_source": "https://www.startupdaily.net/topic/business/startup-lender-fundabl-rebrands-as-mighty-partners/"
+    },
+    "investee_name_raw": "Mighty Partners (formerly Fundabl)",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.mightypartners.com.au/",
+    "org_industries_raw": "Fintech / Private Credit",
+    "round_type_raw": "Equity raise",
+    "round_stage": "unknown",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-07-24",
+    "money_raised_raw": "AUD 3,200,000",
+    "amount": 3200000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Matt Leibowitz; other investors undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-08_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.mightypartners.com.au/blog/fundabl-completes-3-2-million-equity-raise",
+    "verification_notes": "Official company announcement confirms A$3.2m equity; reporting names existing investor Matt Leibowitz among participants.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:mighty-partners"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": [
+      "source:url:b447a976cf2065e1ea8e",
+      "source:url:32106c991203e7a39e06"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:buddy",
+  "operation": "upsert",
+  "data": {
+    "name": "Buddy",
+    "website_url": "https://www.tradebuddy.io/",
+    "crunchbase_uuid": null,
+    "hq_country": "NZ",
+    "hq_state": null,
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "circular-economy-marketplace",
+    "sector_secondary": null,
+    "use_case_primary": "digital-b2b-marketplace-modernising-scrap-metal-procurement-negotiation-logistics-and-administration",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-marketplace",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Digital B2B marketplace modernising scrap-metal procurement, negotiation, logistics and administration.",
+    "source_urls": [
+      "https://www.tradebuddy.io/",
+      "https://www.gd1.vc/blog/gd1-investment-notes---buddy",
+      "https://www.gd1.vc/portfolio/buddy"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

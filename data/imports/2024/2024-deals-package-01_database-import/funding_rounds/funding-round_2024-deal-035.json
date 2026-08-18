@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-035",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-035",
+    "dedupe_key": "2024|aravax|2024-01-23|series_b",
+    "source_url": "https://www.aravax.com.au/aravax-closes-series-b-round-with-us42m-to-accelerate-phase-2-development-for-peanut-allergy-therapy/",
+    "source_payload": {
+      "deal_number": 35,
+      "csv_investee": "Aravax",
+      "normalized_investee": "Aravax",
+      "csv_date": "2024-01-23",
+      "normalized_date": "2024-01-23",
+      "csv_round": "Series B",
+      "normalized_round": "Series B final close",
+      "csv_amount": "USD 22,200,000",
+      "normalized_amount": "USD 22,200,000 additional; USD 42,200,000 total Series B",
+      "csv_investors": "Agati Capital; Breakthrough Victoria; Novartis Venture Fund; Uniseed; UniSuper",
+      "normalized_investors": "Agati Capital; Breakthrough Victoria; Novartis Venture Fund; Uniseed; UniSuper",
+      "verification": "verified",
+      "correction_or_issue": "CSV amount is the additional close, not total Series B; official company source gives both figures.",
+      "primary_source": "https://www.aravax.com.au/aravax-closes-series-b-round-with-us42m-to-accelerate-phase-2-development-for-peanut-allergy-therapy/",
+      "secondary_source": "https://interfinancial.com.au/wp-content/uploads/2024/01/InterFinancial-Dashboard_Healthcare_January_2024.pdf"
+    },
+    "investee_name_raw": "Aravax",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.aravax.com.au/",
+    "org_industries_raw": "Biotech / Allergy Therapeutics",
+    "round_type_raw": "Series B final close",
+    "round_stage": "series_b",
+    "funding_stage_raw": "Series B",
+    "announced_date": "2024-01-23",
+    "money_raised_raw": "USD 22,200,000 additional; USD 42,200,000 total Series B",
+    "amount": 22200000,
+    "currency": "USD",
+    "amount_usd": 22200000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Agati Capital; Breakthrough Victoria; Novartis Venture Fund; Uniseed; UniSuper",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.aravax.com.au/aravax-closes-series-b-round-with-us42m-to-accelerate-phase-2-development-for-peanut-allergy-therapy/",
+    "verification_notes": "CSV amount is the additional close, not total Series B; official company source gives both figures. Independent healthcare transaction dashboard corroborates the US$42.2m total financing. Independent healthcare transaction dashboard corroborates the US$42.2m total financing. Independent healthcare transaction dashboard corroborates the US$42.2m total financing.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day",
+    "secondary_source_status": "corroborated",
+    "supplemental_verification_urls": [
+      "https://interfinancial.com.au/wp-content/uploads/2024/01/InterFinancial-Dashboard_Healthcare_January_2024.pdf"
+    ]
+  },
+  "refs": {
+    "investee_company_key": "company:research:aravax"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:afe69d83314296cfbb20"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

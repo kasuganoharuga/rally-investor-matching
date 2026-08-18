@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-443",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-443",
+    "dedupe_key": "2024|ruminant-biotech|2024-08-27|unknown",
+    "source_url": "https://www.carbonnews.co.nz/news/32410/agrizeronz-invests-extra-4m-in-kiwi-company-developing-methane-inhibiting-bolus",
+    "source_payload": {
+      "deal_number": 443,
+      "csv_investee": "Ruminant BioTech",
+      "normalized_investee": "Ruminant BioTech",
+      "csv_date": "2024-08-27",
+      "normalized_date": "2024-08-27/28",
+      "csv_round": "Seed",
+      "normalized_round": "Follow-on equity financing",
+      "csv_amount": "NZD 6,000,000",
+      "normalized_amount": "NZD 6,000,000 (NZ$4m AgriZeroNZ + NZ$2m NZGIF)",
+      "csv_investors": "AgriZeroNZ; New Zealand Green Investment Finance",
+      "normalized_investors": "AgriZeroNZ; New Zealand Green Investment Finance (NZGIF)",
+      "verification": "verified_split_follow_on",
+      "correction_or_issue": "AgriZeroNZ announced a further NZ$4m and Treasury records show NZGIF's NZ$2m August 2024 follow-on; together they reconcile to NZ$6m.",
+      "primary_source": "https://www.carbonnews.co.nz/news/32410/agrizeronz-invests-extra-4m-in-kiwi-company-developing-methane-inhibiting-bolus",
+      "secondary_source": "https://www.treasury.govt.nz/sites/default/files/2025-06/oia-20250229.pdf"
+    },
+    "investee_name_raw": "Ruminant BioTech",
+    "org_location_raw": "Auckland, New Zealand",
+    "org_website_raw": "https://ruminantbiotech.com/",
+    "org_industries_raw": "Agtech / Climate Biotech",
+    "round_type_raw": "Follow-on equity financing",
+    "round_stage": "unknown",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-08-27",
+    "money_raised_raw": "NZD 6,000,000 (NZ$4m AgriZeroNZ + NZ$2m NZGIF)",
+    "amount": 6000000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "AgriZeroNZ; New Zealand Green Investment Finance (NZGIF)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-08_database-import",
+    "verification_status": "verified_split_follow_on",
+    "verification_source_url": "https://www.carbonnews.co.nz/news/32410/agrizeronz-invests-extra-4m-in-kiwi-company-developing-methane-inhibiting-bolus",
+    "verification_notes": "AgriZeroNZ announced a further NZ$4m and Treasury records show NZGIF's NZ$2m August 2024 follow-on; together they reconcile to NZ$6m.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:ruminant-biotech"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": [
+      "source:url:a323fa9415f3ff9e87fd",
+      "source:url:7f160faf3bb99c9de109"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

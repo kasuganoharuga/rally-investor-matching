@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-398",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-398",
+    "dedupe_key": "2024|andromeda-robotics|2024-06-18|seed",
+    "source_url": "https://www.capitalbrief.com/briefing/robotics-startup-andromeda-raises-3m-to-scale-ai-companion-robot-68e83025-3f32-4b63-889d-2c3d39a779f1/",
+    "source_payload": {
+      "deal_number": 398,
+      "csv_investee": "Andromeda Robotics",
+      "normalized_investee": "Andromeda Robotics",
+      "csv_date": "2024-06-18",
+      "normalized_date": "2024-06-18",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "USD 3,000,000",
+      "normalized_amount": "AUD 3,000,000",
+      "csv_investors": "NOAB Ventures; Purpose Ventures",
+      "normalized_investors": "Purpose Ventures (lead); existing shareholders not publicly identified",
+      "verification": "corrected",
+      "correction_or_issue": "The equity round was A$3m, not US$3m. Strong contemporaneous sources do not name NOAB, so it is not asserted for this close.",
+      "primary_source": "https://www.capitalbrief.com/briefing/robotics-startup-andromeda-raises-3m-to-scale-ai-companion-robot-68e83025-3f32-4b63-889d-2c3d39a779f1/",
+      "secondary_source": "https://www.businessnews.com.au/article/Purpose-ventures-beyond-WA"
+    },
+    "investee_name_raw": "Andromeda Robotics",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://andromedarobotics.ai/",
+    "org_industries_raw": "Robotics / AI / Healthtech",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-06-18",
+    "money_raised_raw": "AUD 3,000,000",
+    "amount": 3000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Purpose Ventures (lead); existing shareholders not publicly identified",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.capitalbrief.com/briefing/robotics-startup-andromeda-raises-3m-to-scale-ai-companion-robot-68e83025-3f32-4b63-889d-2c3d39a779f1/",
+    "verification_notes": "The equity round was A$3m, not US$3m. Strong contemporaneous sources do not name NOAB, so it is not asserted for this close.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:andromeda-robotics"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:8c3ccf23e5e21060f599",
+      "source:url:770c081cdbd35e2977bd"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

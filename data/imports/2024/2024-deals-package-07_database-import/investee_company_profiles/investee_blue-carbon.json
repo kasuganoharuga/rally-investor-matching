@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:blue-carbon",
+  "operation": "upsert",
+  "data": {
+    "name": "Blue Carbon",
+    "website_url": "https://www.bluecarbon.cc/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Queensland",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "ocean-tech-climate-tech",
+    "sector_secondary": null,
+    "use_case_primary": "ocean-climate-technology-company-developing-autonomous-ocean-powered-systems-for-nutrient-upwelling-carbon-and-biodivers",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "hardware-environmental-projects",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Ocean-climate technology company developing autonomous ocean-powered systems for nutrient upwelling, carbon and biodiversity outcomes, and desalination.",
+    "source_urls": [
+      "https://www.bluecarbon.cc/",
+      "https://www.bluecarbon.cc/company",
+      "https://herring-sunfish-pxr4.squarespace.com/accelerator-program-2024-cohort"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-280",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-280",
+    "dedupe_key": "2024|bovonic-limited|2024-06-21|seed",
+    "source_url": "https://www.pacificchannel.com/stories/pacific-channel-invests-leads-in-bovonic",
+    "source_payload": {
+      "deal_number": 280,
+      "csv_investee": "Bovonic",
+      "normalized_investee": "Bovonic Limited",
+      "csv_date": "2024-07-21",
+      "normalized_date": "2024-06-21 official announcement",
+      "csv_round": "Seed",
+      "normalized_round": "Seed / capital round",
+      "csv_amount": "USD 940,000",
+      "normalized_amount": "NZD 940,000",
+      "csv_investors": "Enterprise Angels; MIG Angels; NZVC; Pacific Channel",
+      "normalized_investors": "Pacific Channel (lead); Enterprise Angels; MIG Angels; NZVC",
+      "verification": "corrected",
+      "correction_or_issue": "Pacific Channel's official announcement confirms NZ$940k, the investor group and a 21 June date. The CSV incorrectly labels the amount USD and shifts the date by one month.",
+      "primary_source": "https://www.pacificchannel.com/stories/pacific-channel-invests-leads-in-bovonic",
+      "secondary_source": "https://www.crunchbase.com/organization/pacific-channel/investor_summary/overview_timeline"
+    },
+    "investee_name_raw": "Bovonic Limited",
+    "org_location_raw": "Dunedin, New Zealand",
+    "org_website_raw": "https://www.bovonic.com/",
+    "org_industries_raw": "Agtech / Animal Health",
+    "round_type_raw": "Seed / capital round",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-06-21",
+    "money_raised_raw": "NZD 940,000",
+    "amount": 940000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Pacific Channel (lead); Enterprise Angels; MIG Angels; NZVC",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.pacificchannel.com/stories/pacific-channel-invests-leads-in-bovonic",
+    "verification_notes": "Pacific Channel's official announcement confirms NZ$940k, the investor group and a 21 June date. The CSV incorrectly labels the amount USD and shifts the date by one month.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:bovonic"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:ae5e9dbde26750f39011",
+      "source:url:d1822d7d691dac906f6d"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-133",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-133",
+    "dedupe_key": "2024|outread|2024-04-27|pre_seed",
+    "source_url": "https://www.startupdaily.net/topic/funding/google-chief-scientist-backs-research-search-platforms-750000-pre-seed-raise/",
+    "source_payload": {
+      "deal_number": 133,
+      "csv_investee": "Outread",
+      "normalized_investee": "Outread",
+      "csv_date": "2024-04-29",
+      "normalized_date": "2024-04-27 report",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-Seed",
+      "csv_amount": "USD 750,000",
+      "normalized_amount": "USD 750,000",
+      "csv_investors": "Fiona Mary Bones; Jeff Dean; Protagonist Capital; Sasha Baranikov; Techstars Accelerator",
+      "normalized_investors": "Techstars; Jeff Dean; Fiona Bones",
+      "verification": "corrected",
+      "correction_or_issue": "Public reporting confirms the amount and three backers; Protagonist Capital and Sasha Baranikov were not independently corroborated.",
+      "primary_source": "https://www.startupdaily.net/topic/funding/google-chief-scientist-backs-research-search-platforms-750000-pre-seed-raise/",
+      "secondary_source": "https://www.techstars.com/blog/impact/techstars-update-april-2024"
+    },
+    "investee_name_raw": "Outread",
+    "org_location_raw": "Australia / USA",
+    "org_website_raw": "https://outread.ai/",
+    "org_industries_raw": "Research Tech / AI",
+    "round_type_raw": "Pre-Seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-04-27",
+    "money_raised_raw": "USD 750,000",
+    "amount": 750000,
+    "currency": "USD",
+    "amount_usd": 750000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Techstars; Jeff Dean; Fiona Bones",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.startupdaily.net/topic/funding/google-chief-scientist-backs-research-search-platforms-750000-pre-seed-raise/",
+    "verification_notes": "Public reporting confirms the amount and three backers; Protagonist Capital and Sasha Baranikov were not independently corroborated.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:outread"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:af2b2b34d032f0f2aecf",
+      "source:url:f4be4d63ab9aec67c245"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

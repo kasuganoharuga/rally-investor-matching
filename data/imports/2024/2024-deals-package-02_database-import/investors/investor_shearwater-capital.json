@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investors",
+  "record_key": "investor:shearwater-capital",
+  "operation": "upsert",
+  "data": {
+    "canonical_name": "Shearwater Capital",
+    "aliases": [],
+    "investor_type": "vc_fund",
+    "website_url": "https://shearwatercapital.com.au/",
+    "linkedin_url": "https://www.linkedin.com/company/shearwater-growth-equity",
+    "hq_country": "AU",
+    "hq_state": null,
+    "hq_city": null,
+    "offices": [],
+    "status": "active",
+    "merged_into_id": null,
+    "review_status": "reviewed",
+    "last_reviewed_at": "2026-08-14",
+    "last_reviewed_by": "codex-2024-investor-dedupe-update",
+    "investor_subtype": "VC",
+    "classification_confidence": "high",
+    "classification_source": "inherited from previously completed detailed classification",
+    "eligibility_mode": "research_package_confirmed",
+    "classification_evidence_urls": [
+      "https://shearwatercapital.com.au/",
+      "https://www.shearwater.co/"
+    ],
+    "classified_at": "2026-08-14",
+    "identity_resolution": "existing_investor_update",
+    "matched_existing_record_key": "investor:shearwater-capital",
+    "identity_match_method": "exact_existing_key",
+    "identity_match_source": "normalized_master"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "research_source:shearwater-capital:sw_src_001",
+      "research_source:shearwater-capital:sw_src_002",
+      "research_source:shearwater-capital:shearwater-capital_src_profile_linkedin"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Research collection status: ",
+      "fund_size_not_applicable_or_undisclosed",
+      "parallel_ownership_and_terms_undisclosed",
+      "deal_partner_not_named",
+      "crunchbase_content_blocked"
+    ]
+  }
+}

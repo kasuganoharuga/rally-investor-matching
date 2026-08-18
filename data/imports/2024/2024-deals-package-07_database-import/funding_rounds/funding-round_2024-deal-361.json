@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-361",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-361",
+    "dedupe_key": "2024|asseti|2024-05-16|seed",
+    "source_url": "https://www.asseti.co/resources/seed-announcement",
+    "source_payload": {
+      "deal_number": 361,
+      "csv_investee": "Asseti",
+      "normalized_investee": "Asseti",
+      "csv_date": "2024-05-16",
+      "normalized_date": "2024-05-16",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "AUD 2,500,000",
+      "normalized_amount": "AUD 2,500,000 (USD 1.65m equivalent)",
+      "csv_investors": "Tidal Ventures",
+      "normalized_investors": "Tidal Ventures (lead)",
+      "verification": "verified",
+      "correction_or_issue": "Company announcement confirms amount, stage and lead investor.",
+      "primary_source": "https://www.asseti.co/resources/seed-announcement",
+      "secondary_source": "https://www.tidalvc.com/blog"
+    },
+    "investee_name_raw": "Asseti",
+    "org_location_raw": "Surry Hills, NSW, Australia / Dallas, USA",
+    "org_website_raw": "https://www.asseti.co/",
+    "org_industries_raw": "Proptech / Asset Management",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-05-16",
+    "money_raised_raw": "AUD 2,500,000 (USD 1.65m equivalent)",
+    "amount": 2500000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Tidal Ventures (lead)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.asseti.co/resources/seed-announcement",
+    "verification_notes": "Company announcement confirms amount, stage and lead investor.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:asseti"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:504c523beb139f3787dd",
+      "source:url:43979c59c4e1a3d3c92e"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

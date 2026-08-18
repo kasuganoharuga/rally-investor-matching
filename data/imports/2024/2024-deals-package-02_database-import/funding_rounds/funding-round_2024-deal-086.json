@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-086",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-086",
+    "dedupe_key": "2024|spacetoco|2024-11-27|series_a",
+    "source_url": "https://www.businessnewsaustralia.com/articles/space-sharing-platform-spacetoco-raises--2m-from-purpose-ventures-to-fund-uk-push.html",
+    "source_payload": {
+      "deal_number": 86,
+      "csv_investee": "SpacetoCo",
+      "normalized_investee": "SpacetoCo",
+      "csv_date": "2024-11-29",
+      "normalized_date": "2024-11-27 announcement",
+      "csv_round": "Seed",
+      "normalized_round": "Pre-Series A",
+      "csv_amount": "USD 2,000,000",
+      "normalized_amount": "AUD 2,000,000",
+      "csv_investors": "Purpose Ventures",
+      "normalized_investors": "Purpose Ventures",
+      "verification": "corrected",
+      "correction_or_issue": "Australian reporting confirms A$2m from Purpose Ventures; CSV currency and stage are corrected.",
+      "primary_source": "https://www.businessnewsaustralia.com/articles/space-sharing-platform-spacetoco-raises--2m-from-purpose-ventures-to-fund-uk-push.html",
+      "secondary_source": "https://www.spacetoco.com/"
+    },
+    "investee_name_raw": "SpacetoCo",
+    "org_location_raw": "Perth, WA, Australia / UK",
+    "org_website_raw": "https://www.spacetoco.com/",
+    "org_industries_raw": "Govtech / Marketplace / SaaS",
+    "round_type_raw": "Pre-Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-11-27",
+    "money_raised_raw": "AUD 2,000,000",
+    "amount": 2000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Purpose Ventures",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.businessnewsaustralia.com/articles/space-sharing-platform-spacetoco-raises--2m-from-purpose-ventures-to-fund-uk-push.html",
+    "verification_notes": "Australian reporting confirms A$2m from Purpose Ventures; CSV currency and stage are corrected.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:spacetoco"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:de2b2b04f44845093bb1",
+      "source:url:bbd1b64f4d4a1749af30"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

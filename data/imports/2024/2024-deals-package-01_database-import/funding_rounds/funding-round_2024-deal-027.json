@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-027",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-027",
+    "dedupe_key": "2024|vaulta|2024-q1-exact-date-unverified|strategic",
+    "source_url": "https://newsfile.futunn.com/public/NN-PersistNoticeAttachment/7781/20240430/ASX-2924-02801150-2A1520194.PDF",
+    "source_payload": {
+      "deal_number": 27,
+      "csv_investee": "Vaulta",
+      "normalized_investee": "Vaulta",
+      "csv_date": "2024-06-07",
+      "normalized_date": "2024 Q1 (exact date unverified)",
+      "csv_round": "Seed",
+      "normalized_round": "Strategic investment",
+      "csv_amount": "AUD 980,000",
+      "normalized_amount": "Unverified",
+      "csv_investors": "SABIC Ventures",
+      "normalized_investors": "SABIC Ventures; Novocycle Technologies (follow-on)",
+      "verification": "corrected",
+      "correction_or_issue": "ASX disclosure confirms both investors during quarter ended Mar 2024; CSV date/amount and investor list do not reconcile.",
+      "primary_source": "https://newsfile.futunn.com/public/NN-PersistNoticeAttachment/7781/20240430/ASX-2924-02801150-2A1520194.PDF",
+      "secondary_source": "https://app.dealroom.co/companies/vaulta"
+    },
+    "investee_name_raw": "Vaulta",
+    "org_location_raw": "Brisbane, QLD, Australia",
+    "org_website_raw": "https://www.vaulta.com.au/",
+    "org_industries_raw": "Energy Storage / Climate Hardware",
+    "round_type_raw": "Strategic investment",
+    "round_stage": "strategic",
+    "funding_stage_raw": "Seed",
+    "announced_date": null,
+    "money_raised_raw": "Unverified",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "SABIC Ventures; Novocycle Technologies (follow-on)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://newsfile.futunn.com/public/NN-PersistNoticeAttachment/7781/20240430/ASX-2924-02801150-2A1520194.PDF",
+    "verification_notes": "ASX disclosure confirms both investors during quarter ended Mar 2024; CSV date/amount and investor list do not reconcile.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown",
+    "amount_disclosure_status": "amount_not_reconciled_to_official_disclosure",
+    "amount_structuring_note": "Official disclosure verifies investor participation but does not reconcile to the supplied A$750k amount.",
+    "supplemental_verification_urls": []
+  },
+  "refs": {
+    "investee_company_key": "company:research:vaulta"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:9ef1731bf5e0dcfc9090",
+      "source:url:e157b3d4360d9b5f864b"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

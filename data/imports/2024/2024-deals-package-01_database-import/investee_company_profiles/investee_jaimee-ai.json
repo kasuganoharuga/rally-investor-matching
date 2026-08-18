@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:jaimee-ai",
+  "operation": "upsert",
+  "data": {
+    "name": "Jaimee.ai",
+    "website_url": "https://jaimee.ai/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": null,
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "consumer-ai-wellbeing",
+    "sector_secondary": null,
+    "use_case_primary": "ai-companion-designed-for-women-and-female-representative-data",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2c-ai-app",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "ai_related",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "AI companion designed for women and female-representative data.",
+    "source_urls": [
+      "https://jaimee.ai/",
+      "https://www.techstars.com/blog/program-news/techstars-tech-central-sydney-accelerator-powered-by-the-nsw-government-2024",
+      "https://jaimee.ai/techstars-demo-day-video-transcript"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

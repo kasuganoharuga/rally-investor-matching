@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-252",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-252",
+    "dedupe_key": "2024|renewable-metals|2024-09-03|seed",
+    "source_url": "https://www.renewable-metals.com/september-2024-press-release/",
+    "source_payload": {
+      "deal_number": 252,
+      "csv_investee": "Renewable Metals",
+      "normalized_investee": "Renewable Metals",
+      "csv_date": "2024-09-03",
+      "normalized_date": "2024-09-03",
+      "csv_round": "Seed",
+      "normalized_round": "Seed extension",
+      "csv_amount": "AUD 8,100,000",
+      "normalized_amount": "AUD 8,100,000",
+      "csv_investors": "EMR; Grantham Foundation; Investible; Virescent Ventures",
+      "normalized_investors": "Investible; Virescent Ventures; Grantham Foundation; EMR strategic relationship",
+      "verification": "verified",
+      "correction_or_issue": "The company officially announced the A$8.1m oversubscribed seed extension; named institutions are established backers, while EMR also hosts the UK demonstration plant.",
+      "primary_source": "https://www.renewable-metals.com/september-2024-press-release/",
+      "secondary_source": "https://www.investible.com/blog/investment-notes-renewable-metals"
+    },
+    "investee_name_raw": "Renewable Metals",
+    "org_location_raw": "Kewdale, WA, Australia",
+    "org_website_raw": "https://www.renewable-metals.com/",
+    "org_industries_raw": "Climate Tech / Battery Recycling",
+    "round_type_raw": "Seed extension",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-09-03",
+    "money_raised_raw": "AUD 8,100,000",
+    "amount": 8100000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Investible; Virescent Ventures; Grantham Foundation; EMR strategic relationship",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.renewable-metals.com/september-2024-press-release/",
+    "verification_notes": "The company officially announced the A$8.1m oversubscribed seed extension; named institutions are established backers, while EMR also hosts the UK demonstration plant.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:renewable-metals"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:942e377f0729f7145722",
+      "source:url:d3346011869a328d5b7b"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

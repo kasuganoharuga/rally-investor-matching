@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_team_members",
+  "record_key": "investor_team_member:purpose-ventures:derek-gerrard",
+  "operation": "upsert",
+  "data": {
+    "contact_id": null,
+    "first_name": "Derek",
+    "last_name": "Gerrard",
+    "role_title": "Co-founder",
+    "seniority": "partner",
+    "linkedin_url": null,
+    "claimed_focus": [
+      "venture_capital"
+    ],
+    "bio_summary": "Public investment-relevant person associated with Purpose Ventures.",
+    "source_url": "http://www.purpose.ventures/",
+    "retrieved_at": "2026-07-22",
+    "is_active": true
+  },
+  "refs": {
+    "investor_key": "investor:purpose-ventures",
+    "contact_key": null
+  },
+  "provenance": {
+    "collection_run_key": "collection:research:2026-07-24",
+    "source_keys": [
+      "research_source:purpose-ventures:purpose-ventures_src_official"
+    ]
+  },
+  "review": {
+    "status": "unreviewed",
+    "issues": []
+  }
+}

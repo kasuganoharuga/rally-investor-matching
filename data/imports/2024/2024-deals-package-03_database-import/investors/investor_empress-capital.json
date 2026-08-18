@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investors",
+  "record_key": "investor:empress-capital",
+  "operation": "upsert",
+  "data": {
+    "canonical_name": "Empress Capital",
+    "aliases": [],
+    "investor_type": "private_investment_firm",
+    "website_url": "https://empresscapital.vc/",
+    "linkedin_url": "https://www.linkedin.com/company/empresscapitalvc",
+    "hq_country": "AU",
+    "hq_state": null,
+    "hq_city": null,
+    "offices": [],
+    "status": "active",
+    "merged_into_id": null,
+    "review_status": "needs_more_data",
+    "last_reviewed_at": "2026-08-14",
+    "last_reviewed_by": "codex-2024-investor-dedupe-update",
+    "investor_subtype": "VC / family office",
+    "classification_confidence": "high",
+    "classification_source": "inherited from previously completed detailed classification",
+    "eligibility_mode": "research_package_confirmed",
+    "classification_evidence_urls": [
+      "https://empresscapital.vc/"
+    ],
+    "classified_at": "2026-08-14",
+    "identity_resolution": "existing_investor_update",
+    "matched_existing_record_key": "investor:empress-capital",
+    "identity_match_method": "exact_existing_key",
+    "identity_match_source": "normalized_master"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:c4d1f972b165095b6f52",
+      "research_source:empress-capital:empress-capital_src_001",
+      "research_source:empress-capital:empress-capital_src_profile_website",
+      "research_source:empress-capital:empress-capital_src_profile_linkedin",
+      "research_source:empress-capital:empress-capital_src_deal_2025q4"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Research collection status: partial",
+      "team_and_person_level_evidence_not_material_or_not_public",
+      "recent_portfolio_coverage_partial"
+    ]
+  }
+}

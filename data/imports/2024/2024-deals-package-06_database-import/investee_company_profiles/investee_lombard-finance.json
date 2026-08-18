@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:lombard-finance",
+  "operation": "upsert",
+  "data": {
+    "name": "Lombard Finance",
+    "website_url": "https://www.lombard.finance/",
+    "crunchbase_uuid": null,
+    "hq_country": null,
+    "hq_state": null,
+    "hq_city": null,
+    "is_anz": false,
+    "sector_primary": "web3-defi",
+    "sector_secondary": null,
+    "use_case_primary": "bitcoin-defi-protocol-issuing-lbtc-a-yield-bearing-cross-chain-representation-of-bitcoin-staked-through-babylon",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "protocol-token-infrastructure",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Bitcoin DeFi protocol issuing LBTC, a yield-bearing cross-chain representation of bitcoin staked through Babylon.",
+    "source_urls": [
+      "https://www.lombard.finance/",
+      "https://www.theblock.co/post/303000/polychain-capital-leads-16-million-seed-round-for-bitcoin-restaking-protocol-lombard",
+      "https://cryptonews.com/news/polychain-lombard-16m-funding-round-scale-bitcoin-yield-solutions/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "medium"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Investee headquarters country could not be normalized from the research package."
+    ]
+  }
+}

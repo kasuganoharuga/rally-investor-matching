@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:forever-network-basketball-forever",
+  "operation": "upsert",
+  "data": {
+    "name": "Forever Network / Basketball Forever",
+    "website_url": "https://basketballforever.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "sports-media-gaming",
+    "sector_secondary": null,
+    "use_case_primary": "digital-sports-media-and-gaming-network-operating-basketball-forever-and-related-fan-engagement-products",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "media-advertising-gaming",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Digital sports media and gaming network operating Basketball Forever and related fan-engagement products.",
+    "source_urls": [
+      "https://basketballforever.com/",
+      "https://www.sportsbusinessjournal.com/Articles/2024/03/20/basketball-forever-startup-raises-series-a-funding-round/",
+      "https://www.linkedin.com/posts/folklorevc_basketball-forever-raises-4m-in-series-a-activity-7178931469921243136-ZcdL"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

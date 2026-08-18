@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-177",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-177",
+    "dedupe_key": "2024|matilda-health|2024-exact-date-undisclosed|pre_seed",
+    "source_url": "https://teaserclub.com/investors/epic-angels-network",
+    "source_payload": {
+      "deal_number": 177,
+      "csv_investee": "Matilda Health",
+      "normalized_investee": "Matilda Health",
+      "csv_date": "2024-08-08",
+      "normalized_date": "2024 (exact date undisclosed)",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-Seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Epic Angels",
+      "normalized_investors": "Epic Angels",
+      "verification": "partial",
+      "correction_or_issue": "Epic Angels portfolio evidence supports a 2024 pre-seed relationship; amount, exact date and complete syndicate remain undisclosed.",
+      "primary_source": "https://teaserclub.com/investors/epic-angels-network",
+      "secondary_source": "https://www.matilda.health/"
+    },
+    "investee_name_raw": "Matilda Health",
+    "org_location_raw": "Perth, WA, Australia",
+    "org_website_raw": "https://www.matilda.health/",
+    "org_industries_raw": "Femtech / Digital Health",
+    "round_type_raw": "Pre-Seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Epic Angels",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://teaserclub.com/investors/epic-angels-network",
+    "verification_notes": "Epic Angels portfolio evidence supports a 2024 pre-seed relationship; amount, exact date and complete syndicate remain undisclosed.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:matilda-health"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:6ebdc76eba9e8a158936",
+      "source:url:87ec654531f7e7a022f9"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Epic Angels portfolio evidence supports a 2024 pre-seed relationship; amount, exact date and complete syndicate remain undisclosed.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

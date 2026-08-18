@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-260",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-260",
+    "dedupe_key": "2024|sidus-heroes|2024-06-03|strategic",
+    "source_url": "https://www.coincarp.com/fundraising/sidus-heroes-undisclosed/",
+    "source_payload": {
+      "deal_number": 260,
+      "csv_investee": "Sidus Heroes",
+      "normalized_investee": "SIDUS HEROES",
+      "csv_date": "2024-06-03",
+      "normalized_date": "2024-06-03",
+      "csv_round": "Seed",
+      "normalized_round": "Undisclosed strategic financing",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Aussie Capital; DWF Labs; Metavest Capital; Seedthrift Ventures; ZBS CAPITAL",
+      "normalized_investors": "DWF Labs (confirmed 2024 participant); other CSV investors not proven for this round",
+      "verification": "corrected_scope",
+      "correction_or_issue": "A June 2024 financing is corroborated only for DWF Labs. The other named funds appear to reflect the broader historical investor set, and the Sydney location is doubtful for this global Web3 project.",
+      "primary_source": "https://www.coincarp.com/fundraising/sidus-heroes-undisclosed/",
+      "secondary_source": "https://www.vcbacked.co/company/sidus-heroes"
+    },
+    "investee_name_raw": "SIDUS HEROES",
+    "org_location_raw": "Global / Web3; Australian HQ unconfirmed",
+    "org_website_raw": "https://sidusheroes.com/",
+    "org_industries_raw": "Web3 / Gaming",
+    "round_type_raw": "Undisclosed strategic financing",
+    "round_stage": "strategic",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-06-03",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "DWF Labs (confirmed 2024 participant); other CSV investors not proven for this round",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "corrected_scope",
+    "verification_source_url": "https://www.coincarp.com/fundraising/sidus-heroes-undisclosed/",
+    "verification_notes": "A June 2024 financing is corroborated only for DWF Labs. The other named funds appear to reflect the broader historical investor set, and the Sydney location is doubtful for this global Web3 project.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:sidus-heroes"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:86038da20b217e7b6f04",
+      "source:url:96751ebdbe1b34f06692"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

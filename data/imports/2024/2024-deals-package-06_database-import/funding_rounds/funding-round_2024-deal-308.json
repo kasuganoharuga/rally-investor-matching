@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-308",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-308",
+    "dedupe_key": "2024|mtms-network|2024-08-09|seed",
+    "source_url": "https://alphagrowth.io/mtms-network/company",
+    "source_payload": {
+      "deal_number": 308,
+      "csv_investee": "MTMS Network",
+      "normalized_investee": "MTMS Network",
+      "csv_date": "2024-08-09",
+      "normalized_date": "2024-08-09 database entry",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "USD 1,000,000",
+      "normalized_amount": "USD 1,000,000",
+      "csv_investors": "Quantix Capital",
+      "normalized_investors": "Quantix Capital",
+      "verification": "partial",
+      "correction_or_issue": "A specialist funding database reports a US$1m seed round with Quantix Capital, but no company or investor announcement was located; retain with partial confidence.",
+      "primary_source": "https://alphagrowth.io/mtms-network/company",
+      "secondary_source": "https://mtms.live/"
+    },
+    "investee_name_raw": "MTMS Network",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://mtms.live/",
+    "org_industries_raw": "Web3 / Community",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-08-09",
+    "money_raised_raw": "USD 1,000,000",
+    "amount": 1000000,
+    "currency": "USD",
+    "amount_usd": 1000000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Quantix Capital",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://alphagrowth.io/mtms-network/company",
+    "verification_notes": "A specialist funding database reports a US$1m seed round with Quantix Capital, but no company or investor announcement was located; retain with partial confidence.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:mtms-network"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:b4b6a4a2cdca7d24d120",
+      "source:url:d2c65043fac66f785204"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "A specialist funding database reports a US$1m seed round with Quantix Capital, but no company or investor announcement was located; retain with partial confidence."
+    ]
+  }
+}

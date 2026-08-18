@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-244",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-244",
+    "dedupe_key": "2024|plancare|2024-04-07|seed",
+    "source_url": "https://startupnews.com.au/news/purpose-ventures-makes-follow-on-investment-in-plancare/",
+    "source_payload": {
+      "deal_number": 244,
+      "csv_investee": "PlanCare",
+      "normalized_investee": "PlanCare",
+      "csv_date": "2024-04-07",
+      "normalized_date": "2024-04-07 follow-on announcement",
+      "csv_round": "Seed",
+      "normalized_round": "Seed follow-on",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Approximately AUD 1,750,000 follow-on; AUD 2,500,000 cumulative Purpose investment",
+      "csv_investors": "Purpose Ventures",
+      "normalized_investors": "Purpose Ventures",
+      "verification": "corrected",
+      "correction_or_issue": "Reporting says Purpose increased its total PlanCare investment to A$2.5m after an initial A$750k in 2023, implying about A$1.75m of 2024 follow-on capital.",
+      "primary_source": "https://startupnews.com.au/news/purpose-ventures-makes-follow-on-investment-in-plancare/",
+      "secondary_source": "https://app.dealroom.co/companies/plancare"
+    },
+    "investee_name_raw": "PlanCare",
+    "org_location_raw": "Perth, WA, Australia",
+    "org_website_raw": "https://plancare.com.au/",
+    "org_industries_raw": "Healthtech / Aged Care",
+    "round_type_raw": "Seed follow-on",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-04-07",
+    "money_raised_raw": "Approximately AUD 1,750,000 follow-on; AUD 2,500,000 cumulative Purpose investment",
+    "amount": 1750000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Purpose Ventures",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://startupnews.com.au/news/purpose-ventures-makes-follow-on-investment-in-plancare/",
+    "verification_notes": "Reporting says Purpose increased its total PlanCare investment to A$2.5m after an initial A$750k in 2023, implying about A$1.75m of 2024 follow-on capital.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:plancare"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:4be0fad92a2c4e80263c",
+      "source:url:2afe30d24a47fa7d220b"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

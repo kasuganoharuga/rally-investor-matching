@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:samsara-eco",
+  "operation": "upsert",
+  "data": {
+    "name": "Samsara Eco",
+    "website_url": "https://www.samsaraeco.eco/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Australian Capital Territory",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "climate-tech-recycling-deeptech",
+    "sector_secondary": null,
+    "use_case_primary": "develops-enzyme-based-recycling-technology-that-breaks-plastics-into-reusable-molecular-building-blocks",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "technology-licensing-industrial-partnerships",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Develops enzyme-based recycling technology that breaks plastics into reusable molecular building blocks.",
+    "source_urls": [
+      "https://www.samsaraeco.eco/",
+      "https://www.samsaraeco.eco/news/samsara-eco-raises-100m-to-recycle-plastics",
+      "https://www.cefc.com.au/media/media-release/cefc-backed-samsara-eco-raises-100-million-in-series-aplus-round/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

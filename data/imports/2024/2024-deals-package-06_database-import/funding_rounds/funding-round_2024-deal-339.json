@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-339",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-339",
+    "dedupe_key": "2024|radian-arc|2024-06-11|series_b",
+    "source_url": "https://radianarc.io/radian-arc-secures-9-million-in-series-b-funding-fueling-growth-in-cloud-gaming-and-ai-infrastructure/",
+    "source_payload": {
+      "deal_number": 339,
+      "csv_investee": "Radian Arc",
+      "normalized_investee": "Radian Arc",
+      "csv_date": "2024-06-11",
+      "normalized_date": "2024-06-11",
+      "csv_round": "Series B",
+      "normalized_round": "Series B",
+      "csv_amount": "USD 10,000,000",
+      "normalized_amount": "USD 9,000,000 closed; option up to USD 15,000,000",
+      "csv_investors": "AMD Ventures; BITKRAFT Ventures; Blacknut; Boston; Saffelberg Investments; Square Enix Group",
+      "normalized_investors": "BITKRAFT Ventures (lead); AMD Ventures; Boston; Saffelberg Investments; ActivePort (receivable conversion)",
+      "verification": "corrected",
+      "correction_or_issue": "Company and ASX sources confirm US$9m closed, not US$10m. Blacknut and Square Enix were not named in the strongest event sources.",
+      "primary_source": "https://radianarc.io/radian-arc-secures-9-million-in-series-b-funding-fueling-growth-in-cloud-gaming-and-ai-infrastructure/",
+      "secondary_source": "https://newsfile.futunn.com/public/NN-PersistNoticeAttachment/7781/20240605/ASX-2924-02814198-6A1210431.PDF"
+    },
+    "investee_name_raw": "Radian Arc",
+    "org_location_raw": "Perth, WA, Australia",
+    "org_website_raw": "https://radianarc.io/",
+    "org_industries_raw": "Cloud Infrastructure / Gaming",
+    "round_type_raw": "Series B",
+    "round_stage": "series_b",
+    "funding_stage_raw": "Series B",
+    "announced_date": "2024-06-11",
+    "money_raised_raw": "USD 9,000,000 closed; option up to USD 15,000,000",
+    "amount": 9000000,
+    "currency": "USD",
+    "amount_usd": 9000000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "BITKRAFT Ventures (lead); AMD Ventures; Boston; Saffelberg Investments; ActivePort (receivable conversion)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://radianarc.io/radian-arc-secures-9-million-in-series-b-funding-fueling-growth-in-cloud-gaming-and-ai-infrastructure/",
+    "verification_notes": "Company and ASX sources confirm US$9m closed, not US$10m. Blacknut and Square Enix were not named in the strongest event sources.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:radian-arc"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:3c9c440b87e11dd2466a",
+      "source:url:8bae009c81544f69ac3e"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

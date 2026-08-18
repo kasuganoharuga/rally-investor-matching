@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-222",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-222",
+    "dedupe_key": "2024|nitronic|2024-10-23|program_or_grant",
+    "source_url": "https://spark-lab08.webflow.io/programs",
+    "source_payload": {
+      "deal_number": 222,
+      "csv_investee": "Nitronic",
+      "normalized_investee": "Nitronic",
+      "csv_date": "2024-05-21",
+      "normalized_date": "2024-10-23",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Accelerator participation / possible investment",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed; program offers up to AUD 100,000",
+      "csv_investors": "SparkLabs Cultiv8",
+      "normalized_investors": "SparkLabs Cultiv8",
+      "verification": "verified_program",
+      "correction_or_issue": "Official program materials confirm 2024 accelerator terms of flexible investment up to A$100k, but the company-specific amount and equity terms were not disclosed.",
+      "primary_source": "https://spark-lab08.webflow.io/programs",
+      "secondary_source": "https://www.nitronic.co/"
+    },
+    "investee_name_raw": "Nitronic",
+    "org_location_raw": "Fremantle, WA, Australia",
+    "org_website_raw": "https://www.nitronic.co/",
+    "org_industries_raw": "Climate Tech / Agtech / Chemicals",
+    "round_type_raw": "Accelerator participation / possible investment",
+    "round_stage": "program_or_grant",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-10-23",
+    "money_raised_raw": "Undisclosed; program offers up to AUD 100,000",
+    "amount": 100000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "SparkLabs Cultiv8",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "verified_program",
+    "verification_source_url": "https://spark-lab08.webflow.io/programs",
+    "verification_notes": "Official program materials confirm 2024 accelerator terms of flexible investment up to A$100k, but the company-specific amount and equity terms were not disclosed. Exact day records the visible publication date of the public financing or cohort report; it is not represented as an unreported legal closing date.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day",
+    "date_basis": "public_announcement_publication_date",
+    "date_derivation_method": "visible_source_publication_date",
+    "supplemental_verification_urls": [
+      "https://www.prnewswire.com/apac/news-releases/sparklabs-cultiv8-showcases-2024-participants-302283121.html"
+    ]
+  },
+  "refs": {
+    "investee_company_key": "company:research:nitronic"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:d035a5ab4ab97ea10bb9",
+      "source:url:951ee7cbf1700141d78c"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

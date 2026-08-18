@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-160",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-160",
+    "dedupe_key": "2024|paypipe|2024-company-activity-financing-unverified|pre_seed",
+    "source_url": "https://paypipe.io/",
+    "source_payload": {
+      "deal_number": 160,
+      "csv_investee": "Paypipe",
+      "normalized_investee": "Paypipe",
+      "csv_date": "2024-09-01",
+      "normalized_date": "2024 (company activity; financing unverified)",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Unverified pre-seed",
+      "csv_amount": "USD 100,000",
+      "normalized_amount": "Unverified",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "No investor confirmed",
+      "verification": "needs_review",
+      "correction_or_issue": "Product and founder activity are visible, but no independent financing announcement, named investor or reliable US$100k evidence was found.",
+      "primary_source": "https://paypipe.io/",
+      "secondary_source": "https://www.reddit.com/r/Entrepreneur/comments/1h0sfux/how_im_tackling_client_ghosting_and_payment_issues/"
+    },
+    "investee_name_raw": "Paypipe",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://paypipe.io/",
+    "org_industries_raw": "Fintech / Future of Work",
+    "round_type_raw": "Unverified pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "Unverified",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "No investor confirmed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://paypipe.io/",
+    "verification_notes": "Product and founder activity are visible, but no independent financing announcement, named investor or reliable US$100k evidence was found.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown",
+    "amount_disclosure_status": "dataset_only_amount_unverified",
+    "amount_structuring_note": "No independent financing announcement, named investor or reliable US$100k evidence was found.",
+    "supplemental_verification_urls": []
+  },
+  "refs": {
+    "investee_company_key": "company:research:paypipe"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:661185bee87ff599b275",
+      "source:url:20c368c8592d60bc0758"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Product and founder activity are visible, but no independent financing announcement, named investor or reliable US$100k evidence was found.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

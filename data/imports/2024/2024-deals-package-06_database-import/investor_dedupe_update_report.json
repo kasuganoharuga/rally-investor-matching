@@ -1,0 +1,192 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-06_database-import",
+  "updated_at": "2026-08-14T00:00:00+09:30",
+  "status": "completed",
+  "identity_summary": {
+    "upserts": 81,
+    "existing_investor_updates": 16,
+    "net_new_investors": 65,
+    "confirmed_aliases_canonicalized": 1
+  },
+  "matches": [
+    {
+      "package": 6,
+      "source_key": "investor:alex-zaccaria",
+      "canonical_key": "investor:alex-zaccaria",
+      "source_name": "Alex Zaccaria",
+      "canonical_name": "Alex Zaccaria",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-001-060_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 6,
+      "source_key": "investor:altered-capital",
+      "canonical_key": "investor:altered-capital",
+      "source_name": "Altered Capital",
+      "canonical_name": "Altered Capital",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 6,
+      "source_key": "investor:altos-ventures",
+      "canonical_key": "investor:altos-ventures",
+      "source_name": "Altos Ventures",
+      "canonical_name": "Altos Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-121-180_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 6,
+      "source_key": "investor:arcanys-ventures",
+      "canonical_key": "investor:arcanys-ventures",
+      "source_name": "Arcanys Ventures",
+      "canonical_name": "Arcanys Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-001-060_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 6,
+      "source_key": "investor:bitkraft-ventures",
+      "canonical_key": "investor:bitkraft-ventures",
+      "source_name": "BITKRAFT Ventures",
+      "canonical_name": "BITKRAFT Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-001-060_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 6,
+      "source_key": "investor:climate-venture-capital-fund",
+      "canonical_key": "investor:climate-venture-capital-fund",
+      "source_name": "Climate Venture Capital Fund",
+      "canonical_name": "Climate Venture Capital Fund",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-061-120_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 6,
+      "source_key": "investor:finistere-ventures",
+      "canonical_key": "investor:finistere-ventures",
+      "source_name": "Finistere Ventures",
+      "canonical_name": "Finistere Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-061-120_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 6,
+      "source_key": "investor:fonterra-co-operative-group",
+      "canonical_key": "investor:fonterra-co-operative-group",
+      "source_name": "Fonterra Co-operative Group",
+      "canonical_name": "Fonterra Co-operative Group",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-061-120_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 6,
+      "source_key": "investor:footwork",
+      "canonical_key": "investor:footwork",
+      "source_name": "Footwork",
+      "canonical_name": "Footwork",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-121-180_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 6,
+      "source_key": "investor:franklin-templeton",
+      "canonical_key": "investor:franklin-templeton",
+      "source_name": "Franklin Templeton",
+      "canonical_name": "Franklin Templeton",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 6,
+      "source_key": "investor:monash-investment-holdings",
+      "canonical_key": "investor:monash-investment-holdings",
+      "source_name": "Monash investment holdings",
+      "canonical_name": "Monash investment holdings",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-121-180_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 6,
+      "source_key": "investor:nuance-capital",
+      "canonical_key": "investor:nuance-capital",
+      "source_name": "Nuance Capital",
+      "canonical_name": "Nuance Capital",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 6,
+      "source_key": "investor:ourcrowd",
+      "canonical_key": "investor:ourcrowd",
+      "source_name": "OurCrowd",
+      "canonical_name": "OurCrowd",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-061-120_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 6,
+      "source_key": "investor:shasta-ventures",
+      "canonical_key": "investor:shasta-ventures",
+      "source_name": "Shasta Ventures",
+      "canonical_name": "Shasta Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 6,
+      "source_key": "investor:sprout",
+      "canonical_key": "investor:sprout",
+      "source_name": "Sprout",
+      "canonical_name": "Sprout",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 6,
+      "source_key": "investor:tech-labs-capital",
+      "canonical_key": "investor:tech-labs-capital",
+      "source_name": "Tech Labs Capital",
+      "canonical_name": "Tech Labs Capital",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-061-120_delta_identity-audited-v3_team-audited"
+    }
+  ],
+  "accelerator_programs": [],
+  "manual_review_candidates": [],
+  "reviewed_distinct_candidates": [
+    {
+      "package": 6,
+      "source_key": "investor:ana-future-creation-fund-global-brain",
+      "source_name": "ANA Future Creation Fund / Global Brain",
+      "candidate_key": "investor:ana-future-frontier-fund",
+      "candidate_name": "ANA Future Frontier Fund",
+      "signal": "same_website_domain",
+      "disposition": "reviewed_distinct_no_merge",
+      "relationship_type": "different_fund_vehicle_shared_ecosystem"
+    },
+    {
+      "package": 6,
+      "source_key": "investor:ellerston-jaade-ellerston-capital",
+      "source_name": "Ellerston JAADE / Ellerston Capital",
+      "candidate_key": "investor:ashok-jacob",
+      "candidate_name": "Ashok Jacob",
+      "signal": "same_website_domain",
+      "disposition": "reviewed_distinct_no_merge",
+      "relationship_type": "manager_or_principal_affiliation"
+    },
+    {
+      "package": 6,
+      "source_key": "investor:global-brain",
+      "source_name": "Global Brain",
+      "candidate_key": "investor:ana-future-frontier-fund",
+      "candidate_name": "ANA Future Frontier Fund",
+      "signal": "same_website_domain",
+      "disposition": "reviewed_distinct_no_merge",
+      "relationship_type": "fund_manager_or_partner_affiliation"
+    }
+  ]
+}

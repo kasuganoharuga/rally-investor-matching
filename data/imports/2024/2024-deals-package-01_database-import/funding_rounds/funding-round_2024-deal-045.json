@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-045",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-045",
+    "dedupe_key": "2024|brownee|2024-05-24|program_or_grant",
+    "source_url": "https://masschallenge.org/news/masschallenge-switzerland-2024-early-stage-accelerator-cohort/",
+    "source_payload": {
+      "deal_number": 45,
+      "csv_investee": "Brownee",
+      "normalized_investee": "Brownee",
+      "csv_date": "2024-05-24",
+      "normalized_date": "2024-05-24 / 2024 cohort",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Accelerator participation (not verified financing)",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "EnergyLab; MassChallenge Switzerland",
+      "normalized_investors": "EnergyLab; MassChallenge Switzerland",
+      "verification": "verified_program",
+      "correction_or_issue": "Both organisations confirm 2024 program participation; no equity financing disclosed.",
+      "primary_source": "https://masschallenge.org/news/masschallenge-switzerland-2024-early-stage-accelerator-cohort/",
+      "secondary_source": "https://energylab.org.au/events/climate-solutions-accelerator-showcase-2024/"
+    },
+    "investee_name_raw": "Brownee",
+    "org_location_raw": "Australia",
+    "org_website_raw": null,
+    "org_industries_raw": "Climate Tech",
+    "round_type_raw": "Accelerator participation (not verified financing)",
+    "round_stage": "program_or_grant",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-05-24",
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "EnergyLab; MassChallenge Switzerland",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "verified_program",
+    "verification_source_url": "https://masschallenge.org/news/masschallenge-switzerland-2024-early-stage-accelerator-cohort/",
+    "verification_notes": "Both organisations confirm 2024 program participation; no equity financing disclosed.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:brownee"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:26eddd189fb7e5f3fae6",
+      "source:url:4785e84e3d3599a95c5f"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

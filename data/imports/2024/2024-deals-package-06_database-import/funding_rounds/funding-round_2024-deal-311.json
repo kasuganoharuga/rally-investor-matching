@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-311",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-311",
+    "dedupe_key": "2024|validient-ltd|2024-02-27|seed",
+    "source_url": "https://fintechwales.org/news/fintech-wales-member-validient-secures-300000-investment/",
+    "source_payload": {
+      "deal_number": 311,
+      "csv_investee": "Validient",
+      "normalized_investee": "Validient Ltd",
+      "csv_date": "2024-02-27",
+      "normalized_date": "2024-02-27",
+      "csv_round": "Seed",
+      "normalized_round": "Second seed investment",
+      "csv_amount": "GBP 300,000",
+      "normalized_amount": "GBP 300,000",
+      "csv_investors": "Development Bank of Wales; Wesley Clover",
+      "normalized_investors": "Development Bank of Wales (GBP 200k); Wesley Clover (GBP 100k)",
+      "verification": "rejected_scope",
+      "correction_or_issue": "The source location is Newport, Wales—not Newport, NSW. Financing is verified but outside the Australia/New Zealand deal scope.",
+      "primary_source": "https://fintechwales.org/news/fintech-wales-member-validient-secures-300000-investment/",
+      "secondary_source": "https://validient.com/"
+    },
+    "investee_name_raw": "Validient Ltd",
+    "org_location_raw": "Newport, Wales, United Kingdom",
+    "org_website_raw": "https://validient.com/",
+    "org_industries_raw": "Regtech / Legal Tech",
+    "round_type_raw": "Second seed investment",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-02-27",
+    "money_raised_raw": "GBP 300,000",
+    "amount": 300000,
+    "currency": "GBP",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Development Bank of Wales (GBP 200k); Wesley Clover (GBP 100k)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "rejected_scope",
+    "verification_source_url": "https://fintechwales.org/news/fintech-wales-member-validient-secures-300000-investment/",
+    "verification_notes": "The source location is Newport, Wales—not Newport, NSW. Financing is verified but outside the Australia/New Zealand deal scope.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:validient"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:21181b16441d075c6317",
+      "source:url:4ed4373131408207621f"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-08_database-import",
+  "counts": {
+    "source_investors": 73,
+    "excluded": 16
+  },
+  "excluded_investors": [
+    {
+      "source_name": "Atlassian Ventures",
+      "canonical_investor": "Atlassian Ventures",
+      "action": "do_not_create",
+      "related_deals": "Accoil",
+      "website": "https://www.atlassian.com/company/ventures",
+      "reason": "Accoil investment already captured under Deal 43.",
+      "source_excel_row": 25
+    },
+    {
+      "source_name": "Brisbane Angels",
+      "canonical_investor": "Brisbane Angels",
+      "action": "do_not_create",
+      "related_deals": "Convergence Medical",
+      "website": "https://www.brisbaneangels.com.au/",
+      "reason": "Existing investor relationship is reported, but a genuine new 2024 Convergence close was not established.",
+      "source_excel_row": 26
+    },
+    {
+      "source_name": "Carthona Capital",
+      "canonical_investor": "Carthona Capital",
+      "action": "do_not_create",
+      "related_deals": "Ajust",
+      "website": "https://www.carthonacapital.com/",
+      "reason": "Existing investor; Ajust's November financing was already captured under Deal 51.",
+      "source_excel_row": 27
+    },
+    {
+      "source_name": "Development Bank of Wales",
+      "canonical_investor": "Development Bank of Wales",
+      "action": "do_not_create",
+      "related_deals": "Llusern Scientific",
+      "website": "https://developmentbank.wales/",
+      "reason": "Already resolved with Deal 294; UK transaction is outside ANZ scope.",
+      "source_excel_row": 28
+    },
+    {
+      "source_name": "Ed3n Ventures",
+      "canonical_investor": "ED3N Ventures",
+      "action": "do_not_create",
+      "related_deals": "Shards",
+      "website": "https://ed3n.ventures/",
+      "reason": "Named financing belongs to 2025, not the supplied 2024 event.",
+      "source_excel_row": 29
+    },
+    {
+      "source_name": "Futureverse",
+      "canonical_investor": "Futureverse",
+      "action": "do_not_create",
+      "related_deals": "Nucanon",
+      "website": "https://www.futureverse.com/",
+      "reason": "Program partner/support; not separately treated as direct investor for this event.",
+      "source_excel_row": 30
+    },
+    {
+      "source_name": "Gabby Dizon",
+      "canonical_investor": "Gabby Dizon",
+      "action": "do_not_create",
+      "related_deals": "Shards",
+      "website": null,
+      "reason": "Named financing belongs to 2025, not the supplied 2024 event.",
+      "source_excel_row": 31
+    },
+    {
+      "source_name": "Kyber Ventures",
+      "canonical_investor": "Kyber Ventures",
+      "action": "do_not_create",
+      "related_deals": "Shards",
+      "website": null,
+      "reason": "Named financing belongs to 2025, not the supplied 2024 event.",
+      "source_excel_row": 32
+    },
+    {
+      "source_name": "Normie Capital",
+      "canonical_investor": "Normie Capital",
+      "action": "do_not_create",
+      "related_deals": "Shards",
+      "website": null,
+      "reason": "Not confirmed in the reliable 2025 syndicate and no 2024 event was verified.",
+      "source_excel_row": 33
+    },
+    {
+      "source_name": "QIC Ventures",
+      "canonical_investor": "QIC Ventures",
+      "action": "do_not_create",
+      "related_deals": "Accoil",
+      "website": "https://www.qic.com/",
+      "reason": "Accoil investment already captured under Deal 43.",
+      "source_excel_row": 34
+    },
+    {
+      "source_name": "SFC Capital",
+      "canonical_investor": "SFC Capital",
+      "action": "do_not_create",
+      "related_deals": "Llusern Scientific",
+      "website": "https://sfccapital.com/",
+      "reason": "Already reviewed; not confirmed for the corrected Llusern event and transaction is outside scope.",
+      "source_excel_row": 35
+    },
+    {
+      "source_name": "Yield Guild Games",
+      "canonical_investor": "Yield Guild Games Ventures",
+      "action": "do_not_create",
+      "related_deals": "Shards",
+      "website": "https://yieldguild.io/",
+      "reason": "Verified strategic investor in 2025, outside the requested window.",
+      "source_excel_row": 36
+    },
+    {
+      "source_name": "AngelLoop",
+      "canonical_investor": "AngelLoop",
+      "action": "hold_unresolved",
+      "related_deals": "Convergence Medical",
+      "website": "https://angelloop.org/",
+      "reason": "Company evidence confirms AngelLoop led historical pre-seed and seed financing, but the supplied row is not a verified 2024 event; do not create from this row.",
+      "source_excel_row": 37
+    },
+    {
+      "source_name": "FB10x adVentures",
+      "canonical_investor": "FB10x adVentures",
+      "action": "hold_unresolved",
+      "related_deals": "Alt.Leather",
+      "website": null,
+      "reason": "Database attribution only; not named in strongest event source.",
+      "source_excel_row": 38
+    },
+    {
+      "source_name": "Syntax Ventures",
+      "canonical_investor": "Syntax Ventures",
+      "action": "hold_unresolved",
+      "related_deals": "Esper Satellite Imagery",
+      "website": null,
+      "reason": "Present in the CSV/database attribution but absent from the strongest contemporaneous report.",
+      "source_excel_row": 39
+    },
+    {
+      "source_name": "Tim Poskitt",
+      "canonical_investor": "Timothy Poskitt",
+      "action": "hold_unresolved",
+      "related_deals": "WeMoney",
+      "website": null,
+      "reason": "Dealroom attributes the 2024 round, but stronger reporting only says existing investors and names him as a 2020 investor.",
+      "source_excel_row": 40
+    }
+  ]
+}

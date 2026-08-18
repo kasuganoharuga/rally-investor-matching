@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:rich-data-co",
+  "operation": "upsert",
+  "data": {
+    "name": "Rich Data Co",
+    "website_url": "https://rdc.ai/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "fintech-enterprise-ai",
+    "sector_secondary": null,
+    "use_case_primary": "ai-decisioning-platform-helping-banks-and-commercial-lenders-improve-credit-assessment-risk-management-and-portfolio-gro",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-saas",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "ai_related",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "AI decisioning platform helping banks and commercial lenders improve credit assessment, risk management and portfolio growth.",
+    "source_urls": [
+      "https://rdc.ai/",
+      "https://rdc.ai/leading-ai-decisioning-platform-provider-rich-data-co-secures-further-9-million-in-funding-from-acorn-capital-rounding-out-a-37-million-series-b-raise/",
+      "https://www.richdataco.com/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

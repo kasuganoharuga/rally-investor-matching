@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investors",
+  "record_key": "investor:utiliti-group",
+  "operation": "upsert",
+  "data": {
+    "canonical_name": "Utiliti Group",
+    "aliases": [],
+    "investor_type": "strategic_corporate",
+    "investor_subtype": "Corporate venture / services group",
+    "eligibility_mode": "research_package_confirmed",
+    "classification_confidence": "high",
+    "classification_evidence_urls": [
+      "https://www.utiliti.com/",
+      "https://www.linkedin.com/company/utiliti-group"
+    ],
+    "classified_at": "2026-08-14",
+    "website_url": "https://www.utiliti.com/",
+    "linkedin_url": "https://www.linkedin.com/company/utiliti-group",
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": "Bondi Junction",
+    "offices": [],
+    "status": "active",
+    "merged_into_id": null,
+    "review_status": "needs_more_data",
+    "last_reviewed_at": "2026-08-14",
+    "last_reviewed_by": "codex-2024-investor-dedupe-update",
+    "identity_resolution": "existing_investor_update",
+    "matched_existing_record_key": "investor:utiliti-group",
+    "identity_match_method": "exact_existing_key",
+    "identity_match_source": "historical_import:recent-deal2026-7-30_deals-121-180_delta_identity-audited-v3_team-audited"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:9fcf529bbeeb31695ed0"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-399",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-399",
+    "dedupe_key": "2024|evos|2024-07-08|series_b",
+    "source_url": "https://www.startupdaily.net/topic/funding/queensland-ev-charger-startup-evos-banks-4-million-in-hunt-for-10m-series-b/",
+    "source_payload": {
+      "deal_number": 399,
+      "csv_investee": "EVOS Energy",
+      "normalized_investee": "EVOS",
+      "csv_date": "2024-07-08",
+      "normalized_date": "2024-07-08",
+      "csv_round": "Series B",
+      "normalized_round": "Series B first tranche",
+      "csv_amount": "AUD 4,000,000",
+      "normalized_amount": "AUD 4,000,000 first tranche of planned AUD 10m round",
+      "csv_investors": null,
+      "normalized_investors": "Existing investors (not publicly named for this tranche)",
+      "verification": "verified_partial_syndicate",
+      "correction_or_issue": "A$4m first tranche is verified; the public report says existing investors supplied it but does not identify them.",
+      "primary_source": "https://www.startupdaily.net/topic/funding/queensland-ev-charger-startup-evos-banks-4-million-in-hunt-for-10m-series-b/",
+      "secondary_source": "https://www.evos.com.au/news"
+    },
+    "investee_name_raw": "EVOS",
+    "org_location_raw": "Brisbane, QLD, Australia",
+    "org_website_raw": "https://www.evos.com.au/",
+    "org_industries_raw": "EV Infrastructure / Climate Tech",
+    "round_type_raw": "Series B first tranche",
+    "round_stage": "series_b",
+    "funding_stage_raw": "Series B",
+    "announced_date": "2024-07-08",
+    "money_raised_raw": "AUD 4,000,000 first tranche of planned AUD 10m round",
+    "amount": 4000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Existing investors (not publicly named for this tranche)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "verified_partial_syndicate",
+    "verification_source_url": "https://www.startupdaily.net/topic/funding/queensland-ev-charger-startup-evos-banks-4-million-in-hunt-for-10m-series-b/",
+    "verification_notes": "A$4m first tranche is verified; the public report says existing investors supplied it but does not identify them.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:evos"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:1e3aeccd092c02103461",
+      "source:url:28bb1cafb1e2f578c58d"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "A$4m first tranche is verified; the public report says existing investors supplied it but does not identify them."
+    ]
+  }
+}

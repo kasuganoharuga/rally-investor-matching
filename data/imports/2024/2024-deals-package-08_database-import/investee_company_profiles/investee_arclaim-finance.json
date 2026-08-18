@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:arclaim-finance",
+  "operation": "upsert",
+  "data": {
+    "name": "Arclaim Finance",
+    "website_url": "https://arclaim.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "NZ",
+    "hq_state": null,
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "web3-defi",
+    "sector_secondary": null,
+    "use_case_primary": "self-described-multi-chain-defi-staking-platform-operating-identity-regulatory-status-and-financing-claims-require-enhan",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "staking-platform",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Self-described multi-chain DeFi staking platform; operating identity, regulatory status and financing claims require enhanced diligence.",
+    "source_urls": [
+      "https://arclaim.com/",
+      "https://www.globenewswire.com/news-release/2025/07/07/3111237/0/en/arclaim-secures-3-million-in-series-a-funding-to-transform-defi-staking-total-value-locked-reaches-150m.html",
+      "https://www.trustpilot.com/review/arclaim.com"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

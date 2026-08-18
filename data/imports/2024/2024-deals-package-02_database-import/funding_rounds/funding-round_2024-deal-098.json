@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-098",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-098",
+    "dedupe_key": "2024|praetorian-aeronautics|2024-exact-date-undisclosed|seed",
+    "source_url": "https://paspalis.com.au/praetorian-aeronautics/",
+    "source_payload": {
+      "deal_number": 98,
+      "csv_investee": "Praetorian Aeronautics",
+      "normalized_investee": "Praetorian Aeronautics",
+      "csv_date": "2024-04-01",
+      "normalized_date": "2024 (exact date undisclosed)",
+      "csv_round": "Seed",
+      "normalized_round": "Seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Paspalis",
+      "normalized_investors": "Paspalis Corporation / venture capital",
+      "verification": "partial",
+      "correction_or_issue": "Paspalis official portfolio confirms a 2024 seed investment; exact date and amount are not published.",
+      "primary_source": "https://paspalis.com.au/praetorian-aeronautics/",
+      "secondary_source": "https://praetorianaero.com/"
+    },
+    "investee_name_raw": "Praetorian Aeronautics",
+    "org_location_raw": "Adelaide, SA, Australia",
+    "org_website_raw": "https://praetorianaero.com/",
+    "org_industries_raw": "Defence Tech / Drones",
+    "round_type_raw": "Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": null,
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Paspalis Corporation / venture capital",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://paspalis.com.au/praetorian-aeronautics/",
+    "verification_notes": "Paspalis official portfolio confirms a 2024 seed investment; exact date and amount are not published.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:praetorian-aeronautics"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:02b0b4178975a038897c",
+      "source:url:365b6b528070dd7a6e11"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Paspalis official portfolio confirms a 2024 seed investment; exact date and amount are not published.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

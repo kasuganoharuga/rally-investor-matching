@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-156",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-156",
+    "dedupe_key": "2024|primary-technology|2024-09-18|seed",
+    "source_url": "https://www.hsfkramer.com/news/2024-09/herbert-smith-freehills-advises-primary-on-series-seed",
+    "source_payload": {
+      "deal_number": 156,
+      "csv_investee": "Primary",
+      "normalized_investee": "Primary Technology",
+      "csv_date": "2024-09-18",
+      "normalized_date": "2024-09-18",
+      "csv_round": "Seed",
+      "normalized_round": "Series Seed",
+      "csv_amount": "AUD 3,500,000",
+      "normalized_amount": "AUD 3,500,000",
+      "csv_investors": "Carthona Capital (lead); AfterWork Ventures; Archangel Ventures; Macdoch Ventures; No Brand; Resolution Ventures",
+      "normalized_investors": "Carthona Capital (lead); No Brand; Resolution Ventures; AfterWork Ventures; Archangel Ventures; Macdoch Ventures",
+      "verification": "verified",
+      "correction_or_issue": "Legal adviser and business reporting confirm amount, lead and all six funds.",
+      "primary_source": "https://www.hsfkramer.com/news/2024-09/herbert-smith-freehills-advises-primary-on-series-seed",
+      "secondary_source": "https://www.capitalbrief.com/briefing/sydney-fintech-primary-raises-35m-seed-round-ae48c393-b0fb-453f-8984-6855e903bb30/"
+    },
+    "investee_name_raw": "Primary Technology",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://primary.tech/",
+    "org_industries_raw": "Fintech / Treasury",
+    "round_type_raw": "Series Seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-09-18",
+    "money_raised_raw": "AUD 3,500,000",
+    "amount": 3500000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Carthona Capital (lead); No Brand; Resolution Ventures; AfterWork Ventures; Archangel Ventures; Macdoch Ventures",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.hsfkramer.com/news/2024-09/herbert-smith-freehills-advises-primary-on-series-seed",
+    "verification_notes": "Legal adviser and business reporting confirm amount, lead and all six funds.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:primary-technology"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:2761dc3f0c1e7176bcce",
+      "source:url:599d972a5ec903bc40ab"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

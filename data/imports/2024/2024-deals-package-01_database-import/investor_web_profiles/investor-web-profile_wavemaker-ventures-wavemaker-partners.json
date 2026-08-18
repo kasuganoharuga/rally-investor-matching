@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_web_profiles",
+  "record_key": "investor_web_profile:wavemaker-ventures-wavemaker-partners:2026-08-14",
+  "operation": "upsert",
+  "data": {
+    "source_urls": [
+      "https://wavemaker.vc/",
+      "https://wavemaker.vc/our-investment-thesis/",
+      "https://www.datamasque.com/blog/datamasque-secures-us-4m-to-unlock-enterprise-ais-most-sensitive-data",
+      "https://wavemaker.vc/team/",
+      "https://www.linkedin.com/company/wavemaker-partners/",
+      "https://www.crunchbase.com/organization/wavemaker-partners"
+    ],
+    "retrieved_at": "2026-08-14",
+    "website_status": "verified_public_profile",
+    "raw_content_hash": null,
+    "raw_content_ref": null,
+    "extraction_model": "codex-2024-investor-dedupe-update",
+    "extraction_version": "1.0.0",
+    "confidence": "medium",
+    "claimed_thesis": "Enterprise technology",
+    "claimed_stages": [
+      "Seed onward"
+    ],
+    "claimed_sectors": [
+      "Enterprise technology"
+    ],
+    "claimed_geographies": [
+      "Southeast Asia / global"
+    ],
+    "claimed_business_models": [],
+    "claimed_cheque_min": null,
+    "claimed_cheque_max": null,
+    "claimed_cheque_currency": null,
+    "contact_emails": [
+      "info@wavemaker.vc"
+    ],
+    "application_url": null,
+    "contact_notes": "Official lead.",
+    "is_current": true,
+    "superseded_at": null
+  },
+  "refs": {
+    "investor_key": "investor:wavemaker-ventures-wavemaker-partners"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "research_source:wavemaker-ventures:wm_src_001",
+      "research_source:wavemaker-ventures:wm_src_002",
+      "research_source:wavemaker-ventures:wm_src_003",
+      "research_source:wavemaker-ventures:wm_src_004",
+      "research_source:wavemaker-ventures:wm_src_005",
+      "research_source:wavemaker-ventures:wm_src_006"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Research collection status: partial",
+      "datamasque_allocation_undisclosed",
+      "current_vehicle_size_not_isolated",
+      "personal_linkedin_not_resolved",
+      "recent_deal_history_not_exhaustive"
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:overlay-ai",
+  "operation": "upsert",
+  "data": {
+    "name": "Overlay AI",
+    "website_url": "https://www.overlay.ai/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "enterprise-ai-computer-vision",
+    "sector_secondary": null,
+    "use_case_primary": "computer-vision-and-ai-software-for-object-recognition-data-capture-and-operational-intelligence",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-software",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "ai_related",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Computer-vision and AI software for object recognition, data capture and operational intelligence.",
+    "source_urls": [
+      "https://www.overlay.ai/",
+      "https://www.defence.gov.au/sites/default/files/2025-02/Entity_contracts_reporting_-_calendar_year_2024.pdf.pdf"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

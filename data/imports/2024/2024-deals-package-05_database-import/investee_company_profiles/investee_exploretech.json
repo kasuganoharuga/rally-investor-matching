@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:exploretech",
+  "operation": "upsert",
+  "data": {
+    "name": "ExploreTech",
+    "website_url": "https://www.exploretech.io/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": null,
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "unknown",
+    "sector_secondary": null,
+    "use_case_primary": "unresolved-australian-startup-name-product-legal-entity-and-website-could-not-be-confidently-matched",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "unknown",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Unresolved Australian startup name; product, legal entity and website could not be confidently matched.",
+    "source_urls": [
+      "https://techboard.com.au/australian-startup-funding-in-review-2024/",
+      "https://2024.australianstartupfunding.com/State-of-Australian-Startup-Funding-2024-Final-.pdf",
+      "https://www.exploretech.io/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-supplement",
+    "extraction_version": "1.0.0",
+    "confidence": "medium"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:90abb253062b42c13c36"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

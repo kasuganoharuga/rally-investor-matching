@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investors",
+  "record_key": "investor:simon-baume",
+  "operation": "upsert",
+  "data": {
+    "canonical_name": "Simon Baume",
+    "aliases": [],
+    "investor_type": "angel",
+    "investor_subtype": "angel",
+    "eligibility_mode": "supplemental_public_evidence",
+    "classification_confidence": "medium",
+    "classification_evidence_urls": [
+      "https://www.ajust.com.au/about",
+      "https://www.overnightsuccess.vc/p/aussie-startup-vc-summary-30th-november-2024"
+    ],
+    "classified_at": "2026-08-14",
+    "website_url": "https://www.ajust.com.au/about",
+    "linkedin_url": null,
+    "hq_country": "AU",
+    "hq_state": null,
+    "hq_city": null,
+    "offices": [],
+    "status": "active",
+    "merged_into_id": null,
+    "review_status": "reviewed",
+    "last_reviewed_at": "2026-08-14",
+    "last_reviewed_by": "codex-2024-investor-dedupe-update",
+    "identity_resolution": "new_investor",
+    "matched_existing_record_key": null,
+    "identity_match_method": "no_prior_match",
+    "identity_match_source": null
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-supplement:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:0113ac141418af36a4dd",
+      "source:url:25323740e133211cee87"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

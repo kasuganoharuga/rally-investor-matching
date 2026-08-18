@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_team_members",
+  "record_key": "investor_team_member:shasta-ventures:jason-pressman",
+  "operation": "upsert",
+  "data": {
+    "contact_id": null,
+    "first_name": "Jason",
+    "last_name": "Pressman",
+    "role_title": "Managing Director / investment team",
+    "seniority": "other",
+    "linkedin_url": null,
+    "claimed_focus": [
+      "investment_relevant_person"
+    ],
+    "bio_summary": "Dawn announcement names Shasta as an existing investor; current fund activity and team breadth are not fully resolved.",
+    "source_url": "https://www.shasta.vc/",
+    "retrieved_at": "2026-07-16",
+    "is_active": true
+  },
+  "refs": {
+    "investor_key": "investor:shasta-ventures",
+    "contact_key": null
+  },
+  "provenance": {
+    "collection_run_key": "collection:research:2026-07-24",
+    "source_keys": [
+      "research_source:shasta-ventures:shasta_ventures_src_001"
+    ]
+  },
+  "review": {
+    "status": "unreviewed",
+    "issues": []
+  }
+}

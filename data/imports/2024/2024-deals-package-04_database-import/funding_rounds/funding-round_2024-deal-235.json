@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-235",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-235",
+    "dedupe_key": "2024|datalis|2024-01-16|pre_seed",
+    "source_url": "https://www.cbinsights.com/company/datalis",
+    "source_payload": {
+      "deal_number": 235,
+      "csv_investee": "Datalis",
+      "normalized_investee": "Datalis",
+      "csv_date": "2024-01-16",
+      "normalized_date": "2024-01-16 (database date)",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-Seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Approximately AUD 225,000 / USD 140,000 (database-led)",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Antler Australia; 77 Partners (database profiles)",
+      "verification": "partial",
+      "correction_or_issue": "Funding databases support a pre-seed round and investor relationships, but the exact date, amount and participation were not independently announced.",
+      "primary_source": "https://www.cbinsights.com/company/datalis",
+      "secondary_source": "https://datalis.app/"
+    },
+    "investee_name_raw": "Datalis",
+    "org_location_raw": "Australia",
+    "org_website_raw": "https://datalis.app/",
+    "org_industries_raw": "Data Economy / Privacy",
+    "round_type_raw": "Pre-Seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-01-16",
+    "money_raised_raw": "Approximately AUD 225,000 / USD 140,000 (database-led)",
+    "amount": 225000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Antler Australia; 77 Partners (database profiles)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://www.cbinsights.com/company/datalis",
+    "verification_notes": "Funding databases support a pre-seed round and investor relationships, but the exact date, amount and participation were not independently announced.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:datalis"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:3dcec3edfa9948c79b3f",
+      "source:url:d0b80b2fa50c7b05c454"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Funding databases support a pre-seed round and investor relationships, but the exact date, amount and participation were not independently announced."
+    ]
+  }
+}

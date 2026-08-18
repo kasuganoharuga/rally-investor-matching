@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-047",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-047",
+    "dedupe_key": "2024|illuvium|2024-03-27|series_a",
+    "source_url": "https://www.cbinsights.com/company/illuvium/financials",
+    "source_payload": {
+      "deal_number": 47,
+      "csv_investee": "Illuvium",
+      "normalized_investee": "Illuvium",
+      "csv_date": "2024-03-27",
+      "normalized_date": "2024-03-27",
+      "csv_round": "Series A",
+      "normalized_round": "Series A",
+      "csv_amount": "USD 12,000,000",
+      "normalized_amount": "USD 12,000,000",
+      "csv_investors": "Animoca Brands; Arrington Capital; King River Capital; Spartan Capital; others",
+      "normalized_investors": "Animoca Ventures; Arrington Capital; King River Capital; Spartan Capital; additional participants per database",
+      "verification": "partial",
+      "correction_or_issue": "Amount/date corroborated; long CSV participant list lacks a single primary announcement.",
+      "primary_source": "https://www.cbinsights.com/company/illuvium/financials",
+      "secondary_source": "https://www.owler.com/company/illuvium/funding"
+    },
+    "investee_name_raw": "Illuvium",
+    "org_location_raw": "Sydney, Australia / global",
+    "org_website_raw": "https://illuvium.io/",
+    "org_industries_raw": "Gaming / Web3",
+    "round_type_raw": "Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-03-27",
+    "money_raised_raw": "USD 12,000,000",
+    "amount": 12000000,
+    "currency": "USD",
+    "amount_usd": 12000000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Animoca Ventures; Arrington Capital; King River Capital; Spartan Capital; additional participants per database",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://www.cbinsights.com/company/illuvium/financials",
+    "verification_notes": "Amount/date corroborated; long CSV participant list lacks a single primary announcement.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:illuvium"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:01936501ebf2cabc37fd",
+      "source:url:766972b49b9a9dca4b5c"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Amount/date corroborated; long CSV participant list lacks a single primary announcement."
+    ]
+  }
+}

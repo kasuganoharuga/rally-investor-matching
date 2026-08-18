@@ -1,0 +1,381 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-01_database-import",
+  "updated_at": "2026-08-14T00:00:00+09:30",
+  "status": "completed",
+  "identity_summary": {
+    "upserts": 105,
+    "existing_investor_updates": 32,
+    "net_new_investors": 73,
+    "confirmed_aliases_canonicalized": 6
+  },
+  "matches": [
+    {
+      "package": 1,
+      "source_key": "investor:500-global",
+      "canonical_key": "investor:500-global",
+      "source_name": "500 Global",
+      "canonical_name": "500 Global",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 1,
+      "source_key": "investor:77-partners",
+      "canonical_key": "investor:77-partners",
+      "source_name": "77 Partners",
+      "canonical_name": "77 Partners",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-061-120_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 1,
+      "source_key": "investor:alumni-ventures",
+      "canonical_key": "investor:alumni-ventures",
+      "source_name": "Alumni Ventures",
+      "canonical_name": "Alumni Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 1,
+      "source_key": "investor:at-one-ventures",
+      "canonical_key": "investor:at-one-ventures",
+      "source_name": "At One Ventures",
+      "canonical_name": "At One Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-181-230_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 1,
+      "source_key": "investor:balmain",
+      "canonical_key": "investor:balmain",
+      "source_name": "Balmain",
+      "canonical_name": "Balmain",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 1,
+      "source_key": "investor:betterlabs-ventures",
+      "canonical_key": "investor:betterlabs-ventures",
+      "source_name": "BetterLabs",
+      "canonical_name": "BetterLabs",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-121-180_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 1,
+      "source_key": "investor:carthona-capital",
+      "canonical_key": "investor:carthona-capital",
+      "source_name": "Carthona Capital",
+      "canonical_name": "Carthona Capital",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 1,
+      "source_key": "investor:co-ventures",
+      "canonical_key": "investor:co-ventures",
+      "source_name": "Co Ventures",
+      "canonical_name": "Co Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 1,
+      "source_key": "investor:commonwealth-bank-of-australia",
+      "canonical_key": "investor:commonwealth-bank-of-australia",
+      "source_name": "Commonwealth Bank of Australia",
+      "canonical_name": "Commonwealth Bank of Australia",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 1,
+      "source_key": "investor:dcvc",
+      "canonical_key": "investor:dcvc",
+      "source_name": "DCVC",
+      "canonical_name": "DCVC",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 1,
+      "source_key": "investor:energylab",
+      "canonical_key": "investor:energylab",
+      "source_name": "EnergyLab",
+      "canonical_name": "EnergyLab",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 1,
+      "source_key": "investor:epic-angels",
+      "canonical_key": "investor:epic-angels",
+      "source_name": "Epic Angels",
+      "canonical_name": "Epic Angels",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 1,
+      "source_key": "investor:felicis",
+      "canonical_key": "investor:felicis",
+      "source_name": "Felicis",
+      "canonical_name": "Felicis",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 1,
+      "source_key": "investor:hatcher",
+      "canonical_key": "investor:hatcher",
+      "source_name": "Hatcher+",
+      "canonical_name": "Hatcher+",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 1,
+      "source_key": "investor:hostplus",
+      "canonical_key": "investor:hostplus",
+      "source_name": "Hostplus",
+      "canonical_name": "Hostplus",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 1,
+      "source_key": "investor:ip-group-australia",
+      "canonical_key": "investor:ip-group-australia",
+      "source_name": "IP Group Australia",
+      "canonical_name": "IP Group Australia",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 1,
+      "source_key": "investor:king-river-capital",
+      "canonical_key": "investor:king-river-capital",
+      "source_name": "King River Capital",
+      "canonical_name": "King River Capital",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-001-060_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 1,
+      "source_key": "investor:lockheed-martin-ventures",
+      "canonical_key": "investor:lockheed-martin-ventures",
+      "source_name": "Lockheed Martin Ventures",
+      "canonical_name": "Lockheed Martin Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 1,
+      "source_key": "investor:newsouth-innovations",
+      "canonical_key": "investor:newsouth-innovations",
+      "source_name": "NewSouth Innovations",
+      "canonical_name": "NewSouth Innovations",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 1,
+      "source_key": "investor:pacific-channel",
+      "canonical_key": "investor:pacific-channel",
+      "source_name": "Pacific Channel",
+      "canonical_name": "Pacific Channel",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 1,
+      "source_key": "investor:posco",
+      "canonical_key": "investor:posco",
+      "source_name": "Posco",
+      "canonical_name": "Posco",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 1,
+      "source_key": "investor:possible-ventures",
+      "canonical_key": "investor:possible-ventures",
+      "source_name": "Possible Ventures",
+      "canonical_name": "Possible Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 1,
+      "source_key": "investor:qic-ventures",
+      "canonical_key": "investor:qic-ventures",
+      "source_name": "QIC Ventures",
+      "canonical_name": "QIC Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 1,
+      "source_key": "investor:quantonation",
+      "canonical_key": "investor:quantonation",
+      "source_name": "Quantonation",
+      "canonical_name": "Quantonation",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-121-180_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 1,
+      "source_key": "investor:second-century-ventures",
+      "canonical_key": "investor:second-century-ventures",
+      "source_name": "Second Century Ventures",
+      "canonical_name": "Second Century Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 1,
+      "source_key": "investor:taronga-ventures",
+      "canonical_key": "investor:taronga-ventures",
+      "source_name": "Taronga Ventures",
+      "canonical_name": "Taronga Ventures",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 1,
+      "source_key": "investor:techstars",
+      "canonical_key": "investor:techstars",
+      "source_name": "Techstars",
+      "canonical_name": "Techstars",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 1,
+      "source_key": "investor:the-spartan-group",
+      "canonical_key": "investor:the-spartan-group",
+      "source_name": "The Spartan Group",
+      "canonical_name": "The Spartan Group",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-121-180_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 1,
+      "source_key": "investor:uniservices",
+      "canonical_key": "investor:uniservices",
+      "source_name": "Auckland UniServices",
+      "canonical_name": "Auckland UniServices",
+      "match_method": "exact_existing_key",
+      "prior_origin": "historical_import:recent-deal2026-7-30_deals-001-060_delta_identity-audited-v3_team-audited"
+    },
+    {
+      "package": 1,
+      "source_key": "investor:unisuper",
+      "canonical_key": "investor:unisuper",
+      "source_name": "UniSuper",
+      "canonical_name": "UniSuper",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 1,
+      "source_key": "investor:wavemaker-ventures-wavemaker-partners",
+      "canonical_key": "investor:wavemaker-ventures-wavemaker-partners",
+      "source_name": "Wavemaker Ventures / Wavemaker Partners",
+      "canonical_name": "Wavemaker Ventures / Wavemaker Partners",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    },
+    {
+      "package": 1,
+      "source_key": "investor:y-combinator",
+      "canonical_key": "investor:y-combinator",
+      "source_name": "Y Combinator",
+      "canonical_name": "Y Combinator",
+      "match_method": "exact_existing_key",
+      "prior_origin": "normalized_master"
+    }
+  ],
+  "accelerator_programs": [
+    {
+      "investor_key": "investor:500-global",
+      "package": 1,
+      "program_key": "program:500-global:primary",
+      "reused_prior_program": false
+    },
+    {
+      "investor_key": "investor:ace-venture-studio",
+      "package": 1,
+      "program_key": "program:ace-venture-studio:primary",
+      "reused_prior_program": false
+    },
+    {
+      "investor_key": "investor:energylab",
+      "package": 1,
+      "program_key": "program:energylab:primary",
+      "reused_prior_program": true
+    },
+    {
+      "investor_key": "investor:masschallenge-switzerland",
+      "package": 1,
+      "program_key": "program:masschallenge-switzerland:primary",
+      "reused_prior_program": false
+    },
+    {
+      "investor_key": "investor:product-10x",
+      "package": 1,
+      "program_key": "program:product-10x:primary",
+      "reused_prior_program": false
+    },
+    {
+      "investor_key": "investor:reach-anz",
+      "package": 1,
+      "program_key": "program:reach-anz:primary",
+      "reused_prior_program": false
+    },
+    {
+      "investor_key": "investor:startmate",
+      "package": 1,
+      "program_key": "program:startmate:primary",
+      "reused_prior_program": true
+    },
+    {
+      "investor_key": "investor:techstars",
+      "package": 1,
+      "program_key": "program:techstars:primary",
+      "reused_prior_program": true
+    },
+    {
+      "investor_key": "investor:y-combinator",
+      "package": 1,
+      "program_key": "program:y-combinator:primary",
+      "reused_prior_program": false
+    }
+  ],
+  "manual_review_candidates": [],
+  "reviewed_distinct_candidates": [
+    {
+      "package": 1,
+      "source_key": "investor:animoca-ventures",
+      "source_name": "Animoca Ventures",
+      "candidate_key": "investor:animoca-brands",
+      "candidate_name": "Animoca Brands",
+      "signal": "same_website_domain",
+      "disposition": "reviewed_distinct_no_merge",
+      "relationship_type": "investment_arm_of_parent_company"
+    },
+    {
+      "package": 1,
+      "source_key": "investor:booster-innovation-fund",
+      "source_name": "Booster Innovation Fund",
+      "candidate_key": "investor:booster",
+      "candidate_name": "Booster",
+      "signal": "same_website_domain",
+      "disposition": "reviewed_distinct_no_merge",
+      "relationship_type": "fund_vehicle_managed_by_operator"
+    }
+  ]
+}

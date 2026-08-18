@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investors",
+  "record_key": "investor:impact-ventures",
+  "operation": "upsert",
+  "data": {
+    "canonical_name": "Impact Ventures",
+    "aliases": [
+      "Impact Ventures Management"
+    ],
+    "investor_type": "vc_fund",
+    "website_url": "https://impactenterprisefund.co.nz/",
+    "linkedin_url": null,
+    "hq_country": "AU",
+    "hq_state": null,
+    "hq_city": null,
+    "offices": [],
+    "status": "active",
+    "merged_into_id": null,
+    "review_status": "needs_more_data",
+    "last_reviewed_at": "2026-08-14",
+    "last_reviewed_by": "codex-2024-investor-dedupe-update",
+    "investor_subtype": "Impact investor",
+    "classification_confidence": "medium",
+    "classification_source": "inherited from previously completed detailed classification",
+    "eligibility_mode": "research_package_confirmed",
+    "classification_evidence_urls": [
+      "https://impactenterprisefund.co.nz/"
+    ],
+    "classified_at": "2026-08-14",
+    "identity_resolution": "existing_investor_update",
+    "matched_existing_record_key": "investor:impact-ventures",
+    "identity_match_method": "exact_existing_key",
+    "identity_match_source": "normalized_master"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "research_source:impact-ventures:impact-ventures_src_deal"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Research collection status: sparse",
+      "linkedin_company_or_person_url_not_verified",
+      "crunchbase_profile_not_verified",
+      "public_investment_team_not_verified",
+      "identity_or_transaction_conflict",
+      "official_website_not_verified"
+    ]
+  }
+}

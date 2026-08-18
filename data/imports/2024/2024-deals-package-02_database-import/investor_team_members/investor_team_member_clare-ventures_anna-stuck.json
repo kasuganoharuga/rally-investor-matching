@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investor_team_members",
+  "record_key": "investor_team_member:clare-ventures:anna-stuck",
+  "operation": "upsert",
+  "data": {
+    "contact_id": null,
+    "first_name": "Anna",
+    "last_name": "Stuck",
+    "role_title": "Founder",
+    "seniority": "partner",
+    "linkedin_url": null,
+    "claimed_focus": [],
+    "bio_summary": null,
+    "source_url": "https://clareventures.nz/about/",
+    "retrieved_at": null,
+    "is_active": true
+  },
+  "refs": {
+    "investor_key": "investor:clare-ventures",
+    "contact_key": null
+  },
+  "provenance": {
+    "collection_run_key": "collection:research:2026-07-24",
+    "source_keys": [
+      "research_source:clare-ventures:clare_src_003"
+    ]
+  },
+  "review": {
+    "status": "unreviewed",
+    "issues": []
+  }
+}

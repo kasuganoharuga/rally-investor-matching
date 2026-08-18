@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-056",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-056",
+    "dedupe_key": "2024|askable|2024-12-13|series_a",
+    "source_url": "https://www.prweb.com/releases/22m-sees-askable-rise-above-research-tools-to-automate-research-delivery-on-demand-302331005.html",
+    "source_payload": {
+      "deal_number": 56,
+      "csv_investee": "Askable",
+      "normalized_investee": "Askable",
+      "csv_date": "2024-12-11",
+      "normalized_date": "2024-12-13",
+      "csv_round": "Series A",
+      "normalized_round": "Series A",
+      "csv_amount": "AUD 22,000,000",
+      "normalized_amount": "AUD 22,000,000",
+      "csv_investors": "Airtree; Ben Thompson; Robert Kawalsky; Sam Kroonenburg; Skip Capital",
+      "normalized_investors": "AirTree (lead)",
+      "verification": "verified",
+      "correction_or_issue": "Official company release confirms first external round led by AirTree; other CSV names are not confirmed as this-round participants.",
+      "primary_source": "https://www.prweb.com/releases/22m-sees-askable-rise-above-research-tools-to-automate-research-delivery-on-demand-302331005.html",
+      "secondary_source": "https://www.airtree.vc/companies/askable"
+    },
+    "investee_name_raw": "Askable",
+    "org_location_raw": "Brisbane, QLD, Australia",
+    "org_website_raw": "https://www.askable.com/",
+    "org_industries_raw": "Research Tech / SaaS",
+    "round_type_raw": "Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-12-13",
+    "money_raised_raw": "AUD 22,000,000",
+    "amount": 22000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "AirTree (lead)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.prweb.com/releases/22m-sees-askable-rise-above-research-tools-to-automate-research-delivery-on-demand-302331005.html",
+    "verification_notes": "Official company release confirms first external round led by AirTree; other CSV names are not confirmed as this-round participants.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:askable"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:d1492e8433d86b86a9b7",
+      "source:url:58854739c933b048c9c1"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

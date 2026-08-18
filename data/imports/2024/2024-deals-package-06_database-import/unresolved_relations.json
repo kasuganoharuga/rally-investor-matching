@@ -1,0 +1,201 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "2024-deals-package-06_database-import",
+  "counts": {
+    "created_relations": 155,
+    "unresolved_or_unnamed": 22,
+    "excluded_by_investor_policy": 11
+  },
+  "unresolved_relations": [
+    {
+      "deal_number": 302,
+      "token": "friends",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 302,
+      "token": "family",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 304,
+      "token": "Paloma Ventures (unverified for this event)",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 306,
+      "token": "Undisclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 307,
+      "token": "No external investor confirmed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 317,
+      "token": "Major private and institutional investors not named",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 322,
+      "token": "existing angels",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 326,
+      "token": "high-net-worth investors",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 327,
+      "token": "angels",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 329,
+      "token": "Private investors and management (not named)",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 330,
+      "token": "UNSW Founders 10x relationship",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 331,
+      "token": "other participants not fully disclosed",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 332,
+      "token": "technology executives and angels",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 334,
+      "token": "additional angels / investors",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 335,
+      "token": "others",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 337,
+      "token": "other private investors",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 339,
+      "token": "ActivePort (receivable conversion)",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 353,
+      "token": "other undisclosed investors",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 354,
+      "token": "Callaghan Innovation program support",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 359,
+      "token": "Startmate (2024 relationship)",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 359,
+      "token": "other listed investors relate to a later 2025 raise",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    },
+    {
+      "deal_number": 360,
+      "token": "Undisclosed / no verified investor",
+      "disposition": "unnamed_or_unverified_no_relation_created"
+    }
+  ],
+  "excluded_relations": [
+    {
+      "deal_number": 303,
+      "token": "NZVC",
+      "canonical_investor": "Angel Investors Marlborough; Enterprise Angels; NZVC",
+      "action": "do_not_create",
+      "reason": "CSV names not attached to this close by the strongest reviewed source."
+    },
+    {
+      "deal_number": 307,
+      "token": "Stephen Tam is the founder",
+      "canonical_investor": "Stephen Tam",
+      "action": "do_not_create",
+      "reason": "Public evidence identifies him as the founder, not an external investor."
+    },
+    {
+      "deal_number": 308,
+      "token": "Quantix Capital",
+      "canonical_investor": "Quantix Capital",
+      "action": "hold_unresolved",
+      "reason": "Only a specialist database supports the transaction; no primary announcement found."
+    },
+    {
+      "deal_number": 311,
+      "token": "Development Bank of Wales (GBP 200k)",
+      "canonical_investor": "Development Bank of Wales",
+      "action": "do_not_create",
+      "reason": "Previously processed, but this UK deal is outside ANZ scope."
+    },
+    {
+      "deal_number": 311,
+      "token": "Wesley Clover (GBP 100k)",
+      "canonical_investor": "Wesley Clover",
+      "action": "do_not_create",
+      "reason": "Investment is verified, but only via an out-of-scope UK deal."
+    },
+    {
+      "deal_number": 316,
+      "token": "Callaghan Innovation (repayable grant)",
+      "canonical_investor": "Callaghan Innovation",
+      "action": "do_not_create",
+      "reason": "NZ$750k is a repayable grant, not equity; record separately from investor creation. | Program support; do not create as conventional investor."
+    },
+    {
+      "deal_number": 326,
+      "token": "NZVC",
+      "canonical_investor": "Angel Investors Marlborough; Enterprise Angels; NZVC",
+      "action": "do_not_create",
+      "reason": "CSV names not attached to this close by the strongest reviewed source."
+    },
+    {
+      "deal_number": 332,
+      "token": "Capital 49",
+      "canonical_investor": "Capital 49",
+      "action": "hold_unresolved",
+      "reason": "CSV names the investor, but public company release reviewed does not name it individually."
+    },
+    {
+      "deal_number": 339,
+      "token": "Boston",
+      "canonical_investor": "Boston (entity unresolved)",
+      "action": "hold_unresolved",
+      "reason": "Official announcement uses only 'Boston'; legal investor identity is insufficient for creation."
+    },
+    {
+      "deal_number": 345,
+      "token": "CDP Venture Capital (database attribution only)",
+      "canonical_investor": "CDP Venture Capital",
+      "action": "hold_unresolved",
+      "reason": "Database trace only; no reliable event confirmation found."
+    },
+    {
+      "deal_number": 351,
+      "token": "Apeirogon Group (database attribution only)",
+      "canonical_investor": "Apeirogon Group",
+      "action": "hold_unresolved",
+      "reason": "No reliable public confirmation found."
+    }
+  ],
+  "resolved_by_supplement": []
+}

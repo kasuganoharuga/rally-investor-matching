@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-294",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-294",
+    "dedupe_key": "2024|llusern-scientific-ltd|2024-10-10|unknown",
+    "source_url": "https://developmentbank.wales/news-and-events/development-bank-wales-invests-ps17-million-welsh-university-high-growth-spinouts",
+    "source_payload": {
+      "deal_number": 294,
+      "csv_investee": "Llusern Scientific",
+      "normalized_investee": "Llusern Scientific Ltd",
+      "csv_date": "2024-10-10",
+      "normalized_date": "2024-10-10 UK investment announcement",
+      "csv_round": "Seed",
+      "normalized_round": "UK university-spinout equity round",
+      "csv_amount": "GBP 1,700,000",
+      "normalized_amount": "Substantial six-figure company round; GBP 1.7m was aggregate for six Welsh spinouts",
+      "csv_investors": "Development Bank of Wales; SFC Capital",
+      "normalized_investors": "Development Bank of Wales; SFC Capital not proven for this event",
+      "verification": "rejected_scope",
+      "correction_or_issue": "The company is in Cardiff, Wales—not Cardiff, NSW. The official source says £1.7m was the total invested across six spinouts, while Llusern received a substantial six-figure round. Exclude from ANZ deal ingestion.",
+      "primary_source": "https://developmentbank.wales/news-and-events/development-bank-wales-invests-ps17-million-welsh-university-high-growth-spinouts",
+      "secondary_source": "https://find-and-update.company-information.service.gov.uk/company/12545380"
+    },
+    "investee_name_raw": "Llusern Scientific Ltd",
+    "org_location_raw": "Cardiff, Wales, United Kingdom",
+    "org_website_raw": "https://llusern.co.uk/",
+    "org_industries_raw": "Diagnostics / Medtech",
+    "round_type_raw": "UK university-spinout equity round",
+    "round_stage": "unknown",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-10-10",
+    "money_raised_raw": "Substantial six-figure company round; GBP 1.7m was aggregate for six Welsh spinouts",
+    "amount": 1700000,
+    "currency": "GBP",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Development Bank of Wales; SFC Capital not proven for this event",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "rejected_scope",
+    "verification_source_url": "https://developmentbank.wales/news-and-events/development-bank-wales-invests-ps17-million-welsh-university-high-growth-spinouts",
+    "verification_notes": "The company is in Cardiff, Wales—not Cardiff, NSW. The official source says £1.7m was the total invested across six spinouts, while Llusern received a substantial six-figure round. Exclude from ANZ deal ingestion.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:llusern-scientific"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:2ed63b86bf0057b1e7cb",
+      "source:url:34e8fedb18d2ae1b90a1"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

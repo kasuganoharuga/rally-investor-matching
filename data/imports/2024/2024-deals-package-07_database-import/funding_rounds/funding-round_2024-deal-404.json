@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-404",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-404",
+    "dedupe_key": "2024|dispute-buddy|2024-accelerator-investment-reporting|pre_seed",
+    "source_url": "https://www.thelawyermag.com/nz/news/general/nz-legaltech-startup-gets-backing-from-all-female-investment-collective/526074",
+    "source_payload": {
+      "deal_number": 404,
+      "csv_investee": "Dispute Buddy",
+      "normalized_investee": "Dispute Buddy",
+      "csv_date": "2024-09-09",
+      "normalized_date": "2024 accelerator / investment reporting",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-seed / accelerator-backed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Epic Angels; Techstars",
+      "normalized_investors": "Epic Angels; Techstars; angels",
+      "verification": "partial",
+      "correction_or_issue": "Epic Angels and Techstars participation are reported, but the cheque size and exact close date are not public.",
+      "primary_source": "https://www.thelawyermag.com/nz/news/general/nz-legaltech-startup-gets-backing-from-all-female-investment-collective/526074",
+      "secondary_source": "https://www.disputebuddy.co/"
+    },
+    "investee_name_raw": "Dispute Buddy",
+    "org_location_raw": "Tauranga, New Zealand",
+    "org_website_raw": "https://www.disputebuddy.co/",
+    "org_industries_raw": "Legal Tech",
+    "round_type_raw": "Pre-seed / accelerator-backed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Epic Angels; Techstars; angels",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://www.thelawyermag.com/nz/news/general/nz-legaltech-startup-gets-backing-from-all-female-investment-collective/526074",
+    "verification_notes": "Epic Angels and Techstars participation are reported, but the cheque size and exact close date are not public.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:dispute-buddy"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:06458ca08ce3247bf053",
+      "source:url:b69f9dd31825ed0050fc"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Epic Angels and Techstars participation are reported, but the cheque size and exact close date are not public.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

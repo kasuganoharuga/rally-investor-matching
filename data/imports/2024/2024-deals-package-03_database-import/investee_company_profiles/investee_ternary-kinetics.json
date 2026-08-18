@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:ternary-kinetics",
+  "operation": "upsert",
+  "data": {
+    "name": "Ternary Kinetics",
+    "website_url": "https://www.ternary.energy/",
+    "crunchbase_uuid": null,
+    "hq_country": "NZ",
+    "hq_state": null,
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "climate-deeptech-energy",
+    "sector_secondary": null,
+    "use_case_primary": "develops-a-pumpable-storable-and-shippable-liquid-energy-carrier-for-renewable-energy-systems",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "industrial-technology",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Develops a pumpable, storable and shippable liquid-energy carrier for renewable-energy systems.",
+    "source_urls": [
+      "https://www.ternary.energy/",
+      "https://www.linkedin.com/posts/matrowe_an-exciting-eoy-for-the-outset-ventures-team-activity-7277058782151561216-rWBa",
+      "https://outset.ventures/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

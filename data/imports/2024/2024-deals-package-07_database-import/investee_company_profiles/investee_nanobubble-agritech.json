@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:nanobubble-agritech",
+  "operation": "upsert",
+  "data": {
+    "name": "Nanobubble Agritech",
+    "website_url": "https://www.nanobubbleagritech.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "NZ",
+    "hq_state": null,
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "agtech-water-tech",
+    "sector_secondary": null,
+    "use_case_primary": "nanobubble-water-treatment-systems-improving-oxygenation-irrigation-efficiency-and-crop-outcomes",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "hardware-services",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Nanobubble water-treatment systems improving oxygenation, irrigation efficiency and crop outcomes.",
+    "source_urls": [
+      "https://www.nanobubbleagritech.com/",
+      "https://www.enterpriseangels.co.nz/project/nanobubble-agritech/",
+      "https://www.pacificchannel.com/stories/nanobubble-agritech"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

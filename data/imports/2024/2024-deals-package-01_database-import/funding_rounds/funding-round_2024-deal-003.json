@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-003",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-003",
+    "dedupe_key": "2024|squarebysquare|2024-02-20|pre_seed",
+    "source_url": "https://squarebysquare.org/",
+    "source_payload": {
+      "deal_number": 3,
+      "csv_investee": "SquareBySquare",
+      "normalized_investee": "SquareBySquare",
+      "csv_date": "2024-02-20",
+      "normalized_date": "2024-02-20",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-Seed / REACH accelerator",
+      "csv_amount": "USD 100,000",
+      "normalized_amount": "USD 100,000 (single-source)",
+      "csv_investors": "Second Century Ventures (lead); REACH",
+      "normalized_investors": "Second Century Ventures / REACH ANZ",
+      "verification": "partial",
+      "correction_or_issue": "SCV owns/operates REACH; avoid double counting the accelerator and its investment arm as unrelated investors.",
+      "primary_source": "https://squarebysquare.org/",
+      "secondary_source": "https://reachanz.com/"
+    },
+    "investee_name_raw": "SquareBySquare",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://squarebysquare.org/",
+    "org_industries_raw": "Climate / Conservation / Proptech",
+    "round_type_raw": "Pre-Seed / REACH accelerator",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-02-20",
+    "money_raised_raw": "USD 100,000 (single-source)",
+    "amount": 100000,
+    "currency": "USD",
+    "amount_usd": 100000,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Second Century Ventures / REACH ANZ",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://squarebysquare.org/",
+    "verification_notes": "SCV owns/operates REACH; avoid double counting the accelerator and its investment arm as unrelated investors.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:squarebysquare"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:0b881df526012e2315b3",
+      "source:url:09b0ccccedd9e5a86c41"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "SCV owns/operates REACH; avoid double counting the accelerator and its investment arm as unrelated investors."
+    ]
+  }
+}

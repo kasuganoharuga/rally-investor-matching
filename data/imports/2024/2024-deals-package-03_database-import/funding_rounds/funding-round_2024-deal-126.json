@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-126",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-126",
+    "dedupe_key": "2024|golf-ai|2024-08-database-only|seed",
+    "source_url": "https://golf.ai/",
+    "source_payload": {
+      "deal_number": 126,
+      "csv_investee": "Golf.ai",
+      "normalized_investee": "Golf.ai",
+      "csv_date": "2024-08-22",
+      "normalized_date": "2024-08 (database-only)",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Unverified seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "No investor confirmed",
+      "verification": "needs_review",
+      "correction_or_issue": "Company profile is verifiable, but no authoritative financing announcement, amount or investor was found.",
+      "primary_source": "https://golf.ai/",
+      "secondary_source": "https://app.dealroom.co/companies/golf_ai"
+    },
+    "investee_name_raw": "Golf.ai",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://golf.ai/",
+    "org_industries_raw": "Sports Tech / AI",
+    "round_type_raw": "Unverified seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "No investor confirmed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://golf.ai/",
+    "verification_notes": "Company profile is verifiable, but no authoritative financing announcement, amount or investor was found.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:golf-ai"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:0c9e5b7a1831235b8eea",
+      "source:url:31f4b654b93e81f5c488"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Company profile is verifiable, but no authoritative financing announcement, amount or investor was found.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

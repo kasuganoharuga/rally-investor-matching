@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-297",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-297",
+    "dedupe_key": "2024|bandicoot-imaging-sciences-pty-ltd|2024-02-20|pre_seed",
+    "source_url": "https://www.bandicootimaging.com/post/bandicoot-imaging-sciences-raises-aud-1-million-to-accelerate-accurate-and-scalable-fabric-digitisation-for-3d-and-dpc",
+    "source_payload": {
+      "deal_number": 297,
+      "csv_investee": "Bandicoot Imaging Sciences",
+      "normalized_investee": "Bandicoot Imaging Sciences Pty Ltd",
+      "csv_date": "2024-02-20",
+      "normalized_date": "2024-02-20",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-seed",
+      "csv_amount": "AUD 1,000,000",
+      "normalized_amount": "AUD 1,000,000",
+      "csv_investors": "Mou Fung; Precision Textiles; Qonvolv Ventures; UNSW Founders",
+      "normalized_investors": "Qonvolv Ventures (lead); Precision Textiles; Mou Fung Ltd; NewSouth Innovations / UNSW (existing investor)",
+      "verification": "verified",
+      "correction_or_issue": "The company's official announcement confirms the amount, date and syndicate and clarifies that NewSouth Innovations—not the UNSW Founders accelerator—was the previous investor.",
+      "primary_source": "https://www.bandicootimaging.com/post/bandicoot-imaging-sciences-raises-aud-1-million-to-accelerate-accurate-and-scalable-fabric-digitisation-for-3d-and-dpc",
+      "secondary_source": "https://www.qonvolv.ventures/"
+    },
+    "investee_name_raw": "Bandicoot Imaging Sciences Pty Ltd",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.bandicootimaging.com/",
+    "org_industries_raw": "Fashion Tech / Imaging",
+    "round_type_raw": "Pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-02-20",
+    "money_raised_raw": "AUD 1,000,000",
+    "amount": 1000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Qonvolv Ventures (lead); Precision Textiles; Mou Fung Ltd; NewSouth Innovations / UNSW (existing investor)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.bandicootimaging.com/post/bandicoot-imaging-sciences-raises-aud-1-million-to-accelerate-accurate-and-scalable-fabric-digitisation-for-3d-and-dpc",
+    "verification_notes": "The company's official announcement confirms the amount, date and syndicate and clarifies that NewSouth Innovations—not the UNSW Founders accelerator—was the previous investor.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:bandicoot-imaging-sciences"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:2c8ff6e83eb10b6fe435",
+      "source:url:fbd4ae3048da9a43a74f"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

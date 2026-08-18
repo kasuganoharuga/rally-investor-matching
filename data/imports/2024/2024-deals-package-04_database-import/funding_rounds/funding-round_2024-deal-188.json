@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-188",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-188",
+    "dedupe_key": "2024|buddy-tradebuddy|2024-03-18|pre_seed",
+    "source_url": "https://www.gd1.vc/blog/gd1-investment-notes---buddy",
+    "source_payload": {
+      "deal_number": 188,
+      "csv_investee": "Buddy",
+      "normalized_investee": "Buddy / TradeBuddy",
+      "csv_date": "2024-03-18",
+      "normalized_date": "2024-03-18 announcement; investment timing may be 2023",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-Seed",
+      "csv_amount": "NZD 1,500,000",
+      "normalized_amount": "NZD 1,500,000 (database-led)",
+      "csv_investors": "GD1",
+      "normalized_investors": "GD1 (lead)",
+      "verification": "partial",
+      "correction_or_issue": "GD1 officially announced its investment on 18 March 2024, while ecosystem data indicates Buddy financing activity in late 2023; retain announcement-date inclusion with caveat.",
+      "primary_source": "https://www.gd1.vc/blog/gd1-investment-notes---buddy",
+      "secondary_source": "https://www.gd1.vc/portfolio/buddy"
+    },
+    "investee_name_raw": "Buddy / TradeBuddy",
+    "org_location_raw": "Auckland, New Zealand",
+    "org_website_raw": "https://www.tradebuddy.io/",
+    "org_industries_raw": "Circular Economy / Marketplace",
+    "round_type_raw": "Pre-Seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-03-18",
+    "money_raised_raw": "NZD 1,500,000 (database-led)",
+    "amount": 1500000,
+    "currency": "NZD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "GD1 (lead)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://www.gd1.vc/blog/gd1-investment-notes---buddy",
+    "verification_notes": "GD1 officially announced its investment on 18 March 2024, while ecosystem data indicates Buddy financing activity in late 2023; retain announcement-date inclusion with caveat.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:buddy"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:0ce0cebf7e328b9a2876",
+      "source:url:1a033632bedd98fe8dbc"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "GD1 officially announced its investment on 18 March 2024, while ecosystem data indicates Buddy financing activity in late 2023; retain announcement-date inclusion with caveat."
+    ]
+  }
+}

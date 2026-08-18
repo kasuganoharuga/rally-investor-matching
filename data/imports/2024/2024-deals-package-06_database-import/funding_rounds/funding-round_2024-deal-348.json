@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-348",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-348",
+    "dedupe_key": "2024|nucanon-formerly-stori|2024-05-06|pre_seed",
+    "source_url": "https://www.startupdaily.net/topic/funding/jason-calacanis-backed-stori-rebrands-as-nucanon-after-500000-raise/",
+    "source_payload": {
+      "deal_number": 348,
+      "csv_investee": "Nucanon",
+      "normalized_investee": "Nucanon (formerly Stori)",
+      "csv_date": "2024-05-04",
+      "normalized_date": "2024-05-06 announcement",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-seed",
+      "csv_amount": "AUD 500,000",
+      "normalized_amount": "AUD 500,000",
+      "csv_investors": "Skalata; Antler; Futureverse; Mark Aubrey; Paperclip Partners",
+      "normalized_investors": "Skalata Ventures (lead); Outlier Ventures; Paperclip Partners; Mark Aubrey; Antler",
+      "verification": "corrected",
+      "correction_or_issue": "Contemporaneous reporting confirms the amount and adds Outlier Ventures. Futureverse appears in a founder post but not the strongest event report and remains a caveat.",
+      "primary_source": "https://www.startupdaily.net/topic/funding/jason-calacanis-backed-stori-rebrands-as-nucanon-after-500000-raise/",
+      "secondary_source": "https://www.linkedin.com/posts/nilukulasingham_thrilled-to-announce-our-500k-pre-seed-lead-activity-7191600235104595968-nbY2"
+    },
+    "investee_name_raw": "Nucanon (formerly Stori)",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.nucanon.com/",
+    "org_industries_raw": "Gaming Tools / Generative AI",
+    "round_type_raw": "Pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-05-06",
+    "money_raised_raw": "AUD 500,000",
+    "amount": 500000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Skalata Ventures (lead); Outlier Ventures; Paperclip Partners; Mark Aubrey; Antler",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.startupdaily.net/topic/funding/jason-calacanis-backed-stori-rebrands-as-nucanon-after-500000-raise/",
+    "verification_notes": "Contemporaneous reporting confirms the amount and adds Outlier Ventures. Futureverse appears in a founder post but not the strongest event report and remains a caveat.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:nucanon"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:4fa10a2bca9c93b0f362",
+      "source:url:165c41725d0b375dc528"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

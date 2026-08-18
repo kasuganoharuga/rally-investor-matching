@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:alt-leather",
+  "operation": "upsert",
+  "data": {
+    "name": "Alt.Leather",
+    "website_url": "https://alt-leather.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "Victoria",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "advanced-materials-climate-tech",
+    "sector_secondary": null,
+    "use_case_primary": "biomaterials-company-developing-a-100-bio-based-plastic-free-alternative-to-animal-leather",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "materials-manufacturing-licensing",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Biomaterials company developing a 100% bio-based, plastic-free alternative to animal leather.",
+    "source_urls": [
+      "https://alt-leather.com/",
+      "https://worldbiomarketinsights.com/alt-leather-raises-1-1-m-in-seed-funding-for-biobased-materials/",
+      "https://i3connect.com/company/alt-leather"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-08_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

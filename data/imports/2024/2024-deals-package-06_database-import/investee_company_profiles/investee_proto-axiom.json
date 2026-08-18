@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:proto-axiom",
+  "operation": "upsert",
+  "data": {
+    "name": "Proto Axiom",
+    "website_url": "https://www.protoaxiom.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "biotech-venture-building",
+    "sector_secondary": null,
+    "use_case_primary": "biomedical-technology-incubator-building-and-financing-australian-biotech-ventures-while-retaining-intellectual-property",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "incubator-company-builder",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Biomedical technology incubator building and financing Australian biotech ventures while retaining intellectual property locally.",
+    "source_urls": [
+      "https://www.protoaxiom.com/",
+      "https://www.prnewswire.com/apac/news-releases/australian-biotech-incubator-proto-axiom-announces-20m-series-b-first-close-302220533.html"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

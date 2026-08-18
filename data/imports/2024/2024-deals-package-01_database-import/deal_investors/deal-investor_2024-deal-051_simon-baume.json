@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "table": "deal_investors",
+  "record_key": "deal_investor:research-package:2024-deal-051:simon-baume",
+  "operation": "upsert",
+  "data": {
+    "raw_name": "Simon Baume",
+    "role": "participant",
+    "participation_status": "confirmed",
+    "resolution": "resolved_from_supplemental_evidence",
+    "resolution_confidence": "medium",
+    "identity_resolution": "supplemental_investor"
+  },
+  "refs": {
+    "deal_key": "funding_round:research-package:2024-deal-051",
+    "investor_key": "investor:simon-baume",
+    "raw_investor_candidate_key": "raw_investor_candidate:simon-baume"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-supplement:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:0113ac141418af36a4dd",
+      "source:url:25323740e133211cee87"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Participation is reported, but the public source groups the investment under a family name or advisory identity."
+    ]
+  }
+}

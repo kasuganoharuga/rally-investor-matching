@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-115",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-115",
+    "dedupe_key": "2024|spatialgpt|2024-05-22|seed",
+    "source_url": "https://www.aap.com.au/aapreleases/cision20240521ae19318/",
+    "source_payload": {
+      "deal_number": 115,
+      "csv_investee": "SpatialGPT.ai",
+      "normalized_investee": "SpatialGPT",
+      "csv_date": "2024-05-20",
+      "normalized_date": "2024-05-22 announcement",
+      "csv_round": "Seed",
+      "normalized_round": "Venture-studio seed investment",
+      "csv_amount": "AUD 5,100,000",
+      "normalized_amount": "AUD 5,100,000",
+      "csv_investors": "InnovateGPT Group",
+      "normalized_investors": "InnovateGPT Group",
+      "verification": "verified",
+      "correction_or_issue": "Public company release confirms A$5.1m investment by venture studio InnovateGPT.",
+      "primary_source": "https://www.aap.com.au/aapreleases/cision20240521ae19318/",
+      "secondary_source": "https://www.cbinsights.com/company/spatialgpt/financials"
+    },
+    "investee_name_raw": "SpatialGPT",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://spatialgpt.ai/",
+    "org_industries_raw": "Spatial Computing / Generative AI",
+    "round_type_raw": "Venture-studio seed investment",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-05-22",
+    "money_raised_raw": "AUD 5,100,000",
+    "amount": 5100000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "InnovateGPT Group",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.aap.com.au/aapreleases/cision20240521ae19318/",
+    "verification_notes": "Public company release confirms A$5.1m investment by venture studio InnovateGPT.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:spatialgpt"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:fbef7d7735d9c465f921",
+      "source:url:de2542ea1d42e7b38a3a"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-364",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-364",
+    "dedupe_key": "2024|logrium|2024-01-database-record-only|seed",
+    "source_url": "https://www.logrium.com/",
+    "source_payload": {
+      "deal_number": 364,
+      "csv_investee": "Logrium",
+      "normalized_investee": "Logrium",
+      "csv_date": "2024-01-07",
+      "normalized_date": "2024-01 (database record only)",
+      "csv_round": "Seed",
+      "normalized_round": "Seed / database-only",
+      "csv_amount": "USD 2,000,000",
+      "normalized_amount": "Unverified",
+      "csv_investors": null,
+      "normalized_investors": "Undisclosed / no verified investor",
+      "verification": "needs_review",
+      "correction_or_issue": "No reliable contemporaneous source was found for the financing amount, date or syndicate.",
+      "primary_source": "https://www.logrium.com/",
+      "secondary_source": "https://www.linkedin.com/company/logrium/"
+    },
+    "investee_name_raw": "Logrium",
+    "org_location_raw": "Sydney, NSW, Australia (database location)",
+    "org_website_raw": "https://www.logrium.com/",
+    "org_industries_raw": "Web3 / Automation",
+    "round_type_raw": "Seed / database-only",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": null,
+    "money_raised_raw": "Unverified",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed / no verified investor",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-07_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://www.logrium.com/",
+    "verification_notes": "No reliable contemporaneous source was found for the financing amount, date or syndicate.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown",
+    "amount_disclosure_status": "no_reliable_amount_or_event_source",
+    "amount_structuring_note": "No reliable contemporaneous source verifies the US$2m financing amount, date or syndicate.",
+    "supplemental_verification_urls": []
+  },
+  "refs": {
+    "investee_company_key": "company:research:logrium"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-07_database-import",
+    "source_keys": [
+      "source:url:162c757f7357429dddff",
+      "source:url:53869c85848e182aaf05"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "No reliable contemporaneous source was found for the financing amount, date or syndicate.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

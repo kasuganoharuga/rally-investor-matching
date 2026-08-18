@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-012",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-012",
+    "dedupe_key": "2024|bygen|2024-04-16|series_a",
+    "source_url": "https://www.investible.com/blog/investment-notes-bygen",
+    "source_payload": {
+      "deal_number": 12,
+      "csv_investee": "Bygen",
+      "normalized_investee": "Bygen",
+      "csv_date": "2024-04-15",
+      "normalized_date": "2024-04-16",
+      "csv_round": "Series A",
+      "normalized_round": "Series A",
+      "csv_amount": "AUD 2,600,000",
+      "normalized_amount": "AUD 2,600,000",
+      "csv_investors": "Breakthrough Victoria (lead); Alberts Impact Ventures; Artesian VC; Investible; Startmate",
+      "normalized_investors": "Breakthrough Victoria (lead); Alberts Impact Ventures; Artesian; Investible; Startmate",
+      "verification": "verified",
+      "correction_or_issue": "Official investor note supports round; use 16 Apr publication/announcement date.",
+      "primary_source": "https://www.investible.com/blog/investment-notes-bygen",
+      "secondary_source": "https://www.startupdaily.net/topic/funding/agricultural-waste-conversation-startup-bygen-banks-2-6-million-series-a/"
+    },
+    "investee_name_raw": "Bygen",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://www.bygen.com.au/",
+    "org_industries_raw": "Climate / Advanced Materials",
+    "round_type_raw": "Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-04-16",
+    "money_raised_raw": "AUD 2,600,000",
+    "amount": 2600000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Breakthrough Victoria (lead); Alberts Impact Ventures; Artesian; Investible; Startmate",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "verified",
+    "verification_source_url": "https://www.investible.com/blog/investment-notes-bygen",
+    "verification_notes": "Official investor note supports round; use 16 Apr publication/announcement date.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:bygen"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:5adeb9fa3ecfe8bae762",
+      "source:url:eae4c6bce706a9170ae6"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

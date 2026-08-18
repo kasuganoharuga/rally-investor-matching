@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-108",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-108",
+    "dedupe_key": "2024|veyor-digital|2024-04-23|series_a",
+    "source_url": "https://www.itnews.com.au/news/veyor-digital-lands-275m-in-pre-series-a-funding-607313",
+    "source_payload": {
+      "deal_number": 108,
+      "csv_investee": "Veyor",
+      "normalized_investee": "Veyor Digital",
+      "csv_date": "2024-04-23",
+      "normalized_date": "2024-04-23",
+      "csv_round": "Seed",
+      "normalized_round": "Pre-Series A",
+      "csv_amount": "AUD 2,750,000",
+      "normalized_amount": "AUD 2,750,000",
+      "csv_investors": "Gravel Road Ventures; Investible; Leigh Jasper; Robert Phillpot; Saniel Ventures; SpringCapital Investment",
+      "normalized_investors": "Investible (lead); Club Investible; Saniel Ventures; Gravel Road Ventures; Leigh Jasper and Rob Phillpot family offices; other angels",
+      "verification": "corrected",
+      "correction_or_issue": "Official-quality reporting calls the round pre-Series A and does not confirm SpringCapital.",
+      "primary_source": "https://www.itnews.com.au/news/veyor-digital-lands-275m-in-pre-series-a-funding-607313",
+      "secondary_source": "https://www.veyordigital.com/"
+    },
+    "investee_name_raw": "Veyor Digital",
+    "org_location_raw": "Sydney, NSW, Australia / USA",
+    "org_website_raw": "https://www.veyordigital.com/",
+    "org_industries_raw": "Contech / Logistics SaaS",
+    "round_type_raw": "Pre-Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Seed",
+    "announced_date": "2024-04-23",
+    "money_raised_raw": "AUD 2,750,000",
+    "amount": 2750000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Investible (lead); Club Investible; Saniel Ventures; Gravel Road Ventures; Leigh Jasper and Rob Phillpot family offices; other angels",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.itnews.com.au/news/veyor-digital-lands-275m-in-pre-series-a-funding-607313",
+    "verification_notes": "Official-quality reporting calls the round pre-Series A and does not confirm SpringCapital.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:veyor-digital"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:10be42ae0fd4acb3d5d3",
+      "source:url:4f1cf2670dad6207ca66"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

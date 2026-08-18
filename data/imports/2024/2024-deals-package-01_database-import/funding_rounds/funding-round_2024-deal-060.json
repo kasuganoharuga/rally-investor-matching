@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-060",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-060",
+    "dedupe_key": "2024|celosia-therapeutics|2024-11-28|series_a",
+    "source_url": "https://uniseed.com/wp-content/uploads/2024/11/Celosia-Secures-Landmark-1.pdf",
+    "source_payload": {
+      "deal_number": 60,
+      "csv_investee": "Celosia Therapeutics",
+      "normalized_investee": "Celosia Therapeutics",
+      "csv_date": "2024-11-27",
+      "normalized_date": "2024-11-28",
+      "csv_round": "Series A",
+      "normalized_round": "Series A",
+      "csv_amount": "USD 16,750,000",
+      "normalized_amount": "AUD 16,750,000",
+      "csv_investors": "Uniseed",
+      "normalized_investors": "Uniseed (lead); Iomar Barrett; UniSuper",
+      "verification": "corrected",
+      "correction_or_issue": "Official Uniseed release confirms A$16.75m and additional participants.",
+      "primary_source": "https://uniseed.com/wp-content/uploads/2024/11/Celosia-Secures-Landmark-1.pdf",
+      "secondary_source": "https://www.cbinsights.com/company/celosia-therapeutics/financials"
+    },
+    "investee_name_raw": "Celosia Therapeutics",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": null,
+    "org_industries_raw": "Biotech / Gene Therapy",
+    "round_type_raw": "Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-11-28",
+    "money_raised_raw": "AUD 16,750,000",
+    "amount": 16750000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Uniseed (lead); Iomar Barrett; UniSuper",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-01_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://uniseed.com/wp-content/uploads/2024/11/Celosia-Secures-Landmark-1.pdf",
+    "verification_notes": "Official Uniseed release confirms A$16.75m and additional participants.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:celosia-therapeutics"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": [
+      "source:url:548056e2abc6f0a3f6e8",
+      "source:url:d1783876850fb58cd4b2"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

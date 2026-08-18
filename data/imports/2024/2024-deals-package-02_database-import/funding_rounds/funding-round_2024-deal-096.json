@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-096",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-096",
+    "dedupe_key": "2024|conflux-technology|2024-10-22|series_b",
+    "source_url": "https://www.confluxtechnology.com/resources/press-releases/conflux-raises-11m-in-series-b-funding-to-help-innovative-companies-achieve-net-zero-through-heat-exchange/",
+    "source_payload": {
+      "deal_number": 96,
+      "csv_investee": "Conflux Technology",
+      "normalized_investee": "Conflux Technology",
+      "csv_date": "2024-10-21",
+      "normalized_date": "2024-10-22 announcement",
+      "csv_round": "Series B",
+      "normalized_round": "Series B",
+      "csv_amount": "USD 11,000,000",
+      "normalized_amount": "AUD 11,000,000",
+      "csv_investors": "Breakthrough Victoria; Acorn Capital; AM Ventures",
+      "normalized_investors": "Breakthrough Victoria (lead, A$5m); AM Ventures; Acorn Capital",
+      "verification": "corrected",
+      "correction_or_issue": "Company and Australian manufacturing coverage confirm A$11m; CSV currency corrected.",
+      "primary_source": "https://www.confluxtechnology.com/resources/press-releases/conflux-raises-11m-in-series-b-funding-to-help-innovative-companies-achieve-net-zero-through-heat-exchange/",
+      "secondary_source": "https://www.aumanufacturing.com.au/conflux-technology-secures-11-million-in-series-b-round"
+    },
+    "investee_name_raw": "Conflux Technology",
+    "org_location_raw": "Waurn Ponds, VIC, Australia",
+    "org_website_raw": "https://www.confluxtechnology.com/",
+    "org_industries_raw": "Advanced Manufacturing / Climate Tech",
+    "round_type_raw": "Series B",
+    "round_stage": "series_b",
+    "funding_stage_raw": "Series B",
+    "announced_date": "2024-10-22",
+    "money_raised_raw": "AUD 11,000,000",
+    "amount": 11000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Breakthrough Victoria (lead, A$5m); AM Ventures; Acorn Capital",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-02_database-import",
+    "verification_status": "corrected",
+    "verification_source_url": "https://www.confluxtechnology.com/resources/press-releases/conflux-raises-11m-in-series-b-funding-to-help-innovative-companies-achieve-net-zero-through-heat-exchange/",
+    "verification_notes": "Company and Australian manufacturing coverage confirm A$11m; CSV currency corrected.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:conflux-technology"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-02_database-import",
+    "source_keys": [
+      "source:url:1433fa3ba44cc533e3be",
+      "source:url:8363d44733549a2d94a5"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

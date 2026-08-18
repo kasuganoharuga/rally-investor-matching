@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-223",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-223",
+    "dedupe_key": "2024|enevaro-carbontrack|no-genuine-january-1-close-corroborated|series_b",
+    "source_url": "https://app.dealroom.co/companies/carbontrack",
+    "source_payload": {
+      "deal_number": 223,
+      "csv_investee": "Enevaro",
+      "normalized_investee": "Enevaro / carbonTRACK",
+      "csv_date": "2024-01-01",
+      "normalized_date": "No genuine January 1 close corroborated",
+      "csv_round": "Series B",
+      "normalized_round": "Unverified Series B",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "2024 investor undisclosed; Wolf Capital Ventures is historical",
+      "verification": "needs_review",
+      "correction_or_issue": "Funding databases list a January 2024 Series B without amount or investors. Wolf Capital is tied to a 2015 seed, not proven for this event.",
+      "primary_source": "https://app.dealroom.co/companies/carbontrack",
+      "secondary_source": "https://www.vcbacked.co/company/enevaro"
+    },
+    "investee_name_raw": "Enevaro / carbonTRACK",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://enevaro.com.au/",
+    "org_industries_raw": "Energy Tech / IoT",
+    "round_type_raw": "Unverified Series B",
+    "round_stage": "series_b",
+    "funding_stage_raw": "Series B",
+    "announced_date": null,
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "2024 investor undisclosed; Wolf Capital Ventures is historical",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-04_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://app.dealroom.co/companies/carbontrack",
+    "verification_notes": "Funding databases list a January 2024 Series B without amount or investors. Wolf Capital is tied to a 2015 seed, not proven for this event.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:enevaro-carbontrack"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": [
+      "source:url:19be07a9cf52ddb738c0",
+      "source:url:0800ddc15fb8466e6e76"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Funding databases list a January 2024 Series B without amount or investors. Wolf Capital is tied to a 2015 seed, not proven for this event.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

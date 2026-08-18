@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "table": "deal_investors",
+  "record_key": "deal_investor:research-package:2024-deal-207:bailador-technology-investments",
+  "operation": "upsert",
+  "data": {
+    "raw_name": "Bailador Technology Investments (A$7.7m)",
+    "role": "participant",
+    "participation_status": "confirmed",
+    "resolution": "resolved",
+    "resolution_confidence": "medium",
+    "identity_resolution": "existing_investor_deduped"
+  },
+  "refs": {
+    "deal_key": "funding_round:research-package:2024-deal-207",
+    "investor_key": "investor:bailador-technology-investments",
+    "raw_investor_candidate_key": "raw_investor_candidate:bailador-technology-investments-a-7-7m"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

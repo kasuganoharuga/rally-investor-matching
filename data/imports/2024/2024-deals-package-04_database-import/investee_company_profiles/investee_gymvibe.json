@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:gymvibe",
+  "operation": "upsert",
+  "data": {
+    "name": "GymVibe",
+    "website_url": "https://lifelikedigital.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "NZ",
+    "hq_state": null,
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "fitness-tech-ai-xr",
+    "sector_secondary": null,
+    "use_case_primary": "ai-powered-virtual-personal-trainer-using-realistic-3d-characters-across-ar-vr-and-spatial-computing-environments",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "consumer-software",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "ai_related",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "AI-powered virtual personal trainer using realistic 3D characters across AR, VR and spatial-computing environments.",
+    "source_urls": [
+      "https://lifelikedigital.com/",
+      "https://outlierventures.io/article/outlier-ventures-and-futureverse-announce-the-first-cohort-for-the-futureverse-base-camp-accelerator-program/",
+      "https://outlierventures.io/base-camp/futureverse-base-camp/"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-04_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

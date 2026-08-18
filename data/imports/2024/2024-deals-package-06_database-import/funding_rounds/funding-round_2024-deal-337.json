@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-337",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-337",
+    "dedupe_key": "2024|honey-insurance|2024-04-08|series_a",
+    "source_url": "https://www.businessnewsaustralia.com/articles/honey-insurance-raises--108m-led-by-us-investor-gallatin-point-capital.html",
+    "source_payload": {
+      "deal_number": 337,
+      "csv_investee": "Honey Insurance",
+      "normalized_investee": "Honey Insurance",
+      "csv_date": "2024-04-08",
+      "normalized_date": "2024-04-08",
+      "csv_round": "Series A",
+      "normalized_round": "Series A",
+      "csv_amount": "AUD 108,000,000",
+      "normalized_amount": "AUD 108,000,000",
+      "csv_investors": "Gallatin Point Capital; Saniel Ventures",
+      "normalized_investors": "Gallatin Point Capital (lead); other private investors",
+      "verification": "partial",
+      "correction_or_issue": "A$108m and Gallatin's lead are verified. Strong sources do not name Saniel in the 2024 Series A, so it is not attached to this event.",
+      "primary_source": "https://www.businessnewsaustralia.com/articles/honey-insurance-raises--108m-led-by-us-investor-gallatin-point-capital.html",
+      "secondary_source": "https://www.abl.com.au/insights-and-news/abl-advises-honey-insurance-on-the-third-largest-series-a-funding-round-ever-recorded-in-australian-tech/"
+    },
+    "investee_name_raw": "Honey Insurance",
+    "org_location_raw": "Sydney, NSW, Australia",
+    "org_website_raw": "https://www.honeyinsurance.com/",
+    "org_industries_raw": "Insurtech",
+    "round_type_raw": "Series A",
+    "round_stage": "series_a",
+    "funding_stage_raw": "Series A",
+    "announced_date": "2024-04-08",
+    "money_raised_raw": "AUD 108,000,000",
+    "amount": 108000000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Gallatin Point Capital (lead); other private investors",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-06_database-import",
+    "verification_status": "partial",
+    "verification_source_url": "https://www.businessnewsaustralia.com/articles/honey-insurance-raises--108m-led-by-us-investor-gallatin-point-capital.html",
+    "verification_notes": "A$108m and Gallatin's lead are verified. Strong sources do not name Saniel in the 2024 Series A, so it is not attached to this event.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:honey-insurance"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": [
+      "source:url:f71269eb453e70664cdb",
+      "source:url:0dcad75e09316061bae5"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "A$108m and Gallatin's lead are verified. Strong sources do not name Saniel in the 2024 Series A, so it is not attached to this event."
+    ]
+  }
+}

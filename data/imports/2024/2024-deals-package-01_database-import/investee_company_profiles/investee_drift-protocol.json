@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:drift-protocol",
+  "operation": "upsert",
+  "data": {
+    "name": "Drift Protocol",
+    "website_url": "https://www.drift.trade/",
+    "crunchbase_uuid": null,
+    "hq_country": null,
+    "hq_state": null,
+    "hq_city": null,
+    "is_anz": false,
+    "sector_primary": "crypto-defi",
+    "sector_secondary": null,
+    "use_case_primary": "decentralised-exchange-and-on-chain-trading-protocol",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "protocol",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Decentralised exchange and on-chain trading protocol.",
+    "source_urls": [
+      "https://www.drift.trade/",
+      "https://www.drift.trade/updates/drift-raises-25m-in-series-b-funding-led-by-multicoin"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "medium"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-01_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Investee headquarters country could not be normalized from the research package."
+    ]
+  }
+}

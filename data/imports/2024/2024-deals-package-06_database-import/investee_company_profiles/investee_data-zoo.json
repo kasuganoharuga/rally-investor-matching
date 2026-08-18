@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0.0",
+  "table": "investee_company_profiles",
+  "record_key": "company:research:data-zoo",
+  "operation": "upsert",
+  "data": {
+    "name": "Data Zoo",
+    "website_url": "https://www.datazoo.com/",
+    "crunchbase_uuid": null,
+    "hq_country": "AU",
+    "hq_state": "New South Wales",
+    "hq_city": null,
+    "is_anz": true,
+    "sector_primary": "regtech-identity-verification",
+    "sector_secondary": null,
+    "use_case_primary": "global-identity-verification-platform-providing-privacy-focused-kyc-and-kyb-checks-using-authoritative-data-sources",
+    "use_case_secondary": [],
+    "customer_type": "unknown",
+    "business_model": "b2b-saas-api",
+    "sales_motion": "unknown",
+    "technology_depth": "unknown",
+    "ai_relevance": "unknown",
+    "ai_usage_type": null,
+    "ai_core_or_enabler": null,
+    "company_summary": "Global identity-verification platform providing privacy-focused KYC and KYB checks using authoritative data sources.",
+    "source_urls": [
+      "https://www.datazoo.com/",
+      "https://www.prnewswire.com/news-releases/data-zoo-secures-22-7-million-in-series-a-funding-from-ellerston-jaade-to-fuel-global-expansion-302144371.html",
+      "https://ellerstoncapital.com/wp-content/uploads/2024/05/JAADE-Flyer-May-2024-Final.pdf"
+    ],
+    "retrieved_at": "2026-08-14",
+    "raw_content_hash": null,
+    "extraction_model": "codex-2024-research-package-conversion",
+    "extraction_version": "1.0.0",
+    "confidence": "high"
+  },
+  "refs": {},
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-06_database-import",
+    "source_keys": []
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-167",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-167",
+    "dedupe_key": "2024|myth|2024-token-activity-financing-date-unverified|pre_seed",
+    "source_url": "https://icodrops.com/myth/",
+    "source_payload": {
+      "deal_number": 167,
+      "csv_investee": "Myth",
+      "normalized_investee": "Myth",
+      "csv_date": "2024-10-01",
+      "normalized_date": "2024 token activity; financing date unverified",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Unverified pre-seed / accelerator relationship",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "Undisclosed",
+      "csv_investors": "Brinc",
+      "normalized_investors": "Brinc (database relationship only)",
+      "verification": "needs_review",
+      "correction_or_issue": "Myth's 2024 token activity is visible, but no reliable pre-seed close, amount or Brinc company-specific announcement was found.",
+      "primary_source": "https://icodrops.com/myth/",
+      "secondary_source": "http://www.myth.fans"
+    },
+    "investee_name_raw": "Myth",
+    "org_location_raw": "Australia / global",
+    "org_website_raw": "http://www.myth.fans",
+    "org_industries_raw": "Media / Web3",
+    "round_type_raw": "Unverified pre-seed / accelerator relationship",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": null,
+    "money_raised_raw": "Undisclosed",
+    "amount": null,
+    "currency": null,
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Brinc (database relationship only)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-03_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://icodrops.com/myth/",
+    "verification_notes": "Myth's 2024 token activity is visible, but no reliable pre-seed close, amount or Brinc company-specific announcement was found.",
+    "verification_checked_at": "2026-08-14",
+    "amount_disclosure_status": "publicly_undisclosed",
+    "amount_structuring_note": "Public evidence does not disclose a round amount.",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:myth"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-03_database-import",
+    "source_keys": [
+      "source:url:527f86d536062fb9125c",
+      "source:url:5287497888ab8d67bb38"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "Myth's 2024 token activity is visible, but no reliable pre-seed close, amount or Brinc company-specific announcement was found.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved.",
+      "Normalized amount is undisclosed or not safely machine-parsable; raw amount text is preserved."
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-272",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-272",
+    "dedupe_key": "2024|ndisync-ai-pty-ltd|2024-06-database-entry-primary-close-not-found|seed",
+    "source_url": "https://app.dealroom.co/companies/ndisync_ai",
+    "source_payload": {
+      "deal_number": 272,
+      "csv_investee": "ndisync.ai",
+      "normalized_investee": "ndisync.ai Pty Ltd",
+      "csv_date": "2024-06-07",
+      "normalized_date": "2024-06 database entry; primary close not found",
+      "csv_round": "Seed",
+      "normalized_round": "Unverified seed",
+      "csv_amount": "Undisclosed",
+      "normalized_amount": "AUD 250,000 reported by database; currency/close unconfirmed",
+      "csv_investors": "Undisclosed",
+      "normalized_investors": "Undisclosed",
+      "verification": "needs_review",
+      "correction_or_issue": "The company and June 2024 launch are identifiable, but only Dealroom reports a A$250k seed. No primary financing announcement or investor names were found.",
+      "primary_source": "https://app.dealroom.co/companies/ndisync_ai",
+      "secondary_source": "https://abr.business.gov.au/ABN/View?abn=61677994400"
+    },
+    "investee_name_raw": "ndisync.ai Pty Ltd",
+    "org_location_raw": "Melbourne, VIC, Australia",
+    "org_website_raw": "https://ndisync.ai/",
+    "org_industries_raw": "Disability Tech / Social Platform",
+    "round_type_raw": "Unverified seed",
+    "round_stage": "seed",
+    "funding_stage_raw": "Seed",
+    "announced_date": null,
+    "money_raised_raw": "AUD 250,000 reported by database; currency/close unconfirmed",
+    "amount": 250000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "Undisclosed",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "needs_review",
+    "verification_source_url": "https://app.dealroom.co/companies/ndisync_ai",
+    "verification_notes": "The company and June 2024 launch are identifiable, but only Dealroom reports a A$250k seed. No primary financing announcement or investor names were found.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "unknown"
+  },
+  "refs": {
+    "investee_company_key": "company:research:ndisync-ai"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:1e5df0a681e4c6acf1fc",
+      "source:url:9c4f59ab6f8e4c91056d"
+    ]
+  },
+  "review": {
+    "status": "needs_more_data",
+    "issues": [
+      "The company and June 2024 launch are identifiable, but only Dealroom reports a A$250k seed. No primary financing announcement or investor names were found.",
+      "Normalized date is not an exact YYYY-MM-DD date; raw date text is preserved."
+    ]
+  }
+}

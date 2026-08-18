@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "table": "funding_rounds",
+  "record_key": "funding_round:research-package:2024-deal-278",
+  "operation": "upsert",
+  "data": {
+    "source_provider": "research_package",
+    "source_record_id": "2024-deal-278",
+    "dedupe_key": "2024|klean|2024-07-08|pre_seed",
+    "source_url": "https://www.prlog.org/13028191-klean-an-esg-brand-authentication-firm-raises-725000-in-its-pre-seed-round.pdf",
+    "source_payload": {
+      "deal_number": 278,
+      "csv_investee": "Klean",
+      "normalized_investee": "Klean",
+      "csv_date": "2024-06-26",
+      "normalized_date": "2024-07-08 announcement",
+      "csv_round": "Pre-Seed",
+      "normalized_round": "Pre-seed",
+      "csv_amount": "AUD 725,000",
+      "normalized_amount": "AUD 725,000",
+      "csv_investors": "PRTNR",
+      "normalized_investors": "PRTNR (lead)",
+      "verification": "verified_limited",
+      "correction_or_issue": "A company-issued release confirms A$725k and PRTNR as lead. The CSV date precedes the public announcement; stronger independent or registry evidence was not located.",
+      "primary_source": "https://www.prlog.org/13028191-klean-an-esg-brand-authentication-firm-raises-725000-in-its-pre-seed-round.pdf",
+      "secondary_source": "https://www.prlog.org/13028191-klean-an-esg-brand-authentication-firm-raises-725000-in-its-pre-seed-round.html"
+    },
+    "investee_name_raw": "Klean",
+    "org_location_raw": "Brisbane, QLD, Australia",
+    "org_website_raw": null,
+    "org_industries_raw": "Climate Tech / ESG",
+    "round_type_raw": "Pre-seed",
+    "round_stage": "pre_seed",
+    "funding_stage_raw": "Pre-Seed",
+    "announced_date": "2024-07-08",
+    "money_raised_raw": "AUD 725,000",
+    "amount": 725000,
+    "currency": "AUD",
+    "amount_usd": null,
+    "pre_money_valuation_raw": null,
+    "pre_money_valuation": null,
+    "valuation_currency": null,
+    "valuation_usd": null,
+    "equity_only": null,
+    "total_funding_raw": null,
+    "investor_names_raw": "PRTNR (lead)",
+    "lead_investor_names_raw": null,
+    "imported_at": "2026-08-14T00:00:00+09:30",
+    "import_batch_id": "2024-deals-package-05_database-import",
+    "verification_status": "verified_limited",
+    "verification_source_url": "https://www.prlog.org/13028191-klean-an-esg-brand-authentication-firm-raises-725000-in-its-pre-seed-round.pdf",
+    "verification_notes": "A company-issued release confirms A$725k and PRTNR as lead. The CSV date precedes the public announcement; stronger independent or registry evidence was not located.",
+    "verification_checked_at": "2026-08-14",
+    "date_precision": "day"
+  },
+  "refs": {
+    "investee_company_key": "company:research:klean"
+  },
+  "provenance": {
+    "collection_run_key": "collection:research-package:2024-deals-package-05_database-import",
+    "source_keys": [
+      "source:url:2239d6b6d2e260670e47",
+      "source:url:2c1be3e1ee30b459fb26"
+    ]
+  },
+  "review": {
+    "status": "reviewed",
+    "issues": []
+  }
+}
