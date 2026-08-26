@@ -105,7 +105,7 @@ data/seeds/formal_investor_data.sql
 data/seeds/public_admin_test.sql
 ```
 
-The investor snapshot was generated from AWS on 22 July 2026 and contains 481 investors, 423 investee profiles, 464 funding rounds, 704 investor/deal relationships, and the derived investor preference tables used by matching. It deliberately excludes authentication records, user profiles, founder companies, match history, and shortlists. User-linked reviewer IDs are removed from the shared snapshot.
+The investor snapshot was refreshed from the audited local Docker database on 26 August 2026. It contains 1,093 investors, 1,039 investee profiles, 1,116 funding rounds, 2,104 investor/deal relationships, and the derived investor preference tables used by matching. It deliberately excludes authentication records, user profiles, founder companies, match history, and shortlists. User-linked reviewer and contact IDs are removed from the shared snapshot.
 
 PostgreSQL only runs `/docker-entrypoint-initdb.d` files when it creates a new volume. To replace an existing local database with the committed snapshot, remove the local development volume and start the services again:
 
