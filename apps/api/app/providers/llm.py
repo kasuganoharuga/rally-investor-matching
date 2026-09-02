@@ -115,18 +115,31 @@ class LLMClient:
             )
 
         client = Anthropic(api_key=api_key)
-        message = client.messages.create(
-            model=self.config.anthropic_model,
-            max_tokens=max_tokens or self.config.max_tokens,
-            temperature=self.config.temperature if temperature is None else temperature,
-            system=system,
-            messages=[
+        # Anthropic SDK 1.x rejects `temperature` for some models
+        # (e.g. claude-sonnet-4-6). Pass it when supported, otherwise omit.
+        create_kwargs: dict[str, Any] = {
+            "model": self.config.anthropic_model,
+            "max_tokens": max_tokens or self.config.max_tokens,
+            "system": system,
+            "messages": [
                 {
                     "role": "user",
                     "content": user,
                 }
             ],
+        }
+        resolved_temperature = (
+            self.config.temperature if temperature is None else temperature
         )
+        try:
+            message = client.messages.create(
+                **create_kwargs,
+                temperature=resolved_temperature,
+            )
+        except TypeError as exc:
+            if "temperature" not in str(exc):
+                raise
+            message = client.messages.create(**create_kwargs)
         return "".join(
             block.text
             for block in message.content
