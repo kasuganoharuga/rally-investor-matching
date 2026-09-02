@@ -60,12 +60,16 @@ jobs:
           pnpm lint:web
           pnpm format:check:web
           pnpm typecheck:web
+          pnpm test:web
 
       - name: Check API
         run: |
           pnpm lint:api
           pnpm format:check:api
           pnpm test:api
+          python -m ruff check scripts/aws/apply-product-migrations.py
+          python -m ruff format --check scripts/aws/apply-product-migrations.py
+          bash -n scripts/aws/configure-matching-secret.sh scripts/aws/deploy-formal-ec2.sh
 
       - name: Check Docker configuration
         run: docker compose -f infra/docker/docker-compose.yml config --quiet

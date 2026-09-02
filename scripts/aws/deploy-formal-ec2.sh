@@ -61,6 +61,7 @@ if [[ "$bundle_sha" != "$RALLY_RELEASE_SHA" ]]; then
 fi
 
 bash "$release_dir/scripts/aws/refresh-public-urls.sh"
+bash "$release_dir/scripts/aws/configure-matching-secret.sh"
 
 if [[ ! -f "$deploy_marker" ]]; then
   echo "Preparing Rally release $RALLY_RELEASE_SHA"
@@ -70,6 +71,9 @@ if [[ ! -f "$deploy_marker" ]]; then
   "$release_dir/.venv/bin/python" -m pip install --upgrade pip
   "$release_dir/.venv/bin/python" -m pip install -e "$release_dir"
   "$release_dir/.venv/bin/python" -m pip install -r "$release_dir/apps/api/requirements.txt"
+
+  "$release_dir/.venv/bin/python" "$release_dir/scripts/aws/apply-product-migrations.py" \
+    --env-file /etc/rally/web.env
 
   cd "$release_dir"
   pnpm install --frozen-lockfile
@@ -89,6 +93,14 @@ else
 fi
 
 write_service_units() {
+  # Trust nginx's overwritten X-Real-IP only when Next cannot be reached
+  # directly. Legacy HTTP/IP deployments keep conservative shared limits.
+  local web_bind_host="0.0.0.0"
+  local web_trust_proxy="false"
+  if [[ "${RALLY_PUBLIC_WEB_URL:-}" == https://* ]]; then
+    web_bind_host="127.0.0.1"
+    web_trust_proxy="true"
+  fi
   cat > /etc/systemd/system/rally-refresh-public-urls.service <<'EOF'
 [Unit]
 Description=Refresh Rally public URLs from EC2 metadata
@@ -124,7 +136,7 @@ RestartSec=5
 WantedBy=multi-user.target
 EOF
 
-  cat > /etc/systemd/system/rally-web.service <<'EOF'
+  cat > /etc/systemd/system/rally-web.service <<EOF
 [Unit]
 Description=Rally Next.js web service
 After=network-online.target rally-api.service
@@ -134,9 +146,9 @@ Wants=network-online.target
 Type=simple
 WorkingDirectory=/opt/rally-current/apps/web
 EnvironmentFile=/etc/rally/web.env
-Environment=HOSTNAME=0.0.0.0
+Environment=HOSTNAME=$web_bind_host
 Environment=PORT=3000
-ExecStart=/usr/bin/pnpm exec next start -H 0.0.0.0 -p 3000
+ExecStart=/usr/bin/env TRUST_PROXY=$web_trust_proxy /usr/bin/pnpm exec next start -H $web_bind_host -p 3000
 Restart=always
 RestartSec=5
 

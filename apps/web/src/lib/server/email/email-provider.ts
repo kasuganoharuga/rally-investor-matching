@@ -8,6 +8,13 @@ export type InvitationEmailInput = {
   expiresAt: Date;
 };
 
+export type WelcomeEmailInput = {
+  to: string;
+  name: string;
+  workspaceUrl: string;
+};
+
 export interface EmailProvider {
   sendInvitation(input: InvitationEmailInput): Promise<void>;
+  sendWelcome(input: WelcomeEmailInput): Promise<void>;
 }

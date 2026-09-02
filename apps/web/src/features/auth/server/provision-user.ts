@@ -21,6 +21,7 @@ import { normalizeEmail } from "@/lib/server/normalize-email";
 
 export type ProvisionUserInput = {
   email: string;
+  name?: string;
   role?: UserRole;
   invitedBy?: string;
   password?: string;
@@ -60,12 +61,11 @@ export async function provisionUser(
   const context: ProvisioningContext = { role, invitedBy: input.invitedBy };
 
   try {
-    // Every user's `name` column is just their email — this app has no
-    // display-name field or UI to edit one, so there is nothing else it
-    // could legitimately hold.
+    // Invited accounts retain the email fallback; public registration supplies
+    // the validated name. Role is only supplied by trusted server callers.
     const result = await withProvisioningContext(context, () =>
       auth.api.signUpEmail({
-        body: { email, name: email, password },
+        body: { email, name: input.name ?? email, password },
       }),
     );
 

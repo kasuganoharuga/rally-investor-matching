@@ -230,13 +230,15 @@ Resources:
             printf "SES_FROM_EMAIL=%s\n" "$(shell_quote "${SesFromEmail}")"
             printf "SES_REPLY_TO_EMAIL=%s\n" "$(shell_quote "${SesReplyToEmail}")"
           } > /etc/rally/web.env
+          bash /opt/rally/scripts/aws/configure-matching-secret.sh
           cp /etc/rally/web.env /opt/rally/apps/web/.env.local
           unset SECRET_JSON DATABASE_URL BETTER_AUTH_SECRET ANTHROPIC_API_KEY
-          set -x
 
           set -a
           . /etc/rally/web.env
           set +a
+          set -x
+          /opt/rally/.venv/bin/python /opt/rally/scripts/aws/apply-product-migrations.py
           pnpm --filter @rally-investor-matching/web build
 
           cd /opt/rally/apps/web

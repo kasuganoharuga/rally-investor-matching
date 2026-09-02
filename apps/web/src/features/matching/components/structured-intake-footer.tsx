@@ -50,9 +50,7 @@ export function StructuredIntakeFooter({
         {isSubmitting
           ? "Starting match"
           : activeStep === finalStep
-            ? finalStep === 3
-              ? "Run test match"
-              : "Run match"
+            ? "Run match"
             : "Continue"}
         {!isSubmitting ? <ArrowRight className="size-4" aria-hidden="true" /> : null}
       </Button>

@@ -92,6 +92,24 @@ pnpm dev:web
 
 The web app is available at `http://localhost:3000`.
 
+## Accounts, scoring and email
+
+- The login page links to `/register`. Public registration creates **founder** accounts only and captures name, email, company role, organisation, funding stage and personal LinkedIn profile. After registration and sign-in, users land in Workspace (`/match`). Invitation acceptance also opens Workspace.
+- Step 4 is for admins and reviewers. Admins select **Publish for everyone** to save global score weights for future matches. Reviewers select **Save my score weights** to save their own override, or **Use global weights** to remove it. Existing personal overrides survive a global update; historical results are not recalculated.
+- Only weights are persistent. Result count, eligibility rules and excluded investor types remain per-match options. The server loads the saved weights; changing browser payloads cannot override another user's settings. Stale saves are rejected rather than overwriting a newer edit.
+- Invitations and welcome messages use branded HTML and plain text, role-specific instructions, a Workspace link and an explicit invitation expiry in Sydney time. `EMAIL_PROVIDER=ses` uses the existing AWS credential chain, `AWS_REGION`, `SES_FROM_EMAIL` and optional `SES_REPLY_TO_EMAIL`. No password is emailed. A failed welcome email does not roll back a completed registration.
+- Keep `APP_BASE_URL` and `BETTER_AUTH_URL` set to the canonical website origin. The console email provider is for local development only. Public signup has same-origin JSON validation, a request-size cap, a honeypot and database-backed hourly email/IP/global limits. `TRUST_PROXY=true` is safe only when Next is loopback-bound behind a proxy that replaces `X-Real-IP`; the HTTPS EC2 deploy sets both together. Direct HTTP/local setups use a conservative shared IP bucket.
+
+The web server and FastAPI must share a private `RALLY_MATCHING_API_SECRET` (at least 32 characters). Never expose it in a `NEXT_PUBLIC_` variable. Docker examples use an explicitly local-only value; AWS deployment creates/reuses a random value in `/etc/rally/web.env` and `/etc/rally/api.env`, and rejects mismatches. Matching requests go through the authenticated Next.js route, not directly from the browser to FastAPI.
+
+For an **existing** database, apply only the additive product migrations before starting the new version. Do not delete its volume or reload the snapshot:
+
+```powershell
+python scripts/aws/apply-product-migrations.py --env-file apps/web/.env.local
+```
+
+This applies `202609_registration_rate_limits.sql` and `202609_matching_settings.sql` in one transaction, preserving accounts, investor data and existing score settings. It is safe to rerun. Fresh Docker volumes run the same patches automatically; the EC2 release script applies them before activation. Run frontend domain/security tests with `pnpm test:web`.
+
 ## Local Database
 
 The local PostgreSQL database uses the same formal public schema and investor-intelligence dataset as the AWS development environment.
@@ -103,6 +121,10 @@ data/schemas/vc_matching_schema_aws_with_mvp_compat.sql
 data/patches/202607_formal_sample_import_extensions.sql
 data/seeds/formal_investor_data.sql
 data/seeds/public_admin_test.sql
+data/patches/202607_clean_mojibake.sql
+data/patches/202607_refresh_investor_links.sql
+data/patches/202609_registration_rate_limits.sql
+data/patches/202609_matching_settings.sql
 ```
 
 The investor snapshot was refreshed from the audited local Docker database on 26 August 2026. It contains 1,093 investors, 1,039 investee profiles, 1,116 funding rounds, 2,104 investor/deal relationships, and the derived investor preference tables used by matching. It deliberately excludes authentication records, user profiles, founder companies, match history, and shortlists. User-linked reviewer and contact IDs are removed from the shared snapshot.
@@ -123,14 +145,14 @@ Invoke-RestMethod http://localhost:8000/api/v1/investors
 Invoke-RestMethod http://localhost:8000/api/v1/investors/airtree
 ```
 
-Run the founder intake flow through the API:
+For a local-only backend smoke test, run the founder intake flow with the matching server key (normal users should use Workspace):
 
 ```powershell
 $body = @{
   message = 'Company: Example AI Health. We are headquartered in Australia and sell into Australia/New Zealand. We are a seed-stage B2B SaaS AI healthtech startup raising A$2.5m and need a lead investor.'
 } | ConvertTo-Json
 
-Invoke-RestMethod -Method Post -Uri http://localhost:8000/api/v1/match/intake -ContentType 'application/json' -Body $body
+Invoke-RestMethod -Method Post -Uri http://localhost:8000/api/v1/match/intake -ContentType 'application/json' -Headers @{ 'X-Rally-Matching-Key' = 'rally-local-only-matching-key-change-for-deployment' } -Body $body
 ```
 
 If required founder fields are missing, the endpoint returns `status: needs_follow_up` and one follow-up question. After one follow-up, it proceeds to matching with the information available.

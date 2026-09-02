@@ -17,6 +17,7 @@
     "format:check": "pnpm format:check:web && pnpm format:check:api",
     "typecheck:web": "pnpm --filter @rally-investor-matching/web typecheck",
     "test:api": "cd apps/api && python -m pytest",
+    "test:web": "pnpm --filter @rally-investor-matching/web test",
     "build": "pnpm -r build",
     "lint": "pnpm -r lint",
     "typecheck": "pnpm -r typecheck",

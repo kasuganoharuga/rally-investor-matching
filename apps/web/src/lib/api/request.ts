@@ -14,11 +14,35 @@ import { ApiError } from "@/lib/api/errors";
 export async function parseJsonBody<T>(
   request: NextRequest,
   schema: z.ZodType<T>,
+  maxBytes?: number,
 ): Promise<T> {
   let body: unknown;
   try {
-    body = await request.json();
-  } catch {
+    if (maxBytes && request.body) {
+      const reader = request.body.getReader();
+      const decoder = new TextDecoder();
+      let bytes = 0;
+      let text = "";
+      while (true) {
+        const chunk = await reader.read();
+        if (chunk.done) break;
+        bytes += chunk.value.byteLength;
+        if (bytes > maxBytes) {
+          await reader.cancel();
+          throw new ApiError({
+            code: "REQUEST_TOO_LARGE",
+            message: "Request is too large.",
+            status: 413,
+          });
+        }
+        text += decoder.decode(chunk.value, { stream: true });
+      }
+      body = JSON.parse(text + decoder.decode());
+    } else {
+      body = await request.json();
+    }
+  } catch (error) {
+    if (error instanceof ApiError) throw error;
     throw new ApiError({
       code: "INVALID_JSON_BODY",
       message: "Request body must be valid JSON.",

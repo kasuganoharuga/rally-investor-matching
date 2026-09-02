@@ -3,7 +3,12 @@ import "server-only";
 import type {
   EmailProvider,
   InvitationEmailInput,
+  WelcomeEmailInput,
 } from "@/lib/server/email/email-provider";
+import {
+  buildInvitationEmail,
+  buildWelcomeEmail,
+} from "@/lib/server/email/email-templates";
 
 /**
  * Local-development-only provider. Deliberately uses plain console.log
@@ -12,15 +17,33 @@ import type {
  */
 export class ConsoleEmailProvider implements EmailProvider {
   async sendInvitation(input: InvitationEmailInput): Promise<void> {
+    const content = buildInvitationEmail(input, {
+      replyToEmail: process.env.SES_REPLY_TO_EMAIL,
+    });
     console.log(
       [
         "----- invitation email (console provider) -----",
         `to: ${input.to}`,
-        `role: ${input.role}`,
-        `invited by: ${input.invitedByName}`,
-        `expires at: ${input.expiresAt.toISOString()}`,
-        `accept link: ${input.acceptUrl}`,
+        `subject: ${content.subject}`,
+        "",
+        content.text,
         "------------------------------------------------",
+      ].join("\n"),
+    );
+  }
+
+  async sendWelcome(input: WelcomeEmailInput): Promise<void> {
+    const content = buildWelcomeEmail(input, {
+      replyToEmail: process.env.SES_REPLY_TO_EMAIL,
+    });
+    console.log(
+      [
+        "----- welcome email (console provider) -----",
+        `to: ${input.to}`,
+        `subject: ${content.subject}`,
+        "",
+        content.text,
+        "------------------------------------------",
       ].join("\n"),
     );
   }

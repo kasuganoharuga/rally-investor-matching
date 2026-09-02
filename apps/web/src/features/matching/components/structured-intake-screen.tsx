@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { toast } from "sonner";
 
+import type { UserRole } from "@/features/auth/types/auth";
+import { StructuredIntakeSettingsActions } from "@/features/matching/components/structured-intake-settings-actions";
 import { StructuredIntakeFooter } from "@/features/matching/components/structured-intake-footer";
 import { StructuredIntakeStepBody } from "@/features/matching/components/structured-intake-step-body";
 import {
@@ -13,6 +15,14 @@ import {
   DEFAULT_MATCHING_CONFIGURATION,
   type MatchingConfiguration,
 } from "@/features/matching/types/match";
+import {
+  matchingSettingsSchema,
+  resolveMatchingConfiguration,
+  sameMatchingWeights,
+  type MatchingSettings,
+} from "@/features/matching/types/matching-settings";
+import { apiFetch } from "@/lib/api/client";
+import { ApiError } from "@/lib/api/errors";
 import {
   buildStructuredIntakeMessage,
   EMPTY_STRUCTURED_INTAKE,
@@ -57,17 +67,23 @@ export function StructuredIntakeScreen({
   isSubmitting,
   errorMessage,
   initialValues,
+  initialSettings,
   initialConfiguration,
+  userRole,
   initialStep = 0,
   showScoringStep,
+  onSettingsSaved,
   onSubmit,
 }: {
   isSubmitting: boolean;
   errorMessage: string | null;
   initialValues?: StructuredIntakeValues;
+  initialSettings: MatchingSettings;
   initialConfiguration?: MatchingConfiguration;
+  userRole: UserRole;
   initialStep?: IntakeStep;
   showScoringStep: boolean;
+  onSettingsSaved: (settings: MatchingSettings) => void;
   onSubmit: (
     message: string,
     configuration: MatchingConfiguration,
@@ -78,17 +94,23 @@ export function StructuredIntakeScreen({
     cloneStructuredIntake(initialValues ?? EMPTY_STRUCTURED_INTAKE),
   );
   const [matchingConfiguration, setMatchingConfiguration] = useState(() =>
-    cloneMatchingConfiguration(
-      showScoringStep
-        ? (initialConfiguration ?? defaultMatchingConfiguration())
-        : defaultMatchingConfiguration(),
+    resolveMatchingConfiguration(
+      userRole,
+      initialSettings.configuration,
+      initialConfiguration,
     ),
+  );
+  const [savedSettings, setSavedSettings] = useState(initialSettings);
+  const [isSavingSettings, setIsSavingSettings] = useState(false);
+  const hasUnsavedSettings = !sameMatchingWeights(
+    matchingConfiguration,
+    savedSettings.configuration,
   );
   const finalStep: IntakeStep = showScoringStep ? 3 : 2;
   const [activeStep, setActiveStep] = useState<IntakeStep>(() =>
     initialStep > finalStep ? finalStep : initialStep,
   );
-  const isBusy = isSubmitting;
+  const isBusy = isSubmitting || isSavingSettings;
   const companyAndRaiseComplete = isCompanyAndRaiseComplete(values);
   const matchingSignalsComplete = isMatchingSignalsComplete(values);
   const totalWeight = Object.values(matchingConfiguration.weights).reduce(
@@ -100,6 +122,48 @@ export function StructuredIntakeScreen({
   // The button stays clickable even when incomplete, so a click can surface
   // a toast explaining why — a disabled button would just silently eat it.
   const canContinue = !isBusy;
+
+  async function persistSettings(reset = false) {
+    if (isBusy) return;
+    setIsSavingSettings(true);
+    try {
+      const data = await apiFetch<MatchingSettings>("/api/matching/settings", {
+        method: reset ? "DELETE" : "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(
+          reset
+            ? { expectedRevision: savedSettings.personalRevision }
+            : {
+                configuration: matchingConfiguration,
+                expectedRevision:
+                  userRole === "admin"
+                    ? savedSettings.globalRevision
+                    : (savedSettings.personalRevision ?? 0),
+              },
+        ),
+      });
+      const nextSettings = matchingSettingsSchema.parse(data);
+      setSavedSettings(nextSettings);
+      onSettingsSaved(nextSettings);
+      setMatchingConfiguration((current) => ({
+        ...current,
+        weights: { ...nextSettings.configuration.weights },
+      }));
+      toast.success(
+        reset
+          ? "Your matches now use the global score weights."
+          : userRole === "admin"
+            ? "Global score weights published."
+            : "Your personal score weights saved.",
+      );
+    } catch (error) {
+      toast.error(
+        error instanceof ApiError ? error.message : "Unable to save matching settings.",
+      );
+    } finally {
+      setIsSavingSettings(false);
+    }
+  }
 
   function updateTextField(field: keyof StructuredIntakeValues, value: string) {
     setValues((current) => ({ ...current, [field]: value }));
@@ -134,19 +198,14 @@ export function StructuredIntakeScreen({
       toast.error("Score weights must total 100.");
       return;
     }
+    if (showScoringStep && hasUnsavedSettings) {
+      toast.error("Save or discard your score weights before running a match.");
+      return;
+    }
     if (canSubmit) {
-      const submittedConfiguration = showScoringStep
-        ? {
-            ...matchingConfiguration,
-            result_limit:
-              matchingConfiguration.result_limit ??
-              DEFAULT_MATCHING_CONFIGURATION.result_limit,
-            excluded_investor_types: [...matchingConfiguration.excluded_investor_types],
-          }
-        : defaultMatchingConfiguration();
       onSubmit(
         buildStructuredIntakeMessage(values),
-        submittedConfiguration,
+        cloneMatchingConfiguration(matchingConfiguration),
         cloneStructuredIntake(values),
       );
     }
@@ -179,6 +238,37 @@ export function StructuredIntakeScreen({
         onSubmit={submit}
         className="mt-7 overflow-hidden rounded-lg border border-border bg-card shadow-sm"
       >
+        {showScoringStep && activeStep === 3 ? (
+          <StructuredIntakeSettingsActions
+            userRole={userRole}
+            source={savedSettings.source}
+            isBusy={isBusy}
+            isSaving={isSavingSettings}
+            hasUnsavedSettings={hasUnsavedSettings}
+            hasValidTotal={totalWeight === 100}
+            onSave={() => void persistSettings()}
+            onDiscard={() =>
+              setMatchingConfiguration((current) => ({
+                ...current,
+                weights: { ...savedSettings.configuration.weights },
+              }))
+            }
+            onReset={() => {
+              if (userRole === "reviewer" && savedSettings.personalRevision !== null) {
+                void persistSettings(true);
+              } else {
+                setMatchingConfiguration((current) => ({
+                  ...current,
+                  weights: {
+                    ...(userRole === "admin"
+                      ? defaultMatchingConfiguration().weights
+                      : savedSettings.globalConfiguration.weights),
+                  },
+                }));
+              }
+            }}
+          />
+        ) : null}
         <StructuredIntakeStepBody
           activeStep={activeStep}
           values={values}

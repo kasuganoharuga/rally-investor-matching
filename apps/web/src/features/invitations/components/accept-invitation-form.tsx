@@ -30,7 +30,7 @@ export function AcceptInvitationForm({ token }: AcceptInvitationFormProps) {
 
     const result = await accept({ token, password });
     if (!result.error) {
-      router.push("/investors");
+      router.push("/match");
       router.refresh();
     }
   }
