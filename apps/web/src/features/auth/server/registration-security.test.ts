@@ -88,6 +88,7 @@ function memoryRateLimitClient() {
   } as unknown as Queryable;
   return {
     client,
+    bucketCount: () => counts.size,
     count: (identity: string) =>
       counts.get(
         createHmac("sha256", RATE_LIMIT_TEST_SECRET).update(identity).digest("hex"),
@@ -120,7 +121,7 @@ async function withRateLimitEnvironment(
   }
 }
 
-test("blocked email attempts do not consume IP or global registration capacity", async () => {
+test("blocked email attempts may consume caller IP attempts but never global capacity", async () => {
   await withRateLimitEnvironment("true", async () => {
     const { client, count } = memoryRateLimitClient();
     const request = registrationRequest("192.0.2.1");
@@ -134,7 +135,7 @@ test("blocked email attempts do not consume IP or global registration capacity",
       );
     }
     assert.equal(count("email:same@example.test"), 3);
-    assert.equal(count("ip:192.0.2.1"), 3);
+    assert.equal(count("ip:192.0.2.1"), 10);
     assert.equal(count("global"), 3);
     await checkRegistrationRateLimit(
       registrationRequest("192.0.2.2"),
@@ -145,9 +146,9 @@ test("blocked email attempts do not consume IP or global registration capacity",
   });
 });
 
-test("blocked IP attempts with different emails do not drain global capacity", async () => {
+test("blocked IP attempts cannot allocate new email buckets or drain global capacity", async () => {
   await withRateLimitEnvironment("true", async () => {
-    const { client, count } = memoryRateLimitClient();
+    const { client, count, bucketCount } = memoryRateLimitClient();
     const request = registrationRequest("192.0.2.1");
     for (let attempt = 0; attempt < 10; attempt++) {
       await checkRegistrationRateLimit(
@@ -156,7 +157,9 @@ test("blocked IP attempts with different emails do not drain global capacity", a
         client,
       );
     }
-    for (let attempt = 10; attempt < 110; attempt++) {
+    const admittedBucketCount = bucketCount();
+    assert.equal(admittedBucketCount, 12); // 10 emails, one IP and one global bucket.
+    for (let attempt = 10; attempt < 1_010; attempt++) {
       await assert.rejects(
         checkRegistrationRateLimit(request, `founder-${attempt}@example.test`, client),
         { status: 429 },
@@ -164,6 +167,8 @@ test("blocked IP attempts with different emails do not drain global capacity", a
     }
     assert.equal(count("ip:192.0.2.1"), 10);
     assert.equal(count("global"), 10);
+    assert.equal(bucketCount(), admittedBucketCount);
+    assert.equal(count("email:founder-1009@example.test"), 0);
   });
 });
 
