@@ -111,6 +111,9 @@ jobs:
       - name: Typecheck frontend
         run: pnpm typecheck:web
 
+      - name: Test frontend domain and security rules
+        run: pnpm test:web
+
       - name: Build frontend
         run: pnpm build:web
 

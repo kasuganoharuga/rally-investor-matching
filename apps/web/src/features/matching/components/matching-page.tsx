@@ -6,6 +6,7 @@ import {
   type MatchIntakeVariant,
 } from "@/features/matching/components/matching-workspace";
 import { matchingHistoryService } from "@/features/matching/server/services/matching-history-service";
+import { matchingSettingsService } from "@/features/matching/server/services/matching-settings-service";
 
 export async function MatchingPage({
   intakeVariant = "structured",
@@ -18,6 +19,7 @@ export async function MatchingPage({
   const rematchRecord = rematchId
     ? await matchingHistoryService.getRun(rematchId, user)
     : null;
+  const matchingSettings = await matchingSettingsService.getForUser(user);
 
   return (
     <main className="flex min-h-screen flex-col bg-background text-foreground">
@@ -26,6 +28,8 @@ export async function MatchingPage({
         intakeVariant={intakeVariant}
         rematchRecord={rematchRecord}
         canConfigureMatching={canConfigureMatching(user.role)}
+        userRole={user.role}
+        matchingSettings={matchingSettings}
       />
     </main>
   );

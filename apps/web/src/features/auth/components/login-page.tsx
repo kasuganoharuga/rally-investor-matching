@@ -52,11 +52,20 @@ export function LoginPage() {
             </p>
           </div>
           <LoginForm />
+          <p className="text-center text-sm text-muted-foreground">
+            New to Rally?{" "}
+            <Link
+              href="/register"
+              className="font-semibold text-primary underline underline-offset-4"
+            >
+              Create an account
+            </Link>
+          </p>
         </div>
 
         <p className="flex items-center gap-2 text-xs text-muted-foreground">
           <LockIcon className="size-3.5" aria-hidden="true" />
-          Access is invite-only. Seats are assigned per cohort.
+          Create a founder account or join with an invitation.
         </p>
       </div>
 
@@ -98,7 +107,7 @@ export function LoginPage() {
         </div>
 
         <p className="text-xs tracking-[0.2em] text-primary-foreground/40 uppercase">
-          Invite only &middot; By cohort
+          Your next round starts here
         </p>
       </div>
 

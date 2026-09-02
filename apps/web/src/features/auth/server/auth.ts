@@ -10,8 +10,8 @@ import { getPool } from "@/lib/server/db";
 const DEFAULT_USER_ROLE: UserRole = "founder";
 
 /**
- * Better Auth instance. Registration is invite-only: the only path that
- * is allowed to create a user is provisionUser() calling
+ * Better Auth instance. Invitations and validated public founder registration
+ * create users via provisionUser() calling
  * `auth.api.signUpEmail()` directly (no `request`), which hooks.before
  * below distinguishes from a public HTTP POST to the same endpoint.
  */
@@ -61,7 +61,7 @@ export const auth = betterAuth({
         // provisionUser()'s direct auth.api.signUpEmail() call has none.
         throw new APIError("FORBIDDEN", {
           message:
-            "Public registration is disabled. Ask an admin or reviewer for an invitation.",
+            "Use the Rally registration form or your invitation link to create an account.",
         });
       }
     }),

@@ -1,8 +1,10 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
+import type { UserRole } from "@/features/auth/types/auth";
 import { ClarifyFollowUpScreen } from "@/features/matching/components/clarify-follow-up-screen";
 import { FreeTextIntakeScreen } from "@/features/matching/components/free-text-intake-screen";
 import { MatchingProgressScreen } from "@/features/matching/components/matching-progress-screen";
@@ -14,6 +16,7 @@ import type {
   MatchRecord,
 } from "@/features/matching/types/match";
 import type { StructuredIntakeValues } from "@/features/matching/types/structured-intake";
+import type { MatchingSettings } from "@/features/matching/types/matching-settings";
 
 export type MatchIntakeVariant = "structured" | "free-text";
 
@@ -39,13 +42,20 @@ export function MatchingWorkspace({
   intakeVariant = "structured",
   rematchRecord = null,
   canConfigureMatching,
+  userRole,
+  matchingSettings,
 }: {
   intakeVariant?: MatchIntakeVariant;
   rematchRecord?: MatchRecord | null;
   canConfigureMatching: boolean;
+  userRole: UserRole;
+  matchingSettings: MatchingSettings;
 }) {
   const intake = useMatchIntake();
   const router = useRouter();
+  // The intake form is unmounted while a match runs. Keep published/personal
+  // settings here so retrying after an API failure never restores a stale revision.
+  const [savedSettings, setSavedSettings] = useState(matchingSettings);
   const needsFollowUp = intake.response?.status === "needs_follow_up";
   const hasZeroMatches =
     Boolean(intake.response) && !needsFollowUp && intake.response!.matches.length === 0;
@@ -125,7 +135,10 @@ export function MatchingWorkspace({
         isSubmitting={intake.isSubmitting}
         errorMessage={errorMessage}
         initialValues={rematchRecord?.structuredIntake ?? undefined}
+        initialSettings={savedSettings}
+        onSettingsSaved={setSavedSettings}
         initialConfiguration={rematchRecord?.matchingConfiguration ?? undefined}
+        userRole={userRole}
         initialStep={rematchRecord ? 2 : 0}
         showScoringStep={canConfigureMatching}
         onSubmit={submitInitial}

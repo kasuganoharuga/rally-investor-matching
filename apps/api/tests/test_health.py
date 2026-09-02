@@ -2,10 +2,18 @@ import zipfile
 from io import BytesIO
 
 from fastapi.testclient import TestClient
+from pydantic import SecretStr
 
 import app.services.match_service as match_service_module
+from app.core.config import settings
 from app.db.connection import get_connection
 from app.main import app
+
+
+def matching_server_headers(monkeypatch: object) -> dict[str, str]:
+    key = "test-only-matching-server-key-with-32-characters"
+    monkeypatch.setattr(settings, "rally_matching_api_secret", SecretStr(key))
+    return {"X-Rally-Matching-Key": key}
 
 
 class FakeCursor:
@@ -316,6 +324,7 @@ def test_match_intake_asks_one_follow_up(monkeypatch: object) -> None:
 
         response = client.post(
             "/api/v1/match/intake",
+            headers=matching_server_headers(monkeypatch),
             json={"message": "We are an AU AI health company."},
         )
 
@@ -353,6 +362,7 @@ def test_match_intake_matches_after_follow_up(monkeypatch: object) -> None:
 
         response = client.post(
             "/api/v1/match/intake",
+            headers=matching_server_headers(monkeypatch),
             json={
                 "message": "We are an AU AI health company.",
                 "follow_up_answer": "Seed, B2B, raising A$2.5m.",
@@ -407,6 +417,7 @@ def test_match_intake_returns_expanded_direct_vc_matches(monkeypatch: object) ->
 
         response = client.post(
             "/api/v1/match/intake",
+            headers=matching_server_headers(monkeypatch),
             json={"message": "We are an AU AI health company."},
         )
 
@@ -451,6 +462,7 @@ def test_match_intake_honours_requested_result_limit(monkeypatch: object) -> Non
 
         response = client.post(
             "/api/v1/match/intake",
+            headers=matching_server_headers(monkeypatch),
             json={
                 "message": "We are an AU AI health company.",
                 "matching_configuration": {"result_limit": 10},
@@ -504,6 +516,7 @@ def test_match_intake_excludes_selected_investor_types(monkeypatch: object) -> N
 
         response = client.post(
             "/api/v1/match/intake",
+            headers=matching_server_headers(monkeypatch),
             json={
                 "message": "We are an AU AI health company.",
                 "matching_configuration": {"excluded_investor_types": ["accelerator"]},

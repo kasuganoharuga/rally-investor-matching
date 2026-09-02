@@ -1,7 +1,8 @@
 import "server-only";
 
-import { canConfigureMatching } from "@/features/auth/role-policy";
 import type { CurrentUser } from "@/features/auth/server/session";
+import { matchingSettingsService } from "@/features/matching/server/services/matching-settings-service";
+import { resolveMatchingConfiguration } from "@/features/matching/types/matching-settings";
 import {
   intakeResponseSchema,
   type IntakeRequest,
@@ -28,24 +29,55 @@ function isDataEnvelope(value: unknown): value is { data: unknown } {
 }
 
 export class MatchingHistoryService {
+  constructor(
+    private readonly dependencies: {
+      settings?: Pick<typeof matchingSettingsService, "getForUser">;
+      fetch?: typeof globalThis.fetch;
+      insertRun?: typeof insertMatchingRun;
+    } = {},
+  ) {}
+
   async runIntake(request: IntakeRequest, user: CurrentUser): Promise<RunMatchData> {
-    const effectiveRequest = canConfigureMatching(user.role)
-      ? request
-      : { ...request, matching_configuration: undefined };
-    const response = await fetch(`${MATCHING_API_BASE_URL}/api/v1/match/intake`, {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
+    const matchingKey = process.env.RALLY_MATCHING_API_SECRET;
+    if (!matchingKey) {
+      throw new ApiError({
+        code: "MATCHING_NOT_CONFIGURED",
+        message: "Investor matching is not configured. Please contact support.",
+        status: 503,
+      });
+    }
+    const settings = await (
+      this.dependencies.settings ?? matchingSettingsService
+    ).getForUser(user);
+    // Never trust a browser-supplied score, role or a historical run's settings.
+    // New matches use the latest published global or saved personal weights.
+    // Staff retain their existing per-match result limit and eligibility options.
+    const effectiveRequest = {
+      ...request,
+      matching_configuration: resolveMatchingConfiguration(
+        user.role,
+        settings.configuration,
+        request.matching_configuration,
+      ),
+    };
+    const response = await (this.dependencies.fetch ?? fetch)(
+      `${MATCHING_API_BASE_URL}/api/v1/match/intake`,
+      {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          "X-Rally-Matching-Key": matchingKey,
+        },
+        body: JSON.stringify({
+          message: effectiveRequest.message,
+          follow_up_answer: effectiveRequest.follow_up_answer,
+          follow_up_count: effectiveRequest.follow_up_count,
+          matching_configuration: effectiveRequest.matching_configuration,
+        }),
+        cache: "no-store",
       },
-      body: JSON.stringify({
-        message: effectiveRequest.message,
-        follow_up_answer: effectiveRequest.follow_up_answer,
-        follow_up_count: effectiveRequest.follow_up_count,
-        matching_configuration: effectiveRequest.matching_configuration,
-      }),
-      cache: "no-store",
-    });
+    );
 
     let body: unknown = null;
     try {
@@ -63,7 +95,7 @@ export class MatchingHistoryService {
     }
 
     const parsedResponse = intakeResponseSchema.parse(body.data);
-    const record = await insertMatchingRun({
+    const record = await (this.dependencies.insertRun ?? insertMatchingRun)({
       userId: user.id,
       request: effectiveRequest,
       response: parsedResponse,

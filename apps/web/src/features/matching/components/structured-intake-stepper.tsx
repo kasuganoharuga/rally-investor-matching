@@ -20,14 +20,14 @@ export const INTAKE_STEPS = [
     title: "Review",
     shortDescription: "Check your selected details",
     heading: "Review your matching profile",
-    description: "Check the selected details before testing the ranking setup.",
+    description: "Check the selected details before running the match.",
   },
   {
-    title: "Test scoring",
+    title: "Scoring settings",
     shortDescription: "Adjust ranking priorities",
-    heading: "Test the ranking setup",
+    heading: "Set your matching priorities",
     description:
-      "Adjust score priorities and choose which eligibility rules apply to this test.",
+      "Save your score weights, then choose eligibility rules and result options for this match.",
   },
 ] as const;
 

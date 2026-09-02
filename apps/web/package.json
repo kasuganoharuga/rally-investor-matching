@@ -10,6 +10,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "typecheck": "tsc --noEmit",
+    "test": "node scripts/test.mjs",
     "seed:admin": "tsx --conditions=react-server scripts/seed-admin-password.ts"
   },
   "dependencies": {

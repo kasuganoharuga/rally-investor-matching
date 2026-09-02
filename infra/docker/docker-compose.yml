@@ -12,6 +12,8 @@ services:
         required: false
     environment:
       DATABASE_URL: postgresql://${POSTGRES_USER:-rally}:${POSTGRES_PASSWORD:-rally_dev_password}@db:5432/${POSTGRES_DB:-rally_investor_matching}
+      # Local only; set the same value in apps/web/.env.local.
+      RALLY_MATCHING_API_SECRET: ${RALLY_MATCHING_API_SECRET:-rally-local-only-matching-key-change-for-deployment}
     ports:
       - "${API_PORT:-8000}:8000"
     volumes:
@@ -51,6 +53,8 @@ services:
       - ../../data/seeds/public_admin_test.sql:/docker-entrypoint-initdb.d/004_seed_public_admin_test.sql:ro
       - ../../data/patches/202607_clean_mojibake.sql:/docker-entrypoint-initdb.d/005_clean_mojibake.sql:ro
       - ../../data/patches/202607_refresh_investor_links.sql:/docker-entrypoint-initdb.d/006_refresh_investor_links.sql:ro
+      - ../../data/patches/202609_registration_rate_limits.sql:/docker-entrypoint-initdb.d/007_registration_rate_limits.sql:ro
+      - ../../data/patches/202609_matching_settings.sql:/docker-entrypoint-initdb.d/008_matching_settings.sql:ro
     healthcheck:
       test:
         [

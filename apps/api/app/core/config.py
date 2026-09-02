@@ -1,6 +1,6 @@
 from functools import lru_cache
 
-from pydantic import field_validator
+from pydantic import SecretStr, field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -17,6 +17,9 @@ class Settings(BaseSettings):
     )
     openai_api_key: str = ""
     anthropic_api_key: str = ""
+    # Server-to-server only. The browser must never receive this value.
+    # No default key: direct matching requests fail closed until configured.
+    rally_matching_api_secret: SecretStr = SecretStr("")
 
     model_config = SettingsConfigDict(
         env_file=".env",

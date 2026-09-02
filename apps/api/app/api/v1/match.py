@@ -3,11 +3,16 @@ from typing import Annotated, Any
 from fastapi import APIRouter, Depends
 from psycopg import Connection
 
+from app.api.dependencies import require_matching_server
 from app.db.connection import get_connection
 from app.schemas.match import IntakeRequest
 from app.services.match_service import match_service
 
-router = APIRouter(prefix="/match", tags=["match"])
+router = APIRouter(
+    prefix="/match",
+    tags=["match"],
+    dependencies=[Depends(require_matching_server)],
+)
 DatabaseConnection = Annotated[Connection, Depends(get_connection)]
 
 

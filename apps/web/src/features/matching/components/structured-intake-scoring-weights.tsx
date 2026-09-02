@@ -1,7 +1,6 @@
-import { RotateCcw, SlidersHorizontal } from "lucide-react";
+import { SlidersHorizontal } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { MATCH_FACTOR_DETAIL_LABELS } from "@/features/matching/components/match-display";
 import {
@@ -14,15 +13,6 @@ import { cn } from "@/lib/utils";
 const SCORE_FACTORS: { key: MatchingWeightKey; label: string }[] = (
   Object.keys(MATCH_FACTOR_DETAIL_LABELS) as MatchingWeightKey[]
 ).map((key) => ({ key, label: MATCH_FACTOR_DETAIL_LABELS[key] }));
-
-function cloneDefaultConfiguration(): MatchingConfiguration {
-  return {
-    weights: { ...DEFAULT_MATCHING_CONFIGURATION.weights },
-    hard_filters: { ...DEFAULT_MATCHING_CONFIGURATION.hard_filters },
-    result_limit: DEFAULT_MATCHING_CONFIGURATION.result_limit,
-    excluded_investor_types: [],
-  };
-}
 
 export function StructuredIntakeScoringWeights({
   configuration,
@@ -63,18 +53,8 @@ export function StructuredIntakeScoringWeights({
           <h2 className="text-base font-semibold text-foreground">
             Ranking priorities
           </h2>
-          <Badge variant="outline">Internal test</Badge>
+          <Badge variant="outline">100 points total</Badge>
         </div>
-        <Button
-          type="button"
-          variant="outline"
-          size="sm"
-          disabled={disabled}
-          onClick={() => onChange(cloneDefaultConfiguration())}
-        >
-          <RotateCcw className="size-3.5" aria-hidden="true" />
-          Reset
-        </Button>
       </div>
 
       <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
