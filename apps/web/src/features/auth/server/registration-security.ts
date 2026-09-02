@@ -49,11 +49,11 @@ export async function checkRegistrationRateLimit(
   const secret = process.env.BETTER_AUTH_SECRET;
   if (!secret) throw new Error("BETTER_AUTH_SECRET is not configured");
   const ip = registrationClientIp(request);
-  // Reject narrower buckets before consuming shared capacity: repeated attempts
-  // from one blocked email/IP must not lock registration for the whole site.
+  // Check IP first so a blocked caller cannot allocate unlimited email buckets.
+  // Then check email before global; denied attempts never drain shared capacity.
   const limits: [string, number][] = [
-    [`email:${email}`, 3],
     [`ip:${ip}`, 10],
+    [`email:${email}`, 3],
     ["global", 100],
   ];
   await client.query(
@@ -71,7 +71,8 @@ export async function checkRegistrationRateLimit(
       [key, limit],
     );
     // The conditional upsert is atomic and saturates each bucket at its limit.
-    // A denied attempt does not increase a counter or advance to broader buckets.
+    // A denied bucket does not increase or advance to later buckets. Email denial
+    // may consume an IP attempt, but neither denial consumes global capacity.
     if (result.rows.length === 0) {
       throw new ApiError({
         code: "RATE_LIMITED",
