@@ -63,8 +63,8 @@ export class MatchingSettingsRepository {
     expectedRevision: number,
     client: Queryable = getPool(),
   ): Promise<boolean> {
-    // An explicit initial insert or revision-checked update avoids resurrecting
-    // settings from a stale tab after the reviewer has reset to global defaults.
+    // Revisions come from a non-repeating database sequence. Reset/delete followed
+    // by recreation cannot let a stale tab match a newly reused revision (ABA).
     const result =
       expectedRevision === 0
         ? await client.query(
@@ -74,7 +74,9 @@ export class MatchingSettingsRepository {
           )
         : await client.query(
             `UPDATE matching_reviewer_settings
-             SET configuration = $2::jsonb, revision = revision + 1, updated_at = now()
+             SET configuration = $2::jsonb,
+                 revision = nextval('matching_reviewer_settings_revision_seq'),
+                 updated_at = now()
              WHERE user_id = $1 AND revision = $3 RETURNING revision`,
             [userId, JSON.stringify(configuration), expectedRevision],
           );

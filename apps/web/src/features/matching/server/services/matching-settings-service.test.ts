@@ -31,6 +31,7 @@ function configuration(sectorWeight = 20): MatchingConfiguration {
 class MemorySettingsRepository extends MatchingSettingsRepository {
   global: StoredMatchingSettings = { configuration: configuration(), revision: 1 };
   personal = new Map<string, StoredMatchingSettings>();
+  private nextPersonalRevision = 1;
 
   override async getGlobal() {
     return structuredClone(this.global);
@@ -58,7 +59,7 @@ class MemorySettingsRepository extends MatchingSettingsRepository {
     if ((this.personal.get(userId)?.revision ?? 0) !== expectedRevision) return false;
     this.personal.set(userId, {
       configuration: config,
-      revision: expectedRevision + 1,
+      revision: this.nextPersonalRevision++,
     });
     return true;
   }
@@ -229,4 +230,34 @@ test("publishing only persists weights, not the admin's per-match result or filt
     assert.deepEqual(config.hard_filters, { stage: true, geography: true });
     assert.deepEqual(config.excluded_investor_types, []);
   }
+});
+
+test("reset and recreate never allow an old personal revision to save or reset again", async () => {
+  const service = new MatchingSettingsService(new MemorySettingsRepository());
+  const reviewer = user("reviewer");
+  const first = await service.save(reviewer, {
+    configuration: configuration(30),
+    expectedRevision: 0,
+  });
+  await service.resetPersonal(reviewer, { expectedRevision: first.personalRevision });
+  const recreated = await service.save(reviewer, {
+    configuration: configuration(35),
+    expectedRevision: 0,
+  });
+  assert.ok(recreated.personalRevision! > first.personalRevision!);
+  await assert.rejects(
+    service.save(reviewer, {
+      configuration: configuration(10),
+      expectedRevision: first.personalRevision,
+    }),
+    { status: 409 },
+  );
+  await assert.rejects(
+    service.resetPersonal(reviewer, { expectedRevision: first.personalRevision }),
+    { status: 409 },
+  );
+  assert.equal(
+    (await service.getForUser(reviewer)).configuration.weights.sector_fit,
+    35,
+  );
 });

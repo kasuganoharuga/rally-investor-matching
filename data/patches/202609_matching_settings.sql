@@ -12,12 +12,33 @@ CREATE TABLE IF NOT EXISTS matching_global_settings (
   updated_at timestamptz NOT NULL DEFAULT now()
 );
 
+CREATE SEQUENCE IF NOT EXISTS matching_reviewer_settings_revision_seq
+  AS integer MINVALUE 1 NO CYCLE;
+
 CREATE TABLE IF NOT EXISTS matching_reviewer_settings (
   user_id text PRIMARY KEY REFERENCES "user"(id) ON DELETE CASCADE,
   configuration jsonb NOT NULL CHECK (jsonb_typeof(configuration) = 'object'),
-  revision integer NOT NULL DEFAULT 1 CHECK (revision > 0),
+  revision integer NOT NULL DEFAULT nextval('matching_reviewer_settings_revision_seq')
+    CHECK (revision > 0),
   updated_at timestamptz NOT NULL DEFAULT now()
 );
+
+-- Also upgrade a previously applied version of this additive patch. ALTER TABLE
+-- holds its write-blocking lock until COMMIT, so sequence alignment cannot race
+-- the application's inserts/updates. Never reuse a revision after reset/delete.
+ALTER TABLE matching_reviewer_settings
+  ALTER COLUMN revision SET DEFAULT nextval('matching_reviewer_settings_revision_seq');
+ALTER SEQUENCE matching_reviewer_settings_revision_seq
+  OWNED BY matching_reviewer_settings.revision;
+SELECT setval(
+  'matching_reviewer_settings_revision_seq',
+  GREATEST(sequence_state.last_value, COALESCE(existing.max_revision, 1)),
+  sequence_state.is_called OR existing.max_revision IS NOT NULL
+)
+FROM matching_reviewer_settings_revision_seq AS sequence_state
+CROSS JOIN (
+  SELECT max(revision) AS max_revision FROM matching_reviewer_settings
+) AS existing;
 
 INSERT INTO matching_global_settings (singleton, configuration)
 VALUES (true, '{
