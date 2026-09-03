@@ -1,6 +1,10 @@
 import "server-only";
 
-import type { InvitationEmailInput, WelcomeEmailInput } from "./email-provider";
+import type {
+  InvitationEmailInput,
+  VerificationEmailInput,
+  WelcomeEmailInput,
+} from "./email-provider";
 
 export type EmailContent = {
   subject: string;
@@ -184,6 +188,49 @@ export function buildInvitationEmail(
       actionUrl,
       afterActionHtml: `<p style="margin:0 0 6px;font-size:13px;color:#54645f;">Your invitation expires on <strong>${escapeHtml(expiry)}</strong>.</p>
           <p style="margin:0;font-size:13px;color:#54645f;">If it has expired, ask your inviter to send a new invitation.</p>`,
+      security,
+      support,
+    }),
+  };
+}
+
+export function buildVerificationEmail(
+  input: VerificationEmailInput,
+  options: TemplateOptions = {},
+): EmailContent {
+  const actionUrl = webUrl(input.verifyUrl);
+  const intro = "Confirm your email address to finish setting up your Rally account.";
+  const security =
+    "This link is intended only for you and expires after a short time. If you did not create a Rally account, you can safely ignore this email.";
+  const support = supportText(
+    options,
+    "Need a hand, or didn't create this account? Contact the Rally team through the person who introduced you to Rally.",
+  );
+  return {
+    subject: "Confirm your email for Rally",
+    text: [
+      "Confirm your email",
+      "",
+      intro,
+      "",
+      "Confirm your email address:",
+      actionUrl,
+      "",
+      "You'll be able to sign in once your email is confirmed.",
+      "",
+      security,
+      support,
+      "",
+      "Rally Investor Matching",
+    ].join("\n"),
+    html: renderLayout({
+      preheader: "Confirm your email address to finish setting up your Rally account.",
+      heading: "Confirm your email",
+      bodyHtml: `<p style="margin:0 0 24px;color:#54645f;">${escapeHtml(intro)}</p>`,
+      actionLabel: "Confirm email address",
+      actionUrl,
+      afterActionHtml:
+        '<p style="margin:0;font-size:13px;color:#54645f;">You\'ll be able to sign in once your email is confirmed.</p>',
       security,
       support,
     }),

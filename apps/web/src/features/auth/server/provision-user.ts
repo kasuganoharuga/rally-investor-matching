@@ -65,7 +65,11 @@ export async function provisionUser(
     // the validated name. Role is only supplied by trusted server callers.
     const result = await withProvisioningContext(context, () =>
       auth.api.signUpEmail({
-        body: { email, name: input.name ?? email, password },
+        // callbackURL only steers the verification-email link Better Auth
+        // builds for public registration (invited accounts skip that
+        // email entirely, see auth.ts) — where a freshly verified user
+        // lands once they click it.
+        body: { email, name: input.name ?? email, password, callbackURL: "/match" },
       }),
     );
 

@@ -44,12 +44,17 @@ test("SES sends the branded invitation and welcome with existing delivery config
     name: "Alex",
     workspaceUrl: "https://rally.example/match",
   });
+  await provider.sendVerification({
+    to: "founder@example.com",
+    verifyUrl: "https://rally.example/api/auth/verify-email?token=test-token",
+  });
 
-  assert.equal(commands.length, 2);
+  assert.equal(commands.length, 3);
   assert.deepEqual(commands[0].input.Destination?.ToAddresses, [
     "reviewer@example.com",
   ]);
   assert.deepEqual(commands[1].input.Destination?.ToAddresses, ["founder@example.com"]);
+  assert.deepEqual(commands[2].input.Destination?.ToAddresses, ["founder@example.com"]);
   for (const command of commands) {
     assert.equal(command.input.FromEmailAddress, "Rally <no-reply@rally.example>");
     assert.deepEqual(command.input.ReplyToAddresses, ["support@rally.example"]);
@@ -68,5 +73,9 @@ test("SES sends the branded invitation and welcome with existing delivery config
   assert.match(
     commands[1].input.Content?.Simple?.Body?.Text?.Data ?? "",
     /Open Workspace/,
+  );
+  assert.match(
+    commands[2].input.Content?.Simple?.Body?.Text?.Data ?? "",
+    /Confirm your email address/,
   );
 });

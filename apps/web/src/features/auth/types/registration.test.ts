@@ -8,9 +8,7 @@ const valid = {
   lastName: "Founder",
   email: "founder@example.test",
   password: "NotARealPassword123!",
-  roleAtCompany: "CEO",
   organisation: "Example company",
-  fundingStage: "seed",
   linkedinUrl: "https://www.linkedin.com/in/example-founder",
 };
 
@@ -34,7 +32,6 @@ test("public registration cannot choose an account role or other privileged fiel
 test("rejects missing lead details, short passwords and honeypots", () => {
   for (const change of [
     { organisation: "" },
-    { fundingStage: "admin" },
     { firstName: " " },
     { password: "short" },
     { website: "spam" },

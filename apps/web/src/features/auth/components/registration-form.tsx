@@ -1,21 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { authClient } from "@/features/auth/api/auth-client";
-import {
-  registrationInputSchema,
-  REGISTRATION_STAGE_OPTIONS,
-} from "@/features/auth/types/registration";
+import { registrationInputSchema } from "@/features/auth/types/registration";
 import { apiFetch } from "@/lib/api/client";
 
 export function RegistrationForm() {
-  const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [accountCreated, setAccountCreated] = useState(false);
@@ -38,41 +32,36 @@ export function RegistrationForm() {
       return;
     }
     setIsSubmitting(true);
-    let created = false;
     try {
       await apiFetch<{ email: string }>("/api/registration", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(parsed.data),
       });
-      created = true;
+      // The account can't sign in yet — it needs the verification email
+      // (sent as part of creating it) confirmed first, so there's nothing
+      // to redirect to here.
       setAccountCreated(true);
-      const result = await authClient.signIn.email({
-        email: parsed.data.email,
-        password: parsed.data.password,
-      });
-      if (result.error) throw new Error("Sign-in failed");
-      router.replace("/match");
-      router.refresh();
     } catch (unknownError) {
       setError(
-        created
-          ? "Your account is ready. Please sign in to continue to your Workspace."
-          : unknownError instanceof Error
-            ? unknownError.message
-            : "Registration failed. Please try again.",
+        unknownError instanceof Error
+          ? unknownError.message
+          : "Registration failed. Please try again.",
       );
     } finally {
       setIsSubmitting(false);
     }
   }
 
-  if (accountCreated && error) {
+  if (accountCreated) {
     return (
       <div className="space-y-4" role="status">
-        <p>{error}</p>
-        <Link href="/?from=/match" className="font-semibold underline">
-          Sign in to Workspace
+        <p>
+          Your account is ready. We&apos;ve sent a confirmation link to your email —
+          open it to verify your address and sign in to your Workspace.
+        </p>
+        <Link href="/" className="font-semibold underline">
+          Back to sign in
         </Link>
       </div>
     );
@@ -104,6 +93,16 @@ export function RegistrationForm() {
           </div>
         </div>
         <div className="space-y-2">
+          <Label htmlFor="organisation">Organisation name</Label>
+          <Input
+            id="organisation"
+            name="organisation"
+            autoComplete="organization"
+            maxLength={200}
+            required
+          />
+        </div>
+        <div className="space-y-2">
           <Label htmlFor="signup-email">Email address</Label>
           <Input
             id="signup-email"
@@ -113,48 +112,6 @@ export function RegistrationForm() {
             maxLength={254}
             required
           />
-        </div>
-        <div className="grid gap-4 sm:grid-cols-2">
-          <div className="space-y-2">
-            <Label htmlFor="organisation">Company / organisation</Label>
-            <Input
-              id="organisation"
-              name="organisation"
-              autoComplete="organization"
-              maxLength={200}
-              required
-            />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="roleAtCompany">Your role at the company</Label>
-            <Input
-              id="roleAtCompany"
-              name="roleAtCompany"
-              autoComplete="organization-title"
-              placeholder="e.g. Founder, CEO"
-              maxLength={100}
-              required
-            />
-          </div>
-        </div>
-        <div className="space-y-2">
-          <Label htmlFor="fundingStage">Funding stage</Label>
-          <select
-            id="fundingStage"
-            name="fundingStage"
-            defaultValue=""
-            required
-            className="h-10 w-full rounded-lg border border-input bg-background px-3 text-sm focus-visible:ring-2 focus-visible:ring-ring"
-          >
-            <option value="" disabled>
-              Select your funding stage
-            </option>
-            {REGISTRATION_STAGE_OPTIONS.map((stage) => (
-              <option key={stage.value} value={stage.value}>
-                {stage.label}
-              </option>
-            ))}
-          </select>
         </div>
         <div className="space-y-2">
           <Label htmlFor="linkedinUrl">Your LinkedIn profile</Label>
@@ -206,7 +163,8 @@ export function RegistrationForm() {
       ) : null}
       <p className="text-xs leading-5 text-muted-foreground">
         We use these details to set up your founder account and company profile. Your
-        registration details are not added to the public investor directory.
+        registration details are not added to the public investor directory. We&apos;ll
+        email you a link to confirm your address before you can sign in.
       </p>
       <Button
         type="submit"
@@ -214,7 +172,7 @@ export function RegistrationForm() {
         className="h-11 w-full font-semibold"
         disabled={isSubmitting}
       >
-        {isSubmitting ? "Creating your account..." : "Create account & open Workspace"}
+        {isSubmitting ? "Creating your account..." : "Create account"}
       </Button>
       <p className="text-center text-sm text-muted-foreground">
         Already have an account?{" "}

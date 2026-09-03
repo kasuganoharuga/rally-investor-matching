@@ -21,23 +21,17 @@ export async function registerFounder(input: RegistrationInput) {
   try {
     await withTransaction(async (client) => {
       await client.query(
-        `INSERT INTO user_profiles (user_id, first_name, last_name, role_at_company, linkedin_url, onboarding_status)
-         VALUES ($1, $2, $3, $4, $5, 'profile_done')`,
-        [
-          user.userId,
-          input.firstName,
-          input.lastName,
-          input.roleAtCompany,
-          input.linkedinUrl,
-        ],
+        `INSERT INTO user_profiles (user_id, first_name, last_name, linkedin_url, onboarding_status)
+         VALUES ($1, $2, $3, $4, 'profile_done')`,
+        [user.userId, input.firstName, input.lastName, input.linkedinUrl],
       );
-      const company = await client.query<{ id: string }>(
-        "INSERT INTO company_profiles (owner_user_id, name) VALUES ($1, $2) RETURNING id",
-        [user.userId, input.organisation],
-      );
+      // role_at_company and stage aren't collected at registration anymore
+      // (role_at_company is filled in later via Settings; stage is
+      // recollected in the matching wizard's own Step 1) — both columns
+      // are nullable, so this row starts without them.
       await client.query(
-        "INSERT INTO company_matching_profiles (company_profile_id, label, stage) VALUES ($1, 'Registration', $2)",
-        [company.rows[0].id, input.fundingStage],
+        "INSERT INTO company_profiles (owner_user_id, name) VALUES ($1, $2)",
+        [user.userId, input.organisation],
       );
     });
   } catch (error) {

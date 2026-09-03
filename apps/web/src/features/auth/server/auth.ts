@@ -6,6 +6,8 @@ import { APIError, createAuthMiddleware } from "better-auth/api";
 import { getProvisioningContext } from "@/features/auth/server/provisioning-context";
 import { userRoleSchema, type UserRole } from "@/features/auth/types/auth";
 import { getPool } from "@/lib/server/db";
+import { getEmailProvider } from "@/lib/server/email/get-email-provider";
+import { logger } from "@/lib/server/logger";
 
 const DEFAULT_USER_ROLE: UserRole = "founder";
 
@@ -24,7 +26,11 @@ export const auth = betterAuth({
     // provisionUser() runs server-side on behalf of an inviter, not the
     // person signing in — it must never leave a live session behind.
     autoSignIn: false,
-    requireEmailVerification: false,
+    // Public founder registration must confirm the inbox exists before the
+    // account can sign in. Invited users are exempted below (their email
+    // is already proven via the invitation link) by pre-marking them
+    // verified, not by disabling this globally.
+    requireEmailVerification: true,
   },
   user: {
     additionalFields: {
@@ -37,13 +43,38 @@ export const auth = betterAuth({
       },
     },
   },
+  emailVerification: {
+    sendOnSignUp: true,
+    autoSignInAfterVerification: true,
+    sendVerificationEmail: async ({ user, url }) => {
+      // Invited users already proved ownership of their inbox by opening
+      // the tokenized invitation link — they're created pre-verified
+      // (see databaseHooks below) and must not get a second, redundant
+      // "confirm your email" message.
+      if (getProvisioningContext()?.invitedBy) return;
+      try {
+        await getEmailProvider().sendVerification({ to: user.email, verifyUrl: url });
+      } catch {
+        logger.error("verification_email_failed", { userId: user.id });
+      }
+    },
+  },
   databaseHooks: {
     user: {
       create: {
         before: async () => {
           const context = getProvisioningContext();
           const role = context?.role ?? DEFAULT_USER_ROLE;
-          return { data: { role: userRoleSchema.parse(role) } };
+          return {
+            data: {
+              role: userRoleSchema.parse(role),
+              // Invitation acceptance itself proves inbox ownership (the
+              // invitee had to open a tokenized link sent to that
+              // address), so invited accounts skip the separate
+              // verification-email step public registration requires.
+              emailVerified: Boolean(context?.invitedBy),
+            },
+          };
         },
         after: async (user) => {
           const context = getProvisioningContext();

@@ -14,7 +14,13 @@ export type WelcomeEmailInput = {
   workspaceUrl: string;
 };
 
+export type VerificationEmailInput = {
+  to: string;
+  verifyUrl: string;
+};
+
 export interface EmailProvider {
   sendInvitation(input: InvitationEmailInput): Promise<void>;
   sendWelcome(input: WelcomeEmailInput): Promise<void>;
+  sendVerification(input: VerificationEmailInput): Promise<void>;
 }

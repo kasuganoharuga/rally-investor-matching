@@ -5,10 +5,12 @@ import { SendEmailCommand, SESv2Client } from "@aws-sdk/client-sesv2";
 import type {
   EmailProvider,
   InvitationEmailInput,
+  VerificationEmailInput,
   WelcomeEmailInput,
 } from "@/lib/server/email/email-provider";
 import {
   buildInvitationEmail,
+  buildVerificationEmail,
   buildWelcomeEmail,
   type EmailContent,
 } from "@/lib/server/email/email-templates";
@@ -46,6 +48,13 @@ export class SesEmailProvider implements EmailProvider {
     await this.send(
       input.to,
       buildWelcomeEmail(input, { replyToEmail: this.replyToEmail }),
+    );
+  }
+
+  async sendVerification(input: VerificationEmailInput): Promise<void> {
+    await this.send(
+      input.to,
+      buildVerificationEmail(input, { replyToEmail: this.replyToEmail }),
     );
   }
 
