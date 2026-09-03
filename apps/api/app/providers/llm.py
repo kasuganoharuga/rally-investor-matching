@@ -11,7 +11,9 @@ from __future__ import annotations
 
 import argparse
 import json
+import logging
 import os
+import time
 from dataclasses import dataclass
 from typing import Any
 
@@ -23,6 +25,8 @@ DEFAULT_ANTHROPIC_MODEL = "claude-sonnet-4-6"
 DEFAULT_MAX_TOKENS = 1200
 DEFAULT_TEMPERATURE = 0.0
 DEFAULT_AWS_REGION = "ap-southeast-2"
+
+logger = logging.getLogger(__name__)
 
 
 @dataclass(frozen=True)
@@ -51,6 +55,39 @@ def load_config() -> LLMConfig:
     )
 
 
+def classify_llm_error(exc: BaseException) -> str:
+    """Map provider failures to stable, PII-free error classes for ops grepping."""
+    text = str(exc).lower()
+    if "credit balance" in text or "too low to access" in text:
+        return "credit_balance"
+    if "rate limit" in text or "429" in text:
+        return "rate_limit"
+    if "authentication" in text or "invalid api key" in text or "unauthorized" in text:
+        return "auth"
+    if "overloaded" in text or "529" in text:
+        return "overloaded"
+    if isinstance(exc, TypeError) and "temperature" in text:
+        return "temperature_unsupported"
+    if "did not return json" in text:
+        return "invalid_json"
+    return type(exc).__name__
+
+
+def _usage_tokens(usage: Any) -> tuple[int | None, int | None]:
+    if usage is None:
+        return None, None
+    if isinstance(usage, dict):
+        input_tokens = usage.get("input_tokens")
+        output_tokens = usage.get("output_tokens")
+    else:
+        input_tokens = getattr(usage, "input_tokens", None)
+        output_tokens = getattr(usage, "output_tokens", None)
+    return (
+        int(input_tokens) if input_tokens is not None else None,
+        int(output_tokens) if output_tokens is not None else None,
+    )
+
+
 class LLMClient:
     def __init__(self, config: LLMConfig | None = None) -> None:
         self.config = config or load_config()
@@ -62,20 +99,54 @@ class LLMClient:
         user: str,
         max_tokens: int | None = None,
         temperature: float | None = None,
+        operation: str | None = None,
     ) -> str:
-        if self.config.provider == "anthropic":
-            return self._generate_text_anthropic(
-                system=system,
-                user=user,
-                max_tokens=max_tokens,
-                temperature=temperature,
-            )
-        return self._generate_text_bedrock(
-            system=system,
-            user=user,
-            max_tokens=max_tokens,
-            temperature=temperature,
+        started = time.perf_counter()
+        model = (
+            self.config.anthropic_model
+            if self.config.provider == "anthropic"
+            else self.config.bedrock_model_id
         )
+        try:
+            if self.config.provider == "anthropic":
+                text, input_tokens, output_tokens = self._generate_text_anthropic(
+                    system=system,
+                    user=user,
+                    max_tokens=max_tokens,
+                    temperature=temperature,
+                )
+            else:
+                text, input_tokens, output_tokens = self._generate_text_bedrock(
+                    system=system,
+                    user=user,
+                    max_tokens=max_tokens,
+                    temperature=temperature,
+                )
+            latency_ms = int((time.perf_counter() - started) * 1000)
+            logger.info(
+                "llm_call_completed provider=%s model=%s operation=%s "
+                "latency_ms=%s input_tokens=%s output_tokens=%s status=ok",
+                self.config.provider,
+                model or "unknown",
+                operation or "unspecified",
+                latency_ms,
+                input_tokens if input_tokens is not None else "-",
+                output_tokens if output_tokens is not None else "-",
+            )
+            return text
+        except Exception as exc:
+            latency_ms = int((time.perf_counter() - started) * 1000)
+            error_class = classify_llm_error(exc)
+            logger.error(
+                "llm_call_failed provider=%s model=%s operation=%s "
+                "latency_ms=%s error_class=%s",
+                self.config.provider,
+                model or "unknown",
+                operation or "unspecified",
+                latency_ms,
+                error_class,
+            )
+            raise
 
     def generate_json(
         self,
@@ -84,12 +155,14 @@ class LLMClient:
         user: str,
         max_tokens: int | None = None,
         temperature: float | None = None,
+        operation: str | None = None,
     ) -> dict[str, Any]:
         text = self.generate_text(
             system=system,
             user=user,
             max_tokens=max_tokens,
             temperature=temperature,
+            operation=operation,
         )
         try:
             return json.loads(text)
@@ -98,7 +171,8 @@ class LLMClient:
             end = text.rfind("}")
             if start >= 0 and end > start:
                 return json.loads(text[start : end + 1])
-            raise ValueError(f"LLM did not return JSON: {text}") from None
+            # Do not include model text in the exception — it may contain PII.
+            raise ValueError("LLM did not return JSON") from None
 
     def _generate_text_anthropic(
         self,
@@ -107,7 +181,7 @@ class LLMClient:
         user: str,
         max_tokens: int | None,
         temperature: float | None,
-    ) -> str:
+    ) -> tuple[str, int | None, int | None]:
         api_key = os.getenv("ANTHROPIC_API_KEY")
         if not api_key:
             raise ValueError(
@@ -140,11 +214,13 @@ class LLMClient:
             if "temperature" not in str(exc):
                 raise
             message = client.messages.create(**create_kwargs)
-        return "".join(
+        text = "".join(
             block.text
             for block in message.content
             if getattr(block, "type", None) == "text"
         ).strip()
+        input_tokens, output_tokens = _usage_tokens(getattr(message, "usage", None))
+        return text, input_tokens, output_tokens
 
     def _generate_text_bedrock(
         self,
@@ -153,7 +229,7 @@ class LLMClient:
         user: str,
         max_tokens: int | None,
         temperature: float | None,
-    ) -> str:
+    ) -> tuple[str, int | None, int | None]:
         if not self.config.bedrock_model_id:
             raise ValueError(
                 "BEDROCK_LLM_MODEL_ID is required when LLM_PROVIDER=bedrock"
@@ -186,11 +262,13 @@ class LLMClient:
             contentType="application/json",
         )
         payload = json.loads(response["body"].read())
-        return "".join(
+        text = "".join(
             block.get("text", "")
             for block in payload.get("content", [])
             if block.get("type") == "text"
         ).strip()
+        input_tokens, output_tokens = _usage_tokens(payload.get("usage"))
+        return text, input_tokens, output_tokens
 
 
 def main() -> None:
@@ -214,6 +292,7 @@ def main() -> None:
                 "business_model, stage, raise_amount_aud_million."
             ),
             max_tokens=300,
+            operation="smoke_json",
         )
         print(json.dumps(result, ensure_ascii=False, indent=2))
         return
@@ -223,6 +302,7 @@ def main() -> None:
             system="You are a concise VC matching assistant.",
             user="Say one sentence confirming the VC matching LLM provider works.",
             max_tokens=120,
+            operation="smoke_text",
         )
     )
 

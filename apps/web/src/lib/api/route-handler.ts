@@ -48,10 +48,14 @@ export function withApiErrorHandling<Args extends unknown[]>(
   handler: (request: NextRequest, ...args: Args) => Promise<Response>,
 ) {
   return async (request: NextRequest, ...args: Args): Promise<Response> => {
-    const requestId = randomUUID();
+    const fallbackRequestId = randomUUID();
     try {
       return await handler(request, ...args);
     } catch (error) {
+      const requestId =
+        error instanceof ApiError && error.requestId
+          ? error.requestId
+          : fallbackRequestId;
       // Authoritative fields (requestId, path) go last so a stray key in
       // getSafeErrorLogContext(error) can never shadow the real values.
       logger.error("api_request_failed", {

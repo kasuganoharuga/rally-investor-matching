@@ -1,0 +1,39 @@
+{
+  "agent": {
+    "metrics_collection_interval": 60,
+    "run_as_user": "root"
+  },
+  "logs": {
+    "logs_collected": {
+      "files": {
+        "collect_list": [
+          {
+            "file_path": "/var/log/rally/rally-api.log",
+            "log_group_name": "/rally/formal/journal",
+            "log_stream_name": "{instance_id}/rally-api",
+            "retention_in_days": 30
+          },
+          {
+            "file_path": "/var/log/rally/rally-web.log",
+            "log_group_name": "/rally/formal/journal",
+            "log_stream_name": "{instance_id}/rally-web",
+            "retention_in_days": 30
+          }
+        ]
+      }
+    }
+  },
+  "metrics": {
+    "namespace": "Rally/Formal",
+    "metrics_collected": {
+      "disk": {
+        "measurement": ["used_percent"],
+        "resources": ["/"],
+        "totaldisk_only": true
+      },
+      "mem": {
+        "measurement": ["mem_used_percent"]
+      }
+    }
+  }
+}

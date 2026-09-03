@@ -12,6 +12,11 @@ export type SafeLogContext = {
   userId?: string;
   errorPhase?: string;
   outcome?: string;
+  upstreamStatus?: number;
+  latencyMs?: number;
+  matchCount?: number;
+  errorClass?: string;
+  followUpCount?: number;
 };
 
 /**

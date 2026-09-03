@@ -171,6 +171,41 @@ def test_v1_health_endpoint() -> None:
     }
 
 
+def test_v1_ready_endpoint_checks_database(monkeypatch: object) -> None:
+    client = TestClient(app)
+    calls: list[str] = []
+
+    def fake_check(database_url: str | None = None) -> None:
+        calls.append(database_url or "")
+
+    monkeypatch.setattr("app.api.v1.health.check_database", fake_check)
+
+    response = client.get("/api/v1/ready")
+
+    assert response.status_code == 200
+    assert response.json() == {
+        "status": "ready",
+        "service": "rally-investor-matching-api",
+    }
+    assert len(calls) == 1
+
+
+def test_v1_ready_endpoint_returns_503_when_database_unavailable(
+    monkeypatch: object,
+) -> None:
+    client = TestClient(app)
+
+    def fake_check(database_url: str | None = None) -> None:
+        raise OSError("connection refused")
+
+    monkeypatch.setattr("app.api.v1.health.check_database", fake_check)
+
+    response = client.get("/api/v1/ready", headers={"X-Request-ID": "ready-id"})
+
+    assert response.status_code == 503
+    assert response.json()["error"]["request_id"] == "ready-id"
+
+
 def test_request_id_header_is_returned() -> None:
     client = TestClient(app)
 

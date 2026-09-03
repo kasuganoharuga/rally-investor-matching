@@ -5,7 +5,9 @@ class _FakeLLM:
     def __init__(self) -> None:
         self.calls = 0
 
-    def generate_json(self, *, system: str, user: str, max_tokens: int = 900) -> dict:
+    def generate_json(
+        self, *, system: str, user: str, max_tokens: int = 900, **_: object
+    ) -> dict:
         self.calls += 1
         if self.calls == 1:
             assert "Do not select actual_themes" in system

@@ -236,6 +236,76 @@ export async function insertMatchingRun(
   return mapRow(result.rows[0] as MatchingRunRow);
 }
 
+export async function insertFailedMatchingRun(
+  input: {
+    userId: string;
+    request: IntakeRequest;
+    requestId: string;
+    errorMessage: string;
+    upstreamStatus: number | null;
+    latencyMs: number;
+  },
+  client: Queryable = getPool(),
+): Promise<void> {
+  const snapshot = {
+    failure: true,
+    request_id: input.requestId,
+    request_summary: {
+      follow_up_count: input.request.follow_up_count ?? 0,
+      has_follow_up_answer: Boolean(input.request.follow_up_answer?.trim()),
+      message_char_count: input.request.message.length,
+      matching_configuration: input.request.matching_configuration ?? null,
+    },
+    upstream_status: input.upstreamStatus,
+    latency_ms: input.latencyMs,
+  };
+
+  await client.query(
+    `INSERT INTO matching_runs (
+       user_id,
+       matching_mode,
+       founder_profile_snapshot,
+       target_stage,
+       target_geographies,
+       target_filters,
+       algorithm_version,
+       scoring_version,
+       prompt_version,
+       status,
+       result_count,
+       error_message,
+       started_at,
+       completed_at
+     )
+     VALUES (
+       $1,
+       'standard',
+       $2::jsonb,
+       NULL,
+       '[]'::jsonb,
+       $3::jsonb,
+       'mvp-fastapi-proxy',
+       'mvp-scoring-v1',
+       'founder-parser-v1',
+       'failed',
+       0,
+       $4,
+       now(),
+       now()
+     )`,
+    [
+      input.userId,
+      JSON.stringify(snapshot),
+      JSON.stringify({
+        source: "web_match_proxy",
+        outcome: "failed",
+        request_id: input.requestId,
+      }),
+      input.errorMessage.slice(0, 240),
+    ],
+  );
+}
+
 export async function getMatchingRunForUser(
   userId: string,
   runId: string,

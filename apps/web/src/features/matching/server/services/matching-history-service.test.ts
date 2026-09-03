@@ -9,6 +9,8 @@ import {
 } from "@/features/matching/types/match";
 import { ApiError } from "@/lib/api/errors";
 
+const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+
 const sampleResponse = {
   status: "matched",
   parsed_company_profile: {},
@@ -49,6 +51,7 @@ test("all roles use persisted settings, ignoring forged or historical browser sc
         fetch: async (_url, init) => {
           const headers = new Headers(init?.headers);
           assert.equal(headers.get("X-Rally-Matching-Key"), "server-only-test-key");
+          assert.match(String(headers.get("X-Request-ID") ?? ""), UUID_PATTERN);
           const body = JSON.parse(String(init?.body));
           assert.deepEqual(body.matching_configuration.weights, published.weights);
           assert.equal(
@@ -110,6 +113,75 @@ test("missing server key fails closed before accessing matching or database", as
       ),
       (error: unknown) => error instanceof ApiError && error.status === 503,
     );
+  } finally {
+    if (previousKey === undefined) delete process.env.RALLY_MATCHING_API_SECRET;
+    else process.env.RALLY_MATCHING_API_SECRET = previousKey;
+  }
+});
+
+test("upstream matching failure persists a failed run and keeps request id", async () => {
+  const previousKey = process.env.RALLY_MATCHING_API_SECRET;
+  process.env.RALLY_MATCHING_API_SECRET = "server-only-test-key";
+  try {
+    const failed: Array<{
+      requestId: string;
+      errorMessage: string;
+      upstreamStatus: number | null;
+    }> = [];
+    const service = new MatchingHistoryService({
+      settings: {
+        getForUser: async () => ({
+          configuration: DEFAULT_MATCHING_CONFIGURATION,
+          globalConfiguration: DEFAULT_MATCHING_CONFIGURATION,
+          source: "global",
+          globalRevision: 1,
+          personalRevision: null,
+        }),
+      },
+      fetch: async (_url, init) => {
+        const headers = new Headers(init?.headers);
+        assert.match(String(headers.get("X-Request-ID") ?? ""), UUID_PATTERN);
+        return Response.json(
+          {
+            error: { code: "INTERNAL_SERVER_ERROR", message: "Internal server error" },
+          },
+          {
+            status: 500,
+            headers: { "X-Request-ID": headers.get("X-Request-ID") ?? "" },
+          },
+        );
+      },
+      insertFailedRun: async (input) => {
+        failed.push({
+          requestId: input.requestId,
+          errorMessage: input.errorMessage,
+          upstreamStatus: input.upstreamStatus,
+        });
+      },
+    });
+
+    await assert.rejects(
+      service.runIntake(
+        { message: "Sample company" },
+        {
+          id: "founder",
+          role: "founder",
+          email: "founder@example.com",
+          name: "Founder",
+        },
+      ),
+      (error: unknown) =>
+        error instanceof ApiError &&
+        error.code === "MATCHING_API_FAILED" &&
+        error.status === 500 &&
+        typeof error.requestId === "string" &&
+        UUID_PATTERN.test(error.requestId),
+    );
+
+    assert.equal(failed.length, 1);
+    assert.match(failed[0].requestId, UUID_PATTERN);
+    assert.equal(failed[0].upstreamStatus, 500);
+    assert.match(failed[0].errorMessage, /INTERNAL_SERVER_ERROR/);
   } finally {
     if (previousKey === undefined) delete process.env.RALLY_MATCHING_API_SECRET;
     else process.env.RALLY_MATCHING_API_SECRET = previousKey;

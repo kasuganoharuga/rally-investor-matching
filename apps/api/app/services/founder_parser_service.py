@@ -228,6 +228,7 @@ def _parse_sector_pass(message: str, llm: LLMClient) -> dict[str, Any]:
         system=SECTOR_PASS_SYSTEM_PROMPT,
         user=f"Founder/company description:\n\n{message}",
         max_tokens=900,
+        operation="founder_sector_pass",
     )
     if not isinstance(parsed, dict):
         raise ValueError("Founder sector pass did not return a JSON object")
@@ -264,6 +265,7 @@ def _parse_theme_pass(
             f"- one_sentence_summary: {summary}\n"
         ),
         max_tokens=500,
+        operation="founder_theme_pass",
     )
     if not isinstance(parsed, dict):
         raise ValueError("Founder theme pass did not return a JSON object")
