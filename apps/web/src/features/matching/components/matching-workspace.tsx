@@ -129,17 +129,28 @@ export function MatchingWorkspace({
       );
     }
 
+    // A failed match leaves the attempted values on the hook (the form
+    // itself was unmounted for the progress screen). Re-seed from them so a
+    // retry starts from what the founder typed, on the step they submitted
+    // from — where the error banner and the Run match button both are —
+    // rather than an empty step 1.
+    const failedAttempt = intake.error ? intake.structuredIntake : null;
+    const seededValues = rematchRecord?.structuredIntake ?? failedAttempt ?? undefined;
+    const seededConfiguration =
+      rematchRecord?.matchingConfiguration ??
+      (intake.error ? (intake.matchingConfiguration ?? undefined) : undefined);
+
     return (
       <StructuredIntakeScreen
         key={rematchRecord?.id ?? "new-match"}
         isSubmitting={intake.isSubmitting}
         errorMessage={errorMessage}
-        initialValues={rematchRecord?.structuredIntake ?? undefined}
+        initialValues={seededValues}
         initialSettings={savedSettings}
         onSettingsSaved={setSavedSettings}
-        initialConfiguration={rematchRecord?.matchingConfiguration ?? undefined}
+        initialConfiguration={seededConfiguration}
         userRole={userRole}
-        initialStep={rematchRecord ? 2 : 0}
+        initialStep={rematchRecord ? 2 : failedAttempt ? 3 : 0}
         showScoringStep={canConfigureMatching}
         onSubmit={submitInitial}
       />

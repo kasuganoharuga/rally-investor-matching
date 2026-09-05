@@ -187,3 +187,135 @@ test("upstream matching failure persists a failed run and keeps request id", asy
     else process.env.RALLY_MATCHING_API_SECRET = previousKey;
   }
 });
+
+const validMatch = {
+  investor_id: "airtree",
+  investor_name: "AirTree",
+  score: 82,
+};
+
+function serviceReturning(
+  data: unknown,
+  captured: { response?: unknown } = {},
+): MatchingHistoryService {
+  return new MatchingHistoryService({
+    settings: {
+      getForUser: async () => ({
+        configuration: DEFAULT_MATCHING_CONFIGURATION,
+        globalConfiguration: DEFAULT_MATCHING_CONFIGURATION,
+        source: "global",
+        globalRevision: 1,
+        personalRevision: null,
+      }),
+    },
+    fetch: async () => Response.json({ data }),
+    insertRun: async (input) => {
+      captured.response = input.response;
+      return {
+        id: "00000000-0000-4000-8000-000000000001",
+        createdAt: new Date(0).toISOString(),
+        response: input.response,
+        matchingConfiguration: DEFAULT_MATCHING_CONFIGURATION,
+        structuredIntake: null as never,
+      };
+    },
+    insertFailedRun: async () => {},
+  });
+}
+
+const founder: CurrentUser = {
+  id: "founder",
+  role: "founder",
+  email: "founder@example.com",
+  name: "Founder",
+};
+
+test("one malformed match never discards the rest of a successful run", async () => {
+  const previousKey = process.env.RALLY_MATCHING_API_SECRET;
+  process.env.RALLY_MATCHING_API_SECRET = "server-only-test-key";
+  try {
+    // capacity_estimate/evidence shapes drift between the Python scorer and
+    // the Zod schema; that used to throw a ZodError on the whole response and
+    // reach the founder as a bare 500, losing matches the API had computed.
+    const service = serviceReturning({
+      ...sampleResponse,
+      matches: [
+        validMatch,
+        // Only an optional sub-object is malformed: the ranked result itself
+        // is fine, so it must survive with that sub-object stripped.
+        { ...validMatch, investor_id: "blackbird", capacity_estimate: {} },
+        // Core field is wrong — nothing usable left, so this one is dropped.
+        { ...validMatch, investor_id: "square-peg", investor_name: 12345 },
+      ],
+    });
+
+    const result = await service.runIntake({ message: "Sample company" }, founder);
+
+    assert.deepEqual(
+      result.response.matches.map((match) => match.investor_id),
+      ["airtree", "blackbird"],
+    );
+    assert.equal(result.response.matches[1].capacity_estimate, undefined);
+    assert.equal(result.response.status, "matched");
+  } finally {
+    if (previousKey === undefined) delete process.env.RALLY_MATCHING_API_SECRET;
+    else process.env.RALLY_MATCHING_API_SECRET = previousKey;
+  }
+});
+
+test("an unusable response body fails as a named error, not a raw crash", async () => {
+  const previousKey = process.env.RALLY_MATCHING_API_SECRET;
+  process.env.RALLY_MATCHING_API_SECRET = "server-only-test-key";
+  try {
+    const service = serviceReturning({ status: "not-a-real-status" });
+
+    await assert.rejects(
+      service.runIntake({ message: "Sample company" }, founder),
+      (error: unknown) =>
+        error instanceof ApiError &&
+        error.code === "MATCHING_RESPONSE_INVALID" &&
+        error.status === 502,
+    );
+  } finally {
+    if (previousKey === undefined) delete process.env.RALLY_MATCHING_API_SECRET;
+    else process.env.RALLY_MATCHING_API_SECRET = previousKey;
+  }
+});
+
+test("dropping every match is an error, never a silent zero-match result", async () => {
+  const previousKey = process.env.RALLY_MATCHING_API_SECRET;
+  process.env.RALLY_MATCHING_API_SECRET = "server-only-test-key";
+  try {
+    // "No investors matched" and "we could not read the matches we got" look
+    // identical to the founder but mean opposite things — never conflate them.
+    const service = serviceReturning({
+      ...sampleResponse,
+      matches: [{ investor_id: "airtree" }, { investor_name: "Blackbird" }],
+    });
+
+    await assert.rejects(
+      service.runIntake({ message: "Sample company" }, founder),
+      (error: unknown) =>
+        error instanceof ApiError && error.code === "MATCHING_RESPONSE_INVALID",
+    );
+  } finally {
+    if (previousKey === undefined) delete process.env.RALLY_MATCHING_API_SECRET;
+    else process.env.RALLY_MATCHING_API_SECRET = previousKey;
+  }
+});
+
+test("a genuinely empty match list still succeeds", async () => {
+  const previousKey = process.env.RALLY_MATCHING_API_SECRET;
+  process.env.RALLY_MATCHING_API_SECRET = "server-only-test-key";
+  try {
+    const service = serviceReturning({ ...sampleResponse, matches: [] });
+
+    const result = await service.runIntake({ message: "Sample company" }, founder);
+
+    assert.equal(result.response.matches.length, 0);
+    assert.equal(result.response.status, "matched");
+  } finally {
+    if (previousKey === undefined) delete process.env.RALLY_MATCHING_API_SECRET;
+    else process.env.RALLY_MATCHING_API_SECRET = previousKey;
+  }
+});

@@ -145,8 +145,13 @@ export function MatchDetailHeader({
       ) : null}
 
       <VcProfileMetaGrid
+        // `profile?.recent_deals.length` threw whenever investor_profile was
+        // absent: the optional chain stops at recent_deals, then .length runs
+        // on undefined. investor_profile is optional in matchResultSchema and
+        // is only attached to results that clear eligibility, so a saved run
+        // from before it existed renders here with no profile at all.
         reviewedDeals={String(
-          profile?.total_deals_used ?? profile?.recent_deals.length ?? 0,
+          profile?.total_deals_used ?? profile?.recent_deals?.length ?? 0,
         )}
         leadRatio={leadRatio}
         coreStageLabel={coreStageLabel}

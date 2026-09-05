@@ -277,6 +277,13 @@ export function useMatchIntake() {
           ...current,
           isSubmitting: false,
           error: toApiError(error),
+          // Hold on to what the founder actually filled in. The intake form
+          // is unmounted while the match runs, so unless the attempted values
+          // survive here they are gone by the time the error renders and the
+          // form comes back — the user would have to retype the whole thing
+          // to retry a failure that was never their fault.
+          structuredIntake: structuredIntake ?? current.structuredIntake,
+          matchingConfiguration: matchingConfiguration ?? current.matchingConfiguration,
         }));
         return null;
       }

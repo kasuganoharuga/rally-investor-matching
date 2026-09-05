@@ -15,6 +15,9 @@ export type SafeLogContext = {
   upstreamStatus?: number;
   latencyMs?: number;
   matchCount?: number;
+  // How many match entries were unreadable and dropped from an otherwise
+  // successful run. A count, so it cannot carry founder or investor detail.
+  droppedCount?: number;
   errorClass?: string;
   followUpCount?: number;
 };

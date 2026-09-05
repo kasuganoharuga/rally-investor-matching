@@ -1,7 +1,6 @@
 from typing import Any
 
-from psycopg import Connection
-
+from app.db.connection import open_connection
 from app.repositories.investor_repository import investor_repository
 from app.schemas.match import IntakeRequest, IntakeResponse
 from app.services.founder_parser_service import parse_founder_message
@@ -132,8 +131,11 @@ class MatchService:
         self,
         *,
         request: IntakeRequest,
-        connection: Connection,
     ) -> IntakeResponse:
+        # No DB connection is open yet — parse_founder_message() makes two
+        # LLM calls that can each take several seconds. A connection is only
+        # opened in _run_database_match(), right before it's needed, so a
+        # slow or stalled LLM call never ties up a PostgreSQL connection.
         founder_profile = parse_founder_message(combined_message(request))
         missing_fields = missing_required_fields(founder_profile)
         has_followed_up = request.follow_up_count >= 1 or bool(request.follow_up_answer)
@@ -150,7 +152,6 @@ class MatchService:
 
         matches, investment_capacity = self._run_database_match(
             founder_profile=founder_profile,
-            connection=connection,
             matching_weights=(
                 request.matching_configuration.weights.model_dump()
                 if request.matching_configuration
@@ -189,14 +190,16 @@ class MatchService:
         self,
         *,
         founder_profile: dict[str, Any],
-        connection: Connection,
         matching_weights: dict[str, int] | None = None,
         hard_filters: dict[str, bool] | None = None,
         result_limit: int = MATCH_RESULT_LIMIT,
         excluded_investor_types: list[str] | None = None,
     ) -> tuple[list[dict[str, Any]], dict[str, Any] | None]:
         results = []
-        rows = self._repository.list_match_profiles(connection)
+        # Connection is scoped to just this query — nothing else in this
+        # method touches the database, so it's released immediately after.
+        with open_connection() as connection:
+            rows = self._repository.list_match_profiles(connection)
         excluded_types = set(excluded_investor_types or [])
         if excluded_types:
             rows = [

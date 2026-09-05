@@ -6,7 +6,7 @@ import argparse
 import json
 from typing import Any
 
-from app.providers.llm import LLMClient
+from app.providers.llm import LLMClient, LLMProviderError
 from app.services.matching_taxonomy import (
     ALLOWED_SECTORS,
     ALLOWED_THEMES,
@@ -231,7 +231,10 @@ def _parse_sector_pass(message: str, llm: LLMClient) -> dict[str, Any]:
         operation="founder_sector_pass",
     )
     if not isinstance(parsed, dict):
-        raise ValueError("Founder sector pass did not return a JSON object")
+        # A JSON array/scalar where an object was required is the same class of
+        # provider failure as unparseable JSON — classify it so it maps to a 502
+        # instead of escaping uncaught into a blanket 500.
+        raise LLMProviderError("invalid_json")
     return parsed
 
 
@@ -268,7 +271,10 @@ def _parse_theme_pass(
         operation="founder_theme_pass",
     )
     if not isinstance(parsed, dict):
-        raise ValueError("Founder theme pass did not return a JSON object")
+        # A JSON array/scalar where an object was required is the same class of
+        # provider failure as unparseable JSON — classify it so it maps to a 502
+        # instead of escaping uncaught into a blanket 500.
+        raise LLMProviderError("invalid_json")
     return parsed
 
 

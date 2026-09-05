@@ -19,6 +19,7 @@ from typing import Any
 
 import boto3
 from anthropic import Anthropic
+from botocore.config import Config as BotocoreConfig
 from dotenv import load_dotenv
 
 DEFAULT_ANTHROPIC_MODEL = "claude-sonnet-4-6"
@@ -26,7 +27,40 @@ DEFAULT_MAX_TOKENS = 1200
 DEFAULT_TEMPERATURE = 0.0
 DEFAULT_AWS_REGION = "ap-southeast-2"
 
+# Both SDKs default to timeouts far longer than any request should live:
+# the Anthropic client waits 10 minutes, botocore 60s with up to 5 attempts.
+# A matching request makes two of these calls back to back, so the ceiling
+# here is what nginx's proxy_read_timeout and the Next.js AbortSignal are
+# sized against — see scripts/aws/configure-https.sh and
+# apps/web/src/features/matching/server/services/matching-history-service.ts.
+# Worst case per call: LLM_TIMEOUT_SECONDS * (1 + LLM_MAX_RETRIES) + backoff.
+LLM_TIMEOUT_SECONDS = 30.0
+LLM_CONNECT_TIMEOUT_SECONDS = 5.0
+# Retry is delegated to each SDK, which only retries genuinely transient
+# failures (429/5xx/connection) with backoff — never a 400 for an exhausted
+# credit balance or a 401 for a bad key, where a retry only doubles latency.
+LLM_MAX_RETRIES = 1
+
 logger = logging.getLogger(__name__)
+
+
+class LLMProviderError(RuntimeError):
+    """A failed LLM call, tagged with a stable class for triage.
+
+    Raised instead of letting a raw provider exception reach FastAPI's
+    catch-all handler, where an exhausted credit balance, a 429, a 529 and
+    a malformed JSON reply all became the same opaque 500. The registered
+    handler in app.core.errors maps `error_class` to a distinguishable
+    status code; the original exception stays on `__cause__` for logs.
+    """
+
+    # Transient enough to be worth another attempt from the caller/user.
+    RETRYABLE_CLASSES = frozenset({"rate_limit", "overloaded", "timeout"})
+
+    def __init__(self, error_class: str) -> None:
+        self.error_class = error_class
+        self.retryable = error_class in self.RETRYABLE_CLASSES
+        super().__init__(f"LLM provider call failed: {error_class}")
 
 
 @dataclass(frozen=True)
@@ -57,6 +91,8 @@ def load_config() -> LLMConfig:
 
 def classify_llm_error(exc: BaseException) -> str:
     """Map provider failures to stable, PII-free error classes for ops grepping."""
+    if isinstance(exc, LLMProviderError):
+        return exc.error_class
     text = str(exc).lower()
     if "credit balance" in text or "too low to access" in text:
         return "credit_balance"
@@ -70,6 +106,14 @@ def classify_llm_error(exc: BaseException) -> str:
         return "temperature_unsupported"
     if "did not return json" in text:
         return "invalid_json"
+    # Both SDKs surface a timeout as a distinct exception type rather than a
+    # recognisable message, so match on the class name too.
+    if "timeout" in text or "timeout" in type(exc).__name__.lower():
+        return "timeout"
+    if "use case details have not been submitted" in text:
+        return "model_access_not_granted"
+    if "accessdenied" in text.replace(" ", "") or "not authorized to perform" in text:
+        return "auth"
     return type(exc).__name__
 
 
@@ -146,7 +190,12 @@ class LLMClient:
                 latency_ms,
                 error_class,
             )
-            raise
+            # Re-raise as a classified error so the API layer can answer with
+            # a status that distinguishes "try again shortly" from "this
+            # account is misconfigured", instead of one blanket 500. The
+            # provider exception is preserved as __cause__ (never in the
+            # message — it can echo the founder's prompt).
+            raise LLMProviderError(error_class) from exc
 
     def generate_json(
         self,
@@ -166,13 +215,25 @@ class LLMClient:
         )
         try:
             return json.loads(text)
-        except json.JSONDecodeError:
+        except json.JSONDecodeError as exc:
             start = text.find("{")
             end = text.rfind("}")
             if start >= 0 and end > start:
-                return json.loads(text[start : end + 1])
+                try:
+                    return json.loads(text[start : end + 1])
+                except json.JSONDecodeError:
+                    pass
             # Do not include model text in the exception — it may contain PII.
-            raise ValueError("LLM did not return JSON") from None
+            logger.error(
+                "llm_call_failed provider=%s model=%s operation=%s error_class=%s",
+                self.config.provider,
+                self.config.anthropic_model
+                if self.config.provider == "anthropic"
+                else (self.config.bedrock_model_id or "unknown"),
+                operation or "unspecified",
+                "invalid_json",
+            )
+            raise LLMProviderError("invalid_json") from exc
 
     def _generate_text_anthropic(
         self,
@@ -188,7 +249,14 @@ class LLMClient:
                 "ANTHROPIC_API_KEY is required when LLM_PROVIDER=anthropic"
             )
 
-        client = Anthropic(api_key=api_key)
+        # Without these the SDK waits up to 10 minutes per call and retries
+        # up to twice on top of that — long past the point the browser,
+        # nginx and the Next.js proxy have all given up on the request.
+        client = Anthropic(
+            api_key=api_key,
+            timeout=LLM_TIMEOUT_SECONDS,
+            max_retries=LLM_MAX_RETRIES,
+        )
         # Anthropic SDK 1.x rejects `temperature` for some models
         # (e.g. claude-sonnet-4-6). Pass it when supported, otherwise omit.
         create_kwargs: dict[str, Any] = {
@@ -235,7 +303,19 @@ class LLMClient:
                 "BEDROCK_LLM_MODEL_ID is required when LLM_PROVIDER=bedrock"
             )
 
-        client = boto3.client("bedrock-runtime", region_name=self.config.aws_region)
+        # botocore's defaults (60s read, up to 5 attempts) can stack to
+        # minutes on a struggling endpoint; bound both explicitly. "standard"
+        # retry mode only retries throttling/5xx, never an access-denied or
+        # a validation error, so a misconfigured account fails fast.
+        client = boto3.client(
+            "bedrock-runtime",
+            region_name=self.config.aws_region,
+            config=BotocoreConfig(
+                connect_timeout=LLM_CONNECT_TIMEOUT_SECONDS,
+                read_timeout=LLM_TIMEOUT_SECONDS,
+                retries={"max_attempts": LLM_MAX_RETRIES + 1, "mode": "standard"},
+            ),
+        )
         body = {
             "anthropic_version": "bedrock-2023-05-31",
             "max_tokens": max_tokens or self.config.max_tokens,

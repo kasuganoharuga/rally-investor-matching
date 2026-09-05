@@ -40,9 +40,20 @@ class FakeCursor:
 class FakeConnection:
     def __init__(self, rows: list[dict[str, object]]) -> None:
         self.rows = rows
+        self.closed = False
 
     def cursor(self, **kwargs: object) -> FakeCursor:
         return FakeCursor(self.rows)
+
+    # /api/v1/investors still takes a request-scoped connection dependency,
+    # but MatchService now opens its own with `with open_connection() as ...`
+    # (so an LLM call never holds one), which needs psycopg's context-manager
+    # behaviour: __enter__ yields the connection itself.
+    def __enter__(self) -> "FakeConnection":
+        return self
+
+    def __exit__(self, *_exc_info: object) -> None:
+        self.closed = True
 
 
 def make_docx_bytes(text: str) -> bytes:
@@ -353,7 +364,8 @@ def test_match_intake_asks_one_follow_up(monkeypatch: object) -> None:
         }
 
     monkeypatch.setattr(match_service_module, "parse_founder_message", fake_parse)
-    app.dependency_overrides[get_connection] = lambda: FakeConnection([investor_row()])
+    connection = FakeConnection([investor_row()])
+    monkeypatch.setattr(match_service_module, "open_connection", lambda: connection)
     try:
         client = TestClient(app)
 
@@ -391,7 +403,8 @@ def test_match_intake_matches_after_follow_up(monkeypatch: object) -> None:
         }
 
     monkeypatch.setattr(match_service_module, "parse_founder_message", fake_parse)
-    app.dependency_overrides[get_connection] = lambda: FakeConnection([investor_row()])
+    connection = FakeConnection([investor_row()])
+    monkeypatch.setattr(match_service_module, "open_connection", lambda: connection)
     try:
         client = TestClient(app)
 
@@ -437,7 +450,7 @@ def test_match_intake_returns_expanded_direct_vc_matches(monkeypatch: object) ->
         }
 
     monkeypatch.setattr(match_service_module, "parse_founder_message", fake_parse)
-    app.dependency_overrides[get_connection] = lambda: FakeConnection(
+    connection = FakeConnection(
         [
             investor_row(
                 id_value=f"10000000-0000-0000-0000-{index:012d}",
@@ -447,6 +460,7 @@ def test_match_intake_returns_expanded_direct_vc_matches(monkeypatch: object) ->
             for index in range(1, 13)
         ]
     )
+    monkeypatch.setattr(match_service_module, "open_connection", lambda: connection)
     try:
         client = TestClient(app)
 
@@ -482,7 +496,7 @@ def test_match_intake_honours_requested_result_limit(monkeypatch: object) -> Non
         }
 
     monkeypatch.setattr(match_service_module, "parse_founder_message", fake_parse)
-    app.dependency_overrides[get_connection] = lambda: FakeConnection(
+    connection = FakeConnection(
         [
             investor_row(
                 id_value=f"20000000-0000-0000-0000-{index:012d}",
@@ -492,6 +506,7 @@ def test_match_intake_honours_requested_result_limit(monkeypatch: object) -> Non
             for index in range(1, 31)
         ]
     )
+    monkeypatch.setattr(match_service_module, "open_connection", lambda: connection)
     try:
         client = TestClient(app)
 
@@ -530,7 +545,7 @@ def test_match_intake_excludes_selected_investor_types(monkeypatch: object) -> N
         }
 
     monkeypatch.setattr(match_service_module, "parse_founder_message", fake_parse)
-    app.dependency_overrides[get_connection] = lambda: FakeConnection(
+    connection = FakeConnection(
         [
             investor_row(
                 id_value="30000000-0000-0000-0000-000000000001",
@@ -546,6 +561,7 @@ def test_match_intake_excludes_selected_investor_types(monkeypatch: object) -> N
             ),
         ]
     )
+    monkeypatch.setattr(match_service_module, "open_connection", lambda: connection)
     try:
         client = TestClient(app)
 

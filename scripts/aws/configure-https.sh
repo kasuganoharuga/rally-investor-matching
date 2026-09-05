@@ -82,6 +82,16 @@ server {
     add_header Referrer-Policy "strict-origin-when-cross-origin" always;
     add_header X-Content-Type-Options "nosniff" always;
 
+    # A matching request makes two sequential LLM calls (see
+    # apps/api/app/providers/llm.py: LLM_TIMEOUT_SECONDS x attempts) before
+    # it scores the investor set. nginx's 60s default cut those off midway
+    # and handed the browser a bodyless 504, so the user saw a dead page
+    # while the request was still healthy. Sized above the API's own
+    # ceiling so the JSON error always wins the race against the proxy.
+    proxy_connect_timeout 10s;
+    proxy_send_timeout 150s;
+    proxy_read_timeout 150s;
+
     location /api/v1/ {
         proxy_pass http://127.0.0.1:8000;
         proxy_http_version 1.1;

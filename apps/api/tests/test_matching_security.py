@@ -7,7 +7,6 @@ from pydantic import SecretStr
 from app.api.dependencies import LOCAL_MATCHING_SECRET
 from app.api.v1.match import match_service
 from app.core.config import settings
-from app.db.connection import get_connection
 from app.main import app
 from app.schemas.match import IntakeResponse
 
@@ -22,7 +21,13 @@ def secured_matching(monkeypatch: pytest.MonkeyPatch):
     def unexpected_connection() -> None:
         raise AssertionError("Unauthenticated request must not reach the database")
 
-    app.dependency_overrides[get_connection] = unexpected_connection
+    # MatchService opens its own connection (see open_connection() in
+    # app.db.connection) only once it's about to query investors, rather
+    # than through a route-level dependency — so this is patched at its
+    # import site in match_service, not as a FastAPI dependency override.
+    monkeypatch.setattr(
+        "app.services.match_service.open_connection", unexpected_connection
+    )
     try:
         yield TestClient(app)
     finally:
@@ -67,8 +72,6 @@ def test_trusted_proxy_key_allows_matching(
     secured_matching: TestClient,
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
-    connection = object()
-    app.dependency_overrides[get_connection] = lambda: connection
     calls: list[dict[str, Any]] = []
 
     def fake_intake(**kwargs: Any) -> IntakeResponse:
@@ -91,7 +94,7 @@ def test_trusted_proxy_key_allows_matching(
     assert response.status_code == 200
     assert response.json()["data"]["status"] == "matched"
     assert len(calls) == 1
-    assert calls[0]["connection"] is connection
+    assert calls[0]["request"].message == "Test"
 
 
 def test_settings_repr_does_not_expose_matching_secret(

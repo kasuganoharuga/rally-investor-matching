@@ -1,10 +1,8 @@
-from typing import Annotated, Any
+from typing import Any
 
 from fastapi import APIRouter, Depends
-from psycopg import Connection
 
 from app.api.dependencies import require_matching_server
-from app.db.connection import get_connection
 from app.schemas.match import IntakeRequest
 from app.services.match_service import match_service
 
@@ -13,13 +11,13 @@ router = APIRouter(
     tags=["match"],
     dependencies=[Depends(require_matching_server)],
 )
-DatabaseConnection = Annotated[Connection, Depends(get_connection)]
 
 
 @router.post("/intake")
-def intake_match(
-    request: IntakeRequest,
-    connection: DatabaseConnection,
-) -> dict[str, Any]:
-    data = match_service.intake(request=request, connection=connection)
+def intake_match(request: IntakeRequest) -> dict[str, Any]:
+    # No DB connection is opened here — parse_founder_message() alone can run
+    # two LLM calls; MatchService opens a connection only once it's about to
+    # query investors, well after those calls finish. See
+    # MatchService._run_database_match / app/db/connection.open_connection.
+    data = match_service.intake(request=request)
     return {"data": data.model_dump(mode="json")}
